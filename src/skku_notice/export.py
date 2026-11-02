@@ -47,7 +47,9 @@ def export_site(
         target.parent.mkdir(parents=True, exist_ok=True)
         detail = {
             "version": 1, "id": notice["id"], "summary": item.get("summary"),
-            "body": item.get("body_text"), "attachments": item.get("attachments", []),
+            "body": item.get("body_text"), "body_html": item.get("body_html"),
+            "attachments": [{field: attachment.get(field) for field in ("name", "url", "type", "size")}
+                            for attachment in item.get("attachments", [])],
             "images": item.get("images", []),
             "body_from_image": item.get("body_from_image", False),
             "ocr_engine": item.get("ocr_engine"),

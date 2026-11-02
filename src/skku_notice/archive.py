@@ -24,6 +24,10 @@ def load_archive(path: Path) -> Archive:
     if raw.get("version") != 1 or not isinstance(raw.get("items"), dict):
         raise ValueError("unsupported archive format")
     for item in raw["items"].values():
+        item["attachments"] = [
+            {field: attachment.get(field) for field in ("name", "url", "type", "size")}
+            for attachment in item.get("attachments", [])
+        ]
         if item.get("ocr_engine") and item.get("body_from_image") and "ocr_text" not in item:
             item["ocr_text"] = item.get("body_text") or ""
             item["body_text"] = ""
@@ -79,11 +83,14 @@ def add_notice(
         "ocr_text": old.get("ocr_text", ""),
         "ocr_engine": old.get("ocr_engine"),
         "image_attempted": old.get("image_attempted", False),
-        "attachments": old.get("attachments", []),
+        "attachments": [
+            {field: attachment.get(field) for field in ("name", "url", "type", "size")}
+            for attachment in old.get("attachments", [])
+        ],
+        "body_html": old.get("body_html"),
         "images": old.get("images", []),
         "summary": judgment.summary if judgment and judgment.summary else old.get("summary"),
         "body_attempts": old.get("body_attempts", 0),
-        "body_pending": old.get("body_pending", False),
         "fetched_at": old.get("fetched_at"),
     }}
     ordered = sorted(
@@ -95,12 +102,14 @@ def add_notice(
 
 
 def update_detail(
-    archive: Archive, key: str, body: str | None, attachments: tuple[tuple[str, str], ...],
-    fetched_at: str | None, images: tuple[str, ...] = (),
+    archive: Archive, key: str, body: str | None, attachments: tuple[tuple[str, str, str, str | None], ...],
+    fetched_at: str | None, images: tuple[str, ...] = (), body_html: str | None = None,
 ) -> Archive:
     item = archive.items[key]
-    updated = {**item, "body_text": body, "body_pending": body is None, "attachments": [
-        {"name": name, "url": url} for name, url in attachments
+    updated = {**item, "body_text": body, "body_html": body_html,
+               "attachments": [
+        {"name": name, "url": url, "type": kind, "size": size}
+        for name, url, kind, size in attachments
     ], "images": list(images), "fetched_at": fetched_at,
         "body_attempts": item.get("body_attempts", 0) + 1}
     return Archive({**archive.items, key: updated})

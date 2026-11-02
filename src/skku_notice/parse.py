@@ -4,8 +4,10 @@
 import re
 from dataclasses import dataclass
 from datetime import date
+from html import escape, unescape
 from urllib.parse import parse_qs, urljoin, urlsplit
 
+import nh3
 from selectolax.lexbor import LexborHTMLParser, LexborNode
 
 from skku_notice.model import Notice
@@ -19,13 +21,21 @@ DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
 DETAIL_SELECTORS = ("dl.board-write-box dd", ".board-view-content-wrap")
 ATTACHMENT_SELECTOR = ".filedown_list a[href*='mode=download'], .board-view-box a[href*='mode=download']"
 BLOCK_TAGS = {"p", "div", "li", "tr", "h1", "h2", "h3", "h4", "h5", "h6", "br"}
+HTML_TAGS = {"p", "br", "strong", "b", "em", "i", "u", "ul", "ol", "li", "table", "thead",
+             "tbody", "tr", "th", "td", "a", "img", "h1", "h2", "h3", "h4", "blockquote",
+             "hr", "span", "div"}
+HTML_ATTRIBUTES = {"a": {"href"}, "img": {"src", "alt"},
+                   "td": {"colspan", "rowspan"}, "th": {"colspan", "rowspan"}}
+URL_RE = re.compile(r"https?://[^\s<>\"']+")
+SIZE_RE = re.compile(r"\b\d+(?:\.\d+)?\s*(?:[KMGT]?B|바이트)\b", re.I)
 
 
 @dataclass(frozen=True)
 class Detail:
     body_text: str
-    attachments: tuple[tuple[str, str], ...]
+    attachments: tuple[tuple[str, str, str, str | None], ...]
     images: tuple[str, ...]
+    body_html: str = ""
 
 
 class ParseError(ValueError):
@@ -92,6 +102,72 @@ def _body(node: LexborNode) -> str:
     return value
 
 
+def _image_url(src: str, base_url: str) -> str | None:
+    url = urljoin(base_url, src.strip())
+    path = urlsplit(url).path.lower()
+    if (urlsplit(url).scheme not in {"http", "https"}
+            or re.search(r"/_res/[^/]+/img/common/", path)
+            or re.search(r"(?:^|[/_-])(?:sns|icon|ico)(?:[/_.-]|$)", path)):
+        return None
+    return url
+
+
+def _pre_html(value: str) -> str:
+    lines = value.splitlines()
+    parts = []
+    listing = False
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            if listing:
+                parts.append("</ul>")
+                listing = False
+            continue
+        is_list = stripped.startswith("- ")
+        if is_list and not listing:
+            parts.append("<ul>")
+            listing = True
+        elif not is_list and listing:
+            parts.append("</ul>")
+            listing = False
+        content = stripped[2:] if is_list else stripped
+        cursor = 0
+        linked_parts = []
+        for match in URL_RE.finditer(content):
+            linked_parts.append(escape(content[cursor:match.start()]))
+            linked_parts.append(f'<a href="{escape(match.group(), quote=True)}">{escape(match.group())}</a>')
+            cursor = match.end()
+        linked_parts.append(escape(content[cursor:]))
+        linked = "".join(linked_parts)
+        parts.append(f"<li>{linked}</li>" if is_list else f"<p>{linked}</p>")
+    if listing:
+        parts.append("</ul>")
+    return "".join(parts)
+
+
+def _html_body(body: LexborNode, base_url: str) -> str:
+    markup = re.sub(r"<pre\b[^>]*>(.*?)</pre>",
+                    lambda match: _pre_html(unescape(match.group(1))), body.html, flags=re.I | re.S)
+    fragment = LexborHTMLParser(markup)
+    for node in fragment.css("a[href], img[src]"):
+        attr = "href" if node.tag == "a" else "src"
+        raw = node.attrs.get(attr, "").strip()
+        url = urljoin(base_url, raw)
+        if urlsplit(url).scheme not in {"http", "https", "mailto"} or (node.tag == "img" and
+                _image_url(raw, base_url) is None):
+            if node.tag == "img":
+                node.decompose()
+            else:
+                del node.attrs[attr]
+            continue
+        node.attrs[attr] = url
+    result = nh3.clean(fragment.body.html if fragment.body else fragment.html,
+                       tags=HTML_TAGS, attributes=HTML_ATTRIBUTES,
+                       url_schemes={"http", "https", "mailto"}, clean_content_tags={"script", "style"},
+                       link_rel=None)
+    return re.sub(r"<p>\s*(?:&nbsp;|<br\s*/?>)*\s*</p>", "", result, flags=re.I).strip()
+
+
 def parse_detail(html: str, base_url: str) -> Detail:
     tree = LexborHTMLParser(html)
     body = next((tree.css_first(selector) for selector in DETAIL_SELECTORS if tree.css_first(selector)), None)
@@ -105,7 +181,9 @@ def parse_detail(html: str, base_url: str) -> Detail:
             cleaned.append(line)
     text = "\n".join(cleaned).strip()
     attachments = tuple(
-        (_clean(link), urljoin(base_url, link.attributes["href"]))
+        (_clean(link), urljoin(base_url, link.attributes["href"]),
+         _clean(link).rsplit(".", 1)[-1].upper() if "." in _clean(link) else "",
+         (size.group().replace(" ", "") if (size := SIZE_RE.search(_clean(link.parent))) else None))
         for link in tree.css(ATTACHMENT_SELECTOR)
         if _clean(link)
     )
@@ -114,14 +192,10 @@ def parse_detail(html: str, base_url: str) -> Detail:
         src = image.attributes["src"].strip()
         if not src:
             continue
-        url = urljoin(base_url, src)
-        path = urlsplit(url).path.lower()
-        if (urlsplit(url).scheme not in {"http", "https"}
-                or re.search(r"/_res/[^/]+/img/common/", path)
-                or re.search(r"(?:^|[/_-])(?:sns|icon|ico)(?:[/_.-]|$)", path)
-                or url in images):
+        url = _image_url(src, base_url)
+        if url is None or url in images:
             continue
         images.append(url)
         if len(images) == 10:
             break
-    return Detail(text, attachments, tuple(images))
+    return Detail(text, attachments, tuple(images), _html_body(body, base_url))

@@ -55,13 +55,13 @@ def tile(name: str, size: int = 128, radius: int = 28, scale: float = 3.3) -> st
     )
 
 
-# 다크 모드에서도 바탕과 건물 안은 진녹색 그대로 두고 선 색만 민트로 바꾼다(사용자 요청: "바탕도 진녹색, 도서관 아이콘 안도 진녹색, 선만 다른 색").
+# 다크 모드: 바탕과 건물 안은 진녹색 그대로, 선만 맑은 초록(사용자가 보여 준 참고 아이콘에 맞춤). 바탕을 더 어둡게 하면 어두운 탭 줄에서 타일이 사라진다.
 # SVG는 안에 미디어 쿼리를 넣어 스스로 바뀌고, PNG는 미디어 쿼리가 없으므로 *-dark.png를 따로 만들어
 # index.html의 <link media="(prefers-color-scheme: dark)">로 골라 쓴다.
 DARK_TILE = BRAND
 # PNG에서 원본 선을 그릴 굵기(원본 그룹 좌표 단위). 128용은 128px에서 약 2.4px, 32용은 32px에서 약 1.4px가 되게 맞췄다.
 PNG_STROKE = {128: 16, 32: 28}
-DARK_LINE = "#7ed2ab"
+DARK_LINE = "#4fd896"
 DARK_STYLE = (
     "<style>@media (prefers-color-scheme: dark){"
     f".tile{{fill:{DARK_TILE}}}.art{{stroke:{DARK_LINE}}}.ring{{stroke:{DARK_TILE}}}}}</style>"
@@ -74,14 +74,18 @@ def library_art(size: int) -> str:
     return re.search(r"<g .*</g>", text, re.S).group()
 
 
-def app_icon(size: int, full_bleed: bool, variant: str = "auto") -> str:
+def app_icon(size: int, full_bleed: bool, variant: str = "auto", small: bool = False) -> str:
     """아캠 플러스 지붕 선 위에, 새 공지를 뜻하는 노랗게 물든 은행잎 점을 얹는다.
 
     full_bleed는 안드로이드 maskable(가장자리가 잘림)용이고, 아니면 웨일 아이콘처럼 둥근 타일이다.
     점은 maskable 안전 영역(가운데 반지름 40%) 안에 둔다.
     """
-    base = 128 if size >= 96 else 32
+    # small: 탭 아이콘(16px)과 사이드바(24px)처럼 작게 그려지는 SVG. 단순화한 선을 1px로 가늘게 그려 선끼리 뭉치지 않게 한다
+    # (사용자 요청 "1을 2처럼": 굵은 선이 뭉쳐 건물이 허옇게 채워져 보였다).
+    base = 32 if small or size < 96 else 128
     art = library_art(base)
+    if small:
+        art = re.sub(r'stroke-width="[\d.]+"', 'stroke-width="1"', art)
     background = (
         f'<rect width="128" height="128" fill="{BRAND}"/>'
         if full_bleed
@@ -109,10 +113,20 @@ def app_icon(size: int, full_bleed: bool, variant: str = "auto") -> str:
     )
 
 
+def brand_symbol() -> str:
+    """배경 없는 아캠 플러스 선(currentColor). 앱 안 사이드바처럼 화면 바탕 위에 그릴 때 쓴다(웨일 popup-inline.svg와 같은 방식).
+    사용자 요청: "아이콘 배경색을 배경색이랑 동일하게"."""
+    art = library_art(32)
+    art = re.sub(r'stroke="#ffffff"', 'stroke="currentColor"', art)
+    art = re.sub(r'stroke-width="[\d.]+"', 'stroke-width="1.4"', art)
+    dot = f'<circle cx="96" cy="37" r="7.5" fill="{GINKGO_YELLOW}"/>'
+    return f'<symbol id="brand" viewBox="0 0 128 128">{art}{dot}</symbol>'
+
+
 def sprite() -> str:
     stroke = STROKE.format(color="currentColor", width=1.75)
     symbols = "".join(f'<symbol id="{name}" viewBox="0 0 24 24" {stroke}>{body}</symbol>' for name, body in ICONS.items())
-    return f'<svg xmlns="http://www.w3.org/2000/svg">{symbols}</svg>\n'
+    return f'<svg xmlns="http://www.w3.org/2000/svg">{symbols}{brand_symbol()}</svg>\n'
 
 
 def png(svg: str, path: Path, size: int) -> None:
@@ -121,8 +135,8 @@ def png(svg: str, path: Path, size: int) -> None:
 
 def main() -> None:
     (WEB / "icons" / "notify").mkdir(parents=True, exist_ok=True)
-    (WEB / "favicon.svg").write_text(app_icon(32, full_bleed=False) + "\n", encoding="utf-8")
-    (WEB / "icon.svg").write_text(app_icon(128, full_bleed=False) + "\n", encoding="utf-8")
+    (WEB / "favicon.svg").write_text(app_icon(32, full_bleed=False, small=True) + "\n", encoding="utf-8")
+    (WEB / "icon.svg").write_text(app_icon(128, full_bleed=False, small=True) + "\n", encoding="utf-8")
     for suffix, variant in (("", "light"), ("-dark", "dark")):
         for size in (48, 192, 512):
             png(app_icon(size, False, variant), WEB / f"icon-{size}{suffix}.png", size)

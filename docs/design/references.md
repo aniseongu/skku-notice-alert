@@ -15,6 +15,7 @@
 | [penpot/penpot](https://github.com/penpot/penpot) | 오픈소스 디자인 도구 | 없음 | 화면 하나짜리 개인 도구에 시안 도구는 과함 |
 | topics website-design, webdesign, modern-web | 템플릿 모음 | 없음 | 포트폴리오, 식당 템플릿 위주 |
 | WhaleExtentions `docs/DESIGN.md`, 아캠 플러스 아이콘 | 사용자 웨일 확장의 디자인 원칙 | 금지 목록, OKLCH와 `light-dark()` 토큰, 움직임 기본 끔, 아이콘 생성 방식, 아캠 플러스 아이콘 원본 | 웨일 강제 다크 대응(night-guard)은 PWA에 필요 없음 |
+| [primer/react KeybindingHint](https://github.com/primer/react/tree/main/packages/react/src/KeybindingHint) | GitHub 디자인 시스템의 단축키 표시 | kbd 모양(사방 1px, 작은 흐린 글자), 단추 안 변형, 화면 낭독용 이름 분리, `?` 단축키 창 | 키 기호(⏎, ⌘)는 웨일 규칙 때문에 글자로 |
 | [web.dev Learn PWA: App design](https://web.dev/learn/pwa/app-design) | 설치 앱 설계 지침 | display-mode, 안전 영역, overscroll, user-select, theme-color | |
 
 아캠 플러스 아이콘 원본은 삼성학술정보관 사진([Srobidx, CC BY-SA 4.0](https://commons.wikimedia.org/wiki/File:Samsung_Library-Front.jpg))에서 윤곽을 딴 것이다.

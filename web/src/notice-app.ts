@@ -47,6 +47,15 @@ function applyTheme(theme: Theme) {
   else document.documentElement.dataset.theme = theme;
 }
 
+// 단축키 표시(Primer KeybindingHint 방식: 키 하나에 kbd 하나, 사방 1px 테두리). 화면 낭독기에는 aria-keyshortcuts로 알린다.
+const kbd = (...keys: string[]) => html`<span class="kbd-group" aria-hidden="true">${keys.map((k) => html`<kbd class="kbd">${k}</kbd>`)}</span>`;
+
+const SHORTCUTS: { group: string; items: [string, string[]][] }[] = [
+  { group: '목록', items: [['다음 공지', ['J']], ['이전 공지', ['K']], ['원문 열기', ['Enter']], ['상세 칸 닫기', ['Esc']]] },
+  { group: '이동', items: [['내 공지', ['1']], ['마감 임박', ['2']], ['전체', ['3']], ['검색', ['/']]] },
+  { group: '그 밖', items: [['새로고침', ['R']], ['단축키 보기', ['?']]] },
+];
+
 const icon = (name: IconName) => html`<svg class="i" aria-hidden="true"><use href="icons/sprite.svg#${name}"></use></svg>`;
 const gearIcon = html`<svg class="i" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/>
   <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>`;
@@ -57,7 +66,7 @@ export class NoticeApp extends LitElement {
     view: { state: true }, board: { state: true }, keyword: { state: true }, keywords: { state: true }, query: { state: true },
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
-    detailOpen: { state: true }, openedId: { state: true },
+    detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true },
   };
 
   notices: Notice[] = [];
@@ -82,6 +91,7 @@ export class NoticeApp extends LitElement {
   detailOpen = remember('detail') !== '0';
   // 휴대폰에서 앱 안 상세 화면으로 연 글. 뒤로 가기(history)로 닫는다.
   openedId: string | null = null;
+  shortcutsOpen = false;
   // 글별 본문(D-013). 'loading'이면 받는 중, null이면 아직 서버가 받지 않은 글.
   private bodies = new Map<string, NoticeBody | null | 'loading'>();
   private toastTimer = 0;
@@ -216,7 +226,8 @@ export class NoticeApp extends LitElement {
     const target = event.target as Element | null;
     if (event.key === 'Escape' && target instanceof HTMLInputElement) { target.blur(); return; }
     if (target?.closest('input, textarea, select') || event.metaKey || event.ctrlKey || event.altKey) return;
-    if (this.view === 'settings') return;
+    if (event.key === '?') { event.preventDefault(); this.shortcutsOpen = true; return; }
+    if (this.view === 'settings' || this.shortcutsOpen) return;
     if (event.key === 'Escape' && this.isWide && this.detailOpen) { this.setDetail(false); return; }
     // 단추나 링크에 포커스가 있으면 Enter는 그 요소의 기본 동작에 맡긴다.
     if (event.key === 'Enter' && target?.closest(INTERACTIVE)) return;
@@ -261,6 +272,9 @@ export class NoticeApp extends LitElement {
   }
 
   updated() {
+    // 단축키 창은 네이티브 dialog로 연다(포커스 가두기와 Esc 닫기를 브라우저가 맡는다).
+    const dialog = this.querySelector<HTMLDialogElement>('dialog.shortcuts');
+    if (dialog && this.shortcutsOpen && !dialog.open) dialog.showModal();
     if (this.view === 'settings') { document.title = '설정 - 성대 공지'; return; }
     const label = TABS.find((t) => t.id === this.view)!.label;
     document.title = this.notices.length ? `${label} ${this.visible().length} - 성대 공지` : '성대 공지';
@@ -279,12 +293,13 @@ export class NoticeApp extends LitElement {
     const reading = !this.isWide && !settings ? this.notices.find((n) => n.id === this.openedId) : undefined;
     const classes = [settings ? 'is-settings' : '', this.isWide && !this.detailOpen ? 'no-detail' : '', reading ? 'is-reading' : ''].join(' ');
     return html`
-      <div class="wco-bar" aria-hidden="true"><img src="favicon.svg" alt="">성대 공지</div>
+      <div class="wco-bar" aria-hidden="true"><svg class="brand-mark" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>성대 공지</div>
       <div class="app ${classes}">
         <aside class="sidebar" aria-label="탐색">
-          <div class="pane-head brand"><img src="icon.svg" alt="">성대 공지</div>
+          <div class="pane-head brand"><svg class="brand-mark" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>성대 공지</div>
           <nav class="side-group" aria-label="보기">
-            ${tabs.map((t) => this.sideItem(t.label, counts[t.id], this.view === t.id && !this.keyword, () => { this.keyword = null; this.setView(t.id); }))}
+            ${tabs.map((t) => this.sideItem(t.label, counts[t.id], this.view === t.id && !this.keyword, () => { this.keyword = null; this.setView(t.id); },
+              String(TABS.findIndex((x) => x.id === t.id) + 1)))}
           </nav>
           <p class="side-head">관심 키워드</p>
           <div class="side-group">
@@ -299,6 +314,8 @@ export class NoticeApp extends LitElement {
           </div>
           <div class="side-foot">
             ${this.install ? html`<button type="button" class="side-item" @click=${this.runInstall}>앱으로 설치하기</button>` : nothing}
+            <button type="button" class="side-item kbd-only" aria-keyshortcuts="?" @click=${() => { this.shortcutsOpen = true; }}>
+              <span>단축키</span>${kbd('?')}</button>
             ${this.sideItem('설정', null, settings, () => this.setView('settings'))}
           </div>
         </aside>
@@ -314,11 +331,12 @@ export class NoticeApp extends LitElement {
             </div>
             ${settings ? nothing : html`
               <label class="search wide-only">${icon('search')}
-                <input type="search" placeholder="공지 찾기" autocomplete="off" aria-label="공지 검색" .value=${this.query}
-                  @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; }}></label>
-              ${this.detailOpen ? nothing : html`<button type="button" class="icon-button wide-only" aria-label="상세 칸 열기"
+                <input type="search" placeholder="공지 찾기" autocomplete="off" aria-label="공지 검색" aria-keyshortcuts="/" .value=${this.query}
+                  @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; }}>${this.query ? nothing : kbd('/')}</label>
+              ${this.detailOpen ? nothing : html`<button type="button" class="icon-button wide-only" aria-label="상세 칸 열기" title="상세 칸 열기"
                 @click=${() => this.setDetail(true)}>${icon('panel')}</button>`}
-              <button type="button" class="icon-button" aria-label="새로고침" ?disabled=${this.loading} @click=${this.refresh}>${icon('refresh')}</button>`}
+              <button type="button" class="icon-button" aria-label="새로고침" title="새로고침 (R)" aria-keyshortcuts="r"
+                ?disabled=${this.loading} @click=${this.refresh}>${icon('refresh')}</button>`}
             ${settings ? nothing : html`<button type="button" class="icon-button narrow-only" aria-label="설정"
               @click=${() => this.setView('settings')}>${gearIcon}</button>`}
           </header>
@@ -342,10 +360,11 @@ export class NoticeApp extends LitElement {
 
         <aside class="detail-pane" aria-label="공지 상세">
           <div class="pane-head detail-head">
-            <button type="button" class="icon-button" aria-label="상세 칸 닫기" title="상세 칸 닫기 (Esc)" @click=${() => this.setDetail(false)}>${icon('close')}</button>
+            <button type="button" class="icon-button" aria-label="상세 칸 닫기" title="상세 칸 닫기 (Esc)" aria-keyshortcuts="Escape"
+              @click=${() => this.setDetail(false)}>${icon('close')}</button>
             ${selected ? html`<div class="detail-actions">
               <button type="button" class="ghost-button" @click=${() => this.copyLink(selected)}>링크 복사하기</button>
-              <a class="solid-button" href=${safeUrl(selected.url)} target="_blank" rel="noopener">원문 열기</a></div>` : nothing}
+              <a class="solid-button" href=${safeUrl(selected.url)} target="_blank" rel="noopener" aria-keyshortcuts="Enter">원문 열기${kbd('Enter')}</a></div>` : nothing}
           </div>
           ${selected ? this.detail(selected) : nothing}
         </aside>
@@ -363,6 +382,7 @@ export class NoticeApp extends LitElement {
           @click=${() => { this.keyword = null; this.setView(t.id); }}>${icon(t.icon)}<span>${t.label}</span></button>`)}
       </nav>
       <div class="toast" role="status" ?hidden=${!this.toast}>${this.toast}</div>
+      ${this.shortcutsOpen ? this.shortcutsDialog() : nothing}
     `;
   }
 
@@ -373,7 +393,8 @@ export class NoticeApp extends LitElement {
     const images = (loaded.images ?? []).map(safeUrl).filter((url) => url !== '#');
     if (!paragraphs.length && !images.length) return html`<p class="detail-note">본문에 글자가 없어요. 원문 열기로 볼 수 있어요</p>`;
     return html`<section class="detail-section body-text" aria-label="본문">
-      <h3>본문</h3>
+      <h3>${loaded.body_from_image ? '본문 (그림에서 읽은 글)' : '본문'}</h3>
+      ${loaded.body_from_image && paragraphs.length ? html`<p class="detail-note first">그림 속 글자를 기계가 옮겨 적어서 틀린 곳이 있을 수 있어요. 아래 그림과 원문이 정확해요</p>` : nothing}
       ${paragraphs.map((para) => html`<p>${para}</p>`)}
       ${images.map((src, index) => html`<img src=${src} alt="본문 그림 ${index + 1}" loading="lazy" referrerpolicy="no-referrer">`)}
     </section>`;
@@ -393,8 +414,25 @@ export class NoticeApp extends LitElement {
       </div>`;
   }
 
-  private sideItem(label: string, count: number | null, active: boolean, onClick: () => void) {
-    return html`<button type="button" class="side-item" aria-current=${active ? 'page' : 'false'} @click=${onClick}>
+  private shortcutsDialog() {
+    const close = () => { this.shortcutsOpen = false; };
+    return html`<dialog class="shortcuts" aria-labelledby="shortcuts-title" @close=${close}
+      @click=${(e: MouseEvent) => { if (e.target === e.currentTarget) (e.currentTarget as HTMLDialogElement).close(); }}>
+      <div class="dialog-head">
+        <h2 id="shortcuts-title">단축키</h2>
+        <button type="button" class="icon-button" aria-label="닫기" @click=${(e: Event) => (e.currentTarget as HTMLElement).closest('dialog')?.close()}>${icon('close')}</button>
+      </div>
+      ${SHORTCUTS.map((section) => html`<section class="shortcut-group">
+        <h3>${section.group}</h3>
+        <dl>${section.items.map(([label, keys]) => html`<div><dt>${label}</dt><dd>${kbd(...keys)}</dd></div>`)}</dl>
+      </section>`)}
+      <p class="dialog-foot">위아래 화살표로도 공지를 옮길 수 있어요</p>
+    </dialog>`;
+  }
+
+  private sideItem(label: string, count: number | null, active: boolean, onClick: () => void, shortcut?: string) {
+    return html`<button type="button" class="side-item" aria-current=${active ? 'page' : 'false'} @click=${onClick}
+      aria-keyshortcuts=${shortcut ?? nothing} title=${shortcut ? `${label} (${shortcut})` : nothing}>
       <span>${label}</span>${count === null ? nothing : html`<span class="count">${count}</span>`}</button>`;
   }
 
@@ -514,7 +552,6 @@ export class NoticeApp extends LitElement {
           <ul class="attachments">${loaded.attachments.map((file) => html`<li>
             <a href=${safeUrl(file.url)} target="_blank" rel="noopener">${icon('clip')}<span>${file.name}</span></a></li>`)}</ul></section>` : nothing}
         ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>` : this.bodyView(loaded)}
-        <p class="hint wide-only">j, k로 옮기고 Enter로 원문을 열어요. Esc로 이 칸을 닫아요</p>
       </div>`;
   }
 }

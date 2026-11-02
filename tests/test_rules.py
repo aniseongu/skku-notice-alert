@@ -25,7 +25,8 @@ def test_example_rules_first_match_and_exclusions() -> None:
     assert (matched.rule_name, matched.priority, matched.reasons) == ("장학", "high", ("category:장학",))
     assert match_notice(notice("대학원생 대상 장학"), ruleset) is None
     assert match_notice(notice("공고", "일반"), ruleset) is None
-    assert match_notice(notice("공고", "일반", "cse-notice"), ruleset).priority == "low"
+    assert match_notice(notice("공고", "일반", "cse-notice"), ruleset) is None
+    assert ruleset.notify_all is True
 
 
 def test_rule_conditions() -> None:

@@ -30,8 +30,8 @@ def _compact(value: str) -> str:
     return "".join(value.casefold().split())
 
 
-def match_interests(notice: Notice, keywords: tuple[str, ...]) -> tuple[str, ...]:
-    haystack = _compact(f"{notice.title} {notice.category or ''}")
+def match_interests(notice: Notice, keywords: tuple[str, ...], ocr_text: str = "") -> tuple[str, ...]:
+    haystack = _compact(f"{notice.title} {notice.category or ''} {ocr_text}")
     matched = []
     for keyword in keywords:
         words = keyword.split()

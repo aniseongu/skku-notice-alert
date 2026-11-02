@@ -1,13 +1,21 @@
 # 출처: https://github.com/tsungmnli/skku-notice-api/blob/main/app/crawler/fetch.py
 """Network access to public list pages, with bounded retries."""
 
+import ipaddress
+import logging
+import socket
 import time
 from dataclasses import dataclass
+from pathlib import Path
+from urllib.parse import urlsplit
 
 import httpx
+import yaml
 
 RETRY_STATUS = {429, 500, 502, 503, 504}
 MAX_IMAGE_BYTES = 5 * 1024 * 1024
+SOURCES_PATH = Path("config/sources.yaml")
+LOGGER = logging.getLogger(__name__)
 
 
 @dataclass(frozen=True)
@@ -18,6 +26,49 @@ class ImageData:
 
 class FetchError(RuntimeError):
     """A board page could not be fetched."""
+
+
+class UnsafeURL(FetchError):
+    """An untrusted notice URL was rejected before a request."""
+
+
+def _source_hosts() -> set[str]:
+    settings = yaml.safe_load(SOURCES_PATH.read_text(encoding="utf-8"))
+    return {urlsplit(source["url"]).hostname.lower() for source in settings["sources"]}
+
+
+def _resolve_addresses(host: str) -> set[str]:
+    return {entry[4][0] for entry in socket.getaddrinfo(host, None, type=socket.SOCK_STREAM)}
+
+
+def _validate_notice_url(url: str) -> None:
+    try:
+        parsed = urlsplit(url)
+        host = parsed.hostname
+        safe_label = f"{parsed.scheme}://{host}" if host else "invalid URL"
+        if (
+            parsed.scheme not in {"http", "https"}
+            or not host
+            or parsed.username is not None
+            or parsed.password is not None
+            or parsed.port is not None and parsed.port not in {80, 443}
+            or not (host in _source_hosts() or host.endswith(".skku.edu"))
+        ):
+            raise UnsafeURL(safe_label)
+        addresses = _resolve_addresses(host)
+        if not addresses or any(
+            not ipaddress.ip_address(address).is_global
+            or ipaddress.ip_address(address).is_multicast
+            or ipaddress.ip_address(address).is_reserved
+            for address in addresses
+        ):
+            raise UnsafeURL(safe_label)
+    except (OSError, ValueError, yaml.YAMLError) as exc:
+        LOGGER.warning("공지 주소 거부: %s", safe_label if "safe_label" in locals() else "invalid URL")
+        raise UnsafeURL("unsafe notice URL") from exc
+    except UnsafeURL:
+        LOGGER.warning("공지 주소 거부: %s", safe_label)
+        raise
 
 
 def fetch_list(url: str, user_agent: str, timeout_seconds: float) -> str:
@@ -41,20 +92,22 @@ def fetch_list(url: str, user_agent: str, timeout_seconds: float) -> str:
 
 
 def fetch_detail(url: str, user_agent: str, timeout_seconds: float) -> str:
+    _validate_notice_url(url)
     headers = {"User-Agent": user_agent, "Accept-Language": "ko"}
     try:
-        response = httpx.get(url, headers=headers, timeout=timeout_seconds, follow_redirects=True)
+        response = httpx.get(url, headers=headers, timeout=timeout_seconds, follow_redirects=False)
         response.raise_for_status()
     except httpx.HTTPError as exc:
-        raise FetchError(f"{url}: detail fetch failed") from exc
+        raise FetchError("detail fetch failed") from exc
     response.encoding = "utf-8"
     return response.text
 
 
 def fetch_image(url: str, user_agent: str) -> ImageData | None:
     try:
+        _validate_notice_url(url)
         with httpx.Client(headers={"User-Agent": user_agent}, timeout=10,
-                          follow_redirects=True) as client:
+                          follow_redirects=False) as client:
             with client.stream("GET", url) as response:
                 response.raise_for_status()
                 mime_type = response.headers.get("Content-Type", "").split(";", 1)[0].strip().lower()
@@ -69,7 +122,7 @@ def fetch_image(url: str, user_agent: str) -> ImageData | None:
                     if len(data) > MAX_IMAGE_BYTES:
                         return None
                 return ImageData(bytes(data), mime_type)
-    except (httpx.HTTPError, ValueError):
+    except (UnsafeURL, httpx.HTTPError, ValueError):
         return None
 
 

@@ -115,7 +115,7 @@ def test_detail_export_and_gemini_schema(tmp_path: Path) -> None:
 
     class Models:
         def generate_content(self, *, model, contents, config):
-            article = json.loads(contents.split("\n", 1)[1])["articles"][0]
+            article = json.loads(contents)["articles"][0]
             assert article["body"] == "가" * 1500
             result = {"items": [{"id": "cse-notice/123", "verdict": "relevant",
                                  "reason": "지원할 수 있어요", "summary": "신청해요", "interests": []}]}

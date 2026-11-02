@@ -45,7 +45,7 @@ def send_notice(
             label += f" {local:%H:%M}"
         body.append(label)
     if match:
-        body.append(f"규칙: {match.rule_name}")
+        body.append(f"{match.rule_name} 기준에 맞아요")
     sender = apprise.Apprise()
     for url in urls:
         if not sender.add(_url_for_notice(url, notice, priority)):

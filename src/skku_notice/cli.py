@@ -280,7 +280,7 @@ def run(args: argparse.Namespace) -> int:
                 current = replace(current, problem=problem)
                 alert = problem_alert(current)
                 if args.dry_run:
-                    print("[Canvas 알림 예정] 아이캠퍼스 토큰 거절")
+                    print(f"[Canvas 알림 예정] {alert.title}")
                 else:
                     save_canvas_state(CANVAS_STATE_PATH, current)
                     if alert and send_canvas(alert.title, alert.body, alert.url, alert.priority):

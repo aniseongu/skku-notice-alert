@@ -30,6 +30,10 @@ ICONS = {
     "search": '<circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/>',
     "refresh": '<path d="M19.5 11A7.5 7.5 0 1 0 17.6 16M19.5 5v6h-6"/>',
     "plus": '<path d="M12 5v14M5 12h14"/>',
+    "close": '<path d="M6 6l12 12M18 6 6 18"/>',
+    "back": '<path d="M15 5l-7 7 7 7"/>',
+    "panel": '<rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M14.5 4.5v15"/>',
+    "clip": '<path d="M15.5 7.5 9 14a1.8 1.8 0 0 0 2.5 2.5L18 10a3.5 3.5 0 0 0-5-5l-6.6 6.6a5.2 5.2 0 0 0 7.4 7.4L19 14"/>',
     "list": '<path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/>',
     "user-check": '<circle cx="10" cy="8" r="4"/><path d="M3.5 20a6.5 6.5 0 0 1 10.3-5.3M15 19l2 2 4-4"/>',
 }

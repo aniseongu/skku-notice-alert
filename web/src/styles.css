@@ -140,6 +140,26 @@
     padding: 12px 16px; border-radius: var(--r-md); background: var(--text); color: var(--bg); font-size: 14px; box-shadow: var(--shadow-pop);
   }
   .wco-bar { display: none; }
+
+  /* 상세(넓은 화면 오른쪽 칸, 휴대폰 앱 안 상세 화면 공용) */
+  .detail .meta { margin-bottom: 6px; }
+  .detail-title { font-size: 20px; line-height: 28px; font-weight: 700; letter-spacing: -0.02em; }
+  .detail-reason { margin-top: 10px; font-size: 14px; line-height: 21px; color: var(--text-2); }
+  .detail-section { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .detail-section h3 { margin: 0 0 8px; font-size: 13px; line-height: 18px; font-weight: 600; color: var(--text-3); }
+  .summary p { margin: 0 0 4px; font-size: 15px; line-height: 24px; }
+  .body-text p { margin: 0 0 10px; font-size: 15px; line-height: 26px; color: var(--text); white-space: pre-line; }
+  .facts { margin: 20px 0 0; }
+  .facts div { display: grid; grid-template-columns: 72px 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; line-height: 21px; }
+  .facts dt { color: var(--text-3); font-weight: 500; }
+  .facts dd { margin: 0; }
+  .facts .dday { margin-left: 6px; }
+  .attachments { margin: 0; padding: 0; list-style: none; }
+  .attachments a { display: flex; align-items: center; gap: 8px; min-height: 44px; color: var(--text); text-decoration: none; font-size: 14px; }
+  .attachments a span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .attachments .i { width: 18px; height: 18px; color: var(--text-3); }
+  .detail-note { margin-top: 20px; font-size: 13px; line-height: 19px; color: var(--text-3); }
+  .hint { margin-top: 16px; font-size: 12px; color: var(--text-3); }
 }
 
 /* 휴대폰 (One UI, 720px 미만). 왼쪽 시작선은 16px(머리, 검색, 칩, 묶음)과 32px(행 글자) 둘뿐이다. */
@@ -210,6 +230,15 @@
     border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); box-shadow: var(--shadow-pop);
   }
   .install-bar p { flex: 1; font-size: 14px; line-height: 20px; }
+
+  /* 휴대폰 앱 안 상세 화면 */
+  .reading { padding: 16px var(--gutter) calc(96px + env(safe-area-inset-bottom)); }
+  .read-actions {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 3;
+    display: flex; gap: 8px; padding: 12px var(--gutter) calc(12px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--line);
+  }
+  .read-actions > * { flex: 1; }
 }
 
 /* Windows (웨일 창, 설치 앱): 바닥까지 닿는 평평한 칸, 칸마다 따로 스크롤, 64px 머리 줄이 한 줄로 이어진다 */
@@ -235,7 +264,7 @@
     }
     .brand { margin: 0 -12px 12px; padding: 0 24px; font-size: 16px; font-weight: 700; letter-spacing: -0.02em; }
     .brand img { width: 24px; height: 24px; }
-    .topbar { position: sticky; top: 0; z-index: 2; padding: 0 16px 0 24px; }
+    .topbar { position: sticky; top: 0; z-index: 2; padding: 0 24px; }
     .topbar h1 { font-size: 20px; line-height: 28px; }
     .topbar .updated { font-size: 12px; line-height: 16px; }
     .topbar .search { width: 260px; height: 36px; padding: 0 12px; }
@@ -274,24 +303,15 @@
     .app { grid-template-columns: 248px minmax(0, 680px) minmax(400px, 1fr); }
     .app.is-settings { grid-template-columns: 248px minmax(0, 1fr); }
     .app.is-settings .detail-pane { display: none; }
+    .app.no-detail { grid-template-columns: 248px minmax(0, 1fr); }
+    .app.no-detail .detail-pane { display: none; }
+    .app.no-detail .list-pane { border-right: 0; }
     .list-pane { border-right: 1px solid var(--line); }
     .detail-pane { display: block; background: var(--bg); }
-    .detail-head { justify-content: flex-end; padding: 0 32px; }
-    .detail-head .solid-button, .detail-head .ghost-button { min-height: 36px; padding: 0 14px; font-size: 14px; }
+    .detail-head { justify-content: space-between; padding: 0 32px 0 20px; }
+    .detail-actions { display: flex; gap: 8px; }
     .detail { padding: 24px 32px; }
-    .detail .meta { margin-bottom: 6px; }
-    .detail-title {
-      font-size: 20px; line-height: 28px; font-weight: 700; letter-spacing: -0.02em;
-      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
-    }
-    .detail-reason { margin-top: 10px; font-size: 14px; line-height: 21px; color: var(--text-2); }
-    .facts { margin: 20px 0 0; }
-    .facts div { display: grid; grid-template-columns: 72px 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; line-height: 21px; }
-    .facts dt { color: var(--text-3); font-weight: 500; }
-    .facts dd { margin: 0; }
-    .facts .dday { margin-left: 6px; }
-    .hint { margin-top: 16px; font-size: 12px; color: var(--text-3); }
-
+    .detail-head .solid-button, .detail-head .ghost-button { min-height: 36px; padding: 0 14px; font-size: 14px; }
     /* 넓은 목록 행: [메타 열 120px] [제목과 판정] [D-day] */
     .row {
       grid-template-columns: 120px minmax(0, 1fr) 48px;

@@ -2,9 +2,9 @@
 // 그림자 DOM을 쓰지 않는다(전역 토큰과 글꼴을 그대로 받으려고). 학교 글자는 Lit 템플릿으로만 넣어 자동 이스케이프한다.
 import { LitElement, html, nothing, type TemplateResult } from 'lit';
 import {
-  type IconName, type Judgement, type MatchedFile, type Notice, type NoticesFile, type Source,
+  type IconName, type Judgement, type MatchedFile, type Notice, type NoticeBody, type NoticesFile, type Source,
   VERDICT_LABEL, boardName, cleanTitle, deadlineDetail, deadlineGroup, deadlinePassed, deadlineText,
-  daysLeft, fetchJson, isMine, keywordMatches, koreanDate, postedGroup, safeUrl, todayKst,
+  daysLeft, fetchBody, fetchJson, isMine, keywordMatches, koreanDate, postedGroup, safeUrl, todayKst,
 } from './data';
 import './settings-view';
 import type { Theme } from './settings-view';
@@ -57,6 +57,7 @@ export class NoticeApp extends LitElement {
     view: { state: true }, board: { state: true }, keyword: { state: true }, keywords: { state: true }, query: { state: true },
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
+    detailOpen: { state: true }, openedId: { state: true },
   };
 
   notices: Notice[] = [];
@@ -77,6 +78,12 @@ export class NoticeApp extends LitElement {
   toast = '';
   isWide = wide.matches;
   theme: Theme = (['light', 'dark'].includes(remember('theme') ?? '') ? remember('theme') : 'auto') as Theme;
+  // 넓은 화면의 오른쪽 상세 칸을 열어 둘지(닫으면 목록이 넓어진다). 기억한다.
+  detailOpen = remember('detail') !== '0';
+  // 휴대폰에서 앱 안 상세 화면으로 연 글. 뒤로 가기(history)로 닫는다.
+  openedId: string | null = null;
+  // 글별 본문(D-013). 'loading'이면 받는 중, null이면 아직 서버가 받지 않은 글.
+  private bodies = new Map<string, NoticeBody | null | 'loading'>();
   private toastTimer = 0;
   // 상세 칸에 실제로 보이는 글(고른 글이 없으면 첫 글). 목록 행 표시와 맞춘다.
   private shownId: string | null = null;
@@ -91,6 +98,7 @@ export class NoticeApp extends LitElement {
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') this.refresh(); });
     window.setInterval(() => { if (document.visibilityState === 'visible') this.refresh(); }, REFRESH_MS);
     window.addEventListener('keydown', (event) => this.onKey(event));
+    window.addEventListener('popstate', () => { this.openedId = null; });
     window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); this.install = event as InstallPrompt; });
     window.addEventListener('appinstalled', () => { this.install = null; });
   }
@@ -209,6 +217,7 @@ export class NoticeApp extends LitElement {
     if (event.key === 'Escape' && target instanceof HTMLInputElement) { target.blur(); return; }
     if (target?.closest('input, textarea, select') || event.metaKey || event.ctrlKey || event.altKey) return;
     if (this.view === 'settings') return;
+    if (event.key === 'Escape' && this.isWide && this.detailOpen) { this.setDetail(false); return; }
     // 단추나 링크에 포커스가 있으면 Enter는 그 요소의 기본 동작에 맡긴다.
     if (event.key === 'Enter' && target?.closest(INTERACTIVE)) return;
     const list = this.visible();
@@ -217,6 +226,7 @@ export class NoticeApp extends LitElement {
       const next = list[Math.max(0, Math.min(list.length - 1, index + step))];
       if (!next) return;
       this.selectedId = next.id;
+      if (this.isWide) this.setDetail(true);
       this.updateComplete.then(() => this.querySelector(`[data-id="${CSS.escape(next.id)}"]`)?.scrollIntoView({ block: 'nearest' }));
     };
     const actions: Record<string, () => void> = {
@@ -230,10 +240,24 @@ export class NoticeApp extends LitElement {
   }
 
   private onRow(event: MouseEvent, notice: Notice) {
-    // 넓은 화면은 상세 칸에 먼저 보여 주고, 원문은 단추나 Enter로 연다(ux-rules 1절).
-    if (!this.isWide || event.ctrlKey || event.metaKey) return;
+    // 행을 누르면 앱 안 상세를 먼저 보여 주고, 원문은 "원문 열기"로 연다(D-013, ux-rules 1절).
+    // Ctrl이나 Cmd를 누르고 누르면 브라우저 기본대로 원문을 새 탭에 연다.
+    if (event.ctrlKey || event.metaKey || event.shiftKey) return;
     event.preventDefault();
-    this.selectedId = notice.id;
+    if (this.isWide) { this.selectedId = notice.id; this.setDetail(true); return; }
+    this.openedId = notice.id;
+    history.pushState({ notice: notice.id }, '');
+    window.scrollTo({ top: 0 });
+  }
+
+  private setDetail(open: boolean) { this.detailOpen = open; remember('detail', open ? '1' : '0'); }
+
+  private body(notice: Notice): NoticeBody | null | 'loading' {
+    const cached = this.bodies.get(notice.id);
+    if (cached !== undefined) return cached;
+    this.bodies.set(notice.id, 'loading');
+    fetchBody(notice).catch(() => null).then((body) => { this.bodies.set(notice.id, body); this.requestUpdate(); });
+    return 'loading';
   }
 
   updated() {
@@ -252,9 +276,11 @@ export class NoticeApp extends LitElement {
     const selected = settings ? undefined
       : this.notices.find((n) => n.id === this.selectedId) ?? (this.isWide ? list[0] : undefined);
     this.shownId = selected?.id ?? null;
+    const reading = !this.isWide && !settings ? this.notices.find((n) => n.id === this.openedId) : undefined;
+    const classes = [settings ? 'is-settings' : '', this.isWide && !this.detailOpen ? 'no-detail' : '', reading ? 'is-reading' : ''].join(' ');
     return html`
       <div class="wco-bar" aria-hidden="true"><img src="favicon.svg" alt="">성대 공지</div>
-      <div class="app ${settings ? 'is-settings' : ''}">
+      <div class="app ${classes}">
         <aside class="sidebar" aria-label="탐색">
           <div class="pane-head brand"><img src="icon.svg" alt="">성대 공지</div>
           <nav class="side-group" aria-label="보기">
@@ -278,10 +304,10 @@ export class NoticeApp extends LitElement {
         </aside>
 
         <main class="list-pane">
+          ${reading ? this.readingView(reading) : html`
           <header class="pane-head topbar glass">
             ${settings ? html`<button type="button" class="icon-button narrow-only back" aria-label="뒤로"
-              @click=${() => this.setView((remember('tab') as Tab) ?? 'mine')}>
-              <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>` : nothing}
+              @click=${() => this.setView((remember('tab') as Tab) ?? 'mine')}>${icon('back')}</button>` : nothing}
             <div class="topbar-text">
               <h1>${title}</h1>
               ${settings ? html`<p class="updated">알림과 연결을 정해요</p>` : this.updatedLine(list.length)}
@@ -290,6 +316,8 @@ export class NoticeApp extends LitElement {
               <label class="search wide-only">${icon('search')}
                 <input type="search" placeholder="공지 찾기" autocomplete="off" aria-label="공지 검색" .value=${this.query}
                   @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; }}></label>
+              ${this.detailOpen ? nothing : html`<button type="button" class="icon-button wide-only" aria-label="상세 칸 열기"
+                @click=${() => this.setDetail(true)}>${icon('panel')}</button>`}
               <button type="button" class="icon-button" aria-label="새로고침" ?disabled=${this.loading} @click=${this.refresh}>${icon('refresh')}</button>`}
             ${settings ? nothing : html`<button type="button" class="icon-button narrow-only" aria-label="설정"
               @click=${() => this.setView('settings')}>${gearIcon}</button>`}
@@ -309,14 +337,15 @@ export class NoticeApp extends LitElement {
                 <button type="button" class="chip-add" @click=${() => this.setView('settings')}>${icon('plus')}키워드 추가</button>
               </div>
             </div>
-            <div class="list" aria-live="polite" aria-busy=${this.loading ? 'true' : 'false'}>${this.listBody(list)}</div>`}
+            <div class="list" aria-live="polite" aria-busy=${this.loading ? 'true' : 'false'}>${this.listBody(list)}</div>`}`}
         </main>
 
         <aside class="detail-pane" aria-label="공지 상세">
           <div class="pane-head detail-head">
-            ${selected ? html`
+            <button type="button" class="icon-button" aria-label="상세 칸 닫기" title="상세 칸 닫기 (Esc)" @click=${() => this.setDetail(false)}>${icon('close')}</button>
+            ${selected ? html`<div class="detail-actions">
               <button type="button" class="ghost-button" @click=${() => this.copyLink(selected)}>링크 복사하기</button>
-              <a class="solid-button" href=${safeUrl(selected.url)} target="_blank" rel="noopener">원문 열기</a>` : nothing}
+              <a class="solid-button" href=${safeUrl(selected.url)} target="_blank" rel="noopener">원문 열기</a></div>` : nothing}
           </div>
           ${selected ? this.detail(selected) : nothing}
         </aside>
@@ -326,16 +355,29 @@ export class NoticeApp extends LitElement {
         <div class="install-bar" role="region" aria-label="앱 설치 안내">
           <p>홈 화면에 추가하면 앱처럼 바로 열 수 있어요</p>
           <button type="button" class="solid-button" @click=${this.runInstall}>설치하기</button>
-          <button type="button" class="icon-button" aria-label="안내 닫기" @click=${this.hideInstall}>
-            <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+          <button type="button" class="icon-button" aria-label="안내 닫기" @click=${this.hideInstall}>${icon('close')}</button>
         </div>` : nothing}
 
-      <nav class="tabbar glass" aria-label="보기" ?hidden=${settings}>
+      <nav class="tabbar glass" aria-label="보기" ?hidden=${settings || Boolean(reading)}>
         ${tabs.map((t) => html`<button type="button" aria-current=${this.view === t.id ? 'page' : 'false'}
           @click=${() => { this.keyword = null; this.setView(t.id); }}>${icon(t.icon)}<span>${t.label}</span></button>`)}
       </nav>
       <div class="toast" role="status" ?hidden=${!this.toast}>${this.toast}</div>
     `;
+  }
+
+  /** 휴대폰 앱 안 상세 화면: 뒤로 가기, 상세, 바닥의 원문 열기 */
+  private readingView(notice: Notice) {
+    return html`
+      <header class="pane-head topbar glass">
+        <button type="button" class="icon-button back" aria-label="목록으로" @click=${() => history.back()}>${icon('back')}</button>
+        <div class="topbar-text"><h1>공지</h1></div>
+      </header>
+      <div class="reading">${this.detail(notice)}</div>
+      <div class="read-actions glass">
+        <button type="button" class="ghost-button" @click=${() => this.copyLink(notice)}>링크 복사하기</button>
+        <a class="solid-button" href=${safeUrl(notice.url)} target="_blank" rel="noopener">원문 열기</a>
+      </div>`;
   }
 
   private sideItem(label: string, count: number | null, active: boolean, onClick: () => void) {
@@ -438,18 +480,31 @@ export class NoticeApp extends LitElement {
     const source = this.sources.find((s) => s.id === notice.source_id);
     const interests = this.interests(notice);
     const today = todayKst();
+    const body = this.body(notice);
+    const loaded = body !== 'loading' ? body : null;
+    const reason = this.reasonLine(notice);
     return html`
       <div class="detail">
         <p class="meta"><span>${boardName(source, notice.source_id)}</span>${notice.category ? html`<span>${notice.category}</span>` : nothing}</p>
         <h2 class="detail-title" title=${cleanTitle(notice.title)}>${cleanTitle(notice.title)}</h2>
-        ${this.reasonLine(notice) === nothing ? nothing : html`<p class="detail-reason">${this.reasonLine(notice)}</p>`}
+        ${reason === nothing ? nothing : html`<p class="detail-reason">${reason}</p>`}
+        ${loaded?.summary ? html`<section class="detail-section summary" aria-label="요약">
+          <h3>요약</h3>${loaded.summary.split('\n').filter(Boolean).map((line) => html`<p>${line}</p>`)}</section>` : nothing}
         <dl class="facts">
           ${interests.length ? html`<div><dt>관심</dt><dd><b class="interest">${interests.join(', ')}</b></dd></div>` : nothing}
           ${notice.deadline ? html`<div><dt>마감</dt><dd>${deadlineDetail(notice.deadline)} ${this.dday(notice, today)}</dd></div>` : nothing}
           <div><dt>게시일</dt><dd>${koreanDate(notice.posted_on)}</dd></div>
           ${judgement?.notified ? html`<div><dt>알림</dt><dd>휴대폰으로 보냈어요</dd></div>` : nothing}
         </dl>
-        <p class="hint">j, k로 옮기고 Enter로 원문을 열어요</p>
+        ${loaded?.attachments?.length ? html`<section class="detail-section" aria-label="첨부">
+          <h3>첨부 ${loaded.attachments.length}개</h3>
+          <ul class="attachments">${loaded.attachments.map((file) => html`<li>
+            <a href=${safeUrl(file.url)} target="_blank" rel="noopener">${icon('clip')}<span>${file.name}</span></a></li>`)}</ul></section>` : nothing}
+        ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>`
+          : loaded?.body ? html`<section class="detail-section body-text" aria-label="본문">
+              <h3>본문</h3>${loaded.body.split(/\n+/).filter(Boolean).map((para) => html`<p>${para}</p>`)}</section>`
+          : html`<p class="detail-note">본문은 아직 받지 않았어요. 원문 열기로 볼 수 있어요</p>`}
+        <p class="hint wide-only">j, k로 옮기고 Enter로 원문을 열어요. Esc로 이 칸을 닫아요</p>
       </div>`;
   }
 }

@@ -48,6 +48,7 @@ def export_site(
         detail = {
             "version": 1, "id": notice["id"], "summary": item.get("summary"),
             "body": item.get("body_text"), "attachments": item.get("attachments", []),
+            "images": item.get("images", []),
             "fetched_at": item.get("fetched_at"),
         }
         target.write_text(json.dumps(detail, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

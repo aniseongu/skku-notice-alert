@@ -70,6 +70,7 @@ def add_notice(
         "notice": public, "match": personal,
         "body_text": old.get("body_text"),
         "attachments": old.get("attachments", []),
+        "images": old.get("images", []),
         "summary": judgment.summary if judgment and judgment.summary else old.get("summary"),
         "body_attempts": old.get("body_attempts", 0),
         "body_pending": old.get("body_pending", False),
@@ -85,12 +86,13 @@ def add_notice(
 
 def update_detail(
     archive: Archive, key: str, body: str | None, attachments: tuple[tuple[str, str], ...],
-    fetched_at: str | None,
+    fetched_at: str | None, images: tuple[str, ...] = (),
 ) -> Archive:
     item = archive.items[key]
     updated = {**item, "body_text": body, "body_pending": body is None, "attachments": [
         {"name": name, "url": url} for name, url in attachments
-    ], "fetched_at": fetched_at, "body_attempts": item.get("body_attempts", 0) + 1}
+    ], "images": list(images), "fetched_at": fetched_at,
+        "body_attempts": item.get("body_attempts", 0) + 1}
     return Archive({**archive.items, key: updated})
 
 

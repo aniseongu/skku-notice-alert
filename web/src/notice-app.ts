@@ -366,6 +366,19 @@ export class NoticeApp extends LitElement {
     `;
   }
 
+  private bodyView(loaded: NoticeBody | null) {
+    if (!loaded) return html`<p class="detail-note">본문은 아직 받지 않았어요. 원문 열기로 볼 수 있어요</p>`;
+    const paragraphs = (loaded.body ?? '').split(/\n+/).filter(Boolean);
+    // 그림은 사용자가 볼 때만 학교 서버에서 받는다(수집 실행은 주소만 저장).
+    const images = (loaded.images ?? []).map(safeUrl).filter((url) => url !== '#');
+    if (!paragraphs.length && !images.length) return html`<p class="detail-note">본문에 글자가 없어요. 원문 열기로 볼 수 있어요</p>`;
+    return html`<section class="detail-section body-text" aria-label="본문">
+      <h3>본문</h3>
+      ${paragraphs.map((para) => html`<p>${para}</p>`)}
+      ${images.map((src, index) => html`<img src=${src} alt="본문 그림 ${index + 1}" loading="lazy" referrerpolicy="no-referrer">`)}
+    </section>`;
+  }
+
   /** 휴대폰 앱 안 상세 화면: 뒤로 가기, 상세, 바닥의 원문 열기 */
   private readingView(notice: Notice) {
     return html`
@@ -500,10 +513,7 @@ export class NoticeApp extends LitElement {
           <h3>첨부 ${loaded.attachments.length}개</h3>
           <ul class="attachments">${loaded.attachments.map((file) => html`<li>
             <a href=${safeUrl(file.url)} target="_blank" rel="noopener">${icon('clip')}<span>${file.name}</span></a></li>`)}</ul></section>` : nothing}
-        ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>`
-          : loaded?.body ? html`<section class="detail-section body-text" aria-label="본문">
-              <h3>본문</h3>${loaded.body.split(/\n+/).filter(Boolean).map((para) => html`<p>${para}</p>`)}</section>`
-          : html`<p class="detail-note">본문은 아직 받지 않았어요. 원문 열기로 볼 수 있어요</p>`}
+        ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>` : this.bodyView(loaded)}
         <p class="hint wide-only">j, k로 옮기고 Enter로 원문을 열어요. Esc로 이 칸을 닫아요</p>
       </div>`;
   }

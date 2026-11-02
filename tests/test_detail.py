@@ -28,14 +28,28 @@ def test_detail_fixtures() -> None:
     detail = parse_detail(skku, "https://www.skku.edu/skku/campus/skk_comm/notice01.do")
     assert "성균관대 창업지원단" in detail.body_text
     assert len(detail.attachments) == 2
+    assert detail.images == ("https://www.skku.edu/_attach/image/2026/11/kZLqHbhAfbssKRHGyaXE.png",)
     assert detail.attachments[0][1].startswith("https://www.skku.edu/")
     assert "\n\n\n" not in detail.body_text
     cse = (FIXTURES / "cse_notice_view_227923_2026-11-02.html").read_text()
-    assert parse_detail(cse, "https://cse.skku.edu/cse/notice.do").body_text == ""
+    cse_detail = parse_detail(cse, "https://cse.skku.edu/cse/notice.do")
+    assert cse_detail.body_text == ""
+    assert cse_detail.images == (
+        "https://cse.skku.edu/_res/editor_image/2026/11/pUZGIAUXiakYxQErSSXq0.png",)
     with pytest.raises(ParseError):
         parse_detail("<html>missing</html>", "https://example.com")
     assert parse_detail("<dl class='board-write-box'><dd><p>A<script>bad</script> B</p><p>C</p></dd></dl>",
                         "https://example.com").body_text == "A B\nC"
+
+
+def test_detail_images_are_filtered_deduplicated_and_limited() -> None:
+    html = "<dl class='board-write-box'><dd>" + "".join(
+        f"<img src='/uploads/{number}.png'>" for number in range(12)
+    ) + "<img src='/uploads/0.png'><img src='/_res/cse/img/common/sns_insta.png'>" \
+        "<img src='/uploads/ico_share.png'><img src='javascript:bad'></dd></dl>"
+    images = parse_detail(html, "https://cse.skku.edu/cse/notice.do").images
+    assert len(images) == 10
+    assert images == tuple(f"https://cse.skku.edu/uploads/{number}.png" for number in range(10))
 
 
 def test_detail_limit_retry_and_baseline(tmp_path: Path, monkeypatch) -> None:
@@ -76,6 +90,8 @@ def test_fixture_detail_is_fetched_once(tmp_path: Path, monkeypatch) -> None:
     archive = cli._fill_details(Archive(), state, [({"id": "cse-notice"}, [notice])], {}, True, now)
     item = archive.items["cse-notice/227923"]
     assert item["body_text"] == ""
+    assert item["images"] == [
+        "https://cse.skku.edu/_res/editor_image/2026/11/pUZGIAUXiakYxQErSSXq0.png"]
     assert item["body_attempts"] == 1
     again = cli._fill_details(archive, state, [({"id": "cse-notice"}, [notice])], {}, True, now)
     assert again.items["cse-notice/227923"]["body_attempts"] == 1
@@ -86,11 +102,13 @@ def test_detail_export_and_gemini_schema(tmp_path: Path) -> None:
     archive = add_notice(Archive(), notice, "2026-11-02T00:00:00+09:00")
     item = archive.items["cse-notice/123"]
     item.update(body_text="본문", attachments=[{"name": "파일", "url": "https://example.com/a"}],
+                images=["https://example.com/image.png"],
                 summary="지원자는 신청해요.", fetched_at="2026-11-02T01:00:00+09:00")
     export_site(tmp_path, archive, [], datetime.now(ZoneInfo("Asia/Seoul")), web_path=tmp_path / "missing")
     output = json.loads((tmp_path / "api/v1/notices/cse-notice/123.json").read_text())
     assert output == {"version": 1, "id": "cse-notice/123", "summary": "지원자는 신청해요.",
                       "body": "본문", "attachments": [{"name": "파일", "url": "https://example.com/a"}],
+                      "images": ["https://example.com/image.png"],
                       "fetched_at": "2026-11-02T01:00:00+09:00"}
     assert "summary" in SCHEMA["properties"]["items"]["items"]["required"]
 

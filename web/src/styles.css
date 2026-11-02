@@ -149,6 +149,7 @@
   .detail-section h3 { margin: 0 0 8px; font-size: 13px; line-height: 18px; font-weight: 600; color: var(--text-3); }
   .summary p { margin: 0 0 4px; font-size: 15px; line-height: 24px; }
   .body-text p { margin: 0 0 10px; font-size: 15px; line-height: 26px; color: var(--text); white-space: pre-line; }
+  .body-text img { display: block; max-width: 100%; height: auto; margin: 0 0 12px; border-radius: var(--r-sm); background: var(--sunken); }
   .facts { margin: 20px 0 0; }
   .facts div { display: grid; grid-template-columns: 72px 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; line-height: 21px; }
   .facts dt { color: var(--text-3); font-weight: 500; }

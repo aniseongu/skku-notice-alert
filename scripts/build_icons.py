@@ -50,32 +50,57 @@ def tile(name: str, size: int = 128, radius: int = 28, scale: float = 3.3) -> st
     )
 
 
+# 다크 모드에서는 화면의 분류 아이콘과 같은 조합으로 바뀐다: 어두운 녹색 면(--accent-soft 다크) 위 민트 선(--accent 다크).
+# SVG는 안에 미디어 쿼리를 넣어 스스로 바뀌고, PNG는 미디어 쿼리가 없으므로 *-dark.png를 따로 만들어
+# index.html의 <link media="(prefers-color-scheme: dark)">로 골라 쓴다.
+DARK_TILE = "#163527"
+# PNG에서 원본 선을 그릴 굵기(원본 그룹 좌표 단위). 128용은 128px에서 약 2.4px, 32용은 32px에서 약 1.4px가 되게 맞췄다.
+PNG_STROKE = {128: 16, 32: 28}
+DARK_LINE = "#7ed2ab"
+DARK_STYLE = (
+    "<style>@media (prefers-color-scheme: dark){"
+    f".tile{{fill:{DARK_TILE}}}.art{{stroke:{DARK_LINE}}}.ring{{stroke:{DARK_TILE}}}}}</style>"
+)
+
+
 def library_art(size: int) -> str:
     """아캠 플러스 아이콘의 지붕 선 묶음(<g>)만 꺼낸다. 128은 층 띠까지, 32는 단순화한 선."""
     text = (SRC / f"library{size}.svg").read_text(encoding="utf-8")
     return re.search(r"<g .*</g>", text, re.S).group()
 
 
-def app_icon(size: int, full_bleed: bool) -> str:
+def app_icon(size: int, full_bleed: bool, variant: str = "auto") -> str:
     """아캠 플러스 지붕 선 위에, 새 공지를 뜻하는 노랗게 물든 은행잎 점을 얹는다.
 
     full_bleed는 안드로이드 maskable(가장자리가 잘림)용이고, 아니면 웨일 아이콘처럼 둥근 타일이다.
     점은 maskable 안전 영역(가운데 반지름 40%) 안에 둔다.
     """
-    art = library_art(128 if size >= 96 else 32)
+    base = 128 if size >= 96 else 32
+    art = library_art(base)
     background = (
         f'<rect width="128" height="128" fill="{BRAND}"/>'
         if full_bleed
         else f'<rect width="128" height="128" rx="28" fill="{BRAND}"/>'
     )
-    # 원본은 선 굵기가 화면 픽셀 고정(non-scaling-stroke)이라, 큰 크기로 그릴 때 굵기를 비례해 키운다.
-    if size > 128:
-        factor = size / 128
-        art = re.sub(r'stroke-width="([\d.]+)"', lambda m: f'stroke-width="{float(m.group(1)) * factor:.2f}"', art)
-    dot = f'<circle cx="96" cy="37" r="7.5" fill="{GINKGO_YELLOW}" stroke="{BRAND}" stroke-width="3"/>'
+    # 원본은 선 굵기가 화면 픽셀 고정(non-scaling-stroke)이다. 브라우저용 SVG(auto)는 그대로 두고,
+    # PNG를 굽는 resvg는 이 속성을 무시하고 그룹 축소 비율(약 0.15)로 선을 가늘게 그리므로 속성을 빼고 굵기를 다시 준다.
+    if variant != "auto":
+        art = art.replace(' vector-effect="non-scaling-stroke"', "")
+        art = re.sub(r'stroke-width="[\d.]+"', f'stroke-width="{PNG_STROKE[base]}"', art)
+    dot = f'<circle class="ring" cx="96" cy="37" r="7.5" fill="{GINKGO_YELLOW}" stroke="{BRAND}" stroke-width="3"/>'
+    background = background.replace("<rect ", '<rect class="tile" ', 1)
+    art = art.replace("<g ", '<g class="art" ', 1)
+    style = DARK_STYLE if variant == "auto" else ""
+    if variant == "dark":
+        background = background.replace(f'fill="{BRAND}"', f'fill="{DARK_TILE}"')
+        art = art.replace('stroke="#ffffff"', f'stroke="{DARK_LINE}"')
+        dot = dot.replace(f'stroke="{BRAND}"', f'stroke="{DARK_TILE}"')
+    if variant == "monochrome":
+        background = ""
+        dot = '<circle cx="96" cy="37" r="7.5" fill="#ffffff"/>'
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{size}" height="{size}" viewBox="0 0 128 128">'
-        f"{background}{art}{dot}</svg>"
+        f"{style}{background}{art}{dot}</svg>"
     )
 
 
@@ -93,10 +118,12 @@ def main() -> None:
     (WEB / "icons" / "notify").mkdir(parents=True, exist_ok=True)
     (WEB / "favicon.svg").write_text(app_icon(32, full_bleed=False) + "\n", encoding="utf-8")
     (WEB / "icon.svg").write_text(app_icon(128, full_bleed=False) + "\n", encoding="utf-8")
-    for size in (48, 192, 512):
-        png(app_icon(size, full_bleed=False), WEB / f"icon-{size}.png", size)
-    png(app_icon(512, full_bleed=True), WEB / "icon-maskable-512.png", 512)
-    png(app_icon(180, full_bleed=True), WEB / "apple-touch-icon.png", 180)
+    for suffix, variant in (("", "light"), ("-dark", "dark")):
+        for size in (48, 192, 512):
+            png(app_icon(size, False, variant), WEB / f"icon-{size}{suffix}.png", size)
+        png(app_icon(512, True, variant), WEB / f"icon-maskable-512{suffix}.png", 512)
+        png(app_icon(180, True, variant), WEB / f"apple-touch-icon{suffix}.png", 180)
+    png(app_icon(512, True, "monochrome"), WEB / "icon-monochrome-512.png", 512)
     (WEB / "icons" / "sprite.svg").write_text(sprite(), encoding="utf-8")
     for name in NOTIFY:
         svg = tile(name)

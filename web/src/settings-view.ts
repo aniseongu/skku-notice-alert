@@ -20,8 +20,8 @@ const link = (href: string, text: string) => html`<a href=${href} target="_blank
 const KEY_FIELDS: KeyField[] = [
   {
     secret: 'GEMINI_API_KEY',
-    label: 'Gemini API 키',
-    help: '나에게 해당하는 공지인지 판정해요. 무료예요',
+    label: 'Gemini 키',
+    help: '나에게 맞는 공지인지 Gemini가 골라 줘요. 무료예요',
     placeholder: 'AIza로 시작하는 키',
     steps: [
       html`${link('https://aistudio.google.com/apikey', 'Google AI Studio의 API 키 화면')}을 열고 Google 계정으로 로그인해요`,
@@ -32,7 +32,7 @@ const KEY_FIELDS: KeyField[] = [
   },
   {
     secret: 'CANVAS_TOKEN',
-    label: 'Canvas 토큰',
+    label: '아이캠퍼스 토큰',
     help: '아이캠퍼스 강의, 과제, 퀴즈 마감을 알려요',
     placeholder: '아이캠퍼스에서 만든 액세스 토큰',
     steps: [
@@ -51,7 +51,7 @@ const KEY_FIELDS: KeyField[] = [
     steps: [
       '학과, 학년, 재학 상태, 캠퍼스, 복수전공, 관심 분야, 받고 싶은 공지와 받기 싫은 공지를 적어요',
       '형식은 프로젝트의 config/profile.example.yaml 파일과 같아요',
-      '이름, 학번, 전화번호, 주소는 적지 않아요',
+      'Google로 보내는 내용이라 이름, 학번, 전화번호, 주소는 빼고 적어요',
     ],
   },
 ];
@@ -99,11 +99,11 @@ export class SettingsView extends LitElement {
   private setTopic(value: string) { this.topic = value.trim(); }
 
   private async testNotification() {
-    if (!/^[\w-]{6,64}$/.test(this.topic)) { this.setStatus('topic', false, '토픽 이름은 영문, 숫자, -, _로 6자 이상이에요'); return; }
+    if (!/^[\w-]{6,64}$/.test(this.topic)) { this.setStatus('topic', false, '이름은 영문, 숫자, -, _로 6자 넘게 써 주세요'); return; }
     this.busy = 'topic';
     try {
       const ok = await sendTestNotification(this.topic);
-      this.setStatus('topic', ok, ok ? '보냈어요. 휴대폰과 PC에 알림이 왔는지 봐 주세요' : 'ntfy가 받지 않았어요. 잠시 뒤 다시 해 주세요');
+      this.setStatus('topic', ok, ok ? '보냈어요. 휴대폰과 PC에 알림이 왔는지 봐 주세요' : '알림을 보내지 못했어요. 잠시 뒤 다시 보내 주세요');
     } catch {
       this.setStatus('topic', false, '인터넷 연결을 확인해 주세요');
     } finally { this.busy = ''; }
@@ -111,7 +111,7 @@ export class SettingsView extends LitElement {
 
   private async connect() {
     remember('github-repo', this.repo);
-    if (!this.connected()) { this.setStatus('github', false, '저장소는 아이디/저장소 이름, 토큰은 github_pat_로 시작해요'); return; }
+    if (!this.connected()) { this.setStatus('github', false, '저장소는 아이디/저장소 이름으로, 토큰은 github_pat_로 시작하는 값을 넣어 주세요'); return; }
     this.busy = 'github';
     try {
       this.saved = await listSecrets(this.repo, this.token);
@@ -122,7 +122,7 @@ export class SettingsView extends LitElement {
   }
 
   private async save(name: string, value: string) {
-    if (!value.trim()) { this.setStatus(name, false, '값을 넣어 주세요'); return; }
+    if (!value.trim()) { this.setStatus(name, false, '키를 먼저 붙여 넣어 주세요'); return; }
     this.busy = name;
     try {
       await saveSecret(this.repo, this.token, name, value.trim());
@@ -140,7 +140,7 @@ export class SettingsView extends LitElement {
     this.busy = name;
     try {
       const ok = await checkGeminiKey(value);
-      this.setStatus(name, ok, ok ? '키가 맞아요' : '키가 맞지 않아요. 다시 복사해 주세요');
+      this.setStatus(name, ok, ok ? '키가 맞아요' : '키를 다시 복사해 붙여 넣어 주세요');
     } catch {
       this.setStatus(name, false, '확인하지 못했어요. 인터넷 연결을 봐 주세요');
     } finally { this.busy = ''; }
@@ -150,7 +150,7 @@ export class SettingsView extends LitElement {
     this.busy = 'keywords';
     try {
       await saveVariable(this.repo, this.token, 'INTEREST_KEYWORDS', this.keywords.join('\n'));
-      this.setStatus('keywords', true, '알림 기준에도 넣었어요');
+      this.setStatus('keywords', true, '휴대폰 알림에도 넣었어요');
     } catch (error) {
       this.setStatus('keywords', false, error instanceof GitHubError ? error.message : '저장하지 못했어요');
     } finally { this.busy = ''; }
@@ -193,12 +193,12 @@ export class SettingsView extends LitElement {
     return html`
       <div class="settings">
         <section aria-labelledby="s-github">
-          <h2 id="s-github" class="settings-head">GitHub</h2>
+          <h2 id="s-github" class="settings-head">연결</h2>
           <div class="box">
           <div class="setting">
             <div class="setting-text">
-              <p class="setting-name">저장소와 토큰</p>
-              <p class="setting-help">알림을 15분마다 돌리는 저장소예요. 아래 키들은 여기로 암호화해 보내고 이 브라우저에는 저장하지 않아요. 토큰도 화면을 닫으면 잊어요</p>
+              <p class="setting-name">GitHub 저장소</p>
+              <p class="setting-help">15분마다 공지를 확인하는 내 저장소예요. 아래 키는 이 저장소로 암호화해 보내고 브라우저에는 남기지 않아요</p>
             </div>
             <div class="setting-control">
               <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="저장소" placeholder="아이디/저장소 이름"
@@ -207,7 +207,7 @@ export class SettingsView extends LitElement {
                 <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="GitHub 토큰" placeholder="github_pat_로 시작하는 토큰"
                   .value=${this.token} @input=${(e: Event) => { this.token = (e.target as HTMLInputElement).value.trim(); }}>
                 <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${this.connect}>
-                  ${this.busy === 'github' ? '연결 중' : '연결'}</button>
+                  ${this.busy === 'github' ? '연결 중' : '연결하기'}</button>
               </div>
               ${this.note('github')}
               ${this.guide('github', [
@@ -215,7 +215,7 @@ export class SettingsView extends LitElement {
                 '"Repository access"에서 "Only select repositories"를 고르고 이 저장소 하나만 골라요',
                 '"Permissions"에서 Secrets와 Variables를 "Read and write"로 바꿔요. 다른 권한은 주지 않아요',
                 '만료일을 정하고 만든 토큰을 복사해 위 칸에 넣어요',
-                '저장소가 아직 없으면 아래 ".env 양식 복사"로 컴퓨터에서 먼저 써요',
+                '저장소가 아직 없으면 아래 ".env 양식 복사하기"로 컴퓨터에서 먼저 써요',
               ])}
             </div>
           </div>
@@ -228,13 +228,13 @@ export class SettingsView extends LitElement {
           <div class="box">
           <div class="setting">
             <div class="setting-text">
-              <p class="setting-name">ntfy 토픽</p>
-              <p class="setting-help">휴대폰과 PC가 같은 이름을 구독하면 알림이 와요. 이름을 아는 사람은 누구나 받을 수 있어서 비밀번호처럼 다뤄요.
-                이 화면을 닫으면 지워지니 휴대폰 앱과 GitHub에 먼저 넣어 두세요</p>
+              <p class="setting-name">알림 받을 이름</p>
+              <p class="setting-help">휴대폰과 PC의 ntfy 앱에서 이 이름을 구독하면 알림이 와요. 아는 사람은 누구나 받을 수 있으니 비밀번호처럼 다뤄 주세요.
+                이 화면을 닫으면 사라지니 앱과 GitHub에 먼저 넣어 두세요</p>
             </div>
             <div class="setting-control">
               <div class="inline">
-                <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="ntfy 토픽"
+                <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="알림 받을 이름"
                   placeholder="skku-로 시작하는 긴 이름" .value=${this.topic} @change=${(e: Event) => this.setTopic((e.target as HTMLInputElement).value)}>
                 <button type="button" class="ghost-button" @click=${() => this.setTopic(newTopic())}>새로 만들기</button>
               </div>
@@ -242,9 +242,9 @@ export class SettingsView extends LitElement {
                 <button type="button" class="ghost-button" ?disabled=${this.busy === 'topic' || !this.topic} @click=${this.testNotification}>
                   ${this.busy === 'topic' ? '보내는 중' : '테스트 알림 보내기'}</button>
                 <button type="button" class="solid-button" ?disabled=${!this.connected() || !this.topic || this.busy === 'NOTIFY_URLS'}
-                  @click=${() => this.save('NOTIFY_URLS', `ntfys://${this.topic}`)}>GitHub에 저장</button>
+                  @click=${() => this.save('NOTIFY_URLS', `ntfys://${this.topic}`)}>GitHub에 저장하기</button>
               </div>
-              ${!this.topic ? html`<p class="field-note">토픽을 먼저 만들거나 붙여 넣으면 테스트와 저장을 할 수 있어요</p>`
+              ${!this.topic ? html`<p class="field-note">이름을 만들거나 붙여 넣으면 보낼 수 있어요</p>`
                 : !this.connected() ? html`<p class="field-note">GitHub에 연결하면 저장할 수 있어요</p>` : nothing}
               ${this.saved.NOTIFY_URLS ? html`<p class="setting-saved">${savedDate(this.saved.NOTIFY_URLS)}에 저장됨</p>` : nothing}
               ${this.note('NOTIFY_URLS')}
@@ -267,7 +267,7 @@ export class SettingsView extends LitElement {
         </section>
 
         <section aria-labelledby="s-keys">
-          <h2 id="s-keys" class="settings-head">연결 키</h2>
+          <h2 id="s-keys" class="settings-head">키</h2>
           <div class="box">
           ${KEY_FIELDS.map((field) => this.keyRow(field))}
 
@@ -277,7 +277,7 @@ export class SettingsView extends LitElement {
               <p class="setting-help">저장소를 만들기 전에는 프로젝트 폴더의 .env 파일에 키를 적어요</p>
             </div>
             <div class="setting-control">
-              <button type="button" class="ghost-button" @click=${this.copyEnv}>.env 양식 복사</button>
+              <button type="button" class="ghost-button" @click=${this.copyEnv}>.env 양식 복사하기</button>
               ${this.note('env')}
             </div>
           </div>
@@ -297,13 +297,13 @@ export class SettingsView extends LitElement {
                 <input class="input" type="text" autocomplete="off" aria-label="새 키워드" placeholder="예: 겨울방학 인턴" .value=${this.keywordDraft}
                   @input=${(e: Event) => { this.keywordDraft = (e.target as HTMLInputElement).value; }}
                   @keydown=${(e: KeyboardEvent) => { if (e.key === 'Enter' && !e.isComposing) this.addKeyword(); }}>
-                <button type="button" class="ghost-button" @click=${this.addKeyword}>추가</button>
+                <button type="button" class="ghost-button" @click=${this.addKeyword}>추가하기</button>
               </div>
               ${this.keywords.length ? html`<ul class="keyword-list">${this.keywords.map((word) => html`
-                <li><span>${word}</span><button type="button" class="text-button" aria-label="${word} 지우기"
-                  @click=${() => this.emit('keywords-change', this.keywords.filter((w) => w !== word))}>지우기</button></li>`)}</ul>` : nothing}
+                <li><span>${word}</span><button type="button" class="text-button" aria-label="${word} 삭제"
+                  @click=${() => this.emit('keywords-change', this.keywords.filter((w) => w !== word))}>삭제</button></li>`)}</ul>` : nothing}
               <button type="button" class="ghost-button" ?disabled=${!this.connected() || this.busy === 'keywords'} @click=${this.saveKeywords}>
-                알림 기준에도 넣기</button>
+                휴대폰 알림에도 쓰기</button>
               ${this.connected() ? this.note('keywords') : html`<p class="field-note">GitHub에 연결하면 휴대폰 알림에도 써요</p>`}
             </div>
           </div>
@@ -314,12 +314,12 @@ export class SettingsView extends LitElement {
           <h2 id="s-view" class="settings-head">화면</h2>
           <div class="box">
           <div class="setting">
-            <div class="setting-text"><p class="setting-name">테마</p><p class="setting-help">고르면 바로 바뀌어요</p></div>
+            <div class="setting-text"><p class="setting-name">화면 모드</p><p class="setting-help">자동은 휴대폰과 PC 설정을 따라요</p></div>
             <div class="setting-control">
-              <div class="segmented" role="radiogroup" aria-label="테마">
+              <div class="segmented" role="radiogroup" aria-label="화면 모드">
                 ${(['auto', 'light', 'dark'] as Theme[]).map((value) => html`
                   <button type="button" role="radio" aria-checked=${String(this.theme === value)}
-                    @click=${() => this.emit('theme-change', value)}>${{ auto: '기기 설정', light: '밝게', dark: '어둡게' }[value]}</button>`)}
+                    @click=${() => this.emit('theme-change', value)}>${{ auto: '자동', light: '밝게', dark: '어둡게' }[value]}</button>`)}
               </div>
             </div>
           </div>
@@ -351,9 +351,9 @@ export class SettingsView extends LitElement {
                   @click=${() => { this.reveal = { ...this.reveal, [name]: !shown }; }}>${shown ? '숨기기' : '보기'}</button>
               </div>`}
           <div class="inline">
-            ${name === 'GEMINI_API_KEY' ? html`<button type="button" class="ghost-button" ?disabled=${this.busy === name} @click=${() => this.check(name)}>확인</button>` : nothing}
+            ${name === 'GEMINI_API_KEY' ? html`<button type="button" class="ghost-button" ?disabled=${this.busy === name} @click=${() => this.check(name)}>키 확인하기</button>` : nothing}
             <button type="button" class="solid-button" ?disabled=${!this.connected() || this.busy === name} @click=${() => this.save(name, value)}>
-              ${this.busy === name ? '저장 중' : 'GitHub에 저장'}</button>
+              ${this.busy === name ? '저장 중' : 'GitHub에 저장하기'}</button>
           </div>
           ${this.connected() ? nothing : html`<p class="field-note">위에서 GitHub에 연결하면 저장할 수 있어요</p>`}
           ${this.note(name)}

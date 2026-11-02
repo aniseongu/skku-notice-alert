@@ -6,6 +6,8 @@ import {
   VERDICT_LABEL, boardName, cleanTitle, deadlineDetail, deadlineGroup, deadlinePassed, deadlineText,
   daysLeft, fetchBody, fetchJson, isMine, keywordMatches, koreanDate, postedGroup, safeUrl, todayKst,
 } from './data';
+import { unsafeHTML } from 'lit/directives/unsafe-html.js';
+import { cleanHtml, fileType, markdownHtml } from './rich';
 import './settings-view';
 import type { Theme } from './settings-view';
 
@@ -389,6 +391,11 @@ export class NoticeApp extends LitElement {
   private bodyView(loaded: NoticeBody | null) {
     if (!loaded) return html`<p class="detail-note">본문은 아직 받지 않았어요. 원문 열기로 볼 수 있어요</p>`;
     const paragraphs = (loaded.body ?? '').split(/\n+/).filter(Boolean);
+    // 정제한 본문 HTML이 있으면 표, 굵게, 링크, 목록을 살려 그린다(D-016). 그림도 그 안에 들어 있다.
+    if (loaded.body_html && !loaded.body_from_image) {
+      return html`<section class="detail-section body-text" aria-label="본문"><h3>본문</h3>
+        <div class="rich">${unsafeHTML(cleanHtml(loaded.body_html))}</div></section>`;
+    }
     // 그림은 사용자가 볼 때만 학교 서버에서 받는다(수집 실행은 주소만 저장).
     const images = (loaded.images ?? []).map(safeUrl).filter((url) => url !== '#');
     if (!paragraphs.length && !images.length) return html`<p class="detail-note">본문에 글자가 없어요. 원문 열기로 볼 수 있어요</p>`;
@@ -534,25 +541,37 @@ export class NoticeApp extends LitElement {
     const body = this.body(notice);
     const loaded = body !== 'loading' ? body : null;
     const reason = this.reasonLine(notice);
+    // 순서: 내용이 먼저, 관리 정보(게시일, 알림 여부)는 맨 아래(사용자 요청 2026-11-02, ux-rules 1절).
     return html`
       <div class="detail">
         <p class="meta"><span>${boardName(source, notice.source_id)}</span>${notice.category ? html`<span>${notice.category}</span>` : nothing}</p>
         <h2 class="detail-title" title=${cleanTitle(notice.title)}>${cleanTitle(notice.title)}</h2>
         ${reason === nothing ? nothing : html`<p class="detail-reason">${reason}</p>`}
+        ${notice.deadline ? html`<p class="detail-deadline">마감 ${deadlineDetail(notice.deadline)} ${this.dday(notice, today)}</p>` : nothing}
         ${loaded?.summary ? html`<section class="detail-section summary" aria-label="요약">
           <h3>요약</h3>${loaded.summary.split('\n').filter(Boolean).map((line) => html`<p>${line}</p>`)}</section>` : nothing}
-        <dl class="facts">
-          ${interests.length ? html`<div><dt>관심</dt><dd><b class="interest">${interests.join(', ')}</b></dd></div>` : nothing}
-          ${notice.deadline ? html`<div><dt>마감</dt><dd>${deadlineDetail(notice.deadline)} ${this.dday(notice, today)}</dd></div>` : nothing}
+        ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>` : this.bodyView(loaded)}
+        ${loaded?.attachments?.length ? this.attachmentsView(loaded) : nothing}
+        <dl class="facts" aria-label="글 정보">
           <div><dt>게시일</dt><dd>${koreanDate(notice.posted_on)}</dd></div>
+          ${interests.length ? html`<div><dt>관심</dt><dd><b class="interest">${interests.join(', ')}</b></dd></div>` : nothing}
           ${judgement?.notified ? html`<div><dt>알림</dt><dd>휴대폰으로 보냈어요</dd></div>` : nothing}
         </dl>
-        ${loaded?.attachments?.length ? html`<section class="detail-section" aria-label="첨부">
-          <h3>첨부 ${loaded.attachments.length}개</h3>
-          <ul class="attachments">${loaded.attachments.map((file) => html`<li>
-            <a href=${safeUrl(file.url)} target="_blank" rel="noopener">${icon('clip')}<span>${file.name}</span></a></li>`)}</ul></section>` : nothing}
-        ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>` : this.bodyView(loaded)}
       </div>`;
+  }
+
+  private attachmentsView(loaded: NoticeBody) {
+    return html`<section class="detail-section" aria-label="첨부">
+      <h3>첨부 ${loaded.attachments.length}개</h3>
+      <ul class="attachments">${loaded.attachments.map((file) => html`<li>
+        <a class="file" href=${safeUrl(file.url)} target="_blank" rel="noopener">
+          <span class="file-type">${fileType(file.name, file.type)}</span>
+          <span class="file-name">${file.name}</span>${file.size ? html`<span class="file-size">${file.size}</span>` : nothing}</a>
+        ${file.text ? html`<details class="file-text">
+          <summary>내용 보기</summary>
+          <div class="rich">${unsafeHTML(markdownHtml(file.text))}</div>
+          <p class="detail-note first">첨부 파일을 글로 바꾼 내용이라 표나 서식이 원본과 다를 수 있어요</p>
+        </details>` : nothing}</li>`)}</ul></section>`;
   }
 }
 

@@ -33,7 +33,10 @@ export interface NoticeBody {
   id: string;
   summary: string | null;
   body: string | null;
-  attachments: { name: string; url: string }[];
+  // type, size, text는 D-016에 추가된 필드(형식, 크기 글자, kordoc이 바꾼 첨부 내용 마크다운). 없을 수 있다.
+  attachments: { name: string; url: string; type?: string; size?: string | null; text?: string | null }[];
+  // 서버가 nh3로 정제한 본문 HTML(D-016). 없으면 글자 본문(body)을 그린다.
+  body_html?: string | null;
   // 본문 영역 안 그림 주소(본문이 그림으로만 올라온 글이 있다). 없을 수 있다.
   images?: string[];
   // 그림에서 기계가 읽어 옮긴 본문인지(D-014, D-015). 틀릴 수 있어 화면에 밝힌다.

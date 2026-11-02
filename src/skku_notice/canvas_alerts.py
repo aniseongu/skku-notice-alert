@@ -157,5 +157,10 @@ def mark_sent(state: CanvasState, alert: CanvasAlert, now: datetime) -> CanvasSt
 
 def problem_alert(state: CanvasState) -> CanvasAlert | None:
     if state.problem and not state.problem.get("notifiedProblem"):
-        return CanvasAlert("아이캠퍼스 토큰 거절", "CANVAS_TOKEN을 확인해 주세요", CANVAS_URL, "high")
+        return CanvasAlert(
+            "아이캠퍼스 연결이 끊겼어요",
+            "설정 화면에서 아이캠퍼스 토큰을 새로 넣어 주세요",
+            CANVAS_URL,
+            "high",
+        )
     return None

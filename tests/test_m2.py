@@ -149,10 +149,11 @@ def test_notification_deadline_uses_korean_kst_format(monkeypatch, notice, title
         def notify(self, *, title, body):
             assert expected in body
             assert "2026-11-12T" not in body
+            assert "장학 기준에 맞아요" in body.splitlines()
             return True
 
     monkeypatch.setattr("skku_notice.notify.apprise.Apprise", FakeApprise)
-    assert send_notice(item, "학과", "default", None, None)
+    assert send_notice(item, "학과", "default", Match(item, "장학", "default", ()), None)
 
 
 def test_ntfy_url_has_click_and_numeric_priority(notice) -> None:

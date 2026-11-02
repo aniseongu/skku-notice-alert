@@ -119,6 +119,10 @@ def test_rejected_token_problem_is_sent_once(tmp_path: Path, monkeypatch) -> Non
     os.utime(cli.CANVAS_STATE_PATH, (0, 0))
     assert cli.run(args) == 1
     assert len(sent) == 1
+    assert sent[0][:2] == (
+        "아이캠퍼스 연결이 끊겼어요",
+        "설정 화면에서 아이캠퍼스 토큰을 새로 넣어 주세요",
+    )
     saved = cli.load_canvas_state(cli.CANVAS_STATE_PATH)
     assert saved.problem == {"code": "token-rejected", "notifiedProblem": True}
     assert "fake-token" not in cli.CANVAS_STATE_PATH.read_text()

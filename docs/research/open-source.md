@@ -1,5 +1,9 @@
 # 비슷한 프로젝트와 쓸 오픈소스 (2026-11-02 조사)
 
+## 화면 참고 (2026-11-02, Codex)
+
+- [GitHub Primer ActionMenu](https://github.com/primer/react/tree/main/packages/react/src/ActionMenu)와 [ActionList](https://github.com/primer/react/tree/main/packages/react/src/ActionList): 단일 선택 메뉴의 현재 항목 표시, 선택 후 메뉴 닫기와 단추로 포커스 반환을 참고했다. React 코드는 가져오지 않고 Lit 화면에 맞춰 구현했다. 색, 글꼴, 반경은 이 프로젝트의 `docs/DESIGN.md` 토큰을 쓴다.
+
 조사: Claude Code (Opus 5.5), 웹 검색과 GitHub API. 버전과 라이선스는 구현할 때 다시 확인하고 `pyproject.toml`에 정확한 버전을 고정한다.
 
 ## 1. 먼저 볼 것 (구현 전에 코드를 읽는다)

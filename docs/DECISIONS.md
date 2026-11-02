@@ -75,7 +75,7 @@
 - 주의: 무료 등급은 입력이 Google 제품 개선에 쓰일 수 있다(2026-11-02 pricing 페이지 확인). 프로필에 이름, 학번, 연락처는 넣지 않는다.
   무료 한도 수치는 문서마다 다르고 자주 바뀐다. 하루 수십 건이라 넉넉하다고 보지만, 429가 잦으면 모델이나 `max_per_run`을 바꾼다.
 
-## D-009 화면: PWA + Beer CSS, 푸시는 ntfy (2026-11-02, 확정)
+## D-009 화면: PWA + Beer CSS, 푸시는 ntfy (2026-11-02, 확정, 스타일 부분은 D-011로 대체)
 
 - 사용자 지시: "안드로이드 기반", 디자인 자료(awesome-android-ui, penpot, ui-design 토픽 등) 활용, "너가 복합적으로 생각해서 추천하는 거로".
 - 결정: 빌드 없는 PWA(HTML, CSS, JS)를 정적 API와 같이 Pages에 올리고 안드로이드 크롬에서 홈 화면에 설치한다. 스타일은 Beer CSS(Material 3, CDN).
@@ -89,3 +89,14 @@
 
 - 형식은 `docs/plans/2026-11-02_m2-notify-ai-web.md`의 "API v1 형식"이 정본이다. `notices.json`(공개 가능)과 `matched.json`(개인 판정)을 나눈다.
 - 필드 이름은 바꾸지 않는다. 바꿔야 하면 `api/v2/`를 새로 만든다(AGENTS.md 1절).
+
+## D-011 화면 구성: pwa-starter 방식(Vite, Lit, Workbox), 직접 만든 디자인 체계 (2026-11-02, 확정)
+
+- 사용자 지시: "디자인 너무 ai 같은데?", "토스같은 글래스모피즘", "pwa-starter 잘 활용해봐", "윈도우 웹도 만들어주고 그걸 바탕으로 pwa 앱도",
+  "design.md랑 ui ux 규칙들을 문서화하면서 작업해".
+- 결정: Beer CSS(Material 3 기본 모양이 템플릿 티)를 빼고, pwa-builder/pwa-starter 구성(Vite, vite-plugin-pwa의 generateSW, Lit)으로 바꿨다.
+  Web Awesome 컴포넌트는 같은 이유로 쓰지 않는다. 시각 체계는 `docs/DESIGN.md`가 정본이고 코드는 거기서 파생한다.
+- 한 코드로 휴대폰(하단 탭), 태블릿(사이드바), 데스크톱(사이드바와 상세 칸), Windows 설치 앱(window-controls-overlay)을 다룬다(`docs/design/platforms.md`).
+- 유리 효과는 탐색(상단 바, 하단 탭)에만 쓴다. 웨일 DESIGN의 "장식용 글래스모피즘 금지"와 사용자의 토스 글래스 선호를 함께 만족시키는 선이다.
+- 앱 아이콘은 아캠 플러스 아이콘(CC BY-SA 4.0 사진에서 딴 선)을 바탕으로 한다. 공개 배포할 때 출처를 README에 둔다.
+- 빌드: `cd web && npm run build`. Actions(M3)에는 Node 설정과 이 단계가 export 앞에 들어가야 한다.

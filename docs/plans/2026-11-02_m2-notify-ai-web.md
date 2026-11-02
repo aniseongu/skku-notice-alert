@@ -91,7 +91,7 @@
 
 ## 화면 (D-009, Claude)
 
-- PWA: 빌드 없는 HTML, CSS, JS. Beer CSS(Material 3, CDN, 버전 고정). 안드로이드 크롬 "홈 화면에 추가"로 설치.
+- PWA: pwa-starter 구성(Vite, Lit, vite-plugin-pwa). 디자인은 `docs/DESIGN.md`(D-011). 안드로이드와 Windows에서 설치.
 - 탭: "나에게 해당"(규칙 또는 AI relevant/maybe) / 전체 / 마감 임박. 게시판 필터, 검색. 카드에 AI 이유, 마감 D-day, 누르면 원문.
 - `matched.json`이 없으면(공개 배포에서 뺀 경우) 판정 없이 전체 목록만.
 - 서비스 워커는 앱 껍데기만 캐시하고 JSON은 네트워크 우선(오래된 목록 표시 방지).
@@ -103,10 +103,10 @@ GitHub Actions와 Pages 배포(M3, 원격 저장소 필요), feed.xml과 deadlin
 
 ## 단계
 
-- [ ] 1. 결정 기록: D-008(Gemini), D-009(PWA), D-010(API v1). (Claude)
-- [ ] 2. Codex: notify.py(Apprise, ntfy), judge.py, archive, export.py, cli 실제 실행 경로. 테스트. (Codex)
-- [ ] 3. Claude: `web/` PWA와 `web/sample/` 예시 JSON. (Claude)
-- [ ] 4. Claude 리뷰, `scripts/check.sh`, fixture로 export 후 화면 확인(Playwright).
+- [x] 1. 결정 기록: D-008(Gemini), D-009(PWA), D-010(API v1). (Claude)
+- [x] 2. Codex: notify.py(Apprise, ntfy), judge.py, archive, export.py, cli 실제 실행 경로. 테스트. (Codex)
+- [x] 3. Claude: `web/` PWA와 `web/sample/` 예시 JSON. (Claude)
+- [x] 4. Claude 리뷰, `scripts/check.sh`, fixture로 export 후 화면 확인(Playwright).
 - [ ] 5. 사용자: ntfy 앱 설치와 토픽, Gemini 키 발급, `.env`와 `config/profile.yaml` 작성.
 - [ ] 6. 실제 실행 1회: 테스트 토픽으로 알림 1건 받고 누르면 원문 열림 확인(사용자).
 - [ ] 7. daily-log, 커밋, Codex 교차 리뷰(`review --base e504df4`), HANDOFF.
@@ -120,3 +120,6 @@ GitHub Actions와 Pages 배포(M3, 원격 저장소 필요), feed.xml과 deadlin
 ## 진행 메모
 
 - 2026-11-02: 계획 작성. Gemini 무료 등급은 입력이 제품 개선에 쓰일 수 있다(pricing 페이지 "Used to improve our products: Yes"). 사용자가 자세한 프로필을 선택.
+- 2026-11-02: 백엔드(notify, judge, archive, export) Codex 구현과 리뷰 수정(1c40b8d, 2b3ce01). 화면은 Beer CSS 시안이 "AI 같다"는 피드백으로 폐기,
+  디자인 문서(docs/DESIGN.md, docs/design/)를 먼저 쓰고 pwa-starter 구성으로 다시 만듦(d4a107a). Codex 적대적 리뷰와 보안 리뷰 반영(127037e).
+  남은 것: 5단계(사용자 준비물), 6단계(실제 알림 1건), 7단계 일부(HANDOFF는 갱신함).

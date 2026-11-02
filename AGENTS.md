@@ -20,6 +20,7 @@ src/skku_notice/        코드 (아래 모듈 경계)
 tests/fixtures/         실제 게시판 HTML 저장본. 파서 테스트는 네트워크 없이 이것으로 돈다
 state/                  이미 알린 글 기록 (Actions가 커밋). 사람이 손으로 고치지 않는다
 site/                   정적 API 출력 (api/v1/*.json, feed.xml, deadlines.ics). Actions가 만들어 Pages로 낸다 (M3, D-007)
+web/                    PWA 화면 (Vite, Lit, vite-plugin-pwa). 빌드 결과 web/dist를 export가 site/로 복사한다 (D-011)
 api/                    FastAPI 서버 (M5, D-007 2단계). 그 전까지 없다
 .github/workflows/      주기 실행 (M3에서 만든다)
 scripts/check.sh        정적 검사와 테스트. 성공하면 조용하다
@@ -81,6 +82,7 @@ API 응답 형식(JSON 필드 이름)은 한 번 정하면 바꾸지 않는다. 
 | `.claude/rules/docs-logging.md` | daily-log, plans, DECISIONS, HANDOFF를 쓸 때 |
 | `.claude/rules/crawling.md` | `fetch`, `parse`, `config/sources.yaml`, 워크플로 주기를 다룰 때 |
 | `.claude/rules/python-style.md` | `src/`, `tests/`를 고칠 때 |
+| `docs/DESIGN.md`, `docs/design/*.md` | `web/`(화면), 아이콘, 알림 문구를 고칠 때 |
 
 ## 7. 도구
 

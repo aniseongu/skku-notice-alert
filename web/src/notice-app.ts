@@ -306,15 +306,8 @@ export class NoticeApp extends LitElement {
                 <button type="button" class="chip" aria-pressed=${String(!this.keyword)} @click=${() => this.setKeyword(null)}>전체</button>
                 ${this.keywords.map((word) => html`<button type="button" class="chip" aria-pressed=${String(this.keyword === word)}
                   @click=${() => this.setKeyword(this.keyword === word ? null : word)}>${word}</button>`)}
-                <button type="button" class="chip-add" @click=${() => this.setView('settings')}>+ 키워드</button>
+                <button type="button" class="chip-add" @click=${() => this.setView('settings')}>${icon('plus')}키워드 추가</button>
               </div>
-            </div>
-            <div class="list-head narrow-only">
-              <select class="board-select narrow-only" aria-label="게시판" .value=${this.board}
-                @change=${(e: Event) => this.setBoard((e.target as HTMLSelectElement).value)}>
-                <option value="all">모든 게시판</option>
-                ${this.sources.map((s) => html`<option value=${s.id} ?selected=${this.board === s.id}>${boardName(s, s.id)}</option>`)}
-              </select>
             </div>
             <div class="list" aria-live="polite" aria-busy=${this.loading ? 'true' : 'false'}>${this.listBody(list)}</div>`}
         </main>
@@ -358,7 +351,8 @@ export class NoticeApp extends LitElement {
       timeZone: 'Asia/Seoul', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false,
     }).format(new Date(this.generatedAt));
     const total = count === undefined ? '' : `, ${count}건`;
-    return html`<p class="updated ${stale ? 'stale' : ''}">${time} 기준${total}${stale ? ', 확인이 늦어지고 있어요' : ''}</p>`;
+    // "확인 필요"(판정)와 겹치지 않게 수집 지연은 다른 말로 쓴다.
+    return html`<p class="updated ${stale ? 'stale' : ''}">${stale ? `${time} 이후 새 글을 못 가져왔어요${total}` : `${time} 기준${total}`}</p>`;
   }
 
   private listBody(list: Notice[]): TemplateResult | TemplateResult[] {
@@ -385,11 +379,19 @@ export class NoticeApp extends LitElement {
       const key = this.view === 'deadline' ? deadlineGroup(notice.deadline!, today) : postedGroup(notice.posted_on, today);
       groups.set(key, [...(groups.get(key) ?? []), notice]);
     }
-    return [...groups].map(([title, items]) => html`
+    return [...groups].map(([title, items], index) => html`
       <section class="group" aria-label=${title}>
-        <h2 class="group-head">${title}</h2>
+        <div class="group-head"><h2>${title}</h2>${index === 0 ? this.boardSelect() : nothing}</div>
         <ol class="rows">${items.map((n) => this.row(n, today))}</ol>
       </section>`);
+  }
+
+  private boardSelect() {
+    return html`<select class="board-select narrow-only" aria-label="게시판" .value=${this.board}
+      @change=${(e: Event) => this.setBoard((e.target as HTMLSelectElement).value)}>
+      <option value="all">모든 게시판</option>
+      ${this.sources.map((s) => html`<option value=${s.id} ?selected=${this.board === s.id}>${boardName(s, s.id)}</option>`)}
+    </select>`;
   }
 
   private empty(title: string, body: string, action?: string, onAction?: () => void) {
@@ -403,7 +405,9 @@ export class NoticeApp extends LitElement {
     if (interests.length) {
       return html`<span class="reason"><b class="interest">관심 ${interests.join(', ')}</b>${ai && ai.verdict !== 'not_relevant' ? ai.reason : ''}</span>`;
     }
-    return ai ? html`<span class="reason ${ai.verdict}"><b>${VERDICT_LABEL[ai.verdict]}</b>${ai.reason}</span>` : nothing;
+    if (ai) return html`<span class="reason ${ai.verdict}"><b>${VERDICT_LABEL[ai.verdict]}</b>${ai.reason}</span>`;
+    const rule = this.judgement(notice)?.rule_name;
+    return rule ? html`<span class="reason rule"><b>기준</b>${rule}에 맞아요</span>` : nothing;
   }
 
   private dday(notice: Notice, today: string) {
@@ -421,30 +425,28 @@ export class NoticeApp extends LitElement {
       <a class="row ${dim ? 'dim' : ''}" href=${safeUrl(notice.url)} target="_blank" rel="noopener"
         data-id=${notice.id} aria-current=${this.isWide && this.shownId === notice.id ? 'true' : 'false'}
         @click=${(e: MouseEvent) => this.onRow(e, notice)}>
-        <span class="meta"><span class="board">${boardName(source, notice.source_id)}</span>
-          ${notice.category ? html`<span class="cat">${notice.category}</span>` : nothing}${notice.pinned ? html`<span class="cat">고정</span>` : nothing}</span>
+        <span class="meta"><span class="board">${boardName(source, notice.source_id)}</span>${notice.category || notice.pinned
+          ? html`<span class="cat">${[notice.category, notice.pinned ? '고정' : ''].filter(Boolean).join(', ')}</span>` : nothing}</span>
         <span class="title">${cleanTitle(notice.title)}</span>
-        <span class="sub">${notice.category ? html`<span class="sub-cat">${notice.category}${notice.pinned ? ', 고정' : ''}</span>` : nothing}${this.reasonLine(notice)}</span>
+        <span class="sub">${this.reasonLine(notice)}</span>
         ${this.dday(notice, today)}
       </a></li>`;
   }
 
   private detail(notice: Notice) {
     const judgement = this.judgement(notice);
-    const ai = judgement?.ai;
     const source = this.sources.find((s) => s.id === notice.source_id);
     const interests = this.interests(notice);
     const today = todayKst();
     return html`
       <div class="detail">
         <p class="meta"><span>${boardName(source, notice.source_id)}</span>${notice.category ? html`<span>${notice.category}</span>` : nothing}</p>
-        <h2 class="detail-title">${cleanTitle(notice.title)}</h2>
+        <h2 class="detail-title" title=${cleanTitle(notice.title)}>${cleanTitle(notice.title)}</h2>
+        ${this.reasonLine(notice) === nothing ? nothing : html`<p class="detail-reason">${this.reasonLine(notice)}</p>`}
         <dl class="facts">
           ${interests.length ? html`<div><dt>관심</dt><dd><b class="interest">${interests.join(', ')}</b></dd></div>` : nothing}
-          ${ai ? html`<div><dt>판정</dt><dd><b class="verdict ${ai.verdict}">${VERDICT_LABEL[ai.verdict]}</b> ${ai.reason}</dd></div>` : nothing}
           ${notice.deadline ? html`<div><dt>마감</dt><dd>${deadlineDetail(notice.deadline)} ${this.dday(notice, today)}</dd></div>` : nothing}
           <div><dt>게시일</dt><dd>${koreanDate(notice.posted_on)}</dd></div>
-          ${judgement?.rule_name ? html`<div><dt>기준</dt><dd>${judgement.rule_name}</dd></div>` : nothing}
           ${judgement?.notified ? html`<div><dt>알림</dt><dd>휴대폰으로 보냈어요</dd></div>` : nothing}
         </dl>
         <p class="hint">j, k로 옮기고 Enter로 원문을 열어요</p>

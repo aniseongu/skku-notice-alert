@@ -29,6 +29,7 @@ ICONS = {
     "alarm": '<circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.5 1.5M5 4 3 6M19 4l2 2"/>',
     "search": '<circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/>',
     "refresh": '<path d="M19.5 11A7.5 7.5 0 1 0 17.6 16M19.5 5v6h-6"/>',
+    "plus": '<path d="M12 5v14M5 12h14"/>',
     "list": '<path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/>',
     "user-check": '<circle cx="10" cy="8" r="4"/><path d="M3.5 20a6.5 6.5 0 0 1 10.3-5.3M15 19l2 2 4-4"/>',
 }

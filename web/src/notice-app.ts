@@ -7,7 +7,7 @@ import {
   daysLeft, fetchBody, fetchJson, isMine, keywordMatches, koreanDate, postedGroup, safeUrl, todayKst,
 } from './data';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
-import { cleanHtml, fileType, markdownHtml } from './rich';
+import { cleanHtml, fileType } from './rich';
 import './settings-view';
 import type { Theme } from './settings-view';
 
@@ -566,12 +566,8 @@ export class NoticeApp extends LitElement {
       <ul class="attachments">${loaded.attachments.map((file) => html`<li>
         <a class="file" href=${safeUrl(file.url)} target="_blank" rel="noopener">
           <span class="file-type">${fileType(file.name, file.type)}</span>
-          <span class="file-name">${file.name}</span>${file.size ? html`<span class="file-size">${file.size}</span>` : nothing}</a>
-        ${file.text ? html`<details class="file-text">
-          <summary>내용 보기</summary>
-          <div class="rich">${unsafeHTML(markdownHtml(file.text))}</div>
-          <p class="detail-note first">첨부 파일을 글로 바꾼 내용이라 표나 서식이 원본과 다를 수 있어요</p>
-        </details>` : nothing}</li>`)}</ul></section>`;
+          <span class="file-name">${file.name}</span>${file.size ? html`<span class="file-size">${file.size}</span>` : nothing}</a></li>`)}</ul>
+      <p class="detail-note first">누르면 학교 공지 사이트의 원본 파일을 받아요</p></section>`;
   }
 }
 

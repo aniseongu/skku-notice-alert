@@ -72,10 +72,12 @@ export async function fetchJson<T>(name: string, optional = false): Promise<T | 
 
 export const VERDICT_LABEL: Record<Verdict, string> = { relevant: '해당', maybe: '확인 필요', not_relevant: '해당 없음' };
 
+// 내 공지: 기준(규칙), 관심 키워드, Gemini 해당과 확인 필요. 모든 새 글을 알리므로(D-015) 알림을 보냈다는 것만으로는 넣지 않는다.
 export function isMine(judgement: Judgement | undefined): boolean {
   if (!judgement) return false;
   const verdict = judgement.ai?.verdict;
-  return judgement.notified || verdict === 'relevant' || verdict === 'maybe';
+  return Boolean(judgement.rule_name) || Boolean(judgement.interests?.length) || Boolean(judgement.ai?.interests?.length)
+    || verdict === 'relevant' || verdict === 'maybe';
 }
 
 export const boardName = (source: Source | undefined, fallback: string) => (source?.name ?? fallback).replace(/\s*공지$/, '');

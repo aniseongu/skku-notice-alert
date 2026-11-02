@@ -49,6 +49,13 @@ def test_decision_table(notice, matched, verdict, expected) -> None:
     assert decide_priority(match, ai) == expected
 
 
+@pytest.mark.parametrize("verdict", [None, "relevant", "maybe", "not_relevant"])
+def test_interest_always_has_high_priority(notice, verdict) -> None:
+    ai = Judgment(verdict, "이유", "test-model") if verdict else None
+    assert decide_priority(None, ai, ("겨울방학 인턴",)) == "high"
+    assert decide_priority(None, Judgment("not_relevant", "이유", "test", ("겨울방학 인턴",))) == "high"
+
+
 def test_judge_batches_and_retries(notice) -> None:
     class Models:
         calls = 0
@@ -168,9 +175,10 @@ def test_export_api_v1_shape_and_web_copy(tmp_path: Path, monkeypatch, notice) -
         notice,
         now.isoformat(),
         match,
-        Judgment("relevant", "지원 가능", "test-model"),
-        "default",
+        Judgment("relevant", "지원 가능", "test-model", ("겨울방학 인턴",)),
+        "high",
         True,
+        ("겨울방학 인턴",),
     )
     web = tmp_path / "web/dist"
     (web / "sample").mkdir(parents=True)
@@ -197,8 +205,12 @@ def test_export_api_v1_shape_and_web_copy(tmp_path: Path, monkeypatch, notice) -
         "first_seen",
     }
     assert set(private) == {"version", "generated_at", "items"}
-    assert set(private["items"]["cse-notice/123"]) == {"rule_name", "priority", "reasons", "ai", "notified"}
-    assert set(private["items"]["cse-notice/123"]["ai"]) == {"verdict", "reason", "model"}
+    assert set(private["items"]["cse-notice/123"]) == {
+        "rule_name", "priority", "reasons", "ai", "notified", "interests"
+    }
+    assert set(private["items"]["cse-notice/123"]["ai"]) == {"verdict", "reason", "model", "interests"}
+    assert private["items"]["cse-notice/123"]["ai"]["interests"] == ["겨울방학 인턴"]
+    assert private["items"]["cse-notice/123"]["interests"] == ["겨울방학 인턴"]
     assert public["notices"][0]["deadline"] == "2026-11-12T23:59:00+09:00"
     assert (output / "index.html").exists()
     assert (output / "sample/example.json").exists()
@@ -232,7 +244,7 @@ def test_actual_run_baseline_then_retry(tmp_path: Path, monkeypatch, notice) -> 
     sends = []
     attempts = {}
 
-    def fake_send(item, source_name, priority, match, reason):
+    def fake_send(item, source_name, priority, match, reason, interests):
         sends.append(item.article_no)
         attempts[source_name] = attempts.get(source_name, 0) + 1
         return attempts[source_name] > 1

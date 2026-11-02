@@ -66,7 +66,7 @@ def test_cli_uses_full_notice_id_for_judgment(tmp_path: Path, monkeypatch, capsy
     monkeypatch.setattr(
         cli,
         "judge_notices",
-        lambda *args: {
+        lambda *args, **kwargs: {
             "cse-notice/123": Judgment("relevant", "학과 판정", "test"),
             "skku-notice01/123": Judgment("not_relevant", "전체 판정", "test"),
         },
@@ -79,3 +79,24 @@ def test_cli_uses_full_notice_id_for_judgment(tmp_path: Path, monkeypatch, capsy
     output = capsys.readouterr().out
     assert "AI=relevant: 학과 판정" in output
     assert "AI=not_relevant: 전체 판정" in output
+
+
+def test_fixture_dry_run_shows_interest_and_high_priority(tmp_path: Path, monkeypatch, capsys) -> None:
+    monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
+    monkeypatch.setattr(cli, "INTERESTS_PATH", tmp_path / "missing.yaml")
+    monkeypatch.setattr(cli, "_fixture", lambda source_id: "fixture")
+    monkeypatch.setattr(
+        cli, "parse_list",
+        lambda html, source_id, url: [
+            Notice(source_id, "123", "겨울 방학 현장실습 모집", "일반", url, date(2026, 11, 2), False)
+        ],
+    )
+    monkeypatch.setenv("INTEREST_KEYWORDS", "겨울방학 인턴")
+    args = argparse.Namespace(
+        rules=Path("config/rules.example.yaml"), dry_run=True, all=True, from_fixtures=True,
+        no_ai=True, export=None,
+    )
+    assert cli.run(args) == 0
+    output = capsys.readouterr().out
+    assert "[high] 겨울 방학 현장실습 모집" in output
+    assert "관심 겨울방학 인턴" in output

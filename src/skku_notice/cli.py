@@ -22,6 +22,7 @@ from skku_notice.canvas_alerts import (
 from skku_notice.deadline import KST
 from skku_notice.export import export_site
 from skku_notice.fetch import FetchError, fetch_list
+from skku_notice.interests import load_interests, match_interests
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match
 from skku_notice.notify import send_canvas, send_notice
@@ -34,6 +35,7 @@ STATE_PATH = Path("state/seen.json")
 ARCHIVE_PATH = Path("state/archive.json")
 AI_PATH = Path("config/ai.yaml")
 PROFILE_PATH = Path("config/profile.yaml")
+INTERESTS_PATH = Path("config/interests.yaml")
 FIXTURES_PATH = Path("tests/fixtures")
 CANVAS_CONFIG_PATH = Path("config/canvas.yaml")
 CANVAS_STATE_PATH = Path("state/canvas.json")
@@ -70,6 +72,7 @@ def run(args: argparse.Namespace) -> int:
         return 2
     try:
         rules = load_rules(args.rules)
+        interests = load_interests(INTERESTS_PATH, os.environ.get("INTEREST_KEYWORDS", ""))
         settings = yaml.safe_load(SOURCES_PATH.read_text(encoding="utf-8"))
         ai = yaml.safe_load(AI_PATH.read_text(encoding="utf-8"))
         state = load_state(STATE_PATH)
@@ -128,7 +131,7 @@ def run(args: argparse.Namespace) -> int:
         key = os.environ.get("GEMINI_API_KEY")
         if not key:
             print("GEMINI_API_KEY 없음: 규칙만 적용")
-        elif not profile:
+        elif not profile and not interests:
             print("프로필 없음: 규칙만 적용")
         else:
             selected = candidates[: max(0, int(ai.get("max_per_run", 30)))]
@@ -138,6 +141,7 @@ def run(args: argparse.Namespace) -> int:
                 profile,
                 ai["model"],
                 key,
+                interests=interests,
             )
     for source, notices in boards:
         if args.dry_run and source["id"] not in state.sources:
@@ -156,7 +160,12 @@ def run(args: argparse.Namespace) -> int:
             judgment = (
                 judgments.get(f"{source['id']}/{notice.article_no}") if process and not excluded else None
             )
-            priority = decide_priority(match, judgment) if process and not excluded else None
+            text_interests = match_interests(notice, interests) if process and not excluded else ()
+            shown_interests = tuple(
+                word for word in interests
+                if word in text_interests or (judgment and word in judgment.interests)
+            )
+            priority = decide_priority(match, judgment, shown_interests) if process and not excluded else None
             if not args.dry_run and seen is not None and seen.status == "pending":
                 previous = archive.items.get(f"{source['id']}/{notice.article_no}", {}).get("match", {})
                 if previous.get("rule_name"):
@@ -168,14 +177,22 @@ def run(args: argparse.Namespace) -> int:
                     )
                 ai_data = previous.get("ai")
                 judgment = Judgment(**ai_data) if ai_data else None
+                shown_interests = tuple(previous.get("interests", [])) or shown_interests
                 priority = previous.get("priority") or priority or "default"
             if args.dry_run:
                 name = match.rule_name if match else "-"
                 ai_text = f" AI={judgment.verdict}: {judgment.reason}" if judgment else ""
+                interest_text = f" 관심 {', '.join(shown_interests)}" if shown_interests else ""
                 label = "새 글" if new else "본 글"
-                print(f"[{label}] [{name}] [{priority or '-'}] {notice.title} {notice.url}{ai_text}")
+                print(
+                    f"[{label}] [{name}] [{priority or '-'}] "
+                    f"{notice.title} {notice.url}{interest_text}{ai_text}"
+                )
                 first_seen = seen.first_seen if seen else now.isoformat()
-                archive = add_notice(archive, notice, first_seen, match, judgment, priority)
+                archive = add_notice(
+                    archive, notice, first_seen, match, judgment, priority,
+                    interests=shown_interests,
+                )
                 continue
             if not process:
                 continue
@@ -189,10 +206,14 @@ def run(args: argparse.Namespace) -> int:
                     match,
                     judgment,
                     priority,
+                    interests=shown_interests,
                 )
                 save_archive(ARCHIVE_PATH, archive)
                 continue
-            sent = send_notice(notice, source["name"], priority, match, judgment.reason if judgment else None)
+            sent = send_notice(
+                notice, source["name"], priority, match, judgment.reason if judgment else None,
+                shown_interests,
+            )
             state = record_result(state, notice, "notified" if sent else "pending", now)
             save_state(STATE_PATH, state)
             archive = add_notice(
@@ -203,6 +224,7 @@ def run(args: argparse.Namespace) -> int:
                 judgment,
                 priority,
                 sent,
+                shown_interests,
             )
             save_archive(ARCHIVE_PATH, archive)
             if not sent:

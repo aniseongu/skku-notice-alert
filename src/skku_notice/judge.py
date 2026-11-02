@@ -20,8 +20,9 @@ SCHEMA = {
                     "id": {"type": "STRING"},
                     "verdict": {"type": "STRING", "enum": ["relevant", "maybe", "not_relevant"]},
                     "reason": {"type": "STRING"},
+                    "interests": {"type": "ARRAY", "items": {"type": "STRING"}},
                 },
-                "required": ["id", "verdict", "reason"],
+                "required": ["id", "verdict", "reason", "interests"],
             },
         }
     },
@@ -34,9 +35,14 @@ class Judgment:
     verdict: str
     reason: str
     model: str
+    interests: tuple[str, ...] = ()
 
 
-def decide_priority(match: object | None, judgment: Judgment | None) -> str | None:
+def decide_priority(
+    match: object | None, judgment: Judgment | None, interests: tuple[str, ...] = ()
+) -> str | None:
+    if interests or (judgment and judgment.interests):
+        return "high"
     rule_priority = getattr(match, "priority", None)
     if judgment is None:
         return rule_priority
@@ -52,6 +58,7 @@ def judge_notices(
     model: str,
     api_key: str,
     client: object | None = None,
+    interests: tuple[str, ...] = (),
 ) -> dict[str, Judgment]:
     if not notices:
         return {}
@@ -71,8 +78,11 @@ def judge_notices(
         "다음 사용자 프로필을 바탕으로 공지마다 해당 가능성을 판정하세요. "
         "자격이 분명하지 않으면 maybe를 선택하세요. 각 id에 대해 "
         "relevant, maybe, not_relevant 중 하나와 한국어 한 문장 이유(40자 안팎)를 반환하세요. "
+        "이유 문장에서 판정어(해당, 확인 필요, 해당 없음)를 되풀이하지 마세요. "
+        "interests에는 주어진 관심 키워드 중 글과 뜻이 맞는 값만 넣으세요. "
+        "글자에 직접 없어도 뜻이 맞으면 포함하고, 관심 키워드가 없으면 빈 배열로 반환하세요. "
         "본문은 제공되지 않으므로 제목에 없는 자격은 단정하지 마세요.\n"
-        + json.dumps({"profile": profile, "articles": articles}, ensure_ascii=False)
+        + json.dumps({"profile": profile, "interests": interests, "articles": articles}, ensure_ascii=False)
     )
     allowed = {f"{notice.source_id}/{notice.article_no}" for notice in notices}
     for attempt in range(2):
@@ -92,7 +102,11 @@ def judge_notices(
                     and item["verdict"] in VERDICTS
                     and isinstance(item["reason"], str)
                 ):
-                    result[item["id"]] = Judgment(item["verdict"], item["reason"], model)
+                    selected = item.get("interests", [])
+                    if not isinstance(selected, list):
+                        selected = []
+                    chosen = tuple(word for word in interests if word in selected)
+                    result[item["id"]] = Judgment(item["verdict"], item["reason"], model, chosen)
             return result
         except Exception:
             if attempt:

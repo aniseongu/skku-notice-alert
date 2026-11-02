@@ -2,7 +2,7 @@
 
 > 세션을 시작하면 실제 git 상태와 함께 확인한다. 마지막 갱신: 2026-11-02 Codex.
 
-> 최우선: 정식 Pages 주소가 아직 404다. 알림 키 없이 배포하는 `Publish website`를 준비하고 검증했다. 사용자 push 확인 후 main을 push하고 실행, 정식 주소를 열어 확인해야 한다. `Notice and Pages`는 계속 꺼 둔다.
+> 정식 Pages 배포 완료. 사용자는 로컬 서버 없이 https://aniseongu.github.io/skku-notice-alert/ 로 접속한다. `Publish website` 실행 41460818001 성공, HTTP 200과 실제 공지 25건, 최신 게시판 메뉴 확인. `Notice and Pages`는 Secrets 준비 전까지 꺼 둔다.
 
 ## 상태
 
@@ -11,12 +11,12 @@
 - 저장소와 Pages는 공개로 생성됨. `check-access`에서 두 게시판 200 확인. `Notice and Pages`는 Secrets를 넣기 전까지 꺼 둠.
 - 이번 세션: 휴대폰 게시판 기본 선택 메뉴를 프로젝트 토큰 기반 메뉴로 교체. GitHub Primer 참고. 빈 목록 선택, 키보드 조작, 포커스 복귀를 확인하고 모바일 라이트와 다크, 데스크톱 캡처를 남김. 독립 디자인 평가 8.2/10.
 - 검증: 웹 빌드, 실제 게시판 `--dry-run --no-ai --rules config/rules.example.yaml` 통과. `scripts/check.sh`는 102개 통과, 날짜 의존 Canvas 테스트 1개 실패.
-- 미확인: 실제 웨일, 휴대폰 설치, 실제 Actions와 Pages 배포, 실제 ntfy, Gemini와 Canvas 호출.
+- 실제 Actions와 Pages 배포를 확인했고 웨일에 정식 주소를 열었다. 미확인: 휴대폰 설치, 실제 ntfy, Gemini와 Canvas 호출.
 
 ## 사용자와 저장소 설정
 
 - 공개 GitHub 저장소: https://github.com/aniseongu/skku-notice-alert
-- Pages: https://aniseongu.github.io/skku-notice-alert/ (Actions 배포 켬, 아직 실제 배포 전)
+- Pages: https://aniseongu.github.io/skku-notice-alert/ (배포 완료, PC가 꺼져도 접속 가능)
 - `NOTIFY_URLS` 등의 Secrets와 `INTEREST_KEYWORDS` Variable을 설정해야 한다. Pages Source는 GitHub Actions, Actions Workflow permissions는 Read and write.
 - `Notice and Pages`를 켜고 수동 실행해 첫 기준선을 만든 뒤 예약 실행을 확인한다. push는 사용자가 요청할 때만 한다.
 
@@ -28,6 +28,6 @@
 
 ## 다음 3단계
 
-1. 사용자 push 확인 후 준비한 Pages 워크플로를 올리고 실행해서 정식 주소가 200이고 최신 메뉴가 보이는지 확인한다.
+1. Pages 화면의 설정에서 알림 키와 관심 키워드를 준비한다. 화면 변경은 main push 시 자동 배포된다. 현재 데이터는 첫 배포 시 수집한 목록이다.
 2. Canvas 날짜 의존 테스트 수정, Secrets와 Variable 설정 후 `Notice and Pages`의 실제 알림을 확인한다. Claude 한도 소진으로 이번 워크플로 교차 리뷰는 한도가 돌아오면 한다.
 3. 남은 정적 API 파일과 캘린더, 피드를 생성하고 M3 완료 조건을 검증한다.

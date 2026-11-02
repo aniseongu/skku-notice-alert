@@ -68,7 +68,7 @@ export class NoticeApp extends LitElement {
     view: { state: true }, board: { state: true }, keyword: { state: true }, keywords: { state: true }, query: { state: true },
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
-    detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true },
+    detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true },
   };
 
   notices: Notice[] = [];
@@ -94,6 +94,7 @@ export class NoticeApp extends LitElement {
   // 휴대폰에서 앱 안 상세 화면으로 연 글. 뒤로 가기(history)로 닫는다.
   openedId: string | null = null;
   shortcutsOpen = false;
+  boardMenuOpen = false;
   // 글별 본문(D-013). 'loading'이면 받는 중, null이면 아직 서버가 받지 않은 글.
   private bodies = new Map<string, NoticeBody | null | 'loading'>();
   private toastTimer = 0;
@@ -110,10 +111,20 @@ export class NoticeApp extends LitElement {
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') this.refresh(); });
     window.setInterval(() => { if (document.visibilityState === 'visible') this.refresh(); }, REFRESH_MS);
     window.addEventListener('keydown', (event) => this.onKey(event));
+    document.addEventListener('pointerdown', this.closeBoardMenuOutside);
     window.addEventListener('popstate', () => { this.openedId = null; });
     window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); this.install = event as InstallPrompt; });
     window.addEventListener('appinstalled', () => { this.install = null; });
   }
+
+  disconnectedCallback() {
+    document.removeEventListener('pointerdown', this.closeBoardMenuOutside);
+    super.disconnectedCallback();
+  }
+
+  private closeBoardMenuOutside = (event: PointerEvent) => {
+    if (this.boardMenuOpen && !(event.target as Element).closest('.board-picker')) this.boardMenuOpen = false;
+  };
 
   async refresh() {
     this.loading = true;
@@ -183,7 +194,7 @@ export class NoticeApp extends LitElement {
     this.querySelector('.list-pane')?.scrollTo({ top: 0 });
   }
 
-  private setBoard(board: string) { this.board = board; remember('board', board); }
+  private setBoard(board: string) { this.board = board; this.boardMenuOpen = false; remember('board', board); }
   private setKeyword(word: string | null) {
     this.keyword = word;
     if (this.view === 'settings') this.view = 'all';
@@ -226,8 +237,14 @@ export class NoticeApp extends LitElement {
 
   private onKey(event: KeyboardEvent) {
     const target = event.target as Element | null;
+    if (event.key === 'Escape' && this.boardMenuOpen) {
+      event.preventDefault();
+      this.boardMenuOpen = false;
+      this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.board-trigger')?.focus());
+      return;
+    }
     if (event.key === 'Escape' && target instanceof HTMLInputElement) { target.blur(); return; }
-    if (target?.closest('input, textarea, select') || event.metaKey || event.ctrlKey || event.altKey) return;
+    if (target?.closest('input, textarea, select, .board-picker') || event.metaKey || event.ctrlKey || event.altKey) return;
     if (event.key === '?') { event.preventDefault(); this.shortcutsOpen = true; return; }
     if (this.view === 'settings' || this.shortcutsOpen) return;
     if (event.key === 'Escape' && this.isWide && this.detailOpen) { this.setDetail(false); return; }
@@ -464,14 +481,15 @@ export class NoticeApp extends LitElement {
       return this.empty('목록을 불러오지 못했어요', '인터넷 연결을 확인하고 다시 시도해 주세요', '다시 불러오기', () => this.refresh());
     }
     if (!list.length) {
-      if (this.query) return this.empty(`'${this.query}'에 맞는 공지가 없어요`, '다른 단어로 찾아보세요', '검색어 삭제', () => { this.query = ''; });
-      if (this.keyword) return this.empty(`'${this.keyword}'에 맞는 공지가 아직 없어요`, '새 글이 오면 여기에 모여요');
+      const boardPicker = html`<div class="group-head empty-head"><span></span>${this.boardSelect()}</div>`;
+      if (this.query) return html`${boardPicker}${this.empty(`'${this.query}'에 맞는 공지가 없어요`, '다른 단어로 찾아보세요', '검색어 삭제', () => { this.query = ''; })}`;
+      if (this.keyword) return html`${boardPicker}${this.empty(`'${this.keyword}'에 맞는 공지가 아직 없어요`, '새 글이 오면 여기에 모여요')}`;
       const empty = {
         mine: ['지금 챙길 공지가 없어요', '기준이나 관심 키워드에 맞는 새 글이 오면 여기 쌓여요'],
         deadline: ['다가오는 마감이 없어요', '제목에 마감일이 적힌 공지만 여기에 나와요'],
         all: ['이 게시판에 공지가 없어요', '다른 게시판을 골라 보세요'],
       }[this.tab()];
-      return this.empty(empty[0], empty[1]);
+      return html`${boardPicker}${this.empty(empty[0], empty[1])}`;
     }
     const today = todayKst();
     const groups = new Map<string, Notice[]>();
@@ -487,11 +505,31 @@ export class NoticeApp extends LitElement {
   }
 
   private boardSelect() {
-    return html`<select class="board-select narrow-only" aria-label="게시판" .value=${this.board}
-      @change=${(e: Event) => this.setBoard((e.target as HTMLSelectElement).value)}>
-      <option value="all">모든 게시판</option>
-      ${this.sources.map((s) => html`<option value=${s.id} ?selected=${this.board === s.id}>${boardName(s, s.id)}</option>`)}
-    </select>`;
+    const boards = [{ id: 'all', label: '모든 게시판' },
+      ...this.sources.map((s) => ({ id: s.id, label: boardName(s, s.id) }))];
+    const current = boards.find((b) => b.id === this.board)?.label ?? boards[0].label;
+    return html`<div class="board-picker narrow-only">
+      <button type="button" class="board-trigger" aria-label="게시판: ${current}" aria-expanded=${String(this.boardMenuOpen)}
+        aria-controls="board-options" @click=${() => {
+          this.boardMenuOpen = !this.boardMenuOpen;
+          if (this.boardMenuOpen) this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.board-option[aria-pressed="true"]')?.focus());
+        }}>
+        ${current}<span class="board-chevron" aria-hidden="true"></span>
+      </button>
+      ${this.boardMenuOpen ? html`<div id="board-options" class="board-options" role="group" aria-label="게시판 선택"
+        @keydown=${(event: KeyboardEvent) => {
+          const options = [...this.querySelectorAll<HTMLButtonElement>('.board-option')];
+          const index = options.indexOf(document.activeElement as HTMLButtonElement);
+          const next = event.key === 'ArrowDown' ? (index + 1) % options.length
+            : event.key === 'ArrowUp' ? (index + options.length - 1) % options.length
+              : event.key === 'Home' ? 0 : event.key === 'End' ? options.length - 1 : -1;
+          if (next >= 0) { event.preventDefault(); options[next]?.focus(); }
+        }}>
+        ${boards.map((b) => html`<button type="button" class="board-option" aria-pressed=${String(this.board === b.id)}
+          @click=${() => { this.setBoard(b.id); this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.board-trigger')?.focus()); }}>
+          <span>${b.label}</span>${this.board === b.id ? html`<span class="board-check" aria-hidden="true"></span>` : nothing}</button>`)}
+      </div>` : nothing}
+    </div>`;
   }
 
   private empty(title: string, body: string, action?: string, onAction?: () => void) {

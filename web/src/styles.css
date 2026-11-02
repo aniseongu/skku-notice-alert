@@ -167,9 +167,6 @@
   }
   .file-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .file-size { flex: none; font-size: 12px; color: var(--text-3); font-variant-numeric: tabular-nums; }
-  .file-text { margin: 0 0 12px 50px; }
-  .file-text summary { min-height: 36px; display: flex; align-items: center; font-size: 13px; font-weight: 600; color: var(--text-2); cursor: pointer; }
-  .file-text[open] summary { margin-bottom: 4px; }
 
   /* 정제한 본문 HTML과 첨부 마크다운 */
   .rich { font-size: 15px; line-height: 26px; color: var(--text); overflow-wrap: anywhere; }

@@ -25,6 +25,7 @@ class Rule:
 class Ruleset:
     exclude_title: tuple[str, ...]
     rules: tuple[Rule, ...]
+    notify_all: bool = False
 
 
 def load_rules(path: Path) -> Ruleset:
@@ -52,7 +53,10 @@ def load_rules(path: Path) -> Ruleset:
                 title_regex=regex,
             )
         )
-    return Ruleset(tuple(data.get("exclude_title") or ()), tuple(rules))
+    notify_all = data.get("notify_all", False)
+    if not isinstance(notify_all, bool):
+        raise ValueError("notify_all must be a boolean")
+    return Ruleset(tuple(data.get("exclude_title") or ()), tuple(rules), notify_all)
 
 
 def _normalized(value: str) -> str:

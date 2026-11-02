@@ -1,4 +1,5 @@
 import argparse
+import json
 from datetime import date
 from pathlib import Path
 
@@ -100,3 +101,32 @@ def test_fixture_dry_run_shows_interest_and_high_priority(tmp_path: Path, monkey
     output = capsys.readouterr().out
     assert "[high] 겨울 방학 현장실습 모집" in output
     assert "관심 겨울방학 인턴" in output
+
+
+def test_notify_all_sends_unmatched_low_and_exports_notified(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(cli, "load_dotenv", lambda **kwargs: None)
+    monkeypatch.setenv("NOTIFY_URLS", "ntfys://placeholder-topic")
+    monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
+    monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
+    monkeypatch.setattr(cli, "_fixture", lambda source_id: "fixture")
+    current = [Notice(
+        "cse-notice", "1", "기존 글", "일반", "https://example.com/1", date(2026, 11, 2), False
+    )]
+    monkeypatch.setattr(cli, "parse_list", lambda html, source_id, url: [
+        Notice(source_id, item.article_no, item.title, item.category, item.url, item.posted_on, False)
+        for item in current
+    ])
+    sent = []
+    monkeypatch.setattr(cli, "send_notice", lambda item, source, priority, match, reason, interests:
+                        sent.append((priority, match)) or True)
+    args = argparse.Namespace(rules=Path("config/rules.example.yaml"), dry_run=False, all=False,
+                              from_fixtures=True, no_ai=True, no_canvas=True, export=tmp_path / "site")
+    assert cli.run(args) == 0
+    assert sent == []
+    current.append(Notice("cse-notice", "2", "새 일반 공지", "일반",
+                          "https://example.com/2", date(2026, 11, 2), False))
+    assert cli.run(args) == 0
+    assert sent == [("low", None)] * 2
+    matched = json.loads((tmp_path / "site/api/v1/matched.json").read_text())
+    assert matched["items"]["cse-notice/2"]["rule_name"] is None
+    assert matched["items"]["cse-notice/2"]["notified"] is True

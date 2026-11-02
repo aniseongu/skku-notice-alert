@@ -1,3 +1,4 @@
+import argparse
 import json
 from datetime import date, datetime
 from pathlib import Path
@@ -6,8 +7,9 @@ from zoneinfo import ZoneInfo
 
 import httpx
 import pytest
+import rapidocr
 
-from skku_notice import cli, fetch
+from skku_notice import cli, fetch, ocr
 from skku_notice.archive import Archive, add_notice
 from skku_notice.export import export_site
 from skku_notice.fetch import ImageData
@@ -74,7 +76,7 @@ def test_fetch_image_type_and_stream_limit(monkeypatch, content_type, chunks, ac
         assert image.mime_type == "image/jpeg"
 
 
-def test_gemini_image_text_archive_and_export(tmp_path: Path) -> None:
+def test_ocr_body_survives_gemini_and_export(tmp_path: Path, monkeypatch) -> None:
     article = notice(1)
     image = ImageData(b"image bytes", "image/png")
 
@@ -92,8 +94,75 @@ def test_gemini_image_text_archive_and_export(tmp_path: Path) -> None:
     result = judge_notices([article], {"cse-notice": "학과"}, {"year": 4}, "test", "unused",
                            SimpleNamespace(models=Models()), images={"cse-notice/1": [image]})
     archive = add_notice(Archive(), article, "2026-11-02T00:00:00+09:00")
-    archive = cli._apply_image_texts(archive, result, {"cse-notice/1": [image]})
+    monkeypatch.setattr(cli, "read_images", lambda images: "OCR 채용 안내")
+    archive = cli._apply_ocr(archive, {"cse-notice/1": [image]})
+    archive = add_notice(archive, article, "2026-11-02T00:00:00+09:00", judgment=result["cse-notice/1"])
     export_site(tmp_path, archive, [], datetime.now(ZoneInfo("Asia/Seoul")), web_path=Path("missing"))
     detail = json.loads((tmp_path / "api/v1/notices/cse-notice/1.json").read_text())
-    assert detail["body"] == "그림 속 채용 안내"
+    assert detail["body"] == "OCR 채용 안내"
     assert detail["body_from_image"] is True
+    assert detail["ocr_engine"] == "rapidocr"
+
+
+def test_saved_notice_image_ocr_without_network() -> None:
+    models = Path(rapidocr.__file__).parent / "models"
+    required = (
+        "ch_PP-OCRv5_det_mobile.onnx",
+        "ch_ppocr_mobile_v2.0_cls_mobile.onnx",
+        "korean_PP-OCRv5_rec_mobile.onnx",
+    )
+    if any(not (models / name).exists() for name in required):
+        pytest.skip("RapidOCR first-run models are not cached; tests must not download them")
+    text = ocr.read_images([Path("tests/fixtures/images/cse_notice_227923.png").read_bytes()])
+    assert "현대" in text or "채용" in text
+
+
+def test_ocr_failure_returns_empty_with_one_warning(monkeypatch, caplog) -> None:
+    def fail():
+        raise RuntimeError("model unavailable")
+
+    monkeypatch.setattr(ocr, "_engine", fail)
+    assert ocr.read_images([b"invalid"]) == ""
+    assert len(caplog.records) == 1
+
+
+def test_ocr_keeps_text_when_later_image_fails(monkeypatch, caplog) -> None:
+    def engine(image):
+        if image == b"bad":
+            raise ValueError("invalid image")
+        return SimpleNamespace(txts=("채용",))
+
+    monkeypatch.setattr(ocr, "_engine", lambda: engine)
+    assert ocr.read_images([b"good", b"bad"]) == "채용"
+    assert len(caplog.records) == 1
+
+
+def test_ocr_runs_without_gemini_key(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(cli, "load_dotenv", lambda **kwargs: None)
+    monkeypatch.setenv("NOTIFY_URLS", "ntfys://placeholder-topic")
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
+    monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
+    monkeypatch.setattr(cli, "_fixture", lambda source: "fixture")
+    monkeypatch.setattr(cli, "fetch_list", lambda *args: "fixture")
+    monkeypatch.setattr(cli, "fetch_detail", lambda *args: "detail")
+    monkeypatch.setattr(cli, "parse_detail", lambda *args: SimpleNamespace(
+        body_text="", attachments=(), images=("https://example.com/image.png",)
+    ))
+    monkeypatch.setattr(cli.time, "sleep", lambda seconds: None)
+    current = [notice(1)]
+    monkeypatch.setattr(cli, "parse_list", lambda html, source, url: [
+        Notice(source, item.article_no, item.title, item.category, item.url, item.posted_on, False)
+        for item in current
+    ])
+    monkeypatch.setattr(cli, "fetch_images", lambda urls, agent, limit: [ImageData(b"image", "image/png")])
+    monkeypatch.setattr(cli, "read_images", lambda images: "현대 채용")
+    monkeypatch.setattr(cli, "send_notice", lambda *args: True)
+    args = argparse.Namespace(rules=Path("config/rules.example.yaml"), dry_run=False, all=False,
+                              from_fixtures=True, no_ai=False, no_canvas=True, export=None)
+    assert cli.run(args) == 0
+    current.append(notice(2))
+    args.from_fixtures = False
+    assert cli.run(args) == 0
+    archive = json.loads((tmp_path / "archive.json").read_text())
+    assert archive["items"]["cse-notice/2"]["body_text"] == "현대 채용"

@@ -34,6 +34,7 @@ from skku_notice.interests import load_interests, match_interests
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match
 from skku_notice.notify import send_canvas, send_notice
+from skku_notice.ocr import read_images
 from skku_notice.parse import ParseError, parse_detail, parse_list
 from skku_notice.rules import load_rules, match_notice
 from skku_notice.state import baseline, is_new, load_state, record_result, save_state
@@ -142,10 +143,11 @@ def _images_for_judgment(
     return archive, images
 
 
-def _apply_image_texts(archive: Archive, judgments: dict, images: dict) -> Archive:
-    for notice_id, judgment in judgments.items():
-        if notice_id in images and judgment.image_text.strip():
-            archive = update_image_text(archive, notice_id, judgment.image_text.strip())
+def _apply_ocr(archive: Archive, images: dict) -> Archive:
+    for notice_id, parts in images.items():
+        text = read_images([part.data for part in parts])
+        if text:
+            archive = update_image_text(archive, notice_id, text)
     return archive
 
 
@@ -208,6 +210,7 @@ def run(args: argparse.Namespace) -> int:
         archive = _fill_details(archive, state, boards, settings, args.from_fixtures, now)
         save_archive(ARCHIVE_PATH, archive)
     candidates = []
+    image_candidates = []
     for source, notices in boards:
         for notice in notices:
             record = state.sources.get(source["id"])
@@ -215,12 +218,20 @@ def run(args: argparse.Namespace) -> int:
             if (args.dry_run and (args.all or is_new(state, notice))) or (
                 not args.dry_run and record is not None and seen is None
             ):
+                image_candidates.append(notice)
                 if not any(
                     word.strip().casefold() in notice.title.casefold() for word in rules.exclude_title
                 ):
                     candidates.append(notice)
     judgments = {}
     image_parts = {}
+    if image_candidates and not args.dry_run and not args.from_fixtures:
+        archive, image_parts = _images_for_judgment(
+            archive, image_candidates, now, settings["user_agent"]
+        )
+        archive = _apply_ocr(archive, image_parts)
+        if image_parts:
+            save_archive(ARCHIVE_PATH, archive)
     if candidates and ai.get("enabled") and not getattr(args, "no_ai", False):
         key = os.environ.get("GEMINI_API_KEY")
         if not key:
@@ -229,10 +240,6 @@ def run(args: argparse.Namespace) -> int:
             print("프로필 없음: 규칙만 적용")
         else:
             selected = candidates[: max(0, int(ai.get("max_per_run", 30)))]
-            if profile and not args.dry_run and not args.from_fixtures:
-                archive, image_parts = _images_for_judgment(
-                    archive, selected, now, settings["user_agent"]
-                )
             judgments = judge_notices(
                 selected,
                 {source["id"]: source["name"] for source in settings["sources"]},
@@ -243,9 +250,6 @@ def run(args: argparse.Namespace) -> int:
                 bodies={key: item.get("body_text") or "" for key, item in archive.items.items()},
                 images=image_parts,
             )
-            archive = _apply_image_texts(archive, judgments, image_parts)
-            if image_parts:
-                save_archive(ARCHIVE_PATH, archive)
     for source, notices in boards:
         if args.dry_run and source["id"] not in state.sources:
             print(f"{source['id']}: state 없음: 실제 첫 실행이면 알림 없이 기준선만 저장")
@@ -269,6 +273,8 @@ def run(args: argparse.Namespace) -> int:
                 if word in text_interests or (judgment and word in judgment.interests)
             )
             priority = decide_priority(match, judgment, shown_interests) if process and not excluded else None
+            if process and priority is None and rules.notify_all:
+                priority = "low"
             if not args.dry_run and seen is not None and seen.status == "pending":
                 previous = archive.items.get(f"{source['id']}/{notice.article_no}", {}).get("match", {})
                 if previous.get("rule_name"):

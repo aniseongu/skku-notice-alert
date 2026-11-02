@@ -70,6 +70,7 @@ def add_notice(
         "notice": public, "match": personal,
         "body_text": old.get("body_text"),
         "body_from_image": old.get("body_from_image", False),
+        "ocr_engine": old.get("ocr_engine"),
         "image_attempted": old.get("image_attempted", False),
         "attachments": old.get("attachments", []),
         "images": old.get("images", []),
@@ -102,9 +103,9 @@ def mark_image_attempted(archive: Archive, key: str) -> Archive:
     return Archive({**archive.items, key: {**archive.items[key], "image_attempted": True}})
 
 
-def update_image_text(archive: Archive, key: str, text: str) -> Archive:
+def update_image_text(archive: Archive, key: str, text: str, engine: str = "rapidocr") -> Archive:
     return Archive({**archive.items, key: {
-        **archive.items[key], "body_text": text, "body_from_image": True,
+        **archive.items[key], "body_text": text, "body_from_image": True, "ocr_engine": engine,
     }})
 
 

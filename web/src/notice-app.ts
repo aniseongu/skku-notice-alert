@@ -181,6 +181,15 @@ export class NoticeApp extends LitElement {
     applyTheme(theme);
   }
 
+  private async copyLink(notice: Notice) {
+    try {
+      await navigator.clipboard.writeText(safeUrl(notice.url));
+      this.showToast('원문 링크를 복사했어요');
+    } catch {
+      this.showToast('복사하지 못했어요');
+    }
+  }
+
   private showToast(text: string) {
     this.toast = text;
     clearTimeout(this.toastTimer);
@@ -270,18 +279,20 @@ export class NoticeApp extends LitElement {
 
         <main class="list-pane">
           <header class="pane-head topbar glass">
+            ${settings ? html`<button type="button" class="icon-button narrow-only back" aria-label="뒤로"
+              @click=${() => this.setView((remember('tab') as Tab) ?? 'mine')}>
+              <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>` : nothing}
             <div class="topbar-text">
               <h1>${title}</h1>
-              ${settings ? html`<p class="updated">키와 알림, 관심 키워드</p>` : this.updatedLine()}
+              ${settings ? html`<p class="updated">키와 알림, 관심 키워드</p>` : this.updatedLine(list.length)}
             </div>
             ${settings ? nothing : html`
               <label class="search wide-only">${icon('search')}
                 <input type="search" placeholder="공지 찾기" autocomplete="off" aria-label="공지 검색" .value=${this.query}
                   @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; }}></label>
               <button type="button" class="icon-button" aria-label="새로고침" ?disabled=${this.loading} @click=${this.refresh}>${icon('refresh')}</button>`}
-            <button type="button" class="icon-button narrow-only" aria-label=${settings ? '설정 닫기' : '설정'}
-              @click=${() => this.setView(settings ? (remember('tab') as Tab) ?? 'mine' : 'settings')}>
-              ${settings ? html`<svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>` : gearIcon}</button>
+            ${settings ? nothing : html`<button type="button" class="icon-button narrow-only" aria-label="설정"
+              @click=${() => this.setView('settings')}>${gearIcon}</button>`}
           </header>
 
           ${settings ? html`<settings-view .keywords=${this.keywords} .theme=${this.theme}
@@ -295,11 +306,10 @@ export class NoticeApp extends LitElement {
                 <button type="button" class="chip" aria-pressed=${String(!this.keyword)} @click=${() => this.setKeyword(null)}>전체</button>
                 ${this.keywords.map((word) => html`<button type="button" class="chip" aria-pressed=${String(this.keyword === word)}
                   @click=${() => this.setKeyword(this.keyword === word ? null : word)}>${word}</button>`)}
-                <button type="button" class="chip add" @click=${() => this.setView('settings')}>키워드 추가</button>
+                <button type="button" class="chip-add" @click=${() => this.setView('settings')}>+ 키워드</button>
               </div>
             </div>
-            <div class="list-head">
-              <span>${this.loading && !this.notices.length ? '' : `${list.length}건`}</span>
+            <div class="list-head narrow-only">
               <select class="board-select narrow-only" aria-label="게시판" .value=${this.board}
                 @change=${(e: Event) => this.setBoard((e.target as HTMLSelectElement).value)}>
                 <option value="all">모든 게시판</option>
@@ -311,7 +321,9 @@ export class NoticeApp extends LitElement {
 
         <aside class="detail-pane" aria-label="공지 상세">
           <div class="pane-head detail-head">
-            ${selected ? html`<a class="solid-button" href=${safeUrl(selected.url)} target="_blank" rel="noopener">원문 열기</a>` : nothing}
+            ${selected ? html`
+              <button type="button" class="ghost-button" @click=${() => this.copyLink(selected)}>링크 복사</button>
+              <a class="solid-button" href=${safeUrl(selected.url)} target="_blank" rel="noopener">원문 열기</a>` : nothing}
           </div>
           ${selected ? this.detail(selected) : nothing}
         </aside>
@@ -325,7 +337,7 @@ export class NoticeApp extends LitElement {
             <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
         </div>` : nothing}
 
-      <nav class="tabbar glass" aria-label="보기">
+      <nav class="tabbar glass" aria-label="보기" ?hidden=${settings}>
         ${tabs.map((t) => html`<button type="button" aria-current=${this.view === t.id ? 'page' : 'false'}
           @click=${() => { this.keyword = null; this.setView(t.id); }}>${icon(t.icon)}<span>${t.label}</span></button>`)}
       </nav>
@@ -338,14 +350,15 @@ export class NoticeApp extends LitElement {
       <span>${label}</span>${count === null ? nothing : html`<span class="count">${count}</span>`}</button>`;
   }
 
-  private updatedLine() {
+  private updatedLine(count?: number) {
     if (this.loading && !this.generatedAt) return html`<p class="updated">불러오는 중</p>`;
     if (!this.generatedAt) return html`<p class="updated">업데이트 정보 없음</p>`;
     const stale = Date.now() - Date.parse(this.generatedAt) > STALE_MS;
     const time = new Intl.DateTimeFormat('ko-KR', {
       timeZone: 'Asia/Seoul', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false,
     }).format(new Date(this.generatedAt));
-    return html`<p class="updated ${stale ? 'stale' : ''}">${time} 기준${stale ? ', 확인이 늦어지고 있어요' : ''}</p>`;
+    const total = count === undefined ? '' : `, ${count}건`;
+    return html`<p class="updated ${stale ? 'stale' : ''}">${time} 기준${total}${stale ? ', 확인이 늦어지고 있어요' : ''}</p>`;
   }
 
   private listBody(list: Notice[]): TemplateResult | TemplateResult[] {
@@ -408,10 +421,10 @@ export class NoticeApp extends LitElement {
       <a class="row ${dim ? 'dim' : ''}" href=${safeUrl(notice.url)} target="_blank" rel="noopener"
         data-id=${notice.id} aria-current=${this.isWide && this.shownId === notice.id ? 'true' : 'false'}
         @click=${(e: MouseEvent) => this.onRow(e, notice)}>
-        <span class="meta"><span>${boardName(source, notice.source_id)}</span>
-          ${notice.category ? html`<span>${notice.category}</span>` : nothing}${notice.pinned ? html`<span>고정</span>` : nothing}</span>
+        <span class="meta"><span class="board">${boardName(source, notice.source_id)}</span>
+          ${notice.category ? html`<span class="cat">${notice.category}</span>` : nothing}${notice.pinned ? html`<span class="cat">고정</span>` : nothing}</span>
         <span class="title">${cleanTitle(notice.title)}</span>
-        ${this.reasonLine(notice)}
+        <span class="sub">${notice.category ? html`<span class="sub-cat">${notice.category}${notice.pinned ? ', 고정' : ''}</span>` : nothing}${this.reasonLine(notice)}</span>
         ${this.dday(notice, today)}
       </a></li>`;
   }
@@ -428,7 +441,7 @@ export class NoticeApp extends LitElement {
         <h2 class="detail-title">${cleanTitle(notice.title)}</h2>
         <dl class="facts">
           ${interests.length ? html`<div><dt>관심</dt><dd><b class="interest">${interests.join(', ')}</b></dd></div>` : nothing}
-          <div><dt>판정</dt><dd>${ai ? html`<b class="verdict ${ai.verdict}">${VERDICT_LABEL[ai.verdict]}</b> ${ai.reason}` : '판정 없음'}</dd></div>
+          ${ai ? html`<div><dt>판정</dt><dd><b class="verdict ${ai.verdict}">${VERDICT_LABEL[ai.verdict]}</b> ${ai.reason}</dd></div>` : nothing}
           ${notice.deadline ? html`<div><dt>마감</dt><dd>${deadlineDetail(notice.deadline)} ${this.dday(notice, today)}</dd></div>` : nothing}
           <div><dt>게시일</dt><dd>${koreanDate(notice.posted_on)}</dd></div>
           ${judgement?.rule_name ? html`<div><dt>기준</dt><dd>${judgement.rule_name}</dd></div>` : nothing}

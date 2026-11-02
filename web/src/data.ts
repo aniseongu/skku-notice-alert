@@ -27,6 +27,22 @@ export interface Judgement {
   notified: boolean;
 }
 
+// D-013: 글별 본문 파일(site/api/v1/notices/<게시판>/<글번호>.json). 아직 안 받은 글은 파일이 없다.
+export interface NoticeBody {
+  version: number;
+  id: string;
+  summary: string | null;
+  body: string | null;
+  attachments: { name: string; url: string }[];
+  fetched_at: string | null;
+}
+
+export async function fetchBody(notice: Notice): Promise<NoticeBody | null> {
+  // 주소에 들어가는 값은 형식을 확인한 뒤에만 쓴다.
+  if (!/^[\w-]+$/.test(notice.source_id) || !/^\d+$/.test(notice.article_no)) return null;
+  return fetchJson<NoticeBody>(`notices/${notice.source_id}/${notice.article_no}.json`, true);
+}
+
 export interface NoticesFile { version: number; generated_at: string; sources: Source[]; notices: Notice[] }
 export interface MatchedFile { version: number; generated_at: string; items: Record<string, Judgement> }
 
@@ -125,7 +141,7 @@ export function deadlineDetail(iso: string): string {
 }
 
 export type IconName = 'ginkgo' | 'coin' | 'briefcase' | 'calendar' | 'trophy' | 'book' | 'alarm'
-  | 'search' | 'refresh' | 'list' | 'user-check' | 'plus';
+  | 'search' | 'refresh' | 'list' | 'user-check' | 'plus' | 'close' | 'back' | 'panel' | 'clip';
 
 // 분류 글자와 제목 단어로 아이콘을 고른다. 알림 아이콘(scripts/build_icons.py NOTIFY)과 같은 이름.
 const CATEGORY_ICONS: [IconName, RegExp][] = [

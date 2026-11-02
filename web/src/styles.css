@@ -131,7 +131,6 @@
     background: none;
     color: var(--text-2);
   }
-  .icon-button.small { width: 36px; height: 36px; }
   .icon-button:active { background: var(--sunken); }
   .icon-button:disabled { color: var(--text-3); cursor: default; }
 
@@ -154,14 +153,15 @@
   .chips {
     display: flex;
     gap: 6px;
-    margin: 12px -16px 0;
-    padding: 0 16px;
+    margin: 8px -16px 0;
+    padding: 4px 16px;
     overflow-x: auto;
     scrollbar-width: none;
     user-select: none;
     -webkit-user-select: none;
   }
   .chip {
+    position: relative;
     flex: none;
     min-height: 36px;
     padding: 0 14px;
@@ -172,6 +172,8 @@
     font-size: 14px;
     font-weight: 500;
   }
+  /* 보이는 높이는 36px, 누르는 영역은 위아래로 넓혀 44px(ux-rules 5절) */
+  .chip::before { content: ""; position: absolute; inset: -4px 0; }
   .chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 600; }
 
   /* 목록: 카드가 아니라 바탕색으로 뜬 묶음 안의 구분선 행 */

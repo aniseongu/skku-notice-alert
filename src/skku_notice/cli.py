@@ -11,12 +11,20 @@ import yaml
 from dotenv import load_dotenv
 
 from skku_notice.archive import Archive, add_notice, load_archive, save_archive
+from skku_notice.canvas import CanvasError, read_canvas
+from skku_notice.canvas_alerts import (
+    load_canvas_state,
+    mark_sent,
+    plan_alerts,
+    problem_alert,
+    save_canvas_state,
+)
 from skku_notice.deadline import KST
 from skku_notice.export import export_site
 from skku_notice.fetch import FetchError, fetch_list
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match
-from skku_notice.notify import send_notice
+from skku_notice.notify import send_canvas, send_notice
 from skku_notice.parse import ParseError, parse_list
 from skku_notice.rules import load_rules, match_notice
 from skku_notice.state import baseline, is_new, load_state, record_result, save_state
@@ -27,6 +35,8 @@ ARCHIVE_PATH = Path("state/archive.json")
 AI_PATH = Path("config/ai.yaml")
 PROFILE_PATH = Path("config/profile.yaml")
 FIXTURES_PATH = Path("tests/fixtures")
+CANVAS_CONFIG_PATH = Path("config/canvas.yaml")
+CANVAS_STATE_PATH = Path("state/canvas.json")
 
 
 def _fixture(source_id: str) -> str:
@@ -198,6 +208,70 @@ def run(args: argparse.Namespace) -> int:
             if not sent:
                 failed = True
                 print(f"{source['id']}/{notice.article_no}: 알림 실패", file=sys.stderr)
+    if not getattr(args, "no_canvas", False):
+        try:
+            canvas_config = yaml.safe_load(CANVAS_CONFIG_PATH.read_text(encoding="utf-8"))
+            fixture_dir = getattr(args, "canvas_fixtures", None)
+            token = os.environ.get("CANVAS_TOKEN", "")
+            if canvas_config.get("enabled") and (token or fixture_dir):
+                canvas_state = load_canvas_state(CANVAS_STATE_PATH)
+                minimum = max(30, int(canvas_config.get("min_refresh_minutes", 30)))
+                recently_refreshed = (
+                    not args.dry_run
+                    and CANVAS_STATE_PATH.exists()
+                    and time.time() - CANVAS_STATE_PATH.stat().st_mtime < minimum * 60
+                )
+                if not recently_refreshed:
+                    items = read_canvas(token, now, fixture_dir)
+                    summary_time = datetime.strptime(canvas_config["summary_time"], "%H:%M").time()
+                    alerts, next_state = plan_alerts(
+                        items, canvas_state, now, canvas_config["leads"], summary_time
+                    )
+                    if canvas_state.problem:
+                        from dataclasses import replace
+
+                        next_state = replace(next_state, problem=None)
+                    if args.dry_run:
+                        for alert in alerts:
+                            print(f"[Canvas 알림 예정] {alert.title} | {alert.body} | {alert.url}")
+                    elif not canvas_state.initialized:
+                        for alert in alerts:
+                            next_state = mark_sent(next_state, alert, now)
+                        save_canvas_state(CANVAS_STATE_PATH, next_state)
+                    else:
+                        for alert in alerts:
+                            if send_canvas(alert.title, alert.body, alert.url, alert.priority):
+                                next_state = mark_sent(next_state, alert, now)
+                                save_canvas_state(CANVAS_STATE_PATH, next_state)
+                            else:
+                                failed = True
+                                print("Canvas 알림 실패", file=sys.stderr)
+                        save_canvas_state(CANVAS_STATE_PATH, next_state)
+            elif canvas_config.get("enabled"):
+                print("CANVAS_TOKEN 없음: Canvas 건너뜀")
+        except CanvasError as exc:
+            if str(exc) == "토큰 거절":
+                from dataclasses import replace
+
+                current = load_canvas_state(CANVAS_STATE_PATH)
+                problem = current.problem or {"code": "token-rejected", "notifiedProblem": False}
+                current = replace(current, problem=problem)
+                alert = problem_alert(current)
+                if args.dry_run:
+                    print("[Canvas 알림 예정] 아이캠퍼스 토큰 거절")
+                else:
+                    save_canvas_state(CANVAS_STATE_PATH, current)
+                    if alert and send_canvas(alert.title, alert.body, alert.url, alert.priority):
+                        save_canvas_state(
+                            CANVAS_STATE_PATH, replace(current, problem={**problem, "notifiedProblem": True})
+                        )
+                failed = True
+            else:
+                print(f"Canvas: {exc}", file=sys.stderr)
+                failed = True
+        except (OSError, ValueError, KeyError, yaml.YAMLError) as exc:
+            print(f"Canvas 설정 또는 fixture 오류: {type(exc).__name__}", file=sys.stderr)
+            failed = True
     if getattr(args, "export", None):
         export_site(args.export, archive, settings["sources"], now)
     return 1 if failed else 0
@@ -211,4 +285,6 @@ def main() -> int:
     parser.add_argument("--from-fixtures", action="store_true")
     parser.add_argument("--no-ai", action="store_true")
     parser.add_argument("--export", type=Path)
+    parser.add_argument("--no-canvas", action="store_true")
+    parser.add_argument("--canvas-fixtures", type=Path)
     return run(parser.parse_args())

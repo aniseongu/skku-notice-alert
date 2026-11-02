@@ -25,6 +25,7 @@ BLOCK_TAGS = {"p", "div", "li", "tr", "h1", "h2", "h3", "h4", "h5", "h6", "br"}
 class Detail:
     body_text: str
     attachments: tuple[tuple[str, str], ...]
+    images: tuple[str, ...]
 
 
 class ParseError(ValueError):
@@ -108,4 +109,19 @@ def parse_detail(html: str, base_url: str) -> Detail:
         for link in tree.css(ATTACHMENT_SELECTOR)
         if _clean(link)
     )
-    return Detail(text, attachments)
+    images = []
+    for image in body.css("img[src]"):
+        src = image.attributes["src"].strip()
+        if not src:
+            continue
+        url = urljoin(base_url, src)
+        path = urlsplit(url).path.lower()
+        if (urlsplit(url).scheme not in {"http", "https"}
+                or re.search(r"/_res/[^/]+/img/common/", path)
+                or re.search(r"(?:^|[/_-])(?:sns|icon|ico)(?:[/_.-]|$)", path)
+                or url in images):
+            continue
+        images.append(url)
+        if len(images) == 10:
+            break
+    return Detail(text, attachments, tuple(images))

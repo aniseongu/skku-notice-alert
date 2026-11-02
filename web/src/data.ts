@@ -34,6 +34,8 @@ export interface NoticeBody {
   summary: string | null;
   body: string | null;
   attachments: { name: string; url: string }[];
+  // 본문 영역 안 그림 주소(본문이 그림으로만 올라온 글이 있다). 없을 수 있다.
+  images?: string[];
   fetched_at: string | null;
 }
 

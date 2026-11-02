@@ -93,7 +93,7 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
                 archive = update_detail(archive, key, None, (), None)
             else:
                 archive = update_detail(archive, key, detail.body_text, detail.attachments,
-                                        now.isoformat())
+                                        now.isoformat(), detail.images)
             save_archive(ARCHIVE_PATH, archive)
     return archive
 

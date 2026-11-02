@@ -3,7 +3,7 @@
 성균관대 공지 게시판(전체 공지, 소프트웨어학과 공지)을 15분마다 읽고, **내가 정한 기준에 맞는 글만** 휴대폰과 PC에 알림으로 보낸다.
 알림을 누르면 원문이 열린다. PC가 꺼져 있어도 GitHub Actions에서 돈다. 같은 데이터를 JSON API로도 낸다.
 
-- 지금 상태: 뼈대만 있음 (M0). 진행 상황은 [HANDOFF.md](HANDOFF.md), 목표는 [GOAL.md](GOAL.md).
+- 진행 상황은 [HANDOFF.md](HANDOFF.md), 목표는 [GOAL.md](GOAL.md).
 - 구조: Python, httpx, selectolax, Apprise, ntfy, GitHub Actions, GitHub Pages. 결정 이유는 [docs/DECISIONS.md](docs/DECISIONS.md).
 - 참고한 프로젝트: [docs/research/open-source.md](docs/research/open-source.md).
 
@@ -13,6 +13,25 @@
 2. `.env.example`을 `.env`로 복사하고 `NOTIFY_URLS`에 `ntfys://<토픽>`을 넣는다.
 3. `config/rules.example.yaml`을 `config/rules.yaml`로 복사해 기준을 고친다.
 4. `uv run skku-notice --dry-run --all`로 어떤 글이 올지 미리 본다.
+
+## 실제로 돌리기 (M3)
+
+1. 이 코드를 **공개** GitHub 저장소에 올린다. `Settings > Pages > Build and deployment > Source`를 **GitHub Actions**로 설정한다. `Settings > Actions > General > Workflow permissions`에서 `Read and write permissions`를 선택해 봇이 `state/`를 push할 수 있게 한다.
+2. `Settings > Secrets and variables > Actions`에 아래 키를 등록한다. 첫 배포 전에는 GitHub 화면에서 등록하고, Pages가 열린 뒤에는 앱의 **설정** 화면에서 키와 관심 키워드를 저장할 수도 있다. 앱 설정을 쓰려면 화면 안내에 따라 GitHub 토큰을 연결한다.
+
+   | 종류 | 이름 | 용도 |
+   |---|---|---|
+   | Secret, 필수 | `NOTIFY_URLS` | Apprise 알림 주소. ntfy 토픽은 추측하기 어렵게 정한다. |
+   | Secret, 선택 | `GEMINI_API_KEY` | 판정과 요약. 없으면 규칙으로 처리한다. |
+   | Secret, 선택 | `PROFILE_YAML` | Gemini용 프로필 YAML 본문. 저장소에 올리지 않는다. |
+   | Secret, 선택 | `CANVAS_TOKEN` | 아이캠퍼스 알림. Canvas 내용은 Pages와 공개 커밋에 넣지 않는다. |
+   | Variable, 선택 | `INTEREST_KEYWORDS` | 관심 키워드. |
+
+3. `Actions > Check overseas access > Run workflow`를 먼저 실행해 두 게시판과 Canvas 주소의 HTTP 상태 코드와 크기를 확인한다. 각 주소를 한 번씩만 요청한다. 해외 러너에서 막히면 예약 실행 설정을 다시 검토해야 한다.
+4. `Actions > Notice and Pages > Run workflow`를 수동 실행한다. **첫 실행은 게시판별 기준선만 저장하고 공지 알림을 보내지 않는다.** Canvas도 첫 실행에는 기준선만 만든다. `state/seen.json`과 `state/archive.json`은 봇이 커밋한다. 이후 15분 간격 예약 실행에서 새 글을 처리한다. 예약 실행은 정시보다 늦을 수 있다.
+5. `https://<계정>.github.io/<저장소>/`를 휴대폰과 웨일에서 열고 앱으로 설치한다. 공지 목록과 상세, 내 공지 판정, 요약은 공개 Pages에 올라간다. 다른 사람도 이 데이터를 볼 수 있다. `config/rules.yaml`을 저장소에 커밋하면 그 규칙도 공개된다. 워크플로는 파일이 없으면 `config/rules.example.yaml`을 사용한다.
+
+Canvas 알림 상태는 공개 저장소 대신 Actions 캐시에 보관한다. 캐시가 삭제되면 다음 실행에서 Canvas 기준선을 다시 만들기 때문에 일부 리마인드가 빠질 수 있다. 실제 알림 수신과 Pages 설치는 저장소를 만든 뒤 확인해야 한다.
 
 ## AI로 개발하기
 

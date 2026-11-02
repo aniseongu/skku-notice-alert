@@ -34,6 +34,7 @@ def add_notice(
     judgment: Judgment | None = None,
     priority: str | None = None,
     notified: bool = False,
+    interests: tuple[str, ...] = (),
 ) -> Archive:
     key = f"{notice.source_id}/{notice.article_no}"
     deadline = extract_deadline(notice.title, notice.posted_on)
@@ -52,8 +53,14 @@ def add_notice(
     personal = {
         "rule_name": match.rule_name if match else None,
         "priority": priority,
+        "interests": list(interests),
         "reasons": list(match.reasons) if match else [],
-        "ai": {"verdict": judgment.verdict, "reason": judgment.reason, "model": judgment.model}
+        "ai": {
+            "verdict": judgment.verdict,
+            "reason": judgment.reason,
+            "model": judgment.model,
+            "interests": list(judgment.interests),
+        }
         if judgment
         else None,
         "notified": notified,

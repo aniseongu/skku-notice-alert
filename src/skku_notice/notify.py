@@ -25,12 +25,15 @@ def _url_for_notice(url: str, notice: Notice, priority: str) -> str:
 
 
 def send_notice(
-    notice: Notice, source_name: str, priority: str, match: Match | None, ai_reason: str | None
+    notice: Notice, source_name: str, priority: str, match: Match | None, ai_reason: str | None,
+    interests: tuple[str, ...] = (),
 ) -> bool:
     urls = [value.strip() for value in os.environ.get("NOTIFY_URLS", "").split(",") if value.strip()]
     if not urls:
         return False
     body = []
+    if interests:
+        body.append(f"관심 {', '.join(interests)}")
     if ai_reason:
         body.append(ai_reason)
     deadline = extract_deadline(notice.title, notice.posted_on)

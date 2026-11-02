@@ -26,10 +26,18 @@ def export_site(
         "sources": [{"id": source["id"], "name": source["name"], "url": source["url"]} for source in sources],
         "notices": [item["notice"] for item in ordered],
     }
+    # D-010 API v1의 기존 이름을 유지하고 interests는 추가 필드로 넣는다.
+    personal = {}
+    for item in ordered:
+        decision = item["match"].copy()
+        decision.setdefault("interests", [])
+        if decision.get("ai") is not None:
+            decision["ai"] = {**decision["ai"], "interests": decision["ai"].get("interests", [])}
+        personal[item["notice"]["id"]] = decision
     matched = {
         "version": 1,
         "generated_at": stamp,
-        "items": {item["notice"]["id"]: item["match"] for item in ordered},
+        "items": personal,
     }
     for name, data in (("notices.json", notices), ("matched.json", matched)):
         (api / name).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

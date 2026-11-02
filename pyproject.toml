@@ -4,14 +4,20 @@ version = "0.1.0"
 description = "성균관대 공지 게시판을 읽어 내 기준에 맞는 글만 알림으로 보낸다"
 readme = "README.md"
 requires-python = ">=3.12"
-# M1 계획 2단계에서 `uv add httpx selectolax pyyaml apprise`로 채운다(버전은 uv.lock이 고정).
-dependencies = []
+dependencies = [
+    "httpx>=0.28.1",
+    "pyyaml>=6.0.3",
+    "selectolax>=1.0.2",
+]
 
 [project.scripts]
 skku-notice = "skku_notice.cli:main"
 
 [dependency-groups]
-dev = []   # M1 계획 2단계에서 `uv add --dev pytest ruff`
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
 
 [build-system]
 requires = ["hatchling"]

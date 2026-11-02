@@ -193,10 +193,11 @@ export class SettingsView extends LitElement {
     return html`
       <div class="settings">
         <section aria-labelledby="s-github">
-          <h2 id="s-github" class="settings-head">저장소 연결</h2>
+          <h2 id="s-github" class="settings-head">GitHub</h2>
+          <div class="box">
           <div class="setting">
             <div class="setting-text">
-              <p class="setting-name">GitHub 연결</p>
+              <p class="setting-name">저장소와 토큰</p>
               <p class="setting-help">알림을 15분마다 돌리는 저장소예요. 아래 키들은 여기로 암호화해 보내고 이 브라우저에는 저장하지 않아요. 토큰도 화면을 닫으면 잊어요</p>
             </div>
             <div class="setting-control">
@@ -219,10 +220,12 @@ export class SettingsView extends LitElement {
             </div>
           </div>
 
+          </div>
         </section>
 
         <section aria-labelledby="s-notify">
           <h2 id="s-notify" class="settings-head">알림 받을 곳</h2>
+          <div class="box">
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">ntfy 토픽</p>
@@ -241,6 +244,8 @@ export class SettingsView extends LitElement {
                 <button type="button" class="solid-button" ?disabled=${!this.connected() || !this.topic || this.busy === 'NOTIFY_URLS'}
                   @click=${() => this.save('NOTIFY_URLS', `ntfys://${this.topic}`)}>GitHub에 저장</button>
               </div>
+              ${!this.topic ? html`<p class="field-note">토픽을 먼저 만들거나 붙여 넣으면 테스트와 저장을 할 수 있어요</p>`
+                : !this.connected() ? html`<p class="field-note">GitHub에 연결하면 저장할 수 있어요</p>` : nothing}
               ${this.saved.NOTIFY_URLS ? html`<p class="setting-saved">${savedDate(this.saved.NOTIFY_URLS)}에 저장됨</p>` : nothing}
               ${this.note('NOTIFY_URLS')}
               ${this.note('topic')}
@@ -258,10 +263,12 @@ export class SettingsView extends LitElement {
               ], 'Windows(웨일)에서 받는 방법')}
             </div>
           </div>
+          </div>
         </section>
 
         <section aria-labelledby="s-keys">
           <h2 id="s-keys" class="settings-head">연결 키</h2>
+          <div class="box">
           ${KEY_FIELDS.map((field) => this.keyRow(field))}
 
           <div class="setting">
@@ -274,10 +281,12 @@ export class SettingsView extends LitElement {
               ${this.note('env')}
             </div>
           </div>
+          </div>
         </section>
 
         <section aria-labelledby="s-keywords">
           <h2 id="s-keywords" class="settings-head">관심 키워드</h2>
+          <div class="box">
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">키워드</p>
@@ -298,10 +307,12 @@ export class SettingsView extends LitElement {
               ${this.connected() ? this.note('keywords') : html`<p class="field-note">GitHub에 연결하면 휴대폰 알림에도 써요</p>`}
             </div>
           </div>
+          </div>
         </section>
 
         <section aria-labelledby="s-view">
           <h2 id="s-view" class="settings-head">화면</h2>
+          <div class="box">
           <div class="setting">
             <div class="setting-text"><p class="setting-name">테마</p><p class="setting-help">고르면 바로 바뀌어요</p></div>
             <div class="setting-control">
@@ -311,6 +322,7 @@ export class SettingsView extends LitElement {
                     @click=${() => this.emit('theme-change', value)}>${{ auto: '기기 설정', light: '밝게', dark: '어둡게' }[value]}</button>`)}
               </div>
             </div>
+          </div>
           </div>
         </section>
       </div>`;
@@ -343,6 +355,7 @@ export class SettingsView extends LitElement {
             <button type="button" class="solid-button" ?disabled=${!this.connected() || this.busy === name} @click=${() => this.save(name, value)}>
               ${this.busy === name ? '저장 중' : 'GitHub에 저장'}</button>
           </div>
+          ${this.connected() ? nothing : html`<p class="field-note">위에서 GitHub에 연결하면 저장할 수 있어요</p>`}
           ${this.note(name)}
           ${this.guide(name, field.steps, field.multiline ? '쓰는 방법' : '받는 방법')}
         </div>

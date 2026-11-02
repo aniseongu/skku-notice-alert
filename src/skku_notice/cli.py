@@ -54,6 +54,10 @@ def run(args: argparse.Namespace) -> int:
         print(f"{args.rules} 없음: config/rules.example.yaml을 복사하세요", file=sys.stderr)
         return 2
     load_dotenv(override=False)
+    notify_urls = os.environ.get("NOTIFY_URLS", "").split(",")
+    if not args.dry_run and not any(url.strip() for url in notify_urls):
+        print("설정 오류: NOTIFY_URLS 없음", file=sys.stderr)
+        return 2
     try:
         rules = load_rules(args.rules)
         settings = yaml.safe_load(SOURCES_PATH.read_text(encoding="utf-8"))
@@ -139,7 +143,9 @@ def run(args: argparse.Namespace) -> int:
             )
             excluded = any(word.strip().casefold() in notice.title.casefold() for word in rules.exclude_title)
             match = match_notice(notice, rules) if process and not excluded else None
-            judgment = judgments.get(notice.article_no) if process and not excluded else None
+            judgment = (
+                judgments.get(f"{source['id']}/{notice.article_no}") if process and not excluded else None
+            )
             priority = decide_priority(match, judgment) if process and not excluded else None
             if not args.dry_run and seen is not None and seen.status == "pending":
                 previous = archive.items.get(f"{source['id']}/{notice.article_no}", {}).get("match", {})

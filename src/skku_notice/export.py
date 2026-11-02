@@ -10,7 +10,7 @@ from skku_notice.deadline import KST
 
 
 def export_site(
-    destination: Path, archive: Archive, sources: list[dict], now: datetime, web_path: Path = Path("web")
+    destination: Path, archive: Archive, sources: list[dict], now: datetime, web_path: Path = Path("web/dist")
 ) -> None:
     api = destination / "api/v1"
     api.mkdir(parents=True, exist_ok=True)
@@ -34,9 +34,4 @@ def export_site(
     for name, data in (("notices.json", notices), ("matched.json", matched)):
         (api / name).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if web_path.is_dir():
-        shutil.copytree(
-            web_path,
-            destination,
-            dirs_exist_ok=True,
-            ignore=lambda directory, names: {"sample"} if Path(directory) == web_path else set(),
-        )
+        shutil.copytree(web_path, destination, dirs_exist_ok=True)

@@ -65,13 +65,33 @@ def add_notice(
         else None,
         "notified": notified,
     }
-    items = {**archive.items, key: {"notice": public, "match": personal}}
+    old = archive.items.get(key, {})
+    items = {**archive.items, key: {
+        "notice": public, "match": personal,
+        "body_text": old.get("body_text"),
+        "attachments": old.get("attachments", []),
+        "summary": judgment.summary if judgment and judgment.summary else old.get("summary"),
+        "body_attempts": old.get("body_attempts", 0),
+        "body_pending": old.get("body_pending", False),
+        "fetched_at": old.get("fetched_at"),
+    }}
     ordered = sorted(
         items.items(),
         key=lambda pair: (pair[1]["notice"]["posted_on"], pair[1]["notice"]["first_seen"], pair[0]),
         reverse=True,
     )
     return Archive(dict(ordered[:MAX_ARCHIVE]))
+
+
+def update_detail(
+    archive: Archive, key: str, body: str | None, attachments: tuple[tuple[str, str], ...],
+    fetched_at: str | None,
+) -> Archive:
+    item = archive.items[key]
+    updated = {**item, "body_text": body, "body_pending": body is None, "attachments": [
+        {"name": name, "url": url} for name, url in attachments
+    ], "fetched_at": fetched_at, "body_attempts": item.get("body_attempts", 0) + 1}
+    return Archive({**archive.items, key: updated})
 
 
 def save_archive(path: Path, archive: Archive) -> None:

@@ -41,5 +41,15 @@ def export_site(
     }
     for name, data in (("notices.json", notices), ("matched.json", matched)):
         (api / name).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    for item in ordered:
+        notice = item["notice"]
+        target = api / "notices" / notice["source_id"] / f"{notice['article_no']}.json"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        detail = {
+            "version": 1, "id": notice["id"], "summary": item.get("summary"),
+            "body": item.get("body_text"), "attachments": item.get("attachments", []),
+            "fetched_at": item.get("fetched_at"),
+        }
+        target.write_text(json.dumps(detail, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if web_path.is_dir():
         shutil.copytree(web_path, destination, dirs_exist_ok=True)

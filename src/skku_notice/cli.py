@@ -10,7 +10,7 @@ from pathlib import Path
 import yaml
 from dotenv import load_dotenv
 
-from skku_notice.archive import Archive, add_notice, load_archive, save_archive
+from skku_notice.archive import Archive, add_notice, load_archive, save_archive, update_detail
 from skku_notice.canvas import CanvasError, read_canvas
 from skku_notice.canvas_alerts import (
     load_canvas_state,
@@ -21,12 +21,12 @@ from skku_notice.canvas_alerts import (
 )
 from skku_notice.deadline import KST
 from skku_notice.export import export_site
-from skku_notice.fetch import FetchError, fetch_list
+from skku_notice.fetch import FetchError, fetch_detail, fetch_list
 from skku_notice.interests import load_interests, match_interests
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match
 from skku_notice.notify import send_canvas, send_notice
-from skku_notice.parse import ParseError, parse_list
+from skku_notice.parse import ParseError, parse_detail, parse_list
 from skku_notice.rules import load_rules, match_notice
 from skku_notice.state import baseline, is_new, load_state, record_result, save_state
 
@@ -46,6 +46,56 @@ def _fixture(source_id: str) -> str:
     if not candidates:
         raise FileNotFoundError(f"fixture not found: {source_id}")
     return candidates[-1].read_text(encoding="utf-8")
+
+
+def _view_fixture(source_id: str, article_no: str) -> str | None:
+    candidates = sorted(FIXTURES_PATH.glob(
+        f"{source_id.replace('-', '_')}_view_{article_no}_*.html"
+    ))
+    return candidates[-1].read_text(encoding="utf-8") if candidates else None
+
+
+def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], settings: dict,
+                  from_fixtures: bool, now: datetime) -> Archive:
+    gap = max(1.0, float(settings.get("request_gap_seconds", 1)))
+    for source, notices in boards:
+        count = 0
+        for notice in notices:
+            key = f"{source['id']}/{notice.article_no}"
+            seen = state.sources[source["id"]].seen.get(notice.article_no)
+            if seen is not None and seen.status == "baseline":
+                continue
+            item = archive.items.get(key)
+            if seen is not None and (item is None or not item.get("body_pending")):
+                continue
+            if item is None:
+                archive = add_notice(archive, notice, now.isoformat())
+                item = archive.items[key]
+            if seen is None:
+                item["body_pending"] = True
+            if item.get("body_text") is not None or item.get("body_attempts", 0) >= 3:
+                continue
+            if count >= 5:
+                break
+            html = _view_fixture(source["id"], notice.article_no) if from_fixtures else None
+            if from_fixtures and html is None:
+                continue
+            if not from_fixtures:
+                time.sleep(gap)
+            count += 1
+            try:
+                if html is None:
+                    html = fetch_detail(notice.url, settings["user_agent"],
+                                        float(settings["timeout_seconds"]))
+                detail = parse_detail(html, notice.url)
+            except (FetchError, ParseError) as exc:
+                print(f"{key}: 본문 읽기 실패: {exc}", file=sys.stderr)
+                archive = update_detail(archive, key, None, (), None)
+            else:
+                archive = update_detail(archive, key, detail.body_text, detail.attachments,
+                                        now.isoformat())
+            save_archive(ARCHIVE_PATH, archive)
+    return archive
 
 
 def _profile() -> dict:
@@ -114,6 +164,8 @@ def run(args: argparse.Namespace) -> int:
                 for notice in notices:
                     archive = add_notice(archive, notice, now.isoformat())
                 save_archive(ARCHIVE_PATH, archive)
+        archive = _fill_details(archive, state, boards, settings, args.from_fixtures, now)
+        save_archive(ARCHIVE_PATH, archive)
     candidates = []
     for source, notices in boards:
         for notice in notices:
@@ -142,6 +194,7 @@ def run(args: argparse.Namespace) -> int:
                 ai["model"],
                 key,
                 interests=interests,
+                bodies={key: item.get("body_text") or "" for key, item in archive.items.items()},
             )
     for source, notices in boards:
         if args.dry_run and source["id"] not in state.sources:

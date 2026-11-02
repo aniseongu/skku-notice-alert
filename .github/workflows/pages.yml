@@ -1,0 +1,85 @@
+name: Publish website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - 'src/skku_notice/export.py'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+# Serialize with Notice and Pages so the same site is never deployed concurrently.
+concurrency:
+  group: notice
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          enable-cache: true
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build PWA
+        working-directory: web
+        run: |
+          npm ci
+          npm run build
+
+      - name: Install Python dependencies
+        run: uv sync --frozen
+
+      - name: Export public website without notifications
+        shell: bash
+        run: |
+          if [ -f state/archive.json ]; then
+            # Keep the snapshot's age when publishing a UI-only change.
+            archive_time="$(git log -1 --format=%cI -- state/archive.json)"
+            uv run python - "$archive_time" <<'PY'
+          import sys
+          from datetime import datetime
+          from pathlib import Path
+          import yaml
+          from skku_notice.archive import load_archive
+          from skku_notice.export import export_site
+
+          settings = yaml.safe_load(Path("config/sources.yaml").read_text())
+          export_site(Path("site"), load_archive(Path("state/archive.json")),
+                      settings["sources"], datetime.fromisoformat(sys.argv[1]))
+          PY
+          else
+            # First publish: real public lists, no AI, Canvas, notifications or state writes.
+            uv run skku-notice --dry-run --all --no-ai --no-canvas \
+              --rules config/rules.example.yaml --export site
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
+        with:
+          path: site
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5

@@ -5,7 +5,7 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 import apprise
 
-from skku_notice.deadline import extract_deadline
+from skku_notice.deadline import KST, extract_deadline
 from skku_notice.model import Match, Notice
 
 PRIORITIES = {"high": "4", "default": "3", "low": "2"}
@@ -35,7 +35,12 @@ def send_notice(
         body.append(ai_reason)
     deadline = extract_deadline(notice.title, notice.posted_on)
     if deadline:
-        body.append(f"마감: {deadline.isoformat()}")
+        local = deadline.astimezone(KST)
+        weekday = "월화수목금토일"[local.weekday()]
+        label = f"마감 {local.month}월 {local.day}일({weekday})"
+        if (local.hour, local.minute) != (23, 59):
+            label += f" {local:%H:%M}"
+        body.append(label)
     if match:
         body.append(f"규칙: {match.rule_name}")
     sender = apprise.Apprise()

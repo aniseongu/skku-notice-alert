@@ -13,7 +13,7 @@ from skku_notice.archive import Archive, add_notice
 from skku_notice.export import export_site
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match, Notice
-from skku_notice.notify import _url_for_notice
+from skku_notice.notify import _url_for_notice, send_notice
 from skku_notice.state import load_state
 
 
@@ -56,7 +56,7 @@ def test_judge_batches_and_retries(notice) -> None:
         def generate_content(self, *, model, contents, config):
             self.calls += 1
             assert model == "test-model"
-            assert "학부생" in contents and "123" in contents
+            assert "학부생" in contents and "cse-notice/123" in contents
             assert config.response_mime_type == "application/json"
             assert config.response_schema["required"] == ["items"]
             if self.calls == 1:
@@ -68,7 +68,7 @@ def test_judge_batches_and_retries(notice) -> None:
                     "text": json.dumps(
                         {
                             "items": [
-                                {"article_no": "123", "verdict": "relevant", "reason": "학부생 지원 가능"}
+                                {"id": "cse-notice/123", "verdict": "relevant", "reason": "학부생 지원 가능"}
                             ]
                         }
                     )
@@ -78,11 +78,74 @@ def test_judge_batches_and_retries(notice) -> None:
     client = type("Client", (), {"models": Models()})()
     assert (
         judge_notices([notice], {"cse-notice": "학과"}, {"status": "학부생"}, "test-model", "unused", client)[
-            "123"
+            "cse-notice/123"
         ].verdict
         == "relevant"
     )
     assert client.models.calls == 2
+
+
+def test_judge_distinguishes_same_article_number_across_boards(notice) -> None:
+    other = Notice("skku-notice01", "123", "장학금", "장학", notice.url, notice.posted_on, False)
+
+    class Models:
+        def generate_content(self, *, model, contents, config):
+            articles = json.loads(contents.split("\n", 1)[1])["articles"]
+            assert {item["id"] for item in articles} == {"cse-notice/123", "skku-notice01/123"}
+            assert "id" in config.response_schema["properties"]["items"]["items"]["required"]
+            return type(
+                "Response",
+                (),
+                {
+                    "text": json.dumps(
+                        {"items": [
+                            {"id": "cse-notice/123", "verdict": "relevant", "reason": "학과 대상"},
+                            {"id": "skku-notice01/123", "verdict": "not_relevant", "reason": "대상 아님"},
+                            {"id": "unknown/123", "verdict": "relevant", "reason": "무시"},
+                        ]}
+                    )
+                },
+            )()
+
+    client = type("Client", (), {"models": Models()})()
+    result = judge_notices(
+        [notice, other],
+        {"cse-notice": "학과", "skku-notice01": "전체"},
+        {"status": "학부생"},
+        "test-model",
+        "unused",
+        client,
+    )
+    assert {key: value.verdict for key, value in result.items()} == {
+        "cse-notice/123": "relevant",
+        "skku-notice01/123": "not_relevant",
+    }
+
+
+@pytest.mark.parametrize(
+    ("title", "expected"),
+    [
+        ("인턴 모집(~11.12(목))", "마감 11월 12일(목)"),
+        ("인턴 모집 마감 11.12(목) 18:00", "마감 11월 12일(목) 18:00"),
+    ],
+)
+def test_notification_deadline_uses_korean_kst_format(monkeypatch, notice, title, expected) -> None:
+    item = Notice(
+        notice.source_id, notice.article_no, title, notice.category, notice.url, notice.posted_on, False
+    )
+    monkeypatch.setenv("NOTIFY_URLS", "ntfys://placeholder-topic")
+
+    class FakeApprise:
+        def add(self, url):
+            return True
+
+        def notify(self, *, title, body):
+            assert expected in body
+            assert "2026-11-12T" not in body
+            return True
+
+    monkeypatch.setattr("skku_notice.notify.apprise.Apprise", FakeApprise)
+    assert send_notice(item, "학과", "default", None, None)
 
 
 def test_ntfy_url_has_click_and_numeric_priority(notice) -> None:
@@ -97,7 +160,7 @@ def test_ntfy_url_has_click_and_numeric_priority(notice) -> None:
     assert parse_qs(urlsplit(_url_for_notice("ntfys://topic", notice, "low")).query)["priority"] == ["2"]
 
 
-def test_export_api_v1_shape_and_web_copy(tmp_path: Path, notice) -> None:
+def test_export_api_v1_shape_and_web_copy(tmp_path: Path, monkeypatch, notice) -> None:
     now = datetime(2026, 11, 2, 19, tzinfo=ZoneInfo("Asia/Seoul"))
     match = Match(notice, "인턴", "default", ("title_any:인턴",))
     archive = add_notice(
@@ -109,13 +172,14 @@ def test_export_api_v1_shape_and_web_copy(tmp_path: Path, notice) -> None:
         "default",
         True,
     )
-    web = tmp_path / "web"
+    web = tmp_path / "web/dist"
     (web / "sample").mkdir(parents=True)
     (web / "index.html").write_text("ok")
     (web / "sample/example.json").write_text("{}")
     output = tmp_path / "site"
+    monkeypatch.chdir(tmp_path)
     export_site(
-        output, archive, [{"id": "cse-notice", "name": "학과", "url": "https://example.com"}], now, web
+        output, archive, [{"id": "cse-notice", "name": "학과", "url": "https://example.com"}], now
     )
     public = json.loads((output / "api/v1/notices.json").read_text())
     private = json.loads((output / "api/v1/matched.json").read_text())
@@ -137,10 +201,20 @@ def test_export_api_v1_shape_and_web_copy(tmp_path: Path, notice) -> None:
     assert set(private["items"]["cse-notice/123"]["ai"]) == {"verdict", "reason", "model"}
     assert public["notices"][0]["deadline"] == "2026-11-12T23:59:00+09:00"
     assert (output / "index.html").exists()
-    assert not (output / "sample").exists()
+    assert (output / "sample/example.json").exists()
+
+
+def test_export_without_dist_writes_json_only(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.chdir(tmp_path)
+    output = tmp_path / "site"
+    export_site(output, Archive(), [], datetime(2026, 11, 2, tzinfo=ZoneInfo("Asia/Seoul")))
+    assert (output / "api/v1/notices.json").exists()
+    assert (output / "api/v1/matched.json").exists()
+    assert not (output / "index.html").exists()
 
 
 def test_actual_run_baseline_then_retry(tmp_path: Path, monkeypatch, notice) -> None:
+    monkeypatch.setenv("NOTIFY_URLS", "ntfys://placeholder-topic")
     monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
     monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
     monkeypatch.setattr(cli, "_fixture", lambda source_id: "fixture")

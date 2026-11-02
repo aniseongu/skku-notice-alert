@@ -8,7 +8,7 @@
       "reasons": [],
       "ai": {
         "verdict": "relevant",
-        "reason": "재학생 대상 단기 근무, 학과 무관 지원 가능",
+        "reason": "재학생이면 학과와 관계없이 지원할 수 있어요",
         "model": "sample"
       },
       "notified": true
@@ -30,7 +30,7 @@
       ],
       "ai": {
         "verdict": "maybe",
-        "reason": "기숙사생 대상 공모전, 거주 여부 확인 필요",
+        "reason": "기숙사에 사는 학생만 낼 수 있어요",
         "model": "sample"
       },
       "notified": true
@@ -41,7 +41,7 @@
       "reasons": [],
       "ai": {
         "verdict": "relevant",
-        "reason": "데이터과학 TA 모집, 소프트웨어학과 학부생 적합",
+        "reason": "소프트웨어학과 학부생이 지원할 수 있어요",
         "model": "sample"
       },
       "notified": true
@@ -52,7 +52,7 @@
       "reasons": [],
       "ai": {
         "verdict": "maybe",
-        "reason": "행사 아르바이트, 해당 날짜 일정 확인 필요",
+        "reason": "11월 6일 하루 일해요. 그날 일정을 봐 주세요",
         "model": "sample"
       },
       "notified": true
@@ -74,7 +74,7 @@
       ],
       "ai": {
         "verdict": "relevant",
-        "reason": "학과 재학생 대상 장학, 메일 제출 필요",
+        "reason": "학과 재학생 장학이에요. 메일로 신청해요",
         "model": "sample"
       },
       "notified": true
@@ -87,7 +87,7 @@
       ],
       "ai": {
         "verdict": "relevant",
-        "reason": "학과 재학생 대상 장학, 메일 제출 필요",
+        "reason": "학과 재학생 장학이에요. 메일로 신청해요",
         "model": "sample"
       },
       "notified": true
@@ -101,7 +101,7 @@
       ],
       "ai": {
         "verdict": "maybe",
-        "reason": "졸업예정자 우대 가능성, 재학생 지원 조건 확인 필요",
+        "reason": "졸업예정자를 우대해요. 재학생도 낼 수 있는지 봐 주세요",
         "model": "sample"
       },
       "notified": true
@@ -142,7 +142,7 @@
       ],
       "ai": {
         "verdict": "relevant",
-        "reason": "겨울방학 인턴, 3학년 재학생 지원 가능",
+        "reason": "3학년 재학생이 지원할 수 있는 겨울방학 인턴이에요",
         "model": "sample"
       },
       "notified": true
@@ -164,7 +164,7 @@
       ],
       "ai": {
         "verdict": "not_relevant",
-        "reason": "졸업생, 졸업예정자 대상 교육과정",
+        "reason": "졸업생과 졸업예정자만 들을 수 있어요",
         "model": "sample"
       },
       "notified": true

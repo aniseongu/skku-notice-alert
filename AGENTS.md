@@ -87,6 +87,6 @@ API 응답 형식(JSON 필드 이름)은 한 번 정하면 바꾸지 않는다. 
 ## 7. 도구
 
 - 공용 스킬 (`.agents/skills/`): `feature-change`(표준 작업 절차), `add-board`(게시판 추가), `tune-rules`(알림 기준 조정),
-  `cross-agent`(Claude와 Codex 호출, 리뷰), `session-handoff`(인수인계), `systematic-debugging`(버그 원인 찾기)
+  `cross-agent`(Claude와 Codex 호출, 리뷰), `session-handoff`(인수인계), `systematic-debugging`(버그 원인 찾기), `toss-ux-writing`(화면과 알림 문구, 웨일 확장에서 가져옴)
 - 라이브러리 문서는 기억에 의존하지 말고 context7로 확인한다(Apprise, httpx, selectolax, GitHub Actions 등).
 - 셸은 zsh다. 스크립트는 `bash` shebang으로 **실행**하고 `source`하지 않는다. 파이썬은 `uv`로 관리한다.

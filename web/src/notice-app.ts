@@ -112,7 +112,7 @@ export class NoticeApp extends LitElement {
     } catch (error) {
       console.error(error);
       this.failed = true;
-      if (this.notices.length) this.showToast('목록을 새로 받지 못했어요. 잠시 뒤 다시 시도해 주세요');
+      if (this.notices.length) this.showToast('새 목록을 받지 못했어요. 잠시 뒤 새로고침해 주세요');
     } finally {
       this.loading = false;
     }
@@ -272,7 +272,7 @@ export class NoticeApp extends LitElement {
               .map((b) => this.sideItem(b.label, null, this.board === b.id, () => this.setBoard(b.id)))}
           </div>
           <div class="side-foot">
-            ${this.install ? html`<button type="button" class="side-item" @click=${this.runInstall}>앱으로 설치</button>` : nothing}
+            ${this.install ? html`<button type="button" class="side-item" @click=${this.runInstall}>앱으로 설치하기</button>` : nothing}
             ${this.sideItem('설정', null, settings, () => this.setView('settings'))}
           </div>
         </aside>
@@ -284,7 +284,7 @@ export class NoticeApp extends LitElement {
               <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>` : nothing}
             <div class="topbar-text">
               <h1>${title}</h1>
-              ${settings ? html`<p class="updated">키와 알림, 관심 키워드</p>` : this.updatedLine(list.length)}
+              ${settings ? html`<p class="updated">알림과 연결을 정해요</p>` : this.updatedLine(list.length)}
             </div>
             ${settings ? nothing : html`
               <label class="search wide-only">${icon('search')}
@@ -315,7 +315,7 @@ export class NoticeApp extends LitElement {
         <aside class="detail-pane" aria-label="공지 상세">
           <div class="pane-head detail-head">
             ${selected ? html`
-              <button type="button" class="ghost-button" @click=${() => this.copyLink(selected)}>링크 복사</button>
+              <button type="button" class="ghost-button" @click=${() => this.copyLink(selected)}>링크 복사하기</button>
               <a class="solid-button" href=${safeUrl(selected.url)} target="_blank" rel="noopener">원문 열기</a>` : nothing}
           </div>
           ${selected ? this.detail(selected) : nothing}
@@ -325,7 +325,7 @@ export class NoticeApp extends LitElement {
       ${this.install && !this.installHidden && browserTab.matches && !this.isWide && !settings ? html`
         <div class="install-bar" role="region" aria-label="앱 설치 안내">
           <p>홈 화면에 추가하면 앱처럼 바로 열 수 있어요</p>
-          <button type="button" class="solid-button" @click=${this.runInstall}>설치</button>
+          <button type="button" class="solid-button" @click=${this.runInstall}>설치하기</button>
           <button type="button" class="icon-button" aria-label="안내 닫기" @click=${this.hideInstall}>
             <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
         </div>` : nothing}
@@ -345,14 +345,14 @@ export class NoticeApp extends LitElement {
 
   private updatedLine(count?: number) {
     if (this.loading && !this.generatedAt) return html`<p class="updated">불러오는 중</p>`;
-    if (!this.generatedAt) return html`<p class="updated">업데이트 정보 없음</p>`;
+    if (!this.generatedAt) return html`<p class="updated">받은 시각을 알 수 없어요</p>`;
     const stale = Date.now() - Date.parse(this.generatedAt) > STALE_MS;
     const time = new Intl.DateTimeFormat('ko-KR', {
       timeZone: 'Asia/Seoul', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false,
     }).format(new Date(this.generatedAt));
-    const total = count === undefined ? '' : `, ${count}건`;
+    const total = count === undefined ? '' : `${count}건, `;
     // "확인 필요"(판정)와 겹치지 않게 수집 지연은 다른 말로 쓴다.
-    return html`<p class="updated ${stale ? 'stale' : ''}">${stale ? `${time} 이후 새 글을 못 가져왔어요${total}` : `${time} 기준${total}`}</p>`;
+    return html`<p class="updated ${stale ? 'stale' : ''}">${total}${stale ? `${time} 뒤로 새 글을 못 받았어요` : `${time} 기준`}</p>`;
   }
 
   private listBody(list: Notice[]): TemplateResult | TemplateResult[] {
@@ -361,10 +361,10 @@ export class NoticeApp extends LitElement {
         <li class="row skeleton" aria-hidden="true"><span></span><span></span><span></span></li>`)}</ol>`;
     }
     if (this.failed && !this.notices.length) {
-      return this.empty('목록을 불러오지 못했어요', '인터넷 연결을 확인하고 다시 시도해 주세요', '다시 시도', () => this.refresh());
+      return this.empty('목록을 불러오지 못했어요', '인터넷 연결을 확인하고 다시 시도해 주세요', '다시 불러오기', () => this.refresh());
     }
     if (!list.length) {
-      if (this.query) return this.empty(`'${this.query}'에 맞는 공지가 없어요`, '다른 단어로 찾아보세요', '검색어 지우기', () => { this.query = ''; });
+      if (this.query) return this.empty(`'${this.query}'에 맞는 공지가 없어요`, '다른 단어로 찾아보세요', '검색어 삭제', () => { this.query = ''; });
       if (this.keyword) return this.empty(`'${this.keyword}'에 맞는 공지가 아직 없어요`, '새 글이 오면 여기에 모여요');
       const empty = {
         mine: ['지금 챙길 공지가 없어요', '기준이나 관심 키워드에 맞는 새 글이 오면 여기 쌓여요'],
@@ -407,7 +407,7 @@ export class NoticeApp extends LitElement {
     }
     if (ai) return html`<span class="reason ${ai.verdict}"><b>${VERDICT_LABEL[ai.verdict]}</b>${ai.reason}</span>`;
     const rule = this.judgement(notice)?.rule_name;
-    return rule ? html`<span class="reason rule"><b>기준</b>${rule}에 맞아요</span>` : nothing;
+    return rule ? html`<span class="reason rule"><b>기준</b>${rule}</span>` : nothing;
   }
 
   private dday(notice: Notice, today: string) {

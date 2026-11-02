@@ -108,7 +108,7 @@ export function deadlineGroup(iso: string, today: string): string {
   if (days <= 0) return '오늘 마감';
   if (days <= 3) return '3일 안';
   if (days <= 7) return '일주일 안';
-  return '그 뒤';
+  return '일주일 뒤';
 }
 
 export function deadlineText(iso: string, today: string): string {

@@ -64,7 +64,7 @@ export const boardName = (source: Source | undefined, fallback: string) => (sour
 
 // 학교 제목 속 이모지(✅, ✨)는 표시할 때만 지운다(DESIGN 8절). 원문은 그대로다.
 export const cleanTitle = (title: string) =>
-  title.replace(/\p{Extended_Pictographic}️?/gu, '').replace(/\s+/g, ' ').trim();
+  title.replace(/\p{Extended_Pictographic}\uFE0F?/gu, '').replace(/\(\s+~/g, '(~').replace(/\s+/g, ' ').trim();
 
 // 관심 키워드 글자 매칭. 서버(src/skku_notice/interests.py)와 같은 규칙: 띄어쓰기로 나눈 낱말이 모두 들어 있으면 맞음,
 // 띄어쓰기 무시, 비슷한 말 포함(docs/design/ux-rules.md 2-1절).

@@ -82,7 +82,7 @@ API 응답 형식(JSON 필드 이름)은 한 번 정하면 바꾸지 않는다. 
 | `.claude/rules/docs-logging.md` | daily-log, plans, DECISIONS, HANDOFF를 쓸 때 |
 | `.claude/rules/crawling.md` | `fetch`, `parse`, `config/sources.yaml`, 워크플로 주기를 다룰 때 |
 | `.claude/rules/python-style.md` | `src/`, `tests/`를 고칠 때 |
-| `docs/DESIGN.md`, `docs/design/*.md` | `web/`(화면), 아이콘, 알림 문구를 고칠 때 |
+| `docs/DESIGN.md`, `docs/design/*.md` | `web/`(화면), 아이콘, 알림 문구를 고칠 때. 고친 뒤 `docs/design/review-log.md` 절차로 캡처하고 평가받는다 |
 
 ## 7. 도구
 

@@ -3,7 +3,8 @@
 // GitHub 토큰은 이 모듈 밖으로 나가지 않고, 화면을 닫으면 잊는다.
 
 const API = 'https://api.github.com';
-export const REPO_PATTERN = /^[\w.-]+\/[\w.-]+$/;
+// 아이디/저장소. 점만으로 된 부분(., ..)은 API 경로를 바꿀 수 있어서 막는다.
+export const REPO_PATTERN = /^(?!\.{1,2}\/)[\w.-]+\/(?!\.{1,2}$)[\w.-]+$/;
 
 export class GitHubError extends Error {}
 
@@ -11,11 +12,13 @@ function headers(token: string): HeadersInit {
   return { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
 }
 
-async function call(path: string, token: string, init: RequestInit = {}): Promise<Response> {
+// allowConflict: 변수 만들기에서만 409(이미 있음)를 정상으로 보고 수정으로 넘어간다. Secret 저장의 409는 실패다.
+async function call(path: string, token: string, init: RequestInit = {}, allowConflict = false): Promise<Response> {
   const response = await fetch(`${API}${path}`, { ...init, headers: { ...headers(token), ...(init.headers ?? {}) } });
   if (response.status === 401) throw new GitHubError('GitHub 토큰이 맞지 않아요');
   if (response.status === 403 || response.status === 404) throw new GitHubError('저장소를 찾을 수 없거나 권한이 없어요');
-  if (!response.ok && response.status !== 409) throw new GitHubError(`GitHub 오류 (${response.status})`);
+  if (response.status === 409 && allowConflict) return response;
+  if (!response.ok) throw new GitHubError(`GitHub 오류 (${response.status})`);
   return response;
 }
 
@@ -40,7 +43,7 @@ export async function saveSecret(repo: string, token: string, name: string, valu
 
 // 관심 키워드는 비밀이 아니라서 Actions 변수(INTEREST_KEYWORDS)로 둔다.
 export async function saveVariable(repo: string, token: string, name: string, value: string): Promise<void> {
-  const created = await call(`/repos/${repo}/actions/variables`, token, { method: 'POST', body: JSON.stringify({ name, value }) });
+  const created = await call(`/repos/${repo}/actions/variables`, token, { method: 'POST', body: JSON.stringify({ name, value }) }, true);
   if (created.status === 409) {
     await call(`/repos/${repo}/actions/variables/${name}`, token, { method: 'PATCH', body: JSON.stringify({ name, value }) });
   }

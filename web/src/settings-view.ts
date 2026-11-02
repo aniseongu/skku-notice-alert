@@ -78,7 +78,8 @@ export class SettingsView extends LitElement {
 
   keywords: string[] = [];
   theme: Theme = 'auto';
-  topic = remember('ntfy-topic') ?? '';
+  // 토픽은 아는 사람 누구나 구독할 수 있는 비밀이라 브라우저에 남기지 않는다(메모리에만, 화면을 닫으면 잊는다).
+  topic = '';
   repo = remember('github-repo') ?? '';
   token = '';
   values: Record<string, string> = {};
@@ -95,10 +96,7 @@ export class SettingsView extends LitElement {
   private setStatus(key: string, ok: boolean, text: string) { this.status = { ...this.status, [key]: { ok, text } }; }
   private connected() { return REPO_PATTERN.test(this.repo) && this.token.length > 0; }
 
-  private setTopic(value: string) {
-    this.topic = value.trim();
-    remember('ntfy-topic', this.topic || null);
-  }
+  private setTopic(value: string) { this.topic = value.trim(); }
 
   private async testNotification() {
     if (!/^[\w-]{6,64}$/.test(this.topic)) { this.setStatus('topic', false, '토픽 이름은 영문, 숫자, -, _로 6자 이상이에요'); return; }
@@ -164,16 +162,15 @@ export class SettingsView extends LitElement {
     this.keywordDraft = '';
   }
 
+  // 키 값은 클립보드에 넣지 않는다(클립보드 기록에 남는다). 이름만 있는 양식을 복사하고 값은 사용자가 직접 붙여 넣는다.
   private envText() {
-    const lines = [`NOTIFY_URLS=${this.topic ? `ntfys://${this.topic}` : ''}`];
-    for (const field of KEY_FIELDS.filter((f) => !f.multiline)) lines.push(`${field.secret}=${this.values[field.secret]?.trim() ?? ''}`);
-    return lines.join('\n');
+    return ['NOTIFY_URLS=ntfys://', ...KEY_FIELDS.filter((f) => !f.multiline).map((f) => `${f.secret}=`)].join('\n');
   }
 
   private async copyEnv() {
     try {
       await navigator.clipboard.writeText(this.envText());
-      this.setStatus('env', true, '복사했어요. 프로젝트 폴더의 .env 파일에 붙여 넣어요');
+      this.setStatus('env', true, '양식을 복사했어요. .env 파일에 붙여 넣고 = 뒤에 값을 하나씩 넣어요');
     } catch {
       this.setStatus('env', false, '복사하지 못했어요');
     }
@@ -195,12 +192,42 @@ export class SettingsView extends LitElement {
   render() {
     return html`
       <div class="settings">
+        <section aria-labelledby="s-github">
+          <h2 id="s-github" class="settings-head">저장소 연결</h2>
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">GitHub 연결</p>
+              <p class="setting-help">알림을 15분마다 돌리는 저장소예요. 아래 키들은 여기로 암호화해 보내고 이 브라우저에는 저장하지 않아요. 토큰도 화면을 닫으면 잊어요</p>
+            </div>
+            <div class="setting-control">
+              <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="저장소" placeholder="아이디/저장소 이름"
+                .value=${this.repo} @input=${(e: Event) => { this.repo = (e.target as HTMLInputElement).value.trim(); }}>
+              <div class="inline">
+                <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="GitHub 토큰" placeholder="github_pat_로 시작하는 토큰"
+                  .value=${this.token} @input=${(e: Event) => { this.token = (e.target as HTMLInputElement).value.trim(); }}>
+                <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${this.connect}>
+                  ${this.busy === 'github' ? '연결 중' : '연결'}</button>
+              </div>
+              ${this.note('github')}
+              ${this.guide('github', [
+                html`${link('https://github.com/settings/personal-access-tokens/new', 'GitHub 새 토큰 화면')}을 열어요(Fine-grained token)`,
+                '"Repository access"에서 "Only select repositories"를 고르고 이 저장소 하나만 골라요',
+                '"Permissions"에서 Secrets와 Variables를 "Read and write"로 바꿔요. 다른 권한은 주지 않아요',
+                '만료일을 정하고 만든 토큰을 복사해 위 칸에 넣어요',
+                '저장소가 아직 없으면 아래 ".env 양식 복사"로 컴퓨터에서 먼저 써요',
+              ])}
+            </div>
+          </div>
+
+        </section>
+
         <section aria-labelledby="s-notify">
           <h2 id="s-notify" class="settings-head">알림 받을 곳</h2>
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">ntfy 토픽</p>
-              <p class="setting-help">휴대폰과 PC가 같은 이름을 구독하면 알림이 와요. 이름을 아는 사람은 누구나 받을 수 있어서 비밀번호처럼 다뤄요</p>
+              <p class="setting-help">휴대폰과 PC가 같은 이름을 구독하면 알림이 와요. 이름을 아는 사람은 누구나 받을 수 있어서 비밀번호처럼 다뤄요.
+                이 화면을 닫으면 지워지니 휴대폰 앱과 GitHub에 먼저 넣어 두세요</p>
             </div>
             <div class="setting-control">
               <div class="inline">
@@ -235,32 +262,6 @@ export class SettingsView extends LitElement {
 
         <section aria-labelledby="s-keys">
           <h2 id="s-keys" class="settings-head">연결 키</h2>
-          <p class="settings-lead">키는 이 화면에서 GitHub 저장소의 Secrets로 바로 암호화해 보내요. 이 브라우저에는 저장하지 않아요.</p>
-          <div class="setting">
-            <div class="setting-text">
-              <p class="setting-name">GitHub 연결</p>
-              <p class="setting-help">알림을 15분마다 돌리는 저장소예요. 토큰은 이 화면을 닫으면 잊어요</p>
-            </div>
-            <div class="setting-control">
-              <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="저장소" placeholder="아이디/저장소 이름"
-                .value=${this.repo} @input=${(e: Event) => { this.repo = (e.target as HTMLInputElement).value.trim(); }}>
-              <div class="inline">
-                <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="GitHub 토큰" placeholder="github_pat_로 시작하는 토큰"
-                  .value=${this.token} @input=${(e: Event) => { this.token = (e.target as HTMLInputElement).value.trim(); }}>
-                <button type="button" class="solid-button" ?disabled=${this.busy === 'github'} @click=${this.connect}>
-                  ${this.busy === 'github' ? '연결 중' : '연결'}</button>
-              </div>
-              ${this.note('github')}
-              ${this.guide('github', [
-                html`${link('https://github.com/settings/personal-access-tokens/new', 'GitHub 새 토큰 화면')}을 열어요(Fine-grained token)`,
-                '"Repository access"에서 "Only select repositories"를 고르고 이 저장소 하나만 골라요',
-                '"Permissions"에서 Secrets와 Variables를 "Read and write"로 바꿔요. 다른 권한은 주지 않아요',
-                '만료일을 정하고 만든 토큰을 복사해 위 칸에 넣어요',
-                '저장소가 아직 없으면 아래 ".env 내용 복사"로 컴퓨터에서 먼저 써요',
-              ])}
-            </div>
-          </div>
-
           ${KEY_FIELDS.map((field) => this.keyRow(field))}
 
           <div class="setting">
@@ -269,7 +270,7 @@ export class SettingsView extends LitElement {
               <p class="setting-help">저장소를 만들기 전에는 프로젝트 폴더의 .env 파일에 키를 적어요</p>
             </div>
             <div class="setting-control">
-              <button type="button" class="ghost-button" @click=${this.copyEnv}>.env 내용 복사</button>
+              <button type="button" class="ghost-button" @click=${this.copyEnv}>.env 양식 복사</button>
               ${this.note('env')}
             </div>
           </div>

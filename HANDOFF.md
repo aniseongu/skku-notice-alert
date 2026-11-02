@@ -17,7 +17,7 @@
 - [ ] D-001, D-002 제안 확인 (GitHub Actions + Apprise + ntfy)
 - [ ] 휴대폰과 PC에 ntfy 앱 설치, 추측하기 어려운 토픽 이름 정하기 (저장소에 적지 않는다)
 - [ ] `config/rules.example.yaml`을 `config/rules.yaml`로 복사하고 내 기준으로 고치기
-- [ ] (M3 전) GitHub 저장소 만들지, 공개/비공개 결정 (비공개면 Actions 무료 시간 확인, D-001)
+- [ ] (M3 전) GitHub 저장소 공개 여부와 API 공개 범위 결정: D-007의 가, 나, 다 중 하나 (비공개면 Actions 무료 시간도 확인, D-001)
 
 ## 알아 둘 것
 

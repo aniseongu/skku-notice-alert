@@ -4,6 +4,8 @@
 웨일 확장(icampus-check-icon/gen.py)처럼 원본 선은 여기에만 두고, 결과 파일은 손으로 고치지 않는다.
 """
 
+# ruff: noqa: E501 - SVG 경로와 생성 마크업 문자열은 줄바꿈하기 어렵다.
+
 import re
 from pathlib import Path
 

@@ -69,24 +69,29 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
     gap = max(1.0, float(settings.get("request_gap_seconds", 1)))
     for source, notices in boards:
         count = 0
-        for notice in notices:
+        new = [notice for notice in notices if notice.article_no not in state.sources[source["id"]].seen]
+        for notice in new:
             key = f"{source['id']}/{notice.article_no}"
-            seen = state.sources[source["id"]].seen.get(notice.article_no)
-            if seen is not None and seen.status == "baseline":
-                continue
-            item = archive.items.get(key)
-            if seen is not None and (item is None or not item.get("body_pending")):
-                continue
-            if item is None:
+            if key not in archive.items:
                 archive = add_notice(archive, notice, now.isoformat())
-                item = archive.items[key]
-            if seen is None:
-                item["body_pending"] = True
+        recent = sorted(
+            (item["notice"] for item in archive.items.values()
+             if item["notice"]["source_id"] == source["id"]),
+            key=lambda notice: (notice["posted_on"], notice["first_seen"], notice["article_no"]),
+            reverse=True,
+        )
+        new_ids = {f"{source['id']}/{notice.article_no}" for notice in new}
+        candidates = [(f"{source['id']}/{notice.article_no}", notice.url, notice.article_no)
+                      for notice in new]
+        candidates += [(notice["id"], notice["url"], notice["article_no"]) for notice in recent
+                       if notice["id"] not in new_ids]
+        for key, url, article_no in candidates:
+            item = archive.items[key]
             if item.get("body_text") is not None or item.get("body_attempts", 0) >= 3:
                 continue
-            if count >= 5:
+            if count == 5:
                 break
-            html = _view_fixture(source["id"], notice.article_no) if from_fixtures else None
+            html = _view_fixture(source["id"], article_no) if from_fixtures else None
             if from_fixtures and html is None:
                 continue
             if not from_fixtures:
@@ -94,16 +99,16 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
             count += 1
             try:
                 if html is None:
-                    html = fetch_detail(notice.url, settings["user_agent"],
+                    html = fetch_detail(url, settings["user_agent"],
                                         float(settings["timeout_seconds"]))
-                detail = parse_detail(html, notice.url)
+                detail = parse_detail(html, url)
             except (FetchError, ParseError) as exc:
                 if not isinstance(exc, UnsafeURL):
                     print(f"{key}: 본문 읽기 실패: {exc}", file=sys.stderr)
                 archive = update_detail(archive, key, None, (), None)
             else:
                 archive = update_detail(archive, key, detail.body_text, detail.attachments,
-                                        now.isoformat(), detail.images)
+                                        now.isoformat(), detail.images, detail.body_html)
             save_archive(ARCHIVE_PATH, archive)
     return archive
 

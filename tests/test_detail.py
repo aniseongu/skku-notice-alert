@@ -30,6 +30,10 @@ def test_detail_fixtures() -> None:
     assert len(detail.attachments) == 2
     assert detail.images == ("https://www.skku.edu/_attach/image/2026/11/kZLqHbhAfbssKRHGyaXE.png",)
     assert detail.attachments[0][1].startswith("https://www.skku.edu/")
+    assert detail.attachments[0][2:] == ("DOCX", None)
+    assert detail.attachments[1][2:] == ("HWP", None)
+    assert 'href="https://forms.gle/e6TodAVp4vqhJpGg8"' in detail.body_html
+    assert "<ul>" in detail.body_html and "<li>" in detail.body_html
     assert "\n\n\n" not in detail.body_text
     cse = (FIXTURES / "cse_notice_view_227923_2026-11-02.html").read_text()
     cse_detail = parse_detail(cse, "https://cse.skku.edu/cse/notice.do")
@@ -50,6 +54,24 @@ def test_detail_images_are_filtered_deduplicated_and_limited() -> None:
     images = parse_detail(html, "https://cse.skku.edu/cse/notice.do").images
     assert len(images) == 10
     assert images == tuple(f"https://cse.skku.edu/uploads/{number}.png" for number in range(10))
+
+
+def test_detail_html_sanitization_and_attachment_type() -> None:
+    html = ("<dl class='board-write-box'><dd><p style='color:red' id='x' onclick='bad()'>안내"
+            "<script>alert(1)</script><a href='javascript:bad()'>위험</a>"
+            "<a href='/apply' class='x'>신청</a></p><p> </p>"
+            "<table><tr><td colspan='2' onmouseover='bad()'>표</td></tr></table>"
+            "<img src='/_res/cse/img/common/icon.png'><img src='/poster.png'></dd></dl>"
+            "<ul class='filedown_list'><li><a href='?mode=download&attachNo=1'>양식.HwPx</a> 123KB</li></ul>")
+    detail = parse_detail(html, "https://cse.skku.edu/cse/notice.do")
+    assert "alert" not in detail.body_html
+    assert "javascript:" not in detail.body_html
+    assert all(word not in detail.body_html for word in ("style=", "class=", "id=", "onclick", "onmouseover"))
+    assert '<a href="https://cse.skku.edu/apply">신청</a>' in detail.body_html
+    assert '<table><tbody><tr><td colspan="2">표</td></tr></tbody></table>' in detail.body_html
+    assert "<p> </p>" not in detail.body_html
+    assert "icon.png" not in detail.body_html
+    assert detail.attachments[0][2:] == ("HWPX", "123KB")
 
 
 def test_detail_limit_retry_and_baseline(tmp_path: Path, monkeypatch) -> None:
@@ -79,7 +101,34 @@ def test_detail_limit_retry_and_baseline(tmp_path: Path, monkeypatch) -> None:
     assert archive.items["cse-notice/5"]["body_attempts"] == 3
     assert archive.items["cse-notice/6"]["body_attempts"] == 0
     archive = cli._fill_details(archive, state, boards, settings, False, now)
-    assert len(calls) == 19
+    assert len(calls) == 20
+    assert calls[-1].endswith("articleNo=0")
+
+
+def test_detail_backfill_new_first_then_recent_baseline(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
+    monkeypatch.setattr(cli.time, "sleep", lambda _: None)
+    archive = Archive()
+    for number in range(1, 8):
+        notice = make_notice(number)
+        archive = add_notice(archive, notice, "2026-11-02T00:00:00+09:00")
+        archive.items[f"cse-notice/{number}"]["notice"]["posted_on"] = f"2026-11-{number:02d}"
+    state = SimpleNamespace(sources={"cse-notice": SimpleNamespace(
+        seen={str(number): SimpleNamespace(status="baseline") for number in range(1, 6)})})
+    calls = []
+
+    def fetch(url, user_agent, timeout):
+        calls.append(url.rsplit("=", 1)[-1])
+        return "<dl class='board-write-box'><dd><p>본문</p></dd></dl>"
+
+    monkeypatch.setattr(cli, "fetch_detail", fetch)
+    now = datetime(2026, 11, 2, tzinfo=ZoneInfo("Asia/Seoul"))
+    boards = [({"id": "cse-notice"}, [make_notice(6), make_notice(7)])]
+    settings = {"user_agent": "test", "timeout_seconds": 10}
+    archive = cli._fill_details(archive, state, boards, settings, False, now)
+    assert calls == ["6", "7", "5", "4", "3"]
+    cli._fill_details(archive, state, boards, settings, False, now)
+    assert calls == ["6", "7", "5", "4", "3", "2", "1"]
 
 
 def test_fixture_detail_is_fetched_once(tmp_path: Path, monkeypatch) -> None:
@@ -101,13 +150,17 @@ def test_detail_export_and_gemini_schema(tmp_path: Path) -> None:
     notice = make_notice(123)
     archive = add_notice(Archive(), notice, "2026-11-02T00:00:00+09:00")
     item = archive.items["cse-notice/123"]
-    item.update(body_text="본문", attachments=[{"name": "파일", "url": "https://example.com/a"}],
+    item.update(body_text="본문", body_html="<p>본문</p>",
+                attachments=[{"name": "파일.pdf", "url": "https://example.com/a", "type": "PDF",
+                              "size": "123KB", "text": "과거 변환 결과", "attempted": True}],
                 images=["https://example.com/image.png"],
                 summary="지원자는 신청해요.", fetched_at="2026-11-02T01:00:00+09:00")
     export_site(tmp_path, archive, [], datetime.now(ZoneInfo("Asia/Seoul")), web_path=tmp_path / "missing")
     output = json.loads((tmp_path / "api/v1/notices/cse-notice/123.json").read_text())
     assert output == {"version": 1, "id": "cse-notice/123", "summary": "지원자는 신청해요.",
-                      "body": "본문", "attachments": [{"name": "파일", "url": "https://example.com/a"}],
+                      "body": "본문", "body_html": "<p>본문</p>",
+                      "attachments": [{"name": "파일.pdf", "url": "https://example.com/a", "type": "PDF",
+                                       "size": "123KB"}],
                       "images": ["https://example.com/image.png"], "body_from_image": False,
                       "ocr_engine": None,
                       "fetched_at": "2026-11-02T01:00:00+09:00"}

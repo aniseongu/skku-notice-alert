@@ -179,7 +179,8 @@ def test_ocr_runs_without_gemini_key(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setattr(cli, "fetch_list", lambda *args: "fixture")
     monkeypatch.setattr(cli, "fetch_detail", lambda *args: "detail")
     monkeypatch.setattr(cli, "parse_detail", lambda *args: SimpleNamespace(
-        body_text="", attachments=(), images=("https://example.com/image.png",)
+        body_text="", body_html="<img src=\"https://example.com/image.png\">",
+        attachments=(), images=("https://example.com/image.png",)
     ))
     monkeypatch.setattr(cli.time, "sleep", lambda seconds: None)
     current = [notice(1)]

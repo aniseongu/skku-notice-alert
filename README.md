@@ -7,6 +7,14 @@
 - 구조: Python, httpx, selectolax, Apprise, ntfy, GitHub Actions, GitHub Pages. 결정 이유는 [docs/DECISIONS.md](docs/DECISIONS.md).
 - 참고한 프로젝트: [docs/research/open-source.md](docs/research/open-source.md).
 
+## 사이트 열기
+
+휴대폰과 PC에서는 [성대 공지](https://aniseongu.github.io/skku-notice-alert/)를 연다. PC를 켜 두거나 로컬 서버를 실행할 필요가 없다. 브라우저에서 앱으로 설치하면 아이콘으로 열 수 있다.
+
+`Publish website`가 화면을 GitHub Pages에 배포한다. `main`에 `web/` 변경을 push하면 자동 실행되며, Actions에서 수동으로 실행할 수도 있다. 알림 키 없이도 배포할 수 있다. 공개 archive가 있으면 그 판정과 본문을 사용하고, 첫 배포에는 공개 게시판 목록을 읽어 표시한다. 공지 자동 수집과 알림은 아래 `Notice and Pages` 설정을 마친 뒤 켠다.
+
+`localhost` 주소는 화면을 개발할 때만 쓴다.
+
 ## 쓰는 법 (M2 이후)
 
 1. 휴대폰과 PC에 ntfy 앱을 설치하고 추측하기 어려운 토픽을 구독한다.

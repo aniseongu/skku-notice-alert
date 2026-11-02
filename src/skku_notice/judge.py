@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from google import genai
 from google.genai import types
 
+from skku_notice.fetch import ImageData
 from skku_notice.model import Notice
 
 VERDICTS = {"relevant", "maybe", "not_relevant"}
@@ -21,9 +22,10 @@ SCHEMA = {
                     "verdict": {"type": "STRING", "enum": ["relevant", "maybe", "not_relevant"]},
                     "reason": {"type": "STRING"},
                     "summary": {"type": "STRING"},
+                    "image_text": {"type": "STRING"},
                     "interests": {"type": "ARRAY", "items": {"type": "STRING"}},
                 },
-                "required": ["id", "verdict", "reason", "summary", "interests"],
+                "required": ["id", "verdict", "reason", "summary", "interests", "image_text"],
             },
         }
     },
@@ -38,6 +40,7 @@ class Judgment:
     model: str
     interests: tuple[str, ...] = ()
     summary: str | None = None
+    image_text: str = ""
 
 
 def decide_priority(
@@ -62,6 +65,7 @@ def judge_notices(
     client: object | None = None,
     interests: tuple[str, ...] = (),
     bodies: dict[str, str] | None = None,
+    images: dict[str, list[ImageData]] | None = None,
 ) -> dict[str, Judgment]:
     if not notices:
         return {}
@@ -90,12 +94,26 @@ def judge_notices(
         "본문이 빈 글은 제목만으로 판정하고 모르는 자격은 단정하지 마세요.\n"
         + json.dumps({"profile": profile, "interests": interests, "articles": articles}, ensure_ascii=False)
     )
+    contents: str | list[types.Part] = prompt
+    if images:
+        image_instruction = (
+            "\n그림을 포함한 글은 그림 내용도 판정, 이유, 요약에 반영하세요. "
+            "각 글의 image_text에는 그림 속 글자를 읽기 순서대로 옮겨 적고, "
+            "글자가 없으면 빈 문자열을 쓰세요."
+        )
+        parts = [types.Part.from_text(text=prompt + image_instruction)]
+        for notice in notices:
+            notice_id = f"{notice.source_id}/{notice.article_no}"
+            for number, image in enumerate(images.get(notice_id, []), 1):
+                parts.append(types.Part.from_text(text=f"글 id={notice_id}, 그림 {number}"))
+                parts.append(types.Part.from_bytes(data=image.data, mime_type=image.mime_type))
+        contents = parts
     allowed = {f"{notice.source_id}/{notice.article_no}" for notice in notices}
     for attempt in range(2):
         try:
             response = client.models.generate_content(
                 model=model,
-                contents=prompt,
+                contents=contents,
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json", response_schema=SCHEMA
                 ),
@@ -115,6 +133,7 @@ def judge_notices(
                     result[item["id"]] = Judgment(
                         item["verdict"], item["reason"], model, chosen,
                         item.get("summary") if isinstance(item.get("summary"), str) else None,
+                        item.get("image_text") if isinstance(item.get("image_text"), str) else "",
                     )
             return result
         except Exception:

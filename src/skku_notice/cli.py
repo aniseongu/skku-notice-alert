@@ -10,7 +10,15 @@ from pathlib import Path
 import yaml
 from dotenv import load_dotenv
 
-from skku_notice.archive import Archive, add_notice, load_archive, save_archive, update_detail
+from skku_notice.archive import (
+    Archive,
+    add_notice,
+    load_archive,
+    mark_image_attempted,
+    save_archive,
+    update_detail,
+    update_image_text,
+)
 from skku_notice.canvas import CanvasError, read_canvas
 from skku_notice.canvas_alerts import (
     load_canvas_state,
@@ -21,7 +29,7 @@ from skku_notice.canvas_alerts import (
 )
 from skku_notice.deadline import KST
 from skku_notice.export import export_site
-from skku_notice.fetch import FetchError, fetch_detail, fetch_list
+from skku_notice.fetch import FetchError, fetch_detail, fetch_images, fetch_list
 from skku_notice.interests import load_interests, match_interests
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match
@@ -108,6 +116,39 @@ def _profile() -> dict:
     return parsed
 
 
+def _images_for_judgment(
+    archive: Archive, notices: list, now: datetime, user_agent: str,
+) -> tuple[Archive, dict]:
+    images = {}
+    remaining = 10
+    for notice in notices:
+        key = f"{notice.source_id}/{notice.article_no}"
+        item = archive.items.get(key)
+        if not item or item.get("image_attempted") or item.get("fetched_at") != now.isoformat():
+            continue
+        if len((item.get("body_text") or "").strip()) >= 50 or not item.get("images"):
+            continue
+        if remaining == 0:
+            break
+        urls = item["images"][:min(3, remaining)]
+        archive = mark_image_attempted(archive, key)
+        save_archive(ARCHIVE_PATH, archive)
+        if remaining < 10:
+            time.sleep(1)
+        fetched = fetch_images(urls, user_agent, remaining)
+        if fetched:
+            images[key] = fetched
+        remaining -= len(urls)
+    return archive, images
+
+
+def _apply_image_texts(archive: Archive, judgments: dict, images: dict) -> Archive:
+    for notice_id, judgment in judgments.items():
+        if notice_id in images and judgment.image_text.strip():
+            archive = update_image_text(archive, notice_id, judgment.image_text.strip())
+    return archive
+
+
 def run(args: argparse.Namespace) -> int:
     if args.all and not args.dry_run:
         print("--all requires --dry-run", file=sys.stderr)
@@ -179,6 +220,7 @@ def run(args: argparse.Namespace) -> int:
                 ):
                     candidates.append(notice)
     judgments = {}
+    image_parts = {}
     if candidates and ai.get("enabled") and not getattr(args, "no_ai", False):
         key = os.environ.get("GEMINI_API_KEY")
         if not key:
@@ -187,6 +229,10 @@ def run(args: argparse.Namespace) -> int:
             print("프로필 없음: 규칙만 적용")
         else:
             selected = candidates[: max(0, int(ai.get("max_per_run", 30)))]
+            if profile and not args.dry_run and not args.from_fixtures:
+                archive, image_parts = _images_for_judgment(
+                    archive, selected, now, settings["user_agent"]
+                )
             judgments = judge_notices(
                 selected,
                 {source["id"]: source["name"] for source in settings["sources"]},
@@ -195,7 +241,11 @@ def run(args: argparse.Namespace) -> int:
                 key,
                 interests=interests,
                 bodies={key: item.get("body_text") or "" for key, item in archive.items.items()},
+                images=image_parts,
             )
+            archive = _apply_image_texts(archive, judgments, image_parts)
+            if image_parts:
+                save_archive(ARCHIVE_PATH, archive)
     for source, notices in boards:
         if args.dry_run and source["id"] not in state.sources:
             print(f"{source['id']}: state 없음: 실제 첫 실행이면 알림 없이 기준선만 저장")

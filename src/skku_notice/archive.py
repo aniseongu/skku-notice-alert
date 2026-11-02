@@ -69,6 +69,8 @@ def add_notice(
     items = {**archive.items, key: {
         "notice": public, "match": personal,
         "body_text": old.get("body_text"),
+        "body_from_image": old.get("body_from_image", False),
+        "image_attempted": old.get("image_attempted", False),
         "attachments": old.get("attachments", []),
         "images": old.get("images", []),
         "summary": judgment.summary if judgment and judgment.summary else old.get("summary"),
@@ -94,6 +96,16 @@ def update_detail(
     ], "images": list(images), "fetched_at": fetched_at,
         "body_attempts": item.get("body_attempts", 0) + 1}
     return Archive({**archive.items, key: updated})
+
+
+def mark_image_attempted(archive: Archive, key: str) -> Archive:
+    return Archive({**archive.items, key: {**archive.items[key], "image_attempted": True}})
+
+
+def update_image_text(archive: Archive, key: str, text: str) -> Archive:
+    return Archive({**archive.items, key: {
+        **archive.items[key], "body_text": text, "body_from_image": True,
+    }})
 
 
 def save_archive(path: Path, archive: Archive) -> None:

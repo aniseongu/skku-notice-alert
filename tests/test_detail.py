@@ -108,7 +108,7 @@ def test_detail_export_and_gemini_schema(tmp_path: Path) -> None:
     output = json.loads((tmp_path / "api/v1/notices/cse-notice/123.json").read_text())
     assert output == {"version": 1, "id": "cse-notice/123", "summary": "지원자는 신청해요.",
                       "body": "본문", "attachments": [{"name": "파일", "url": "https://example.com/a"}],
-                      "images": ["https://example.com/image.png"],
+                      "images": ["https://example.com/image.png"], "body_from_image": False,
                       "fetched_at": "2026-11-02T01:00:00+09:00"}
     assert "summary" in SCHEMA["properties"]["items"]["items"]["required"]
 

@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "generated_at": "2026-11-02T19:00:00+09:00",
+  "items": {
+    "skku-notice01/141136": {
+      "rule_name": null,
+      "priority": "default",
+      "reasons": [],
+      "ai": {
+        "verdict": "relevant",
+        "reason": "재학생 대상 단기 근무, 학과 무관 지원 가능",
+        "model": "sample"
+      },
+      "notified": true
+    },
+    "skku-notice01/140601": {
+      "rule_name": "장학",
+      "priority": "high",
+      "reasons": [
+        "category:장학"
+      ],
+      "ai": null,
+      "notified": true
+    },
+    "skku-notice01/141425": {
+      "rule_name": "대회와 프로그램",
+      "priority": "default",
+      "reasons": [
+        "title_any:공모전"
+      ],
+      "ai": {
+        "verdict": "maybe",
+        "reason": "기숙사생 대상 공모전, 거주 여부 확인 필요",
+        "model": "sample"
+      },
+      "notified": true
+    },
+    "skku-notice01/140964": {
+      "rule_name": null,
+      "priority": "default",
+      "reasons": [],
+      "ai": {
+        "verdict": "relevant",
+        "reason": "데이터과학 TA 모집, 소프트웨어학과 학부생 적합",
+        "model": "sample"
+      },
+      "notified": true
+    },
+    "skku-notice01/141483": {
+      "rule_name": null,
+      "priority": "low",
+      "reasons": [],
+      "ai": {
+        "verdict": "maybe",
+        "reason": "행사 아르바이트, 해당 날짜 일정 확인 필요",
+        "model": "sample"
+      },
+      "notified": true
+    },
+    "cse-notice/227923": {
+      "rule_name": "학과 공지는 모두 (조용히)",
+      "priority": "low",
+      "reasons": [
+        "source:cse-notice"
+      ],
+      "ai": null,
+      "notified": true
+    },
+    "cse-notice/227634": {
+      "rule_name": "장학",
+      "priority": "high",
+      "reasons": [
+        "category:장학"
+      ],
+      "ai": {
+        "verdict": "relevant",
+        "reason": "학과 재학생 대상 장학, 메일 제출 필요",
+        "model": "sample"
+      },
+      "notified": true
+    },
+    "cse-notice/227633": {
+      "rule_name": "장학",
+      "priority": "high",
+      "reasons": [
+        "category:장학"
+      ],
+      "ai": {
+        "verdict": "relevant",
+        "reason": "학과 재학생 대상 장학, 메일 제출 필요",
+        "model": "sample"
+      },
+      "notified": true
+    },
+    "cse-notice/227471": {
+      "rule_name": "인턴과 현장실습",
+      "priority": "default",
+      "reasons": [
+        "category:채용/모집",
+        "title_any:인턴"
+      ],
+      "ai": {
+        "verdict": "maybe",
+        "reason": "졸업예정자 우대 가능성, 재학생 지원 조건 확인 필요",
+        "model": "sample"
+      },
+      "notified": true
+    },
+    "cse-notice/227457": {
+      "rule_name": "학과 공지는 모두 (조용히)",
+      "priority": "low",
+      "reasons": [
+        "source:cse-notice"
+      ],
+      "ai": null,
+      "notified": true
+    },
+    "cse-notice/227380": {
+      "rule_name": "학과 공지는 모두 (조용히)",
+      "priority": "low",
+      "reasons": [
+        "source:cse-notice"
+      ],
+      "ai": null,
+      "notified": true
+    },
+    "cse-notice/227362": {
+      "rule_name": "학과 공지는 모두 (조용히)",
+      "priority": "low",
+      "reasons": [
+        "source:cse-notice"
+      ],
+      "ai": null,
+      "notified": true
+    },
+    "cse-notice/227334": {
+      "rule_name": "인턴과 현장실습",
+      "priority": "default",
+      "reasons": [
+        "category:채용/모집",
+        "title_any:인턴"
+      ],
+      "ai": {
+        "verdict": "relevant",
+        "reason": "겨울방학 인턴, 3학년 재학생 지원 가능",
+        "model": "sample"
+      },
+      "notified": true
+    },
+    "cse-notice/227280": {
+      "rule_name": "학과 공지는 모두 (조용히)",
+      "priority": "low",
+      "reasons": [
+        "source:cse-notice"
+      ],
+      "ai": null,
+      "notified": true
+    },
+    "cse-notice/227278": {
+      "rule_name": "학과 공지는 모두 (조용히)",
+      "priority": "low",
+      "reasons": [
+        "source:cse-notice"
+      ],
+      "ai": {
+        "verdict": "not_relevant",
+        "reason": "졸업생, 졸업예정자 대상 교육과정",
+        "model": "sample"
+      },
+      "notified": true
+    }
+  }
+}

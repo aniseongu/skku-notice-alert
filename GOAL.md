@@ -30,7 +30,7 @@ PC나 WSL이 꺼져 있어도 동작한다.
 - [ ] **M1 로컬 MVP**: `uv run skku-notice --dry-run`이 두 게시판의 새 글 중 기준에 맞는 글을 출력한다. fixture 테스트 통과.
 - [ ] **M2 실제 알림**: ntfy 앱(휴대폰, PC)으로 알림이 오고, 누르면 원문이 열린다. 중복 알림 없음.
 - [ ] **M3 무인 실행과 정적 API**: GitHub Actions가 15분마다 돌고 state를 커밋한다. PC를 끈 채 하루 동안 알림이 정상으로 온다.
-  같은 실행이 `site/api/v1/*.json`, `feed.xml`, `deadlines.ics`를 GitHub Pages로 낸다(D-007 1단계).
+  같은 실행이 `site/api/v1/*.json`(판정과 요약 포함), `feed.xml`, `deadlines.ics`와 PWA를 공개 GitHub Pages로 낸다(D-007 1단계).
 - [ ] **M4 편의 기능**: 마감 리마인드, 하루 요약, 게시판 추가(학과, 단과대), 본문 키워드 매칭, 실패 알림.
 - [ ] **M5 API 서버와 화면(선택)**: skku-notice-api를 가져와 FastAPI로 검색, 필터, 구독 설정 API를 만든다(D-007 2단계).
   이 API를 쓰는 화면을 붙인다: 웨일 확장 팝업, 또는 간단한 웹 페이지(PWA).

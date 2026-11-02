@@ -3,6 +3,7 @@
 .env.*
 !.env.example
 config/profile.yaml
+state/canvas.json
 
 # 파이썬
 __pycache__/

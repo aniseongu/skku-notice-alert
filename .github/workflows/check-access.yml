@@ -1,0 +1,16 @@
+name: Check overseas access
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  check-access:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check public endpoints once each
+        run: |
+          curl --silent --show-error --max-time 20 --output /dev/null --write-out 'skku-notice01: HTTP %{http_code}, %{size_download} bytes\n' 'https://www.skku.edu/skku/campus/skk_comm/notice01.do'
+          curl --silent --show-error --max-time 20 --output /dev/null --write-out 'cse-notice: HTTP %{http_code}, %{size_download} bytes\n' 'https://cse.skku.edu/cse/notice.do'
+          curl --silent --show-error --max-time 20 --output /dev/null --write-out 'canvas: HTTP %{http_code}, %{size_download} bytes\n' 'https://canvas.skku.edu'

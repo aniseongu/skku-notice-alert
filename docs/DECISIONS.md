@@ -54,16 +54,16 @@
 - 가져온 파일 머리에 `# 출처: <URL>` 한 줄만 남긴다. 원본이 고쳐졌을 때 비교하고, 버그를 추적하려는 용도다.
 - 참고: 저장소를 공개로 바꾸게 되면 그때 한 번 출처 주석을 훑어본다(이 결정을 다시 볼 유일한 시점).
 
-## D-007 API: 1단계 정적 JSON(GitHub Pages), 2단계 FastAPI (2026-11-02, 제안)
+## D-007 API: 1단계 정적 JSON(GitHub Pages), 2단계 FastAPI (2026-11-02, 확정)
 
 - 사용자 지시: "api 이런거도 만들어서 활용하자."
+- 사용자 결정(2026-11-02): GitHub 저장소는 공개하고 `matched.json`의 개인 판정과 공지 요약까지 Pages에 모두 내보낸다. Canvas 데이터, 프로필, 키는 절대 내보내지 않는다(D-012).
 - 맥락: 알림만으로는 지난 공지 검색, 다른 화면(웨일 확장 팝업, 위젯, 단축어)에서 보기가 어렵다. PC가 꺼져 있어도 API가 살아 있어야 한다.
 - 결정:
   - 1단계(M3에 붙임): Actions가 실행마다 `site/api/v1/`에 JSON을 만들어 GitHub Pages로 낸다. 서버 비용 0원, 항상 켜져 있음.
     `notices.json`(전체 최근 글), `boards/<id>.json`, `matched.json`(내 기준에 맞은 글), `deadlines.ics`(마감 캘린더), `feed.xml`(RSS).
   - 2단계(M5): 검색, 필터, 구독 설정 수정이 필요해지면 [tsungmnli/skku-notice-api](https://github.com/tsungmnli/skku-notice-api)의 FastAPI 구조를 가져와 띄운다. 호스팅(무료 PaaS, 오라클 VM, 로컬 Windows)은 그때 정한다.
-- 주의: Pages는 저장소가 공개이거나 유료 요금제여야 한다. 공개하면 `matched.json`, `config/rules.yaml`, `state/seen.json`의 상태값이 내 관심사를 드러낸다.
-  **M3 시작 전에 사용자가 정한다**: (가) 비공개 저장소, Pages 없음, API는 2단계에서 / (나) 공개 저장소, `notices.json`과 `boards/`만 공개하고 개인 파일은 내보내지 않으며 state는 키만 저장 / (다) 데이터만 따로 공개 저장소로 push.
+- 주의: 공개 저장소의 `matched.json`, 커밋한 `config/rules.yaml`, `state/seen.json`은 내 관심사를 드러낼 수 있다. 사용자가 판정과 요약의 공개를 승인했다. Canvas 항목은 공개 출력에서 제외한다(D-012).
 - 대안: 처음부터 FastAPI 서버 상시 실행. 관리할 서버가 생기고 PC가 꺼지면 같이 꺼지므로 2단계로 미뤘다.
 
 ## D-008 "나에게 해당" 판정: 규칙 다음에 Gemini (2026-11-02, 확정)

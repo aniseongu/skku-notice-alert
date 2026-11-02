@@ -2,6 +2,7 @@
 """Parse one SKKU CMS list page without network access."""
 
 import re
+from dataclasses import dataclass
 from datetime import date
 from urllib.parse import parse_qs, urljoin, urlsplit
 
@@ -15,6 +16,15 @@ LINK_SELECTOR = "a[href]"
 CATEGORY_SELECTOR = ".c-board-list-category"
 INFO_SELECTOR = "dd.board-list-content-info li"
 DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
+DETAIL_SELECTORS = ("dl.board-write-box dd", ".board-view-content-wrap")
+ATTACHMENT_SELECTOR = ".filedown_list a[href*='mode=download'], .board-view-box a[href*='mode=download']"
+BLOCK_TAGS = {"p", "div", "li", "tr", "h1", "h2", "h3", "h4", "h5", "h6", "br"}
+
+
+@dataclass(frozen=True)
+class Detail:
+    body_text: str
+    attachments: tuple[tuple[str, str], ...]
 
 
 class ParseError(ValueError):
@@ -63,3 +73,39 @@ def parse_list(html: str, source_id: str, board_url: str) -> list[Notice]:
     if not rows:
         raise ParseError("board list has no articles")
     return [_parse_row(row, source_id, board_url) for row in rows]
+
+
+def _body(node: LexborNode) -> str:
+    if node.tag in {"script", "style"}:
+        return ""
+    if node.tag == "-text":
+        return node.text().replace("\ufeff", "").replace("\u200b", "").replace("\xa0", " ")
+    parts = []
+    child = node.child
+    while child:
+        parts.append(_body(child))
+        child = child.next
+    value = "".join(parts)
+    if node.tag in BLOCK_TAGS:
+        value += "\n"
+    return value
+
+
+def parse_detail(html: str, base_url: str) -> Detail:
+    tree = LexborHTMLParser(html)
+    body = next((tree.css_first(selector) for selector in DETAIL_SELECTORS if tree.css_first(selector)), None)
+    if body is None:
+        raise ParseError("detail body not found")
+    raw = _body(body).replace("\r\n", "\n").replace("\r", "\n")
+    lines = [" ".join(line.split()) for line in raw.split("\n")]
+    cleaned = []
+    for line in lines:
+        if line or (cleaned and cleaned[-1]):
+            cleaned.append(line)
+    text = "\n".join(cleaned).strip()
+    attachments = tuple(
+        (_clean(link), urljoin(base_url, link.attributes["href"]))
+        for link in tree.css(ATTACHMENT_SELECTOR)
+        if _clean(link)
+    )
+    return Detail(text, attachments)

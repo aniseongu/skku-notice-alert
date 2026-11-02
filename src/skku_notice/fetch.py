@@ -30,3 +30,14 @@ def fetch_list(url: str, user_agent: str, timeout_seconds: float) -> str:
             if attempt < 2:
                 time.sleep(2**attempt)
     raise FetchError(f"{url}: failed after 3 attempts ({error})") from error
+
+
+def fetch_detail(url: str, user_agent: str, timeout_seconds: float) -> str:
+    headers = {"User-Agent": user_agent, "Accept-Language": "ko"}
+    try:
+        response = httpx.get(url, headers=headers, timeout=timeout_seconds, follow_redirects=True)
+        response.raise_for_status()
+    except httpx.HTTPError as exc:
+        raise FetchError(f"{url}: detail fetch failed") from exc
+    response.encoding = "utf-8"
+    return response.text

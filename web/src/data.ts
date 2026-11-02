@@ -28,8 +28,20 @@ export interface Judgement {
 export interface NoticesFile { version: number; generated_at: string; sources: Source[]; notices: Notice[] }
 export interface MatchedFile { version: number; generated_at: string; items: Record<string, Judgement> }
 
-// 개발 중에는 ?api=sample/api/v1 로 예시 데이터를 본다.
-const API = new URLSearchParams(location.search).get('api') ?? 'api/v1';
+// 개발 서버에서만 ?api=sample/api/v1 로 예시 데이터를 본다. 배포본은 항상 같은 출처의 api/v1만 읽는다
+// (주소 인자로 남의 JSON을 읽게 하면 그 안의 링크로 스크립트를 심을 수 있다).
+const requested = new URLSearchParams(location.search).get('api');
+const API = import.meta.env.DEV && requested && /^[\w-]+(\/[\w-]+)*$/.test(requested) ? requested : 'api/v1';
+
+// 원문 링크는 http, https만 연다. javascript: 같은 주소는 막는다.
+export function safeUrl(url: string): string {
+  try {
+    const parsed = new URL(url, location.href);
+    return parsed.protocol === 'https:' || parsed.protocol === 'http:' ? parsed.href : '#';
+  } catch {
+    return '#';
+  }
+}
 
 export async function fetchJson<T>(name: string, optional = false): Promise<T | null> {
   const response = await fetch(`${API}/${name}`, { cache: 'no-cache' });

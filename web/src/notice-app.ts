@@ -4,7 +4,7 @@ import { LitElement, html, nothing, type TemplateResult } from 'lit';
 import {
   type IconName, type Judgement, type MatchedFile, type Notice, type NoticesFile, type Source,
   VERDICT_LABEL, boardName, categoryIcon, deadlineDetail, deadlineGroup, deadlinePassed, deadlineText,
-  daysLeft, fetchJson, isMine, koreanDate, postedGroup, todayKst,
+  daysLeft, fetchJson, isMine, koreanDate, postedGroup, safeUrl, todayKst,
 } from './data';
 
 type Tab = 'mine' | 'deadline' | 'all';
@@ -14,6 +14,10 @@ const TABS: { id: Tab; label: string; icon: IconName }[] = [
   { id: 'all', label: '전체', icon: 'list' },
 ];
 const STALE_MS = 2 * 3600_000;
+// 화면을 켜 둔 채로 있어도 15분 주기의 새 공지와 D-day가 바뀌도록 5분마다 다시 받는다.
+const REFRESH_MS = 5 * 60_000;
+const isTab = (value: string | null): value is Tab => TABS.some((t) => t.id === value);
+const INTERACTIVE = 'a, button, input, textarea, select, [contenteditable]';
 const SOON_DAYS = 3;
 const wide = matchMedia('(min-width: 1080px)');
 const browserTab = matchMedia('(display-mode: browser)');
@@ -43,7 +47,7 @@ export class NoticeApp extends LitElement {
   sources: Source[] = [];
   matched: MatchedFile | null = null;
   generatedAt: string | null = null;
-  tab: Tab = (new URLSearchParams(location.search).get('tab') as Tab) || (remember('tab') as Tab) || 'mine';
+  tab: Tab = [new URLSearchParams(location.search).get('tab'), remember('tab')].find(isTab) ?? 'mine';
   board = remember('board') ?? 'all';
   query = '';
   loading = true;
@@ -64,6 +68,7 @@ export class NoticeApp extends LitElement {
     this.refresh();
     wide.addEventListener('change', () => { this.isWide = wide.matches; });
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') this.refresh(); });
+    window.setInterval(() => { if (document.visibilityState === 'visible') this.refresh(); }, REFRESH_MS);
     window.addEventListener('keydown', (event) => this.onKey(event));
     window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); this.install = event as InstallPrompt; });
     window.addEventListener('appinstalled', () => { this.install = null; });
@@ -72,9 +77,10 @@ export class NoticeApp extends LitElement {
   async refresh() {
     this.loading = true;
     try {
-      const [notices, matched] = await Promise.all([
-        fetchJson<NoticesFile>('notices.json'), fetchJson<MatchedFile>('matched.json', true),
-      ]);
+      const load = () => Promise.all([fetchJson<NoticesFile>('notices.json'), fetchJson<MatchedFile>('matched.json', true)]);
+      let [notices, matched] = await load();
+      // 두 파일은 같은 실행에서 함께 만들어진다. 한쪽만 저장본이면 한 번 더 받는다.
+      if (matched && matched.generated_at !== notices!.generated_at) [notices, matched] = await load();
       this.notices = notices!.notices;
       this.sources = notices!.sources;
       this.generatedAt = notices!.generated_at;
@@ -137,9 +143,12 @@ export class NoticeApp extends LitElement {
   private hideInstall() { this.installHidden = true; remember('install-hidden', '1'); }
 
   private onKey(event: KeyboardEvent) {
-    const typing = event.target instanceof HTMLInputElement;
-    if (event.key === 'Escape' && typing) { (event.target as HTMLInputElement).blur(); return; }
+    const target = event.target as Element | null;
+    const typing = target instanceof HTMLInputElement;
+    if (event.key === 'Escape' && typing) { target.blur(); return; }
     if (typing || event.metaKey || event.ctrlKey || event.altKey) return;
+    // 단추나 링크에 포커스가 있으면 Enter는 그 요소의 기본 동작에 맡긴다.
+    if (event.key === 'Enter' && target?.closest(INTERACTIVE)) return;
     const list = this.visible();
     const index = list.findIndex((n) => n.id === (this.selectedId ?? this.shownId));
     const move = (step: number) => {
@@ -151,7 +160,7 @@ export class NoticeApp extends LitElement {
     const actions: Record<string, () => void> = {
       '/': () => this.querySelector<HTMLInputElement>('#query')?.focus(),
       j: () => move(1), ArrowDown: () => move(1), k: () => move(-1), ArrowUp: () => move(-1),
-      Enter: () => { const notice = list[index]; if (notice) window.open(notice.url, '_blank', 'noopener'); },
+      Enter: () => { const notice = list[index]; if (notice) window.open(safeUrl(notice.url), '_blank', 'noopener'); },
       r: () => this.refresh(), 1: () => this.setTab('mine'), 2: () => this.setTab('deadline'), 3: () => this.setTab('all'),
     };
     const action = actions[event.key];
@@ -219,7 +228,7 @@ export class NoticeApp extends LitElement {
         <div class="install-bar" role="region" aria-label="앱 설치 안내">
           <p>홈 화면에 추가하면 앱처럼 바로 열 수 있어요</p>
           <button type="button" class="solid-button" @click=${this.runInstall}>앱으로 설치</button>
-          <button type="button" class="icon-button small" aria-label="안내 닫기" @click=${this.hideInstall}>
+          <button type="button" class="icon-button" aria-label="안내 닫기" @click=${this.hideInstall}>
             <svg class="i" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
         </div>` : nothing}
 
@@ -289,7 +298,7 @@ export class NoticeApp extends LitElement {
     const source = this.sources.find((s) => s.id === notice.source_id);
     const urgent = notice.deadline && !deadlinePassed(notice.deadline) && daysLeft(notice.deadline, today) <= SOON_DAYS;
     return html`<li>
-      <a class="row ${ai?.verdict === 'not_relevant' ? 'dim' : ''}" href=${notice.url} target="_blank" rel="noopener"
+      <a class="row ${ai?.verdict === 'not_relevant' ? 'dim' : ''}" href=${safeUrl(notice.url)} target="_blank" rel="noopener"
         data-id=${notice.id} aria-current=${this.isWide && this.shownId === notice.id ? 'true' : 'false'}
         @click=${(e: MouseEvent) => this.onRow(e, notice)}>
         <span class="cat">${icon(categoryIcon(notice))}</span>
@@ -330,7 +339,7 @@ export class NoticeApp extends LitElement {
           ${judgement?.rule_name ? html`<div><dt>기준</dt><dd>${judgement.rule_name}</dd></div>` : nothing}
           ${judgement?.notified ? html`<div><dt>알림</dt><dd>휴대폰으로 보냈어요</dd></div>` : nothing}
         </dl>
-        <a class="solid-button wide" href=${notice.url} target="_blank" rel="noopener">원문 열기</a>
+        <a class="solid-button wide" href=${safeUrl(notice.url)} target="_blank" rel="noopener">원문 열기</a>
         <p class="hint">j, k로 옮기고 Enter로 원문을 열어요</p>
       </div>`;
   }

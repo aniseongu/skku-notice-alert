@@ -11,7 +11,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: null,
-      includeAssets: ['favicon.svg', 'apple-touch-icon.png', 'icons/sprite.svg'],
+      includeAssets: ['favicon.svg', 'icon.svg', 'apple-touch-icon*.png', 'icon-48*.png', 'icons/sprite.svg'],
       manifest: {
         id: './',
         name: '성대 공지 맞춤 알림',
@@ -33,6 +33,8 @@ export default defineConfig({
           { src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'icon-512.png', sizes: '512x512', type: 'image/png' },
           { src: 'icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+          // 안드로이드 테마 아이콘(One UI 포함)이 배경색에 맞춰 칠하는 흰 실루엣. 다크 모드 대응은 런처가 한다.
+          { src: 'icon-monochrome-512.png', sizes: '512x512', type: 'image/png', purpose: 'monochrome' },
         ],
         shortcuts: [
           { name: '내 공지', url: './?tab=mine', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },

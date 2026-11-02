@@ -1,7 +1,7 @@
 # HANDOFF - 현재 작업 상태
 
 > 어느 AI 도구든 세션을 시작하면 이 파일부터 읽는다. 현재 상태만 적고 40줄 이내로 유지한다.
-> 마지막 갱신: 2026-11-02 Codex (GPT-6)
+> 마지막 갱신: 2026-11-02 밤 Claude Code (Opus 5.5)
 
 ## 상태
 
@@ -11,6 +11,9 @@
 - 사용자 결정: 공개 저장소와 공개 Pages에 판정(`matched.json`)과 요약까지 게시. Canvas 데이터, 프로필, 키는 공개하지 않음(D-007 확정, D-012).
 - 검증: `actionlint` v1.7.12, PyYAML 파싱, ruff, pytest 103개, `npm run build`, 빈 archive의 `export_site()` PWA/API v1 복사 통과.
 - 확인 못 함: 실제 Actions, Pages, 해외 러너 접속, 실제 ntfy, 실제 Gemini와 Canvas, 휴대폰과 웨일 설치.
+
+- 저장소: https://github.com/aniseongu/skku-notice-alert (공개), Pages: https://aniseongu.github.io/skku-notice-alert/ (Actions 배포 켬, 아직 배포 전).
+  해외 접속 확인(check-access) 통과: 두 게시판 200, canvas 401(토큰 없이 정상). "Notice and Pages" 워크플로는 Secrets를 넣기 전까지 **꺼 둠**(gh workflow enable notice.yml 로 켠다).
 
 ## 사용자가 할 일
 

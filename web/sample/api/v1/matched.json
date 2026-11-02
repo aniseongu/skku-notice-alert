@@ -58,11 +58,9 @@
       "notified": true
     },
     "cse-notice/227923": {
-      "rule_name": "학과 공지는 모두 (조용히)",
+      "rule_name": null,
       "priority": "low",
-      "reasons": [
-        "source:cse-notice"
-      ],
+      "reasons": [],
       "ai": null,
       "notified": true
     },
@@ -107,29 +105,23 @@
       "notified": true
     },
     "cse-notice/227457": {
-      "rule_name": "학과 공지는 모두 (조용히)",
+      "rule_name": null,
       "priority": "low",
-      "reasons": [
-        "source:cse-notice"
-      ],
+      "reasons": [],
       "ai": null,
       "notified": true
     },
     "cse-notice/227380": {
-      "rule_name": "학과 공지는 모두 (조용히)",
+      "rule_name": null,
       "priority": "low",
-      "reasons": [
-        "source:cse-notice"
-      ],
+      "reasons": [],
       "ai": null,
       "notified": true
     },
     "cse-notice/227362": {
-      "rule_name": "학과 공지는 모두 (조용히)",
+      "rule_name": null,
       "priority": "low",
-      "reasons": [
-        "source:cse-notice"
-      ],
+      "reasons": [],
       "ai": null,
       "notified": true
     },
@@ -148,20 +140,16 @@
       "notified": true
     },
     "cse-notice/227280": {
-      "rule_name": "학과 공지는 모두 (조용히)",
+      "rule_name": null,
       "priority": "low",
-      "reasons": [
-        "source:cse-notice"
-      ],
+      "reasons": [],
       "ai": null,
       "notified": true
     },
     "cse-notice/227278": {
-      "rule_name": "학과 공지는 모두 (조용히)",
+      "rule_name": null,
       "priority": "low",
-      "reasons": [
-        "source:cse-notice"
-      ],
+      "reasons": [],
       "ai": {
         "verdict": "not_relevant",
         "reason": "졸업생과 졸업예정자만 들을 수 있어요",

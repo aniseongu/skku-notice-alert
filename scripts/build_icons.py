@@ -50,10 +50,10 @@ def tile(name: str, size: int = 128, radius: int = 28, scale: float = 3.3) -> st
     )
 
 
-# 다크 모드에서는 화면의 분류 아이콘과 같은 조합으로 바뀐다: 어두운 녹색 면(--accent-soft 다크) 위 민트 선(--accent 다크).
+# 다크 모드에서도 바탕과 건물 안은 진녹색 그대로 두고 선 색만 민트로 바꾼다(사용자 요청: "바탕도 진녹색, 도서관 아이콘 안도 진녹색, 선만 다른 색").
 # SVG는 안에 미디어 쿼리를 넣어 스스로 바뀌고, PNG는 미디어 쿼리가 없으므로 *-dark.png를 따로 만들어
 # index.html의 <link media="(prefers-color-scheme: dark)">로 골라 쓴다.
-DARK_TILE = "#163527"
+DARK_TILE = BRAND
 # PNG에서 원본 선을 그릴 굵기(원본 그룹 좌표 단위). 128용은 128px에서 약 2.4px, 32용은 32px에서 약 1.4px가 되게 맞췄다.
 PNG_STROKE = {128: 16, 32: 28}
 DARK_LINE = "#7ed2ab"

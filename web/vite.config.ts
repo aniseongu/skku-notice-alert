@@ -43,6 +43,8 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{html,js,css,svg,png}'],
+        // 암호화 라이브러리(약 420KB)는 설정에서 키를 저장할 때만 불러오므로 미리 저장하지 않는다.
+        globIgnores: ['**/libsodium*.js', '**/*-dark.png', '**/icons/notify/**'],
         navigateFallback: 'index.html',
         navigateFallbackDenylist: [/\/api\//],
         runtimeCaching: [

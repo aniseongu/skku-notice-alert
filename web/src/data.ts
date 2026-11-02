@@ -21,7 +21,9 @@ export interface Judgement {
   rule_name: string | null;
   priority: 'high' | 'default' | 'low' | null;
   reasons: string[];
-  ai: { verdict: Verdict; reason: string; model: string } | null;
+  // interests: D-010에 추가된 필드(서버의 관심 키워드 글자 매칭, ai.interests는 Gemini가 뜻으로 맞춘 것). 없을 수 있다.
+  interests?: string[];
+  ai: { verdict: Verdict; reason: string; model: string; interests?: string[] } | null;
   notified: boolean;
 }
 
@@ -59,6 +61,24 @@ export function isMine(judgement: Judgement | undefined): boolean {
 }
 
 export const boardName = (source: Source | undefined, fallback: string) => (source?.name ?? fallback).replace(/\s*공지$/, '');
+
+// 학교 제목 속 이모지(✅, ✨)는 표시할 때만 지운다(DESIGN 8절). 원문은 그대로다.
+export const cleanTitle = (title: string) =>
+  title.replace(/\p{Extended_Pictographic}️?/gu, '').replace(/\s+/g, ' ').trim();
+
+// 관심 키워드 글자 매칭. 서버(src/skku_notice/interests.py)와 같은 규칙: 띄어쓰기로 나눈 낱말이 모두 들어 있으면 맞음,
+// 띄어쓰기 무시, 비슷한 말 포함(docs/design/ux-rules.md 2-1절).
+const SYNONYMS: string[][] = [['인턴', '현장실습', '체험형'], ['장학', '장학금'], ['공모전', '경진대회', '챌린지']];
+const squash = (text: string) => text.replace(/\s+/g, '').toLowerCase();
+
+export function keywordMatches(keyword: string, text: string): boolean {
+  const haystack = squash(text);
+  const words = keyword.split(/\s+/).filter(Boolean);
+  return words.length > 0 && words.every((word) => {
+    const group = SYNONYMS.find((g) => g.includes(word)) ?? [word];
+    return group.some((w) => haystack.includes(squash(w)));
+  });
+}
 
 // 날짜 계산은 모두 한국 시간 기준 날짜(YYYY-MM-DD)로 한다.
 const kstDay = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' });

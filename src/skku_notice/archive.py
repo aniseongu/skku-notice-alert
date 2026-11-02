@@ -23,6 +23,11 @@ def load_archive(path: Path) -> Archive:
     raw = json.loads(path.read_text(encoding="utf-8"))
     if raw.get("version") != 1 or not isinstance(raw.get("items"), dict):
         raise ValueError("unsupported archive format")
+    for item in raw["items"].values():
+        if item.get("ocr_engine") and item.get("body_from_image") and "ocr_text" not in item:
+            item["ocr_text"] = item.get("body_text") or ""
+            item["body_text"] = ""
+            item["body_from_image"] = False
     return Archive(raw["items"])
 
 
@@ -66,10 +71,12 @@ def add_notice(
         "notified": notified,
     }
     old = archive.items.get(key, {})
+    image_text = judgment.image_text if judgment and judgment.image_text and old.get("images") else ""
     items = {**archive.items, key: {
         "notice": public, "match": personal,
-        "body_text": old.get("body_text"),
-        "body_from_image": old.get("body_from_image", False),
+        "body_text": image_text or old.get("body_text"),
+        "body_from_image": bool(image_text) or old.get("body_from_image", False),
+        "ocr_text": old.get("ocr_text", ""),
         "ocr_engine": old.get("ocr_engine"),
         "image_attempted": old.get("image_attempted", False),
         "attachments": old.get("attachments", []),
@@ -105,7 +112,7 @@ def mark_image_attempted(archive: Archive, key: str) -> Archive:
 
 def update_image_text(archive: Archive, key: str, text: str, engine: str = "rapidocr") -> Archive:
     return Archive({**archive.items, key: {
-        **archive.items[key], "body_text": text, "body_from_image": True, "ocr_engine": engine,
+        **archive.items[key], "ocr_text": text, "ocr_engine": engine,
     }})
 
 

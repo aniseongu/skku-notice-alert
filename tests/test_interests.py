@@ -42,14 +42,18 @@ def test_match_interests(keyword, title, category, expected) -> None:
     assert bool(match_interests(notice(title, category), (keyword,))) is expected
 
 
+def test_match_interests_uses_ocr_text() -> None:
+    assert match_interests(notice("모집"), ("현대 채용",), "현대 채용") == ("현대 채용",)
+
+
 def test_gemini_interests_are_restricted_to_supplied_list() -> None:
     class Models:
         def generate_content(self, *, model, contents, config):
-            assert '"interests": ["겨울방학 인턴"]' in contents
+            assert json.loads(contents)["interests"] == ["겨울방학 인턴"]
             schema = config.response_schema["properties"]["items"]["items"]
             assert schema["properties"]["interests"] == {"type": "ARRAY", "items": {"type": "STRING"}}
             assert "interests" in schema["required"]
-            assert "판정어(해당, 확인 필요, 해당 없음)를 되풀이하지 마세요" in contents
+            assert "판정어(해당, 확인 필요, 해당 없음)를 되풀이하지 마세요" in config.system_instruction
             return type("Response", (), {"text": json.dumps({"items": [{
                 "id": "board/1", "verdict": "maybe", "reason": "관련 과정으로 보임",
                 "interests": ["가짜", "겨울방학 인턴"],

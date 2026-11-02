@@ -29,7 +29,7 @@ from skku_notice.canvas_alerts import (
 )
 from skku_notice.deadline import KST
 from skku_notice.export import export_site
-from skku_notice.fetch import FetchError, fetch_detail, fetch_images, fetch_list
+from skku_notice.fetch import FetchError, UnsafeURL, fetch_detail, fetch_images, fetch_list
 from skku_notice.interests import load_interests, match_interests
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match
@@ -98,7 +98,8 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
                                         float(settings["timeout_seconds"]))
                 detail = parse_detail(html, notice.url)
             except (FetchError, ParseError) as exc:
-                print(f"{key}: 본문 읽기 실패: {exc}", file=sys.stderr)
+                if not isinstance(exc, UnsafeURL):
+                    print(f"{key}: 본문 읽기 실패: {exc}", file=sys.stderr)
                 archive = update_detail(archive, key, None, (), None)
             else:
                 archive = update_detail(archive, key, detail.body_text, detail.attachments,
@@ -247,7 +248,9 @@ def run(args: argparse.Namespace) -> int:
                 ai["model"],
                 key,
                 interests=interests,
-                bodies={key: item.get("body_text") or "" for key, item in archive.items.items()},
+                bodies={key: "\n".join(filter(None, (
+                    item.get("body_text") or "", item.get("ocr_text") or ""
+                ))) for key, item in archive.items.items()},
                 images=image_parts,
             )
     for source, notices in boards:
@@ -267,12 +270,16 @@ def run(args: argparse.Namespace) -> int:
             judgment = (
                 judgments.get(f"{source['id']}/{notice.article_no}") if process and not excluded else None
             )
-            text_interests = match_interests(notice, interests) if process and not excluded else ()
+            item = archive.items.get(f"{source['id']}/{notice.article_no}", {})
+            text_interests = (
+                match_interests(notice, interests, item.get("ocr_text") or "")
+                if process and not excluded else ()
+            )
             shown_interests = tuple(
                 word for word in interests
                 if word in text_interests or (judgment and word in judgment.interests)
             )
-            priority = decide_priority(match, judgment, shown_interests) if process and not excluded else None
+            priority = decide_priority(match, judgment, text_interests) if process and not excluded else None
             if process and priority is None and rules.notify_all:
                 priority = "low"
             if not args.dry_run and seen is not None and seen.status == "pending":

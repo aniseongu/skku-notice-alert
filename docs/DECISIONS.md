@@ -65,3 +65,27 @@
 - 주의: Pages는 저장소가 공개이거나 유료 요금제여야 한다. 공개하면 `matched.json`, `config/rules.yaml`, `state/seen.json`의 상태값이 내 관심사를 드러낸다.
   **M3 시작 전에 사용자가 정한다**: (가) 비공개 저장소, Pages 없음, API는 2단계에서 / (나) 공개 저장소, `notices.json`과 `boards/`만 공개하고 개인 파일은 내보내지 않으며 state는 키만 저장 / (다) 데이터만 따로 공개 저장소로 push.
 - 대안: 처음부터 FastAPI 서버 상시 실행. 관리할 서버가 생기고 PC가 꺼지면 같이 꺼지므로 2단계로 미뤘다.
+
+## D-008 "나에게 해당" 판정: 규칙 다음에 Gemini (2026-11-02, 확정)
+
+- 사용자 지시: "나한테 해당되는건지 아닌지 판단 가능한 것", "gemini api key 활용(무료)". 프로필 범위는 "자세한 프로필"을 선택.
+- 결정: 공통 제외어에 걸리지 않은 새 글을 한 실행에 한 번 묶어 Gemini(무료 등급 Flash-Lite 계열)에 보내 relevant, maybe, not_relevant와 이유 한 줄을 받는다.
+  규칙에 맞은 글은 AI가 not_relevant라도 low로 알린다(누락보다 중복). AI 실패나 키 없음이면 규칙 결과만 쓴다.
+- 비밀: `GEMINI_API_KEY`는 `.env`와 Secrets에만. 프로필은 `config/profile.yaml`(gitignore), Actions에서는 Secret `PROFILE_YAML`.
+- 주의: 무료 등급은 입력이 Google 제품 개선에 쓰일 수 있다(2026-11-02 pricing 페이지 확인). 프로필에 이름, 학번, 연락처는 넣지 않는다.
+  무료 한도 수치는 문서마다 다르고 자주 바뀐다. 하루 수십 건이라 넉넉하다고 보지만, 429가 잦으면 모델이나 `max_per_run`을 바꾼다.
+
+## D-009 화면: PWA + Beer CSS, 푸시는 ntfy (2026-11-02, 확정)
+
+- 사용자 지시: "안드로이드 기반", 디자인 자료(awesome-android-ui, penpot, ui-design 토픽 등) 활용, "너가 복합적으로 생각해서 추천하는 거로".
+- 결정: 빌드 없는 PWA(HTML, CSS, JS)를 정적 API와 같이 Pages에 올리고 안드로이드 크롬에서 홈 화면에 설치한다. 스타일은 Beer CSS(Material 3, CDN).
+  알림은 계속 ntfy 앱이 맡는다(D-002).
+- 근거: 네이티브 앱도 서버나 FCM 없이는 푸시를 못 받는다. 그러면 앱은 목록을 보는 화면일 뿐이라 PWA로 충분하다. 만들 양과 유지 비용이 가장 작다.
+  awesome-android-ui는 대부분 View(XML) 시대 라이브러리라 지금 쓸 것이 적고, Penpot은 화면 하나짜리 개인 도구에는 과하다.
+  @material/web은 유지 모드 공지가 있고 Pico CSS는 보관(archived) 상태라 뺐다(2026-11-02 확인).
+- 대안: Kotlin + Jetpack Compose 앱(android/nowinandroid 구조). 위젯이나 오프라인 동기화가 꼭 필요해지면 다시 본다.
+
+## D-010 정적 API v1 형식 (2026-11-02, 확정)
+
+- 형식은 `docs/plans/2026-11-02_m2-notify-ai-web.md`의 "API v1 형식"이 정본이다. `notices.json`(공개 가능)과 `matched.json`(개인 판정)을 나눈다.
+- 필드 이름은 바꾸지 않는다. 바꿔야 하면 `api/v2/`를 새로 만든다(AGENTS.md 1절).

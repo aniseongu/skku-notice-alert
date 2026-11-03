@@ -1,12 +1,987 @@
 {
   "version": 1,
   "items": {
+    "linkareer-intern/361803": {
+      "notice": {
+        "id": "linkareer-intern/361803",
+        "source_id": "linkareer-intern",
+        "article_no": "361803",
+        "title": "[콘레브] [베이글챗] AI콘텐츠 제작 및 오가닉 마케팅 인턴 (정규전환형)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361803",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361800": {
+      "notice": {
+        "id": "linkareer-intern/361800",
+        "source_id": "linkareer-intern",
+        "article_no": "361800",
+        "title": "[뤼튼테크놀로지스] Growth Marketer 인턴",
+        "category": "인턴",
+        "url": "https://linkareer.com/activity/361800",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361790": {
+      "notice": {
+        "id": "linkareer-intern/361790",
+        "source_id": "linkareer-intern",
+        "article_no": "361790",
+        "title": "[BigTeam Inc] AAMDP Console Monitoring   & Security Analyst (체험형 인턴 4주)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361790",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-03T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361716": {
+      "notice": {
+        "id": "linkareer-intern/361716",
+        "source_id": "linkareer-intern",
+        "article_no": "361716",
+        "title": "[와이즐리컴퍼니] [SCM] 납기관리 인턴 (6개월)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361716",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361712": {
+      "notice": {
+        "id": "linkareer-intern/361712",
+        "source_id": "linkareer-intern",
+        "article_no": "361712",
+        "title": "[주식회사유니에스] [하루7H근무/중식제공/본사] 신세계인터내셔날 이커머스 입점팀 패션 AMD 채용",
+        "category": "인턴",
+        "url": "https://linkareer.com/activity/361712",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-09T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361710": {
+      "notice": {
+        "id": "linkareer-intern/361710",
+        "source_id": "linkareer-intern",
+        "article_no": "361710",
+        "title": "[주식회사유니에스] [하루7H근무/중식제공/본사] 신세계인터내셔날 이커머스 입점팀 패션 AMD 채용(잉크, 던스트 등)",
+        "category": "인턴",
+        "url": "https://linkareer.com/activity/361710",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-10T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361704": {
+      "notice": {
+        "id": "linkareer-intern/361704",
+        "source_id": "linkareer-intern",
+        "article_no": "361704",
+        "title": "[주식회사 멜] [AI 스타트업] 북미 콘텐츠 마케팅 인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361704",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361701": {
+      "notice": {
+        "id": "linkareer-intern/361701",
+        "source_id": "linkareer-intern",
+        "article_no": "361701",
+        "title": "[비나우] [체험형 인턴] 중국 글로벌 인허가(RA) 담당자 (6개월~)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361701",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361700": {
+      "notice": {
+        "id": "linkareer-intern/361700",
+        "source_id": "linkareer-intern",
+        "article_no": "361700",
+        "title": "[SK플라즈마] 항암희귀전문 의약품 영업 담당자(MR) 신입(전환형 인턴) 모집",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361700",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361675": {
+      "notice": {
+        "id": "linkareer-intern/361675",
+        "source_id": "linkareer-intern",
+        "article_no": "361675",
+        "title": "[모두닥 주식회사] [채용전환형/월500만원] 모두닥 Problem Solver (Sales Focused) 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361675",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361674": {
+      "notice": {
+        "id": "linkareer-intern/361674",
+        "source_id": "linkareer-intern",
+        "article_no": "361674",
+        "title": "[모두닥 주식회사] [채용전환형/월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361674",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361673": {
+      "notice": {
+        "id": "linkareer-intern/361673",
+        "source_id": "linkareer-intern",
+        "article_no": "361673",
+        "title": "[모두닥 주식회사] [채용전환형/월 500만원] 모두닥 Problem Solver - Product Marketer 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361673",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361672": {
+      "notice": {
+        "id": "linkareer-intern/361672",
+        "source_id": "linkareer-intern",
+        "article_no": "361672",
+        "title": "[모두닥 주식회사] [채용전환형/월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361672",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361671": {
+      "notice": {
+        "id": "linkareer-intern/361671",
+        "source_id": "linkareer-intern",
+        "article_no": "361671",
+        "title": "[모두닥 주식회사] [휴학생 우대/월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361671",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361661": {
+      "notice": {
+        "id": "linkareer-intern/361661",
+        "source_id": "linkareer-intern",
+        "article_no": "361661",
+        "title": "[인핸스] Recruiting Coordinator (Intern)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361661",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361633": {
+      "notice": {
+        "id": "linkareer-intern/361633",
+        "source_id": "linkareer-intern",
+        "article_no": "361633",
+        "title": "[와디즈 주식회사] [와디즈] BX팀 콘텐츠 디자이너(인턴)-채용시 마감",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361633",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T10:00:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361621": {
+      "notice": {
+        "id": "linkareer-intern/361621",
+        "source_id": "linkareer-intern",
+        "article_no": "361621",
+        "title": "[Pacific Global Logistics Inc] [미국인턴/조지아주] 팩트라인터내셔널 애틀랜타법인 - 물류운영 코디네이터 채용 (숙소 제공)",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361621",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361620": {
+      "notice": {
+        "id": "linkareer-intern/361620",
+        "source_id": "linkareer-intern",
+        "article_no": "361620",
+        "title": "[한국특허정보원] 2026년 한국특허정보원 체험형 청년인턴 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361620",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-18T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361609": {
+      "notice": {
+        "id": "linkareer-intern/361609",
+        "source_id": "linkareer-intern",
+        "article_no": "361609",
+        "title": "[SAN HO WON] [미국인턴/샌프란시스코] K-BBQ 레스토랑 - 서빙 및 홀서비스 보조 채용",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361609",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361594": {
+      "notice": {
+        "id": "linkareer-intern/361594",
+        "source_id": "linkareer-intern",
+        "article_no": "361594",
+        "title": "[엔키에이엑스] 2027 엔키업 채용연계형 인턴십",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361594",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361593": {
+      "notice": {
+        "id": "linkareer-intern/361593",
+        "source_id": "linkareer-intern",
+        "article_no": "361593",
+        "title": "[카디안자산운용] 채권운용본부 인턴 (2027년 상반기)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361593",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361582": {
+      "notice": {
+        "id": "linkareer-intern/361582",
+        "source_id": "linkareer-intern",
+        "article_no": "361582",
+        "title": "[카디안자산운용] 주식운용본부 인턴 (2027년 상반기)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361582",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361579": {
+      "notice": {
+        "id": "linkareer-intern/361579",
+        "source_id": "linkareer-intern",
+        "article_no": "361579",
+        "title": "[주식회사 구다이글로벌] 조선미녀 글로벌 콘텐츠 마케팅 인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361579",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361578": {
+      "notice": {
+        "id": "linkareer-intern/361578",
+        "source_id": "linkareer-intern",
+        "article_no": "361578",
+        "title": "[Deloitte 안진회계법인] [딜로이트 안진회계법인] 회계감사부문 AIS(계리 전문 조직) 인턴 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361578",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-27T16:00:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/107002": {
+      "notice": {
+        "id": "jasoseol-intern/107002",
+        "source_id": "jasoseol-intern",
+        "article_no": "107002",
+        "title": "[엔키에이엑스] 2027 엔키업 채용연계형 인턴십",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107002",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:00+09:00",
+        "model": "source"
+      }
+    },
     "skku-notice01/141543": {
       "notice": {
         "id": "skku-notice01/141543",
         "source_id": "skku-notice01",
         "article_no": "141543",
-        "title": "[앵커사업단] 「성균관대학교 창업팀 투자 유치 역량 강화 집중 프로그램」 참가자 모집 (~11/10)",
+        "title": "[앵커사업단] 「성균관대학교 창업팀 투자 유치 역량 강화 집중 프로그램」 참여팀 모집 (~11/10)",
         "category": "행사/세미나",
         "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141543",
         "posted_on": "2026-11-03",
@@ -37,7 +1012,10 @@
       "images": [],
       "summary": "투자 유치를 희망하는 인사캠퍼스 소속 창업팀은 11월 10일 오후 5시까지 구글폼으로 신청하세요.",
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T17:38:58.630694+09:00"
+      "fetched_at": "2026-11-03T17:38:58.630694+09:00",
+      "previous_title": "[앵커사업단] 「성균관대학교 창업팀 투자 유치 역량 강화 집중 프로그램」 참가자 모집 (~11/10)",
+      "changed_at": "2026-11-03T18:24:00.504814+09:00",
+      "change_kind": "제목"
     },
     "skku-notice01/141542": {
       "notice": {
@@ -1204,6 +2182,279 @@
         "at": "2026-11-18T10:30:00+09:00"
       }
     },
+    "linkareer-intern/361732": {
+      "notice": {
+        "id": "linkareer-intern/361732",
+        "source_id": "linkareer-intern",
+        "article_no": "361732",
+        "title": "[한국과학기술연구원] KIST 2026-6차 행정인턴 공개채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361732",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T18:00:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361622": {
+      "notice": {
+        "id": "linkareer-intern/361622",
+        "source_id": "linkareer-intern",
+        "article_no": "361622",
+        "title": "[한국공항] [26년 11월] 제주사업(제동목장·생수공장 외) 안전관리자 신입사원 모집",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361622",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-09T12:00:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361605": {
+      "notice": {
+        "id": "linkareer-intern/361605",
+        "source_id": "linkareer-intern",
+        "article_no": "361605",
+        "title": "[SNOW] 카메라 콘텐츠 AI 제작/운영 체험형 인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361605",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-10T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361603": {
+      "notice": {
+        "id": "linkareer-intern/361603",
+        "source_id": "linkareer-intern",
+        "article_no": "361603",
+        "title": "[주식회사 라라스윗] [라라스윗] 마케팅 인턴 대규모 채용 (채용전환형)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/361603",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361568": {
+      "notice": {
+        "id": "linkareer-intern/361568",
+        "source_id": "linkareer-intern",
+        "article_no": "361568",
+        "title": "[한국청소년상담복지개발원] 제2026-1호 국립청소년인터넷드림마을 청년인턴(체험형) 모집",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361568",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T15:00:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361528": {
+      "notice": {
+        "id": "linkareer-intern/361528",
+        "source_id": "linkareer-intern",
+        "article_no": "361528",
+        "title": "[삼정KPMG] ITS 업무 지원 인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361528",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-05T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106985": {
+      "notice": {
+        "id": "jasoseol-intern/106985",
+        "source_id": "jasoseol-intern",
+        "article_no": "106985",
+        "title": "[한국토요타자동차] 2026년 하반기 채용연계형 인턴 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106985",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-11T23:59:00+09:00",
+        "model": "source"
+      }
+    },
     "skku-notice01/141498": {
       "notice": {
         "id": "skku-notice01/141498",
@@ -1334,17 +2585,137 @@
       "body_attempts": 1,
       "fetched_at": "2026-11-03T12:27:42.906254+09:00"
     },
+    "sw-notice/227620": {
+      "notice": {
+        "id": "sw-notice/227620",
+        "source_id": "sw-notice",
+        "article_no": "227620",
+        "title": "[1~4학년 지원 가능] (지원기간: 11.2~11.15) 2026 SKKU 동계 PharmXplore Scholars 선발 안내",
+        "category": "채용/모집",
+        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=227620",
+        "posted_on": "2026-10-30",
+        "pinned": false,
+        "deadline": "2026-11-15T23:59:00+09:00",
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "약학대학에서는 학부생들에게 약학 분야의 연구 참여 기회를 제공하고 연구 역량을 함양할 수 있도록,\n「제4기 SKKU PharmXplore Scholars」 프로그램을 운영하고 있습니다.\n\n본 프로그램은 8주간 연구실 인턴 활동을 수행하며,\n참여 학생에게 장학금 80만원과 수료증을 제공합니다.\n\n우리 대학 학생들의 관심과 참여도가 높은 프로그램인 만큼,\n보다 많은 학생들이 참여 바랍니다.\n\n모집대상: 본교 약학과 1~3학년 및 타 학과 1~4학년\n신청기간: 2026. 11. 2.(월) ~ 11. 15.(일)\n상세내용: 프로그램 안내 공지(https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141079&article.offset=0&articleLimit=10)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "2026 동계 SKKU PharmXplore Scholars 프로그램 모집 공고문.hwpx",
+          "url": "https://sw.skku.edu/sw/notice.do?mode=download&articleNo=227620&attachNo=204543",
+          "type": "HWPX",
+          "size": null
+        },
+        {
+          "name": "[붙임1] 2026 동계 SKKU PharmXplore Scholars_프로그램 참여연구실.pdf",
+          "url": "https://sw.skku.edu/sw/notice.do?mode=download&articleNo=227620&attachNo=204544",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><div><span>약학대학에서는&nbsp;</span><span>학부생들에게 약학 분야의 연구 참여 기회를 제공하고 연구 역량을 함양할 수 있도록,</span></div><div><span>「제4기 SKKU PharmXplore Scholars」 프로그램</span><span>을 운영하고 있습니다.</span></div><div><span><br></span></div><p><span>본 프로그램은&nbsp;</span><strong><span>8주간 연구실 인턴 활동을 수행하며,&nbsp;</span></strong></p><p><strong><span>참여 학생에게 장학금 80만원과 수료증을 제공</span></strong><span>합니다.</span></p><p><span><br></span></p><p><span>우리 대학 학생들의 관심과 참여도가 높은 프로그램</span><span>인 만큼,&nbsp;</span></p><p><span>보다 많은 학생들이 참여 바랍니다.</span></p><p><span><br></span></p><ul><li><span><strong>모집대상</strong>: 본교 약학과 1~3학년 및 <strong>타 학과 1~4학년</strong></span></li><li><span><strong>신청기간: 2026. 11. 2.(월) ~ 11. 15.(</strong></span><span><strong>일)</strong></span></li><li><span><strong>상세내용:&nbsp;</strong></span><span><strong>프로그램 안내 공지(<a href=\"https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&amp;articleNo=141079&amp;article.offset=0&amp;articleLimit=10\">https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&amp;articleNo=141079&amp;article.offset=0&amp;articleLimit=10</a>)</strong></span></li><li><br></li></ul><p><img src=\"https://sw.skku.edu/_res/editor_image/2026/10/WAWEwoMBrZaSOjBMrILB0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://sw.skku.edu/_res/editor_image/2026/10/WAWEwoMBrZaSOjBMrILB0.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T18:24:00.504814+09:00"
+    },
+    "jasoseol-intern/106980": {
+      "notice": {
+        "id": "jasoseol-intern/106980",
+        "source_id": "jasoseol-intern",
+        "article_no": "106980",
+        "title": "[에이피알] [마케팅] 포맨트 온라인 마케팅 채용연계형 인턴사원 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106980",
+        "posted_on": "2026-10-30",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-28T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "futurecar-notice/67564": {
+      "notice": {
+        "id": "futurecar-notice/67564",
+        "source_id": "futurecar-notice",
+        "article_no": "67564",
+        "title": "2026학년도 겨울학기 비교과 프로그램 신청 안내(11/4 09:00 ~ 11/10 23:00) [접수]",
+        "category": null,
+        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=67564",
+        "posted_on": "2026-10-30",
+        "pinned": false,
+        "deadline": "2026-11-10T23:00:00+09:00",
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "2026학년도 겨울학기 비교과 프로그램에 대해 안내하오니 관심 있는 학생 여러분의 많은 참여 바랍니다.\n개설 프로그램, 교육기간, 유의사항 등 자세한 내용은 아이캠퍼스 '미래차 부트캠프(신청)'의 공지에서 확인하시기\n바랍니다.\n\n▷ 신청기간 : 2026년 11월 4일(수) 09:00 ~ 11월 10일(화) 23:00\n▷ 신청방법 : GLS → 챌린지스퀘어 → 비교과프로그램 → 수강신청\n▷ 신청 대상 : 미래차 부트캠프 참여학생",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\t\t\t\t<div><p>2026학년도 겨울학기 비교과 프로그램에 대해 안내하오니 관심 있는 학생 여러분의 많은 참여 바랍니다.</p><p>개설 프로그램, 교육기간, 유의사항 등 자세한 내용은 아이캠퍼스 '미래차 부트캠프(신청)'의 공지에서 확인하시기</p><p>바랍니다.</p><p>▷ 신청기간 : 2026년 11월 4일(수) 09:00 ~ 11월 10일(화) 23:00</p><p>▷ 신청방법 : GLS → 챌린지스퀘어 → 비교과프로그램 → 수강신청</p><p>▷ 신청 대상 : 미래차 부트캠프 참여학생</p></div>\n\t\t\t\n\t\t\t\n          </div>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T18:24:00.504814+09:00"
+    },
     "skku-notice01/141136": {
       "notice": {
         "id": "skku-notice01/141136",
         "source_id": "skku-notice01",
         "article_no": "141136",
-        "title": "2027년도 제16회 변호사시험 시험관리원(재학생) 모집(~11.8.(일)/조기마감 가능)",
+        "title": "2027년도 제16회 변호사시험 시험관리원(재학생) 모집(★조기마감/추천인원은 11.9.(월) 메일 안내 예정★)",
         "category": "채용/모집",
         "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141136",
         "posted_on": "2026-10-30",
         "pinned": true,
-        "deadline": "2026-11-08T23:59:00+09:00",
+        "deadline": null,
         "first_seen": "2026-11-03T12:27:42.906254+09:00"
       },
       "match": {
@@ -1365,7 +2736,16 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:44:43.370511+09:00"
+      "fetched_at": "2026-11-03T14:44:43.370511+09:00",
+      "previous_title": "2027년도 제16회 변호사시험 시험관리원(재학생) 모집(~11.8.(일)/조기마감 가능)",
+      "changed_at": "2026-11-03T18:24:00.504814+09:00",
+      "change_kind": "제목",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-08T23:59:00+09:00"
+      }
     },
     "cse-notice/227634": {
       "notice": {
@@ -1457,6 +2837,281 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-16T13:00:00+09:00"
+      }
+    },
+    "sw-notice/227525": {
+      "notice": {
+        "id": "sw-notice/227525",
+        "source_id": "sw-notice",
+        "article_no": "227525",
+        "title": "[토스] 소프트웨어학과 대상 겨울방학 인턴 채용설명회 (화학관 330110호 장소변경/1,2학년 정원 마감)",
+        "category": "채용/모집",
+        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=227525",
+        "posted_on": "2026-10-29",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "화학관 330110호로 장소 변경되었습니다.\n1, 2학년 정원 마감되었습니다.\n\n토스에서 Platform Engineer 직무 겨울 인턴십 채용 설명회를 준비했어요!\n이번 겨울 방학, 토스에서 인턴으로 일하면 어떤 경험을 할 수 있는지 직접 소개해 드리려고 해요.\nAI가 코드를 쓰는 시대, 개발자는 어떤 역할을 해야 할까요?\n이번 세션에서는 이 질문에 대한 토스팀의 생각도 함께 나눌 예정이에요.\n토스가 일하는 방식과 앞으로 개발자에게 필요한 역량이 궁금하셨다면 좋은 기회가 될 거예요.\n사전 신청자 대상으로 에어팟을 비롯한 다양한 경품 추천도 진행하니, 많은 관심과 참여 부탁드려요.\n\n■ 인턴십 채용 설명회\n• 일시: 2026. 11. 9. (월) 오후 5시\n• 장소: 성균관대학교 화학관 330110호 (장소변경)\n• 대상: 소프트웨어학과 및 개발에 관심이 있는 학생(1,2학년 정원마감)\n• 사전 신청 링크: https://toss.im/_m/B2hX5sWq\n*사전 신청자 정원 마감 시, 설문이 조기 종료될 수 있습니다.\n\n■ 사전 신청 및 행사 참석 혜택\n• 사전 신청자 전원 햄버거 및 음료 증정\n• 사전 신청자 대상 경품 현장 추첨 1명 (에어팟5)\n• Q&A 세션 등을 통한 토스 굿즈 증정\n\n■ 이런 분들께 추천드려요\n• 토스 겨울 인턴십에 관심 있는 대학생 및 졸업예정자\n• 토스에서 개발자로 일하는 경험이 궁금한 분\n• AI 시대에 개발자로서 어떻게 성장해야 할지 고민하는 분",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><div><div><div><div><p><span><strong>화학관 330110호로 &nbsp;</strong></span>장소 변경되었습니다.</p><p>1, 2학년 정원 마감되었습니다.</p><p>토스에서 Platform Engineer 직무 겨울 인턴십 채용 설명회를 준비했어요!</p><p>이번 겨울 방학, 토스에서 인턴으로 일하면 어떤 경험을 할 수 있는지 직접 소개해 드리려고 해요.</p><p>AI가 코드를 쓰는 시대, 개발자는 어떤 역할을 해야 할까요?</p><p>이번 세션에서는 이 질문에 대한 토스팀의 생각도 함께 나눌 예정이에요.<br>토스가 일하는 방식과 앞으로 개발자에게 필요한 역량이 궁금하셨다면 좋은 기회가 될 거예요.</p><p>사전 신청자 대상으로 에어팟을 비롯한 다양한 경품 추천도 진행하니, 많은 관심과 참여 부탁드려요.</p><p><strong>■ 인턴십 채용 설명회</strong><br>• 일시: 2026. 11. 9. (월) 오후 5시<br>• 장소: <span><strong>성균관대학교 화학관 330110호 (장소변경)</strong></span><br>• 대상: 소프트웨어학과 및 개발에 관심이 있는 학생(1,2학년 정원마감)</p><p>• 사전 신청 링크: <span><a href=\"https://toss.im/_m/B2hX5sWq\"></a><strong><a href=\"https://toss.im/_m/B2hX5sWq\">https://toss.im/_m/B2hX5sWq</a></strong></span></p><p>*사전 신청자 정원 마감 시, 설문이 조기 종료될 수 있습니다.<br><br><strong>■ 사전 신청 및 행사 참석 혜택</strong><br>• 사전 신청자 전원 햄버거 및 음료 증정<br>• 사전 신청자 대상 경품 현장 추첨 1명 (에어팟5)<br>• Q&amp;A 세션 등을 통한 토스 굿즈 증정<br><strong><br></strong><strong>■ 이런 분들께 추천드려요</strong><br>• 토스 겨울 인턴십에 관심 있는 대학생 및 졸업예정자<br>• 토스에서 개발자로 일하는 경험이 궁금한 분</p><p>• AI 시대에 개발자로서 어떻게 성장해야 할지 고민하는 분</p><p><img src=\"https://cse.skku.edu/_res/editor_image/2026/10/gItstGUEKxqqGnZKqzPQ0.png\"></p></div></div></div></div></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://cse.skku.edu/_res/editor_image/2026/10/gItstGUEKxqqGnZKqzPQ0.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T18:24:00.504814+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-09T17:00:00+09:00"
+      }
+    },
+    "jasoseol-intern/106984": {
+      "notice": {
+        "id": "jasoseol-intern/106984",
+        "source_id": "jasoseol-intern",
+        "article_no": "106984",
+        "title": "[비즈테크아이] 26년 하반기 신입인턴 채용(전환형)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106984",
+        "posted_on": "2026-10-29",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:00:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106968": {
+      "notice": {
+        "id": "jasoseol-intern/106968",
+        "source_id": "jasoseol-intern",
+        "article_no": "106968",
+        "title": "[에이피알] [CS] 글로벌 CX 운영/기획 채용연계형 인턴사원 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106968",
+        "posted_on": "2026-10-29",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-27T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106957": {
+      "notice": {
+        "id": "jasoseol-intern/106957",
+        "source_id": "jasoseol-intern",
+        "article_no": "106957",
+        "title": "[에이피알] 아마존/틱톡샵 채널 운영 채용연계형 인턴사원 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106957",
+        "posted_on": "2026-10-29",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-27T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106956": {
+      "notice": {
+        "id": "jasoseol-intern/106956",
+        "source_id": "jasoseol-intern",
+        "article_no": "106956",
+        "title": "[딜라이트룸] 알라미 미국 인플루언서 마케팅 인턴 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106956",
+        "posted_on": "2026-10-29",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-08T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106922": {
+      "notice": {
+        "id": "jasoseol-intern/106922",
+        "source_id": "jasoseol-intern",
+        "article_no": "106922",
+        "title": "[와탭랩스] 총무 담당자 채용 전환형 인턴 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106922",
+        "posted_on": "2026-10-29",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-08T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106853": {
+      "notice": {
+        "id": "jasoseol-intern/106853",
+        "source_id": "jasoseol-intern",
+        "article_no": "106853",
+        "title": "[울산항만공사] 신입직원 (채용형 인턴) 및 체험형 청년인턴 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106853",
+        "posted_on": "2026-10-29",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-05T18:00:00+09:00",
+        "model": "source"
       }
     },
     "skku-notice01/141041": {
@@ -1570,6 +3225,164 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "sw-notice/227413": {
+      "notice": {
+        "id": "sw-notice/227413",
+        "source_id": "sw-notice",
+        "article_no": "227413",
+        "title": "[AI중심대학사업단] [84회] 글로벌 IT 전문가와 킹고인의 만남 시즌2 여든네번째 만남(10.28,수,12시)",
+        "category": "행사/세미나",
+        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=227413",
+        "posted_on": "2026-10-27",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[84회] 글로벌 IT 전문가와 킹고인의 만남 시즌2 여든한번째 만남\n\n“미국 유학과 취업, 정말 나도 할 수 있을까?”\n\n유학과 해외 취업을 꿈꾸지만 어디서부터 시작해야 할지 막막한가요?\n\n성균관대학교 소프트웨어학과를 졸업하고, 컬럼비아대학교 석사를 거쳐 현재 Amazon Software Engineer로 근무 중이신 차승종(Daniel Cha) 님을 모셨습니다.\n\n학부 시절 같은 고민을 했던 솦대생으로서, 미국 유학을 준비한 과정부터 해외 취업에 도전한 경험, 그리고 직접 부딪히며 알게 된 현실적인 팁과 실제로 도움이 되었던 방법들을 솔직하게 나눕니다!\n\n● 일시: 10월 28일(수) 12시 ~ 13시\n\n● 강연방식: 온/오프라인 하이브리드 강연\n\n● 강연자: 차승종 Daniel Cha (Amazon Software Engineer)\n\n● 강연참여\n\n- (자) 산학협력센터 6층 (85605호)\n- (인) 다산경제관 5층 글로벌라운지 (32535호)\n- 온라인 참여: 신청 이메일로 참여 링크 발송 *받은 메일함 확인*\n\n※ 오프라인 참여자는 No Show 금지! 약속을 지키는 킹고인\n\n● 참석 혜택: 오프라인 참석자에게 간단한 도시락 제공 (강연 종료 후)\n\n● 행사 참석 신청 (사전 신청 필수)\n\nhttps://gdg.community.dev/gdg-on-campus-sungkyunkwan-university-seoul-south-korea/\n\n● 신청 방법 가이드\n\nhttps://app.notion.com/p/1f61152c669c8086b332cec6bbbd871a?pvs=4\n\nGoogle Developer Groups on Campus @ Sungkyunkwan University\n\nhttps://www.instagram.com/gdg.skku/",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p>[84회] 글로벌 IT 전문가와 킹고인의 만남 시즌2 여든한번째 만남</p><p>“미국 유학과 취업, 정말 나도 할 수 있을까?”</p><p>유학과 해외 취업을 꿈꾸지만 어디서부터 시작해야 할지 막막한가요?</p><p>성균관대학교 소프트웨어학과를 졸업하고, 컬럼비아대학교 석사를 거쳐 현재 Amazon Software Engineer로 근무 중이신 차승종(Daniel Cha) 님을 모셨습니다.</p><p>학부 시절 같은 고민을 했던 솦대생으로서, 미국 유학을 준비한 과정부터 해외 취업에 도전한 경험, 그리고 직접 부딪히며 알게 된 현실적인 팁과 실제로 도움이 되었던 방법들을 솔직하게 나눕니다!</p><p>● 일시: 10월 28일(수) 12시 ~ 13시</p><p>● 강연방식: 온/오프라인 하이브리드 강연</p><p>● 강연자: 차승종 Daniel Cha (Amazon Software Engineer)</p><p>● 강연참여</p><p>- (자) 산학협력센터 6층 (85605호)</p><p>- (인) 다산경제관 5층 글로벌라운지 (32535호)</p><p>- 온라인 참여: 신청 이메일로 참여 링크 발송 *받은 메일함 확인*</p><p>※ 오프라인 참여자는 No Show 금지! 약속을 지키는 킹고인</p><p>● &nbsp;참석 혜택: 오프라인 참석자에게 간단한 도시락 제공 (강연 종료 후)</p><p>● &nbsp;행사 참석 신청 (사전 신청 필수)</p><p><a href=\"https://gdg.community.dev/gdg-on-campus-sungkyunkwan-university-seoul-south-korea/\">https://gdg.community.dev/gdg-on-campus-sungkyunkwan-university-seoul-south-korea/</a></p><p>● &nbsp;신청 방법 가이드</p><p><a href=\"https://app.notion.com/p/1f61152c669c8086b332cec6bbbd871a?pvs=4\">https://app.notion.com/p/1f61152c669c8086b332cec6bbbd871a?pvs=4</a></p><p>Google Developer Groups on Campus @ Sungkyunkwan University</p><p><a href=\"https://www.instagram.com/gdg.skku/\">https://www.instagram.com/gdg.skku/</a></p><p><img src=\"https://sw.skku.edu/_res/editor_image/2026/10/cZryHIgxGmVPXQFiUIjo0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://sw.skku.edu/_res/editor_image/2026/10/cZryHIgxGmVPXQFiUIjo0.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T18:24:00.504814+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-10-28T12:00:00+09:00"
+      }
+    },
+    "jasoseol-intern/106914": {
+      "notice": {
+        "id": "jasoseol-intern/106914",
+        "source_id": "jasoseol-intern",
+        "article_no": "106914",
+        "title": "[IBK기업은행] 2027년 동계 체험형 청년인턴 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106914",
+        "posted_on": "2026-10-27",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T10:00:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106891": {
+      "notice": {
+        "id": "jasoseol-intern/106891",
+        "source_id": "jasoseol-intern",
+        "article_no": "106891",
+        "title": "[하나저축은행] 2026 하반기 경력직원/채용형 인턴직원 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106891",
+        "posted_on": "2026-10-27",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-09T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106796": {
+      "notice": {
+        "id": "jasoseol-intern/106796",
+        "source_id": "jasoseol-intern",
+        "article_no": "106796",
+        "title": "[여수광양항만공사] 2026년 직원 채용 공고",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106796",
+        "posted_on": "2026-10-27",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-04T18:00:00+09:00",
+        "model": "source"
+      }
+    },
     "cse-notice/227380": {
       "notice": {
         "id": "cse-notice/227380",
@@ -1611,6 +3424,162 @@
       "summary": null,
       "body_attempts": 1,
       "fetched_at": "2026-11-03T13:53:22.645265+09:00"
+    },
+    "jasoseol-intern/106909": {
+      "notice": {
+        "id": "jasoseol-intern/106909",
+        "source_id": "jasoseol-intern",
+        "article_no": "106909",
+        "title": "[피에스케이] 인사직무 수시채용(경력/신입)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106909",
+        "posted_on": "2026-10-26",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-07T23:50:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106901": {
+      "notice": {
+        "id": "jasoseol-intern/106901",
+        "source_id": "jasoseol-intern",
+        "article_no": "106901",
+        "title": "[모두투어네트워크] 2026년 채용 연계형 인턴 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106901",
+        "posted_on": "2026-10-26",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-08T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106894": {
+      "notice": {
+        "id": "jasoseol-intern/106894",
+        "source_id": "jasoseol-intern",
+        "article_no": "106894",
+        "title": "[한국언론진흥재단(KPF)] 2026년 3차 체험형 청년인턴 모집(일반행정, AI)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106894",
+        "posted_on": "2026-10-26",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-09T17:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106854": {
+      "notice": {
+        "id": "jasoseol-intern/106854",
+        "source_id": "jasoseol-intern",
+        "article_no": "106854",
+        "title": "[가비아] 채용연계형 인턴 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106854",
+        "posted_on": "2026-10-26",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:00+09:00",
+        "model": "source"
+      }
     },
     "cse-notice/227362": {
       "notice": {
@@ -1727,6 +3696,324 @@
       "body_attempts": 1,
       "fetched_at": "2026-11-03T13:53:22.645265+09:00"
     },
+    "sw-notice/227207": {
+      "notice": {
+        "id": "sw-notice/227207",
+        "source_id": "sw-notice",
+        "article_no": "227207",
+        "title": "[AI중심대학사업단] 오픈소스 SW라이선스 이해 온라인 특강 안내",
+        "category": "행사/세미나",
+        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=227207",
+        "posted_on": "2026-10-22",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "오픈소스 SW라이선스 이해 온라인 특강 안내\n\nAI가 코드를 만들고 개발을 돕는 시대, 쉽고 빠르게 만드는 것만큼 올바르게 사용하는 것도 중요합니다.\n\n생성형 AI 기반 개발 도구와 오픈소스SW 활용이 보편화됨에 따라, 학생들이 개발 과정에서 라이선스를 정확히 이해하고 준수하는 역량이 더욱 중요해지고 있습니다.\n\n프로젝트에 사용되는 오픈소스는 어떻게 확인하고, 라이선스는 왜 알아야 할까요?\n\n한국저작권위원회에서 제공하는 온라인 교육에서 그 답을 확인해 보세요.\n\n교육명: 오픈소스SW 라이선스 이해\n\n교육 일시: 2026년 11월 5일(목) 11:00~12:00\n\n교육 방법: 온라인(ZOOM)\n\n강사: 정성인 센터장(ETRI)\n\n신청 링크:\nhttps://forms.gle/pobBysfn4dY6AJWv5\n\n문의: 김재현 산학교수, gimjaehyun@skku.edu\n※ ZOOM링크는 교육전에 제공하며, 킹고코인 마일리지 3,000코인 부여",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><strong>오픈소스 SW라이선스 이해 온라인 특강 안내</strong></p><ul><li><strong>AI</strong><strong>가 코드를 만들고 개발을 돕는 시대, 쉽고 빠르게 만드는 것만큼 올바르게 사용하는 것도 중요합니다.&nbsp;</strong></li><li><strong>&nbsp;</strong></li><li><strong>생성형 AI 기반 개발 도구와 오픈소스SW 활용이 보편화됨에 따라, 학생들이 개발 과정에서 라이선스를 정확히 이해하고 준수하는 역량이 더욱 중요해지고 있습니다.</strong></li><li><strong>&nbsp;</strong></li><li><strong>프로젝트에 사용되는 오픈소스는 어떻게 확인하고, 라이선스는 왜 알아야 할까요?</strong></li><li><br></li><li><strong>한국저작권위원회에서 제공하는 온라인 교육에서 그 답을 확인해 보세요.</strong></li></ul><ul><li><strong>교육명:</strong> 오픈소스SW 라이선스 이해</li><li><br></li><li><strong>교육 일시:</strong> 2026년 11월 5일(목) 11:00~12:00</li><li><br></li><li><strong>교육 방법:</strong> 온라인(ZOOM)&nbsp;</li><li><br></li><li><strong>강사:</strong> 정성인 센터장(ETRI)</li><li><br></li><li><strong>신청 링크:</strong>\n<a href=\"https://forms.gle/pobBysfn4dY6AJWv5\"></a><a href=\"https://forms.gle/pobBysfn4dY6AJWv5\">https://forms.gle/pobBysfn4dY6AJWv5</a></li></ul><p><img src=\"https://sw.skku.edu/_res/editor_image/2026/10/njtXrUBgYxYcaTqAEfsC0.png\"></p><ul><li><strong>문의</strong>: 김재현 산학교수, <a href=\"mailto:gimjaehyun@skku.edu\">gimjaehyun@skku.edu</a></li><li>※ ZOOM링크는 교육전에 제공하며, 킹고코인 마일리지 3,000코인 부여</li></ul><p><img src=\"https://sw.skku.edu/_res/editor_image/2026/10/MYBgSNvASjiCmtuZslGC0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://sw.skku.edu/_res/editor_image/2026/10/njtXrUBgYxYcaTqAEfsC0.png",
+        "https://sw.skku.edu/_res/editor_image/2026/10/MYBgSNvASjiCmtuZslGC0.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T18:24:00.504814+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-05T11:00:00+09:00"
+      }
+    },
+    "futurecar-notice/67417": {
+      "notice": {
+        "id": "futurecar-notice/67417",
+        "source_id": "futurecar-notice",
+        "article_no": "67417",
+        "title": "GLS 마이크로디그리 이수 신청 방법 안내 [접수]",
+        "category": null,
+        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=67417",
+        "posted_on": "2026-10-22",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "안녕하세요, 미래차부트캠프사업단입니다.\n마이크로디그리 이수 신청 방법을 안내드립니다.\n\n1. 신청경로\nGLS 접속 → 마이크로디그리 이수신청\n\n2. 신청방법\n1. 「마이크로디그리 이수신청」 화면에서 [추가] 버튼을 클릭합니다.\n2. 새로 생성된 행의 마이크로디그리 항목에서 [▼] 버튼을 클릭합니다.\n3. 신청하고자 하는 미래차 분야의 마이크로디그리를 선택합니다.\n4. [추가] 버튼을 클릭하여 신청을 완료합니다.\n\n신청 기간 내에 원하는 미래차 분야의 마이크로디그리를 선택하여 신청해 주시기 바랍니다.\n※ GLS 마이크로디그리 신청과 별개로 아이캠퍼스에서도 신청해야 합니다.\n\n감사합니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "GLS 마이크로디그리 신청방법.jpg",
+          "url": "https://swb.skku.edu/futurecar/notice.do?mode=download&articleNo=67417&attachNo=64194",
+          "type": "JPG",
+          "size": null
+        }
+      ],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\t\t\t\t<div><p>안녕하세요, 미래차부트캠프사업단입니다.</p><p>마이크로디그리 이수 신청 방법을 안내드립니다.</p><p><strong>1. 신청경로</strong></p><p>GLS 접속 → <strong>마이크로디그리 이수신청</strong></p><p><strong>2. 신청방법</strong></p><p>&nbsp; &nbsp; &nbsp;1. 「마이크로디그리 이수신청」 화면에서 <strong>[추가]</strong> 버튼을 클릭합니다.</p><p>&nbsp; &nbsp; &nbsp;2. &nbsp;새로 생성된 행의 마이크로디그리 항목에서 <strong>[▼]</strong> 버튼을 클릭합니다.</p><p>&nbsp; &nbsp; &nbsp;3. &nbsp;신청하고자 하는 미래차 분야의 마이크로디그리를 선택합니다.</p><p>&nbsp; &nbsp; &nbsp;4. &nbsp;<strong>[추가]</strong> 버튼을 클릭하여 신청을 완료합니다.</p><p>신청 기간 내에 원하는 미래차 분야의 마이크로디그리를 선택하여 신청해 주시기 바랍니다.</p><p>※ GLS 마이크로디그리 신청과 별개로 아이캠퍼스에서도 신청해야 합니다.</p><p>감사합니다.</p></div>\n\t\t\t\n\t\t\t\n          </div>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T18:24:00.504814+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "futurecar-notice/67378": {
+      "notice": {
+        "id": "futurecar-notice/67378",
+        "source_id": "futurecar-notice",
+        "article_no": "67378",
+        "title": "아이캠퍼스 신청 절차 변경 및 개인정보동의서 작성 유의사항 [접수]",
+        "category": null,
+        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=67378",
+        "posted_on": "2026-10-22",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "안녕하세요, 미래차부트캠프사업단입니다.\n아이캠퍼스 신청 절차가 변경되어 아래와 같이 안내드립니다.\n\n1. 신청절차 변경\n- 기존: 아이캠퍼스 신청 후 월 2회 승인 절차를 거쳐 신청 완료\n- 변경: 별도의 승인 절차 없이 아이캠퍼스에서 신청하면 완료\n변경된 절차에 따라 앞으로는 아이캠퍼스에서 신청만 진행하시면 됩니다.\n\n2. 이수분야별 그룹핑\n기존에는 신청 후 선택한 이수분야에 따라 학생들을 그룹핑하였으나, 앞으로는 별도의 승인 절차 없이 신청이\n완료되므로 신규 신청자에 대한 이수분야별 그룹핑은 진행하지 않습니다.\n다만, 기존에 그룹핑이 완료된 학생들은 그룹핑을 해제하지 않을 예정이므로 해당 사항은 별도로 신경 쓰지\n않으셔도 됩니다.\n\n3. 개인정보동의서 작성 유의사항\n개인정보동의서 업로드 시 기재 항목이 누락되지 않도록 모든 항목을 빠짐없이 작성해 주시기 바랍니다.\n\n감사합니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\t\t\t\t<div><p>안녕하세요, 미래차부트캠프사업단입니다.</p><p>아이캠퍼스 신청 절차가 변경되어 아래와 같이 안내드립니다.</p><p><strong>1. 신청절차 변경</strong></p><p>&nbsp; &nbsp; &nbsp;- <strong>기존</strong>: 아이캠퍼스 신청 후 월 2회 승인 절차를 거쳐 신청 완료</p><p>&nbsp; &nbsp; &nbsp;- <strong>변경</strong>: 별도의 승인 절차 없이 아이캠퍼스에서 신청하면 완료</p><p>변경된 절차에 따라 앞으로는 <u>아이캠퍼스에서 신청만 진행하시면 됩니다.</u></p><p><strong>2. 이수분야별 그룹핑</strong></p><p>&nbsp; &nbsp; &nbsp;기존에는 신청 후 선택한 이수분야에 따라 학생들을 그룹핑하였으나, 앞으로는 별도의 승인 절차 없이 신청이</p><p>&nbsp; &nbsp; &nbsp;완료되므로 신규 신청자에 대한 이수분야별 그룹핑은 진행하지 않습니다.</p><p>&nbsp; &nbsp; &nbsp; 다만, 기존에 그룹핑이 완료된 학생들은 그룹핑을 해제하지 않을 예정이므로 해당 사항은 별도로 신경 쓰지&nbsp;</p><p>&nbsp; &nbsp; &nbsp; 않으셔도 됩니다.</p><p><strong>3. 개인정보동의서 작성 유의사항</strong></p><p>&nbsp; &nbsp; &nbsp; &nbsp;개인정보동의서 업로드 시 기재 항목이 누락되지 않도록 모든 항목을 빠짐없이 작성해 주시기 바랍니다.</p><p>감사합니다.</p></div>\n\t\t\t\n\t\t\t\n          </div>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T18:24:00.504814+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/106837": {
+      "notice": {
+        "id": "jasoseol-intern/106837",
+        "source_id": "jasoseol-intern",
+        "article_no": "106837",
+        "title": "[에이피알] 에이프릴스킨 온라인 마케팅 채용연계형 인턴사원 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106837",
+        "posted_on": "2026-10-21",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-20T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106819": {
+      "notice": {
+        "id": "jasoseol-intern/106819",
+        "source_id": "jasoseol-intern",
+        "article_no": "106819",
+        "title": "[채널코퍼레이션] Recruiting Coordinator 인턴",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106819",
+        "posted_on": "2026-10-21",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-20T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106798": {
+      "notice": {
+        "id": "jasoseol-intern/106798",
+        "source_id": "jasoseol-intern",
+        "article_no": "106798",
+        "title": "[BGF로지스] 2026년 4분기 채용연계형 인턴 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106798",
+        "posted_on": "2026-10-21",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-03T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106863": {
+      "notice": {
+        "id": "jasoseol-intern/106863",
+        "source_id": "jasoseol-intern",
+        "article_no": "106863",
+        "title": "[피에스케이] 전략기획 직무 채용(신입/경력)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106863",
+        "posted_on": "2026-10-20",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-06T23:50:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106814": {
+      "notice": {
+        "id": "jasoseol-intern/106814",
+        "source_id": "jasoseol-intern",
+        "article_no": "106814",
+        "title": "[에이피알] [HR] 인재개발(HRD) 채용연계형 인턴사원 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106814",
+        "posted_on": "2026-10-20",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-03T23:59:00+09:00",
+        "model": "source"
+      }
+    },
     "skku-notice01/140492": {
       "notice": {
         "id": "skku-notice01/140492",
@@ -1768,6 +4055,723 @@
       "summary": null,
       "body_attempts": 1,
       "fetched_at": "2026-11-03T14:44:43.370511+09:00"
+    },
+    "jasoseol-intern/106756": {
+      "notice": {
+        "id": "jasoseol-intern/106756",
+        "source_id": "jasoseol-intern",
+        "article_no": "106756",
+        "title": "[윗유] [전환형 인턴십] 글로벌 틱톡샵 어필리에이트 마케터 (수료 축하금 100만원 지급)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106756",
+        "posted_on": "2026-10-16",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-16T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "sw-notice/226947": {
+      "notice": {
+        "id": "sw-notice/226947",
+        "source_id": "sw-notice",
+        "article_no": "226947",
+        "title": "(실험 참가자 모집 공고) AI 면접 환경에 따른 지원자의 인식과 경험에 관한 연구",
+        "category": "채용/모집",
+        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=226947",
+        "posted_on": "2026-10-15",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[연구 참여 안내]\n성균관대학교 인터랙션사이언스학과에서 실험 참가자를 모집합니다.\n본 실험은 AI 면접 환경에 따른 지원자의 인식과 사용자 경험에 관한 연구로, AI 면접 프로그램을 직접 경험해보고 간단한 설문조사를 진행합니다.\n본 실험은 만 19세 이상의 국내 재학 혹은 휴학 중인 한국 국적의 학부생 및 대학원생 모두 참여 가능합니다.\n실험은 선착순으로 마감될 예정이니, 많은 참여 부탁드립니다. 감사합니다.\n\n● 실험방법: 온라인 참여 (신청 후 바로 실험 참여 링크 확인 가능. 신청서 작성 이후 미참여 시에만 연구자가 메일 송부 예정)\n● 조용한 공간, 카메라와 마이크 사용이 가능한 노트북 사용 (핸드폰 참여불가)\n● 음성이 나오니 시작 전 볼륨을 켜주세요.\n\n● 소요시간: 약 30~40분\n● 참여사례: 1만원 네이버페이 지급\n(실험 참여 완료 후 약 3~4주 소요 예정)\n● 참가신청: 하단의 링크 혹은 QR 코드 https://forms.gle/Tv7MpLHQwpfrQsGU8\n\n연구담당자: 김영은 010-4822-9067 yekim@g.skku.edu\n*실험에 관한 문의사항은 연구담당자에게 연락주시기 바랍니다",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><div><b>[연구 참여 안내]</b></div><div>성균관대학교 인터랙션사이언스학과에서 실험 참가자를 모집합니다.<br>본 실험은 AI 면접 환경에 따른 지원자의 인식과 사용자 경험에 관한 연구로, AI 면접 프로그램을 직접 경험해보고 간단한 설문조사를 진행합니다.<br>본 실험은 만 19세 이상의 국내 재학 혹은 휴학 중인 한국 국적의 학부생 및 대학원생 모두 참여 가능합니다.<br>실험은 선착순으로 마감될 예정이니, 많은 참여 부탁드립니다. 감사합니다.<br><br>● 실험방법: 온라인 참여 (신청 후 바로 실험 참여 링크 확인 가능. 신청서 작성 이후 미참여 시에만 연구자가 메일 송부 예정)<br>● 조용한 공간, 카메라와 마이크 사용이 가능한 노트북 사용 (핸드폰 참여불가)<br>● 음성이 나오니 시작 전 볼륨을 켜주세요.<br>&nbsp;<br>● 소요시간: 약 30~40분<br>● 참여사례: 1만원 네이버페이 지급<br>(실험 참여 완료 후 약 3~4주 소요 예정)<br>● 참가신청: 하단의 링크 혹은 QR 코드 <a href=\"https://forms.gle/Tv7MpLHQwpfrQsGU8\"></a><a href=\"https://forms.gle/Tv7MpLHQwpfrQsGU8\">https://forms.gle/Tv7MpLHQwpfrQsGU8</a><br><br>연구담당자: 김영은 010-4822-9067 <a href=\"mailto:yekim@g.skku.edu\">yekim@g.skku.edu</a><br>*실험에 관한 문의사항은 연구담당자에게 연락주시기 바랍니다</div><p><img src=\"https://sw.skku.edu/_res/editor_image/2026/10/DxKdswvMcNWpMTkDajdR0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://sw.skku.edu/_res/editor_image/2026/10/DxKdswvMcNWpMTkDajdR0.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T18:24:00.504814+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/106748": {
+      "notice": {
+        "id": "jasoseol-intern/106748",
+        "source_id": "jasoseol-intern",
+        "article_no": "106748",
+        "title": "[이노션] 앱 서비스 기획 (상시채용 인재풀)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106748",
+        "posted_on": "2026-10-15",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-31T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106746": {
+      "notice": {
+        "id": "jasoseol-intern/106746",
+        "source_id": "jasoseol-intern",
+        "article_no": "106746",
+        "title": "[이노션] UI/UX 디자인 (상시채용 인재풀)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106746",
+        "posted_on": "2026-10-15",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-31T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106743": {
+      "notice": {
+        "id": "jasoseol-intern/106743",
+        "source_id": "jasoseol-intern",
+        "article_no": "106743",
+        "title": "[이노션] 웹/앱 전략·운영 (상시채용 인재풀)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106743",
+        "posted_on": "2026-10-15",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-31T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106741": {
+      "notice": {
+        "id": "jasoseol-intern/106741",
+        "source_id": "jasoseol-intern",
+        "article_no": "106741",
+        "title": "[이노션] 웹 서비스 기획 (상시채용 인재풀)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106741",
+        "posted_on": "2026-10-15",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-31T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106722": {
+      "notice": {
+        "id": "jasoseol-intern/106722",
+        "source_id": "jasoseol-intern",
+        "article_no": "106722",
+        "title": "[신세계인터내셔날] 국내/해외 영업·디자인 인턴 모집 (퍼셀·스튜디오 톰보이·어뮤즈)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106722",
+        "posted_on": "2026-10-15",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-14T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106686": {
+      "notice": {
+        "id": "jasoseol-intern/106686",
+        "source_id": "jasoseol-intern",
+        "article_no": "106686",
+        "title": "[솔트룩스] (인턴십/취업연계 기회) AI 에이전트 서비스 개발자 전액 국비지원 교육 AI 캠프",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106686",
+        "posted_on": "2026-10-15",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-10T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "sw-notice/226873": {
+      "notice": {
+        "id": "sw-notice/226873",
+        "source_id": "sw-notice",
+        "article_no": "226873",
+        "title": "[MCL 주식회사]UI/UX 리서치 및 웹 디자인 인턴모집 공고",
+        "category": "채용/모집",
+        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=226873",
+        "posted_on": "2026-10-14",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null
+    },
+    "jasoseol-intern/106709": {
+      "notice": {
+        "id": "jasoseol-intern/106709",
+        "source_id": "jasoseol-intern",
+        "article_no": "106709",
+        "title": "[모두닥] [채용전환형/월500만원] Problem Solver (Sales Focused) 인턴",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106709",
+        "posted_on": "2026-10-14",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106708": {
+      "notice": {
+        "id": "jasoseol-intern/106708",
+        "source_id": "jasoseol-intern",
+        "article_no": "106708",
+        "title": "[모두닥] [채용전환형/월500만원] Problem Solver (Engineering Focused) 인턴",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106708",
+        "posted_on": "2026-10-14",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "futurecar-notice/67200": {
+      "notice": {
+        "id": "futurecar-notice/67200",
+        "source_id": "futurecar-notice",
+        "article_no": "67200",
+        "title": "2026학년도 2학기 미래차 SDV/전동화/자율주행 마이크로디그리 신청 안내 - 10/19(월)~10/23(금) [접수]",
+        "category": null,
+        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=67200",
+        "posted_on": "2026-10-13",
+        "pinned": false,
+        "deadline": "2026-10-23T23:59:00+09:00",
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "2026학년도 2학기 (1차) 「미래차 SDV/전동화/자율주행 마이크로디그리」에 대하여 아래와 같이 안내하오니 관심있는 학생들의 많은 신청 바랍니다.\n\n■교육과정 : 미래차 특화 분야(SDV, 전동화, 자율주행)별 교과 및 비교과(첨부파일 참고)\n\n■신청기간 : 2026. 10. 19.(월) 10:00 ~ 10. 23.(금)\n\n■신청방법 : 미래차 부트캠프 참여신청 후 마이크로디그리 신청\n1)미래차 부트캠프 참여신청(상시신청): i-Campus '미래차 부트캠프(신청)' 강좌 신청 후 강의콘텐츠의 '부트캠프 참여 신청' 설문 제출\n2)마이크로디그리 신청: GLS → 신청/자격 관리 → 마이크로디그리 → 조회 → 미래차 SDV/ 전동화/ 자율주행 마이크로디그리 이수 신청, 제출\n\n■신청대상 : 성균관대학교 학부생\n\n■문의(Q&A) : https://padlet.com/skkuautolab/padlet-hl7l4xx0dem5ysrq",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "미래차_SDV,_전동화,_자율주행_마이크로디그리_안내자료(2026-2학기) 공지용.pdf",
+          "url": "https://swb.skku.edu/futurecar/notice.do?mode=download&articleNo=67200&attachNo=63973",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\t\t\t\t<div><p><span><br></span></p><p><span><span>2026학년도 2학기 (1차) <span>「</span>미래차 SDV/전동화/자율주행 마이크로디그리</span><span>」에 대하여 아래와 같이 안내하오니 관심있는 학생들의 많은 신청 바랍니다.</span></span></p><p><span><br></span></p><p><span>■교육과정 : 미래차 특화 분야(SDV, 전동화, 자율주행)별 교과 및 비교과(첨부파일 참고)</span></p><p><span><br></span></p><p><span>■신청기간 : 2026. 10. 19.(월) 10:00 ~ 10. 23.(금)&nbsp;</span></p><p><span><br></span></p><p><span>■신청방법 : 미래차 부트캠프 참여신청 후 마이크로디그리 신청</span></p><p><span>1)미래차 부트캠프 참여신청(상시신청): i-Campus '미래차 부트캠프(신청)' 강좌 신청 후 강의콘텐츠의 '부트캠프 참여 신청' 설문 제출</span></p><p><span>2)마이크로디그리 신청: GLS → 신청/자격 관리 → 마이크로디그리 → 조회 → 미래차 SDV/ 전동화/ 자율주행 마이크로디그리 이수 신청, 제출</span></p><p><span><br></span></p><p><span>■신청대상 : 성균관대학교 학부생</span></p><p><span><br></span></p><p><span>■문의(Q&amp;A) : <a href=\"https://padlet.com/skkuautolab/padlet-hl7l4xx0dem5ysrq\"></a></span><a href=\"https://padlet.com/skkuautolab/padlet-hl7l4xx0dem5ysrq\"><span>https://padlet.com/skkuautolab/padlet-hl7l4xx0dem5ysrq</span></a></p><p><span><img src=\"https://swb.skku.edu/_res/editor_image/2026/10/IlQQNyxIrPAazkqpEOfv.png\"></span><br></p></div>\n\t\t\t\n\t\t\t\n          </div>",
+      "images": [
+        "https://swb.skku.edu/_res/editor_image/2026/10/IlQQNyxIrPAazkqpEOfv.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T18:24:00.504814+09:00"
+    },
+    "futurecar-notice/67086": {
+      "notice": {
+        "id": "futurecar-notice/67086",
+        "source_id": "futurecar-notice",
+        "article_no": "67086",
+        "title": "2026 미래형자동차 인재페스티벌-(미래차 부트캠프 라운드업 연계) 개최 및 사전 신청안내 - ~10/11(일) [접수]",
+        "category": null,
+        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=67086",
+        "posted_on": "2026-10-07",
+        "pinned": false,
+        "deadline": "2026-10-11T23:59:00+09:00",
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "「2026 미래형자동차 인재페스티벌」 \"기업 직무·진로 설명회 & 직무 멘토링 Day\"의 참여 학생을 모집하오니\n관심있는 학생들의 많은 참여 바랍니다.\n\n- 일시 : 2026.10.14(수) 09:50 ~ 17:30\n\n- 장소 : 서울, 삼성동 COEX 컨퍼런스룸(남) 307호, 308호, A홀\n\n- 대상 : 미래차분야 인력양성 사업 학부생 및 대학원생, 졸업생, 기업 등\n\n- 모빌리티융합관: 2026.10.13(화) ~ 10.16(금)\n\n- 사전신청 기간: ~10/11(일), 선착순 배정 후 개별안내~10/12(월)\n\n- 직무멘토링 신청: https://forms.gle/AKxAFipe6UoaSrt59\n\n- 직무진로설명회 및 포럼 신청: https://forms.gle/xyUe5TiavCBTh7LV7\n\n※ (EVENT 1) 행사 참석자 중 1명(프로그램별)을 추첨하여 '에어팟' 증정(그 외, 추가 추첨을 통해 소정의 ‘기념품’ 제공)\n※ (EVENT 2) 직무진로설명회 및 직무 멘토링 프로그램 모두 참석한 학부생 및 대학원생 대상 소정의 ‘기념품’ 제공\n※ (EVENT 3) 직무 멘토링 사전 신청자 중 직무진로설명회 등 함께 신청한 학생 대상 점심식사권 제공 (소진시까지)\n※ (EVENT 4) 모든 참석자 대상, 한국전자전 및 반도체전 전시기간 동안 참관 가능한 출입증 제공(자유롭게 전시장 출입 가능)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "2. (멘토링 프로그램)_2026 직무 멘토링_DM_(인재페스티벌-부트캠프라운드업)_KEA_최종.jpg",
+          "url": "https://swb.skku.edu/futurecar/notice.do?mode=download&articleNo=67086&attachNo=63860",
+          "type": "JPG",
+          "size": null
+        },
+        {
+          "name": "3. (직무설명회 프로그램)_2026 직무진로 설명회_DM_(인재페스티벌-부트캠프라운드업)_KEA_최종.jpg",
+          "url": "https://swb.skku.edu/futurecar/notice.do?mode=download&articleNo=67086&attachNo=63861",
+          "type": "JPG",
+          "size": null
+        },
+        {
+          "name": "4. (포럼)_2026 인사이트 포럼_DM_(미래차 인재페스티벌)_KEA_최종.jpg",
+          "url": "https://swb.skku.edu/futurecar/notice.do?mode=download&articleNo=67086&attachNo=63862",
+          "type": "JPG",
+          "size": null
+        }
+      ],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\t\t\t\t<div><p>「2026 미래형자동차 인재페스티벌」 \"기업 직무·진로 설명회 &amp; 직무 멘토링 Day\"의 참여 학생을 모집하오니</p><p>&nbsp;관심있는 학생들의 많은 참여 바랍니다.</p><p>- 일시 : 2026.10.14(수) 09:50 ~ 17:30</p><p>- 장소 : 서울, 삼성동 COEX 컨퍼런스룸(남) 307호, 308호, A홀</p><p>- 대상 : 미래차분야 인력양성 사업 학부생 및 대학원생, 졸업생, 기업 등</p><p>- 모빌리티융합관: 2026.10.13(화) ~ 10.16(금)</p><div><br></div><p>- 사전신청 기간: &nbsp;~10/11(일), 선착순 배정 후 개별안내~10/12(월)</p><p>- 직무멘토링 신청: <a href=\"https://forms.gle/AKxAFipe6UoaSrt59\"></a><a href=\"https://forms.gle/\">https://forms.gle/</a><a href=\"https://forms.gle/AKxAFipe6UoaSrt59\">AKxAFipe6UoaSrt59</a></p><p>- 직무진로설명회 및 포럼 신청: <a href=\"https://forms.gle/xyUe5TiavCBTh7LV7\"></a><a href=\"https://forms.gle/\">https://forms.gle/</a><a href=\"https://forms.gle/xyUe5TiavCBTh7LV7\">xyUe5TiavCBTh7LV7</a></p><p><span><br></span></p><p><span><span><strong>※ (EVENT 1) 행사 참석자 중 1명(프로그램별)을 추첨하여 '에어팟' 증정</strong></span><strong><span>(그 외, 추가 추첨을 통해 소정의 ‘기념품’ 제공)</span></strong></span></p><p><span><strong><span>※ (EVENT 2) 직무진로설명회 및 직무 멘토링 프로그램 모두 참석한 학부생 및 대학원생 대상 소정의 ‘기념품’ &nbsp;제공</span></strong></span></p><p><span><strong><span>※ (EVENT 3) 직무 멘토링 사전 신청자 중 직무진로설명회 등 함께 신청한 학생 대상 점심식사권 제공&nbsp;(소진시까지)</span></strong></span></p><p><span><strong><span>※ (EVENT 4) 모든 참석자 대상, 한국전자전 및 반도체전 전시기간 동안 참관 가능한 출입증 제공</span></strong></span><span><strong>(자유롭게 전시장 출입 가능)</strong></span></p><div><img src=\"https://swb.skku.edu/_res/editor_image/2026/10/sicSRUeRLBwRAJwIxRSp.png\"></div></div>\n\t\t\t\n\t\t\t\n          </div>",
+      "images": [
+        "https://swb.skku.edu/_res/editor_image/2026/10/sicSRUeRLBwRAJwIxRSp.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T18:24:00.504814+09:00"
+    },
+    "sw-notice/226552": {
+      "notice": {
+        "id": "sw-notice/226552",
+        "source_id": "sw-notice",
+        "article_no": "226552",
+        "title": "2026학년도 2학기 성적우수장학금 안내",
+        "category": "장학",
+        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=226552",
+        "posted_on": "2026-10-06",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null
+    },
+    "sw-notice/226082": {
+      "notice": {
+        "id": "sw-notice/226082",
+        "source_id": "sw-notice",
+        "article_no": "226082",
+        "title": "[AI중심대학사업단] 글로벌 IT전문가와 킹고인의 만남 시즌2 여든세 번째 만남 (9/30, 수, 12시)",
+        "category": "행사/세미나",
+        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=226082",
+        "posted_on": "2026-09-23",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null
+    },
+    "sw-notice/226065": {
+      "notice": {
+        "id": "sw-notice/226065",
+        "source_id": "sw-notice",
+        "article_no": "226065",
+        "title": "『2027 경기도 대학생 자율주행 경진대회』공고 및 신청 안내(~10/5, 17시까지)",
+        "category": null,
+        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=226065",
+        "posted_on": "2026-09-23",
+        "pinned": false,
+        "deadline": "2026-10-05T23:59:00+09:00",
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null
+    },
+    "sw-notice/225945": {
+      "notice": {
+        "id": "sw-notice/225945",
+        "source_id": "sw-notice",
+        "article_no": "225945",
+        "title": "[한화그룹] 테크&라이프부문 신입채용 공고",
+        "category": "채용/모집",
+        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=225945",
+        "posted_on": "2026-09-22",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null
+    },
+    "futurecar-notice/66723": {
+      "notice": {
+        "id": "futurecar-notice/66723",
+        "source_id": "futurecar-notice",
+        "article_no": "66723",
+        "title": "『2027 경기도 대학생 자율주행 경진대회』공고 및 신청 안내(~10/5, 17시까지) [접수]",
+        "category": null,
+        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=66723",
+        "posted_on": "2026-09-22",
+        "pinned": false,
+        "deadline": "2026-10-05T23:59:00+09:00",
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null
+    },
+    "futurecar-notice/66559": {
+      "notice": {
+        "id": "futurecar-notice/66559",
+        "source_id": "futurecar-notice",
+        "article_no": "66559",
+        "title": "2026 한국자동차공학회 추계학술대회 참가 신청 마감 안내 [접수]",
+        "category": null,
+        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=66559",
+        "posted_on": "2026-09-14",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T18:24:00.504814+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null
     }
   }
 }

@@ -550,7 +550,7 @@ export class SettingsView extends LitElement {
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">구글 캘린더 자동 연결</p>
-              <p class="setting-help">내 공지와 저장한 공지의 마감을 "성대 공지" 캘린더에 15분마다 맞춰 넣어요. 기기를 꺼 둬도 돼요. 마감 30분 전에 구글 알림이 울려요</p>
+              <p class="setting-help">성대 공지와 저장한 인턴 공고의 마감을 "성대 공지" 캘린더에 15분마다 맞춰 넣어요. 기기를 꺼 둬도 돼요. 마감 30분 전에 구글 알림이 울려요</p>
             </div>
             <div class="setting-control" data-needs-link>
               <p class="field-note link-note">위 연결에서 GitHub에 연결하면 쓸 수 있어요</p>

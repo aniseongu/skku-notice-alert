@@ -14,7 +14,6 @@ from urllib.parse import quote
 import httpx
 
 from skku_notice.deadline import KST
-from skku_notice.interests import is_mine
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 API = "https://www.googleapis.com/calendar/v3"
@@ -33,16 +32,14 @@ def _event_id(notice_id: str) -> str:
     return "skku" + base64.b32hexencode(digest).decode().lower().rstrip("=")
 
 
-_mine = is_mine
-
-
-def desired_events(notices: list[dict], matched: dict, saved: list[dict], now: datetime,
+def desired_events(notices: list[dict], saved: list[dict], now: datetime,
                    external: frozenset[str] = frozenset()) -> dict[str, dict]:
-    """Deadline events for 내 공지 and saved notices whose deadline is still ahead."""
-    chosen = {n["id"]: n for n in notices if _mine(matched.get(n["id"]), n["source_id"] in external)}
+    """Future school deadlines and saved external postings, using current data when available."""
+    by_id = {n["id"]: n for n in notices}
+    chosen = {n["id"]: n for n in notices if n["source_id"] not in external}
     for item in saved:
         if isinstance(item, dict) and isinstance(item.get("id"), str):
-            chosen.setdefault(item["id"], item)
+            chosen.setdefault(item["id"], by_id.get(item["id"], item))
     events = {}
     for notice in chosen.values():
         if not notice.get("deadline") or not notice.get("url", "").startswith("https://"):
@@ -55,7 +52,7 @@ def desired_events(notices: list[dict], matched: dict, saved: list[dict], now: d
             continue
         events[_event_id(notice["id"])] = {
             "summary": f"[{kind}] {notice.get('title_ko') or notice['title']}"[:250],
-            "description": f"{notice['url']}\n성대 공지 앱이 넣은 일정이에요. 저장을 지우면 함께 빠져요.",
+            "description": f"{notice['url']}\n성대 공지 앱이 넣은 일정이에요.",
             "start": {"dateTime": start.isoformat(), "timeZone": "Asia/Seoul"},
             "end": {"dateTime": end.isoformat(), "timeZone": "Asia/Seoul"},
             "source": {"title": "원문", "url": notice["url"]},
@@ -134,13 +131,12 @@ def main(api_dir: Path = Path("site/api/v1")) -> int:
         listing = json.loads((api_dir / "notices.json").read_text(encoding="utf-8"))
         notices = listing["notices"]
         external = frozenset(s["id"] for s in listing.get("sources", []) if s.get("external"))
-        matched = json.loads((api_dir / "matched.json").read_text(encoding="utf-8")).get("items", {})
         saved = json.loads(os.environ.get("SAVED_NOTICES") or "[]")
     except (OSError, ValueError, KeyError):
         print("구글 캘린더: 공지 파일을 읽지 못했어요", file=sys.stderr)
         return 1
     saved_list = saved if isinstance(saved, list) else []
-    desired = desired_events(notices, matched, saved_list, datetime.now(KST), external)
+    desired = desired_events(notices, saved_list, datetime.now(KST), external)
     try:
         with httpx.Client(timeout=15) as client:
             token = access_token(client, values["GOOGLE_CLIENT_ID"], values["GOOGLE_CLIENT_SECRET"],

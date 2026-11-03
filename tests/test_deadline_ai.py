@@ -61,7 +61,7 @@ def test_body_date_fills_public_notice_and_calendar():
     public = _public_notice(item)
     assert public["deadline"] == "2026-11-18T10:30:00+09:00" and public["deadline_kind"] == "일정"
     now = datetime(2026, 11, 3, tzinfo=KST)
-    events = gcal.desired_events([public], {}, [public | {"saved_at": "x"}], now)
+    events = gcal.desired_events([public], [public | {"saved_at": "x"}], now)
     event = next(iter(events.values()))
     assert event["summary"] == "[일정] 모집"
     assert event["start"]["dateTime"].startswith("2026-11-18T10:30")

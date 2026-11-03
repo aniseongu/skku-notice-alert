@@ -594,7 +594,7 @@ export class NoticeApp extends LitElement {
 
   private bodyView(loaded: NoticeBody | null, heading = '본문', external = false) {
     if (!loaded) return html`<p class="detail-note">본문은 아직 받지 않았어요. 원문 열기로 볼 수 있어요</p>`;
-    if (external && !loaded.body) return html`<p class="detail-note">자세한 내용과 지원 방법은 원문 열기에서 볼 수 있어요</p>`;
+    if (external && !loaded.body && !loaded.body_html && !loaded.images?.length) return html`<p class="detail-note">자세한 내용과 지원 방법은 원문 열기에서 볼 수 있어요</p>`;
     const paragraphs = (loaded.body ?? '').split(/\n+/).filter(Boolean);
     // 정제한 본문 HTML이 있으면 표, 굵게, 링크, 목록을 살려 그린다(D-016). 그림도 그 안에 들어 있다.
     if (loaded.body_html && !loaded.body_from_image) {

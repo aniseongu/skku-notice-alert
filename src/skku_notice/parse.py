@@ -199,3 +199,22 @@ def parse_detail(html: str, base_url: str) -> Detail:
         if len(images) == 10:
             break
     return Detail(text, attachments, tuple(images), _html_body(body, base_url))
+
+
+def parse_external_fragment(markup: str, base_url: str) -> Detail:
+    """Parse a public external posting using the same HTML and URL sanitization as school notices."""
+    body = LexborHTMLParser(markup).body
+    if body is None:
+        raise ParseError("external detail body not found")
+    text = "\n".join(" ".join(line.split()) for line in _body(body).splitlines()).strip()
+    images = []
+    for image in body.css("img[src]"):
+        url = _image_url(image.attributes["src"], base_url)
+        if url and url not in images:
+            images.append(url)
+            if len(images) == 10:
+                break
+    cleaned = _html_body(body, base_url)
+    if not text and not images:
+        raise ParseError("external detail body empty")
+    return Detail(text, (), tuple(images), cleaned)

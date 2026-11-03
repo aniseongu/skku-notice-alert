@@ -74,7 +74,7 @@ export class NoticeApp extends LitElement {
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true },
-    saved: { state: true }, read: { state: true }, originalOpen: { state: true },
+    saved: { state: true }, read: { state: true },
   };
 
   notices: Notice[] = [];
@@ -87,8 +87,6 @@ export class NoticeApp extends LitElement {
   keyword: string | null = null;
   keywords = loadKeywords();
   saved: SavedNotice[] = loadSaved();
-  // 영어 원문을 펼친 글.
-  originalOpen = new Set<string>();
   // 읽은 글 id(최근 것만). null이면 이 기기에서 처음 연 것이라 지금 글을 모두 읽은 것으로 둔다.
   read: string[] | null = loadRead();
   private readTimer = 0;
@@ -532,37 +530,31 @@ export class NoticeApp extends LitElement {
     `;
   }
 
-  // 영어 공지는 옮긴 글을 먼저 보이고, 영어 원문은 펼쳐서 본다.
-  private translatedView(notice: Notice, loaded: NoticeBody | null) {
+  // 영어 공지는 옮긴 글을 먼저, 그 아래에 영어 원문을 함께 보인다(원문이 정확하다).
+  private translatedView(loaded: NoticeBody | null) {
     const translation = loaded?.translation;
     if (!translation?.body) return this.bodyView(loaded);
-    const open = this.originalOpen.has(notice.id);
-    return html`<section class="detail-section body-text" aria-label="본문">
+    return html`<section class="detail-section body-text" aria-label="한국어로 옮긴 본문">
         <h3>본문 (한국어로 옮긴 글)</h3>
-        <p class="detail-note first">Gemini가 영어 원문을 옮겼어요. 이름, 날짜, 장소는 원문 그대로예요. 정확한 내용은 원문을 봐 주세요</p>
+        <p class="detail-note first">Gemini가 영어 원문을 옮겼어요. 이름, 날짜, 장소는 원문 그대로예요. 정확한 내용은 아래 영어 원문을 봐 주세요</p>
         ${translation.body.split(/\n+/).filter(Boolean).map((para) => html`<p>${para}</p>`)}
       </section>
-      <button type="button" class="text-button" aria-expanded=${String(open)} @click=${() => {
-        const next = new Set(this.originalOpen);
-        if (open) next.delete(notice.id); else next.add(notice.id);
-        this.originalOpen = next;
-      }}>${open ? '영어 원문 접기' : '영어 원문 보기'}</button>
-      ${open ? html`<div lang="en">${this.bodyView(loaded)}</div>` : nothing}`;
+      <div class="original-body" lang="en">${this.bodyView(loaded, '영어 원문')}</div>`;
   }
 
-  private bodyView(loaded: NoticeBody | null) {
+  private bodyView(loaded: NoticeBody | null, heading = '본문') {
     if (!loaded) return html`<p class="detail-note">본문은 아직 받지 않았어요. 원문 열기로 볼 수 있어요</p>`;
     const paragraphs = (loaded.body ?? '').split(/\n+/).filter(Boolean);
     // 정제한 본문 HTML이 있으면 표, 굵게, 링크, 목록을 살려 그린다(D-016). 그림도 그 안에 들어 있다.
     if (loaded.body_html && !loaded.body_from_image) {
-      return html`<section class="detail-section body-text" aria-label="본문"><h3>본문</h3>
+      return html`<section class="detail-section body-text" aria-label=${heading}><h3>${heading}</h3>
         <div class="rich">${unsafeHTML(cleanHtml(loaded.body_html))}</div></section>`;
     }
     // 그림은 사용자가 볼 때만 학교 서버에서 받는다(수집 실행은 주소만 저장).
     const images = (loaded.images ?? []).map(safeUrl).filter((url) => url !== '#');
     if (!paragraphs.length && !images.length) return html`<p class="detail-note">본문에 글자가 없어요. 원문 열기로 볼 수 있어요</p>`;
     return html`<section class="detail-section body-text" aria-label="본문">
-      <h3>${loaded.body_from_image ? '본문 (그림에서 읽은 글)' : '본문'}</h3>
+      <h3>${loaded.body_from_image ? `${heading} (그림에서 읽은 글)` : heading}</h3>
       ${loaded.body_from_image && paragraphs.length ? html`<p class="detail-note first">그림 속 글자를 기계가 옮겨 적어서 틀린 곳이 있을 수 있어요. 아래 그림과 원문이 정확해요</p>` : nothing}
       ${paragraphs.map((para) => html`<p>${para}</p>`)}
       ${images.map((src, index) => html`<img src=${src} alt="본문 그림 ${index + 1}" loading="lazy" referrerpolicy="no-referrer">`)}
@@ -740,7 +732,7 @@ export class NoticeApp extends LitElement {
         ${notice.deadline ? html`<p class="detail-deadline">마감 ${deadlineDetail(notice.deadline)} ${this.dday(notice, today)}</p>` : nothing}
         ${loaded?.summary ? html`<section class="detail-section summary" aria-label="요약">
           <h3>요약</h3>${loaded.summary.split('\n').filter(Boolean).map((line) => html`<p>${line}</p>`)}</section>` : nothing}
-        ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>` : this.translatedView(notice, loaded)}
+        ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>` : this.translatedView(loaded)}
         ${loaded?.attachments?.length ? this.attachmentsView(loaded) : nothing}
         <dl class="facts" aria-label="글 정보">
           <div><dt>게시일</dt><dd>${koreanDate(notice.posted_on)}</dd></div>

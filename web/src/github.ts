@@ -1,6 +1,6 @@
 // 설정 화면에서 키를 GitHub 저장소 Secrets로 바로 보낸다(docs/design/ux-rules.md 2-2절).
 // 키 값은 브라우저에 저장하지 않고, GitHub가 준 저장소 공개키로 봉인(libsodium sealed box)해서만 보낸다.
-// GitHub 토큰은 이 모듈 밖으로 나가지 않고, 화면을 닫으면 잊는다.
+// GitHub 토큰은 GitHub API에만 보낸다. 설정 화면이 이 기기에 기억한다(2026-11-03 사용자 요청).
 
 const API = 'https://api.github.com';
 // 아이디/저장소. 점만으로 된 부분(., ..)은 API 경로를 바꿀 수 있어서 막는다.

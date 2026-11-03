@@ -383,6 +383,8 @@
     .app { grid-template-columns: 248px minmax(0, 680px) minmax(400px, 1fr); }
     .app.is-settings { grid-template-columns: 248px minmax(0, 1fr); }
     .app.is-settings .detail-pane { display: none; }
+    /* 설정 머리 줄을 내용 폭(.settings 760px)에 맞춰 닫기 단추가 내용 오른쪽 끝선에 오게 한다. 아래 선은 칸 끝까지 둔다. */
+    .app.is-settings .list-pane .topbar { padding-right: max(24px, calc(100% - 760px + 24px)); }
     .app.no-detail { grid-template-columns: 248px minmax(0, 1fr); }
     .app.no-detail .detail-pane { display: none; }
     .app.no-detail .list-pane { border-right: 0; }

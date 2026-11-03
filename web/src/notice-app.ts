@@ -126,7 +126,7 @@ export class NoticeApp extends LitElement {
     window.setInterval(() => { if (document.visibilityState === 'visible') this.refresh(); }, REFRESH_MS);
     window.addEventListener('keydown', (event) => this.onKey(event));
     document.addEventListener('pointerdown', this.closeBoardMenuOutside);
-    window.addEventListener('popstate', () => { this.openedId = null; });
+    window.addEventListener('popstate', this.onPopState);
     window.addEventListener('beforeinstallprompt', (event) => { event.preventDefault(); this.install = event as InstallPrompt; });
     window.addEventListener('appinstalled', () => { this.install = null; });
   }
@@ -276,8 +276,12 @@ export class NoticeApp extends LitElement {
   }
 
   private setView(view: View) {
+    const entering = view === 'settings' && this.view !== 'settings';
     this.view = view;
     if (view !== 'settings') remember('tab', view);
+    // 주소도 보기와 맞춘다. 설정은 기록에 쌓아 뒤로 가기로 닫히고, 탭은 바꿔 써서 새로고침해도 같은 보기가 열린다.
+    if (entering) history.pushState({ view: 'settings' }, '', `${location.pathname}?view=settings`);
+    else if (view !== 'settings') history.replaceState(null, '', `${location.pathname}?tab=${view}`);
     this.selectedId = null;
     window.scrollTo({ top: 0 });
     this.querySelector('.list-pane')?.scrollTo({ top: 0 });
@@ -285,14 +289,24 @@ export class NoticeApp extends LitElement {
 
   // 설정을 닫으면 들어오기 전에 보던 보기로 돌아간다.
   private leaveSettings = () => {
+    // 이 화면에서 설정을 열었으면 기록을 하나 되돌린다(주소에서 view=settings가 빠진다). 바로 설정 주소로 들어왔으면 바꿔 쓴다.
+    if (history.state?.view === 'settings') { history.back(); return; }
     const last = remember('tab');
     this.setView(isTab(last) ? last : 'mine');
+  };
+
+  private onPopState = () => {
+    this.openedId = null;
+    const params = new URLSearchParams(location.search);
+    const view: View = params.get('view') === 'settings' ? 'settings'
+      : [params.get('tab'), remember('tab')].find(isTab) ?? 'mine';
+    if (view !== this.view) { this.view = view; this.selectedId = null; }
   };
 
   private setBoard(board: string) { this.board = board; this.boardMenuOpen = false; remember('board', board); }
   private setKeyword(word: string | null) {
     this.keyword = word;
-    if (this.view === 'settings') this.view = 'all';
+    if (this.view === 'settings') this.setView('all');
   }
 
   private setKeywords(words: string[]) {

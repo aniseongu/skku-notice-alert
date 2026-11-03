@@ -81,6 +81,9 @@ export const VERDICT_LABEL: Record<Verdict, string> = { relevant: '해당', mayb
 export function isMine(judgement: Judgement | undefined): boolean {
   if (!judgement) return false;
   const verdict = judgement.ai?.verdict;
+  const interested = Boolean(judgement.interests?.length) || Boolean(judgement.ai?.interests?.length);
+  // 기준에 맞아도 Gemini가 "해당 없음"이라고 본 글은 내 공지에 올리지 않는다(알림도 조용히 간다, decide_priority).
+  if (verdict === 'not_relevant' && !interested) return false;
   return Boolean(judgement.rule_name) || Boolean(judgement.interests?.length) || Boolean(judgement.ai?.interests?.length)
     || verdict === 'relevant' || verdict === 'maybe';
 }

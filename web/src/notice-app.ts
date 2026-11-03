@@ -431,12 +431,12 @@ export class NoticeApp extends LitElement {
           <div class="side-group">
             ${this.keywords.map((word) => this.sideItem(word, this.notices.filter((n) => this.interests(n).includes(word)).length,
               this.keyword === word && !settings, () => this.setKeyword(this.keyword === word ? null : word)))}
-            <button type="button" class="side-item add" @click=${() => this.setView('settings')}>${this.keywords.length ? '키워드 관리' : '키워드 추가'}</button>
+            <button type="button" class="side-item add" @click=${() => this.setView('settings')}>${this.keywords.length ? '키워드 관리하기' : '키워드 추가하기'}</button>
           </div>
           <p class="side-head">게시판</p>
           <div class="side-group">
             ${[{ id: 'all', label: '모든 게시판' }, ...this.sources.map((s) => ({ id: s.id, label: boardName(s, s.id) }))]
-              .map((b) => this.sideItem(b.label, null, this.board === b.id, () => this.setBoard(b.id)))}
+              .map((b) => this.sideItem(b.label, null, this.board === b.id && !settings, () => { this.setBoard(b.id); if (settings) this.leaveSettings(); }))}
           </div>
           <div class="side-foot">
             ${this.install ? html`<button type="button" class="side-item" @click=${this.runInstall}>앱으로 설치하기</button>` : nothing}
@@ -476,10 +476,10 @@ export class NoticeApp extends LitElement {
                 <input type="search" placeholder="제목, 분류, 판정 이유로 찾기" autocomplete="off" aria-label="공지 검색" .value=${this.query}
                   @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; }}></label>
               <div class="chips" role="group" aria-label="관심 키워드">
-                <button type="button" class="chip" aria-pressed=${String(!this.keyword)} @click=${() => this.setKeyword(null)}>전체</button>
+                <button type="button" class="chip" aria-pressed=${String(!this.keyword)} @click=${() => this.setKeyword(null)}>모두</button>
                 ${this.keywords.map((word) => html`<button type="button" class="chip" aria-pressed=${String(this.keyword === word)}
                   @click=${() => this.setKeyword(this.keyword === word ? null : word)}>${word}</button>`)}
-                <button type="button" class="chip-add" @click=${() => this.setView('settings')}>${icon('plus')}키워드 추가</button>
+                <button type="button" class="chip-add" @click=${() => this.setView('settings')}>${icon('plus')}키워드 추가하기</button>
               </div>
             </div>
             <div class="list" aria-live="polite" aria-busy=${this.loading ? 'true' : 'false'}>${this.listBody(list)}</div>`}`}
@@ -494,7 +494,7 @@ export class NoticeApp extends LitElement {
               <button type="button" class="ghost-button" @click=${() => this.copyLink(selected)}>링크 복사하기</button>
               <a class="solid-button" href=${safeUrl(selected.url)} target="_blank" rel="noopener" aria-keyshortcuts="Enter">원문 열기${kbd('Enter')}</a></div>` : nothing}
           </div>
-          ${selected ? this.detail(selected) : nothing}
+          ${selected ? this.detail(selected) : html`<p class="detail-note detail-empty">공지를 고르면 여기에 보여요</p>`}
         </aside>
       </div>
 
@@ -600,7 +600,7 @@ export class NoticeApp extends LitElement {
         mine: ['지금 챙길 공지가 없어요', '기준이나 관심 키워드에 맞는 새 글이 오면 여기 쌓여요'],
         deadline: ['다가오는 마감이 없어요', '제목에 마감일이 적힌 공지만 여기에 나와요'],
         all: ['이 게시판에 공지가 없어요', '다른 게시판을 골라 보세요'],
-        saved: ['저장한 공지가 없어요', '공지를 열고 저장 단추를 누르면 여기에 모여요'],
+        saved: ['저장한 공지가 없어요', '공지를 열어 저장하면 여기에 모여요'],
       }[this.tab()];
       return html`${boardPicker}${this.empty(empty[0], empty[1])}`;
     }

@@ -6,17 +6,42 @@ on:
     - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
 
+# 화면 배포(pages.yml, group notice)와 대기 줄을 나눈다. 같은 줄이면 기다리던 이어 달리기 실행이 취소될 수 있다.
 concurrency:
-  group: notice
+  group: notice-crawl
   cancel-in-progress: false
 
 permissions:
   contents: write
   pages: write
   id-token: write
+  # 다음 실행을 스스로 부른다(아래 chain). GitHub 예약이 이 저장소에서 시작되지 않아서다(D-020).
+  actions: write
 
 jobs:
+  # 마지막 수집 시각(사이트 notices.json의 generated_at)에서 14분이 안 지났으면 건너뛴다.
+  # 예약 실행과 이어 달리기가 겹쳐도 학교 서버에 15분 안에 두 번 요청하지 않는다(crawling.md).
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    outputs:
+      go: ${{ steps.check.outputs.go }}
+    steps:
+      - id: check
+        run: |
+          last="$(curl -fsS --max-time 10 "https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/api/v1/notices.json" \
+            | python3 -c 'import json,sys; print(json.load(sys.stdin)["generated_at"])' 2>/dev/null || true)"
+          go=true
+          if [ -n "$last" ]; then
+            age=$(( $(date +%s) - $(date -d "$last" +%s) ))
+            echo "마지막 수집 뒤 ${age}초"
+            if [ "$age" -lt 840 ]; then go=false; fi
+          fi
+          echo "go=$go" >> "$GITHUB_OUTPUT"
+
   notice:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -136,3 +161,27 @@ jobs:
       - name: Report notice failure
         if: steps.run_notice.outcome == 'failure'
         run: exit 1
+
+  # 이어 달리기: 13분 쉬고 다음 실행을 부른다. 워크플로를 끄면 부르기가 실패해 멈춘다.
+  # GITHUB_TOKEN이 부른 workflow_dispatch는 새 실행을 만든다(GitHub 문서 "When GITHUB_TOKEN triggers workflow runs").
+  chain:
+    needs: [gate, notice]
+    if: always() && github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          sleep 780
+          # 이미 기다리거나 도는 다른 실행이 있으면(예약 실행이 살아난 경우) 또 부르지 않는다.
+          others="$(gh run list --workflow notice-and-pages.yml --limit 10 --json databaseId,status \
+            --jq "[.[] | select(.databaseId != ${RUN_ID} and (.status == \"queued\" or .status == \"in_progress\" or .status == \"waiting\" or .status == \"pending\"))] | length")"
+          if [ "$others" = "0" ]; then
+            gh workflow run notice-and-pages.yml --ref "${GITHUB_REF_NAME}"
+            echo "다음 실행을 불렀어요"
+          else
+            echo "다른 실행이 있어 부르지 않았어요"
+          fi

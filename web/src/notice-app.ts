@@ -93,7 +93,7 @@ export class NoticeApp extends LitElement {
     view: { state: true }, board: { state: true }, keyword: { state: true }, keywords: { state: true }, query: { state: true },
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
-    detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true },
+    detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true }, sortMenuOpen: { state: true },
     saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true },
   };
 
@@ -131,6 +131,7 @@ export class NoticeApp extends LitElement {
   openedId: string | null = null;
   shortcutsOpen = false;
   boardMenuOpen = false;
+  sortMenuOpen = false;
   // 글별 본문(D-013). 'loading'이면 받는 중, null이면 아직 서버가 받지 않은 글.
   private bodies = new Map<string, NoticeBody | null | 'loading'>();
   private toastTimer = 0;
@@ -161,6 +162,7 @@ export class NoticeApp extends LitElement {
 
   private closeBoardMenuOutside = (event: PointerEvent) => {
     if (this.boardMenuOpen && !(event.target as Element).closest('.board-picker')) this.boardMenuOpen = false;
+    if (this.sortMenuOpen && !(event.target as Element).closest('.sort-picker')) this.sortMenuOpen = false;
   };
 
   async refresh() {
@@ -319,6 +321,7 @@ export class NoticeApp extends LitElement {
   private setView(view: View) {
     const entering = view === 'settings' && this.view !== 'settings';
     this.view = view;
+    this.sortMenuOpen = false;
     if (view !== 'settings') remember('tab', view);
     // 주소도 보기와 맞춘다. 설정은 기록에 쌓아 뒤로 가기로 닫히고, 탭은 바꿔 써서 새로고침해도 같은 보기가 열린다.
     if (entering) history.pushState({ view: 'settings' }, '', `${location.pathname}?view=settings`);
@@ -395,6 +398,12 @@ export class NoticeApp extends LitElement {
 
   private onKey(event: KeyboardEvent) {
     const target = event.target as Element | null;
+    if (event.key === 'Escape' && this.sortMenuOpen) {
+      event.preventDefault();
+      this.sortMenuOpen = false;
+      this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.sort-trigger')?.focus());
+      return;
+    }
     if (event.key === 'Escape' && this.boardMenuOpen) {
       event.preventDefault();
       this.boardMenuOpen = false;
@@ -402,7 +411,7 @@ export class NoticeApp extends LitElement {
       return;
     }
     if (event.key === 'Escape' && target instanceof HTMLInputElement) { target.blur(); return; }
-    if (target?.closest('input, textarea, select, .board-picker') || event.metaKey || event.ctrlKey || event.altKey) return;
+    if (target?.closest('input, textarea, select, .board-picker, .sort-picker') || event.metaKey || event.ctrlKey || event.altKey) return;
     if (event.key === '?') { event.preventDefault(); this.shortcutsOpen = true; return; }
     if (this.view === 'settings' && event.key === 'Escape' && !this.shortcutsOpen) { event.preventDefault(); this.leaveSettings(); return; }
     if (this.view === 'settings' || this.shortcutsOpen) return;
@@ -701,12 +710,35 @@ export class NoticeApp extends LitElement {
 
   private sortSelect() {
     if (this.view !== 'all') return nothing;
-    return html`<label class="sort-picker"><select aria-label="정렬" .value=${this.sort} @change=${(event: Event) => {
-      this.sort = (event.target as HTMLSelectElement).value === 'deadline' ? 'deadline' : 'latest';
-      remember('notice-sort', this.sort);
-      this.selectedId = null;
-      history.replaceState(null, '', `${location.pathname}?tab=all&sort=${this.sort}`);
-    }}><option value="latest" ?selected=${this.sort === 'latest'}>최신순</option><option value="deadline" ?selected=${this.sort === 'deadline'}>마감순</option></select></label>`;
+    const options = [{ id: 'latest', label: '최신순' }, { id: 'deadline', label: '마감순' }] as const;
+    return html`<div class="sort-picker">
+      <button type="button" class="board-trigger sort-trigger" aria-label="정렬: ${this.sort === 'latest' ? '최신순' : '마감순'}"
+        aria-expanded=${String(this.sortMenuOpen)} aria-controls="sort-options" @click=${() => {
+          this.sortMenuOpen = !this.sortMenuOpen;
+          if (this.sortMenuOpen) this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.sort-option[aria-pressed="true"]')?.focus());
+        }}>${this.sort === 'latest' ? '최신순' : '마감순'}<span class="board-chevron" aria-hidden="true"></span></button>
+      ${this.sortMenuOpen ? html`<div id="sort-options" class="board-options sort-options" role="group" aria-label="정렬 선택"
+        @keydown=${(event: KeyboardEvent) => {
+          const buttons = [...this.querySelectorAll<HTMLButtonElement>('.sort-option')];
+          const index = buttons.indexOf(document.activeElement as HTMLButtonElement);
+          const next = event.key === 'ArrowDown' ? (index + 1) % buttons.length
+            : event.key === 'ArrowUp' ? (index + buttons.length - 1) % buttons.length
+              : event.key === 'Home' ? 0 : event.key === 'End' ? buttons.length - 1 : -1;
+          if (next >= 0) { event.preventDefault(); buttons[next]?.focus(); }
+        }} @focusout=${(event: FocusEvent) => {
+          if (!(event.currentTarget as HTMLElement).parentElement?.contains(event.relatedTarget as Node | null)) this.sortMenuOpen = false;
+        }}>
+        ${options.map((option) => html`<button type="button" class="board-option sort-option" aria-pressed=${String(this.sort === option.id)}
+          @click=${() => {
+            this.sort = option.id;
+            remember('notice-sort', this.sort);
+            this.selectedId = null;
+            this.sortMenuOpen = false;
+            history.replaceState(null, '', `${location.pathname}?tab=all&sort=${this.sort}`);
+            this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.sort-trigger')?.focus());
+          }}><span>${option.label}</span>${this.sort === option.id ? html`<span class="board-check" aria-hidden="true"></span>` : nothing}</button>`)}
+      </div>` : nothing}
+    </div>`;
   }
 
   private boardSelect() {

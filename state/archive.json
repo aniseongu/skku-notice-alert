@@ -51,6 +51,56 @@
         "model": "source"
       }
     },
+    "linkareer-intern/361865": {
+      "notice": {
+        "id": "linkareer-intern/361865",
+        "source_id": "linkareer-intern",
+        "article_no": "361865",
+        "title": "[메트라이프생명보험] Winter Internship - Actuarial Analysis",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361865",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T23:23:53.829421+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "금융 IT 분야와 연관성이 높고 겨울방학 인턴십이라 학부생으로서 지원하기 적합해요.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "인턴"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "[메트라이프생명보험] Winter Internship - Actuarial Analysis\n\n\n[담당업무]\nProphet 계리 Modeling\n• Prophet 계리모델 운영 및 업데이트 지원\n• 모델 Run 수행 및 산출 결과 정리·분석\n\n\n[접수기간]\n11월 03일 ~ 11월 17일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[메트라이프생명보험] Winter Internship - Actuarial Analysis</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>Prophet 계리 Modeling</span></p><p><span>• Prophet 계리모델 운영 및 업데이트 지원</span></p><p><span>• 모델 Run 수행 및 산출 결과 정리·분석</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 03일 ~ 11월 17일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/979528\" title=\"CaptureX_2026-11-03_230850_www.metlifecareers.com.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/979528"
+      ],
+      "summary": "11월 17일까지 메트라이프생명보험에서 계리 분석 분야 겨울 인턴을 모집합니다. 계리 모델링 운영 및 결과 분석 업무를 담당합니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T23:23:53.829421+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T16:00:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "linkareer-intern/361864": {
       "notice": {
         "id": "linkareer-intern/361864",
@@ -2525,6 +2575,57 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-11-18T10:30:00+09:00"
+      }
+    },
+    "linkareer-intern/361866": {
+      "notice": {
+        "id": "linkareer-intern/361866",
+        "source_id": "linkareer-intern",
+        "article_no": "361866",
+        "title": "[국립중앙의료원] 체험형 청년인턴(인사팀) 채용 공고",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361866",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T23:23:53.829421+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "maybe",
+          "reason": "소프트웨어 전공과 무관한 인사팀 행정 업무이나 학부생 지원 가능 여부를 확인해야 해요.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "인턴"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "[국립중앙의료원] 체험형 청년인턴(인사팀) 채용 공고\n\n\n[담당업무]\nㆍ 연말정산 관련 행정업무 지원\n- 연말정산 관련 자료 취합 및 제출현황 관리\n- 소득공제신고서 및 증빙서류 확인·분류 등 검토 지원\n- 임직원 연말정산 관련 문의 응대 및 안내 지원\n\n\n[접수기간]\n11월 02일 ~ 11월 16일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[국립중앙의료원] 체험형 청년인턴(인사팀) 채용 공고</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>ㆍ 연말정산 관련 행정업무 지원</span></p><p><span>- 연말정산 관련 자료 취합 및 제출현황 관리</span></p><p><span>- 소득공제신고서 및 증빙서류 확인·분류 등 검토 지원</span></p><p><span>- 임직원 연말정산 관련 문의 응대 및 안내 지원</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 02일 ~ 11월 16일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/979536\" title=\"스크린샷_3-11-2026_23173_.jpeg\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/979535\" title=\"스크린샷_3-11-2026_231656_.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/979536",
+        "https://media-cdn.linkareer.com/se2editor/image/979535"
+      ],
+      "summary": "11월 16일까지 국립중앙의료원 인사팀 체험형 청년인턴을 모집합니다. 연말정산 행정 지원 업무를 수행할 예정입니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T23:23:53.829421+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T23:59:59.999000+09:00",
+        "model": "source"
       }
     },
     "linkareer-intern/361862": {

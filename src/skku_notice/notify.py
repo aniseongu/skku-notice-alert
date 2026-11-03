@@ -1,5 +1,6 @@
-"""Send notice notifications through Apprise."""
+"""Send notice notifications through Apprise and direct browser Web Push."""
 
+import hashlib
 import os
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
@@ -7,8 +8,14 @@ import apprise
 
 from skku_notice.deadline import KST, extract_deadline
 from skku_notice.model import Match, Notice
+from skku_notice.webpush_notify import send_web_push, web_push_config
 
 PRIORITIES = {"high": "4", "default": "3", "low": "2"}
+
+
+def has_notification_channel() -> bool:
+    push = web_push_config()
+    return bool(push or any(value.strip() for value in os.environ.get("NOTIFY_URLS", "").split(",")))
 
 
 def _url_for_notice(url: str, notice: Notice, priority: str) -> str:
@@ -28,9 +35,6 @@ def send_notice(
     notice: Notice, source_name: str, priority: str, match: Match | None, ai_reason: str | None,
     interests: tuple[str, ...] = (),
 ) -> bool:
-    urls = [value.strip() for value in os.environ.get("NOTIFY_URLS", "").split(",") if value.strip()]
-    if not urls:
-        return False
     body = []
     if interests:
         body.append(f"관심 {', '.join(interests)}")
@@ -46,22 +50,33 @@ def send_notice(
         body.append(label)
     if match:
         body.append(f"{match.rule_name} 기준에 맞아요")
-    sender = apprise.Apprise()
-    for url in urls:
-        if not sender.add(_url_for_notice(url, notice, priority)):
-            return False
-    try:
-        return bool(sender.notify(title=f"[{source_name}] {notice.title}", body="\n".join(body) or "새 공지"))
-    except Exception:
-        return False
+    urls = [value.strip() for value in os.environ.get("NOTIFY_URLS", "").split(",") if value.strip()]
+    return _deliver(
+        f"[{source_name}] {notice.title}", "\n".join(body) or "새 공지", notice.url,
+        f"notice:{notice.source_id}/{notice.article_no}", priority,
+        [_url_for_notice(url, notice, priority) for url in urls],
+    )
+
+
+def _deliver(title: str, body: str, click_url: str, tag: str, priority: str, urls: list[str]) -> bool:
+    results = []
+    if urls:
+        try:
+            sender = apprise.Apprise()
+            added = [sender.add(url) for url in urls]
+            delivered = bool(sender.notify(title=title, body=body)) if any(added) else False
+            results.append(all(added) and delivered)
+        except Exception:
+            results.append(False)
+    if any(os.environ.get(name, "").strip() for name in ("WEB_PUSH_SUBSCRIPTION", "WEB_PUSH_PRIVATE_KEY")):
+        results.append(send_web_push(title, body, click_url, tag, priority))
+    return bool(results) and all(results)
 
 
 def send_canvas(title: str, body: str, click_url: str, priority: str) -> bool:
-    """Send one private Canvas alert with the same Apprise channel as notices."""
+    """Send one private Canvas alert using the configured notification channels."""
     urls = [value.strip() for value in os.environ.get("NOTIFY_URLS", "").split(",") if value.strip()]
-    if not urls:
-        return False
-    sender = apprise.Apprise()
+    prepared = []
     for url in urls:
         parts = urlsplit(url)
         if parts.scheme in {"ntfy", "ntfys"}:
@@ -72,9 +87,6 @@ def send_canvas(title: str, body: str, click_url: str, priority: str) -> bool:
             ]
             query.extend((("click", click_url), ("priority", PRIORITIES[priority]), ("tags", "alarm")))
             url = urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
-        if not sender.add(url):
-            return False
-    try:
-        return bool(sender.notify(title=title, body=body))
-    except Exception:
-        return False
+        prepared.append(url)
+    tag = "canvas:" + hashlib.sha256(f"{title}\n{body}\n{click_url}".encode()).hexdigest()[:24]
+    return _deliver(title, body, click_url, tag, priority, prepared)

@@ -1,0 +1,37 @@
+name: Test browser notification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          enable-cache: true
+      - name: Install Python dependencies
+        run: uv sync --frozen
+      - name: Send browser test notification
+        env:
+          WEB_PUSH_SUBSCRIPTION: ${{ secrets.WEB_PUSH_SUBSCRIPTION }}
+          WEB_PUSH_PRIVATE_KEY: ${{ secrets.WEB_PUSH_PRIVATE_KEY }}
+        run: |
+          uv run python <<'PY'
+          from skku_notice.webpush_notify import send_web_push
+          ok = send_web_push(
+              "성대 공지 테스트 알림",
+              "앱과 탭을 닫아도 웨일이 실행 중이면 알림을 받아요. 누르면 학교 공지가 열려요.",
+              "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=227471",
+              "skku-notice-connection-test", "default",
+          )
+          if not ok:
+              raise SystemExit("브라우저 알림을 보내지 못했어요. 알림 연결을 다시 확인해 주세요")
+          print("브라우저 알림을 보냈어요")
+          PY

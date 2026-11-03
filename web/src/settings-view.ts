@@ -3,6 +3,8 @@ import { LitElement, html, nothing, type TemplateResult } from 'lit';
 import {
   GitHubError, REPO_PATTERN, checkGeminiKey, listSecrets, newTopic, saveSecret, saveVariable, sendTestNotification,
 } from './github';
+import { readSavedSecrets, rememberSavedSecrets } from './settings-storage';
+import { browserPushEnabled, connectBrowserPush, disconnectBrowserPush, pushConfiguration, supportsBrowserPush, testBrowserNotification } from './browser-push';
 
 export type Theme = 'auto' | 'light' | 'dark';
 
@@ -73,7 +75,7 @@ export class SettingsView extends LitElement {
     keywords: { attribute: false }, theme: { attribute: false },
     topic: { state: true }, repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
-    keywordDraft: { state: true },
+    keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true },
   };
 
   keywords: string[] = [];
@@ -83,20 +85,92 @@ export class SettingsView extends LitElement {
   repo = remember('github-repo') ?? '';
   token = '';
   values: Record<string, string> = {};
-  saved: Record<string, string> = {};
+  saved: Record<string, string> = readSavedSecrets(this.repo);
+  editing: Record<string, boolean> = {};
   status: Record<string, { ok: boolean; text: string }> = {};
   open: Record<string, boolean> = {};
   reveal: Record<string, boolean> = {};
   busy = '';
   keywordDraft = '';
+  browserNotifications = false;
 
   createRenderRoot() { return this; }
+
+  connectedCallback() {
+    super.connectedCallback();
+    window.addEventListener('beforeunload', this.warnUnsaved);
+    browserPushEnabled().then((enabled) => { this.browserNotifications = enabled; }).catch(() => {});
+    if (!this.repo) pushConfiguration().then((config) => {
+      if (!this.repo) { this.setRepo(config.repository); remember('github-repo', config.repository); }
+    }).catch(() => {});
+  }
+
+  disconnectedCallback() {
+    window.removeEventListener('beforeunload', this.warnUnsaved);
+    super.disconnectedCallback();
+  }
+
+  private warnUnsaved = (event: BeforeUnloadEvent) => {
+    if (!this.topic.trim() && !Object.values(this.values).some((value) => value.trim())) return;
+    event.preventDefault();
+    event.returnValue = '';
+  };
 
   private emit(name: string, detail: unknown) { this.dispatchEvent(new CustomEvent(name, { detail, bubbles: true })); }
   private setStatus(key: string, ok: boolean, text: string) { this.status = { ...this.status, [key]: { ok, text } }; }
   private connected() { return REPO_PATTERN.test(this.repo) && this.token.length > 0; }
 
+  private setRepo(repo: string) {
+    if (this.repo === repo) return;
+    this.repo = repo;
+    this.saved = readSavedSecrets(repo);
+    this.editing = {};
+    this.status = {};
+  }
+
+  private closeEdit(name: string) {
+    this.editing = { ...this.editing, [name]: false };
+    this.values = { ...this.values, [name]: '' };
+    this.reveal = { ...this.reveal, [name]: false };
+    if (name === 'NOTIFY_URLS') this.topic = '';
+    const status = { ...this.status };
+    delete status[name];
+    this.status = status;
+  }
+
   private setTopic(value: string) { this.topic = value.trim(); }
+
+  private async toggleBrowserNotifications() {
+    if (!this.connected()) { this.setStatus('browser-push', false, '위에서 GitHub에 한 번 연결하면 이 기기의 알림을 켤 수 있어요'); return; }
+    this.busy = 'browser-push';
+    try {
+      if (this.browserNotifications) {
+        await disconnectBrowserPush(this.repo, this.token);
+        this.browserNotifications = false;
+        const saved = { ...this.saved };
+        delete saved.WEB_PUSH_SUBSCRIPTION;
+        this.saved = saved;
+        this.setStatus('browser-push', true, '이 기기 알림을 껐어요');
+      } else {
+        await connectBrowserPush(this.repo, this.token);
+        this.browserNotifications = true;
+        this.saved = { ...this.saved, WEB_PUSH_SUBSCRIPTION: new Date().toISOString() };
+        this.setStatus('browser-push', true, '연결했어요. 앱을 닫아도 웨일이 실행 중이면 알림을 받아요');
+      }
+      rememberSavedSecrets(this.repo, this.saved);
+    } catch (error) {
+      this.setStatus('browser-push', false, error instanceof Error ? error.message : '알림을 연결하지 못했어요');
+    } finally { this.busy = ''; }
+  }
+
+  private async testBrowserNotifications() {
+    try {
+      await testBrowserNotification();
+      this.setStatus('browser-push', true, '테스트 알림을 띄웠어요. Windows 알림도 켜져 있는지 확인해 주세요');
+    } catch (error) {
+      this.setStatus('browser-push', false, error instanceof Error ? error.message : '테스트 알림을 띄우지 못했어요');
+    }
+  }
 
   private async testNotification() {
     if (!/^[\w-]{6,64}$/.test(this.topic)) { this.setStatus('topic', false, '이름은 영문, 숫자, -, _로 6자 넘게 써 주세요'); return; }
@@ -113,9 +187,15 @@ export class SettingsView extends LitElement {
     remember('github-repo', this.repo);
     if (!this.connected()) { this.setStatus('github', false, '저장소는 아이디/저장소 이름으로, 토큰은 github_pat_로 시작하는 값을 넣어 주세요'); return; }
     this.busy = 'github';
+    const repo = this.repo;
+    const token = this.token;
     try {
-      this.saved = await listSecrets(this.repo, this.token);
-      this.setStatus('github', true, '연결했어요. 아래 키를 저장할 수 있어요');
+      const saved = await listSecrets(repo, token);
+      rememberSavedSecrets(repo, saved);
+      if (this.repo === repo) {
+        this.saved = saved;
+        this.setStatus('github', true, '연결했어요. 저장한 키를 확인했어요');
+      }
     } catch (error) {
       this.setStatus('github', false, error instanceof GitHubError ? error.message : '인터넷 연결을 확인해 주세요');
     } finally { this.busy = ''; }
@@ -124,11 +204,17 @@ export class SettingsView extends LitElement {
   private async save(name: string, value: string) {
     if (!value.trim()) { this.setStatus(name, false, '키를 먼저 붙여 넣어 주세요'); return; }
     this.busy = name;
+    const repo = this.repo;
+    const token = this.token;
     try {
-      await saveSecret(this.repo, this.token, name, value.trim());
-      this.saved = { ...this.saved, [name]: new Date().toISOString() };
-      this.values = { ...this.values, [name]: '' };
-      this.setStatus(name, true, '저장했어요. 다음 실행부터 써요');
+      await saveSecret(repo, token, name, value.trim());
+      const saved = { ...readSavedSecrets(repo), [name]: new Date().toISOString() };
+      rememberSavedSecrets(repo, saved);
+      if (this.repo === repo) {
+        this.saved = saved;
+        this.closeEdit(name);
+        this.setStatus(name, true, '저장했어요. 다음 실행부터 써요');
+      }
     } catch (error) {
       this.setStatus(name, false, error instanceof GitHubError ? error.message : '저장하지 못했어요');
     } finally { this.busy = ''; }
@@ -202,7 +288,7 @@ export class SettingsView extends LitElement {
             </div>
             <div class="setting-control">
               <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="저장소" placeholder="아이디/저장소 이름"
-                .value=${this.repo} @input=${(e: Event) => { this.repo = (e.target as HTMLInputElement).value.trim(); }}>
+                .value=${this.repo} @input=${(e: Event) => this.setRepo((e.target as HTMLInputElement).value.trim())}>
               <div class="inline">
                 <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="GitHub 토큰" placeholder="github_pat_로 시작하는 토큰"
                   .value=${this.token} @input=${(e: Event) => { this.token = (e.target as HTMLInputElement).value.trim(); }}>
@@ -228,14 +314,36 @@ export class SettingsView extends LitElement {
           <div class="box">
           <div class="setting">
             <div class="setting-text">
-              <p class="setting-name">알림 받을 이름</p>
+              <p class="setting-name">이 기기 알림</p>
+              <p class="setting-help">앱과 탭을 닫아도 웨일이 실행 중이면 Windows 알림으로 받아요. 소리는 Windows 알림 설정을 따라요.</p>
+            </div>
+            <div class="setting-control">
+              <p class="setting-saved">${this.browserNotifications ? '알림을 받고 있어요' : '알림을 연결해 주세요'}</p>
+              <div class="inline">
+                <button type="button" class="ghost-button" ?disabled=${this.busy === 'browser-push' || !supportsBrowserPush()}
+                  @click=${this.toggleBrowserNotifications}>${this.busy === 'browser-push' ? '연결 중' : this.browserNotifications ? '알림 끄기' : '알림 받기'}</button>
+                ${this.browserNotifications ? html`<button type="button" class="ghost-button" @click=${this.testBrowserNotifications}>테스트 알림 띄우기</button>` : nothing}
+              </div>
+              ${!supportsBrowserPush() ? html`<p class="field-note">최신 웨일이나 Chrome에서 알림을 연결해 주세요</p>` : nothing}
+              ${this.note('browser-push')}
+              <p class="field-note">한 번 연결하면 계속 받아요. 다른 브라우저에서 연결하면 받을 기기가 바뀌어요.</p>
+            </div>
+          </div>
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">다른 기기에서도 받기</p>
               <p class="setting-help">휴대폰과 PC의 ntfy 앱에서 이 이름을 구독하면 알림이 와요. 아는 사람은 누구나 받을 수 있으니 비밀번호처럼 다뤄 주세요.
                 이 화면을 닫으면 사라지니 앱과 GitHub에 먼저 넣어 두세요</p>
             </div>
             <div class="setting-control">
+              ${this.saved.NOTIFY_URLS && !this.editing.NOTIFY_URLS ? html`
+                <p class="setting-saved">${savedDate(this.saved.NOTIFY_URLS)}에 저장했어요</p>
+                <p class="field-note">저장한 이름은 숨겨 두었어요</p>
+                <button type="button" class="ghost-button" @click=${() => { this.editing = { ...this.editing, NOTIFY_URLS: true }; }}>수정하기</button>
+              ` : html`
               <div class="inline">
                 <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="알림 받을 이름"
-                  placeholder="skku-로 시작하는 긴 이름" .value=${this.topic} @change=${(e: Event) => this.setTopic((e.target as HTMLInputElement).value)}>
+                  placeholder="skku-로 시작하는 긴 이름" .value=${this.topic} @input=${(e: Event) => this.setTopic((e.target as HTMLInputElement).value)}>
                 <button type="button" class="ghost-button" @click=${() => this.setTopic(newTopic())}>새로 만들기</button>
               </div>
               <div class="inline">
@@ -243,10 +351,13 @@ export class SettingsView extends LitElement {
                   ${this.busy === 'topic' ? '보내는 중' : '테스트 알림 보내기'}</button>
                 <button type="button" class="solid-button" ?disabled=${!this.connected() || !this.topic || this.busy === 'NOTIFY_URLS'}
                   @click=${() => this.save('NOTIFY_URLS', `ntfys://${this.topic}`)}>GitHub에 저장하기</button>
+                ${this.saved.NOTIFY_URLS ? html`<button type="button" class="ghost-button" ?disabled=${this.busy === 'NOTIFY_URLS'}
+                  @click=${() => this.closeEdit('NOTIFY_URLS')}>닫기</button>` : nothing}
               </div>
               ${!this.topic ? html`<p class="field-note">이름을 만들거나 붙여 넣으면 보낼 수 있어요</p>`
-                : !this.connected() ? html`<p class="field-note">GitHub에 연결하면 저장할 수 있어요</p>` : nothing}
-              ${this.saved.NOTIFY_URLS ? html`<p class="setting-saved">${savedDate(this.saved.NOTIFY_URLS)}에 저장됨</p>` : nothing}
+                : !this.connected() ? html`<p class="field-note">아직 저장하지 않았어요. 위에서 GitHub에 연결한 뒤 저장해 주세요</p>`
+                  : html`<p class="field-note">아직 저장하지 않았어요. GitHub에 저장하기를 눌러 주세요</p>`}
+              `}
               ${this.note('NOTIFY_URLS')}
               ${this.note('topic')}
               ${this.guide('phone', [
@@ -332,15 +443,20 @@ export class SettingsView extends LitElement {
     const name = field.secret;
     const shown = Boolean(this.reveal[name]);
     const value = this.values[name] ?? '';
+    const locked = Boolean(this.saved[name]) && !this.editing[name];
     const onInput = (e: Event) => { this.values = { ...this.values, [name]: (e.target as HTMLInputElement).value }; };
     return html`
       <div class="setting">
         <div class="setting-text">
           <p class="setting-name">${field.label}</p>
           <p class="setting-help">${field.help}</p>
-          ${this.saved[name] ? html`<p class="setting-saved">${savedDate(this.saved[name])}에 저장됨</p>` : nothing}
+          ${this.saved[name] ? html`<p class="setting-saved">${savedDate(this.saved[name])}에 저장했어요</p>` : nothing}
         </div>
         <div class="setting-control">
+          ${locked ? html`
+            <p class="field-note">저장한 값은 숨겨 두었어요</p>
+            <button type="button" class="ghost-button" @click=${() => { this.editing = { ...this.editing, [name]: true }; }}>수정하기</button>
+          ` : html`
           ${field.multiline
             ? html`<textarea class="input" rows="5" autocomplete="off" spellcheck="false" aria-label=${field.label}
                 placeholder=${field.placeholder} .value=${value} @input=${onInput}></textarea>`
@@ -354,8 +470,13 @@ export class SettingsView extends LitElement {
             ${name === 'GEMINI_API_KEY' ? html`<button type="button" class="ghost-button" ?disabled=${this.busy === name} @click=${() => this.check(name)}>키 확인하기</button>` : nothing}
             <button type="button" class="solid-button" ?disabled=${!this.connected() || this.busy === name} @click=${() => this.save(name, value)}>
               ${this.busy === name ? '저장 중' : 'GitHub에 저장하기'}</button>
+            ${this.saved[name] ? html`<button type="button" class="ghost-button" ?disabled=${this.busy === name}
+              @click=${() => this.closeEdit(name)}>닫기</button>` : nothing}
           </div>
-          ${this.connected() ? nothing : html`<p class="field-note">위에서 GitHub에 연결하면 저장할 수 있어요</p>`}
+          ${this.connected()
+            ? value.trim() ? html`<p class="field-note">아직 저장하지 않았어요. GitHub에 저장하기를 눌러 주세요</p>` : nothing
+            : html`<p class="field-note">위에서 GitHub에 연결한 뒤 저장해 주세요. 입력한 내용은 아직 저장하지 않았어요</p>`}
+          `}
           ${this.note(name)}
           ${this.guide(name, field.steps, field.multiline ? '쓰는 방법' : '받는 방법')}
         </div>

@@ -292,6 +292,18 @@ export class SettingsView extends LitElement {
     return ['NOTIFY_URLS=ntfys://', ...KEY_FIELDS.filter((f) => !f.multiline).map((f) => `${f.secret}=`)].join('\n');
   }
 
+  // 마감 캘린더(deadlines.ics)와 RSS(feed.xml)는 Actions가 15분마다 새로 쓴다(GOAL.md M3).
+  private feedUrl(name: string) { return new URL(name, document.baseURI).href; }
+
+  private async copyFeed(key: string, name: string) {
+    try {
+      await navigator.clipboard.writeText(this.feedUrl(name));
+      this.setStatus(key, true, '주소를 복사했어요');
+    } catch {
+      this.setStatus(key, false, '복사하지 못했어요');
+    }
+  }
+
   private async copyEnv() {
     try {
       await navigator.clipboard.writeText(this.envText());
@@ -462,6 +474,37 @@ export class SettingsView extends LitElement {
                 <li><span>${word}</span><button type="button" class="text-button" aria-label="${word} 삭제"
                   @click=${() => this.emit('keywords-change', this.keywords.filter((w) => w !== word))}>삭제</button></li>`)}</ul>` : nothing}
               ${this.linked ? this.note('keywords') : html`<p class="field-note">위에서 GitHub에 연결하면 모든 기기에서 같은 키워드를 써요</p>`}
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="s-feeds">
+          <h2 id="s-feeds" class="settings-head">캘린더와 피드</h2>
+          <div class="box">
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">마감 캘린더</p>
+              <p class="setting-help">마감일이 있는 공지를 휴대폰과 PC 캘린더에 띄워요. 한 번 구독하면 새 마감도 저절로 들어와요</p>
+            </div>
+            <div class="setting-control">
+              <div class="inline">
+                <a class="ghost-button" target="_blank" rel="noopener"
+                  href=${`https://calendar.google.com/calendar/r?cid=${encodeURIComponent(this.feedUrl('deadlines.ics').replace(/^https:/, 'webcal:'))}`}>구글 캘린더에 추가하기</a>
+                <a class="ghost-button" href=${this.feedUrl('deadlines.ics').replace(/^https:/, 'webcal:')}>캘린더 앱으로 열기</a>
+              </div>
+              <button type="button" class="text-button" @click=${() => this.copyFeed('calendar', 'deadlines.ics')}>주소 복사하기</button>
+              ${this.note('calendar')}
+            </div>
+          </div>
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">RSS 피드</p>
+              <p class="setting-help">피드 앱(Feedly, Inoreader 등)에서 새 공지를 받아 봐요</p>
+            </div>
+            <div class="setting-control">
+              <button type="button" class="ghost-button" @click=${() => this.copyFeed('feed', 'feed.xml')}>피드 주소 복사하기</button>
+              ${this.note('feed')}
             </div>
           </div>
           </div>

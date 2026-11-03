@@ -7,6 +7,7 @@ from pathlib import Path
 
 from skku_notice.archive import Archive
 from skku_notice.deadline import KST
+from skku_notice.feeds import deadlines_ics, rss_feed
 
 
 def export_site(
@@ -56,5 +57,11 @@ def export_site(
             "fetched_at": item.get("fetched_at"),
         }
         target.write_text(json.dumps(detail, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # 마감 캘린더 구독과 RSS 피드(GOAL.md M3). 공개 공지 정보만 쓴다(Canvas는 넣지 않는다, D-012).
+    board_names = {source["id"]: source["name"] for source in sources}
+    listed = [item["notice"] for item in ordered]
+    calendar = deadlines_ics(listed, board_names, now)
+    (destination / "deadlines.ics").write_text(calendar, encoding="utf-8", newline="")
+    (destination / "feed.xml").write_text(rss_feed(listed, board_names, now), encoding="utf-8")
     if web_path.is_dir():
         shutil.copytree(web_path, destination, dirs_exist_ok=True)

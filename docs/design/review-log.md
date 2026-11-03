@@ -34,9 +34,16 @@
 | 16판 성공과 정렬 | `2026-11-03/success-light.jpg`, `success-dark.jpg`, `success-desktop.jpg`, `success-whale.jpg` | 8.1 (독립 평가) | 보조 글자 대비 확인 필요 | 라이트 4.95:1 이상, 다크 5.62:1 이상 측정 |
 | 17판 보기 제어 정렬 | `2026-11-03/final-light.jpg`, `final-dark.jpg`, `final-desktop.jpg`, `final-whale.jpg` | 8.2 (독립 평가) | 다크의 작은 체크 외곽선과 보조 정보 인식은 개선 여지 | 필수 재수정 없음. 320px와 412px 한 줄 정렬, 44px 조작 영역 및 선택 상태 검증 |
 
+| 18판 키 분리 | `2026-11-04/canvas-light.jpg`, `canvas-landscape.jpg`, `keys-dark.jpg`, `keys-desktop.jpg` | 7.6 (독립 평가) | 연결 전 알림 상태를 끄기로 단정, 키 안내 반복 | 기기별 원격 상태 확인 전에는 미확인, 성공 안내와 입력 반복 제거 |
+| 19판 설정 개요와 접힌 관리 | `2026-11-04/overview-light.jpg`, `overview-dark.jpg`, `overview-landscape.jpg`, `compact-keys.jpg`, `compact-connection.jpg`, `overview-whale.jpg` | 8.5 (독립 평가) | 초기 Whale 캡처의 화면 모드 하단 확인 필요 | 핵심 항목과 하위 화면, 상태 한 번 표시. .env 안내도 접음. 실제 Whale 설치 가능성 오류 없음. 1050px 높이로 다시 캡처 |
+
+
 ## 남은 과제 (평가에서 나왔지만 아직 안 한 것)
 
 - 휴대폰 큰 제목 머리(One UI, 위쪽을 비워 엄지가 닿게): 스크롤하면 작아지는 머리는 움직임이 필요해서 사용자 확인 뒤에.
 - 묶음 상자 반경 14px: One UI는 20px 안팎이지만 웨일 DESIGN의 "16px 이상 금지"를 지킨다. 바꾸려면 사용자에게 묻는다.
 - 상세 칸에 본문 요약: 본문 읽기(M4)가 생기면 Gemini 요약 3줄.
 - 설정의 "받는 방법" 밑줄 단추를 One UI 설정 행(오른쪽 꺾쇠) 모양으로.
+
+
+2026-11-04의 compact-keys와 compact-connection은 정식 코드에 모의 GitHub 저장 상태를 주어 캡처했으며 실제 키와 토큰을 쓰지 않았다. overview-whale은 실제 Windows 개발용 Whale의 공식 사이트다. 설치된 휴대폰 PWA 검사와 구분한다.

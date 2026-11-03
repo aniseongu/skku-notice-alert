@@ -440,6 +440,8 @@ def run(args: argparse.Namespace) -> int:
     failed = False
     boards: list[tuple[dict, list]] = []
     external_deadlines: dict[str, str] = {}
+    image_budget = [10]
+    intern_judgments: dict[str, Judgment] = {}
     for source in settings["sources"]:
         source_id = source["id"]
         if source.get("kind") in COLLECTORS:
@@ -498,6 +500,11 @@ def run(args: argparse.Namespace) -> int:
         if not args.from_fixtures:
             archive = _recheck_details(archive, settings, now)
         if ai.get("enabled") and not getattr(args, "no_ai", False) and not args.from_fixtures:
+            # 알림 대상 판단을 번역, 마감 추출과 요약보다 먼저 실행한다.
+            archive, intern_judgments = _intern_decisions(
+                archive, state, settings["sources"], ai, os.environ.get("GEMINI_API_KEY", ""),
+                image_budget, settings["user_agent"],
+            )
             archive = _translate(archive, ai, os.environ.get("GEMINI_API_KEY", ""))
             archive = _ai_deadlines(archive, ai, os.environ.get("GEMINI_API_KEY", ""))
             school_sources = {source["id"] for source in settings["sources"] if not source.get("external")}
@@ -525,9 +532,7 @@ def run(args: argparse.Namespace) -> int:
                 ):
                     candidates.append(notice)
     judgments = {}
-    intern_judgments: dict[str, Judgment] = {}
     image_parts = {}
-    image_budget = [10]
     if image_candidates and not args.dry_run and not args.from_fixtures:
         archive, image_parts = _images_for_judgment(
             archive, image_candidates, now, settings["user_agent"], image_budget
@@ -555,12 +560,6 @@ def run(args: argparse.Namespace) -> int:
                 ))) for key, item in archive.items.items()},
                 images=image_parts,
             )
-    if (not args.dry_run and not args.from_fixtures and ai.get("enabled")
-            and not getattr(args, "no_ai", False)):
-        archive, intern_judgments = _intern_decisions(
-            archive, state, settings["sources"], ai, os.environ.get("GEMINI_API_KEY", ""),
-            image_budget, settings["user_agent"],
-        )
     for source, notices in boards:
         if args.dry_run and source["id"] not in state.sources:
             print(f"{source['id']}: state 없음: 실제 첫 실행이면 알림 없이 기준선만 저장")

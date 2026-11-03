@@ -50,7 +50,14 @@ sources:
     monkeypatch.setattr(cli, "parse_list", lambda *_args: [notice])
     monkeypatch.setattr(cli, "_recheck_details", lambda archive, *_args: archive)
     monkeypatch.setattr(cli, "_notify_changes", lambda archive, *_args: archive)
-    monkeypatch.setattr(cli, "_translate", lambda archive, *_args: archive)
+    quota = {"left": 1}
+
+    def optional_translation(archive, _settings, key):
+        if key:
+            quota["left"] = max(0, quota["left"] - 1)
+        return archive
+
+    monkeypatch.setattr(cli, "_translate", optional_translation)
     monkeypatch.setattr(cli, "_ai_deadlines", lambda archive, *_args: archive)
     monkeypatch.setattr(cli, "_fill_summaries", lambda archive, *_args: archive)
     loaded = {"value": False}
@@ -66,6 +73,9 @@ sources:
     calls = []
 
     def judge(items, *_args, **_kwargs):
+        if not quota["left"]:
+            return {}
+        quota["left"] -= 1
         calls.append(items)
         return {"jobs/1": Judgment("relevant", "백엔드 개발 인턴이에요", "test")}
 
@@ -84,6 +94,7 @@ sources:
     monkeypatch.setenv("GEMINI_API_KEY", "fake")
     assert cli.run(args) == 0 and not sent and not calls
     loaded["value"] = True
+    quota["left"] = 1
     assert cli.run(args) == 0
     assert sent == ["1"] and calls[0][0]["body"] == "담당 업무: 백엔드 개발"
     assert load_state(cli.STATE_PATH).sources["jobs"].seen["1"].status == "notified"

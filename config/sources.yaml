@@ -15,3 +15,15 @@ sources:
     name: 소프트웨어학과 공지
     kind: skku-cms
     url: https://cse.skku.edu/cse/notice.do
+
+  # 2026-11-03 추가(사용자 요청, 다른 성대 공지 프로젝트 hg111911190/skku-notice의 게시판 목록 참고).
+  # 학교 본부 공지는 skku-notice01 하나에 모든 분류가 모여 있어 단과대와 사업단 게시판을 더한다.
+  - id: sw-notice
+    name: 소프트웨어융합대학 공지
+    kind: skku-cms
+    url: https://sw.skku.edu/sw/notice.do
+
+  - id: futurecar-notice
+    name: 미래차 부트캠프 공지
+    kind: skku-cms
+    url: https://swb.skku.edu/futurecar/notice.do

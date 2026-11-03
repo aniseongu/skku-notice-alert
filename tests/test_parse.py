@@ -35,3 +35,19 @@ def test_fixtures(source_id: str, url: str, expected_count: int, expected_pinned
 def test_broken_markup_raises(html: str) -> None:
     with pytest.raises(ParseError):
         parse_list(html, "x", "https://example.com/notice.do")
+
+
+@pytest.mark.parametrize(
+    ("source_id", "url", "expected_count", "has_category"),
+    [
+        ("sw-notice", "https://sw.skku.edu/sw/notice.do", 10, True),
+        # 미래차 부트캠프 사업단 게시판은 분류 칸이 없다.
+        ("futurecar-notice", "https://swb.skku.edu/futurecar/notice.do", 7, False),
+    ],
+)
+def test_added_boards_2026_11_03(source_id: str, url: str, expected_count: int, has_category: bool) -> None:
+    path = Path("tests/fixtures") / f"{source_id.replace('-', '_')}_list_2026-11-03.html"
+    notices = parse_list(path.read_text(encoding="utf-8"), source_id, url)
+    assert len(notices) == expected_count
+    assert all(notice.url.startswith(f"{url}?mode=view&articleNo=") for notice in notices)
+    assert bool(notices[0].category) is has_category

@@ -2516,17 +2516,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[삼정KPMG] ITS 업무 지원 인턴\n\n\n[담당업무]\n- IT 자산 실사 및 라이프사이클 관리\n- IT 서비스 예산 및 비용 처리 업무 지원\n- 업무용 노트북 교체 지원\n- IT 기기 관리 및 IT 창고 운영 지원\n- Excel, Power BI 기반 데이터 관리 및 분석 지원\n- 업무용 시스템 운영 보조 및 장애 대응 지원\n- 업무 매뉴얼 및 운영 문서 작성\n- 기타 IT 운영 및 행정 업무 지원\n\n\n[접수기간]\n11월 02일 ~ 11월 05일\n\n\n[채용공고]",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><b><span>[삼정KPMG] ITS 업무 지원 인턴</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>- IT 자산 실사 및 라이프사이클 관리</span></p><p><span>- IT 서비스 예산 및 비용 처리 업무 지원</span></p><p><span>- 업무용 노트북 교체 지원</span></p><p><span>- IT 기기 관리 및 IT 창고 운영 지원</span></p><p><span>- Excel, Power BI 기반 데이터 관리 및 분석 지원</span></p><p><span>- 업무용 시스템 운영 보조 및 장애 대응 지원</span></p><p><span>- 업무 매뉴얼 및 운영 문서 작성</span></p><p><span>- 기타 IT 운영 및 행정 업무 지원</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 02일 ~ 11월 05일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/978465\" title=\"스크린샷_2-11-2026_223936_career.kr.kpmg.com.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/978465"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T21:17:31.722727+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",

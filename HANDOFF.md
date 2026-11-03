@@ -29,7 +29,7 @@
 
 ## 다음 3단계
 
-0. 브라우저 웹 푸시(`docs/plans/2026-11-02_browser-push-settings.md`)는 로컬 커밋까지 완료. push 후 정식 주소에서 "알림 받기"를 다시 눌러 구독을 바꾸고 `Test browser notification`으로 탭을 닫은 상태의 수신과 클릭을 확인한다.
+0. 브라우저 웹 푸시와 설정 저장 유지는 배포 완료, 웨일 개발 프로필에서 실제 수신 확인(daily-log 2026-11-03). 다음은 `Notice and Pages` 켜기, 사용자 기기마다 토큰 한 번 연결, 아이캠퍼스 토큰.
 
 1. Pages 화면의 설정에서 알림 키와 관심 키워드를 준비한다. 화면 변경은 main push 시 자동 배포된다. 현재 데이터는 첫 배포 시 수집한 목록이다.
 2. Canvas 날짜 의존 테스트 수정, Secrets와 Variable 설정 후 `Notice and Pages`의 실제 알림을 확인한다. Claude 한도 소진으로 이번 워크플로 교차 리뷰는 한도가 돌아오면 한다.

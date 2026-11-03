@@ -1,0 +1,43 @@
+{
+  "verified_on": "2026-11-04",
+  "site": "https://aniseongu.github.io/skku-notice-alert/",
+  "deployment": 41726106716,
+  "passed": 8,
+  "failed": 0,
+  "mockedGitHub": true,
+  "actualInstalledDeviceVerified": false,
+  "results": [
+    {
+      "name": "설정 개요는 다섯 항목과 화면 모드만 표시",
+      "pass": true
+    },
+    {
+      "name": "처음 연결하기는 접혀 있고 노트북 QR을 먼저 안내",
+      "pass": true
+    },
+    {
+      "name": "노트북에서 휴대폰 QR 표시와 닫기",
+      "pass": true
+    },
+    {
+      "name": "휴대폰 QR는 확인 전에 연결하지 않고 주소에서 열쇠 제거",
+      "pass": true
+    },
+    {
+      "name": "휴대폰 재시작과 공용 키 상태 복원",
+      "pass": true
+    },
+    {
+      "name": "연결 안 된 알림 상태를 꺼짐으로 표시하지 않음",
+      "pass": true
+    },
+    {
+      "name": "다른 저장소의 QR 거절",
+      "pass": true
+    },
+    {
+      "name": "카메라 거부 뒤 대체 연결 안내와 카메라 닫힘",
+      "pass": true
+    }
+  ]
+}

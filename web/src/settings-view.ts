@@ -524,7 +524,7 @@ export class SettingsView extends LitElement {
         <section aria-labelledby="s-preferences">
           <h2 id="s-preferences" class="settings-head">내 설정</h2>
           <div class="box">
-            ${this.settingsLink('알림', '이 기기 알림, 받을 분류와 아이캠퍼스', '?view=settings&section=notifications')}
+            ${this.settingsLink('알림', '받을 공지와 이 기기 알림, 아이캠퍼스', '?view=settings&section=notifications')}
             ${this.settingsLink('관심 키워드', this.keywords.length ? `${this.keywords.length}개 키워드를 쓰고 있어요` : '관심 있는 공지를 골라 봐요', '?view=settings&section=keywords')}
             ${this.settingsLink('캘린더', this.saved.GOOGLE_REFRESH_TOKEN ? '구글 캘린더에 연결돼 있어요' : '성대 공지와 저장한 인턴 마감을 모아요', '?view=settings&keys=1#google-calendar')}
           </div>

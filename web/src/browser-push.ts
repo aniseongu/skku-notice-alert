@@ -1,11 +1,23 @@
-import { GitHubError, deleteSecret, saveSecret } from './github';
+import { GitHubError, deleteSecret, listSecrets, saveSecret } from './github';
 
 interface PushConfiguration { publicKey: string; repository: string }
 // 예전에는 기기 한 대만 WEB_PUSH_SUBSCRIPTION에 저장했다. 이 기기가 그 한 대였는지 기억하는 열쇠다.
 const LEGACY = 'browser-push-registered';
-// 지금은 기기마다 WEB_PUSH_SUB_<지문 앞 16자리>로 따로 저장한다(D-019). 여러 기기가 함께 받는다.
+// 지금은 기기마다 빈 칸 WEB_PUSH_SUB_1..8 하나에 저장한다(D-019). 여러 기기가 함께 받는다.
+// 이 기기가 쓰는 칸과 구독 지문을 기억해 두었다가 끌 때 그 칸만 지운다.
 const DEVICE = 'browser-push-device';
-export const deviceSecret = (fingerprint: string) => `WEB_PUSH_SUB_${fingerprint.slice(0, 16).toUpperCase()}`;
+export const DEVICE_SLOTS = Array.from({ length: 8 }, (_, index) => `WEB_PUSH_SUB_${index + 1}`);
+
+function myDevice(): { fingerprint: string; slot: string } | null {
+  try {
+    const parsed: unknown = JSON.parse(localStorage.getItem(DEVICE) ?? 'null');
+    if (parsed && typeof parsed === 'object' && 'fingerprint' in parsed && 'slot' in parsed
+      && typeof parsed.fingerprint === 'string' && DEVICE_SLOTS.includes(String(parsed.slot))) {
+      return { fingerprint: parsed.fingerprint, slot: String(parsed.slot) };
+    }
+  } catch { /* 모르면 새 칸을 고른다 */ }
+  return null;
+}
 
 export function supportsBrowserPush(): boolean {
   return isSecureContext && 'Notification' in window && 'serviceWorker' in navigator && 'PushManager' in window;
@@ -28,7 +40,9 @@ export async function browserPushEnabled(): Promise<boolean> {
   const subscription = await registration?.pushManager.getSubscription();
   if (!subscription) return false;
   const mine = await fingerprint(subscription);
-  try { return [localStorage.getItem(DEVICE), localStorage.getItem(LEGACY)].includes(mine); } catch { return false; }
+  let legacy: string | null = null;
+  try { legacy = localStorage.getItem(LEGACY); } catch { /* 없으면 새 방식만 본다 */ }
+  return myDevice()?.fingerprint === mine || legacy === mine;
 }
 
 export async function subscribeBrowserPush(): Promise<PushSubscription> {
@@ -54,8 +68,12 @@ export async function connectBrowserPush(repo: string, token: string): Promise<v
   const config = await pushConfiguration();
   if (repo !== config.repository) throw new GitHubError('이 사이트를 배포한 GitHub 저장소에 연결해 주세요');
   const mine = await fingerprint(subscription);
-  await saveSecret(repo, token, deviceSecret(mine), JSON.stringify(subscription.toJSON()));
-  try { localStorage.setItem(DEVICE, mine); } catch { /* 비공개 모드에서도 구독은 저장한다 */ }
+  // 이 기기가 이미 쓰던 칸이 있으면 그 칸을 덮어쓴다. 없으면 GitHub에 없는 첫 칸을 고른다.
+  const used = await listSecrets(repo, token);
+  const slot = myDevice()?.slot ?? DEVICE_SLOTS.find((name) => !used[name]);
+  if (!slot) throw new GitHubError('알림은 기기 8대까지 받을 수 있어요. 안 쓰는 기기에서 알림을 먼저 꺼 주세요');
+  await saveSecret(repo, token, slot, JSON.stringify(subscription.toJSON()));
+  try { localStorage.setItem(DEVICE, JSON.stringify({ fingerprint: mine, slot })); } catch { /* 비공개 모드에서도 구독은 저장한다 */ }
 }
 
 export async function disconnectBrowserPush(repo: string, token: string): Promise<void> {
@@ -63,7 +81,8 @@ export async function disconnectBrowserPush(repo: string, token: string): Promis
   const subscription = await registration?.pushManager.getSubscription();
   if (subscription) {
     const mine = await fingerprint(subscription);
-    await deleteSecret(repo, token, deviceSecret(mine)).catch(() => {});
+    const device = myDevice();
+    if (device) await deleteSecret(repo, token, device.slot).catch(() => {});
     // 이 기기가 예전 한 대 저장의 주인일 때만 그 Secret도 지운다(다른 기기 것은 건드리지 않는다).
     let legacy = false;
     try { legacy = localStorage.getItem(LEGACY) === mine; } catch { /* 모르면 지우지 않는다 */ }

@@ -14,7 +14,8 @@ from skku_notice.model import Notice
 
 @pytest.fixture(autouse=True)
 def clean_notification_config(monkeypatch):
-    for name in ("NOTIFY_URLS", "WEB_PUSH_SUBSCRIPTION", "WEB_PUSH_PRIVATE_KEY", "WEB_PUSH_SUBJECT"):
+    slots = tuple(f"WEB_PUSH_SUB_{index}" for index in range(1, 9))
+    for name in ("NOTIFY_URLS", "WEB_PUSH_SUBSCRIPTION", "WEB_PUSH_PRIVATE_KEY", "WEB_PUSH_SUBJECT", *slots):
         monkeypatch.delenv(name, raising=False)
 
 
@@ -173,11 +174,10 @@ def _device(seed: bytes) -> dict:
 
 def test_every_connected_device_gets_one_push(monkeypatch, browser_config, notice):
     phone, pc = _device(b"ph"), _device(b"pc")
-    monkeypatch.setenv("WEB_PUSH_DEVICE_SECRETS", json.dumps({
-        "WEB_PUSH_SUB_0A1B2C3D": json.dumps(phone), "WEB_PUSH_SUB_99887766": json.dumps(pc),
-        # 예전 이름과 같은 기기는 한 번만, 다른 Secret은 읽지 않는다.
-        "WEB_PUSH_SUB_DEADBEEF": json.dumps(browser_config), "GEMINI_API_KEY": "not a subscription",
-    }))
+    monkeypatch.setenv("WEB_PUSH_SUB_1", json.dumps(phone))
+    monkeypatch.setenv("WEB_PUSH_SUB_4", json.dumps(pc))
+    # 예전 이름과 같은 기기는 한 번만 보낸다.
+    monkeypatch.setenv("WEB_PUSH_SUB_8", json.dumps(browser_config))
     sent = []
     monkeypatch.setattr(
         webpush_notify, "webpush", lambda **kwargs: sent.append(kwargs["subscription_info"]["endpoint"])
@@ -188,7 +188,7 @@ def test_every_connected_device_gets_one_push(monkeypatch, browser_config, notic
 
 def test_expired_device_is_skipped_but_other_failures_retry(monkeypatch, browser_config, notice, capsys):
     other = _device(b"zz")
-    monkeypatch.setenv("WEB_PUSH_DEVICE_SECRETS", json.dumps({"WEB_PUSH_SUB_12345678": json.dumps(other)}))
+    monkeypatch.setenv("WEB_PUSH_SUB_2", json.dumps(other))
 
     class Gone:
         status_code = 410

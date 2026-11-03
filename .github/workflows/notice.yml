@@ -79,8 +79,15 @@ jobs:
           INTEREST_KEYWORDS: ${{ vars.INTEREST_KEYWORDS }}
           MUTED_CATEGORIES: ${{ vars.MUTED_CATEGORIES }}
           WEB_PUSH_SUBSCRIPTION: ${{ secrets.WEB_PUSH_SUBSCRIPTION }}
-          # 기기별 알림 구독(WEB_PUSH_SUB_*)을 찾으려고 넘긴다. 코드는 그 이름만 읽는다(D-019).
-          WEB_PUSH_DEVICE_SECRETS: ${{ toJSON(secrets) }}
+          # 기기별 알림 구독 칸(D-019). 모든 Secret을 한꺼번에 넘기지 않고 칸 이름으로만 받는다.
+          WEB_PUSH_SUB_1: ${{ secrets.WEB_PUSH_SUB_1 }}
+          WEB_PUSH_SUB_2: ${{ secrets.WEB_PUSH_SUB_2 }}
+          WEB_PUSH_SUB_3: ${{ secrets.WEB_PUSH_SUB_3 }}
+          WEB_PUSH_SUB_4: ${{ secrets.WEB_PUSH_SUB_4 }}
+          WEB_PUSH_SUB_5: ${{ secrets.WEB_PUSH_SUB_5 }}
+          WEB_PUSH_SUB_6: ${{ secrets.WEB_PUSH_SUB_6 }}
+          WEB_PUSH_SUB_7: ${{ secrets.WEB_PUSH_SUB_7 }}
+          WEB_PUSH_SUB_8: ${{ secrets.WEB_PUSH_SUB_8 }}
           WEB_PUSH_PRIVATE_KEY: ${{ secrets.WEB_PUSH_PRIVATE_KEY }}
         run: uv run skku-notice --export site
 

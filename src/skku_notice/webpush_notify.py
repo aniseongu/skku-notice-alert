@@ -5,7 +5,6 @@ import base64
 import ipaddress
 import json
 import os
-import re
 import sys
 from dataclasses import dataclass, field
 from urllib.parse import urlsplit
@@ -13,9 +12,9 @@ from urllib.parse import urlsplit
 from py_vapid import Vapid
 from pywebpush import WebPushException, webpush
 
-# 기기마다 Secret 하나(WEB_PUSH_SUB_<16진수>). 브라우저는 Secret을 읽을 수 없어 목록에 덧붙이지 못하므로
-# 기기별 이름으로 따로 저장하고, Actions는 toJSON(secrets)에서 이 이름만 골라 쓴다(D-019).
-DEVICE_SECRET = re.compile(r"^WEB_PUSH_SUB_[0-9A-F]{8,32}$")
+# 기기마다 Secret 칸 하나(WEB_PUSH_SUB_1..8). 브라우저는 Secret을 읽을 수 없어 한 목록에 덧붙이지 못하므로
+# 비어 있는 칸에 저장한다. Actions는 칸 이름을 하나씩 넘긴다(D-019).
+DEVICE_SLOTS = tuple(f"WEB_PUSH_SUB_{index}" for index in range(1, 9))
 
 
 @dataclass(frozen=True, repr=False)
@@ -59,14 +58,8 @@ def _valid_subscription(raw: str) -> dict | None:
 
 
 def _raw_subscriptions() -> list[str]:
-    values = [os.environ.get("WEB_PUSH_SUBSCRIPTION", "").strip()]
-    try:
-        every = json.loads(os.environ.get("WEB_PUSH_DEVICE_SECRETS", "") or "{}")
-    except ValueError:
-        every = {}
-    if isinstance(every, dict):
-        values += [str(value).strip() for name, value in sorted(every.items()) if DEVICE_SECRET.match(name)]
-    return [value for value in values if value]
+    names = ("WEB_PUSH_SUBSCRIPTION", *DEVICE_SLOTS)
+    return [value for value in (os.environ.get(name, "").strip() for name in names) if value]
 
 
 def web_push_config() -> WebPushConfig | None:

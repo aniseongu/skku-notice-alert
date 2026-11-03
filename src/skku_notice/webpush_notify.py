@@ -5,11 +5,12 @@ import base64
 import ipaddress
 import json
 import os
+import sys
 from dataclasses import dataclass, field
 from urllib.parse import urlsplit
 
 from py_vapid import Vapid
-from pywebpush import webpush
+from pywebpush import WebPushException, webpush
 
 
 @dataclass(frozen=True, repr=False)
@@ -80,6 +81,12 @@ def send_web_push(title: str, body: str, url: str, tag: str, priority: str) -> b
             ttl=86400,
         )
         return True
-    except Exception:
+    except WebPushException as exc:
+        # 상태 코드만 남긴다. 구독 주소와 응답 본문은 비밀이다(410은 구독 만료, 403은 발송 키 불일치).
+        status = getattr(getattr(exc, "response", None), "status_code", None)
+        print(f"웹 푸시 실패: HTTP {status or '응답 없음'}", file=sys.stderr)
+        return False
+    except Exception as exc:
         # Retain pending state for the next run; never log private endpoints or responses.
+        print(f"웹 푸시 실패: {type(exc).__name__}", file=sys.stderr)
         return False

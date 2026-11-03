@@ -3,6 +3,7 @@
 
 import hashlib
 import json
+import sys
 import unicodedata
 
 from google import genai
@@ -62,7 +63,10 @@ def judge_internships(
         replies = json.loads(response.text)["items"]
         if not isinstance(replies, list):
             return {}
-    except Exception:
+    except Exception as exc:
+        code = getattr(exc, "code", None)
+        label = f"HTTP {code}" if isinstance(code, int) else type(exc).__name__
+        print(f"인턴 AI 판정 대기: {label}", file=sys.stderr)
         return {}
     allowed = {item["id"] for item in batch}
     judgments = {}

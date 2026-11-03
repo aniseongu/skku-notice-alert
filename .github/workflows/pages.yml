@@ -8,6 +8,11 @@ on:
       - 'src/skku_notice/export.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
+    inputs:
+      classify_interns:
+        description: '보관된 공개 인턴 본문을 Gemini로 최대 6건 추가 판정'
+        type: boolean
+        default: false
 
 # Serialize with Notice and Pages so the same site is never deployed concurrently.
 concurrency:
@@ -53,6 +58,29 @@ jobs:
 
       - name: Install Python dependencies
         run: uv sync --frozen
+
+      - name: Classify archived public internships
+        if: github.event_name == 'workflow_dispatch' && inputs.classify_interns
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          uv run python - <<'PY'
+          from pathlib import Path
+          import yaml
+          from skku_notice.archive import load_archive
+          from skku_notice.cli import _intern_decisions
+          from skku_notice.state import load_state
+
+          settings = yaml.safe_load(Path("config/sources.yaml").read_text())
+          ai = yaml.safe_load(Path("config/ai.yaml").read_text())
+          import os
+          archive, decisions = _intern_decisions(
+              load_archive(Path("state/archive.json")), load_state(Path("state/seen.json")),
+              settings["sources"], ai, os.environ.get("GEMINI_API_KEY", ""),
+              [10], settings["user_agent"],
+          )
+          print(f"인턴 AI 캐시: {len(decisions)}건")
+          PY
 
       - name: Export public website without notifications
         shell: bash

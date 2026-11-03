@@ -189,6 +189,8 @@
   .rich th, .rich td { padding: 6px 8px; border: 1px solid var(--line); vertical-align: top; text-align: left; }
   .rich th { background: var(--sunken); font-weight: 600; }
   .detail-note { margin-top: 20px; font-size: 13px; line-height: 19px; color: var(--text-3); }
+  /* 영어 공지의 원문 제목: 옮긴 제목 아래 한 줄, 조용한 글자색 */
+  .detail-original { margin-top: 4px; font-size: 13px; line-height: 19px; color: var(--text-3); }
   .detail-empty { margin: 0; padding: 24px 32px; }
   .detail-note.first { margin: 0 0 10px; }
 

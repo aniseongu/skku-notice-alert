@@ -74,7 +74,7 @@ export class NoticeApp extends LitElement {
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true },
-    saved: { state: true }, read: { state: true },
+    saved: { state: true }, read: { state: true }, originalOpen: { state: true },
   };
 
   notices: Notice[] = [];
@@ -87,6 +87,8 @@ export class NoticeApp extends LitElement {
   keyword: string | null = null;
   keywords = loadKeywords();
   saved: SavedNotice[] = loadSaved();
+  // 영어 원문을 펼친 글.
+  originalOpen = new Set<string>();
   // 읽은 글 id(최근 것만). null이면 이 기기에서 처음 연 것이라 지금 글을 모두 읽은 것으로 둔다.
   read: string[] | null = loadRead();
   private readTimer = 0;
@@ -257,7 +259,7 @@ export class NoticeApp extends LitElement {
       if (this.board !== 'all' && n.source_id !== this.board) return false;
       if (this.keyword && !this.interests(n).includes(this.keyword)) return false;
       if (!query) return true;
-      return `${n.title} ${n.category ?? ''} ${this.judgement(n)?.ai?.reason ?? ''}`.toLowerCase().includes(query);
+      return `${n.title} ${n.title_ko ?? ''} ${n.category ?? ''} ${this.judgement(n)?.ai?.reason ?? ''}`.toLowerCase().includes(query);
     });
   }
 
@@ -333,7 +335,7 @@ export class NoticeApp extends LitElement {
   // 휴대폰은 카카오톡 같은 앱으로 바로 보내는 공유 창을 쓴다. 없으면 링크를 복사한다.
   private async share(notice: Notice) {
     if (!navigator.share) { this.copyLink(notice); return; }
-    try { await navigator.share({ title: cleanTitle(notice.title), url: safeUrl(notice.url) }); } catch { /* 닫으면 그대로 둔다 */ }
+    try { await navigator.share({ title: cleanTitle(notice.title_ko || notice.title), url: safeUrl(notice.url) }); } catch { /* 닫으면 그대로 둔다 */ }
   }
 
   private showToast(text: string) {
@@ -530,6 +532,24 @@ export class NoticeApp extends LitElement {
     `;
   }
 
+  // 영어 공지는 옮긴 글을 먼저 보이고, 영어 원문은 펼쳐서 본다.
+  private translatedView(notice: Notice, loaded: NoticeBody | null) {
+    const translation = loaded?.translation;
+    if (!translation?.body) return this.bodyView(loaded);
+    const open = this.originalOpen.has(notice.id);
+    return html`<section class="detail-section body-text" aria-label="본문">
+        <h3>본문 (한국어로 옮긴 글)</h3>
+        <p class="detail-note first">Gemini가 영어 원문을 옮겼어요. 이름, 날짜, 장소는 원문 그대로예요. 정확한 내용은 원문을 봐 주세요</p>
+        ${translation.body.split(/\n+/).filter(Boolean).map((para) => html`<p>${para}</p>`)}
+      </section>
+      <button type="button" class="text-button" aria-expanded=${String(open)} @click=${() => {
+        const next = new Set(this.originalOpen);
+        if (open) next.delete(notice.id); else next.add(notice.id);
+        this.originalOpen = next;
+      }}>${open ? '영어 원문 접기' : '영어 원문 보기'}</button>
+      ${open ? html`<div lang="en">${this.bodyView(loaded)}</div>` : nothing}`;
+  }
+
   private bodyView(loaded: NoticeBody | null) {
     if (!loaded) return html`<p class="detail-note">본문은 아직 받지 않았어요. 원문 열기로 볼 수 있어요</p>`;
     const paragraphs = (loaded.body ?? '').split(/\n+/).filter(Boolean);
@@ -696,7 +716,7 @@ export class NoticeApp extends LitElement {
           const tags = [notice.category, notice.pinned ? '고정' : '', this.view !== 'saved' && this.isSaved(notice) ? '저장함' : ''].filter(Boolean);
           return tags.length ? html`<span class="cat">${tags.join(', ')}</span>` : nothing;
         })()}</span>
-        <span class="title">${cleanTitle(notice.title)}</span>
+        <span class="title">${cleanTitle(notice.title_ko || notice.title)}</span>
         <span class="sub">${this.reasonLine(notice)}</span>
         ${this.dday(notice, today)}
       </a></li>`;
@@ -714,12 +734,13 @@ export class NoticeApp extends LitElement {
     return html`
       <div class="detail">
         <p class="meta"><span>${boardName(source, notice.source_id)}</span>${notice.category ? html`<span>${notice.category}</span>` : nothing}</p>
-        <h2 class="detail-title" title=${cleanTitle(notice.title)}>${cleanTitle(notice.title)}</h2>
+        <h2 class="detail-title" title=${cleanTitle(notice.title_ko || notice.title)}>${cleanTitle(notice.title_ko || notice.title)}</h2>
+        ${notice.title_ko ? html`<p class="detail-original" lang="en">${cleanTitle(notice.title)}</p>` : nothing}
         ${reason === nothing ? nothing : html`<p class="detail-reason">${reason}</p>`}
         ${notice.deadline ? html`<p class="detail-deadline">마감 ${deadlineDetail(notice.deadline)} ${this.dday(notice, today)}</p>` : nothing}
         ${loaded?.summary ? html`<section class="detail-section summary" aria-label="요약">
           <h3>요약</h3>${loaded.summary.split('\n').filter(Boolean).map((line) => html`<p>${line}</p>`)}</section>` : nothing}
-        ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>` : this.bodyView(loaded)}
+        ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>` : this.translatedView(notice, loaded)}
         ${loaded?.attachments?.length ? this.attachmentsView(loaded) : nothing}
         <dl class="facts" aria-label="글 정보">
           <div><dt>게시일</dt><dd>${koreanDate(notice.posted_on)}</dd></div>

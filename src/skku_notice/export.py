@@ -25,7 +25,12 @@ def export_site(
         "version": 1,
         "generated_at": stamp,
         "sources": [{"id": source["id"], "name": source["name"], "url": source["url"]} for source in sources],
-        "notices": [item["notice"] for item in ordered],
+        # title_ko는 영어 공지를 옮긴 제목(추가 필드, D-010 API v1 유지).
+        "notices": [
+            {**item["notice"],
+             **({"title_ko": item["translation"]["title"]} if item.get("translation") else {})}
+            for item in ordered
+        ],
     }
     # D-010 API v1의 기존 이름을 유지하고 interests는 추가 필드로 넣는다.
     personal = {}
@@ -53,6 +58,7 @@ def export_site(
                             for attachment in item.get("attachments", [])],
             "images": item.get("images", []),
             "body_from_image": item.get("body_from_image", False),
+            "translation": item.get("translation"),
             "ocr_engine": item.get("ocr_engine"),
             "fetched_at": item.get("fetched_at"),
         }

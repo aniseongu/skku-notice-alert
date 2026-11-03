@@ -250,7 +250,10 @@ export class NoticeApp extends LitElement {
     return [...found];
   }
 
-  private mine(notice: Notice): boolean { return isMine(this.judgement(notice)) || this.interests(notice).length > 0; }
+  private mine(notice: Notice): boolean {
+    if (this.isExternal(notice)) return isMine(this.judgement(notice), true);
+    return isMine(this.judgement(notice)) || this.interests(notice).length > 0;
+  }
 
   private filtered(notices = this.notices): Notice[] {
     const query = this.query.trim().toLowerCase();

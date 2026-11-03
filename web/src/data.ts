@@ -89,8 +89,10 @@ export async function fetchJson<T>(name: string, optional = false): Promise<T | 
 export const VERDICT_LABEL: Record<Verdict, string> = { relevant: '해당', maybe: '확인 필요', not_relevant: '해당 없음' };
 
 // 내 공지: 기준(규칙), 관심 키워드, Gemini 해당과 확인 필요. 모든 새 글을 알리므로(D-015) 알림을 보냈다는 것만으로는 넣지 않는다.
-export function isMine(judgement: Judgement | undefined): boolean {
+export function isMine(judgement: Judgement | undefined, external = false): boolean {
   if (!judgement) return false;
+  // 외부 인턴 공고는 모두 '인턴'이라 키워드만으로는 내 공지가 아니다(D-026).
+  if (external) return Boolean(judgement.rule_name) || judgement.ai?.verdict === 'relevant' || judgement.ai?.verdict === 'maybe';
   const verdict = judgement.ai?.verdict;
   const interested = Boolean(judgement.interests?.length);
   // 기준에 맞아도 Gemini가 "해당 없음"이라고 본 글은 내 공지에 올리지 않는다(알림도 조용히 간다, decide_priority).

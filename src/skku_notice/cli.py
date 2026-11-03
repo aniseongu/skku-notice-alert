@@ -161,7 +161,8 @@ RECHECK_HOURS = 12
 
 
 def _important(item: dict, saved_ids: set[str]) -> bool:
-    return item["notice"]["id"] in saved_ids or is_mine(item.get("match"))
+    external = ".skku.edu/" not in item["notice"]["url"]
+    return item["notice"]["id"] in saved_ids or is_mine(item.get("match"), external)
 
 
 def _saved_ids() -> set[str]:
@@ -451,7 +452,9 @@ def run(args: argparse.Namespace) -> int:
                 word for word in interests
                 if word in text_interests
             )
-            priority = decide_priority(match, judgment, text_interests) if process and not excluded else None
+            # 외부 인턴 공고는 모두 '인턴'이라 키워드만으로 알리지 않는다(D-026).
+            priority = (decide_priority(match, judgment, () if source.get("external") else text_interests)
+                        if process and not excluded else None)
             # 꺼 둔 분류는 "모두 알림"만 빠진다. 기준, 관심 키워드, Gemini 해당은 그대로 알린다(D-018).
             # 외부 인턴 공고는 하루에도 수십 건이라 "모두 알림"에서 뺀다(D-026). 맞는 공고만 알린다.
             if (process and priority is None and rules.notify_all and not source.get("external")

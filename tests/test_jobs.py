@@ -64,3 +64,22 @@ def test_external_deadline_reaches_public_notice():
 def test_external_fetch_only_allows_the_two_apis(url):
     with pytest.raises(fetch.UnsafeURL):
         fetch.fetch_json_post(url, {}, "ua", 1)
+
+
+def test_outside_ids_must_be_plain_numbers():
+    def post(url, body, headers):
+        return {"data": {"activities": {"nodes": [
+            {"id": "../../index", "title": "인턴", "recruitCloseAt": 1801493999999},
+            {"id": "12 34", "title": "인턴", "recruitCloseAt": 1801493999999},
+            {"id": "777", "title": "인턴", "recruitCloseAt": 1801493999999},
+        ]}}}
+
+    assert [n.article_no for n, _ in jobs.linkareer(post, NOW)] == ["777"]
+
+
+def test_keyword_alone_does_not_make_external_posting_mine():
+    from skku_notice.interests import is_mine
+
+    keyword_only = {"rule_name": None, "interests": ["인턴"], "ai": None}
+    assert is_mine(keyword_only) and not is_mine(keyword_only, external=True)
+    assert is_mine({"ai": {"verdict": "relevant"}, "interests": []}, external=True)

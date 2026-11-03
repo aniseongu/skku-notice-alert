@@ -22,6 +22,12 @@ Post = Callable[[str, dict, dict], dict]
 Posting = tuple[Notice, str | None]
 
 
+def _number(value: object) -> str | None:
+    """Article number from an outside site. Only plain digits, so it is safe in file paths and URLs."""
+    text = str(value)
+    return text if text.isdigit() and len(text) <= 20 else None
+
+
 def _from_ms(value: object) -> datetime | None:
     return datetime.fromtimestamp(value / 1000, KST) if isinstance(value, int | float) and value > 0 else None
 
@@ -34,14 +40,15 @@ def linkareer(post: Post, now: datetime, source_id: str = "linkareer") -> list[P
     postings = []
     for node in nodes:
         close, start = _from_ms(node.get("recruitCloseAt")), _from_ms(node.get("recruitStartAt"))
-        if not node.get("id") or not node.get("title") or (close and close < now):
+        number = _number(node.get("id"))
+        if not number or not node.get("title") or (close and close < now):
             continue
         types = node.get("distinctInternTypes") or []
         kinds = [t["name"] for t in types if t.get("name") and t["name"] != "기타"]
         company = node.get("organizationName") or ""
         title = f"[{company}] {node['title']}" if company and company not in node["title"] else node["title"]
-        postings.append((Notice(source_id, str(node["id"]), title, ", ".join(kinds) or "인턴",
-                                f"https://linkareer.com/activity/{node['id']}", (start or now).date(), False),
+        postings.append((Notice(source_id, number, title, ", ".join(kinds) or "인턴",
+                                f"https://linkareer.com/activity/{number}", (start or now).date(), False),
                          close.isoformat() if close else None))
     return postings
 
@@ -58,17 +65,18 @@ def jasoseol(post: Post, now: datetime, source_id: str = "jasoseol") -> list[Pos
         title = item.get("title") or ""
         end = datetime.fromisoformat(item["end_time"]).astimezone(KST) if item.get("end_time") else None
         # division 3이 인턴이다(참고 코드). 제목에 인턴이 있는 공고도 받는다.
-        if not item.get("id") or (3 not in divisions and "인턴" not in title) or (end and end < now):
+        number = _number(item.get("id"))
+        if not number or (3 not in divisions and "인턴" not in title) or (end and end < now):
             continue
-        chosen[item["id"]] = (item, end)
-    newest = sorted(chosen.values(), key=lambda pair: pair[0].get("start_time") or "", reverse=True)[:LIMIT]
+        chosen[number] = (item, end, number)
+    newest = sorted(chosen.values(), key=lambda entry: entry[0].get("start_time") or "", reverse=True)[:LIMIT]
     postings = []
-    for item, end in newest:
+    for item, end, number in newest:
         start = datetime.fromisoformat(item["start_time"]).astimezone(KST) if item.get("start_time") else now
         company = item.get("name") or ""
         title = f"[{company}] {item['title']}" if company and company not in item["title"] else item["title"]
-        postings.append((Notice(source_id, str(item["id"]), title, "인턴",
-                                f"https://jasoseol.com/recruit/{item['id']}", start.date(), False),
+        postings.append((Notice(source_id, number, title, "인턴",
+                                f"https://jasoseol.com/recruit/{number}", start.date(), False),
                          end.isoformat() if end else None))
     return postings
 

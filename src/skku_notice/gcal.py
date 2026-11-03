@@ -36,9 +36,10 @@ def _event_id(notice_id: str) -> str:
 _mine = is_mine
 
 
-def desired_events(notices: list[dict], matched: dict, saved: list[dict], now: datetime) -> dict[str, dict]:
+def desired_events(notices: list[dict], matched: dict, saved: list[dict], now: datetime,
+                   external: frozenset[str] = frozenset()) -> dict[str, dict]:
     """Deadline events for 내 공지 and saved notices whose deadline is still ahead."""
-    chosen = {n["id"]: n for n in notices if _mine(matched.get(n["id"]))}
+    chosen = {n["id"]: n for n in notices if _mine(matched.get(n["id"]), n["source_id"] in external)}
     for item in saved:
         if isinstance(item, dict) and isinstance(item.get("id"), str):
             chosen.setdefault(item["id"], item)
@@ -130,13 +131,16 @@ def main(api_dir: Path = Path("site/api/v1")) -> int:
         print("구글 캘린더: 캘린더 id가 올바르지 않아요", file=sys.stderr)
         return 1
     try:
-        notices = json.loads((api_dir / "notices.json").read_text(encoding="utf-8"))["notices"]
+        listing = json.loads((api_dir / "notices.json").read_text(encoding="utf-8"))
+        notices = listing["notices"]
+        external = frozenset(s["id"] for s in listing.get("sources", []) if s.get("external"))
         matched = json.loads((api_dir / "matched.json").read_text(encoding="utf-8")).get("items", {})
         saved = json.loads(os.environ.get("SAVED_NOTICES") or "[]")
     except (OSError, ValueError, KeyError):
         print("구글 캘린더: 공지 파일을 읽지 못했어요", file=sys.stderr)
         return 1
-    desired = desired_events(notices, matched, saved if isinstance(saved, list) else [], datetime.now(KST))
+    saved_list = saved if isinstance(saved, list) else []
+    desired = desired_events(notices, matched, saved_list, datetime.now(KST), external)
     try:
         with httpx.Client(timeout=15) as client:
             token = access_token(client, values["GOOGLE_CLIENT_ID"], values["GOOGLE_CLIENT_SECRET"],

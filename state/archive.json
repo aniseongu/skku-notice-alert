@@ -1,6 +1,49 @@
 {
   "version": 1,
   "items": {
+    "jasoseol-intern/107019": {
+      "notice": {
+        "id": "jasoseol-intern/107019",
+        "source_id": "jasoseol-intern",
+        "article_no": "107019",
+        "title": "[한국도심공항자산관리] 채용연계형 인턴 채용 공고",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107019",
+        "posted_on": "2026-11-05",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T00:12:45.363535+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/596/webp/image.webp?1793605993\" alt=\"한국도심공항자산관리 채용연계형 인턴 채용 공고\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/596/webp/image.webp?1793605993"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T00:12:45.363535+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-13T23:59:00+09:00",
+        "model": "source"
+      }
+    },
     "linkareer-intern/361860": {
       "notice": {
         "id": "linkareer-intern/361860",
@@ -2575,6 +2618,92 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-11-18T10:30:00+09:00"
+      }
+    },
+    "jasoseol-intern/107031": {
+      "notice": {
+        "id": "jasoseol-intern/107031",
+        "source_id": "jasoseol-intern",
+        "article_no": "107031",
+        "title": "[한국과학기술연구원(KIST)] 2026-6차 행정인턴 공개채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107031",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T00:12:45.363535+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/701/webp/image.webp?1793673312\" alt=\"한국과학기술연구원(KIST) 2026-6차 행정인턴 공개채용\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/701/webp/image.webp?1793673312"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T00:12:45.363535+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T18:00:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/107020": {
+      "notice": {
+        "id": "jasoseol-intern/107020",
+        "source_id": "jasoseol-intern",
+        "article_no": "107020",
+        "title": "[에이피알] 마케팅 직군 대규모 특별 채용 (신입/경력)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107020",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T00:12:45.363535+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/752/webp/_%EC%B5%9C%EC%A2%85_%EC%9B%B9%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B4_CTA%EB%B2%84%EC%A0%84_1103.webp?1793689450\" alt=\"에이피알 마케팅 직군 대규모 특별 채용 (신입/경력)\"><a href=\"https://26mkt-aprcareers.com\">​</a>\n</div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/752/webp/_%EC%B5%9C%EC%A2%85_%EC%9B%B9%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B4_CTA%EB%B2%84%EC%A0%84_1103.webp?1793689450"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T00:12:45.363535+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:00+09:00",
+        "model": "source"
       }
     },
     "linkareer-intern/361866": {

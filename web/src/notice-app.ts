@@ -449,8 +449,8 @@ export class NoticeApp extends LitElement {
         <main class="list-pane">
           ${reading ? this.readingView(reading) : html`
           <header class="pane-head topbar glass">
-            ${settings ? html`<button type="button" class="icon-button back" aria-label="설정 닫기" title="설정 닫기 (Esc)"
-              aria-keyshortcuts="Escape" @click=${this.leaveSettings}>${icon('back')}</button>` : nothing}
+            ${settings ? html`<button type="button" class="icon-button narrow-only back" aria-label="설정 닫기"
+              @click=${this.leaveSettings}>${icon('back')}</button>` : nothing}
             <div class="topbar-text">
               <h1>${title}</h1>
               ${settings ? html`<p class="updated">알림과 연결을 정해요</p>` : this.updatedLine(list.length)}
@@ -465,6 +465,8 @@ export class NoticeApp extends LitElement {
                 ?disabled=${this.loading} @click=${this.refresh}>${icon('refresh')}</button>`}
             ${settings ? nothing : html`<button type="button" class="icon-button narrow-only" aria-label="설정"
               @click=${() => this.setView('settings')}>${gearIcon}</button>`}
+            ${settings ? html`<button type="button" class="icon-button wide-only" aria-label="설정 닫기" title="설정 닫기 (Esc)"
+              aria-keyshortcuts="Escape" @click=${this.leaveSettings}>${icon('close')}</button>` : nothing}
           </header>
 
           ${settings ? html`<settings-view .keywords=${this.keywords} .theme=${this.theme}
@@ -594,7 +596,7 @@ export class NoticeApp extends LitElement {
     }
     if (!list.length) {
       const boardPicker = html`<div class="group-head empty-head"><span></span>${this.boardSelect()}</div>`;
-      if (this.query) return html`${boardPicker}${this.empty(`'${this.query}'에 맞는 공지가 없어요`, '다른 단어로 찾아보세요', '검색어 삭제', () => { this.query = ''; })}`;
+      if (this.query) return html`${boardPicker}${this.empty(`'${this.query}'에 맞는 공지가 없어요`, '다른 단어로 찾아보세요', '검색어 지우기', () => { this.query = ''; })}`;
       if (this.keyword) return html`${boardPicker}${this.empty(`'${this.keyword}'에 맞는 공지가 아직 없어요`, '새 글이 오면 여기에 모여요')}`;
       const empty = {
         mine: ['지금 챙길 공지가 없어요', '기준이나 관심 키워드에 맞는 새 글이 오면 여기 쌓여요'],
@@ -708,7 +710,7 @@ export class NoticeApp extends LitElement {
         <dl class="facts" aria-label="글 정보">
           <div><dt>게시일</dt><dd>${koreanDate(notice.posted_on)}</dd></div>
           ${interests.length ? html`<div><dt>관심</dt><dd><b class="interest">${interests.join(', ')}</b></dd></div>` : nothing}
-          ${judgement?.notified ? html`<div><dt>알림</dt><dd>휴대폰으로 보냈어요</dd></div>` : nothing}
+          ${judgement?.notified ? html`<div><dt>알림</dt><dd>알림을 보냈어요</dd></div>` : nothing}
         </dl>
       </div>`;
   }

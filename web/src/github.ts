@@ -15,8 +15,8 @@ function headers(token: string): HeadersInit {
 // allowConflict: 변수 만들기에서만 409(이미 있음)를 정상으로 보고 수정으로 넘어간다. Secret 저장의 409는 실패다.
 async function call(path: string, token: string, init: RequestInit = {}, allowConflict = false): Promise<Response> {
   const response = await fetch(`${API}${path}`, { ...init, headers: { ...headers(token), ...(init.headers ?? {}) } });
-  if (response.status === 401) throw new GitHubError('GitHub 토큰이 맞지 않아요');
-  if (response.status === 403 || response.status === 404) throw new GitHubError('저장소를 찾을 수 없거나 권한이 없어요');
+  if (response.status === 401) throw new GitHubError('GitHub 토큰이 맞지 않아요. 새 토큰을 넣어 주세요');
+  if (response.status === 403 || response.status === 404) throw new GitHubError('저장소 이름과 토큰 권한(Secrets, Variables)을 확인해 주세요');
   if (response.status === 409 && allowConflict) return response;
   if (!response.ok) throw new GitHubError(`GitHub 오류 (${response.status})`);
   return response;

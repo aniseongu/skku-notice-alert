@@ -40,7 +40,7 @@ async function google(url: string, init: RequestInit): Promise<Record<string, un
   if (!response.ok) {
     const code = String(body.error ?? response.status);
     if (/invalid_client|unauthorized_client|redirect_uri_mismatch/.test(code)) throw new GoogleError('클라이언트 ID나 보안 비밀번호, 리디렉션 URI를 다시 확인해 주세요');
-    throw new GoogleError(`구글 오류 (${response.status})`);
+    throw new GoogleError(`구글이 요청을 받지 않았어요(오류 ${response.status}). 잠시 뒤 다시 눌러 주세요`);
   }
   return body;
 }

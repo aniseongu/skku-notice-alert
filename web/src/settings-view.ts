@@ -174,7 +174,7 @@ export class SettingsView extends LitElement {
   private async testBrowserNotifications() {
     try {
       await testBrowserNotification();
-      this.setStatus('browser-push', true, '테스트 알림을 띄웠어요. Windows 알림도 켜져 있는지 확인해 주세요');
+      this.setStatus('browser-push', true, '테스트 알림을 띄웠어요. 안 보이면 기기의 알림 설정에서 이 브라우저를 켜 주세요');
     } catch (error) {
       this.setStatus('browser-push', false, error instanceof Error ? error.message : '테스트 알림을 띄우지 못했어요');
     }
@@ -201,7 +201,7 @@ export class SettingsView extends LitElement {
     } catch (error) {
       // 만료되거나 지운 토큰은 기억하지 않는다. 인터넷 오류면 다음에 다시 시도한다.
       if (error instanceof GitHubError) { await forgetToken(); this.token = ''; this.linked = false; }
-      this.setStatus('github', false, error instanceof GitHubError ? `${error.message}. 새 토큰을 넣어 주세요` : '인터넷 연결을 확인해 주세요');
+      this.setStatus('github', false, error instanceof GitHubError ? error.message : '인터넷 연결을 확인해 주세요');
     } finally { this.busy = ''; }
   }
 
@@ -470,7 +470,7 @@ export class SettingsView extends LitElement {
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">이 기기 알림</p>
-              <p class="setting-help">앱과 탭을 닫아도 브라우저가 켜져 있으면 휴대폰이나 PC 알림으로 받아요. 소리는 기기의 알림 설정을 따라요.</p>
+              <p class="setting-help">앱과 탭을 닫아도 브라우저가 켜져 있으면 휴대폰이나 PC 알림으로 받아요. 소리는 기기의 알림 설정을 따라요</p>
             </div>
             <div class="setting-control">
               ${this.browserNotifications ? html`<p class="setting-saved">알림을 받고 있어요</p>` : html`<p class="field-note">알림이 꺼져 있어요</p>`}
@@ -481,7 +481,7 @@ export class SettingsView extends LitElement {
               </div>
               ${!supportsBrowserPush() ? html`<p class="field-note">최신 브라우저에서 알림을 연결해 주세요</p>` : nothing}
               ${this.note('browser-push')}
-              <p class="field-note">한 번 연결하면 계속 받아요. 휴대폰과 PC에서 각각 켜면 모두 받아요.</p>
+              <p class="field-note">한 번 연결하면 계속 받아요. 휴대폰과 PC에서 각각 켜면 모두 받아요</p>
             </div>
           </div>
           <div class="setting">
@@ -657,7 +657,7 @@ export class SettingsView extends LitElement {
           </div>
           ${this.connected()
             ? value.trim() ? html`<p class="field-note">아직 저장하지 않았어요. GitHub에 저장하기를 눌러 주세요</p>` : nothing
-            : html`<p class="field-note">위에서 GitHub에 연결한 뒤 저장해 주세요. 입력한 내용은 아직 저장하지 않았어요</p>`}
+            : html`<p class="field-note">GitHub에 연결하면 저장할 수 있어요</p>`}
           `}
           ${this.note(name)}
           ${this.guide(name, field.steps, field.multiline ? '쓰는 방법' : '받는 방법')}

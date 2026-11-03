@@ -158,6 +158,8 @@ export class NoticeApp extends LitElement {
     super.connectedCallback();
     // 새 문서는 목록에서 시작한다. 이전 문서의 상세 history 상태가 설정 닫기에서 되살아나지 않게 맞춘다.
     if (history.state?.notice) history.replaceState(null, '');
+    remember('notice-sort', this.sort);
+    remember('intern-sort', this.internSort);
     applyTheme(this.theme);
     this.refresh();
     this.syncFromGitHub();
@@ -365,6 +367,8 @@ export class NoticeApp extends LitElement {
       if (view === 'intern') this.internSort = requested;
       else if (view === 'all') this.sort = requested;
     }
+    remember('notice-sort', this.sort);
+    remember('intern-sort', this.internSort);
     if (view !== this.view) { this.view = view; this.selectedId = null; }
   };
 

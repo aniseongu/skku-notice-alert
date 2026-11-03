@@ -31,7 +31,7 @@ def deadlines_ics(notices: list[dict], board_names: dict[str, str], now: datetim
     """One all-day event per notice deadline, so calendar apps can subscribe to it."""
     lines = [
         "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//skku-notice-alert//deadlines//KO", "CALSCALE:GREGORIAN",
-        "METHOD:PUBLISH", "X-WR-CALNAME:성대 공지 마감", "X-WR-TIMEZONE:Asia/Seoul",
+        "METHOD:PUBLISH", "X-WR-CALNAME:성공 마감", "X-WR-TIMEZONE:Asia/Seoul",
         "REFRESH-INTERVAL;VALUE=DURATION:PT6H", "X-PUBLISHED-TTL:PT6H",
     ]
     stamp = now.astimezone(UTC).strftime("%Y%m%dT%H%M%SZ")
@@ -74,7 +74,7 @@ def rss_feed(notices: list[dict], board_names: dict[str, str], now: datetime) ->
         )
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel>'
-        f"<title>성대 공지</title><link>{escape(SITE_URL)}</link>"
+        f"<title>성공</title><link>{escape(SITE_URL)}</link>"
         "<description>성균관대 공지 게시판 새 글</description><language>ko</language>"
         f"<lastBuildDate>{format_datetime(now)}</lastBuildDate>{''.join(items)}</channel></rss>\n"
     )

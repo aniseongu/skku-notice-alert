@@ -1,4 +1,4 @@
-# skku-notice-alert
+# 성공
 
 성균관대 공지 게시판(전체 공지, 소프트웨어학과 공지)을 15분마다 읽고, **내가 정한 기준에 맞는 글만** 휴대폰과 PC에 알림으로 보낸다.
 알림을 누르면 원문이 열린다. PC가 꺼져 있어도 GitHub Actions에서 돈다. 같은 데이터를 JSON API로도 낸다.
@@ -9,7 +9,7 @@
 
 ## 사이트 열기
 
-휴대폰과 PC에서는 [성대 공지](https://aniseongu.github.io/skku-notice-alert/)를 연다. PC를 켜 두거나 로컬 서버를 실행할 필요가 없다. 브라우저에서 앱으로 설치하면 아이콘으로 열 수 있다.
+휴대폰과 PC에서는 [성공](https://aniseongu.github.io/skku-notice-alert/)를 연다. PC를 켜 두거나 로컬 서버를 실행할 필요가 없다. 브라우저에서 앱으로 설치하면 아이콘으로 열 수 있다.
 
 `Publish website`가 화면을 GitHub Pages에 배포한다. `main`에 `web/` 변경을 push하면 자동 실행되며, Actions에서 수동으로 실행할 수도 있다. 알림 키 없이도 배포할 수 있다. 공개 archive가 있으면 그 판정과 본문을 사용하고, 첫 배포에는 공개 게시판 목록을 읽어 표시한다. 공지 자동 수집과 알림은 아래 `Notice and Pages` 설정을 마친 뒤 켠다.
 

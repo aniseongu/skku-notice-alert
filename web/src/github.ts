@@ -71,23 +71,3 @@ export async function checkGeminiKey(key: string): Promise<boolean> {
   });
   return response.ok;
 }
-
-export async function sendTestNotification(topic: string): Promise<boolean> {
-  const response = await fetch('https://ntfy.sh/', {
-    method: 'POST',
-    body: JSON.stringify({
-      topic,
-      title: '성대 공지 테스트 알림',
-      message: '이 알림이 보이면 휴대폰과 PC 알림 연결이 끝났어요',
-      click: location.origin + location.pathname,
-      tags: ['white_check_mark'],
-    }),
-  });
-  return response.ok;
-}
-
-export function newTopic(): string {
-  const alphabet = 'abcdefghijkmnpqrstuvwxyz23456789';
-  const bytes = crypto.getRandomValues(new Uint8Array(20));
-  return `skku-${Array.from(bytes, (b) => alphabet[b % alphabet.length]).join('')}`;
-}

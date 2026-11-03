@@ -68,7 +68,11 @@ def _deliver(title: str, body: str, click_url: str, tag: str, priority: str, url
             results.append(all(added) and delivered)
         except Exception:
             results.append(False)
-    if any(os.environ.get(name, "").strip() for name in ("WEB_PUSH_SUBSCRIPTION", "WEB_PUSH_PRIVATE_KEY")):
+    try:
+        push = web_push_config() is not None
+    except ValueError:
+        push = True  # 설정이 틀리면 보내기에서 실패로 돌려 다음 실행에 다시 시도한다.
+    if push:
         results.append(send_web_push(title, body, click_url, tag, priority))
     return bool(results) and all(results)
 

@@ -659,7 +659,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 이커머스 패션 AMD로, 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[하루7H근무/중식제공/본사]\n신세계인터내셔날\n이커머스 입점팀 패션 AMD 채용\n접수 기간 2026-11-03 ~ 2026-11-09\n\n모집부문 및 상세내용\n모집 부문상세내용\n이커머스\n온라인 AMD\n(0명)\n담당업무\n이커머스 입점팀 패션 담당AMD\n- 신세계 V 입점 패션 브랜드 AMD\n- 온라인 프로모션 및 기획전 업무 보조 (세팅, 배너, 제작 등)\n- 상품 및 재고, 브랜드, CS 관리\n\n채용형태\n- 인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)\n- 파트너\n\n\n우대조건\n- 온라인몰 경력자(개인 쇼핑몰 운영 경험자 등)\n- 포토샵/피그마 숙련자\n- 엑셀 등 문서작업 능숙자\n- 성실하고 책임감 있는 성격 보유자\n\n\n복리후생\n▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)\n\n\n\n\n자격요건\n학력\n학력무관\n\n근무조건\n급여\n회사 내규에 따름\n(연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)\n근무지역\n서울 강남구 도산대로 449 SI 청담 본사\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n실무진 면접\n\nStep 2\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-03 ~ 2026-11-09 (ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)\n\n접수방법\n이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대\n\n\n\n유의사항\n\n\n\n\n\n\n\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.\n채용 절차\n1. 서류전형 (서류전형 합격자분들 한하여 연락 드리는 점 유의 부탁 드립니다.)\n※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.\n\n\n2. 실무진 면접\n\n\n3. 최종 합격",
@@ -680,6 +685,12 @@
         "kind": "마감",
         "at": "2026-11-09T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "324d29e362e5b8dbad92d70503bc4540422a1396475fc0acbae4d341604d9eb0",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 이커머스 패션 AMD로, 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361710": {
@@ -700,7 +711,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 이커머스 패션 AMD로, 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[하루7H근무/중식제공/본사]\n신세계인터내셔날 이커머스 입점팀\n패션 AMD 채용(잉크, 던스트 등)\n접수 기간 2026-11-03 ~ 2026-11-10\n\n모집부문 및 상세내용\n모집 부문상세내용\n이커머스\n온라인 AMD\n(0명)\n담당업무\n이커머스 입점팀 패션 담당AMD\n※ 잉크, 던스트, 가니송, GBH, 마누엘에기욤, YCH, 제이리움 외 K 패션 브랜드\n- 신세계 V 입점 패션 브랜드 AMD\n- 온라인 프로모션 및 기획전 업무 보조 (세팅, 배너, 제작 등)\n- 상품 및 재고, 브랜드, CS 관리\n\n채용형태\n- 인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)\n- 파트너\n\n\n우대조건\n- 온라인몰 경력자(개인 쇼핑몰 운영 경험자 등)\n- 포토샵/피그마 숙련자\n- 엑셀 등 문서작업 능숙자\n- 성실하고 책임감 있는 성격 보유자\n\n\n복리후생\n▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)\n\n\n\n\n\n\n자격요건\n학력\n학력무관\n\n근무조건\n급여\n회사 내규에 따름\n(연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)\n근무지역\n서울 강남구 도산대로 449 SI 청담 본사\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n실무진 면접\n\nStep 2\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-03 ~ 2026-11-10 (ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)\n\n접수방법\n이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.\n채용 절차\n1. 서류전형 (서류전형 합격자분들 한하여 연락 드리는 점 유의 부탁 드립니다.)\n※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.\n\n\n2. 실무진 면접\n\n\n3. 최종 합격",
@@ -721,6 +737,12 @@
         "kind": "마감",
         "at": "2026-11-10T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "e7515460aeea4bbf997db54666d5e55c7d1226d1862adee9d6502efc108189e3",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 이커머스 패션 AMD로, 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361704": {
@@ -741,7 +763,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "relevant",
+          "reason": "AI 스타트업에서 데이터 분석 및 AI 도구를 활용한 콘텐츠 기획 업무를 수행하므로 소프트웨어학과 학생이 지원하기에 적합합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[AI 스타트업] 북미 콘텐츠 마케팅 인턴\n접수 기간2026-11-03 ~ 채용 시 마감\n\n모집부문 및 상세내용\n[AI 스타트업] 북미 콘텐츠 마케팅 인턴(0명)채용 형태\n- 인턴 6개월\n\n\n담당업무\n북미 유저들이 좋아하고 반응하는 콘텐츠가 무엇인지 끊임없이 탐색하고, 직접 기획하고 실행하며 콘텐츠의 방향을 함께 만들어갈 분을 찾고 있습니다. 북미 인터넷 문화와 트렌드에 대한 감각을 바탕으로 다양한 콘텐츠 아이디어를 빠르게 시도하고, 실제 유저 반응과 데이터를 통해 더 좋은 콘텐츠로 발전시켜 나갈 ‘북미 콘텐츠 마케팅 인턴’을 찾고 있습니다.\n\n- 북미 유저 및 트렌드를 기반으로 콘텐츠 아이디어를 기획하고 운영\n- 북미 콘텐츠 크리에이터를 발굴하고 협업 콘텐츠의 제작 및 품질 관리\n- 콘텐츠 성과 데이터를 분석하고 인사이트를 바탕으로 콘텐츠 방향 및 우선순위 개선\n\n우대조건\n- 북미 타겟 콘텐츠 또는 SNS 채널을 직접 기획·운영해본 경험이 있으신 분\n- Seedance, Veo, Kling 등을 사용해 AI 콘텐츠를(이미지, 영상)제작해보신 분\n- 개인 채널 또는 프로젝트를 통해 콘텐츠 성과를 만들어본 경험이 있으신 분\n- 빠르게 성장하는 스타트업에서 콘텐츠를 기획하고 실행해본 경험이 있으신 분\n\n\n자격요건\n학력\n학력무관\n\n근무조건\n급여\n월급 220만원 ~ 220만원\n\n근무시간\n주 5일(월~금) 10:00 ~ 19:00\n\n근무지역\n서울 강남구 강남대로 464 4층\n\n\n전형 절차\nStep1\n서류전형\n\nStep2\n1차 면접\n\nStep2\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-03 ~ 채용 시 마감\n\n접수방법\n링커리어 간편지원\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
@@ -762,6 +789,12 @@
         "kind": "마감",
         "at": "2027-02-01T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "5c697139757dcb314769f9591c4d272b885701dd0406669967195c1b2bdc5e63",
+        "verdict": "relevant",
+        "reason": "AI 스타트업에서 데이터 분석 및 AI 도구를 활용한 콘텐츠 기획 업무를 수행하므로 소프트웨어학과 학생이 지원하기에 적합합니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361701": {
@@ -782,7 +815,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 뷰티 기업의 글로벌 인허가(RA) 담당자로, 소프트웨어 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -803,6 +841,12 @@
         "kind": "마감",
         "at": "2027-02-01T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "eecca6a62a0d9785ffccd7860924da7a9522bde751c12ac2e451d2268cf9e063",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 뷰티 기업의 글로벌 인허가(RA) 담당자로, 소프트웨어 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361700": {
@@ -823,7 +867,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 의약품 영업 담당자(MR)로, 소프트웨어 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[SK플라즈마] 항암희귀전문 의약품 영업 담당자(MR) 신입(전환형 인턴) 모집\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 항암희귀전문 의약품 영업 담당자(MR) (인턴)\n\n\n\n\n[업무내용]\n\n\n- 병원 Dr. 관리 및 의약정보 전달\n- 도매 관리 업무\n\n\n\n\n[자격요건]\n\n\n- 학력: 학사 이상\n- 전공: 무관\n\n\n\n\n[채용절차]\n\n\n- 서류전형 → SKCT → 1차면접 → 2차면접 → 건강검진 → 최종합격\n\n\n\n\n[공고상세]",
@@ -848,6 +897,12 @@
         "kind": "마감",
         "at": "2026-11-15T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "74974e62e2e9377665deed05d28fed151f5bef9d266c4aef482bbdf2bcfc208a",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 의약품 영업 담당자(MR)로, 소프트웨어 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361675": {
@@ -868,7 +923,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "relevant",
+          "reason": "데이터 분석을 통한 세일즈 전략 수립 및 AI 도구 활용 능력을 우대하며, 기술적 역량을 비즈니스에 적용하는 직무이므로 지원 가능합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -889,6 +949,12 @@
         "kind": "마감",
         "at": "2026-11-30T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "b77f016f7ae0bfcbdd7e05daa288213955bc2727864df56398801a068a2b2d83",
+        "verdict": "relevant",
+        "reason": "데이터 분석을 통한 세일즈 전략 수립 및 AI 도구 활용 능력을 우대하며, 기술적 역량을 비즈니스에 적용하는 직무이므로 지원 가능합니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361674": {

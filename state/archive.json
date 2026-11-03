@@ -433,17 +433,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/911791\" title=\"[채용전환형_월500만원] 모두닥 Problem Solver (Sales Focused) 인턴  (1).png\"><br><br><br></p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/911791"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
@@ -472,17 +474,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/891415\" title=\"[채용전환형_월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴 .png\"><br><br><br></p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/891415"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
@@ -511,17 +515,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div><div><div><div><div><div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/943261\" title=\"image.png\"><br><br></p></div></div></div></div></div></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/943261"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
@@ -550,17 +556,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div><div><div><div><div><div><div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/943263\" title=\"image.png\"><br><br></p></div></div></div></div></div></div></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/943263"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
@@ -589,17 +597,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div><div><div><div><div><div><div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/943265\" title=\"image.png\"><br><br></p></div></div></div></div></div></div></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/943265"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
@@ -3406,17 +3416,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/820/webp/2026_%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0%281%29.webp?1792975583\" alt=\"하나저축은행 2026 하반기 경력직원/채용형 인턴직원 모집\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/820/webp/2026_%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0%281%29.webp?1792975583"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
@@ -3445,17 +3457,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/299/webp/%EC%97%AC%EC%88%98%EA%B4%91%EC%96%91%ED%95%AD%EB%A7%8C%EA%B3%B5%EC%82%AC_%EC%9D%B8%ED%8A%B8%EB%A1%9C_261020_%281%29.webp?1792541791\" alt=\"여수광양항만공사 2026년 직원 채용 공고\"><a href=\"https://c.incru.it/newjobpost/2026/10_ygpa/%EC%97%AC%EC%88%98%EA%B4%91%EC%96%91%ED%95%AD%EB%A7%8C%EA%B3%B5%EC%82%AC_261020_%EC%A0%95%EA%B7%9C%EC%A7%81.html\">​</a><a href=\"https://c.incru.it/newjobpost/2026/10_ygpa/%EC%97%AC%EC%88%98%EA%B4%91%EC%96%91%ED%95%AD%EB%A7%8C%EA%B3%B5%EC%82%AC_261013_%EC%B2%AD%EB%85%84%EC%9D%B8%ED%84%B4.html\">​</a><a href=\"https://ygpa.incruit.com/main/main.asp\">​</a>\n</div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/299/webp/%EC%97%AC%EC%88%98%EA%B4%91%EC%96%91%ED%95%AD%EB%A7%8C%EA%B3%B5%EC%82%AC_%EC%9D%B8%ED%8A%B8%EB%A1%9C_261020_%281%29.webp?1792541791"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
@@ -3526,17 +3540,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><img src=\"https://psk.recruiter.co.kr/upload/33781/image/202610/0825ad48-6aa2-47a7-b514-b5673372b2a6.jpg\" alt=\"피에스케이 인사직무 수시채용(경력/신입)\"><br><br>&nbsp;</p>",
+      "images": [
+        "https://psk.recruiter.co.kr/upload/33781/image/202610/0825ad48-6aa2-47a7-b514-b5673372b2a6.jpg"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
@@ -3565,17 +3581,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/038/webp/2026_%E1%84%92%E1%85%A1%E1%84%87%E1%85%A1%E1%86%AB%E1%84%80%E1%85%B5_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%AD%E1%86%BC_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A9_%28%E1%84%8C%E1%85%AE%29%E1%84%86%E1%85%A9%E1%84%83%E1%85%AE%E1%84%90%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3.webp?1793078642\" alt=\"모두투어네트워크 2026년 채용 연계형 인턴 모집\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/038/webp/2026_%E1%84%92%E1%85%A1%E1%84%87%E1%85%A1%E1%86%AB%E1%84%80%E1%85%B5_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%AD%E1%86%BC_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A9_%28%E1%84%8C%E1%85%AE%29%E1%84%86%E1%85%A9%E1%84%83%E1%85%AE%E1%84%90%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3.webp?1793078642"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
@@ -3604,17 +3622,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/920/webp/%EC%BB%A4%EB%A6%AC%EC%96%B4_%ED%95%9C%EA%B5%AD%EC%96%B8%EB%A1%A0%EC%A7%84%ED%9D%A5%EC%9E%AC%EB%8B%A8_%EC%B2%AD%EB%85%84%EC%9D%B8%ED%84%B4_261021_v.0.5.webp?1792988803\" alt=\"한국언론진흥재단(KPF) 2026년 3차 체험형 청년인턴 모집(일반행정, AI)\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/920/webp/%EC%BB%A4%EB%A6%AC%EC%96%B4_%ED%95%9C%EA%B5%AD%EC%96%B8%EB%A1%A0%EC%A7%84%ED%9D%A5%EC%9E%AC%EB%8B%A8_%EC%B2%AD%EB%85%84%EC%9D%B8%ED%84%B4_261021_v.0.5.webp?1792988803"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",

@@ -12,6 +12,7 @@ import './settings-view';
 import { readVariable, saveVariable } from './github';
 import { loadToken } from './settings-storage';
 import { SAVED_VARIABLE, type SavedNotice, loadSaved, parseSaved, storeSaved, toggleSaved } from './saved-notices';
+import { READ_VARIABLE, addRead, loadRead, mergeRead, parseRead, storeRead } from './read-notices';
 import type { Theme } from './settings-view';
 
 type Tab = 'mine' | 'deadline' | 'all' | 'saved';
@@ -73,7 +74,7 @@ export class NoticeApp extends LitElement {
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true },
-    saved: { state: true },
+    saved: { state: true }, read: { state: true },
   };
 
   notices: Notice[] = [];
@@ -86,6 +87,9 @@ export class NoticeApp extends LitElement {
   keyword: string | null = null;
   keywords = loadKeywords();
   saved: SavedNotice[] = loadSaved();
+  // 읽은 글 id(최근 것만). null이면 이 기기에서 처음 연 것이라 지금 글을 모두 읽은 것으로 둔다.
+  read: string[] | null = loadRead();
+  private readTimer = 0;
   // GitHub 연결(설정에서 한 번 넣은 토큰). 있으면 저장 목록과 키워드를 모든 기기와 맞춘다.
   private github: { repo: string; token: string } | null = null;
   private savedWrite: Promise<void> = Promise.resolve();
@@ -148,6 +152,8 @@ export class NoticeApp extends LitElement {
       this.generatedAt = notices!.generated_at;
       this.matched = matched;
       this.failed = false;
+      // 처음 열면 이미 있던 글이 모두 굵게 보이지 않게, 그때 있던 글은 읽은 것으로 시작한다.
+      if (this.read === null) { this.read = this.notices.map((n) => n.id); storeRead(this.read); }
       if (!matched && this.view === 'mine' && !this.keywords.length) this.view = 'all';
       if (this.board !== 'all' && !this.sources.some((s) => s.id === this.board)) this.board = 'all';
     } catch (error) {
@@ -166,9 +172,17 @@ export class NoticeApp extends LitElement {
     if (!repo || !token) return;
     this.github = { repo, token };
     try {
-      const [saved, keywords] = await Promise.all([
+      const [saved, keywords, read] = await Promise.all([
         readVariable(repo, token, SAVED_VARIABLE), readVariable(repo, token, 'INTEREST_KEYWORDS'),
+        readVariable(repo, token, READ_VARIABLE),
       ]);
+      // 읽음은 줄지 않으니 양쪽을 합친다. 합친 결과가 GitHub와 다르면 올린다.
+      if (read !== null || this.read?.length) {
+        const merged = mergeRead(parseRead(read), this.read ?? []);
+        this.read = merged;
+        storeRead(merged);
+        if (JSON.stringify(merged) !== read) this.pushRead();
+      }
       if (saved !== null) { this.saved = parseSaved(saved); storeSaved(this.saved); }
       else if (this.saved.length) this.pushSaved();
       const words = (keywords ?? '').split(/[,\n]/).map((w) => w.trim()).filter(Boolean);
@@ -184,6 +198,25 @@ export class NoticeApp extends LitElement {
     this.savedWrite = this.savedWrite.then(() => saveVariable(github.repo, github.token, SAVED_VARIABLE, value))
       .catch(() => this.showToast('이 기기에만 저장했어요. 다른 기기에는 다음에 열 때 맞춰요'));
   }
+
+  private pushRead() {
+    const github = this.github;
+    if (!github) return;
+    // 글을 넘겨 가며 읽을 때마다 보내지 않도록 잠깐 모았다가 한 번에 보낸다.
+    clearTimeout(this.readTimer);
+    this.readTimer = window.setTimeout(() => {
+      saveVariable(github.repo, github.token, READ_VARIABLE, JSON.stringify(this.read ?? [])).catch(() => {});
+    }, 3000);
+  }
+
+  private markRead(notice: Notice) {
+    if (this.read?.includes(notice.id)) return;
+    this.read = addRead(this.read ?? [], notice.id);
+    storeRead(this.read);
+    this.pushRead();
+  }
+
+  private isRead(notice: Notice): boolean { return this.read === null || this.read.includes(notice.id); }
 
   private isSaved(notice: Notice): boolean { return this.saved.some((item) => item.id === notice.id); }
 
@@ -318,13 +351,13 @@ export class NoticeApp extends LitElement {
       const next = list[Math.max(0, Math.min(list.length - 1, index + step))];
       if (!next) return;
       this.selectedId = next.id;
-      if (this.isWide) this.setDetail(true);
+      if (this.isWide) { this.setDetail(true); this.markRead(next); }
       this.updateComplete.then(() => this.querySelector(`[data-id="${CSS.escape(next.id)}"]`)?.scrollIntoView({ block: 'nearest' }));
     };
     const actions: Record<string, () => void> = {
       '/': () => this.querySelector<HTMLInputElement>('.search input')?.focus(),
       j: () => move(1), ArrowDown: () => move(1), k: () => move(-1), ArrowUp: () => move(-1),
-      Enter: () => { const notice = list[index]; if (notice) window.open(safeUrl(notice.url), '_blank', 'noopener'); },
+      Enter: () => { const notice = list[index]; if (notice) { this.markRead(notice); window.open(safeUrl(notice.url), '_blank', 'noopener'); } },
       r: () => this.refresh(), 1: () => this.setView('mine'), 2: () => this.setView('deadline'), 3: () => this.setView('all'),
       4: () => this.setView('saved'),
       s: () => { const notice = list[index]; if (notice) this.toggleSave(notice); },
@@ -336,6 +369,7 @@ export class NoticeApp extends LitElement {
   private onRow(event: MouseEvent, notice: Notice) {
     // 행을 누르면 앱 안 상세를 먼저 보여 주고, 원문은 "원문 열기"로 연다(D-013, ux-rules 1절).
     // Ctrl이나 Cmd를 누르고 누르면 브라우저 기본대로 원문을 새 탭에 연다.
+    this.markRead(notice);
     if (event.ctrlKey || event.metaKey || event.shiftKey) return;
     event.preventDefault();
     if (this.isWide) { this.selectedId = notice.id; this.setDetail(true); return; }
@@ -427,6 +461,7 @@ export class NoticeApp extends LitElement {
           </header>
 
           ${settings ? html`<settings-view .keywords=${this.keywords} .theme=${this.theme}
+              .categories=${[...new Set(this.notices.map((n) => n.category).filter((c): c is string => Boolean(c)))].sort()}
               @keywords-change=${(e: CustomEvent<string[]>) => this.setKeywords(e.detail)}
               @theme-change=${(e: CustomEvent<Theme>) => this.setTheme(e.detail)}></settings-view>` : html`
             <div class="tools narrow-only">
@@ -631,7 +666,7 @@ export class NoticeApp extends LitElement {
     const source = this.sources.find((s) => s.id === notice.source_id);
     const dim = ai?.verdict === 'not_relevant' && !this.interests(notice).length;
     return html`<li>
-      <a class="row ${dim ? 'dim' : ''}" href=${safeUrl(notice.url)} target="_blank" rel="noopener"
+      <a class="row ${dim ? 'dim' : ''} ${this.isRead(notice) ? 'read' : 'unread'}" href=${safeUrl(notice.url)} target="_blank" rel="noopener"
         data-id=${notice.id} aria-current=${this.isWide && this.shownId === notice.id ? 'true' : 'false'}
         @click=${(e: MouseEvent) => this.onRow(e, notice)}>
         <span class="meta"><span class="board">${boardName(source, notice.source_id)}</span>${(() => {

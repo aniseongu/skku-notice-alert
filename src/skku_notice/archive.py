@@ -161,7 +161,7 @@ def save_archive(path: Path, archive: Archive) -> None:
 
 
 # 글이 바뀌면 옮긴 글과 본문 마감은 다시 만든다.
-REDO_ON_CHANGE = ("translation", "translation_attempts", "ai_deadline")
+REDO_ON_CHANGE = ("translation", "translation_attempts", "ai_deadline", "summary", "summary_attempts")
 
 
 def note_list_changes(archive: Archive, notices: list, now: str) -> tuple[Archive, list[str]]:

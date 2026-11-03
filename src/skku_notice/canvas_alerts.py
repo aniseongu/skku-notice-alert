@@ -13,6 +13,11 @@ from skku_notice.deadline import KST
 CANVAS_URL = "https://canvas.skku.edu/"
 
 
+def notification_mode(value: str | None) -> str:
+    """Keep Canvas notifications opt-in when another app already sends reminders."""
+    return value if value in {"off", "summary", "reminders"} else "off"
+
+
 @dataclass(frozen=True)
 class CanvasItem:
     key: str

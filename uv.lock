@@ -1797,6 +1797,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "apprise" },
+    { name = "cryptography" },
     { name = "google-genai" },
     { name = "httpx" },
     { name = "nh3" },
@@ -1817,6 +1818,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "apprise", specifier = ">=2.1.0" },
+    { name = "cryptography", specifier = ">=50.0.2" },
     { name = "google-genai", specifier = ">=2.34.0" },
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "nh3", specifier = "==0.3.7" },

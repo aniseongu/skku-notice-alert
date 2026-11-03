@@ -5,10 +5,11 @@ from datetime import datetime, time, timedelta
 from pathlib import Path
 
 import httpx
+import pytest
 
 from skku_notice import canvas, cli
 from skku_notice.archive import Archive
-from skku_notice.canvas_alerts import CanvasState, mark_sent, plan_alerts
+from skku_notice.canvas_alerts import CanvasState, mark_sent, notification_mode, plan_alerts
 from skku_notice.deadline import KST
 from skku_notice.export import export_site
 
@@ -71,6 +72,7 @@ def test_export_contains_no_canvas_data(tmp_path: Path) -> None:
 
 
 def test_cli_fixture_dry_run_does_not_write_canvas_state(tmp_path: Path, monkeypatch, capsys) -> None:
+    monkeypatch.setenv("CANVAS_ALERT_MODE", "reminders")
     class FixtureDateTime(datetime):
         @classmethod
         def now(cls, tz=None):
@@ -101,6 +103,7 @@ def test_cli_fixture_dry_run_does_not_write_canvas_state(tmp_path: Path, monkeyp
 
 
 def test_rejected_token_problem_is_sent_once(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setenv("CANVAS_ALERT_MODE", "reminders")
     monkeypatch.setattr(cli, "CANVAS_STATE_PATH", tmp_path / "canvas.json")
     monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
     monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
@@ -133,3 +136,27 @@ def test_rejected_token_problem_is_sent_once(tmp_path: Path, monkeypatch) -> Non
     saved = cli.load_canvas_state(cli.CANVAS_STATE_PATH)
     assert saved.problem == {"code": "token-rejected", "notifiedProblem": True}
     assert "fake-token" not in cli.CANVAS_STATE_PATH.read_text()
+
+
+@pytest.mark.parametrize("value", [None, "", "invalid", "off"])
+def test_canvas_notifications_are_opt_in(value) -> None:
+    assert notification_mode(value) == "off"
+
+
+def test_summary_mode_never_plans_individual_reminders() -> None:
+    items = canvas.read_canvas("", NOW, FIXTURES)
+    alerts, _ = plan_alerts(items, CanvasState(initialized=True), NOW, [], time(9))
+    assert len(alerts) == 1
+    assert alerts[0].summary_day
+    assert not alerts[0].keys
+
+
+def test_disabled_canvas_does_not_fetch_even_with_token(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(cli, "load_dotenv", lambda **kwargs: None)
+    monkeypatch.setenv("CANVAS_TOKEN", "fixture-token")
+    monkeypatch.setenv("CANVAS_ALERT_MODE", "off")
+    monkeypatch.setattr(cli, "read_canvas", lambda *args: pytest.fail("disabled Canvas fetched"))
+    monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
+    args = argparse.Namespace(rules=Path("config/rules.example.yaml"), dry_run=True,
+                             all=True, from_fixtures=True, no_ai=True, no_canvas=False)
+    assert cli.run(args) == 0

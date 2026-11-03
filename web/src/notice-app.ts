@@ -706,7 +706,8 @@ export class NoticeApp extends LitElement {
         data-id=${notice.id} aria-current=${this.isWide && this.shownId === notice.id ? 'true' : 'false'}
         @click=${(e: MouseEvent) => this.onRow(e, notice)}>
         <span class="meta"><span class="board">${boardName(source, notice.source_id)}</span>${(() => {
-          const tags = [notice.category, notice.pinned ? '고정' : '', this.view !== 'saved' && this.isSaved(notice) ? '저장함' : ''].filter(Boolean);
+          const tags = [notice.category, notice.pinned ? '고정' : '', notice.changed_at ? '수정됨' : '',
+            this.view !== 'saved' && this.isSaved(notice) ? '저장함' : ''].filter(Boolean);
           return tags.length ? html`<span class="cat">${tags.join(', ')}</span>` : nothing;
         })()}</span>
         <span class="title">${cleanTitle(notice.title_ko || notice.title)}</span>
@@ -731,12 +732,14 @@ export class NoticeApp extends LitElement {
         ${notice.title_ko ? html`<p class="detail-original" lang="en">${cleanTitle(notice.title)}</p>` : nothing}
         ${reason === nothing ? nothing : html`<p class="detail-reason">${reason}</p>`}
         ${notice.deadline ? html`<p class="detail-deadline">${notice.deadline_kind ?? '마감'} ${deadlineDetail(notice.deadline)} ${this.dday(notice, today)}</p>` : nothing}
+        ${notice.changed_at ? html`<p class="detail-change">${koreanDate(notice.changed_at.slice(0, 10))}에 학교가 ${notice.change_kind === '제목' ? '제목을' : '본문을'} 고쳤어요</p>` : nothing}
         ${loaded?.summary ? html`<section class="detail-section summary" aria-label="요약">
           <h3>요약</h3>${loaded.summary.split('\n').filter(Boolean).map((line) => html`<p>${line}</p>`)}</section>` : nothing}
         ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>` : this.translatedView(loaded)}
         ${loaded?.attachments?.length ? this.attachmentsView(loaded) : nothing}
         <dl class="facts" aria-label="글 정보">
           <div><dt>게시일</dt><dd>${koreanDate(notice.posted_on)}</dd></div>
+          ${notice.previous_title ? html`<div><dt>이전 제목</dt><dd>${cleanTitle(notice.previous_title)}</dd></div>` : nothing}
           ${interests.length ? html`<div><dt>관심</dt><dd><b class="interest">${interests.join(', ')}</b></dd></div>` : nothing}
           ${judgement?.notified ? html`<div><dt>알림</dt><dd>알림을 보냈어요</dd></div>` : nothing}
         </dl>

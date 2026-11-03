@@ -54,3 +54,14 @@ def refresh_archive_interests(items: dict, keywords: tuple[str, ...]) -> dict:
         match = {**(item.get("match") or {}), "interests": found}
         refreshed[key] = {**item, "match": match}
     return refreshed
+
+
+def is_mine(judgement: dict | None) -> bool:
+    """Same rule as web/src/data.ts isMine: rule, literal interest, or Gemini relevant/maybe."""
+    if not judgement:
+        return False
+    ai = judgement.get("ai") or {}
+    interested = bool(judgement.get("interests"))
+    if ai.get("verdict") == "not_relevant" and not interested:
+        return False
+    return bool(judgement.get("rule_name")) or interested or ai.get("verdict") in ("relevant", "maybe")

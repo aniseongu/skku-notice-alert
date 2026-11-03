@@ -14,6 +14,12 @@ def _public_notice(item: dict) -> dict:
     notice = dict(item["notice"])
     if item.get("translation"):
         notice["title_ko"] = item["translation"]["title"]
+    # 학교가 글을 고친 때와 종류(제목, 본문). 추가 필드(D-025).
+    if item.get("changed_at"):
+        notice["changed_at"] = item["changed_at"]
+        notice["change_kind"] = item.get("change_kind")
+        if item.get("previous_title"):
+            notice["previous_title"] = item["previous_title"]
     # 제목에 마감이 없으면 Gemini가 본문에서 읽은 날짜를 쓴다. deadline_kind는 "마감" 또는 "일정"(추가 필드).
     found = item.get("ai_deadline") or {}
     if not notice.get("deadline") and found.get("at"):

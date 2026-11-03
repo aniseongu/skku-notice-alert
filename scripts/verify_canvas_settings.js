@@ -37,7 +37,7 @@ async (page) => {
       assert(await group.getByRole('radio').first().isDisabled(), '미연결 변경 가능');
     });
     await p.getByRole('textbox', { name: 'GitHub 저장소', exact: true }).fill('aniseongu/skku-notice-alert');
-    await p.getByRole('textbox', { name: 'GitHub 토큰', exact: true }).fill('github_pat_fixture_only');
+    await p.getByLabel('GitHub 토큰', { exact: true }).fill('github_pat_fixture_only');
     await p.getByRole('button', { name: '연결하기', exact: true }).click();
     await p.getByText('연결했어요. 다음에 열 때도 연결돼 있어요', { exact: true }).waitFor();
     for (const [label, value] of [['하루 요약', 'summary'], ['요약과 마감', 'reminders'], ['끄기', 'off']]) {
@@ -51,13 +51,13 @@ async (page) => {
       });
     }
     await check('연결 키 분리와 노트북 입력 가능', async () => {
-      assert(await p.getByRole('textbox', { name: 'Gemini 키', exact: true }).count() === 0, '일반 설정 키 노출');
-      assert(await p.getByRole('textbox', { name: '구글 클라이언트 보안 비밀번호', exact: true }).count() === 0, '일반 설정 비밀번호 노출');
+      assert(await p.getByLabel('Gemini 키', { exact: true }).count() === 0, '일반 설정 키 노출');
+      assert(await p.getByLabel('구글 클라이언트 보안 비밀번호', { exact: true }).count() === 0, '일반 설정 비밀번호 노출');
       await p.getByRole('link', { name: '연결 키 설정하기', exact: true }).click();
-      await p.getByRole('textbox', { name: '아이캠퍼스 토큰', exact: true }).waitFor();
-      await p.getByRole('textbox', { name: '아이캠퍼스 토큰', exact: true }).fill('fixture-not-submitted');
-      assert(await p.getByRole('textbox', { name: '구글 클라이언트 보안 비밀번호', exact: true }).count() === 1, '구글 키 화면');
-      assert(await p.getByRole('textbox', { name: 'Gemini 키', exact: true }).count() === 1, 'Gemini 키 화면');
+      await p.getByLabel('아이캠퍼스 토큰', { exact: true }).waitFor();
+      await p.getByLabel('아이캠퍼스 토큰', { exact: true }).fill('fixture-not-submitted');
+      assert(await p.getByLabel('구글 클라이언트 보안 비밀번호', { exact: true }).count() === 1, '구글 키 화면');
+      assert(await p.getByLabel('Gemini 키', { exact: true }).count() === 1, 'Gemini 키 화면');
     });
   } finally { await context.close(); }
   return { passed: results.filter(r => r.pass).length, failed: results.filter(r => !r.pass).length, mockedGitHub: true, results };

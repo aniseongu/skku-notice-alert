@@ -20,7 +20,7 @@ type View = Tab | 'settings';
 const TABS: { id: Tab; label: string; icon: IconName }[] = [
   { id: 'mine', label: '내 공지', icon: 'user-check' },
   { id: 'deadline', label: '마감 임박', icon: 'alarm' },
-  { id: 'all', label: '전체', icon: 'list' },
+  { id: 'all', label: '성대 공지', icon: 'list' },
   // 전체는 성균관대 공지만, 인턴 공고는 링커리어와 자소설닷컴(사용자 결정 2026-11-03, D-026).
   { id: 'intern', label: '인턴 공고', icon: 'briefcase' },
   { id: 'saved', label: '저장', icon: 'bookmark' },
@@ -54,7 +54,15 @@ function loadKeywords(): string[] {
 // 설치한 앱의 상태바와 제목 표시줄 색(theme-color)도 실제 바탕색에 맞춘다.
 // 기본 meta는 기기 설정(prefers-color-scheme)만 따르므로, 화면 모드를 직접 고르면 어긋났다.
 function syncThemeColor() {
-  const color = getComputedStyle(document.body).backgroundColor;
+  // oklch 같은 새 색 표기를 모르는 브라우저도 있어 #rrggbb로 바꿔 넣는다.
+  const canvas = document.createElement('canvas');
+  canvas.width = canvas.height = 1;
+  const context = canvas.getContext('2d');
+  if (!context) return;
+  context.fillStyle = getComputedStyle(document.body).backgroundColor;
+  context.fillRect(0, 0, 1, 1);
+  const [r, g, b] = context.getImageData(0, 0, 1, 1).data;
+  const color = `#${[r, g, b].map((v) => v.toString(16).padStart(2, '0')).join('')}`;
   for (const meta of document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]')) meta.content = color;
 }
 
@@ -72,7 +80,7 @@ const kbd = (...keys: string[]) => html`<span class="kbd-group" aria-hidden="tru
 
 const SHORTCUTS: { group: string; items: [string, string[]][] }[] = [
   { group: '목록', items: [['다음 공지', ['J']], ['이전 공지', ['K']], ['원문 열기', ['Enter']], ['저장하기', ['S']], ['상세 칸 닫기', ['Esc']]] },
-  { group: '이동', items: [['내 공지', ['1']], ['마감 임박', ['2']], ['전체', ['3']], ['인턴 공고', ['4']], ['저장', ['5']], ['검색', ['/']]] },
+  { group: '이동', items: [['내 공지', ['1']], ['마감 임박', ['2']], ['성대 공지', ['3']], ['인턴 공고', ['4']], ['저장', ['5']], ['검색', ['/']]] },
   { group: '그 밖', items: [['새로고침', ['R']], ['설정 닫기', ['Esc']], ['단축키 보기', ['?']]] },
 ];
 
@@ -447,7 +455,8 @@ export class NoticeApp extends LitElement {
     if (dialog && this.shortcutsOpen && !dialog.open) dialog.showModal();
     if (this.view === 'settings') { document.title = '설정 - 성대 공지'; return; }
     const label = TABS.find((t) => t.id === this.view)!.label;
-    document.title = this.notices.length ? `${label} ${this.visible().length} - 성대 공지` : '성대 공지';
+    const suffix = label === '성대 공지' ? '' : ' - 성대 공지';
+    document.title = this.notices.length ? `${label} ${this.visible().length}${suffix}` : '성대 공지';
   }
 
   render() {
@@ -689,7 +698,7 @@ export class NoticeApp extends LitElement {
   }
 
   private boardSelect() {
-    const boards = [{ id: 'all', label: '모든 게시판' },
+    const boards = [{ id: 'all', label: this.tab() === 'intern' ? '모든 사이트' : '모든 게시판' },
       ...this.tabSources().map((s) => ({ id: s.id, label: boardName(s, s.id) }))];
     const current = boards.find((b) => b.id === this.activeBoard())?.label ?? boards[0].label;
     return html`<div class="board-picker narrow-only">

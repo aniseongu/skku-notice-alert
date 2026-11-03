@@ -60,7 +60,7 @@ const kbd = (...keys: string[]) => html`<span class="kbd-group" aria-hidden="tru
 const SHORTCUTS: { group: string; items: [string, string[]][] }[] = [
   { group: '목록', items: [['다음 공지', ['J']], ['이전 공지', ['K']], ['원문 열기', ['Enter']], ['저장하기', ['S']], ['상세 칸 닫기', ['Esc']]] },
   { group: '이동', items: [['내 공지', ['1']], ['마감 임박', ['2']], ['전체', ['3']], ['저장', ['4']], ['검색', ['/']]] },
-  { group: '그 밖', items: [['새로고침', ['R']], ['단축키 보기', ['?']]] },
+  { group: '그 밖', items: [['새로고침', ['R']], ['설정 닫기', ['Esc']], ['단축키 보기', ['?']]] },
 ];
 
 const icon = (name: IconName) => html`<svg class="i" aria-hidden="true"><use href="icons/sprite.svg#${name}"></use></svg>`;
@@ -283,6 +283,12 @@ export class NoticeApp extends LitElement {
     this.querySelector('.list-pane')?.scrollTo({ top: 0 });
   }
 
+  // 설정을 닫으면 들어오기 전에 보던 보기로 돌아간다.
+  private leaveSettings = () => {
+    const last = remember('tab');
+    this.setView(isTab(last) ? last : 'mine');
+  };
+
   private setBoard(board: string) { this.board = board; this.boardMenuOpen = false; remember('board', board); }
   private setKeyword(word: string | null) {
     this.keyword = word;
@@ -341,6 +347,7 @@ export class NoticeApp extends LitElement {
     if (event.key === 'Escape' && target instanceof HTMLInputElement) { target.blur(); return; }
     if (target?.closest('input, textarea, select, .board-picker') || event.metaKey || event.ctrlKey || event.altKey) return;
     if (event.key === '?') { event.preventDefault(); this.shortcutsOpen = true; return; }
+    if (this.view === 'settings' && event.key === 'Escape' && !this.shortcutsOpen) { event.preventDefault(); this.leaveSettings(); return; }
     if (this.view === 'settings' || this.shortcutsOpen) return;
     if (event.key === 'Escape' && this.isWide && this.detailOpen) { this.setDetail(false); return; }
     // 단추나 링크에 포커스가 있으면 Enter는 그 요소의 기본 동작에 맡긴다.
@@ -442,8 +449,8 @@ export class NoticeApp extends LitElement {
         <main class="list-pane">
           ${reading ? this.readingView(reading) : html`
           <header class="pane-head topbar glass">
-            ${settings ? html`<button type="button" class="icon-button narrow-only back" aria-label="뒤로"
-              @click=${() => this.setView((remember('tab') as Tab) ?? 'mine')}>${icon('back')}</button>` : nothing}
+            ${settings ? html`<button type="button" class="icon-button back" aria-label="설정 닫기" title="설정 닫기 (Esc)"
+              aria-keyshortcuts="Escape" @click=${this.leaveSettings}>${icon('back')}</button>` : nothing}
             <div class="topbar-text">
               <h1>${title}</h1>
               ${settings ? html`<p class="updated">알림과 연결을 정해요</p>` : this.updatedLine(list.length)}

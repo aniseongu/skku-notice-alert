@@ -79,14 +79,19 @@ jobs:
           path: .venv/lib/python3.*/site-packages/rapidocr/models
           key: rapidocr-3.10.0-${{ runner.os }}-${{ hashFiles('uv.lock') }}
 
-      # Canvas state contains personal course/assignment IDs. Keep it out of
-      # the public repository; restore the most recent private Actions cache.
+      # Public-repository caches are readable. Cache only authenticated ciphertext.
       - name: Restore Canvas state
         uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
-          path: state/canvas.json
-          key: canvas-state-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: canvas-state-
+          path: state/canvas.enc
+          key: canvas-encrypted-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: canvas-encrypted-v1-
+
+      - name: Open encrypted Canvas state
+        continue-on-error: true
+        env:
+          CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+        run: uv run python -m skku_notice.canvas_cache open
 
       - name: Prepare default rules
         run: |
@@ -101,6 +106,7 @@ jobs:
           NOTIFY_URLS: ${{ secrets.NOTIFY_URLS }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+          CANVAS_ALERT_MODE: ${{ vars.CANVAS_ALERT_MODE }}
           PROFILE_YAML: ${{ secrets.PROFILE_YAML }}
           INTEREST_KEYWORDS: ${{ vars.INTEREST_KEYWORDS }}
           MUTED_CATEGORIES: ${{ vars.MUTED_CATEGORIES }}
@@ -131,12 +137,18 @@ jobs:
           SAVED_NOTICES: ${{ vars.SAVED_NOTICES }}
         run: uv run python -m skku_notice.gcal
 
-      - name: Save Canvas state
+      - name: Seal Canvas state
         if: always() && hashFiles('state/canvas.json') != ''
+        env:
+          CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+        run: uv run python -m skku_notice.canvas_cache seal
+
+      - name: Save Canvas state
+        if: always() && hashFiles('state/canvas.enc') != ''
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
-          path: state/canvas.json
-          key: canvas-state-${{ github.run_id }}-${{ github.run_attempt }}
+          path: state/canvas.enc
+          key: canvas-encrypted-v1-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Commit public state
         if: always()

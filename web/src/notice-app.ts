@@ -497,9 +497,11 @@ export class NoticeApp extends LitElement {
     // 단축키 창은 네이티브 dialog로 연다(포커스 가두기와 Esc 닫기를 브라우저가 맡는다).
     const dialog = this.querySelector<HTMLDialogElement>('dialog.shortcuts');
     if (dialog && this.shortcutsOpen && !dialog.open) dialog.showModal();
-    if (this.view === 'settings') { document.title = `설정 - ${APP_NAME}`; return; }
-    const label = TABS.find((t) => t.id === this.view)!.label;
-    document.title = this.notices.length ? `${label} ${this.visible().length} - ${APP_NAME}` : APP_NAME;
+    if (this.view === 'settings') {
+      document.title = `${new URLSearchParams(location.search).get('keys') === '1' ? '연결 키' : '설정'} - ${APP_NAME}`;
+      return;
+    }
+    document.title = APP_NAME;
   }
 
   render() {
@@ -509,7 +511,8 @@ export class NoticeApp extends LitElement {
       ? this.filtered(this.savedNotices()).length : this.byTab(filtered, t.id).length]));
     const list = this.visible();
     const settings = this.view === 'settings';
-    const title = settings ? '설정' : this.keyword ? this.keyword : TABS.find((t) => t.id === this.view)!.label;
+    const title = settings ? (new URLSearchParams(location.search).get('keys') === '1' ? '연결 키' : '설정')
+      : this.keyword ? this.keyword : TABS.find((t) => t.id === this.view)!.label;
     const selected = settings ? undefined
       : list.find((n) => n.id === this.selectedId) ?? (this.isWide ? list[0] : undefined);
     this.shownId = selected?.id ?? null;

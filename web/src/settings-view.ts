@@ -9,6 +9,12 @@ import { GoogleError, connectGoogleCalendar, validClientId } from './google-cale
 import { browserPushEnabled, connectBrowserPush, disconnectBrowserPush, pushConfiguration, supportsBrowserPush, testBrowserNotification } from './browser-push';
 
 export type Theme = 'auto' | 'light' | 'dark';
+type CanvasMode = 'off' | 'summary' | 'reminders';
+const CANVAS_MODES: { value: CanvasMode; label: string }[] = [
+  { value: 'off', label: '끄기' },
+  { value: 'summary', label: '하루 요약' },
+  { value: 'reminders', label: '요약과 마감' },
+];
 
 interface KeyField {
   secret: string;
@@ -25,7 +31,7 @@ const KEY_FIELDS: KeyField[] = [
   {
     secret: 'GEMINI_API_KEY',
     label: 'Gemini 키',
-    help: '나에게 맞는 공지인지 Gemini가 골라 줘요. 무료예요',
+    help: '공지의 요약과 번역, 지원 자격 판정에 써요',
     placeholder: 'AIza로 시작하는 키',
     steps: [
       html`${link('https://aistudio.google.com/apikey', 'Google AI Studio의 API 키 화면')}을 열고 Google 계정으로 로그인해요`,
@@ -76,7 +82,7 @@ export class SettingsView extends LitElement {
     repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
     keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true },
-    qr: { state: true }, handoff: { state: true },
+    qr: { state: true }, handoff: { state: true }, canvasMode: { state: true },
   };
 
   keywords: string[] = [];
@@ -104,6 +110,7 @@ export class SettingsView extends LitElement {
   busy = '';
   keywordDraft = '';
   browserNotifications = false;
+  canvasMode: CanvasMode = 'off';
 
   createRenderRoot() { return this; }
 
@@ -196,6 +203,10 @@ export class SettingsView extends LitElement {
         await this.pullKeywords(repo, token);
         const muted = await readVariable(repo, token, 'MUTED_CATEGORIES');
         this.muted = (muted ?? '').split(/[,\n]/).map((w) => w.trim()).filter(Boolean);
+        const mode = await readVariable(repo, token, 'CANVAS_ALERT_MODE');
+        if (this.repo === repo && this.token === token) {
+          this.canvasMode = CANVAS_MODES.some((m) => m.value === mode) ? mode as CanvasMode : 'off';
+        }
         this.setStatus('github', true, '연결했어요. 다음에 열 때도 연결돼 있어요');
       }
     } catch (error) {
@@ -331,6 +342,22 @@ export class SettingsView extends LitElement {
     }
   }
 
+  private async setCanvasMode(mode: CanvasMode) {
+    if (!this.linked || this.busy) return;
+    const repo = this.repo;
+    const token = this.token;
+    this.busy = 'canvas-mode';
+    try {
+      await saveVariable(repo, token, 'CANVAS_ALERT_MODE', mode);
+      if (this.repo === repo && this.token === token) {
+        this.canvasMode = mode;
+        this.setStatus('canvas-mode', true, '저장했어요. 다음 수집부터 모든 기기에 적용해요');
+      }
+    } catch (error) {
+      this.setStatus('canvas-mode', false, error instanceof GitHubError ? error.message : '인터넷 연결을 확인하고 다시 골라 주세요');
+    } finally { this.busy = ''; }
+  }
+
   private addKeyword() {
     const word = this.keywordDraft.trim().replace(/\s+/g, ' ');
     if (word && !this.keywords.includes(word)) this.emit('keywords-change', [...this.keywords, word]);
@@ -410,6 +437,33 @@ export class SettingsView extends LitElement {
   }
 
   render() {
+    if (new URLSearchParams(location.search).get('keys') === '1') return html`
+      <div class="settings ${this.linked ? '' : 'unlinked'}">
+        <a class="ghost-button" href="?view=settings">일반 설정으로</a>
+        ${!this.linked ? html`<p class="field-note">일반 설정에서 GitHub에 먼저 연결하면 키를 저장할 수 있어요</p>` : nothing}
+        <section aria-labelledby="s-keys">
+          <h2 id="s-keys" class="settings-head">연결 키</h2>
+          <div class="box">
+          ${KEY_FIELDS.map((field) => this.keyRow(field))}
+
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">컴퓨터에서 먼저 쓰기</p>
+              <p class="setting-help">저장소를 만들기 전에는 프로젝트 폴더의 .env 파일에 키를 적어요</p>
+            </div>
+            <div class="setting-control">
+              <button type="button" class="ghost-button" @click=${this.copyEnv}>.env 양식 복사하기</button>
+              ${this.note('env')}
+            </div>
+          </div>
+          </div>
+        </section>
+
+        <section id="google-calendar" aria-labelledby="s-google-keys">
+          <h2 id="s-google-keys" class="settings-head">구글 캘린더 연결</h2>
+          <div class="box">${this.googleKeyRow()}</div>
+        </section>
+      </div>`;
     return html`
       <div class="settings ${this.linked ? '' : 'unlinked'}">
         <section aria-labelledby="s-github">
@@ -502,22 +556,36 @@ export class SettingsView extends LitElement {
           </div>
         </section>
 
-        <section aria-labelledby="s-keys">
-          <h2 id="s-keys" class="settings-head">연결 키</h2>
+        <section aria-labelledby="s-canvas">
+          <h2 id="s-canvas" class="settings-head">아이캠퍼스</h2>
           <div class="box">
-          ${KEY_FIELDS.map((field) => this.keyRow(field))}
+            <div class="setting">
+              <div class="setting-text">
+                <p class="setting-name">아캠 알림</p>
+                <p class="setting-help">아캠플러스에서도 마감 알림을 받으면 하루 요약만 골라 주세요</p>
+              </div>
+              <div class="setting-control" data-needs-link>
+                <p class="field-note link-note">위 연결에서 GitHub에 연결하면 쓸 수 있어요</p>
+                <div class="segmented" role="radiogroup" aria-label="아캠 알림">
+                  ${CANVAS_MODES.map(({ value, label }) => html`
+                    <button type="button" role="radio" aria-checked=${String(this.canvasMode === value)}
+                      ?disabled=${!this.linked || this.busy !== ''}
+                      @click=${() => this.setCanvasMode(value)}>${label}</button>`)}
+                </div>
+                <p class="field-note">하루 요약은 오전 9시 이후 한 번, 요약과 마감은 하루 전과 3시간 전에도 알려요. 수집 시각에 따라 늦을 수 있어요</p>
+                <p class="field-note">노트북과 휴대폰에서 같은 설정을 써요. 연결 키 설정에서 아이캠퍼스 토큰을 넣고, 알림을 받을 기기에서는 이 기기 알림도 켜 주세요</p>
+                ${this.note('canvas-mode')}
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <div class="setting">
-            <div class="setting-text">
-              <p class="setting-name">컴퓨터에서 먼저 쓰기</p>
-              <p class="setting-help">저장소를 만들기 전에는 프로젝트 폴더의 .env 파일에 키를 적어요</p>
-            </div>
-            <div class="setting-control">
-              <button type="button" class="ghost-button" @click=${this.copyEnv}>.env 양식 복사하기</button>
-              ${this.note('env')}
-            </div>
-          </div>
-          </div>
+        <section aria-labelledby="s-keys-link">
+          <h2 id="s-keys-link" class="settings-head">연결 키</h2>
+          <div class="box"><div class="setting">
+            <div class="setting-text"><p class="setting-name">키 관리</p><p class="setting-help">Gemini 키와 아이캠퍼스 토큰, 내 프로필을 따로 관리해요</p></div>
+            <div class="setting-control"><a class="ghost-button" href="?view=settings&amp;keys=1">연결 키 설정하기</a></div>
+          </div></div>
         </section>
 
         <section aria-labelledby="s-keywords">
@@ -548,36 +616,10 @@ export class SettingsView extends LitElement {
           <h2 id="s-feeds" class="settings-head">캘린더와 피드</h2>
           <div class="box">
           <div class="setting">
-            <div class="setting-text">
-              <p class="setting-name">구글 캘린더 자동 연결</p>
-              <p class="setting-help">성대 공지와 저장한 인턴 공고의 마감을 "성대 공지" 캘린더에 15분마다 맞춰 넣어요. 기기를 꺼 둬도 돼요. 마감 30분 전에 구글 알림이 울려요</p>
-            </div>
-            <div class="setting-control" data-needs-link>
-              <p class="field-note link-note">위 연결에서 GitHub에 연결하면 쓸 수 있어요</p>
-              ${this.saved.GOOGLE_REFRESH_TOKEN ? html`
-                <p class="setting-saved">연결돼 있어요</p>
-                <button type="button" class="ghost-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.disconnectGoogle}>연결 끊기</button>
-              ` : html`
-                <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="구글 클라이언트 ID" placeholder="클라이언트 ID (apps.googleusercontent.com으로 끝나요)"
-                  .value=${this.values.GOOGLE_CLIENT_ID ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_ID: (e.target as HTMLInputElement).value }; }}>
-                <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="구글 클라이언트 보안 비밀번호" placeholder="클라이언트 보안 비밀번호"
-                  .value=${this.values.GOOGLE_CLIENT_SECRET ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_SECRET: (e.target as HTMLInputElement).value }; }}>
-                <button type="button" class="solid-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.connectGoogle}>
-                  ${this.busy === 'google' ? '연결 중' : '구글 캘린더 연결하기'}</button>
-                ${this.linked ? nothing : html`<p class="field-note">GitHub에 연결하면 쓸 수 있어요</p>`}
-              `}
-              ${this.note('google')}
-              ${this.guide('google', [
-                html`${link('https://console.cloud.google.com/apis/credentials', 'Google Cloud 사용자 인증 정보')}를 열어요. 아캠 플러스 때 만든 프로젝트를 그대로 써도 돼요`,
-                html`${link('https://console.cloud.google.com/apis/library/calendar-json.googleapis.com', 'Google Calendar API')}를 "사용"으로 켜요`,
-                '"OAuth 클라이언트 ID"의 웹 애플리케이션을 열거나 새로 만들어요',
-                '"승인된 자바스크립트 원본"에 https://aniseongu.github.io 를 넣어요',
-                `"승인된 리디렉션 URI"에 ${new URL('oauth-callback.html', document.baseURI).href} 를 넣어요`,
-                html`${link('https://console.cloud.google.com/auth/audience', 'OAuth 대상')}에서 사용자 유형을 "내부로 설정"해요. 학교 계정(g.skku.edu)으로 쓰면 이것만으로 돼요`,
-                '학교 밖 계정(개인 Gmail)으로 쓰려면 "외부"로 두고 브랜딩을 채운 뒤 게시 상태를 "프로덕션"으로 바꿔요. "테스트"로 두면 7일마다 연결이 끊겨요',
-                '클라이언트 ID와 보안 비밀번호를 위 칸에 붙여 넣고 연결하기를 눌러요',
-                '"외부"로 두었다면 "확인되지 않은 앱" 화면이 나와요. 내가 만든 앱이니 고급, 이동을 눌러요',
-              ], '연결하는 방법')}
+            <div class="setting-text"><p class="setting-name">구글 캘린더 자동 연결</p><p class="setting-help">성대 공지와 저장한 인턴 공고의 마감을 맞춰 넣어요</p></div>
+            <div class="setting-control">
+              ${this.saved.GOOGLE_REFRESH_TOKEN ? html`<p class="setting-saved">연결돼 있어요</p>` : html`<p class="field-note">연결 키 화면에서 구글 캘린더를 연결해 주세요</p>`}
+              <a class="ghost-button" href="?view=settings&amp;keys=1#google-calendar">캘린더 연결 설정하기</a>
             </div>
           </div>
           <div class="setting">
@@ -626,6 +668,44 @@ export class SettingsView extends LitElement {
       </div>`;
   }
 
+  private googleKeyRow() {
+    return html`
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">구글 캘린더 자동 연결</p>
+              <p class="setting-help">성대 공지와 저장한 인턴 공고의 마감을 "성대 공지" 캘린더에 15분마다 맞춰 넣어요. 기기를 꺼 둬도 돼요. 마감 30분 전에 구글 알림이 울려요</p>
+            </div>
+            <div class="setting-control" data-needs-link>
+              <p class="field-note link-note">일반 설정에서 GitHub에 연결하면 쓸 수 있어요</p>
+              ${this.saved.GOOGLE_REFRESH_TOKEN ? html`
+                <p class="setting-saved">연결돼 있어요</p>
+                <button type="button" class="ghost-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.disconnectGoogle}>연결 끊기</button>
+              ` : html`
+                <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="구글 클라이언트 ID" placeholder="클라이언트 ID (apps.googleusercontent.com으로 끝나요)"
+                  .value=${this.values.GOOGLE_CLIENT_ID ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_ID: (e.target as HTMLInputElement).value }; }}>
+                <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="구글 클라이언트 보안 비밀번호" placeholder="클라이언트 보안 비밀번호"
+                  .value=${this.values.GOOGLE_CLIENT_SECRET ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_SECRET: (e.target as HTMLInputElement).value }; }}>
+                <button type="button" class="solid-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.connectGoogle}>
+                  ${this.busy === 'google' ? '연결 중' : '구글 캘린더 연결하기'}</button>
+                ${this.linked ? nothing : html`<p class="field-note">GitHub에 연결하면 쓸 수 있어요</p>`}
+              `}
+              ${this.note('google')}
+              ${this.guide('google', [
+                html`${link('https://console.cloud.google.com/apis/credentials', 'Google Cloud 사용자 인증 정보')}를 열어요. 아캠 플러스 때 만든 프로젝트를 그대로 써도 돼요`,
+                html`${link('https://console.cloud.google.com/apis/library/calendar-json.googleapis.com', 'Google Calendar API')}를 "사용"으로 켜요`,
+                '"OAuth 클라이언트 ID"의 웹 애플리케이션을 열거나 새로 만들어요',
+                '"승인된 자바스크립트 원본"에 https://aniseongu.github.io 를 넣어요',
+                `"승인된 리디렉션 URI"에 ${new URL('oauth-callback.html', document.baseURI).href} 를 넣어요`,
+                html`${link('https://console.cloud.google.com/auth/audience', 'OAuth 대상')}에서 사용자 유형을 "내부로 설정"해요. 학교 계정(g.skku.edu)으로 쓰면 이것만으로 돼요`,
+                '학교 밖 계정(개인 Gmail)으로 쓰려면 "외부"로 두고 브랜딩을 채운 뒤 게시 상태를 "프로덕션"으로 바꿔요. "테스트"로 두면 7일마다 연결이 끊겨요',
+                '클라이언트 ID와 보안 비밀번호를 위 칸에 붙여 넣고 연결하기를 눌러요',
+                '"외부"로 두었다면 "확인되지 않은 앱" 화면이 나와요. 내가 만든 앱이니 고급, 이동을 눌러요',
+              ], '연결하는 방법')}
+            </div>
+          </div>
+    `;
+  }
+
   private keyRow(field: KeyField) {
     const name = field.secret;
     const shown = Boolean(this.reveal[name]);
@@ -640,7 +720,7 @@ export class SettingsView extends LitElement {
           ${this.saved[name] ? html`<p class="setting-saved">입력돼 있어요</p>` : nothing}
         </div>
         <div class="setting-control" data-needs-link>
-          <p class="field-note link-note">위 연결에서 GitHub에 연결하면 쓸 수 있어요</p>
+          <p class="field-note link-note">일반 설정에서 GitHub에 연결하면 쓸 수 있어요</p>
           ${locked ? html`
             <p class="field-note">저장한 값은 숨겨 두었어요</p>
             <button type="button" class="ghost-button" @click=${() => { this.editing = { ...this.editing, [name]: true }; }}>수정하기</button>

@@ -52,3 +52,8 @@
 - 휴대폰 모양: Playwright로 390x844, `colorScheme` light와 dark. standalone은 `?display=standalone`이 아니라 실제 설치로만 확인되므로 사용자 휴대폰 확인 항목으로 남긴다.
 - Windows 설치 앱: 사용자 PC Edge에서 설치, 제목 표시줄 접기 확인(사용자 확인 항목).
 - PWA 감사: `npx lighthouse <url> --only-categories=accessibility,best-practices`(topics/pwa 상위 도구, GoogleChrome/lighthouse). Lighthouse 12부터 PWA 항목은 빠졌으므로 설치 조건은 Chrome 개발자 도구 Application 탭으로 본다.
+
+## 휴대폰 방향 설정 (2026-11-04)
+
+- manifest에서 orientation을 지정하지 않고 Screen Orientation API로 잠그지 않는다. OS의 자동 회전과 회전 잠금 설정을 따른다.
+- 세로와 가로에서 목록, 상세와 설정을 사용할 수 있어야 한다. 브라우저 viewport 검사는 실제 기기의 OS 회전 잠금 검증과 구분한다.

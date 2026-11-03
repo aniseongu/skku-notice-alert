@@ -30,6 +30,7 @@ from skku_notice.canvas import CanvasError, read_canvas
 from skku_notice.canvas_alerts import (
     load_canvas_state,
     mark_sent,
+    notification_mode,
     plan_alerts,
     problem_alert,
     save_canvas_state,
@@ -60,6 +61,8 @@ from skku_notice.ocr import read_images
 from skku_notice.parse import ParseError, parse_detail, parse_list
 from skku_notice.rules import load_rules, match_notice
 from skku_notice.state import baseline, is_new, load_state, record_result, save_state
+from skku_notice.summary_ai import BATCH as SUMMARY_BATCH
+from skku_notice.summary_ai import summarize
 from skku_notice.translate import needs_translation, translate_notice
 
 SOURCES_PATH = Path("config/sources.yaml")
@@ -257,6 +260,38 @@ def _ai_deadlines(archive, ai: dict, api_key: str):
     return archive
 
 
+
+def _fill_summaries(archive: Archive, ai: dict, api_key: str, school_sources: set[str],
+                    seen_ids: set[str]) -> Archive:
+    # 이미 요약된 글은 건드리지 않고, 공개 학교 본문만 한 번에 최대 6건 보낸다.
+    if not api_key:
+        return archive
+    waiting = [
+        {"id": key, "title": item["notice"]["title"],
+         "body": item.get("body_text") or item.get("ocr_text") or ""}
+        for key, item in archive.items.items()
+        if key in seen_ids and item["notice"]["source_id"] in school_sources and not item.get("summary")
+        and len((item.get("body_text") or item.get("ocr_text") or "").strip()) >= 50
+        and item.get("summary_attempts", 0) < 2
+    ][:SUMMARY_BATCH]
+    if not waiting:
+        return archive
+    results = summarize(waiting, ai["model"], api_key)
+    if results is None:
+        return archive
+    items = dict(archive.items)
+    for entry in waiting:
+        key = entry["id"]
+        current = items[key]
+        summary = results.get(key)
+        if summary:
+            items[key] = {**current, "summary": summary}
+        else:
+            items[key] = {**current, "summary_attempts": current.get("summary_attempts", 0) + 1}
+    archive = Archive(items)
+    save_archive(ARCHIVE_PATH, archive)
+    return archive
+
 def _profile() -> dict:
     raw = os.environ.get("PROFILE_YAML")
     if raw is None and PROFILE_PATH.exists():
@@ -395,6 +430,11 @@ def run(args: argparse.Namespace) -> int:
         if ai.get("enabled") and not getattr(args, "no_ai", False) and not args.from_fixtures:
             archive = _translate(archive, ai, os.environ.get("GEMINI_API_KEY", ""))
             archive = _ai_deadlines(archive, ai, os.environ.get("GEMINI_API_KEY", ""))
+            school_sources = {source["id"] for source in settings["sources"] if not source.get("external")}
+            seen_ids = {f"{source_id}/{number}" for source_id, record in state.sources.items()
+                        for number in record.seen}
+            archive = _fill_summaries(archive, ai, os.environ.get("GEMINI_API_KEY", ""),
+                                      school_sources, seen_ids)
     candidates = []
     image_candidates = []
     for source, notices in boards:
@@ -548,7 +588,8 @@ def run(args: argparse.Namespace) -> int:
             canvas_config = yaml.safe_load(CANVAS_CONFIG_PATH.read_text(encoding="utf-8"))
             fixture_dir = getattr(args, "canvas_fixtures", None)
             token = os.environ.get("CANVAS_TOKEN", "")
-            if canvas_config.get("enabled") and (token or fixture_dir):
+            mode = notification_mode(os.environ.get("CANVAS_ALERT_MODE"))
+            if canvas_config.get("enabled") and mode != "off" and (token or fixture_dir):
                 canvas_state = load_canvas_state(CANVAS_STATE_PATH)
                 minimum = max(30, int(canvas_config.get("min_refresh_minutes", 30)))
                 recently_refreshed = (
@@ -560,7 +601,8 @@ def run(args: argparse.Namespace) -> int:
                     items = read_canvas(token, now, fixture_dir)
                     summary_time = datetime.strptime(canvas_config["summary_time"], "%H:%M").time()
                     alerts, next_state = plan_alerts(
-                        items, canvas_state, now, canvas_config["leads"], summary_time
+                        items, canvas_state, now,
+                        canvas_config["leads"] if mode == "reminders" else [], summary_time
                     )
                     if canvas_state.problem:
                         from dataclasses import replace
@@ -582,7 +624,7 @@ def run(args: argparse.Namespace) -> int:
                                 failed = True
                                 print("Canvas 알림 실패", file=sys.stderr)
                         save_canvas_state(CANVAS_STATE_PATH, next_state)
-            elif canvas_config.get("enabled"):
+            elif canvas_config.get("enabled") and mode != "off":
                 print("CANVAS_TOKEN 없음: Canvas 건너뜀")
         except CanvasError as exc:
             if str(exc) == "토큰 거절":

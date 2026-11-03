@@ -25,7 +25,7 @@ export default defineConfig({
         // Windows에서 설치하면 제목 표시줄 자리까지 앱이 쓴다(pwa-starter와 같음).
         display_override: ['window-controls-overlay', 'standalone'],
         launch_handler: { client_mode: 'focus-existing' },
-        orientation: 'any',
+        // 방향을 지정하지 않아 OS의 자동 회전과 회전 잠금을 따른다.
         background_color: '#f3f7f5',
         theme_color: '#f3f7f5',
         categories: ['education', 'productivity'],

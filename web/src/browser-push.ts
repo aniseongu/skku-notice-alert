@@ -27,7 +27,7 @@ export async function browserPushEnabled(): Promise<boolean> {
 }
 
 export async function subscribeBrowserPush(): Promise<PushSubscription> {
-  if (!supportsBrowserPush()) throw new Error('이 브라우저에서는 알림을 연결할 수 없어요. 최신 웨일이나 Chrome에서 열어 주세요');
+  if (!supportsBrowserPush()) throw new Error('이 브라우저에서는 알림을 연결할 수 없어요. 최신 브라우저에서 열어 주세요');
   // 허용 요청은 단추를 누른 직후 실행해야 브라우저가 표시한다.
   const permission = await Notification.requestPermission();
   if (permission !== 'granted') throw new Error('주소창의 사이트 설정에서 알림을 허용한 뒤 다시 눌러 주세요');

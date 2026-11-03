@@ -27,7 +27,7 @@ jobs:
           from skku_notice.webpush_notify import send_web_push
           ok = send_web_push(
               "성대 공지 테스트 알림",
-              "앱과 탭을 닫아도 웨일이 실행 중이면 알림을 받아요. 누르면 학교 공지가 열려요.",
+              "앱과 탭을 닫아도 브라우저가 켜져 있으면 알림을 받아요. 누르면 학교 공지가 열려요.",
               "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=227471",
               "skku-notice-connection-test", "default",
           )

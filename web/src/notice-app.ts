@@ -240,10 +240,11 @@ export class NoticeApp extends LitElement {
 
   /** 이 글에 맞는 관심 키워드: 이 기기의 글자 매칭 + 서버의 글자 매칭 + Gemini가 뜻으로 맞춘 것 */
   private interests(notice: Notice): string[] {
+    // 제목과 분류(이 기기에서) + 서버가 본문과 그림 글자에서 찾은 것. 판정 이유 문장은 보지 않는다(D-024).
     const judgement = this.judgement(notice);
-    const text = `${notice.title} ${notice.category ?? ''} ${judgement?.ai?.reason ?? ''}`;
+    const text = `${notice.title} ${notice.title_ko ?? ''} ${notice.category ?? ''}`;
     const found = new Set(this.keywords.filter((word) => keywordMatches(word, text)));
-    for (const word of [...(judgement?.interests ?? []), ...(judgement?.ai?.interests ?? [])]) {
+    for (const word of judgement?.interests ?? []) {
       if (this.keywords.includes(word)) found.add(word);
     }
     return [...found];
@@ -729,7 +730,7 @@ export class NoticeApp extends LitElement {
         <h2 class="detail-title" title=${cleanTitle(notice.title_ko || notice.title)}>${cleanTitle(notice.title_ko || notice.title)}</h2>
         ${notice.title_ko ? html`<p class="detail-original" lang="en">${cleanTitle(notice.title)}</p>` : nothing}
         ${reason === nothing ? nothing : html`<p class="detail-reason">${reason}</p>`}
-        ${notice.deadline ? html`<p class="detail-deadline">마감 ${deadlineDetail(notice.deadline)} ${this.dday(notice, today)}</p>` : nothing}
+        ${notice.deadline ? html`<p class="detail-deadline">${notice.deadline_kind ?? '마감'} ${deadlineDetail(notice.deadline)} ${this.dday(notice, today)}</p>` : nothing}
         ${loaded?.summary ? html`<section class="detail-section summary" aria-label="요약">
           <h3>요약</h3>${loaded.summary.split('\n').filter(Boolean).map((line) => html`<p>${line}</p>`)}</section>` : nothing}
         ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>` : this.translatedView(loaded)}

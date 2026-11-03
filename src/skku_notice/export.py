@@ -10,6 +10,18 @@ from skku_notice.deadline import KST
 from skku_notice.feeds import deadlines_ics, rss_feed
 
 
+def _public_notice(item: dict) -> dict:
+    notice = dict(item["notice"])
+    if item.get("translation"):
+        notice["title_ko"] = item["translation"]["title"]
+    # 제목에 마감이 없으면 Gemini가 본문에서 읽은 날짜를 쓴다. deadline_kind는 "마감" 또는 "일정"(추가 필드).
+    found = item.get("ai_deadline") or {}
+    if not notice.get("deadline") and found.get("at"):
+        notice["deadline"] = found["at"]
+        notice["deadline_kind"] = found.get("kind", "마감")
+    return notice
+
+
 def export_site(
     destination: Path, archive: Archive, sources: list[dict], now: datetime, web_path: Path = Path("web/dist")
 ) -> None:
@@ -26,11 +38,7 @@ def export_site(
         "generated_at": stamp,
         "sources": [{"id": source["id"], "name": source["name"], "url": source["url"]} for source in sources],
         # title_ko는 영어 공지를 옮긴 제목(추가 필드, D-010 API v1 유지).
-        "notices": [
-            {**item["notice"],
-             **({"title_ko": item["translation"]["title"]} if item.get("translation") else {})}
-            for item in ordered
-        ],
+        "notices": [_public_notice(item) for item in ordered],
     }
     # D-010 API v1의 기존 이름을 유지하고 interests는 추가 필드로 넣는다.
     personal = {}
@@ -65,7 +73,7 @@ def export_site(
         target.write_text(json.dumps(detail, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     # 마감 캘린더 구독과 RSS 피드(GOAL.md M3). 공개 공지 정보만 쓴다(Canvas는 넣지 않는다, D-012).
     board_names = {source["id"]: source["name"] for source in sources}
-    listed = [item["notice"] for item in ordered]
+    listed = [_public_notice(item) for item in ordered]
     calendar = deadlines_ics(listed, board_names, now)
     (destination / "deadlines.ics").write_text(calendar, encoding="utf-8", newline="")
     (destination / "feed.xml").write_text(rss_feed(listed, board_names, now), encoding="utf-8")

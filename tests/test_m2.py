@@ -54,7 +54,8 @@ def test_decision_table(notice, matched, verdict, expected) -> None:
 def test_interest_always_has_high_priority(notice, verdict) -> None:
     ai = Judgment(verdict, "이유", "test-model") if verdict else None
     assert decide_priority(None, ai, ("겨울방학 인턴",)) == "high"
-    assert decide_priority(None, Judgment("not_relevant", "이유", "test", ("겨울방학 인턴",))) == "default"
+    # Gemini가 뜻으로 맞춘 키워드만으로는 알리지 않는다(D-024). 글자로 맞은 것만 high.
+    assert decide_priority(None, Judgment("not_relevant", "이유", "test", ("겨울방학 인턴",))) is None
 
 
 def test_judge_batches_and_retries(notice) -> None:

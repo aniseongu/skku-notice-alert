@@ -29,11 +29,12 @@ def test_load_interests_merges_environment_and_optional_yaml(tmp_path: Path) -> 
 @pytest.mark.parametrize(
     ("keyword", "title", "category", "expected"),
     [
-        ("겨울방학 인턴", "겨울 방학 현장 실습", "일반", True),
-        ("겨울방학 인턴", "겨울방학", "체험형", True),
-        ("장학금", "장학 안내", "일반", True),
-        ("공모전", "2026 경진대회", "일반", True),
-        ("공모전", "새 챌린지", "일반", True),
+        ("겨울방학 인턴", "겨울 방학 인턴 모집", "일반", True),
+        ("겨울방학 인턴", "겨울 방학 현장 실습", "일반", False),
+        ("겨울방학 인턴", "겨울방학", "체험형", False),
+        ("장학", "장학생 선발", "일반", True),
+        ("장학금", "장학 안내", "일반", False),
+        ("공모전", "2026 경진대회", "일반", False),
         ("WINTER Internship", "winter internship", "일반", True),
         ("겨울방학 인턴", "겨울방학 행사", "일반", False),
     ],

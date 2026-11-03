@@ -46,7 +46,7 @@ def deadlines_ics(notices: list[dict], board_names: dict[str, str], now: datetim
         lines += [
             "BEGIN:VEVENT", f"UID:{notice['id']}@skku-notice-alert", f"DTSTAMP:{stamp}",
             f"DTSTART;VALUE=DATE:{day:%Y%m%d}", f"DTEND;VALUE=DATE:{day + timedelta(days=1):%Y%m%d}",
-            "SUMMARY:" + _ics_escape(f"[마감{time}] {notice['title']}"),
+            "SUMMARY:" + _ics_escape(f"[{notice.get('deadline_kind') or '마감'}{time}] {notice['title']}"),
             "DESCRIPTION:" + _ics_escape(f"{board}\n{notice['url']}"),
             "URL:" + notice["url"], "TRANSP:TRANSPARENT", "END:VEVENT",
         ]

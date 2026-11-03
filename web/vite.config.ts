@@ -43,7 +43,7 @@ export default defineConfig({
         ],
         shortcuts: [
           { name: '내 공지', url: './?tab=mine', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
-          { name: '마감 임박', url: './?tab=deadline', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
+          { name: '마감 임박', url: './?tab=all&sort=deadline', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
           { name: '인턴 공고', url: './?tab=intern', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
           { name: '저장', url: './?tab=saved', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
         ],

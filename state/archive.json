@@ -1,6 +1,84 @@
 {
   "version": 1,
   "items": {
+    "skku-notice01/141543": {
+      "notice": {
+        "id": "skku-notice01/141543",
+        "source_id": "skku-notice01",
+        "article_no": "141543",
+        "title": "[앵커사업단] 「성균관대학교 창업팀 투자 유치 역량 강화 집중 프로그램」 참가자 모집 (~11/10)",
+        "category": "행사/세미나",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141543",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": "2026-11-10T23:59:00+09:00",
+        "first_seen": "2026-11-03T17:38:58.630694+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "인사캠퍼스 소속 창업팀 대상 공지이며 본인의 자연과학캠퍼스 소속과는 무관합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "성균관대학교 서울 앵커사업단에서는 본교 창업팀의 사업모델(BM) 고도화 및 실질적인 투자 유치 연계를 지원하기 위하여「성균관대학교 창업팀 투자 유치 역량 강화 집중 프로그램」을 운영합니다.\n\n현업 투자심사역 및 창업 전문가의 진단·멘토링부터 투자사 방문 IR과 후속 투자 상담 연계까지 전 과정을 지원하오니 투자유치를 희망하는 창업팀의 많은 신청 바랍니다.\n\n■ 행사 개요\n- 프로그램명: 성균관대학교 창업팀 투자 유치 역량 강화 집중 프로그램\n- 모집대상: 투자 유치를 희망하거나 준비 중인 본교 인사캠퍼스 소속 창업팀\n- 모집규모: 7개 팀 이내\n- 신청자격: 2025년 8월 이후 법인 설립 완료 팀 또는 2026년 이내 법인 설립 예정팀\n- 주최/주관: 성균관대학교 서울 앵커사업단\n\n■ 프로그램 내용\n- 창업팀별 사업모델 및 기존 IR 자료 사전 진단 및 컨설팅\n- 투자자 관점의 IR 자료 구성 및 투자 유치 실무 특강\n- 1박 2일 해커톤 집중 워크숍 (숙박 및 식사 전액 지원): 2026. 11. 17.(화) ~ 11. 18.(수)\n- 투자사(3개사 이상) 1:1 투자 상담 연계\n\n■ 신청 방법\n- 신청방법: 아래 구글폼 링크 접속 후 신청서 작성 및 제출 서류 업로드 (※ 팀 대표자 1인이 구글폼 작성)\n- 신청링크: https://forms.gle/z55t2RSHDxLDqEScA\n- 신청기간: ~ 2026. 11. 10.(화) 오후 5시\n- 제출서류: 창업아이템 소개자료 1부 (기존 보유 중인 IR 자료, 사업계획서, 발표자료 등 자유 양식 / PDF 파일 권장)\n- 선발안내: 2026. 11. 11.(수), 합격자 별도 통보\n\n■ 문의처: 성균관대학교 서울 앵커사업단 (02-740-1629 / ye12@skku.edu)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>성균관대학교 서울 앵커사업단에서는 본교 창업팀의 사업모델(BM) 고도화 및 실질적인 투자 유치 연계를 지원하기 위하여「성균관대학교 창업팀 투자 유치 역량 강화 집중 프로그램」을 운영합니다.</p><p>현업 투자심사역 및 창업 전문가의 진단·멘토링부터 투자사 방문 IR과 후속 투자 상담 연계까지 전 과정을 지원하오니 투자유치를 희망하는 창업팀의 많은 신청 바랍니다.</p><p>■ 행사 개요</p><ul><li>프로그램명: 성균관대학교 창업팀 투자 유치 역량 강화 집중 프로그램</li><li>모집대상: 투자 유치를 희망하거나 준비 중인 본교 인사캠퍼스 소속 창업팀</li><li>모집규모: 7개 팀 이내</li><li>신청자격: 2025년 8월 이후 법인 설립 완료 팀 또는 2026년 이내 법인 설립 예정팀</li><li>주최/주관: 성균관대학교 서울 앵커사업단</li></ul><p>■  프로그램 내용</p><ul><li>창업팀별 사업모델 및 기존 IR 자료 사전 진단 및 컨설팅</li><li>투자자 관점의 IR 자료 구성 및 투자 유치 실무 특강</li><li>1박 2일 해커톤 집중 워크숍 (숙박 및 식사 전액 지원): 2026. 11. 17.(화) ~ 11. 18.(수)</li><li>투자사(3개사 이상) 1:1 투자 상담 연계</li></ul><p>■ 신청 방법</p><ul><li>신청방법: 아래 구글폼 링크 접속 후 신청서 작성 및 제출 서류 업로드 (※ 팀 대표자 1인이 구글폼 작성)</li><li>신청링크: <a href=\"https://forms.gle/z55t2RSHDxLDqEScA\">https://forms.gle/z55t2RSHDxLDqEScA</a></li><li>신청기간: ~ 2026. 11. 10.(화) 오후 5시</li><li>제출서류: 창업아이템 소개자료 1부 (기존 보유 중인 IR 자료, 사업계획서, 발표자료 등 자유 양식 / PDF 파일 권장)</li><li>선발안내: 2026. 11. 11.(수), 합격자 별도 통보</li></ul><p>■ 문의처: 성균관대학교 서울 앵커사업단 (02-740-1629 / ye12@skku.edu)</p>",
+      "images": [],
+      "summary": "투자 유치를 희망하는 인사캠퍼스 소속 창업팀은 11월 10일 오후 5시까지 구글폼으로 신청하세요.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T17:38:58.630694+09:00"
+    },
+    "skku-notice01/141542": {
+      "notice": {
+        "id": "skku-notice01/141542",
+        "source_id": "skku-notice01",
+        "article_no": "141542",
+        "title": "[HUSS] 2026 HUSS POP 「AI로 그리는 인구의 미래: 사회문제 해결 숏폼 콘텐츠 캠프」 참가자 모집 (~11/27)",
+        "category": "행사/세미나",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141542",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": "2026-11-27T23:59:00+09:00",
+        "first_seen": "2026-11-03T17:38:58.630694+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "maybe",
+          "reason": "HUSS 사업 참여학과 학생을 우대하지만 일반 재학생도 지원할 수 있는 캠프입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "성균관대학교 인문사회융합인재양성(HUSS)사업단에서 한동대학교가 주관하는 2026 공동 비교과 프로그램 「AI로 그리는 인구의 미래: 사회문제 해결 숏폼 콘텐츠 캠프」에 참가할 학생을 모집합니다.\n\n한동대·성균관대·가천대·건양대·충남대 5개 대학 학생 50명이 경주에 모여, 저출생·고령화, 다문화, 청년의 지역 정착, 세대 간 소통 등 인구 문제를 주제로 생성형 AI 숏폼 영상을 직접 기획하고 제작합니다. 영상 편집이나 AI 툴 경험이 없어도 전문 멘토가 팀별로 함께하니 부담 없이 지원하시기 바랍니다.\n\n■ 행사 개요\n- 행사명: 2026 HUSS POP 「AI로 그리는 인구의 미래: 사회문제 해결 숏폼 콘텐츠 캠프」\n- 주관: 한동대학교 인문사회융합인재양성사업단\n- 일정: 2026년 12월 21일(월) ~ 12월 23일(수), 2박 3일\n- 장소: 소노캄 경주 리조트 (경북 경주시 보문로 402-12)\n- 규모: 5개 대학 50명 (5명씩 10개 팀, 대학 혼합 편성).\n\n■ 주요 내용\n- 1일차: 오리엔테이션, 리빙랩·디자인 싱킹으로 지역 인구 문제 발견, 팀별 문제 정의,\n숏폼 트렌드·SNS 알고리즘 강의, AI 스토리보드와 촬영 계획\n- 2일차: 경주 시내 현장 팀 미션(촬영·내레이션 녹음), AI 툴 실습(이미지·영상·\n애니메이션 생성), CapCut 편집, 최종 영상 완성\n- 3일차: 팀별 숏폼 상영·발표, 심사 및 시상\n- 캠프 결과물은 이후 AI 숏폼 공모전 출품과 연계됩니다.\n\n■ 시상\n- 대상 30만 원 / 최우수상 20만 원 / 장려상 10만 원\n※ 상금에 부과되는 제세공과금은 수상자 부담입니다.\n\n■ 모집 안내\n- 모집 대상: 성균관대학교 재학생\n(HUSS사업 참여학과(복수전공) 재학생 선발우대)\n- 모집 인원: 10명\n- 신청 기간: 2026년 11월 02일(월) ~ 11월 27일(금)\n- 신청 방법: 아래 구글폼으로 신청\nhttps://forms.gle/iGu2pmH4ncsjN46RA\n- 선발 방식: 지원 동기 검토 후 선발\n- 선발 결과 안내: 12월 01일(개별 메일 안내)\n- 참가비: 전액지원(단, 일부활동에서 사비 필요)\n\n※ HUSS사업 참여학과\n글로벌리더학부, 데이터사이언스융합전공, 인공지능융합전공, 문헌정보학과, 미디어커뮤니케이션학과, 사회복지학과, 사회학과, 소비자학과, 심리학과, 아동청소년학과, 유학동양학과, 정치외교학과, 행정학과 (복수전공 가능)\n\n■ 유의사항\n- 2박 3일 전 일정에 참여할 수 있는 학생만 신청할 수 있으며, 부분 참여는 불가합니다.\n- 개인 노트북과 스마트폰을 지참해야 하며, CapCut 등 편집 툴은\n미리 설치해 주시기 바랍니다.\n- 선발된 학생은 참가 서약서(학생·보호자 서명)를 제출해야 합니다.\n- 무단 불참, 노쇼, 중도 포기 시 배정된 지원금(숙박비·교육비 등)이\n전액 환수될 수 있습니다.\n- 캠프 기간 중 음주와 실내 흡연은 금지됩니다.\n- 캠프 중 촬영한 사진·영상과 결과물은 사업단 홍보 및 성과 보고에 활용될 수 있습니다.\n\n■ 문의\n- 사무실: 다산경제관 32103B호(1층)\n- Tel: 02-740-1692\n- E-mail: lee970512@skku.edu",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>성균관대학교 인문사회융합인재양성(HUSS)사업단에서 한동대학교가 주관하는 2026 공동 비교과 프로그램 「AI로 그리는 인구의 미래: 사회문제 해결 숏폼 콘텐츠 캠프」에 참가할 학생을 모집합니다.</p><p>한동대·성균관대·가천대·건양대·충남대 5개 대학 학생 50명이 경주에 모여, 저출생·고령화, 다문화, 청년의 지역 정착, 세대 간 소통 등 인구 문제를 주제로 생성형 AI 숏폼 영상을 직접 기획하고 제작합니다. 영상 편집이나 AI 툴 경험이 없어도 전문 멘토가 팀별로 함께하니 부담 없이 지원하시기 바랍니다.</p><p>■ 행사 개요</p><ul><li>행사명: 2026 HUSS POP 「AI로 그리는 인구의 미래: 사회문제 해결 숏폼 콘텐츠 캠프」</li><li>주관: 한동대학교 인문사회융합인재양성사업단</li><li>일정: 2026년 12월 21일(월) ~ 12월 23일(수), 2박 3일</li><li>장소: 소노캄 경주 리조트 (경북 경주시 보문로 402-12)</li><li>규모: 5개 대학 50명 (5명씩 10개 팀, 대학 혼합 편성).</li></ul><p>■ 주요 내용</p><ul><li>1일차: 오리엔테이션, 리빙랩·디자인 싱킹으로 지역 인구 문제 발견, 팀별 문제 정의,</li></ul><p>숏폼 트렌드·SNS 알고리즘 강의, AI 스토리보드와 촬영 계획</p><ul><li>2일차: 경주 시내 현장 팀 미션(촬영·내레이션 녹음), AI 툴 실습(이미지·영상·</li></ul><p>애니메이션 생성), CapCut 편집, 최종 영상 완성</p><ul><li>3일차: 팀별 숏폼 상영·발표, 심사 및 시상</li><li>캠프 결과물은 이후 AI 숏폼 공모전 출품과 연계됩니다.</li></ul><p>■ 시상</p><ul><li>대상 30만 원 / 최우수상 20만 원 / 장려상 10만 원</li></ul><p>※ 상금에 부과되는 제세공과금은 수상자 부담입니다.</p><p>■ 모집 안내</p><ul><li>모집 대상: 성균관대학교 재학생</li></ul><p>(HUSS사업 참여학과(복수전공) 재학생 선발우대)</p><ul><li>모집 인원: 10명</li><li>신청 기간: 2026년 11월 02일(월) ~ 11월 27일(금)</li><li>신청 방법: 아래 구글폼으로 신청</li></ul><p><a href=\"https://forms.gle/iGu2pmH4ncsjN46RA\">https://forms.gle/iGu2pmH4ncsjN46RA</a></p><ul><li>선발 방식: 지원 동기 검토 후 선발</li><li>선발 결과 안내: 12월 01일(개별 메일 안내)</li><li>참가비: 전액지원(단, 일부활동에서 사비 필요)</li></ul><p>※ HUSS사업 참여학과</p><p>글로벌리더학부, 데이터사이언스융합전공, 인공지능융합전공, 문헌정보학과, 미디어커뮤니케이션학과, 사회복지학과, 사회학과, 소비자학과, 심리학과, 아동청소년학과, 유학동양학과, 정치외교학과, 행정학과 (복수전공 가능)</p><p>■ 유의사항</p><ul><li>2박 3일 전 일정에 참여할 수 있는 학생만 신청할 수 있으며, 부분 참여는 불가합니다.</li><li>개인 노트북과 스마트폰을 지참해야 하며, CapCut 등 편집 툴은</li></ul><p>미리 설치해 주시기 바랍니다.</p><ul><li>선발된 학생은 참가 서약서(학생·보호자 서명)를 제출해야 합니다.</li><li>무단 불참, 노쇼, 중도 포기 시 배정된 지원금(숙박비·교육비 등)이</li></ul><p>전액 환수될 수 있습니다.</p><ul><li>캠프 기간 중 음주와 실내 흡연은 금지됩니다.</li><li>캠프 중 촬영한 사진·영상과 결과물은 사업단 홍보 및 성과 보고에 활용될 수 있습니다.</li></ul><p>■ 문의</p><ul><li>사무실: 다산경제관 32103B호(1층)</li><li>Tel: 02-740-1692</li><li>E-mail: lee970512@skku.edu</li></ul>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/11/rHoWNIqOwsVvSeZGRbnw.png\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/rHoWNIqOwsVvSeZGRbnw.png"
+      ],
+      "summary": "참가 희망자는 11월 27일까지 구글폼을 통해 신청하세요. 12월 21일부터 23일까지 진행되는 숏폼 콘텐츠 캠프에 참여하게 됩니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T17:38:58.630694+09:00"
+    },
     "skku-notice01/137181": {
       "notice": {
         "id": "skku-notice01/137181",
@@ -37,7 +115,11 @@
       "images": [],
       "summary": "뇌과학이미징연구단에서 fMRI 및 온라인 실험 참여자를 모집합니다.관심 있는 학생은 온라인 설문지를 작성한 후 연구실 카카오톡 채널로 연락하여 신청하면 됩니다.",
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T17:23:47.226872+09:00"
+      "fetched_at": "2026-11-03T17:23:47.226872+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "cse-notice/228013": {
       "notice": {
@@ -442,7 +524,11 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T15:15:38.611525+09:00"
+      "fetched_at": "2026-11-03T15:15:38.611525+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "skku-notice01/141152": {
       "notice": {
@@ -475,7 +561,11 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T15:00:22.305976+09:00"
+      "fetched_at": "2026-11-03T15:00:22.305976+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "skku-notice01/141530": {
       "notice": {
@@ -592,7 +682,13 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00"
+      "fetched_at": "2026-11-03T12:27:42.906254+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-26T14:00:00+09:00"
+      }
     },
     "skku-notice01/141522": {
       "notice": {
@@ -627,7 +723,13 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00"
+      "fetched_at": "2026-11-03T12:27:42.906254+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-12T14:00:00+09:00"
+      }
     },
     "skku-notice01/141512": {
       "notice": {
@@ -662,7 +764,13 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00"
+      "fetched_at": "2026-11-03T12:27:42.906254+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-24T10:00:00+09:00"
+      }
     },
     "skku-notice01/141510": {
       "notice": {
@@ -695,7 +803,11 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00"
+      "fetched_at": "2026-11-03T12:27:42.906254+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "skku-notice01/141509": {
       "notice": {
@@ -770,7 +882,13 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-10T23:59:00+09:00"
+      }
     },
     "skku-notice01/140949": {
       "notice": {
@@ -865,7 +983,13 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-12T23:59:00+09:00"
+      }
     },
     "skku-notice01/140831": {
       "notice": {
@@ -900,7 +1024,13 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-09T23:59:00+09:00"
+      }
     },
     "skku-notice01/140798": {
       "notice": {
@@ -935,7 +1065,13 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:16:56.035412+09:00"
+      "fetched_at": "2026-11-03T14:16:56.035412+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-13T23:59:00+09:00"
+      }
     },
     "skku-notice01/140500": {
       "notice": {
@@ -970,7 +1106,13 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:16:56.035412+09:00"
+      "fetched_at": "2026-11-03T14:16:56.035412+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-02T15:00:00+09:00"
+      }
     },
     "skku-notice01/140482": {
       "notice": {
@@ -1010,7 +1152,13 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:16:56.035412+09:00"
+      "fetched_at": "2026-11-03T14:16:56.035412+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-10T23:59:00+09:00"
+      }
     },
     "cse-notice/227952": {
       "notice": {
@@ -1048,6 +1196,12 @@
         "title": "노이즈가 핵심일 때: 인문학적 과업이 우리의 데이터 파이프라인에 대해 시사하는 점 (11/18 10:30)",
         "body": "제목: 노이즈가 핵심일 때: 인문학적 과업이 우리의 데이터 파이프라인에 대해 시사하는 점\n\n연사: Maria Antoniak 교수 (University of Colorado Boulder)\n\n일시: 2026년 11월 18일 10:30 - 11:30\n\n장소:\n온라인: https://hli.skku.edu/InvitedTalk261118\n\n언어: 영어 강연 및 영어 슬라이드\n\n초록:\n스토리텔링이나 시와 같은 인문학적 과업에 대한 전산 연구를 수행하다 보면, 표준 NLP 파이프라인을 어렵게 만드는 특성을 가진 데이터셋을 자주 마주하게 됩니다. 이번 강연에서는 저와 공동 연구자들이 이러한 마찰을 겪었던 세 가지 사례를 다룹니다. 첫째, WildChat과 같은 사용자-챗봇 대화에 대해 논의합니다. 창의적인 요청이 길고 상세하며 빈번하게 수정되는 이러한 기록은 사람들이 챗봇과 어떻게 글을 쓰는지 보여주는 풍부하면서도 복잡한 자료입니다. 둘째, 사전 학습 데이터 내의 매우 방대하고 이질적인 웹 텍스트를 위한 세밀한 서사 주석 체계 개발 과정을 설명합니다. 이 과정에서 인문학적 개념을 운용하는 것은 데이터의 다양성으로 인해 복잡해집니다. 셋째, 시를 다룹니다. 학습 말뭉치를 구축하는 데 사용되는 선형화 시스템은 시인들이 의도적으로 사용하는 서식을 일상적으로 평탄화하거나 삭제합니다. 이러한 사례들을 통해 저는 무엇을 노이즈로 간주할지는 누가 어떤 목적으로 읽느냐에 달려 있으며, 인문학적 관점을 진지하게 고려하는 것이 사람들이 실제로 언어를 사용하는 방식을 더 잘 반영하는 데이터 관행, 주석 체계 및 평가를 구축하는 데 도움이 될 것이라고 주장합니다.\n\n연사 약력:\nMaria Antoniak은 University of Colorado Boulder의 컴퓨터과학과 조교수이며, 정보과학과 소속이자 Boulder NLP 그룹의 일원입니다. 이전에는 Allen Institute for AI의 Young Investigator였으며, University of Copenhagen의 Pioneer Centre for AI에서 박사후 연구원을 지냈습니다. Cornell University에서 정보과학 박사 학위를, University of Washington에서 전산언어학 석사 학위를 받았습니다. 또한 ETH Zürich, Microsoft Research FATE, Twitter Cortex, Facebook Core Data Science 등에서 근무한 바 있습니다. 연구 분야는 자연어 처리 및 문화 분석입니다.",
         "model": "gemini-3.1-flash-lite"
+      },
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-18T10:30:00+09:00"
       }
     },
     "skku-notice01/141498": {
@@ -1096,7 +1250,13 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:16:56.035412+09:00"
+      "fetched_at": "2026-11-03T14:16:56.035412+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-23T23:59:00+09:00"
+      }
     },
     "skku-notice01/141494": {
       "notice": {
@@ -1131,7 +1291,13 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:16:56.035412+09:00"
+      "fetched_at": "2026-11-03T14:16:56.035412+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-18T15:00:00+09:00"
+      }
     },
     "cse-notice/227923": {
       "notice": {
@@ -1239,7 +1405,13 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00"
+      "fetched_at": "2026-11-03T12:27:42.906254+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-16T13:00:00+09:00"
+      }
     },
     "cse-notice/227633": {
       "notice": {
@@ -1279,7 +1451,13 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00"
+      "fetched_at": "2026-11-03T12:27:42.906254+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-16T13:00:00+09:00"
+      }
     },
     "skku-notice01/141041": {
       "notice": {
@@ -1312,7 +1490,11 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:44:43.370511+09:00"
+      "fetched_at": "2026-11-03T14:44:43.370511+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "cse-notice/227471": {
       "notice": {
@@ -1382,7 +1564,11 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "cse-notice/227380": {
       "notice": {
@@ -1459,7 +1645,13 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-10-28T12:00:00+09:00"
+      }
     },
     "cse-notice/227334": {
       "notice": {
@@ -1492,7 +1684,13 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-01T23:59:00+09:00"
+      }
     },
     "cse-notice/227280": {
       "notice": {

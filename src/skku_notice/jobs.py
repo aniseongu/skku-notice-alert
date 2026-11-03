@@ -1,11 +1,15 @@
 # 출처: https://github.com/hg111911190-sketch/skku-notice/blob/main/jobs.py
-"""External internship postings (Linkareer, Jasoseol) as notices. One request per site per run (D-026)."""
+"""External internship postings and public details (D-028)."""
 
+import json
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
 
+from selectolax.lexbor import LexborHTMLParser
+
 from skku_notice.deadline import KST
 from skku_notice.model import Notice
+from skku_notice.parse import Detail, ParseError, parse_external_fragment
 
 LIMIT = 30
 LK_API = "https://api.linkareer.com/graphql"
@@ -82,3 +86,30 @@ def jasoseol(post: Post, now: datetime, source_id: str = "jasoseol") -> list[Pos
 
 
 COLLECTORS = {"linkareer": linkareer, "jasoseol": jasoseol}
+
+
+def parse_job_detail(html: str, kind: str, article_no: str, url: str) -> Detail:
+    """Read the matching public posting from Next.js data, then sanitize its HTML."""
+    if _number(article_no) != article_no:
+        raise ParseError("invalid external article number")
+    node = LexborHTMLParser(html).css_first("script#__NEXT_DATA__")
+    try:
+        page = json.loads(node.text())["props"]["pageProps"] if node else {}
+        if kind == "linkareer":
+            state = page["__APOLLO_STATE__"]
+            ref = state[f"Activity:{article_no}"]["detailText"]["__ref"]
+            if not isinstance(ref, str) or not ref.startswith("ActivityText:"):
+                raise ValueError("invalid detail reference")
+            markup = state[ref]["text"]
+        elif kind == "jasoseol":
+            posting = page["initialEmploymentCompany"]
+            if str(posting["id"]) != article_no:
+                raise ValueError("detail id mismatch")
+            markup = posting["content"]
+        else:
+            raise ValueError("unknown external board")
+        if not isinstance(markup, str):
+            raise ValueError("invalid detail")
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ParseError("external detail data missing or invalid") from exc
+    return parse_external_fragment(markup, url)

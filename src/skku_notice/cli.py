@@ -45,7 +45,7 @@ from skku_notice.interests import (
     muted_from_env,
     refresh_archive_interests,
 )
-from skku_notice.jobs import COLLECTORS
+from skku_notice.jobs import COLLECTORS, parse_job_detail
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match, Notice
 from skku_notice.notify import has_notification_channel, send_canvas, send_notice
@@ -84,8 +84,6 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
                   from_fixtures: bool, now: datetime) -> Archive:
     gap = max(1.0, float(settings.get("request_gap_seconds", 1)))
     for source, notices in boards:
-        if source.get("external"):
-            continue
         count = 0
         new = [notice for notice in notices if notice.article_no not in state.sources[source["id"]].seen]
         for notice in new:
@@ -119,7 +117,8 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
                 if html is None:
                     html = fetch_detail(url, settings["user_agent"],
                                         float(settings["timeout_seconds"]))
-                detail = parse_detail(html, url)
+                detail = (parse_job_detail(html, source["kind"], article_no, url)
+                          if source.get("external") else parse_detail(html, url))
             except (FetchError, ParseError) as exc:
                 if not isinstance(exc, UnsafeURL):
                     print(f"{key}: 본문 읽기 실패: {exc}", file=sys.stderr)
@@ -326,7 +325,7 @@ def run(args: argparse.Namespace) -> int:
     for source in settings["sources"]:
         source_id = source["id"]
         if source.get("kind") in COLLECTORS:
-            # 외부 인턴 공고(D-026): 사이트마다 한 번 요청, 상세는 읽지 않는다. fixture 실행에서는 건너뛴다.
+            # 외부 인턴 공고 목록: 사이트마다 한 번 요청한다. fixture 실행에서는 건너뛴다.
             if args.from_fixtures:
                 continue
             if previous_network:
@@ -376,6 +375,7 @@ def run(args: argparse.Namespace) -> int:
             if title_changes:
                 save_archive(ARCHIVE_PATH, archive)
         archive = _fill_details(archive, state, boards, settings, args.from_fixtures, now)
+        archive = set_source_deadlines(archive, external_deadlines)
         save_archive(ARCHIVE_PATH, archive)
         if not args.from_fixtures:
             archive = _recheck_details(archive, settings, now)
@@ -391,7 +391,8 @@ def run(args: argparse.Namespace) -> int:
             if (args.dry_run and (args.all or is_new(state, notice))) or (
                 not args.dry_run and record is not None and seen is None
             ):
-                image_candidates.append(notice)
+                if not source.get("external"):
+                    image_candidates.append(notice)
                 if not any(
                     word.strip().casefold() in notice.title.casefold() for word in rules.exclude_title
                 ):

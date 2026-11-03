@@ -83,3 +83,64 @@ def test_keyword_alone_does_not_make_external_posting_mine():
     keyword_only = {"rule_name": None, "interests": ["인턴"], "ai": None}
     assert is_mine(keyword_only) and not is_mine(keyword_only, external=True)
     assert is_mine({"ai": {"verdict": "relevant"}, "interests": []}, external=True)
+
+
+def test_public_job_details_keep_text_and_image():
+    from pathlib import Path
+
+    fixtures = Path(__file__).parent / "fixtures"
+    linkareer = jobs.parse_job_detail((fixtures / "linkareer_view_public.html").read_text(),
+                                      "linkareer", "361618", "https://linkareer.com/activity/361618")
+    jasoseol = jobs.parse_job_detail((fixtures / "jasoseol_view_public.html").read_text(),
+                                     "jasoseol", "107002", "https://jasoseol.com/recruit/107002")
+    assert len(linkareer.body_text) > 100 and "<p" in linkareer.body_html
+    assert jasoseol.images and "<img" in jasoseol.body_html
+    assert not jasoseol.body_text
+    with pytest.raises(jobs.ParseError):
+        jobs.parse_job_detail((fixtures / "jasoseol_view_public.html").read_text(),
+                              "jasoseol", "999", "https://jasoseol.com/recruit/999")
+
+
+def test_job_detail_rejects_unsafe_markup_and_empty_data():
+    import json
+
+    page = {"props": {"pageProps": {"initialEmploymentCompany": {
+        "id": 7, "content": ('<p onclick="evil()">본문<script>evil()</script></p>'
+                             '<a href="javascript:evil()">링크</a>')
+    }}}}
+    payload = json.dumps(page).replace("</", "<\\/")
+    html = '<script id="__NEXT_DATA__" type="application/json">' + payload + "</script>"
+    detail = jobs.parse_job_detail(html, "jasoseol", "7", "https://jasoseol.com/recruit/7")
+    assert "본문" in detail.body_text
+    assert not any(word in detail.body_html for word in ("onclick", "javascript:", "<script"))
+    with pytest.raises(jobs.ParseError):
+        jobs.parse_job_detail('<script id="__NEXT_DATA__">{}</script>', "jasoseol", "7", "https://jasoseol.com/recruit/7")
+
+
+def test_external_detail_backfills_once_and_exports(tmp_path, monkeypatch):
+    from pathlib import Path
+    from types import SimpleNamespace
+
+    from skku_notice import cli
+    from skku_notice.export import export_site
+
+    notice = jobs.jasoseol(lambda *a: {"employment": [{
+        "id": 107002, "name": "회사", "title": "인턴", "employments": [{"division": 3}],
+        "start_time": "2026-11-01T00:00:00+09:00", "end_time": "2026-11-25T18:00:00+09:00",
+    }]}, NOW, "jasoseol-intern")[0][0]
+    state = SimpleNamespace(sources={"jasoseol-intern": SimpleNamespace(seen={})})
+    source = {"id": "jasoseol-intern", "kind": "jasoseol", "external": True, "name": "자소설닷컴", "url": "https://jasoseol.com/recruit"}
+    html = (Path(__file__).parent / "fixtures/jasoseol_view_public.html").read_text()
+    calls = []
+    monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
+    monkeypatch.setattr(cli.time, "sleep", lambda _: None)
+    monkeypatch.setattr(cli, "fetch_detail", lambda *args: calls.append(args[0]) or html)
+    settings = {"user_agent": "test", "timeout_seconds": 10}
+    archive = cli._fill_details(Archive(), state, [(source, [notice])], settings, False, NOW)
+    archive = cli._fill_details(archive, state, [(source, [notice])], settings, False, NOW)
+    assert len(calls) == 1
+    assert archive.items["jasoseol-intern/107002"]["images"]
+    export_site(tmp_path / "site", archive, [source], NOW, web_path=tmp_path / "missing")
+    import json
+    detail = json.loads((tmp_path / "site/api/v1/notices/jasoseol-intern/107002.json").read_text())
+    assert detail["images"] and "<img" in detail["body_html"]

@@ -17,6 +17,10 @@ export interface Notice {
   title_ko?: string | null;
   // 제목에 마감이 없을 때 Gemini가 본문에서 읽은 날짜의 종류(추가 필드, D-023). 없으면 마감.
   deadline_kind?: '마감' | '일정';
+  // 학교가 글을 고친 때와 종류(추가 필드, D-025). 제목이 바뀌었으면 바뀌기 전 제목.
+  changed_at?: string | null;
+  change_kind?: '제목' | '본문' | null;
+  previous_title?: string | null;
 }
 
 export type Verdict = 'relevant' | 'maybe' | 'not_relevant';

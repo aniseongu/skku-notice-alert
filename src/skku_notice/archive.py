@@ -76,7 +76,9 @@ def add_notice(
     }
     old = archive.items.get(key, {})
     image_text = judgment.image_text if judgment and judgment.image_text and old.get("images") else ""
+    # 번역, 본문 마감, 수정 기록처럼 다른 단계가 붙인 칸은 그대로 둔다(예전에는 여기서 지워져 다시 만들었다).
     items = {**archive.items, key: {
+        **old,
         "notice": public, "match": personal,
         "body_text": image_text or old.get("body_text"),
         "body_from_image": bool(image_text) or old.get("body_from_image", False),
@@ -155,3 +157,37 @@ def save_archive(path: Path, archive: Archive) -> None:
         json.dumps({"version": archive.version, "items": archive.items}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+
+
+# 글이 바뀌면 옮긴 글과 본문 마감은 다시 만든다.
+REDO_ON_CHANGE = ("translation", "translation_attempts", "ai_deadline")
+
+
+def note_list_changes(archive: Archive, notices: list, now: str) -> tuple[Archive, list[str]]:
+    """Seen notices whose list title changed (for example a deadline extension in the title)."""
+    items = dict(archive.items)
+    changed = []
+    for notice in notices:
+        key = f"{notice.source_id}/{notice.article_no}"
+        item = items.get(key)
+        if not item or item["notice"]["title"] == notice.title:
+            continue
+        deadline = extract_deadline(notice.title, notice.posted_on)
+        public = {**item["notice"], "title": notice.title,
+                  "deadline": deadline.isoformat() if deadline else None}
+        # 제목이 바뀌면 옮긴 글과 본문 마감도 다시 만든다.
+        rest = {k: v for k, v in item.items() if k not in REDO_ON_CHANGE}
+        items[key] = {**rest, "notice": public, "previous_title": item["notice"]["title"],
+                      "changed_at": now, "change_kind": "제목"}
+        changed.append(key)
+    return Archive(items), changed
+
+
+def note_body_change(archive: Archive, key: str, body: str | None, now: str) -> tuple[Archive, bool]:
+    """Re-read body of an important notice. Marks a change only when the text really differs."""
+    item = archive.items[key]
+    if body is None or (body or "").strip() == (item.get("body_text") or "").strip():
+        return Archive({**archive.items, key: {**item, "rechecked_at": now}}), False
+    rest = {k: v for k, v in item.items() if k not in REDO_ON_CHANGE}
+    return Archive({**archive.items, key: {**rest, "body_text": body, "rechecked_at": now,
+                                           "changed_at": now, "change_kind": "본문"}}), True

@@ -1,11 +1,12 @@
 """Read public boards, judge new notices, deliver, and export snapshots."""
 
 import argparse
+import json
 import os
 import sys
 import time
 from dataclasses import replace
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import yaml
@@ -16,6 +17,8 @@ from skku_notice.archive import (
     add_notice,
     load_archive,
     mark_image_attempted,
+    note_body_change,
+    note_list_changes,
     save_archive,
     update_ai_deadlines,
     update_detail,
@@ -34,9 +37,15 @@ from skku_notice.deadline import KST
 from skku_notice.deadline_ai import BATCH, read_deadlines
 from skku_notice.export import export_site
 from skku_notice.fetch import FetchError, UnsafeURL, fetch_detail, fetch_images, fetch_list
-from skku_notice.interests import load_interests, match_interests, muted_from_env, refresh_archive_interests
+from skku_notice.interests import (
+    is_mine,
+    load_interests,
+    match_interests,
+    muted_from_env,
+    refresh_archive_interests,
+)
 from skku_notice.judge import Judgment, decide_priority, judge_notices
-from skku_notice.model import Match
+from skku_notice.model import Match, Notice
 from skku_notice.notify import has_notification_channel, send_canvas, send_notice
 from skku_notice.ocr import read_images
 from skku_notice.parse import ParseError, parse_detail, parse_list
@@ -139,6 +148,73 @@ def _translate(archive, ai: dict, api_key: str):
         result = translate_notice(item["notice"]["title"], item.get("body_text"), ai["model"], api_key)
         archive = update_translation(archive, key, result, ai["model"])
         save_archive(ARCHIVE_PATH, archive)
+    return archive
+
+
+# 바뀐 글 다시 확인(D-025): 내 공지와 저장한 공지 중 마감이 남은 글만, 같은 글은 12시간에 한 번, 실행당 3건.
+RECHECK_PER_RUN = 3
+RECHECK_HOURS = 12
+
+
+def _important(item: dict, saved_ids: set[str]) -> bool:
+    return item["notice"]["id"] in saved_ids or is_mine(item.get("match"))
+
+
+def _saved_ids() -> set[str]:
+    try:
+        saved = json.loads(os.environ.get("SAVED_NOTICES") or "[]")
+    except ValueError:
+        return set()
+    return {entry["id"] for entry in saved if isinstance(entry, dict) and isinstance(entry.get("id"), str)}
+
+
+def _recheck_details(archive, settings: dict, now: datetime):
+    saved = _saved_ids()
+    done = 0
+    for key, item in list(archive.items.items()):
+        if done == RECHECK_PER_RUN:
+            break
+        deadline = item["notice"].get("deadline") or (item.get("ai_deadline") or {}).get("at")
+        last = item.get("rechecked_at") or item.get("fetched_at")
+        if (not _important(item, saved) or item.get("body_text") is None
+                or (deadline and datetime.fromisoformat(deadline) < now)
+                or (last and now - datetime.fromisoformat(last) < timedelta(hours=RECHECK_HOURS))):
+            continue
+        done += 1
+        time.sleep(float(settings["request_gap_seconds"]))
+        try:
+            html = fetch_detail(item["notice"]["url"], settings["user_agent"],
+                                float(settings["timeout_seconds"]))
+            detail = parse_detail(html, item["notice"]["url"])
+        except (FetchError, ParseError):
+            archive = note_body_change(archive, key, None, now.isoformat())[0]
+            continue
+        archive, changed = note_body_change(archive, key, detail.body_text, now.isoformat())
+        if changed:
+            archive = update_detail(archive, key, detail.body_text, detail.attachments, now.isoformat(),
+                                    detail.images, detail.body_html)
+            marks = {"changed_at": now.isoformat(), "change_kind": "본문", "rechecked_at": now.isoformat()}
+            archive = Archive({**archive.items, key: {**archive.items[key], **marks}})
+        save_archive(ARCHIVE_PATH, archive)
+    return archive
+
+
+def _notify_changes(archive, names: dict[str, str]):
+    """학교가 고친 중요한 글을 한 번 알린다. 실패하면 다음 실행에 다시 보낸다."""
+    saved = _saved_ids()
+    for key, item in archive.items.items():
+        changed = item.get("changed_at")
+        if not changed or item.get("change_notified") == changed or not _important(item, saved):
+            continue
+        public = item["notice"]
+        title = (item.get("translation") or {}).get("title") or public["title"]
+        notice = Notice(public["source_id"], public["article_no"], f"[수정] {title}", public.get("category"),
+                        public["url"], date.fromisoformat(public["posted_on"]), public.get("pinned", False))
+        what = "제목이 바뀌었어요" if item.get("change_kind") == "제목" else "본문이 바뀌었어요"
+        if send_notice(notice, names.get(public["source_id"], public["source_id"]), "default", None,
+                       f"학교가 글을 고쳤어요. {what}"):
+            archive = Archive({**archive.items, key: {**item, "change_notified": changed}})
+            save_archive(ARCHIVE_PATH, archive)
     return archive
 
 
@@ -268,8 +344,14 @@ def run(args: argparse.Namespace) -> int:
                 for notice in notices:
                     archive = add_notice(archive, notice, now.isoformat())
                 save_archive(ARCHIVE_PATH, archive)
+        for _source, notices in boards:
+            archive, title_changes = note_list_changes(archive, notices, now.isoformat())
+            if title_changes:
+                save_archive(ARCHIVE_PATH, archive)
         archive = _fill_details(archive, state, boards, settings, args.from_fixtures, now)
         save_archive(ARCHIVE_PATH, archive)
+        if not args.from_fixtures:
+            archive = _recheck_details(archive, settings, now)
         if ai.get("enabled") and not getattr(args, "no_ai", False) and not args.from_fixtures:
             archive = _translate(archive, ai, os.environ.get("GEMINI_API_KEY", ""))
             archive = _ai_deadlines(archive, ai, os.environ.get("GEMINI_API_KEY", ""))
@@ -414,6 +496,8 @@ def run(args: argparse.Namespace) -> int:
             if not sent:
                 failed = True
                 print(f"{source['id']}/{notice.article_no}: 알림 실패", file=sys.stderr)
+    if not args.dry_run:
+        archive = _notify_changes(archive, {s["id"]: s["name"] for s in settings["sources"]})
     if not getattr(args, "no_canvas", False):
         try:
             canvas_config = yaml.safe_load(CANVAS_CONFIG_PATH.read_text(encoding="utf-8"))

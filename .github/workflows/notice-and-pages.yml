@@ -104,6 +104,8 @@ jobs:
           PROFILE_YAML: ${{ secrets.PROFILE_YAML }}
           INTEREST_KEYWORDS: ${{ vars.INTEREST_KEYWORDS }}
           MUTED_CATEGORIES: ${{ vars.MUTED_CATEGORIES }}
+          # 저장한 공지는 수정 확인 대상이다(D-025).
+          SAVED_NOTICES: ${{ vars.SAVED_NOTICES }}
           WEB_PUSH_SUBSCRIPTION: ${{ secrets.WEB_PUSH_SUBSCRIPTION }}
           # 기기별 알림 구독 칸(D-019). 모든 Secret을 한꺼번에 넘기지 않고 칸 이름으로만 받는다.
           WEB_PUSH_SUB_1: ${{ secrets.WEB_PUSH_SUB_1 }}

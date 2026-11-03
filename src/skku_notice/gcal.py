@@ -14,6 +14,7 @@ from urllib.parse import quote
 import httpx
 
 from skku_notice.deadline import KST
+from skku_notice.interests import is_mine
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 API = "https://www.googleapis.com/calendar/v3"
@@ -32,15 +33,7 @@ def _event_id(notice_id: str) -> str:
     return "skku" + base64.b32hexencode(digest).decode().lower().rstrip("=")
 
 
-def _mine(judgement: dict | None) -> bool:
-    # web/src/data.ts isMine과 같은 기준.
-    if not judgement:
-        return False
-    ai = judgement.get("ai") or {}
-    interested = bool(judgement.get("interests"))
-    if ai.get("verdict") == "not_relevant" and not interested:
-        return False
-    return bool(judgement.get("rule_name")) or interested or ai.get("verdict") in ("relevant", "maybe")
+_mine = is_mine
 
 
 def desired_events(notices: list[dict], matched: dict, saved: list[dict], now: datetime) -> dict[str, dict]:

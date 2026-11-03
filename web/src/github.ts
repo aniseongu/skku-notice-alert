@@ -18,7 +18,7 @@ async function call(path: string, token: string, init: RequestInit = {}, allowCo
   if (response.status === 401) throw new GitHubError('GitHub 토큰이 맞지 않아요. 새 토큰을 넣어 주세요');
   if (response.status === 403 || response.status === 404) throw new GitHubError('저장소 이름과 토큰 권한(Secrets, Variables)을 확인해 주세요');
   if (response.status === 409 && allowConflict) return response;
-  if (!response.ok) throw new GitHubError(`GitHub 오류 (${response.status})`);
+  if (!response.ok) throw new GitHubError(`GitHub가 요청을 받지 않았어요(오류 ${response.status}). 잠시 뒤 다시 해 주세요`);
   return response;
 }
 
@@ -58,6 +58,13 @@ export async function readVariable(repo: string, token: string, name: string): P
 }
 
 export async function saveVariable(repo: string, token: string, name: string, value: string): Promise<void> {
+  // GitHub 변수는 빈 값을 받지 않는다(422). 비우면 변수를 지운다. 이미 없으면(404) 그대로 둔다.
+  if (!value.trim()) {
+    const response = await fetch(`${API}/repos/${repo}/actions/variables/${name}`, { method: 'DELETE', headers: headers(token) });
+    if (response.ok || response.status === 404) return;
+    if (response.status === 401) throw new GitHubError('GitHub 토큰이 맞지 않아요. 새 토큰을 넣어 주세요');
+    throw new GitHubError(`GitHub가 요청을 받지 않았어요(오류 ${response.status}). 잠시 뒤 다시 해 주세요`);
+  }
   const created = await call(`/repos/${repo}/actions/variables`, token, { method: 'POST', body: JSON.stringify({ name, value }) }, true);
   if (created.status === 409) {
     await call(`/repos/${repo}/actions/variables/${name}`, token, { method: 'PATCH', body: JSON.stringify({ name, value }) });

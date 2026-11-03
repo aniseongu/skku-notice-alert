@@ -1,6 +1,56 @@
 {
   "version": 1,
   "items": {
+    "linkareer-intern/361848": {
+      "notice": {
+        "id": "linkareer-intern/361848",
+        "source_id": "linkareer-intern",
+        "article_no": "361848",
+        "title": "[윈스테크넷] 2027년 상반기 인턴/현장실습생 모집",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361848",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T22:03:41.345696+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "소프트웨어학과 재학생으로서 보안 및 AI 솔루션 개발 인턴직에 지원할 수 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "인턴"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "[윈스테크넷] 2027년 상반기 인턴/현장실습생 모집\n\n\n[모집분야]\n보안솔루션개발 (SNIPER)\n제품개발 (BD1 AI Plus)\n제품개발 (ASM, Deep, RMS)\nAI보안솔루션 개발 (클라우드개발)\nAPT개발 (제품개발)\nAPT에이전트개발 (에이전트개발)\nLinux기반 OS개발 (기반기술)\nAI평가/검증(AX개발)\nIT영업(민간/공공사업)\n해외영업(해외사업)\n\n\n[접수기간]\n11월 03일 ~ 12월 15일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[윈스테크넷] 2027년 상반기 인턴/현장실습생 모집</span></b></p><p><b><span>[모집분야]</span></b></p><p><span>보안솔루션개발 (SNIPER)</span></p><p><span>제품개발 (BD1 AI Plus)</span></p><p><span>제품개발 (ASM, Deep, RMS)</span></p><p><span>AI보안솔루션 개발 (클라우드개발)</span></p><p><span>APT개발 (제품개발)</span></p><p><span>APT에이전트개발 (에이전트개발)</span></p><p><span>Linux기반 OS개발 (기반기술)</span></p><p><span>AI평가/검증(AX개발)</span></p><p><span>IT영업(민간/공공사업)</span></p><p><span>해외영업(해외사업)</span></p><div><br></div><div><b><span>[접수기간]</span></b></div><div><span>11월 03일 ~ 12월 15일</span></div><div><br></div><div><b><span>[채용공고]</span></b></div><div><img src=\"https://media-cdn.linkareer.com/se2editor/image/979478\" title=\"c6cae8d4-48af-4a98-be0b-ece464046af3 (1).png\"><br><br></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/979478"
+      ],
+      "summary": "윈스테크넷에서 보안 및 AI 솔루션 개발 부문 인턴과 현장실습생을 모집합니다.12월 15일까지 지원서를 접수하면 됩니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T22:03:41.345696+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-15T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "linkareer-intern/361846": {
       "notice": {
         "id": "linkareer-intern/361846",

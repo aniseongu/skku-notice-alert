@@ -473,6 +473,11 @@
           "first_seen": "2026-11-03T18:40:15.225933+09:00",
           "status": "skipped",
           "attempts": 0
+        },
+        "361848": {
+          "first_seen": "2026-11-03T22:03:41.345696+09:00",
+          "status": "notified",
+          "attempts": 0
         }
       }
     },

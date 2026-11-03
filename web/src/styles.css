@@ -113,6 +113,9 @@
   }
   .sub { grid-area: reason; margin-top: 2px; font-size: 14px; line-height: 20px; color: var(--text-2); }
   .sub:empty { display: none; }
+  /* 저장: 채운 책갈피는 주 동작("저장") 색, 목록 표시는 조용한 글자색(DESIGN 2절 진녹 세 역할) */
+  .save-button[aria-pressed="true"] { color: var(--accent); }
+  .saved-mark { width: 15px; height: 15px; margin-left: 6px; vertical-align: -2px; color: var(--text-3); }
 
   .reason b, .verdict { margin-right: 6px; font-weight: 600; }
   .reason.relevant b, .verdict.relevant, .interest { color: var(--accent); font-weight: 600; }
@@ -310,6 +313,7 @@
     border-top: 1px solid var(--line);
   }
   .read-actions > * { flex: 1; }
+  .read-actions > .save-button { flex: none; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); }
 }
 
 /* PC (브라우저 창, 설치 앱): 바닥까지 닿는 평평한 칸, 칸마다 따로 스크롤, 64px 머리 줄이 한 줄로 이어진다 */

@@ -16,7 +16,7 @@ export default defineConfig({
         id: './',
         name: '성대 공지 맞춤 알림',
         short_name: '성대 공지',
-        description: '성균관대 공지 중 나에게 해당하는 글만 모아 봅니다',
+        description: '성균관대 공지와 인턴 공고 중 나에게 맞는 글을 모아 보고 마감 전에 알림을 받아요',
         lang: 'ko',
         start_url: './',
         scope: './',
@@ -39,6 +39,8 @@ export default defineConfig({
         shortcuts: [
           { name: '내 공지', url: './?tab=mine', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
           { name: '마감 임박', url: './?tab=deadline', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
+          { name: '인턴 공고', url: './?tab=intern', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
+          { name: '저장', url: './?tab=saved', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
         ],
       },
       workbox: {

@@ -354,7 +354,16 @@
     .topbar .search { width: 260px; height: 36px; padding: 0 12px; }
     .icon-button { width: 36px; height: 36px; border-radius: var(--r-sm); }
 
-    .side-head { margin: 20px 12px 4px; font-size: 12px; line-height: 16px; font-weight: 600; color: var(--text-3); }
+    /* 묶음 머리는 누르면 접고 편다. 모양은 예전 머리 글자 그대로, 오른쪽 끝에 작은 꺾쇠만 둔다. */
+    .side-head {
+      display: flex; align-items: center; justify-content: space-between; width: calc(100% - 24px);
+      margin: 20px 12px 4px; padding: 4px 0; border: 0; background: none; cursor: pointer;
+      font: inherit; font-size: 12px; line-height: 16px; font-weight: 600; color: var(--text-3); text-align: left;
+    }
+    .side-head:hover { color: var(--text-2); }
+    .side-chevron { width: 8px; height: 8px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); }
+    .side-head[aria-expanded="false"] .side-chevron { transform: rotate(-45deg); }
+    .side-group[hidden] { display: none; }
     .side-group { display: flex; flex-direction: column; gap: 1px; }
     .side-item {
       display: flex; align-items: center; justify-content: space-between; gap: 8px;

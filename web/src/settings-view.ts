@@ -75,7 +75,7 @@ export class SettingsView extends LitElement {
     repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
     keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true },
-    qr: { state: true },
+    qr: { state: true }, handoff: { state: true },
   };
 
   keywords: string[] = [];
@@ -89,6 +89,8 @@ export class SettingsView extends LitElement {
   linked = false;
   // 다른 기기 연결 QR(SVG). 1분 뒤 지운다.
   qr = '';
+  // QR 주소로 받은 연결. 사용자가 "연결하기"를 누르기 전에는 쓰지 않는다(남의 저장소로 몰래 연결되는 것을 막는다).
+  handoff: { repo: string; token: string } | null = null;
   private qrTimer = 0;
   // GitHub에 있는 키워드(모든 기기 공용)와 같은지 비교해 바뀐 것만 저장한다.
   private syncedKeywords: string | null = null;
@@ -213,11 +215,23 @@ export class SettingsView extends LitElement {
       this.setStatus('github', false, 'QR이 올바르지 않아요. 연결된 기기에서 QR을 다시 띄워 주세요');
       return true;
     }
-    this.setRepo(repo);
-    remember('github-repo', repo);
-    this.token = token;
-    this.connect();
+    // 이 사이트를 배포한 저장소가 아니면 받지 않는다. 같아도 사용자가 확인해야 연결한다.
+    pushConfiguration().then((config) => {
+      if (config.repository === repo) this.handoff = { repo, token };
+      else this.setStatus('github', false, '이 사이트의 저장소가 아닌 QR이라 연결하지 않았어요');
+    }).catch(() => this.setStatus('github', false, 'QR을 확인하지 못했어요. 잠시 뒤 다시 찍어 주세요'));
+    loadToken().then((saved) => { if (saved && !this.token) { this.token = saved; if (this.connected()) this.connect(); } });
     return true;
+  }
+
+  private acceptHandoff() {
+    const handoff = this.handoff;
+    if (!handoff) return;
+    this.handoff = null;
+    this.setRepo(handoff.repo);
+    remember('github-repo', handoff.repo);
+    this.token = handoff.token;
+    this.connect();
   }
 
   private async showHandoff() {
@@ -373,6 +387,13 @@ export class SettingsView extends LitElement {
               <p class="setting-help">15분마다 공지를 확인하는 내 저장소예요. 아래 키는 이 저장소로 암호화해 보내고 브라우저에는 남기지 않아요. 연결은 이 기기에 기억해요</p>
             </div>
             <div class="setting-control">
+              ${this.handoff ? html`
+                <p class="setting-saved">QR로 이 기기를 ${this.handoff.repo}에 연결할까요?</p>
+                <p class="field-note">내가 다른 기기에서 띄운 QR일 때만 연결해 주세요</p>
+                <div class="inline">
+                  <button type="button" class="solid-button" @click=${this.acceptHandoff}>연결하기</button>
+                  <button type="button" class="ghost-button" @click=${() => { this.handoff = null; }}>취소</button>
+                </div>` : nothing}
               ${this.linked ? html`
                 <p class="setting-saved">${this.repo}에 연결돼 있어요</p>
                 <div class="inline">

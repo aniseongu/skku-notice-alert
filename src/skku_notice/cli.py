@@ -120,6 +120,8 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
 
 # 무료 한도를 아끼려고 실행당 3건만 옮기고, 한 글은 두 번 실패하면 더 시도하지 않는다.
 TRANSLATE_PER_RUN = 3
+# 본문 마감 읽기는 한 번에 BATCH(8)건, 실행당 3번까지(D-023).
+DEADLINE_CALLS = 3
 
 
 def _translate(archive, ai: dict, api_key: str):
@@ -150,9 +152,12 @@ def _ai_deadlines(archive, ai: dict, api_key: str):
         for key, item in archive.items.items()
         if not item["notice"].get("deadline") and not (item.get("ai_deadline") or {}).get("checked")
         and (item.get("body_text") is not None or item.get("body_attempts", 0) >= 3)
-    ][:BATCH]
-    results = read_deadlines(waiting, ai["model"], api_key)
-    if results:
+    ][:BATCH * DEADLINE_CALLS]
+    # 밀린 글도 한 번에 따라잡도록 실행당 몇 번까지 부른다. 실패하면 남은 것은 다음 실행에 맡긴다.
+    for start in range(0, len(waiting), BATCH):
+        results = read_deadlines(waiting[start:start + BATCH], ai["model"], api_key)
+        if results is None:
+            break
         archive = update_ai_deadlines(archive, results, ai["model"])
         save_archive(ARCHIVE_PATH, archive)
     return archive

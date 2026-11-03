@@ -424,7 +424,10 @@
   .setting-saved { margin-top: 4px; font-size: 13px; color: var(--accent); font-weight: 600; }
   .setting-control { display: flex; flex-direction: column; align-items: stretch; gap: 8px; min-width: 0; }
   .inline { display: flex; flex-wrap: wrap; gap: 8px; }
-  .inline .input { flex: 1 1 200px; }
+  /* 입력칸의 기본 최소 폭(약 300px) 때문에 옆 단추가 아래 줄로 떨어지지 않게 한다. */
+  .inline .input { flex: 1 1 200px; min-width: 0; }
+  /* 단추는 혼자 있어도 글자 폭만큼. 한 줄에 둔 단추들과 폭 규칙을 같게 한다. */
+  .setting-control > .ghost-button, .setting-control > .solid-button { align-self: flex-start; }
   .input {
     min-height: 44px; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r-md);
     background: var(--surface); color: var(--text); font-size: 15px;

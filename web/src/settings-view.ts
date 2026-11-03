@@ -1,7 +1,7 @@
 // 설정 화면. 규칙은 docs/design/ux-rules.md 2-2절: 한 열, 왼쪽 이름과 도움말, 오른쪽 입력, 1px 구분선, 카드 없음.
 import { LitElement, html, nothing, type TemplateResult } from 'lit';
 import {
-  GitHubError, REPO_PATTERN, checkGeminiKey, listSecrets, newTopic, saveSecret, saveVariable, sendTestNotification,
+  GitHubError, REPO_PATTERN, checkGeminiKey, listSecrets, newTopic, readVariable, saveSecret, saveVariable, sendTestNotification,
 } from './github';
 import { readSavedSecrets, rememberSavedSecrets } from './settings-storage';
 import { browserPushEnabled, connectBrowserPush, disconnectBrowserPush, pushConfiguration, supportsBrowserPush, testBrowserNotification } from './browser-push';
@@ -84,6 +84,8 @@ export class SettingsView extends LitElement {
   // 사용자 요청(2026-11-03)으로 연결 토큰은 이 기기에 기억한다. 키 값은 여전히 남기지 않는다.
   token = remember('github-token') ?? '';
   linked = false;
+  // GitHub에 있는 키워드(모든 기기 공용)와 같은지 비교해 바뀐 것만 저장한다.
+  private syncedKeywords: string | null = null;
   values: Record<string, string> = {};
   saved: Record<string, string> = readSavedSecrets(this.repo);
   editing: Record<string, boolean> = {};
@@ -197,6 +199,7 @@ export class SettingsView extends LitElement {
       if (this.repo === repo) {
         this.saved = saved;
         this.linked = true;
+        await this.pullKeywords(repo, token);
         this.setStatus('github', true, '연결했어요. 다음에 열 때도 연결돼 있어요');
       }
     } catch (error) {
@@ -210,6 +213,7 @@ export class SettingsView extends LitElement {
     remember('github-token', null);
     this.token = '';
     this.linked = false;
+    this.syncedKeywords = null;
     this.setStatus('github', true, '연결을 끊었어요. 저장한 키는 GitHub에 그대로 있어요');
   }
 
@@ -244,14 +248,34 @@ export class SettingsView extends LitElement {
     } finally { this.busy = ''; }
   }
 
+  // GitHub 값이 있으면 그것을 따른다. 없으면 이 기기의 키워드를 올린다.
+  private async pullKeywords(repo: string, token: string) {
+    const remote = await readVariable(repo, token, 'INTEREST_KEYWORDS');
+    const words = (remote ?? '').split(/[,\n]/).map((w) => w.trim()).filter(Boolean);
+    if (words.length) {
+      this.syncedKeywords = words.join('\n');
+      if (words.join('\n') !== this.keywords.join('\n')) this.emit('keywords-change', words);
+    } else if (this.keywords.length) {
+      await this.saveKeywords();
+    } else {
+      this.syncedKeywords = '';
+    }
+  }
+
+  updated(changed: Map<string, unknown>) {
+    if (changed.has('keywords') && this.linked && this.syncedKeywords !== null
+      && this.keywords.join('\n') !== this.syncedKeywords) this.saveKeywords();
+  }
+
   private async saveKeywords() {
-    this.busy = 'keywords';
+    const value = this.keywords.join('\n');
     try {
-      await saveVariable(this.repo, this.token, 'INTEREST_KEYWORDS', this.keywords.join('\n'));
-      this.setStatus('keywords', true, '휴대폰 알림에도 넣었어요');
+      await saveVariable(this.repo, this.token, 'INTEREST_KEYWORDS', value);
+      this.syncedKeywords = value;
+      this.setStatus('keywords', true, '모든 기기에 저장했어요');
     } catch (error) {
-      this.setStatus('keywords', false, error instanceof GitHubError ? error.message : '저장하지 못했어요');
-    } finally { this.busy = ''; }
+      this.setStatus('keywords', false, error instanceof GitHubError ? `${error.message}. 다시 바꾸면 또 저장해요` : '인터넷 연결을 확인해 주세요');
+    }
   }
 
   private addKeyword() {
@@ -434,9 +458,7 @@ export class SettingsView extends LitElement {
               ${this.keywords.length ? html`<ul class="keyword-list">${this.keywords.map((word) => html`
                 <li><span>${word}</span><button type="button" class="text-button" aria-label="${word} 삭제"
                   @click=${() => this.emit('keywords-change', this.keywords.filter((w) => w !== word))}>삭제</button></li>`)}</ul>` : nothing}
-              <button type="button" class="ghost-button" ?disabled=${!this.connected() || this.busy === 'keywords'} @click=${this.saveKeywords}>
-                휴대폰 알림에도 쓰기</button>
-              ${this.connected() ? this.note('keywords') : html`<p class="field-note">GitHub에 연결하면 휴대폰 알림에도 써요</p>`}
+              ${this.linked ? this.note('keywords') : html`<p class="field-note">위에서 GitHub에 연결하면 모든 기기에서 같은 키워드를 써요</p>`}
             </div>
           </div>
           </div>

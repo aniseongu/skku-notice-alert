@@ -46,6 +46,17 @@ export async function deleteSecret(repo: string, token: string, name: string): P
 }
 
 // 관심 키워드는 비밀이 아니라서 Actions 변수(INTEREST_KEYWORDS)로 둔다.
+export async function readVariable(repo: string, token: string, name: string): Promise<string | null> {
+  try {
+    const response = await call(`/repos/${repo}/actions/variables/${name}`, token);
+    return ((await response.json()) as { value: string }).value;
+  } catch (error) {
+    // 없는 변수(404)만 빈 값으로 본다. 인터넷 오류에 이 기기 키워드로 덮어쓰지 않게 한다.
+    if (error instanceof GitHubError) return null;
+    throw error;
+  }
+}
+
 export async function saveVariable(repo: string, token: string, name: string, value: string): Promise<void> {
   const created = await call(`/repos/${repo}/actions/variables`, token, { method: 'POST', body: JSON.stringify({ name, value }) }, true);
   if (created.status === 409) {

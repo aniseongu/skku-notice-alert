@@ -106,7 +106,7 @@ export class NoticeApp extends LitElement {
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true }, sortMenuOpen: { state: true },
     saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true }, internSort: { state: true },
-    unreadOnly: { state: true }, hidePinned: { state: true },
+    unreadOnly: { state: true },
   };
 
   notices: Notice[] = [];
@@ -118,7 +118,6 @@ export class NoticeApp extends LitElement {
   sort: Sort = loadSort('all');
   internSort: Sort = loadSort('intern');
   unreadOnly = remember('view-unread') === '1';
-  hidePinned = remember('view-hide-pinned') === '1';
   board = remember('board') ?? 'all';
   keyword: string | null = null;
   keywords = loadKeywords();
@@ -319,8 +318,7 @@ export class NoticeApp extends LitElement {
     // 출처: https://freshrss.github.io/FreshRSS/en/users/10_filter.html (읽음 상태 필터)
     // 읽고 있는 글은 상세를 닫거나 다른 글로 옮길 때까지 남긴다.
     const scoped = list.filter((n) => this.isExternal(n) === external)
-      .filter((n) => !this.unreadOnly || !this.isRead(n) || n.id === this.selectedId || n.id === this.openedId)
-      .filter((n) => tab !== 'all' || !this.hidePinned || !n.pinned);
+      .filter((n) => !this.unreadOnly || !this.isRead(n) || n.id === this.selectedId || n.id === this.openedId);
     return orderNotices(scoped, this.sortFor(tab));
   }
 
@@ -727,11 +725,10 @@ export class NoticeApp extends LitElement {
       return this.empty('목록을 불러오지 못했어요', '인터넷 연결을 확인하고 다시 시도해 주세요', '다시 불러오기', () => this.refresh());
     }
     if (!list.length) {
-      const boardPicker = html`<div class="group-head empty-head"><span></span><div class="list-controls">${this.sortSelect()}${this.boardSelect()}</div></div>`;
+      const boardPicker = html`<div class="group-head empty-head"><span></span>${this.boardSelect()}</div>`;
       if (this.query) return html`${boardPicker}${this.empty(`'${this.query}'에 맞는 공지가 없어요`, '다른 단어로 찾아보세요', '검색어 지우기', () => { this.query = ''; })}`;
       if (this.keyword) return html`${boardPicker}${this.empty(`'${this.keyword}'에 맞는 공지가 아직 없어요`, '새 글이 오면 여기에 모여요')}`;
       if (this.view !== 'saved' && this.unreadOnly) return html`${boardPicker}${this.empty('읽지 않은 공지가 없어요', '읽지 않은 공지만 보기를 끄면 모든 공지를 볼 수 있어요')}`;
-      if (this.view === 'all' && this.hidePinned) return html`${boardPicker}${this.empty('지금 표시할 공지가 없어요', '고정 공지 숨기기를 끄거나 다른 게시판을 골라 보세요')}`;
       const empty = {
         all: ['이 게시판에 공지가 없어요', '다른 게시판을 골라 보세요'],
         intern: ['이 사이트에 공고가 없어요', '다른 사이트를 골라 보세요'],
@@ -749,7 +746,7 @@ export class NoticeApp extends LitElement {
     }
     return [...groups].map(([title, items], index) => html`
       <section class="group" aria-label=${title}>
-        <div class="group-head"><h2>${title}</h2>${index === 0 ? html`<div class="list-controls">${this.sortSelect()}${this.boardSelect()}</div>` : nothing}</div>
+        <div class="group-head"><h2>${title}</h2>${index === 0 ? this.boardSelect() : nothing}</div>
         <ol class="rows">${items.map((n) => this.row(n, today))}</ol>
       </section>`);
   }
@@ -757,16 +754,12 @@ export class NoticeApp extends LitElement {
   private viewFilters() {
     if (this.view === 'saved') return nothing;
     return html`<div class="view-options" role="group" aria-label="공지 보기 조건">
-      <button type="button" class="chip" aria-pressed=${String(this.unreadOnly)} @click=${() => {
+      <button type="button" class="view-toggle" aria-pressed=${String(this.unreadOnly)} @click=${() => {
         this.unreadOnly = !this.unreadOnly;
         this.selectedId = null;
         remember('view-unread', this.unreadOnly ? '1' : '0');
-      }}>읽지 않은 공지만</button>
-      ${this.view === 'all' ? html`<button type="button" class="chip" aria-pressed=${String(this.hidePinned)} @click=${() => {
-        this.hidePinned = !this.hidePinned;
-        this.selectedId = null;
-        remember('view-hide-pinned', this.hidePinned ? '1' : '0');
-      }}>고정 공지 숨기기</button>` : nothing}
+      }}><span class="filter-check" aria-hidden="true"></span>읽지 않은 공지만</button>
+      ${this.sortSelect()}
     </div>`;
   }
 

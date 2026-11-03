@@ -269,17 +269,24 @@ async (page) => {
       assert(await toggle.getAttribute('aria-pressed') === 'true', '읽음 보기 유실');
       await toggle.click(); await f.locator('.row').first().waitFor();
     });
-    await check('고정 공지 숨기기와 새로고침 유지', async () => {
-      const toggle = f.getByRole('button', { name: '고정 공지 숨기기', exact: true });
-      await toggle.click(); await f.reload(); await toggle.waitFor();
-      assert(await toggle.getAttribute('aria-pressed') === 'true', '고정 보기 유실');
-      const metadata = await f.locator('.row .cat').allTextContents();
-      assert(!metadata.some(text => text.split(', ').includes('고정')), '고정 글이 남음');
-      await toggle.click();
+    await check('고정 공지는 한 번만 표시하고 별도 숨기기 단추 없음', async () => {
+      assert(await f.getByRole('button', { name: '고정 공지 숨기기', exact: true }).count() === 0, '불필요한 단추');
+      const ids = await f.locator('.row').evaluateAll(es => es.map(e => e.dataset.id));
+      assert(ids.length > 0 && new Set(ids).size === ids.length, '같은 공지 중복');
     });
-    await check('인턴 탭에는 학교 고정 공지 조건 없음', async () => {
+    await check('보기 조건과 정렬을 같은 행에 맞춤', async () => {
+      for (const width of [320, 412]) {
+        await f.setViewportSize({ width, height: 891 });
+        const positions = await f.locator('.view-options').evaluate(el => {
+          const a = el.querySelector('.view-toggle').getBoundingClientRect();
+          const b = el.querySelector('.sort-trigger').getBoundingClientRect();
+          return { a: a.y + a.height / 2, b: b.y + b.height / 2, minHeight: Math.min(a.height, b.height),
+            overflow: document.documentElement.scrollWidth > innerWidth };
+        });
+        assert(Math.abs(positions.a - positions.b) < 1 && positions.minHeight >= 44 && !positions.overflow, '조작 행 정렬 또는 크기');
+      }
       await f.locator('.tabbar').getByRole('button', { name: '인턴 공고', exact: true }).click();
-      assert(await f.getByRole('button', { name: '고정 공지 숨기기', exact: true }).count() === 0, '다른 탭에 조건 노출');
+      assert(await f.getByRole('button', { name: '고정 공지 숨기기', exact: true }).count() === 0, '다른 탭에 단추가 남음');
     });
     await check('읽지 않은 글을 열고 돌아오면 목록에서 빠짐', async () => {
       const context = await page.context().browser().newContext({

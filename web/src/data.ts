@@ -1,6 +1,6 @@
 // 정적 API v1(D-010) 형식과, 화면에서 쓰는 날짜와 분류 계산. 네트워크는 fetchJson에만 있다.
 
-// external: 외부 인턴 공고(링커리어, 자소설닷컴, D-026). 전체와 마감 임박에는 넣지 않는다.
+// external: 외부 인턴 공고(링커리어, 자소설닷컴, D-026). 성대 공지 탭에는 넣지 않는다.
 export interface Source { id: string; name: string; url: string; external?: boolean }
 
 export interface Notice {

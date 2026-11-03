@@ -6,13 +6,16 @@ self.addEventListener('push', (event) => {
     const parsed = event.data ? event.data.json() : {};
     if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) payload = parsed;
   } catch { /* 비어 있으면 앱으로 연다 */ }
-  const title = typeof payload.title === 'string' ? payload.title : '성대 공지';
+  const title = typeof payload.title === 'string' ? payload.title : '성공';
   const body = typeof payload.body === 'string' ? payload.body : '새 공지가 도착했어요';
   let target = new URL('./', self.registration.scope);
   try {
     const candidate = new URL(payload.url);
-    if (candidate.protocol === 'https:' && (candidate.origin === self.location.origin
-      || candidate.hostname === 'skku.edu' || candidate.hostname.endsWith('.skku.edu'))) target = candidate;
+    const internship = (candidate.hostname === 'linkareer.com' && /^\/activity\/\d+\/?$/.test(candidate.pathname))
+      || (candidate.hostname === 'jasoseol.com' && /^\/recruit\/\d+\/?$/.test(candidate.pathname));
+    if (candidate.protocol === 'https:' && !candidate.username && !candidate.password && !candidate.port
+      && (candidate.origin === self.location.origin || candidate.hostname === 'skku.edu'
+        || candidate.hostname.endsWith('.skku.edu') || internship)) target = candidate;
   } catch { /* 올바르지 않은 주소는 앱으로 연다 */ }
   event.waitUntil(self.registration.showNotification(title, {
     body,

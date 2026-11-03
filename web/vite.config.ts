@@ -2,6 +2,7 @@
 // 스타터는 public/sw.js에 Workbox CDN을 불러오지만, 여기서는 generateSW로 서비스 워커를 빌드 때 만든다.
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import { APP_NAME } from './src/brand';
 
 export default defineConfig({
   // GitHub Pages 하위 경로(/<저장소>/)에서도 열리도록 상대 경로로 낸다.
@@ -14,9 +15,9 @@ export default defineConfig({
       includeAssets: ['favicon.svg', 'icon.svg', 'apple-touch-icon*.png', 'icon-48*.png', 'icons/sprite.svg'],
       manifest: {
         id: './',
-        name: '성대 공지 맞춤 알림',
-        short_name: '성대 공지',
-        description: '성균관대 공지와 인턴 공고 중 나에게 맞는 글을 모아 보고 마감 전에 알림을 받아요',
+        name: APP_NAME,
+        short_name: APP_NAME,
+        description: '성균관대 공지와 인턴 공고를 한곳에서 보고 새 소식과 마감 알림을 받아요',
         lang: 'ko',
         start_url: './',
         scope: './',
@@ -43,7 +44,7 @@ export default defineConfig({
         ],
         shortcuts: [
           { name: '성대 공지', url: './?tab=all', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
-          { name: '마감 임박', url: './?tab=all&sort=deadline', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
+          { name: '마감순 보기', url: './?tab=all&sort=deadline', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
           { name: '인턴 공고', url: './?tab=intern', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
           { name: '저장', url: './?tab=saved', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
         ],

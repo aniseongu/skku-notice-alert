@@ -14,6 +14,8 @@ import { loadToken } from './settings-storage';
 import { SAVED_VARIABLE, type SavedNotice, loadSaved, parseSaved, storeSaved, toggleSaved } from './saved-notices';
 import { READ_VARIABLE, addRead, loadRead, mergeRead, parseRead, storeRead } from './read-notices';
 import type { Theme } from './settings-view';
+import { APP_NAME } from './brand';
+import { orderNotices, type Sort } from './notice-order';
 
 type Tab = 'all' | 'intern' | 'saved';
 type View = Tab | 'settings';
@@ -41,6 +43,15 @@ function remember(key: string, value?: string): string | null {
     localStorage.setItem(key, value);
   } catch { /* 사생활 보호 모드에서는 기억하지 않는다 */ }
   return value ?? null;
+}
+
+function loadSort(tab: 'all' | 'intern'): Sort {
+  const params = new URLSearchParams(location.search);
+  if (tab === 'all' && params.get('tab') === 'deadline') return 'deadline';
+  const requested = params.get('sort');
+  if (normalizeTab(params.get('tab') ?? remember('tab')) === tab && (requested === 'latest' || requested === 'deadline')) return requested;
+  const saved = remember(tab === 'intern' ? 'intern-sort' : 'notice-sort');
+  return saved === 'latest' || saved === 'deadline' ? saved : 'latest';
 }
 
 function loadKeywords(): string[] {
@@ -94,7 +105,7 @@ export class NoticeApp extends LitElement {
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true }, sortMenuOpen: { state: true },
-    saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true },
+    saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true }, internSort: { state: true },
     unreadOnly: { state: true }, hidePinned: { state: true },
   };
 
@@ -104,7 +115,8 @@ export class NoticeApp extends LitElement {
   generatedAt: string | null = null;
   view: View = new URLSearchParams(location.search).get('view') === 'settings'
     ? 'settings' : [normalizeTab(new URLSearchParams(location.search).get('tab')), normalizeTab(remember('tab'))].find(isTab) ?? 'all';
-  sort: 'latest' | 'deadline' = new URLSearchParams(location.search).get('tab') === 'deadline' || new URLSearchParams(location.search).get('sort') === 'deadline' || (new URLSearchParams(location.search).get('sort') !== 'latest' && remember('notice-sort') === 'deadline') ? 'deadline' : 'latest';
+  sort: Sort = loadSort('all');
+  internSort: Sort = loadSort('intern');
   unreadOnly = remember('view-unread') === '1';
   hidePinned = remember('view-hide-pinned') === '1';
   board = remember('board') ?? 'all';
@@ -307,14 +319,10 @@ export class NoticeApp extends LitElement {
     const scoped = list.filter((n) => this.isExternal(n) === external)
       .filter((n) => !this.unreadOnly || !this.isRead(n) || n.id === this.selectedId || n.id === this.openedId)
       .filter((n) => tab !== 'all' || !this.hidePinned || !n.pinned);
-    if ((tab === 'all' && this.sort === 'deadline') || tab === 'intern') {
-      // 마감이 남은 글을 가까운 순으로. 인턴 공고는 마감 없는 공고도 맨 뒤에 둔다.
-      const open = scoped.filter((n) => !n.deadline || !deadlinePassed(n.deadline));
-      const dated = open.filter((n) => n.deadline).sort((a, b) => Date.parse(a.deadline!) - Date.parse(b.deadline!));
-      return external ? [...dated, ...open.filter((n) => !n.deadline)] : dated;
-    }
-    return tab === 'all' ? [...scoped].sort((a, b) => b.posted_on.localeCompare(a.posted_on)) : scoped;
+    return orderNotices(scoped, this.sortFor(tab));
   }
+
+  private sortFor(tab: Tab): Sort { return tab === 'intern' ? this.internSort : this.sort; }
 
   private tab(): Tab { return this.view === 'settings' ? 'all' : this.view; }
   private visible(): Notice[] {
@@ -351,8 +359,12 @@ export class NoticeApp extends LitElement {
     const params = new URLSearchParams(location.search);
     const view: View = params.get('view') === 'settings' ? 'settings'
       : [normalizeTab(params.get('tab')), normalizeTab(remember('tab'))].find(isTab) ?? 'all';
-    if (params.get('tab') === 'deadline' || params.get('sort') === 'deadline') this.sort = 'deadline';
-    else if (params.get('sort') === 'latest') this.sort = 'latest';
+    const requested = params.get('sort');
+    if (params.get('tab') === 'deadline') this.sort = 'deadline';
+    else if (requested === 'latest' || requested === 'deadline') {
+      if (view === 'intern') this.internSort = requested;
+      else if (view === 'all') this.sort = requested;
+    }
     if (view !== this.view) { this.view = view; this.selectedId = null; }
   };
 
@@ -483,10 +495,9 @@ export class NoticeApp extends LitElement {
     // 단축키 창은 네이티브 dialog로 연다(포커스 가두기와 Esc 닫기를 브라우저가 맡는다).
     const dialog = this.querySelector<HTMLDialogElement>('dialog.shortcuts');
     if (dialog && this.shortcutsOpen && !dialog.open) dialog.showModal();
-    if (this.view === 'settings') { document.title = '설정 - 성대 공지'; return; }
+    if (this.view === 'settings') { document.title = `설정 - ${APP_NAME}`; return; }
     const label = TABS.find((t) => t.id === this.view)!.label;
-    const suffix = label === '성대 공지' ? '' : ' - 성대 공지';
-    document.title = this.notices.length ? `${label} ${this.visible().length}${suffix}` : '성대 공지';
+    document.title = this.notices.length ? `${label} ${this.visible().length} - ${APP_NAME}` : APP_NAME;
   }
 
   render() {
@@ -504,10 +515,10 @@ export class NoticeApp extends LitElement {
       ? this.notices.find((n) => n.id === this.openedId) ?? list.find((n) => n.id === this.openedId) : undefined;
     const classes = [settings ? 'is-settings' : '', this.isWide && !this.detailOpen ? 'no-detail' : '', reading ? 'is-reading' : ''].join(' ');
     return html`
-      <div class="wco-bar" aria-hidden="true"><svg class="brand-mark" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>성대 공지</div>
+      <div class="wco-bar" aria-hidden="true"><svg class="brand-mark" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>${APP_NAME}</div>
       <div class="app ${classes}">
         <aside class="sidebar" aria-label="탐색">
-          <div class="pane-head brand"><svg class="brand-mark" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>성대 공지</div>
+          <div class="pane-head brand"><svg class="brand-mark" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>${APP_NAME}</div>
           <nav class="side-group" aria-label="보기">
             ${tabs.map((t) => this.sideItem(t.label, counts[t.id], this.view === t.id && !this.keyword, () => { this.keyword = null; this.setView(t.id); },
               String(TABS.findIndex((x) => x.id === t.id) + 1)))}
@@ -534,7 +545,8 @@ export class NoticeApp extends LitElement {
             ${settings ? html`<button type="button" class="icon-button narrow-only back" aria-label="설정 닫기"
               @click=${this.leaveSettings}>${icon('back')}</button>` : nothing}
             <div class="topbar-text">
-              <h1>${title}</h1>
+              <h1>${this.view === 'all' && !this.keyword
+                ? html`<span class="narrow-only">${APP_NAME}</span><span class="wide-only">${title}</span>` : title}</h1>
               ${settings ? html`<p class="updated">알림과 연결을 정해요</p>` : this.updatedLine(list.length)}
             </div>
             ${settings ? nothing : html`
@@ -717,8 +729,8 @@ export class NoticeApp extends LitElement {
       if (this.view !== 'saved' && this.unreadOnly) return html`${boardPicker}${this.empty('읽지 않은 공지가 없어요', '읽지 않은 공지만 보기를 끄면 모든 공지를 볼 수 있어요')}`;
       if (this.view === 'all' && this.hidePinned) return html`${boardPicker}${this.empty('지금 표시할 공지가 없어요', '고정 공지 숨기기를 끄거나 다른 게시판을 골라 보세요')}`;
       const empty = {
-        all: this.sort === 'deadline' ? ['다가오는 마감이 없어요', '마감일이 남은 공지만 여기에 나와요'] : ['이 게시판에 공지가 없어요', '다른 게시판을 골라 보세요'],
-        intern: ['열린 인턴 공고가 없어요', '링커리어와 자소설닷컴에 새 공고가 오면 여기에 모여요'],
+        all: ['이 게시판에 공지가 없어요', '다른 게시판을 골라 보세요'],
+        intern: ['이 사이트에 공고가 없어요', '다른 사이트를 골라 보세요'],
         saved: ['저장한 공지가 없어요', '공지를 열어 저장하면 여기에 모여요'],
       }[this.tab()];
       return html`${boardPicker}${this.empty(empty[0], empty[1])}`;
@@ -726,8 +738,9 @@ export class NoticeApp extends LitElement {
     const today = todayKst();
     const groups = new Map<string, Notice[]>();
     for (const notice of list) {
-      const key = ((this.view === 'all' && this.sort === 'deadline') || this.view === 'intern') && notice.deadline
-        ? deadlineGroup(notice.deadline, today) : postedGroup(notice.posted_on, today);
+      const key = this.view !== 'saved' && this.sortFor(this.tab()) === 'deadline'
+        ? !notice.deadline ? '마감일 미정' : deadlinePassed(notice.deadline) ? '마감 지난 글' : deadlineGroup(notice.deadline, today)
+        : postedGroup(notice.posted_on, today);
       groups.set(key, [...(groups.get(key) ?? []), notice]);
     }
     return [...groups].map(([title, items], index) => html`
@@ -754,14 +767,15 @@ export class NoticeApp extends LitElement {
   }
 
   private sortSelect() {
-    if (this.view !== 'all') return nothing;
+    if (this.view === 'saved') return nothing;
+    const sort = this.sortFor(this.tab());
     const options = [{ id: 'latest', label: '최신순' }, { id: 'deadline', label: '마감순' }] as const;
     return html`<div class="sort-picker">
-      <button type="button" class="board-trigger sort-trigger" aria-label="정렬: ${this.sort === 'latest' ? '최신순' : '마감순'}"
+      <button type="button" class="board-trigger sort-trigger" aria-label="정렬: ${sort === 'latest' ? '최신순' : '마감순'}"
         aria-expanded=${String(this.sortMenuOpen)} aria-controls="sort-options" @click=${() => {
           this.sortMenuOpen = !this.sortMenuOpen;
           if (this.sortMenuOpen) this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.sort-option[aria-pressed="true"]')?.focus());
-        }}>${this.sort === 'latest' ? '최신순' : '마감순'}<span class="board-chevron" aria-hidden="true"></span></button>
+        }}>${sort === 'latest' ? '최신순' : '마감순'}<span class="board-chevron" aria-hidden="true"></span></button>
       ${this.sortMenuOpen ? html`<div id="sort-options" class="board-options sort-options" role="group" aria-label="정렬 선택"
         @keydown=${(event: KeyboardEvent) => {
           const buttons = [...this.querySelectorAll<HTMLButtonElement>('.sort-option')];
@@ -773,15 +787,16 @@ export class NoticeApp extends LitElement {
         }} @focusout=${(event: FocusEvent) => {
           if (!(event.currentTarget as HTMLElement).parentElement?.contains(event.relatedTarget as Node | null)) this.sortMenuOpen = false;
         }}>
-        ${options.map((option) => html`<button type="button" class="board-option sort-option" aria-pressed=${String(this.sort === option.id)}
+        ${options.map((option) => html`<button type="button" class="board-option sort-option" aria-pressed=${String(sort === option.id)}
           @click=${() => {
-            this.sort = option.id;
-            remember('notice-sort', this.sort);
+            if (this.view === 'intern') this.internSort = option.id;
+            else this.sort = option.id;
+            remember(this.view === 'intern' ? 'intern-sort' : 'notice-sort', option.id);
             this.selectedId = null;
             this.sortMenuOpen = false;
-            history.replaceState(null, '', `${location.pathname}?tab=all&sort=${this.sort}`);
+            history.replaceState(null, '', `${location.pathname}?tab=${this.tab()}&sort=${option.id}`);
             this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.sort-trigger')?.focus());
-          }}><span>${option.label}</span>${this.sort === option.id ? html`<span class="board-check" aria-hidden="true"></span>` : nothing}</button>`)}
+          }}><span>${option.label}</span>${sort === option.id ? html`<span class="board-check" aria-hidden="true"></span>` : nothing}</button>`)}
       </div>` : nothing}
     </div>`;
   }
@@ -874,11 +889,11 @@ export class NoticeApp extends LitElement {
         ${notice.title_ko ? html`<p class="detail-original" lang="en">${cleanTitle(notice.title)}</p>` : nothing}
         ${reason === nothing ? nothing : html`<p class="detail-reason">${reason}</p>`}
         ${notice.deadline ? html`<p class="detail-deadline">${notice.deadline_kind ?? '마감'} ${deadlineDetail(notice.deadline)} ${this.dday(notice, today)}</p>` : nothing}
-        ${notice.changed_at ? html`<p class="detail-change">${koreanDate(notice.changed_at.slice(0, 10))}에 학교가 ${notice.change_kind === '제목' ? '제목을' : '본문을'} 고쳤어요</p>` : nothing}
+        ${notice.changed_at ? html`<p class="detail-change">${koreanDate(notice.changed_at.slice(0, 10))}에 원문 ${notice.change_kind === '제목' ? '제목이' : '본문이'} 바뀌었어요</p>` : nothing}
         ${loaded?.summary ? html`<section class="detail-section summary" aria-label="요약">
           <h3>요약</h3>${loaded.summary.split('\n').filter(Boolean).map((line) => html`<p>${line}</p>`)}</section>` : nothing}
         ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>`
-          : this.isExternal(notice) ? this.bodyView(loaded, '본문') : this.translatedView(loaded)}
+          : this.translatedView(loaded)}
         ${loaded?.attachments?.length ? this.attachmentsView(loaded) : nothing}
         <dl class="facts" aria-label="글 정보">
           <div><dt>게시일</dt><dd>${koreanDate(notice.posted_on)}</dd></div>

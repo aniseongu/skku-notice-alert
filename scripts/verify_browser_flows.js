@@ -319,6 +319,43 @@ async (page) => {
       assert(await p.locator(`[data-id="${id}"]`).count() === 0, '닫은 뒤 읽은 글이 남음');
     });
 
+    await check('앱 이름과 마감 표현이 설치 정보에 일치', async () => {
+      const manifest = await (await f.request.get(`${origin}manifest.webmanifest`)).json();
+      assert(manifest.name === '성공' && manifest.short_name === '성공', '앱 이름 불일치');
+      assert(!manifest.shortcuts.some(s => /마감\s*임박/.test(s.name)), '이전 마감 표현이 남음');
+      assert(manifest.shortcuts.some(s => s.name === '마감순 보기'), '마감순 바로가기 없음');
+      assert((await f.title()).includes('성공'), '창 이름 불일치');
+    });
+    await check('학교와 인턴에서 각각 최신순과 마감순 기억', async () => {
+      await f.goto(`${origin}?tab=all&sort=deadline`);
+      await f.locator('.sort-trigger').waitFor();
+      await f.locator('.tabbar').getByRole('button', { name: '인턴 공고', exact: true }).click();
+      await f.locator('.sort-trigger').click();
+      await f.getByRole('button', { name: '최신순', exact: true }).click();
+      await f.reload(); await f.locator('.sort-trigger').waitFor();
+      assert((await f.locator('.sort-trigger').innerText()).trim() === '최신순', '인턴 정렬 유실');
+      await f.locator('.tabbar').getByRole('button', { name: '성대 공지', exact: true }).click();
+      assert((await f.locator('.sort-trigger').innerText()).trim() === '마감순', '학교 정렬이 덮어써짐');
+      await f.locator('.tabbar').getByRole('button', { name: '인턴 공고', exact: true }).click();
+      assert((await f.locator('.sort-trigger').innerText()).trim() === '최신순', '인턴 정렬이 덮어써짐');
+    });
+    await check('인턴 마감순과 최신순 실제 정렬', async () => {
+      await f.locator('.sort-trigger').click();
+      await f.getByRole('button', { name: '마감순', exact: true }).click();
+      const deadlines = await f.locator('notice-app').evaluate(e => [...e.querySelectorAll('.row')]
+        .map(row => e.notices.find(n => n.id === row.dataset.id).deadline));
+      const now = Date.now();
+      const buckets = deadlines.map(d => !d ? 1 : Date.parse(d) >= now ? 0 : 2);
+      assert(deadlines.length > 0 && buckets.every((b, i) => i === 0 || buckets[i - 1] <= b), '마감 구간 순서 불일치');
+      assert(deadlines.every((d, i) => i === 0 || buckets[i - 1] !== buckets[i] || buckets[i] === 1
+        || (buckets[i] === 0 ? Date.parse(deadlines[i - 1]) <= Date.parse(d) : Date.parse(deadlines[i - 1]) >= Date.parse(d))), '마감순 불일치');
+      await f.locator('.sort-trigger').click();
+      await f.getByRole('button', { name: '최신순', exact: true }).click();
+      const dates = await f.locator('notice-app').evaluate(e => [...e.querySelectorAll('.row')]
+        .map(row => e.notices.find(n => n.id === row.dataset.id).posted_on));
+      assert(dates.every((d, i) => i === 0 || dates[i - 1] >= d), '최신순 불일치');
+    });
+
     // 서버 상태별 문구는 실제 계정이나 공개 데이터를 바꾸지 않고 응답만 제어한다.
     const s = await open(412, 'intern');
     let status = 'pending';
@@ -339,6 +376,19 @@ async (page) => {
         await s.getByText(expected, { exact: true }).waitFor();
       });
     }
+    await check('인턴 본문도 한국어 번역과 영어 원문 함께 표시', async () => {
+      await s.unroute('**/api/v1/notices/*/*.json');
+      await s.route('**/api/v1/notices/*/*.json', route => route.fulfill({
+        status: 200, contentType: 'application/json', body: JSON.stringify({
+          body_status: 'ready', body: 'Original internship content',
+          body_html: '<p>Original internship content</p>', images: [], attachments: [],
+          translation: { body: '한국어로 옮긴 인턴 공고 본문' },
+        }),
+      }));
+      await s.reload(); await s.locator('.row').first().click();
+      await s.getByRole('heading', { name: '본문 (한국어로 옮긴 글)', exact: true }).waitFor();
+      await s.locator('.original-body').getByText('Original internship content', { exact: true }).waitFor();
+    });
   } finally {
     for (const context of contexts) await context.close();
   }

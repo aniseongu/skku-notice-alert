@@ -153,3 +153,9 @@ def test_browser_only_cli_creates_first_baseline_without_sending(monkeypatch, tm
 def test_web_push_config_is_not_in_repr(browser_config):
     config = webpush_notify.web_push_config()
     assert browser_config["endpoint"] not in repr(config)
+
+
+def test_default_subject_is_accepted_by_vapid_signer(browser_config):
+    # webpush를 대역으로 바꾸면 서명 단계 오류를 못 잡는다. 실제 서명기로 기본 sub를 확인한다.
+    config = webpush_notify.web_push_config()
+    Vapid.from_string(config.private_key).sign({"sub": config.subject, "aud": "https://fcm.googleapis.com"})

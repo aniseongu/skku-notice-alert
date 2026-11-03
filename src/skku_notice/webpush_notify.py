@@ -59,7 +59,8 @@ def web_push_config() -> WebPushConfig | None:
     except Exception:
         # Library exceptions can contain subscription URLs or key material.
         raise ValueError("웹 푸시 구독 정보나 발송 키가 맞지 않아요") from None
-    subject = os.environ.get("WEB_PUSH_SUBJECT", "https://github.com/aniseongu/skku-notice-alert").strip()
+    # py_vapid는 경로가 붙은 https 주소를 거부한다. 메일 주소는 공개 코드에 두지 않는다.
+    subject = os.environ.get("WEB_PUSH_SUBJECT", "https://aniseongu.github.io").strip()
     if not subject.startswith(("https://", "mailto:")):
         raise ValueError("WEB_PUSH_SUBJECT는 https 또는 mailto 주소로 설정하세요")
     return WebPushConfig(subscription, private_key, subject)

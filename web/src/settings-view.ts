@@ -75,7 +75,7 @@ export class SettingsView extends LitElement {
     keywords: { attribute: false }, theme: { attribute: false },
     topic: { state: true }, repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
-    keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true },
+    keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true },
   };
 
   keywords: string[] = [];
@@ -83,7 +83,9 @@ export class SettingsView extends LitElement {
   // 토픽은 아는 사람 누구나 구독할 수 있는 비밀이라 브라우저에 남기지 않는다(메모리에만, 화면을 닫으면 잊는다).
   topic = '';
   repo = remember('github-repo') ?? '';
-  token = '';
+  // 사용자 요청(2026-11-03)으로 연결 토큰은 이 기기에 기억한다. 키 값은 여전히 남기지 않는다.
+  token = remember('github-token') ?? '';
+  linked = false;
   values: Record<string, string> = {};
   saved: Record<string, string> = readSavedSecrets(this.repo);
   editing: Record<string, boolean> = {};
@@ -100,6 +102,7 @@ export class SettingsView extends LitElement {
     super.connectedCallback();
     window.addEventListener('beforeunload', this.warnUnsaved);
     browserPushEnabled().then((enabled) => { this.browserNotifications = enabled; }).catch(() => {});
+    if (this.connected()) this.connect();
     if (!this.repo) pushConfiguration().then((config) => {
       if (!this.repo) { this.setRepo(config.repository); remember('github-repo', config.repository); }
     }).catch(() => {});
@@ -192,13 +195,24 @@ export class SettingsView extends LitElement {
     try {
       const saved = await listSecrets(repo, token);
       rememberSavedSecrets(repo, saved);
+      remember('github-token', token);
       if (this.repo === repo) {
         this.saved = saved;
-        this.setStatus('github', true, '연결했어요. 저장한 키를 확인했어요');
+        this.linked = true;
+        this.setStatus('github', true, '연결했어요. 다음에 열 때도 연결돼 있어요');
       }
     } catch (error) {
-      this.setStatus('github', false, error instanceof GitHubError ? error.message : '인터넷 연결을 확인해 주세요');
+      // 만료되거나 지운 토큰은 기억하지 않는다. 인터넷 오류면 다음에 다시 시도한다.
+      if (error instanceof GitHubError) { remember('github-token', null); this.linked = false; }
+      this.setStatus('github', false, error instanceof GitHubError ? `${error.message}. 새 토큰을 넣어 주세요` : '인터넷 연결을 확인해 주세요');
     } finally { this.busy = ''; }
+  }
+
+  private disconnect() {
+    remember('github-token', null);
+    this.token = '';
+    this.linked = false;
+    this.setStatus('github', true, '연결을 끊었어요. 저장한 키는 GitHub에 그대로 있어요');
   }
 
   private async save(name: string, value: string) {
@@ -284,9 +298,17 @@ export class SettingsView extends LitElement {
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">GitHub 저장소</p>
-              <p class="setting-help">15분마다 공지를 확인하는 내 저장소예요. 아래 키는 이 저장소로 암호화해 보내고 브라우저에는 남기지 않아요</p>
+              <p class="setting-help">15분마다 공지를 확인하는 내 저장소예요. 아래 키는 이 저장소로 암호화해 보내고 브라우저에는 남기지 않아요. 연결은 이 기기에 기억해요</p>
             </div>
             <div class="setting-control">
+              ${this.linked ? html`
+                <p class="setting-saved">${this.repo}에 연결돼 있어요</p>
+                <div class="inline">
+                  <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${this.connect}>
+                    ${this.busy === 'github' ? '확인 중' : '저장 상태 새로 보기'}</button>
+                  <button type="button" class="ghost-button" @click=${this.disconnect}>연결 끊기</button>
+                </div>
+              ` : html`
               <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="저장소" placeholder="아이디/저장소 이름"
                 .value=${this.repo} @input=${(e: Event) => this.setRepo((e.target as HTMLInputElement).value.trim())}>
               <div class="inline">
@@ -295,6 +317,7 @@ export class SettingsView extends LitElement {
                 <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${this.connect}>
                   ${this.busy === 'github' ? '연결 중' : '연결하기'}</button>
               </div>
+              `}
               ${this.note('github')}
               ${this.guide('github', [
                 html`${link('https://github.com/settings/personal-access-tokens/new', 'GitHub 새 토큰 화면')}을 열어요(Fine-grained token)`,
@@ -333,7 +356,7 @@ export class SettingsView extends LitElement {
             <div class="setting-text">
               <p class="setting-name">다른 기기에서도 받기</p>
               <p class="setting-help">휴대폰과 PC의 ntfy 앱에서 이 이름을 구독하면 알림이 와요. 아는 사람은 누구나 받을 수 있으니 비밀번호처럼 다뤄 주세요.
-                이 화면을 닫으면 사라지니 앱과 GitHub에 먼저 넣어 두세요</p>
+                ${this.saved.NOTIFY_URLS ? nothing : '이 화면을 닫으면 사라지니 앱과 GitHub에 먼저 넣어 두세요'}</p>
             </div>
             <div class="setting-control">
               ${this.saved.NOTIFY_URLS && !this.editing.NOTIFY_URLS ? html`

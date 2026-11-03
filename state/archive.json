@@ -1,6 +1,84 @@
 {
   "version": 1,
   "items": {
+    "skku-notice01/141536": {
+      "notice": {
+        "id": "skku-notice01/141536",
+        "source_id": "skku-notice01",
+        "article_no": "141536",
+        "title": "[입학처] 2027학년도 수시모집 논술 시험 교통 통제 단기근로(아르바이트) 모집",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141536",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T16:32:28.733088+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "maybe",
+          "reason": "학부생으로서 지원 가능하나 본인의 전공 및 희망 직무와 무관한 단순 아르바이트입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[2027학년도 수시모집 논술 시험 교통 통제 단기근로(아르바이트) 모집]\n\n1. 모집인원: 00명\n\n2. 지원 자격: 본교 학사과정 재학생 또는 휴학생으로 야간 및 주말 근무 가능한 분\n* 운전면허자격증 소지자, 교통 통제 및 안내 관련 경험자(의경, 군 복무 등), 학교 인근 거주자 우대\n\n3. 근무 기간 및 시간\n- 11.20.(금) 19:00~21:00 (사전교육)\n- 11.21.(토) 05:30~17:30 (종료 시각 변동될 수 있음)\n- 11.22.(일) 05:30~19:30 (종료 시각 변동될 수 있음)\n* 사전교육 참석과 1일 이상 근무가 가능해야 하며 양일 모두 가능한 분을 우대\n\n4. 근무 장소 및 업무 내용: 인문사회과학캠퍼스 인근 차량 통제, 안내, 논술시험 준비 지원 등\n\n5. 근무 조건\n- 시급: 10,320원 (추후 조정 가능)\n- 새벽 출근 및 휴일 근무 수당 추가 지급\n- 아침, 점심 식사비용 별도 제공\n\n6. 지원 방법\n- 네이버폼으로 신청 및 접수\n- 신청접수: https://naver.me/5OlI0X1w\n\n7. 지원 마감일: 11.8.(일) 21:00\n\n8. 합격자 통보: 개별 SMS 통보\n\n기타 문의 사항은 입학관리팀(02-760-1367) 또는 admission@skku.edu로 연락 바랍니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>[2027학년도 수시모집 논술 시험 교통 통제 단기근로(아르바이트) 모집]</p><p>1. 모집인원: 00명</p><p>2. 지원 자격: 본교 학사과정 재학생 또는 휴학생으로 야간 및 주말 근무 가능한 분</p><p>* 운전면허자격증 소지자, 교통 통제 및 안내 관련 경험자(의경, 군 복무 등), 학교 인근 거주자 우대</p><p>3. 근무 기간 및 시간</p><ul><li>11.20.(금) 19:00~21:00 (사전교육)</li><li>11.21.(토) 05:30~17:30 (종료 시각 변동될 수 있음)</li><li>11.22.(일) 05:30~19:30 (종료 시각 변동될 수 있음)</li></ul><p>* 사전교육 참석과 1일 이상 근무가 가능해야 하며 양일 모두 가능한 분을 우대</p><p>4. 근무 장소 및 업무 내용: 인문사회과학캠퍼스 인근 차량 통제, 안내, 논술시험 준비 지원 등</p><p>5. 근무 조건</p><ul><li>시급: 10,320원 (추후 조정 가능)</li><li>새벽 출근 및 휴일 근무 수당 추가 지급</li><li>아침, 점심 식사비용 별도 제공</li></ul><p>6. 지원 방법</p><ul><li>네이버폼으로 신청 및 접수</li><li>신청접수: <a href=\"https://naver.me/5OlI0X1w\">https://naver.me/5OlI0X1w</a></li></ul><p>7. 지원 마감일: 11.8.(일) 21:00</p><p>8. 합격자 통보: 개별 SMS 통보</p><p>기타 문의 사항은 입학관리팀(02-760-1367) 또는 admission@skku.edu로 연락 바랍니다.</p>",
+      "images": [],
+      "summary": "11월 21일부터 22일까지 진행되는 논술 시험 교통 통제 업무입니다. 11월 8일까지 네이버폼을 통해 신청하면 됩니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T16:32:28.733088+09:00"
+    },
+    "skku-notice01/140767": {
+      "notice": {
+        "id": "skku-notice01/140767",
+        "source_id": "skku-notice01",
+        "article_no": "140767",
+        "title": "사회과학대학 제41회 수선포럼 개최 안내: 2026.11.18.(수) 11:30~13:00",
+        "category": "행사/세미나",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=140767",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T16:32:28.733088+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "본인의 전공이나 관심 분야인 소프트웨어 및 개발과 직접적인 연관성이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "<사회과학대학 제41회 수선포럼 개최>\n\n일시: 2026년 11월 18일(수) 11:30~13:00\n장소: 사회과학연구원 컨퍼런스룸(수선관 901호)\n발표: 이종혁 교수(정치외교학과)\n주제: Loyalty-Competence Trade-off and Leadership Formation in China:\nMachine-learning Approach to Political Selection",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>&lt;사회과학대학 제41회 수선포럼 개최&gt;</p><p>일시: 2026년 11월 18일(수) 11:30~13:00</p><p>장소: 사회과학연구원 컨퍼런스룸(수선관 901호)</p><p>발표: 이종혁 교수(정치외교학과)</p><p>주제: Loyalty-Competence Trade-off and Leadership Formation in China:</p><p>Machine-learning Approach to Political Selection</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"수선포럼 웹포스터\" src=\"https://www.skku.edu/_attach/image/2026/10/YcpYzYqoTkSRGPFDXgGt.png\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/10/YcpYzYqoTkSRGPFDXgGt.png"
+      ],
+      "summary": "사회과학대학 수선포럼이 11월 18일 사회과학연구원에서 개최됩니다. 정치외교학과 교수의 발표를 통해 중국의 정치적 선택에 관한 머신러닝 접근법을 다룹니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T16:32:28.733088+09:00"
+    },
     "skku-notice01/140686": {
       "notice": {
         "id": "skku-notice01/140686",

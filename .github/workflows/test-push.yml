@@ -24,7 +24,15 @@ jobs:
           WEB_PUSH_PRIVATE_KEY: ${{ secrets.WEB_PUSH_PRIVATE_KEY }}
         run: |
           uv run python <<'PY'
+          import base64, json, os
+          from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
+          from py_vapid import Vapid
           from skku_notice.webpush_notify import send_web_push
+          # 비밀 값은 찍지 않고 사이트 공개키와 짝이 맞는지만 알린다.
+          public = Vapid.from_string(os.environ["WEB_PUSH_PRIVATE_KEY"]).public_key.public_bytes(
+              Encoding.X962, PublicFormat.UncompressedPoint)
+          expected = json.load(open("web/public/web-push.json"))["publicKey"]
+          print("발송 키와 사이트 공개키 일치:", base64.urlsafe_b64encode(public).decode().rstrip("=") == expected)
           ok = send_web_push(
               "성대 공지 테스트 알림",
               "앱과 탭을 닫아도 브라우저가 켜져 있으면 알림을 받아요. 누르면 학교 공지가 열려요.",

@@ -99,7 +99,10 @@ def test_failed_provider_response_is_not_logged(monkeypatch, browser_config, cap
 
     monkeypatch.setattr(webpush_notify, "webpush", fail)
     assert not webpush_notify.send_web_push("제목", "본문", "https://www.skku.edu", "test", "default")
-    assert capsys.readouterr() == ("", "")
+    captured = capsys.readouterr()
+    assert captured.out == ""
+    assert captured.err.strip() == "웹 푸시 실패: HTTP 응답 없음"
+    assert "SECRET" not in captured.err
 
 
 def test_no_notification_channel(monkeypatch, notice):

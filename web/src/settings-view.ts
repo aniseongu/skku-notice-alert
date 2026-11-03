@@ -1,5 +1,6 @@
 // 설정 화면. 규칙은 docs/design/ux-rules.md 2-2절: 한 열, 왼쪽 이름과 도움말, 오른쪽 입력, 1px 구분선, 카드 없음.
 import { LitElement, html, nothing, type TemplateResult } from 'lit';
+import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import {
   GitHubError, REPO_PATTERN, checkGeminiKey, listSecrets, readVariable, saveSecret, saveVariable,
 } from './github';
@@ -74,6 +75,7 @@ export class SettingsView extends LitElement {
     repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
     keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true },
+    qr: { state: true },
   };
 
   keywords: string[] = [];
@@ -85,6 +87,9 @@ export class SettingsView extends LitElement {
   // 사용자 요청(2026-11-03)으로 연결 토큰은 이 기기에 암호화해 기억한다(D-017). 키 값은 남기지 않는다.
   token = '';
   linked = false;
+  // 다른 기기 연결 QR(SVG). 1분 뒤 지운다.
+  qr = '';
+  private qrTimer = 0;
   // GitHub에 있는 키워드(모든 기기 공용)와 같은지 비교해 바뀐 것만 저장한다.
   private syncedKeywords: string | null = null;
   values: Record<string, string> = {};
@@ -103,7 +108,7 @@ export class SettingsView extends LitElement {
     super.connectedCallback();
     window.addEventListener('beforeunload', this.warnUnsaved);
     browserPushEnabled().then((enabled) => { this.browserNotifications = enabled; }).catch(() => {});
-    loadToken().then((token) => {
+    if (!this.takeHandoff()) loadToken().then((token) => {
       if (token && !this.token) { this.token = token; if (this.connected()) this.connect(); }
     });
     if (!this.repo) pushConfiguration().then((config) => {
@@ -197,7 +202,39 @@ export class SettingsView extends LitElement {
     } finally { this.busy = ''; }
   }
 
+  // 다른 기기의 QR로 열면 주소 # 뒤에 저장소와 토큰이 온다. # 뒤는 서버로 가지 않고, 읽자마자 주소에서 지운다.
+  private takeHandoff(): boolean {
+    const params = new URLSearchParams(location.hash.slice(1));
+    const token = params.get('token');
+    if (!token) return false;
+    history.replaceState(history.state, '', location.pathname + location.search);
+    const repo = params.get('repo') ?? '';
+    if (!token.startsWith('github_pat_') || !REPO_PATTERN.test(repo)) {
+      this.setStatus('github', false, 'QR이 올바르지 않아요. 연결된 기기에서 QR을 다시 띄워 주세요');
+      return true;
+    }
+    this.setRepo(repo);
+    remember('github-repo', repo);
+    this.token = token;
+    this.connect();
+    return true;
+  }
+
+  private async showHandoff() {
+    // QR 그리는 코드는 이때만 불러온다(첫 화면을 가볍게).
+    const { renderSVG } = await import('uqr');
+    const url = new URL(document.baseURI);
+    url.search = '?view=settings';
+    url.hash = new URLSearchParams({ repo: this.repo, token: this.token }).toString();
+    this.qr = renderSVG(url.href, { border: 1 });
+    clearTimeout(this.qrTimer);
+    this.qrTimer = window.setTimeout(() => { this.qr = ''; }, 60_000);
+  }
+
+  private hideHandoff() { clearTimeout(this.qrTimer); this.qr = ''; }
+
   private async disconnect() {
+    this.hideHandoff();
     await forgetToken();
     this.token = '';
     this.linked = false;
@@ -343,6 +380,11 @@ export class SettingsView extends LitElement {
                     ${this.busy === 'github' ? '확인 중' : '저장 상태 새로 보기'}</button>
                   <button type="button" class="ghost-button" @click=${this.disconnect}>연결 끊기</button>
                 </div>
+                ${this.qr ? html`
+                  <div class="qr" role="img" aria-label="다른 기기 연결 QR">${unsafeHTML(this.qr)}</div>
+                  <p class="field-note">다른 휴대폰이나 PC의 카메라로 찍으면 그 기기가 바로 연결돼요. 연결 열쇠가 들어 있으니 다른 사람에게 보여 주지 마세요. 1분 뒤 사라져요</p>
+                  <button type="button" class="text-button" @click=${this.hideHandoff}>QR 닫기</button>
+                ` : html`<button type="button" class="text-button" @click=${this.showHandoff}>다른 기기 연결하기</button>`}
               ` : html`
               <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="저장소" placeholder="아이디/저장소 이름"
                 .value=${this.repo} @input=${(e: Event) => this.setRepo((e.target as HTMLInputElement).value.trim())}>

@@ -119,6 +119,8 @@
   /* 읽은 글은 제목을 한 단계 가볍게(색과 굵기). 안 읽은 글이 먼저 눈에 들어온다. */
   .row.read .title { font-weight: 400; color: var(--text-2); }
   /* 끈 분류는 색만이 아니라 가로줄로도 알린다(색만으로 상태를 전하지 않는다) */
+  /* 분류 칩: 켠 것은 옅은 면과 굵은 글자(검은 채움은 하나만 고르는 칩에만), 끈 것은 가로줄 */
+  .setting-control .chip[aria-pressed="true"] { border-color: var(--line); background: var(--sunken); color: var(--text); font-weight: 600; }
   .setting-control .chip[aria-pressed="false"] { color: var(--text-3); text-decoration: line-through; }
   .setting-control .chips { flex-wrap: wrap; margin: 0; padding: 0; overflow: visible; }
 
@@ -127,7 +129,9 @@
   .reason.maybe b, .verdict.maybe { color: var(--soon); }
   .reason.not_relevant { color: var(--text-3); }
   .reason.rule b { color: var(--text-2); }
-  .row.dim .title, .row.dim .meta { opacity: 0.55; }
+  /* 해당 없음: 투명도 대신 글자색을 직접 낮춰 대비(4.5:1)를 지킨다 */
+  .row.dim .title { color: var(--text-2); font-weight: 500; }
+  .row.dim .meta { color: var(--text-3); }
   .row:active, .row[aria-current="true"] { background: var(--sunken); }
   .row:focus-visible { outline-offset: -2px; }
 
@@ -190,6 +194,7 @@
   .rich th, .rich td { padding: 6px 8px; border: 1px solid var(--line); vertical-align: top; text-align: left; }
   .rich th { background: var(--sunken); font-weight: 600; }
   .detail-note { margin-top: 20px; font-size: 13px; line-height: 19px; color: var(--text-3); }
+  .detail-empty { margin: 0; padding: 24px 32px; }
   .detail-note.first { margin: 0 0 10px; }
 
   /* 단축키 표시(Primer KeybindingHint 참고): 키 하나에 kbd 하나, 사방 같은 1px 테두리, 작은 흐린 글자 */

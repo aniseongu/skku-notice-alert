@@ -268,7 +268,7 @@ export class SettingsView extends LitElement {
   }
 
   private async toggleCategory(category: string) {
-    if (!this.linked) { this.setStatus('muted', false, '위에서 GitHub에 연결하면 바꿀 수 있어요'); return; }
+    if (!this.linked) { this.setStatus('muted', false, 'GitHub에 연결하면 바꿀 수 있어요'); return; }
     const before = this.muted;
     this.muted = before.includes(category) ? before.filter((c) => c !== category) : [...before, category];
     try {
@@ -377,7 +377,7 @@ export class SettingsView extends LitElement {
               <p class="setting-help">앱과 탭을 닫아도 브라우저가 켜져 있으면 휴대폰이나 PC 알림으로 받아요. 소리는 기기의 알림 설정을 따라요.</p>
             </div>
             <div class="setting-control">
-              <p class="setting-saved">${this.browserNotifications ? '알림을 받고 있어요' : '알림을 연결해 주세요'}</p>
+              ${this.browserNotifications ? html`<p class="setting-saved">알림을 받고 있어요</p>` : html`<p class="field-note">알림이 꺼져 있어요</p>`}
               <div class="inline">
                 <button type="button" class="ghost-button" ?disabled=${this.busy === 'browser-push' || !supportsBrowserPush()}
                   @click=${this.toggleBrowserNotifications}>${this.busy === 'browser-push' ? '연결 중' : this.browserNotifications ? '알림 끄기' : '알림 받기'}</button>
@@ -391,21 +391,21 @@ export class SettingsView extends LitElement {
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">알림 받을 분류</p>
-              <p class="setting-help">끈 분류의 글은 목록에만 보이고 알림은 오지 않아요. 관심 키워드나 내 정보에 맞는 글은 그래도 알려요</p>
+              <p class="setting-help">켠 분류의 글만 알림으로 받아요. 끈 분류도 관심 키워드나 내 정보에 맞는 글은 알려요</p>
             </div>
             <div class="setting-control">
               ${this.categories.length ? html`<div class="chips" role="group" aria-label="알림 받을 분류">
                 ${this.categories.map((category) => html`<button type="button" class="chip" aria-pressed=${String(!this.muted.includes(category))}
                   ?disabled=${!this.linked} @click=${() => this.toggleCategory(category)}>${category}</button>`)}
               </div>` : html`<p class="field-note">공지를 불러오면 분류가 보여요</p>`}
-              ${this.linked ? this.note('muted') : html`<p class="field-note">위에서 GitHub에 연결하면 바꿀 수 있어요</p>`}
+              ${this.linked ? this.note('muted') : html`<p class="field-note">GitHub에 연결하면 바꿀 수 있어요</p>`}
             </div>
           </div>
           </div>
         </section>
 
         <section aria-labelledby="s-keys">
-          <h2 id="s-keys" class="settings-head">키</h2>
+          <h2 id="s-keys" class="settings-head">연결 키</h2>
           <div class="box">
           ${KEY_FIELDS.map((field) => this.keyRow(field))}
 

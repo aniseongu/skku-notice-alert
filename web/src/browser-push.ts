@@ -1,3 +1,4 @@
+import { APP_NAME } from './brand';
 import { GitHubError, deleteSecret, listSecrets, saveSecret } from './github';
 
 interface PushConfiguration { publicKey: string; repository: string }
@@ -95,7 +96,7 @@ export async function disconnectBrowserPush(repo: string, token: string): Promis
 export async function testBrowserNotification(): Promise<void> {
   if (!supportsBrowserPush() || Notification.permission !== 'granted') throw new Error('먼저 이 기기에서 알림 받기를 켜 주세요');
   const registration = await navigator.serviceWorker.ready;
-  await registration.showNotification('성대 공지 테스트 알림', {
+  await registration.showNotification(`${APP_NAME} 테스트 알림`, {
     body: '이 알림이 보이면 이 기기에서 알림을 표시할 수 있어요',
     icon: new URL('icon-192.png', registration.scope).href,
     tag: 'skku-notice-test',

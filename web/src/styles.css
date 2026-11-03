@@ -17,7 +17,8 @@
     --on-accent: light-dark(oklch(0.99 0.005 var(--h)), oklch(0.2 0.03 var(--h)));
     --danger: light-dark(oklch(0.55 0.19 25), oklch(0.74 0.15 25));
     --soon: light-dark(oklch(0.54 0.12 65), oklch(0.8 0.12 75));
-    --glass: light-dark(oklch(0.996 0.002 var(--h) / 0.9), oklch(0.215 0.008 var(--h) / 0.9));
+    /* 유리는 불투명 94%(DESIGN 6절 92% 이상). 아래 글이 비쳐 읽기 어렵지 않게. */
+    --glass: light-dark(oklch(0.996 0.002 var(--h) / 0.94), oklch(0.215 0.008 var(--h) / 0.94));
     --shadow-pop: 0 1px 2px oklch(0.2 0.02 var(--h) / 0.08), 0 8px 24px oklch(0.2 0.02 var(--h) / 0.12);
     --r-sm: 6px;
     --r-md: 10px;
@@ -358,9 +359,10 @@
     .side-head {
       display: flex; align-items: center; justify-content: space-between; width: calc(100% - 24px);
       margin: 20px 12px 4px; padding: 4px 0; border: 0; background: none; cursor: pointer;
-      font: inherit; font-size: 12px; line-height: 16px; font-weight: 600; color: var(--text-3); text-align: left;
+      font: inherit; font-size: 12px; line-height: 16px; font-weight: 600; color: var(--text-2); text-align: left;
     }
-    .side-head:hover { color: var(--text-2); }
+    .side-head:hover { color: var(--text); }
+    .side-count { margin-left: 6px; font-weight: 500; color: var(--text-3); }
     .side-chevron { width: 8px; height: 8px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); }
     .side-head[aria-expanded="false"] .side-chevron { transform: rotate(-45deg); }
     .side-group[hidden] { display: none; }
@@ -421,7 +423,8 @@
     .row .meta .board { color: var(--text-2); font-weight: 600; }
     .row .title { font-size: 15px; line-height: 22px; }
     .row .dday { align-self: start; padding-top: 2px; text-align: right; }
-    .row .sub { font-size: 13px; line-height: 19px; margin-top: 0; }
+    /* 판정은 한 줄(ux-rules 2절). 넘치면 줄여서 행 높이가 제목 줄 수만 따르게 한다. */
+    .row .sub { font-size: 13px; line-height: 19px; margin-top: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   }
 }
 

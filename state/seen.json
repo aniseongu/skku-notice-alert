@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "sources": {
+    "skku-notice01": {
+      "initialized_at": "2026-11-03T12:27:42.906254+09:00",
+      "seen": {
+        "141509": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "141498": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "141494": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "141136": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "141131": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "141041": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "140492": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "140798": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "141522": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "141523": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "141510": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "140831": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "140482": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "141512": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "140500": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "140924": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "140949": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        }
+      }
+    },
+    "cse-notice": {
+      "initialized_at": "2026-11-03T12:27:42.906254+09:00",
+      "seen": {
+        "227952": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "227923": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "227634": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "227633": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "227471": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "227457": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "227380": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "227362": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "227334": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "227280": {
+          "first_seen": "2026-11-03T12:27:42.906254+09:00",
+          "status": "baseline",
+          "attempts": 0
+        }
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "name": "skku-notice-web",
   "private": true,
   "version": "0.1.0",
-  "description": "성대 공지 맞춤 알림 화면 (pwa-builder/pwa-starter 구성을 따름)",
+  "description": "성공, 성균관대 공지와 인턴 공고 화면 (pwa-builder/pwa-starter 구성을 따름)",
   "type": "module",
   "scripts": {
     "dev": "vite",

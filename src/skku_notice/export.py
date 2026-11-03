@@ -42,7 +42,7 @@ def export_site(
     notices = {
         "version": 1,
         "generated_at": stamp,
-        # external: 외부 인턴 공고(D-026, 추가 필드). 화면은 전체와 마감 임박에서 뺀다.
+        # external: 외부 인턴 공고(D-026, 추가 필드). 화면은 성대 공지 탭에서 뺀다.
         "sources": [{"id": source["id"], "name": source["name"], "url": source["url"],
                      **({"external": True} if source.get("external") else {})} for source in sources],
         # title_ko는 영어 공지를 옮긴 제목(추가 필드, D-010 API v1 유지).

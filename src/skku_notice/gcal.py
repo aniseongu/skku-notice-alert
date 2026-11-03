@@ -52,7 +52,7 @@ def desired_events(notices: list[dict], saved: list[dict], now: datetime,
             continue
         events[_event_id(notice["id"])] = {
             "summary": f"[{kind}] {notice.get('title_ko') or notice['title']}"[:250],
-            "description": f"{notice['url']}\n성대 공지 앱이 넣은 일정이에요.",
+            "description": f"{notice['url']}\n성공이 넣은 일정이에요.",
             "start": {"dateTime": start.isoformat(), "timeZone": "Asia/Seoul"},
             "end": {"dateTime": end.isoformat(), "timeZone": "Asia/Seoul"},
             "source": {"title": "원문", "url": notice["url"]},

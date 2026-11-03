@@ -2362,7 +2362,7 @@
       "images": [
         "https://www.skku.edu/_attach/image/2026/10/eGGizjjUMbJcpSQwIyKu.jpg"
       ],
-      "summary": null,
+      "summary": "2027학년도 1학기 융합연구학점제 참여 팀을 모집합니다. 재학 중인 학부생 팀을 구성하여 11월 25일까지 GLS를 통해 신청할 수 있습니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-03T13:53:22.645265+09:00"
     },
@@ -2397,7 +2397,7 @@
       "images": [
         "https://www.skku.edu/_attach/image/2026/10/eoIFcBTswdoNZkeJsqAe.jpg"
       ],
-      "summary": null,
+      "summary": "성균인성교육센터에서 학부모 및 가족과 함께하는 공감 프로그램을 진행합니다. 본교 학부생은 11월 12일까지 구글폼을 통해 신청할 수 있습니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-03T13:53:22.645265+09:00",
       "ai_deadline": {
@@ -2438,7 +2438,7 @@
       "images": [
         "https://www.skku.edu/_attach/image/2026/10/gjHEpQtUosfCUQOTyGVV.png"
       ],
-      "summary": null,
+      "summary": "HUSS 사업단 참여학과 재학생을 대상으로 현직자 멘토링 프로그램 참가자를 모집합니다. 11월 9일까지 구글폼을 통해 신청 가능합니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-03T13:53:22.645265+09:00",
       "ai_deadline": {
@@ -2479,7 +2479,7 @@
       "images": [
         "https://www.skku.edu/_attach/image/2026/10/RvxebuvniyKvCzDTRZoL.png"
       ],
-      "summary": null,
+      "summary": "양자정보연구지원센터에서 제5회 양자정보세미나를 개최합니다. 관심 있는 학생은 11월 13일까지 온라인으로 참가 등록을 해야 합니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-03T14:16:56.035412+09:00",
       "ai_deadline": {
@@ -2520,7 +2520,7 @@
       "images": [
         "https://www.skku.edu/_attach/image/2026/10/kTpGBJHRtrVscfqUaFoe.jpg"
       ],
-      "summary": null,
+      "summary": "인공지능혁신융합대학사업 겨울 계절학기 학점교류 신청을 안내합니다. 서울시립대학교 교류 신청은 11월 10일까지 이메일을 통해 접수해야 합니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-03T14:16:56.035412+09:00",
       "ai_deadline": {
@@ -2574,7 +2574,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-10T23:59:00+09:00"
-      }
+      },
+      "summary_attempts": 1
     },
     "cse-notice/227952": {
       "notice": {

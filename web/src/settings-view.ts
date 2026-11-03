@@ -2,9 +2,10 @@
 import { LitElement, html, nothing, type TemplateResult } from 'lit';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import {
-  GitHubError, REPO_PATTERN, checkGeminiKey, listSecrets, readVariable, saveSecret, saveVariable,
+  GitHubError, REPO_PATTERN, checkGeminiKey, deleteSecret, listSecrets, readVariable, saveSecret, saveVariable,
 } from './github';
 import { forgetToken, loadToken, readSavedSecrets, rememberSavedSecrets, storeToken } from './settings-storage';
+import { GoogleError, connectGoogleCalendar, validClientId } from './google-calendar';
 import { browserPushEnabled, connectBrowserPush, disconnectBrowserPush, pushConfiguration, supportsBrowserPush, testBrowserNotification } from './browser-push';
 
 export type Theme = 'auto' | 'light' | 'dark';
@@ -341,6 +342,39 @@ export class SettingsView extends LitElement {
     return KEY_FIELDS.filter((f) => !f.multiline).map((f) => `${f.secret}=`).join('\n');
   }
 
+  private async connectGoogle() {
+    const clientId = (this.values.GOOGLE_CLIENT_ID ?? '').trim();
+    const secret = (this.values.GOOGLE_CLIENT_SECRET ?? '').trim();
+    if (!this.linked) { this.setStatus('google', false, '위 연결에서 GitHub에 먼저 연결해 주세요'); return; }
+    if (!validClientId(clientId)) { this.setStatus('google', false, '클라이언트 ID는 .apps.googleusercontent.com으로 끝나요'); return; }
+    if (secret.length < 10) { this.setStatus('google', false, '클라이언트 보안 비밀번호를 붙여 넣어 주세요'); return; }
+    this.busy = 'google';
+    try {
+      await connectGoogleCalendar(this.repo, this.token, clientId, secret);
+      this.values = { ...this.values, GOOGLE_CLIENT_ID: '', GOOGLE_CLIENT_SECRET: '' };
+      this.saved = { ...this.saved, GOOGLE_REFRESH_TOKEN: new Date().toISOString() };
+      rememberSavedSecrets(this.repo, this.saved);
+      this.setStatus('google', true, '연결했어요. 15분 안에 "성대 공지" 캘린더에 마감이 들어가요');
+    } catch (error) {
+      this.setStatus('google', false, error instanceof GoogleError || error instanceof GitHubError ? error.message : '연결하지 못했어요');
+    } finally { this.busy = ''; }
+  }
+
+  private async disconnectGoogle() {
+    this.busy = 'google';
+    try {
+      // 갱신 토큰과 비밀번호만 지운다. 이미 넣은 일정과 캘린더는 구글에 남는다.
+      await deleteSecret(this.repo, this.token, 'GOOGLE_REFRESH_TOKEN').catch(() => {});
+      await deleteSecret(this.repo, this.token, 'GOOGLE_CLIENT_SECRET').catch(() => {});
+      const saved = { ...this.saved };
+      delete saved.GOOGLE_REFRESH_TOKEN;
+      delete saved.GOOGLE_CLIENT_SECRET;
+      this.saved = saved;
+      rememberSavedSecrets(this.repo, saved);
+      this.setStatus('google', true, '연결을 끊었어요. 넣어 둔 일정은 구글 캘린더에 남아요');
+    } finally { this.busy = ''; }
+  }
+
   // 마감 캘린더(deadlines.ics)와 RSS(feed.xml)는 Actions가 15분마다 새로 쓴다(GOAL.md M3).
   private feedUrl(name: string) { return new URL(name, document.baseURI).href; }
 
@@ -511,6 +545,36 @@ export class SettingsView extends LitElement {
         <section aria-labelledby="s-feeds">
           <h2 id="s-feeds" class="settings-head">캘린더와 피드</h2>
           <div class="box">
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">구글 캘린더 자동 연결</p>
+              <p class="setting-help">내 공지와 저장한 공지의 마감을 "성대 공지" 캘린더에 15분마다 맞춰 넣어요. 기기를 꺼 둬도 돼요. 마감 30분 전에 구글 알림이 울려요</p>
+            </div>
+            <div class="setting-control">
+              ${this.saved.GOOGLE_REFRESH_TOKEN ? html`
+                <p class="setting-saved">연결돼 있어요</p>
+                <button type="button" class="ghost-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.disconnectGoogle}>연결 끊기</button>
+              ` : html`
+                <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="구글 클라이언트 ID" placeholder="클라이언트 ID (apps.googleusercontent.com으로 끝나요)"
+                  .value=${this.values.GOOGLE_CLIENT_ID ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_ID: (e.target as HTMLInputElement).value }; }}>
+                <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="구글 클라이언트 보안 비밀번호" placeholder="클라이언트 보안 비밀번호"
+                  .value=${this.values.GOOGLE_CLIENT_SECRET ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_SECRET: (e.target as HTMLInputElement).value }; }}>
+                <button type="button" class="solid-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.connectGoogle}>
+                  ${this.busy === 'google' ? '연결 중' : '구글 캘린더 연결하기'}</button>
+                ${this.linked ? nothing : html`<p class="field-note">GitHub에 연결하면 쓸 수 있어요</p>`}
+              `}
+              ${this.note('google')}
+              ${this.guide('google', [
+                html`${link('https://console.cloud.google.com/apis/credentials', 'Google Cloud 사용자 인증 정보')}를 열어요. 아캠 플러스 때 만든 프로젝트를 그대로 써도 돼요`,
+                html`${link('https://console.cloud.google.com/apis/library/calendar-json.googleapis.com', 'Google Calendar API')}를 "사용"으로 켜요`,
+                '"OAuth 클라이언트 ID"의 웹 애플리케이션을 열거나 새로 만들어요',
+                '"승인된 자바스크립트 원본"에 https://aniseongu.github.io 를 넣어요',
+                `"승인된 리디렉션 URI"에 ${new URL('oauth-callback.html', document.baseURI).href} 를 넣어요`,
+                html`${link('https://console.cloud.google.com/auth/audience', 'OAuth 대상')}에서 게시 상태를 "프로덕션"으로 바꿔요. "테스트"면 7일마다 연결이 끊겨요`,
+                '클라이언트 ID와 보안 비밀번호를 위 칸에 붙여 넣고 연결하기를 눌러요. "확인되지 않은 앱" 화면이 나오면 고급, 이동을 눌러요(내가 만든 앱이에요)',
+              ], '연결하는 방법')}
+            </div>
+          </div>
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">마감 캘린더</p>

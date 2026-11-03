@@ -9,7 +9,7 @@ import pytest
 
 from skku_notice import canvas, cli
 from skku_notice.archive import Archive
-from skku_notice.canvas_alerts import CanvasState, mark_sent, notification_mode, plan_alerts
+from skku_notice.canvas_alerts import CanvasState, mark_sent, plan_alerts
 from skku_notice.deadline import KST
 from skku_notice.export import export_site
 
@@ -72,7 +72,6 @@ def test_export_contains_no_canvas_data(tmp_path: Path) -> None:
 
 
 def test_cli_fixture_dry_run_does_not_write_canvas_state(tmp_path: Path, monkeypatch, capsys) -> None:
-    monkeypatch.setenv("CANVAS_ALERT_MODE", "reminders")
     class FixtureDateTime(datetime):
         @classmethod
         def now(cls, tz=None):
@@ -103,7 +102,6 @@ def test_cli_fixture_dry_run_does_not_write_canvas_state(tmp_path: Path, monkeyp
 
 
 def test_rejected_token_problem_is_sent_once(tmp_path: Path, monkeypatch) -> None:
-    monkeypatch.setenv("CANVAS_ALERT_MODE", "reminders")
     monkeypatch.setattr(cli, "CANVAS_STATE_PATH", tmp_path / "canvas.json")
     monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
     monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
@@ -114,7 +112,7 @@ def test_rejected_token_problem_is_sent_once(tmp_path: Path, monkeypatch) -> Non
         cli, "read_canvas", lambda *args: (_ for _ in ()).throw(canvas.CanvasError("토큰 거절"))
     )
     sent = []
-    monkeypatch.setattr(cli, "send_canvas", lambda *args: sent.append(args) or True)
+    monkeypatch.setattr(cli, "send_canvas", lambda *args, **kwargs: sent.append(args) or True)
     args = argparse.Namespace(
         rules=Path("config/rules.example.yaml"),
         dry_run=False,
@@ -138,10 +136,6 @@ def test_rejected_token_problem_is_sent_once(tmp_path: Path, monkeypatch) -> Non
     assert "fake-token" not in cli.CANVAS_STATE_PATH.read_text()
 
 
-@pytest.mark.parametrize("value", [None, "", "invalid", "off"])
-def test_canvas_notifications_are_opt_in(value) -> None:
-    assert notification_mode(value) == "off"
-
 
 def test_summary_mode_never_plans_individual_reminders() -> None:
     items = canvas.read_canvas("", NOW, FIXTURES)
@@ -154,9 +148,35 @@ def test_summary_mode_never_plans_individual_reminders() -> None:
 def test_disabled_canvas_does_not_fetch_even_with_token(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setattr(cli, "load_dotenv", lambda **kwargs: None)
     monkeypatch.setenv("CANVAS_TOKEN", "fixture-token")
-    monkeypatch.setenv("CANVAS_ALERT_MODE", "off")
+    config = tmp_path / "canvas.yaml"
+    config.write_text("enabled: false\n")
+    monkeypatch.setattr(cli, "CANVAS_CONFIG_PATH", config)
     monkeypatch.setattr(cli, "read_canvas", lambda *args: pytest.fail("disabled Canvas fetched"))
     monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
     args = argparse.Namespace(rules=Path("config/rules.example.yaml"), dry_run=True,
                              all=True, from_fixtures=True, no_ai=True, no_canvas=False)
     assert cli.run(args) == 0
+
+
+@pytest.mark.parametrize("summary", [False, True])
+def test_cli_forwards_summary_kind_to_canvas_delivery(tmp_path: Path, monkeypatch, summary) -> None:
+    from skku_notice.canvas_alerts import CanvasAlert
+
+    monkeypatch.setenv("NOTIFY_URLS", "ntfys://fake-topic")
+    monkeypatch.setenv("CANVAS_TOKEN", "fixture-token")
+    monkeypatch.setattr(cli, "load_dotenv", lambda **kwargs: None)
+    monkeypatch.setattr(cli, "CANVAS_STATE_PATH", tmp_path / "canvas.json")
+    monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
+    monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
+    monkeypatch.setattr(cli, "read_canvas", lambda *args: [])
+    state = CanvasState(initialized=True)
+    alert = CanvasAlert("알림", "본문", "https://canvas.skku.edu",
+                        summary_day="2026-11-04" if summary else None)
+    monkeypatch.setattr(cli, "load_canvas_state", lambda *args: state)
+    monkeypatch.setattr(cli, "plan_alerts", lambda *args: ([alert], state))
+    sent = []
+    monkeypatch.setattr(cli, "send_canvas", lambda *args, **kwargs: sent.append(kwargs) or True)
+    args = argparse.Namespace(rules=Path("config/rules.example.yaml"), dry_run=False,
+                              all=False, from_fixtures=True, no_ai=True, no_canvas=False, export=None)
+    assert cli.run(args) == 0
+    assert sent == [{"summary": summary}]

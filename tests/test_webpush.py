@@ -59,6 +59,9 @@ def test_direct_browser_push_without_ntfy(monkeypatch, browser_config, notice):
 
 
 def test_canvas_push_remains_private_and_has_click_url(monkeypatch, browser_config):
+    monkeypatch.setenv("WEB_PUSH_SUB_1", json.dumps({
+        **browser_config, "preferences": {"canvas": "reminders"},
+    }))
     sent = []
     monkeypatch.setattr(webpush_notify, "webpush", lambda **kwargs: sent.append(json.loads(kwargs["data"])))
     assert notify.send_canvas("과제 마감", "비공개 강의", "https://canvas.skku.edu/courses/1", "high")
@@ -109,7 +112,7 @@ def test_failed_provider_response_is_not_logged(monkeypatch, browser_config, cap
 def test_no_notification_channel(monkeypatch, notice):
     assert not notify.has_notification_channel()
     assert not notify.send_notice(notice, "학과", "default", None, None)
-    assert not notify.send_canvas("제목", "본문", "https://canvas.skku.edu", "default")
+    assert notify.send_canvas("제목", "본문", "https://canvas.skku.edu", "default")
 
 
 @pytest.mark.parametrize("endpoint", [
@@ -212,3 +215,66 @@ def test_expired_device_is_skipped_but_other_failures_retry(monkeypatch, browser
 def test_private_key_without_devices_is_not_a_channel(monkeypatch, browser_config):
     monkeypatch.delenv("WEB_PUSH_SUBSCRIPTION")
     assert not notify.has_notification_channel()
+
+
+@pytest.mark.parametrize("mode,summary,expected", [
+    (None, False, 0), (None, True, 0), ("off", False, 0), ("off", True, 0),
+    ("summary", False, 0), ("summary", True, 1),
+    ("reminders", False, 1), ("reminders", True, 1), ("invalid", True, 0),
+])
+def test_canvas_delivery_obeys_each_device_preference(monkeypatch, browser_config, mode, summary, expected):
+    subscription = {**browser_config}
+    if mode is not None:
+        subscription["preferences"] = {"canvas": mode}
+    monkeypatch.setenv("WEB_PUSH_SUB_1", json.dumps(subscription))
+    sent = []
+    monkeypatch.setattr(webpush_notify, "webpush", lambda **kwargs: sent.append(kwargs))
+    assert notify.send_canvas("알림", "본문", "https://canvas.skku.edu", "default", summary=summary)
+    assert len(sent) == expected
+    if sent:
+        assert sent[0]["subscription_info"] == browser_config
+
+
+def test_slot_preference_wins_over_legacy_and_missing_duplicate(monkeypatch, browser_config):
+    monkeypatch.setenv("WEB_PUSH_SUBSCRIPTION", json.dumps({
+        **browser_config, "preferences": {"canvas": "reminders"},
+    }))
+    monkeypatch.setenv("WEB_PUSH_SUB_1", json.dumps({
+        **browser_config, "preferences": {"canvas": "off"},
+    }))
+    monkeypatch.setenv("WEB_PUSH_SUB_8", json.dumps(browser_config))
+    sent = []
+    monkeypatch.setattr(webpush_notify, "webpush", lambda **kwargs: sent.append(kwargs))
+    assert notify.send_canvas("알림", "본문", "https://canvas.skku.edu", "default")
+    assert sent == []
+
+
+def test_phone_canvas_and_pc_school_notifications_are_independent(monkeypatch, browser_config, notice):
+    monkeypatch.delenv("WEB_PUSH_SUBSCRIPTION")
+    phone, pc, digest = _device(b"ph"), _device(b"pc"), _device(b"dd")
+    for index, subscription, mode in ((1, phone, "reminders"), (2, pc, "off"), (3, digest, "summary")):
+        monkeypatch.setenv(f"WEB_PUSH_SUB_{index}", json.dumps({
+            **subscription, "preferences": {"canvas": mode},
+        }))
+    sent = []
+    monkeypatch.setattr(webpush_notify, "webpush", lambda **kwargs: sent.append(kwargs["subscription_info"]))
+    assert notify.send_canvas("마감", "본문", "https://canvas.skku.edu", "default")
+    assert sent == [phone]
+    sent.clear()
+    assert notify.send_canvas("요약", "본문", "https://canvas.skku.edu", "default", summary=True)
+    assert sent == [phone, digest]
+    sent.clear()
+    assert notify.send_notice(notice, "학교", "default", None, None)
+    assert sent == [phone, pc, digest]
+
+
+def test_selected_canvas_device_retries_temporary_failure(monkeypatch, browser_config):
+    monkeypatch.setenv("WEB_PUSH_SUB_1", json.dumps({
+        **browser_config, "preferences": {"canvas": "reminders"},
+    }))
+
+    def fail(**kwargs):
+        raise WebPushException("private temporary failure")
+
+    monkeypatch.setattr(webpush_notify, "webpush", fail)
+    assert not notify.send_canvas("마감", "본문", "https://canvas.skku.edu", "default")

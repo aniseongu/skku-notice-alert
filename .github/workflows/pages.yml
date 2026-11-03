@@ -21,6 +21,9 @@ permissions:
 
 jobs:
   publish:
+    concurrency:
+      group: pages-deploy
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     environment:
       name: github-pages

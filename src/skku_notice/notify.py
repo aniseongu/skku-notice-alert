@@ -58,7 +58,10 @@ def send_notice(
     )
 
 
-def _deliver(title: str, body: str, click_url: str, tag: str, priority: str, urls: list[str]) -> bool:
+def _deliver(
+    title: str, body: str, click_url: str, tag: str, priority: str, urls: list[str], *,
+    canvas_summary: bool | None = None,
+) -> bool:
     results = []
     if urls:
         try:
@@ -72,12 +75,12 @@ def _deliver(title: str, body: str, click_url: str, tag: str, priority: str, url
         push = web_push_config() is not None
     except ValueError:
         push = True  # 설정이 틀리면 보내기에서 실패로 돌려 다음 실행에 다시 시도한다.
-    if push:
-        results.append(send_web_push(title, body, click_url, tag, priority))
+    if push or canvas_summary is not None:
+        results.append(send_web_push(title, body, click_url, tag, priority, canvas_summary=canvas_summary))
     return bool(results) and all(results)
 
 
-def send_canvas(title: str, body: str, click_url: str, priority: str) -> bool:
+def send_canvas(title: str, body: str, click_url: str, priority: str, *, summary: bool = False) -> bool:
     """Send one private Canvas alert using the configured notification channels."""
     urls = [value.strip() for value in os.environ.get("NOTIFY_URLS", "").split(",") if value.strip()]
     prepared = []
@@ -93,4 +96,4 @@ def send_canvas(title: str, body: str, click_url: str, priority: str) -> bool:
             url = urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
         prepared.append(url)
     tag = "canvas:" + hashlib.sha256(f"{title}\n{body}\n{click_url}".encode()).hexdigest()[:24]
-    return _deliver(title, body, click_url, tag, priority, prepared)
+    return _deliver(title, body, click_url, tag, priority, prepared, canvas_summary=summary)

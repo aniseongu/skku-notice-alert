@@ -6,7 +6,7 @@ import {
 } from './github';
 import { forgetToken, loadToken, readSavedSecrets, rememberSavedSecrets, storeToken } from './settings-storage';
 import { GoogleError, connectGoogleCalendar, validClientId } from './google-calendar';
-import { browserPushEnabled, connectBrowserPush, disconnectBrowserPush, pushConfiguration, supportsBrowserPush, testBrowserNotification } from './browser-push';
+import { browserPushEnabled, canvasPushMode, defaultCanvasPushMode, connectBrowserPush, disconnectBrowserPush, pushConfiguration, setCanvasPushMode, supportsBrowserPush, testBrowserNotification } from './browser-push';
 
 export type Theme = 'auto' | 'light' | 'dark';
 type CanvasMode = 'off' | 'summary' | 'reminders';
@@ -36,7 +36,7 @@ const KEY_FIELDS: KeyField[] = [
     steps: [
       html`${link('https://aistudio.google.com/apikey', 'Google AI Studio의 API 키 화면')}을 열고 Google 계정으로 로그인해요`,
       '"API 키 만들기"를 누르고, 프로젝트를 고르라고 하면 새 프로젝트를 만들어요',
-      '만들어진 키를 복사해서 아래 칸에 붙여 넣고 "확인"을 눌러요',
+      '만들어진 키를 붙여 넣고 "키 확인하기"로 확인한 뒤 "저장하기"를 눌러요',
       '무료 등급은 보낸 내용이 Google 제품 개선에 쓰일 수 있어요. 프로필에 이름, 학번, 연락처는 넣지 마세요',
     ],
   },
@@ -82,7 +82,7 @@ export class SettingsView extends LitElement {
     repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
     keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true },
-    qr: { state: true }, handoff: { state: true }, canvasMode: { state: true },
+    qr: { state: true }, handoff: { state: true }, canvasMode: { state: true }, scanningQr: { state: true },
   };
 
   keywords: string[] = [];
@@ -96,6 +96,9 @@ export class SettingsView extends LitElement {
   linked = false;
   // 다른 기기 연결 QR(SVG). 1분 뒤 지운다.
   qr = '';
+  scanningQr = false;
+  private scanGeneration = 0;
+  private stopQrScanner: (() => void) | null = null;
   // QR 주소로 받은 연결. 사용자가 "연결하기"를 누르기 전에는 쓰지 않는다(남의 저장소로 몰래 연결되는 것을 막는다).
   handoff: { repo: string; token: string } | null = null;
   private qrTimer = 0;
@@ -110,24 +113,29 @@ export class SettingsView extends LitElement {
   busy = '';
   keywordDraft = '';
   browserNotifications = false;
-  canvasMode: CanvasMode = 'off';
+  canvasMode: CanvasMode | null = null;
 
   createRenderRoot() { return this; }
 
   connectedCallback() {
     super.connectedCallback();
     window.addEventListener('beforeunload', this.warnUnsaved);
-    browserPushEnabled().then((enabled) => { this.browserNotifications = enabled; }).catch(() => {});
+    browserPushEnabled().then((enabled) => { this.browserNotifications = enabled; this.canvasMode = enabled ? canvasPushMode() : null; }).catch(() => {});
     if (!this.takeHandoff()) loadToken().then((token) => {
       if (token && !this.token) { this.token = token; if (this.connected()) this.connect(); }
     });
     if (!this.repo) pushConfiguration().then((config) => {
       if (!this.repo) { this.setRepo(config.repository); remember('github-repo', config.repository); }
     }).catch(() => {});
+    this.updateComplete.then(() => {
+      if (location.hash === '#google-calendar') this.querySelector('#google-calendar')?.scrollIntoView();
+    });
   }
 
   disconnectedCallback() {
     window.removeEventListener('beforeunload', this.warnUnsaved);
+    this.stopScanning();
+    this.hideHandoff();
     super.disconnectedCallback();
   }
 
@@ -146,6 +154,8 @@ export class SettingsView extends LitElement {
     if (this.repo === repo) return;
     this.repo = repo;
     this.saved = readSavedSecrets(repo);
+    this.linked = false;
+    this.canvasMode = null;
     this.editing = {};
     this.status = {};
   }
@@ -167,10 +177,12 @@ export class SettingsView extends LitElement {
       if (this.browserNotifications) {
         await disconnectBrowserPush(this.repo, this.token);
         this.browserNotifications = false;
+        this.canvasMode = null;
         this.setStatus('browser-push', true, '이 기기 알림을 껐어요. 다른 기기는 그대로 받아요');
       } else {
         await connectBrowserPush(this.repo, this.token);
         this.browserNotifications = true;
+        this.canvasMode = canvasPushMode();
         this.setStatus('browser-push', true, '연결했어요. 앱을 닫아도 브라우저가 켜져 있으면 알림을 받아요');
       }
     } catch (error) {
@@ -191,6 +203,7 @@ export class SettingsView extends LitElement {
     remember('github-repo', this.repo);
     if (!this.connected()) { this.setStatus('github', false, '저장소는 아이디/저장소 이름으로, 토큰은 github_pat_로 시작하는 값을 넣어 주세요'); return; }
     this.busy = 'github';
+    this.canvasMode = null;
     const repo = this.repo;
     const token = this.token;
     try {
@@ -203,9 +216,14 @@ export class SettingsView extends LitElement {
         await this.pullKeywords(repo, token);
         const muted = await readVariable(repo, token, 'MUTED_CATEGORIES');
         this.muted = (muted ?? '').split(/[,\n]/).map((w) => w.trim()).filter(Boolean);
-        const mode = await readVariable(repo, token, 'CANVAS_ALERT_MODE');
+        const enabled = await browserPushEnabled();
         if (this.repo === repo && this.token === token) {
-          this.canvasMode = CANVAS_MODES.some((m) => m.value === mode) ? mode as CanvasMode : 'off';
+          this.browserNotifications = enabled;
+          if (enabled && canvasPushMode() === null) {
+            try { await setCanvasPushMode(repo, token, defaultCanvasPushMode()); }
+            catch { this.setStatus('canvas-mode', false, '아캠 알림 범위를 저장하지 못했어요. 알림 설정에서 다시 골라 주세요'); }
+          }
+          this.canvasMode = enabled ? canvasPushMode() : null;
         }
         this.setStatus('github', true, '연결했어요. 다음에 열 때도 연결돼 있어요');
       }
@@ -221,7 +239,7 @@ export class SettingsView extends LitElement {
     const params = new URLSearchParams(location.hash.slice(1));
     const token = params.get('token');
     if (!token) return false;
-    history.replaceState(history.state, '', location.pathname + location.search);
+    history.replaceState(history.state, '', `${location.pathname}?view=settings&section=connection`);
     const repo = params.get('repo') ?? '';
     if (!token.startsWith('github_pat_') || !REPO_PATTERN.test(repo)) {
       this.setStatus('github', false, 'QR이 올바르지 않아요. 연결된 기기에서 QR을 다시 띄워 주세요');
@@ -250,7 +268,7 @@ export class SettingsView extends LitElement {
     // QR 그리는 코드는 이때만 불러온다(첫 화면을 가볍게).
     const { renderSVG } = await import('uqr');
     const url = new URL(document.baseURI);
-    url.search = '?view=settings';
+    url.search = '?view=settings&section=connection';
     url.hash = new URLSearchParams({ repo: this.repo, token: this.token }).toString();
     this.qr = renderSVG(url.href, { border: 1 });
     clearTimeout(this.qrTimer);
@@ -258,6 +276,40 @@ export class SettingsView extends LitElement {
   }
 
   private hideHandoff() { clearTimeout(this.qrTimer); this.qr = ''; }
+
+  private stopScanning() {
+    this.scanGeneration++;
+    this.stopQrScanner?.();
+    this.stopQrScanner = null;
+    this.scanningQr = false;
+  }
+
+  private async scanNotebookQr() {
+    this.stopScanning();
+    const generation = this.scanGeneration;
+    this.scanningQr = true;
+    await this.updateComplete;
+    const { startQrScanner } = await import('./qr-pairing');
+    const video = this.querySelector<HTMLVideoElement>('.pairing-camera');
+    if (!this.scanningQr || generation !== this.scanGeneration || !video) return;
+    this.stopQrScanner = startQrScanner(video, (raw) => {
+      this.stopScanning();
+      try {
+        const url = new URL(raw);
+        const params = new URLSearchParams(url.hash.slice(1));
+        if (url.origin !== location.origin || url.pathname !== location.pathname
+          || !REPO_PATTERN.test(params.get('repo') ?? '') || !params.get('token')?.startsWith('github_pat_')) throw new Error();
+        history.replaceState(history.state, '', `${location.pathname}?view=settings&section=connection${url.hash}`);
+        this.takeHandoff();
+      } catch { this.setStatus('qr-scan', false, '성공의 연결 QR이 아니에요. 노트북에서 QR을 다시 띄워 주세요'); }
+    }, (reason) => {
+      this.stopScanning();
+      const text = reason === 'denied' ? '카메라를 허용하거나 휴대폰 카메라 앱으로 노트북 QR을 찍어 주세요'
+        : reason === 'timeout' ? 'QR을 찾지 못했어요. 노트북에서 새 QR을 띄우고 다시 찍어 주세요'
+          : '휴대폰 카메라 앱으로 노트북 QR을 찍어 주세요. 같은 브라우저에서 열면 연결을 기억해요';
+      this.setStatus('qr-scan', false, text);
+    });
+  }
 
   private async disconnect() {
     this.hideHandoff();
@@ -343,15 +395,15 @@ export class SettingsView extends LitElement {
   }
 
   private async setCanvasMode(mode: CanvasMode) {
-    if (!this.linked || this.busy) return;
+    if (!this.linked || !this.browserNotifications || this.busy) return;
     const repo = this.repo;
     const token = this.token;
     this.busy = 'canvas-mode';
     try {
-      await saveVariable(repo, token, 'CANVAS_ALERT_MODE', mode);
+      await setCanvasPushMode(repo, token, mode);
       if (this.repo === repo && this.token === token) {
         this.canvasMode = mode;
-        this.setStatus('canvas-mode', true, '저장했어요. 다음 수집부터 모든 기기에 적용해요');
+        this.setStatus('canvas-mode', true, '저장했어요. 다음 알림부터 이 기기에만 적용해요');
       }
     } catch (error) {
       this.setStatus('canvas-mode', false, error instanceof GitHubError ? error.message : '인터넷 연결을 확인하고 다시 골라 주세요');
@@ -439,7 +491,7 @@ export class SettingsView extends LitElement {
   render() {
     if (new URLSearchParams(location.search).get('keys') === '1') return html`
       <div class="settings ${this.linked ? '' : 'unlinked'}">
-        <a class="ghost-button" href="?view=settings">일반 설정으로</a>
+        <a class="ghost-button" href="?view=settings">설정으로</a>
         ${!this.linked ? html`<p class="field-note">일반 설정에서 GitHub에 먼저 연결하면 키를 저장할 수 있어요</p>` : nothing}
         <section aria-labelledby="s-keys">
           <h2 id="s-keys" class="settings-head">연결 키</h2>
@@ -464,192 +516,29 @@ export class SettingsView extends LitElement {
           <div class="box">${this.googleKeyRow()}</div>
         </section>
       </div>`;
-    return html`
+    const section = new URLSearchParams(location.search).get('section');
+    if (section === 'connection' || section === 'notifications' || section === 'keywords') return html`
       <div class="settings ${this.linked ? '' : 'unlinked'}">
-        <section aria-labelledby="s-github">
-          <h2 id="s-github" class="settings-head">연결</h2>
+        <a class="settings-back" href="?view=settings">설정으로</a>
+        ${section === 'connection' ? this.connectionSettings() : section === 'notifications' ? this.notificationSettings() : this.keywordSettings()}
+      </div>`;
+    return html`
+      <div class="settings settings-overview">
+        <section aria-labelledby="s-preferences">
+          <h2 id="s-preferences" class="settings-head">내 설정</h2>
           <div class="box">
-          <div class="setting">
-            <div class="setting-text">
-              <p class="setting-name">GitHub 저장소</p>
-              <p class="setting-help">15분마다 공지를 확인하는 내 저장소예요. 아래 키는 이 저장소로 암호화해 보내고 브라우저에는 남기지 않아요. 연결은 이 기기에 기억해요</p>
-            </div>
-            <div class="setting-control">
-              ${this.handoff ? html`
-                <p class="setting-saved">QR로 이 기기를 ${this.handoff.repo}에 연결할까요?</p>
-                <p class="field-note">내가 다른 기기에서 띄운 QR일 때만 연결해 주세요</p>
-                <div class="inline">
-                  <button type="button" class="solid-button" @click=${this.acceptHandoff}>연결하기</button>
-                  <button type="button" class="ghost-button" @click=${() => { this.handoff = null; }}>취소</button>
-                </div>` : nothing}
-              ${this.linked ? html`
-                <p class="setting-saved">${this.repo}에 연결돼 있어요</p>
-                <div class="inline">
-                  <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${this.connect}>
-                    ${this.busy === 'github' ? '확인 중' : '저장 상태 새로 보기'}</button>
-                  <button type="button" class="ghost-button" @click=${this.disconnect}>연결 끊기</button>
-                </div>
-                ${this.qr ? html`
-                  <div class="qr" role="img" aria-label="다른 기기 연결 QR">${unsafeHTML(this.qr)}</div>
-                  <p class="field-note">다른 휴대폰이나 PC의 카메라로 찍으면 그 기기가 바로 연결돼요. 연결 열쇠가 들어 있으니 다른 사람에게 보여 주지 마세요. 1분 뒤 사라져요</p>
-                  <button type="button" class="text-button" @click=${this.hideHandoff}>QR 닫기</button>
-                ` : html`<button type="button" class="text-button" @click=${this.showHandoff}>다른 기기 연결하기</button>`}
-              ` : html`
-              <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="저장소" placeholder="아이디/저장소 이름"
-                .value=${this.repo} @input=${(e: Event) => this.setRepo((e.target as HTMLInputElement).value.trim())}>
-              <div class="inline">
-                <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="GitHub 토큰" placeholder="github_pat_로 시작하는 토큰"
-                  .value=${this.token} @input=${(e: Event) => { this.token = (e.target as HTMLInputElement).value.trim(); }}>
-                <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${this.connect}>
-                  ${this.busy === 'github' ? '연결 중' : '연결하기'}</button>
-              </div>
-              `}
-              ${this.note('github')}
-              ${this.guide('github', [
-                html`${link('https://github.com/settings/personal-access-tokens/new', 'GitHub 새 토큰 화면')}을 열어요(Fine-grained token)`,
-                '"Repository access"에서 "Only select repositories"를 고르고 이 저장소 하나만 골라요',
-                '"Permissions"에서 Secrets와 Variables를 "Read and write"로 바꿔요. 다른 권한은 주지 않아요',
-                '만료일을 정하고 만든 토큰을 복사해 위 칸에 넣어요',
-                '저장소가 아직 없으면 아래 ".env 양식 복사하기"로 컴퓨터에서 먼저 써요',
-              ])}
-            </div>
-          </div>
-
+            ${this.settingsLink('알림', '이 기기 알림, 받을 분류와 아이캠퍼스', '?view=settings&section=notifications')}
+            ${this.settingsLink('관심 키워드', this.keywords.length ? `${this.keywords.length}개 키워드를 쓰고 있어요` : '관심 있는 공지를 골라 봐요', '?view=settings&section=keywords')}
+            ${this.settingsLink('캘린더', this.saved.GOOGLE_REFRESH_TOKEN ? '구글 캘린더에 연결돼 있어요' : '성대 공지와 저장한 인턴 마감을 모아요', '?view=settings&keys=1#google-calendar')}
           </div>
         </section>
-
-        <section aria-labelledby="s-notify">
-          <h2 id="s-notify" class="settings-head">알림 받을 곳</h2>
+        <section aria-labelledby="s-connections">
+          <h2 id="s-connections" class="settings-head">연결</h2>
           <div class="box">
-          <div class="setting">
-            <div class="setting-text">
-              <p class="setting-name">이 기기 알림</p>
-              <p class="setting-help">앱과 탭을 닫아도 브라우저가 켜져 있으면 휴대폰이나 PC 알림으로 받아요. 소리는 기기의 알림 설정을 따라요</p>
-            </div>
-            <div class="setting-control" data-needs-link>
-              <p class="field-note link-note">위 연결에서 GitHub에 연결하면 쓸 수 있어요</p>
-              ${this.browserNotifications ? html`<p class="setting-saved">알림을 받고 있어요</p>` : html`<p class="field-note">알림이 꺼져 있어요</p>`}
-              <div class="inline">
-                <button type="button" class="ghost-button" ?disabled=${this.busy === 'browser-push' || !supportsBrowserPush()}
-                  @click=${this.toggleBrowserNotifications}>${this.busy === 'browser-push' ? '연결 중' : this.browserNotifications ? '알림 끄기' : '알림 받기'}</button>
-                ${this.browserNotifications ? html`<button type="button" class="ghost-button" @click=${this.testBrowserNotifications}>테스트 알림 띄우기</button>` : nothing}
-              </div>
-              ${!supportsBrowserPush() ? html`<p class="field-note">최신 브라우저에서 알림을 연결해 주세요</p>` : nothing}
-              ${this.note('browser-push')}
-              <p class="field-note">한 번 연결하면 계속 받아요. 휴대폰과 PC에서 각각 켜면 모두 받아요</p>
-            </div>
-          </div>
-          <div class="setting">
-            <div class="setting-text">
-              <p class="setting-name">알림 받을 분류</p>
-              <p class="setting-help">켠 분류의 글만 알림으로 받아요. 끈 분류도 관심 키워드나 내 정보에 맞는 글은 알려요</p>
-            </div>
-            <div class="setting-control" data-needs-link>
-              <p class="field-note link-note">위 연결에서 GitHub에 연결하면 쓸 수 있어요</p>
-              ${this.categories.length ? html`<div class="chips" role="group" aria-label="알림 받을 분류">
-                ${this.categories.map((category) => html`<button type="button" class="chip" aria-pressed=${String(!this.muted.includes(category))}
-                  ?disabled=${!this.linked} @click=${() => this.toggleCategory(category)}>${category}</button>`)}
-              </div>` : html`<p class="field-note">공지를 불러오면 분류가 보여요</p>`}
-              ${this.linked ? this.note('muted') : html`<p class="field-note">GitHub에 연결하면 바꿀 수 있어요</p>`}
-            </div>
-          </div>
+            ${this.settingsLink('기기 연결', this.linked ? '휴대폰을 QR로 연결하고 저장 상태를 확인해요' : '노트북 QR로 연결하거나 처음 연결해요', '?view=settings&section=connection')}
+            ${this.settingsLink('연결 키', 'Gemini 키, 아이캠퍼스 토큰과 내 프로필', '?view=settings&keys=1')}
           </div>
         </section>
-
-        <section aria-labelledby="s-canvas">
-          <h2 id="s-canvas" class="settings-head">아이캠퍼스</h2>
-          <div class="box">
-            <div class="setting">
-              <div class="setting-text">
-                <p class="setting-name">아캠 알림</p>
-                <p class="setting-help">아캠플러스에서도 마감 알림을 받으면 하루 요약만 골라 주세요</p>
-              </div>
-              <div class="setting-control">
-                ${!this.linked ? html`<p class="field-note">GitHub에 연결하면 알림 범위를 바꿀 수 있어요</p>` : nothing}
-                <div class="segmented" role="radiogroup" aria-label="아캠 알림">
-                  ${CANVAS_MODES.map(({ value, label }) => html`
-                    <button type="button" role="radio" aria-checked=${String(this.canvasMode === value)}
-                      ?disabled=${!this.linked || this.busy !== ''}
-                      @click=${() => this.setCanvasMode(value)}>${label}</button>`)}
-                </div>
-                <p class="field-note">하루 요약은 오전 9시 이후 한 번, 요약과 마감은 하루 전과 3시간 전에도 알려요. 수집 시각에 따라 늦을 수 있어요</p>
-                <p class="field-note">노트북과 휴대폰에서 같은 설정을 써요. 연결 키 설정에서 아이캠퍼스 토큰을 넣고, 알림을 받을 기기에서는 이 기기 알림도 켜 주세요</p>
-                ${this.note('canvas-mode')}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section aria-labelledby="s-keys-link">
-          <h2 id="s-keys-link" class="settings-head">연결 키</h2>
-          <div class="box"><div class="setting">
-            <div class="setting-text"><p class="setting-name">키 관리</p><p class="setting-help">Gemini 키와 아이캠퍼스 토큰, 내 프로필을 따로 관리해요</p></div>
-            <div class="setting-control"><a class="ghost-button" href="?view=settings&amp;keys=1">연결 키 설정하기</a></div>
-          </div></div>
-        </section>
-
-        <section aria-labelledby="s-keywords">
-          <h2 id="s-keywords" class="settings-head">관심 키워드</h2>
-          <div class="box">
-          <div class="setting">
-            <div class="setting-text">
-              <p class="setting-name">키워드</p>
-              <p class="setting-help">제목이나 본문에 이 글자가 그대로 들어간 공지를 "관심"으로 표시해요</p>
-            </div>
-            <div class="setting-control">
-              <div class="inline">
-                <input class="input" type="text" autocomplete="off" aria-label="새 키워드" placeholder="예: 겨울방학 인턴" .value=${this.keywordDraft}
-                  @input=${(e: Event) => { this.keywordDraft = (e.target as HTMLInputElement).value; }}
-                  @keydown=${(e: KeyboardEvent) => { if (e.key === 'Enter' && !e.isComposing) this.addKeyword(); }}>
-                <button type="button" class="ghost-button" @click=${this.addKeyword}>추가하기</button>
-              </div>
-              ${this.keywords.length ? html`<ul class="keyword-list">${this.keywords.map((word) => html`
-                <li><span>${word}</span><button type="button" class="text-button" aria-label="${word} 삭제"
-                  @click=${() => this.emit('keywords-change', this.keywords.filter((w) => w !== word))}>삭제</button></li>`)}</ul>` : nothing}
-              ${this.linked ? this.note('keywords') : html`<p class="field-note">위에서 GitHub에 연결하면 모든 기기에서 같은 키워드를 써요</p>`}
-            </div>
-          </div>
-          </div>
-        </section>
-
-        <section aria-labelledby="s-feeds">
-          <h2 id="s-feeds" class="settings-head">캘린더와 피드</h2>
-          <div class="box">
-          <div class="setting">
-            <div class="setting-text"><p class="setting-name">구글 캘린더 자동 연결</p><p class="setting-help">성대 공지와 저장한 인턴 공고의 마감을 맞춰 넣어요</p></div>
-            <div class="setting-control">
-              ${this.saved.GOOGLE_REFRESH_TOKEN ? html`<p class="setting-saved">연결돼 있어요</p>` : html`<p class="field-note">연결 키 화면에서 구글 캘린더를 연결해 주세요</p>`}
-              <a class="ghost-button" href="?view=settings&amp;keys=1#google-calendar">캘린더 연결 설정하기</a>
-            </div>
-          </div>
-          <div class="setting">
-            <div class="setting-text">
-              <p class="setting-name">마감 캘린더</p>
-              <p class="setting-help">마감일이 있는 공지를 휴대폰과 PC 캘린더에 띄워요. 한 번 구독하면 새 마감도 저절로 들어와요</p>
-            </div>
-            <div class="setting-control">
-              <div class="inline">
-                <a class="ghost-button" target="_blank" rel="noopener"
-                  href=${`https://calendar.google.com/calendar/r?cid=${encodeURIComponent(this.feedUrl('deadlines.ics').replace(/^https:/, 'webcal:'))}`}>구글 캘린더에 추가하기</a>
-                <a class="ghost-button" href=${this.feedUrl('deadlines.ics').replace(/^https:/, 'webcal:')}>캘린더 앱으로 열기</a>
-              </div>
-              <button type="button" class="text-button" @click=${() => this.copyFeed('calendar', 'deadlines.ics')}>주소 복사하기</button>
-              ${this.note('calendar')}
-            </div>
-          </div>
-          <div class="setting">
-            <div class="setting-text">
-              <p class="setting-name">RSS 피드</p>
-              <p class="setting-help">피드 앱(Feedly, Inoreader 등)에서 새 공지를 받아 봐요</p>
-            </div>
-            <div class="setting-control">
-              <button type="button" class="ghost-button" @click=${() => this.copyFeed('feed', 'feed.xml')}>피드 주소 복사하기</button>
-              ${this.note('feed')}
-            </div>
-          </div>
-          </div>
-        </section>
-
         <section aria-labelledby="s-view">
           <h2 id="s-view" class="settings-head">화면</h2>
           <div class="box">
@@ -668,19 +557,190 @@ export class SettingsView extends LitElement {
       </div>`;
   }
 
+  private settingsLink(label: string, help: string, href: string) {
+    return html`<a class="settings-link" href=${href}><span><span class="setting-name">${label}</span><span class="setting-help">${help}</span></span><span class="settings-chevron" aria-hidden="true"></span></a>`;
+  }
+
+  private connectionSettings() { return html`
+        <section aria-labelledby="s-github">
+          <h2 id="s-github" class="settings-head">연결</h2>
+          <div class="box">
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">GitHub 저장소</p>
+              <p class="setting-help">한 번 연결하면 저장한 키를 모든 기기에서 함께 써요. 연결 정보는 이 기기에 기억해요</p>
+            </div>
+            <div class="setting-control">
+              ${this.handoff ? html`
+                <p class="field-note">QR로 이 기기를 ${this.handoff.repo}에 연결할까요?</p>
+                <p class="field-note">내가 다른 기기에서 띄운 QR일 때만 연결해 주세요</p>
+                <div class="inline">
+                  <button type="button" class="solid-button" @click=${this.acceptHandoff}>연결하기</button>
+                  <button type="button" class="ghost-button" @click=${() => { this.handoff = null; }}>취소</button>
+                </div>` : nothing}
+              ${this.linked ? html`
+                <div class="connection-summary"><span class="setting-state">연결됨</span><span class="field-note">${this.repo}</span></div>
+                <a class="ghost-button" href="?view=settings&section=notifications">이 기기 알림 설정하기</a>
+                <details class="connection-manual"><summary>연결 관리</summary>
+                <div class="inline">
+                  <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${this.connect}>
+                    ${this.busy === 'github' ? '확인 중' : '저장 상태 새로 보기'}</button>
+                  <button type="button" class="ghost-button" @click=${this.disconnect}>연결 끊기</button>
+                </div></details>
+                ${this.qr ? html`
+                  <div class="qr" role="img" aria-label="다른 기기 연결 QR">${unsafeHTML(this.qr)}</div>
+                  <p class="field-note">다른 기기에서 QR을 찍고 연결하기를 누르면 돼요. 연결 열쇠가 들어 있으니 다른 사람에게 보여 주지 마세요. 1분 뒤 사라져요</p>
+                  <button type="button" class="text-button" @click=${this.hideHandoff}>QR 닫기</button>
+                ` : html`<button type="button" class="text-button" @click=${this.showHandoff}>휴대폰 연결 QR 띄우기</button>`}
+              ` : html`
+              ${!this.handoff ? html`
+                <p class="field-note">노트북에서 이미 연결했다면 키를 다시 넣지 않아도 돼요. 노트북의 설정, 기기 연결에서 휴대폰 연결 QR을 띄워 주세요</p>
+                ${this.scanningQr ? html`
+                  <video class="pairing-camera" autoplay playsinline muted aria-label="노트북 QR 카메라"></video>
+                  <button type="button" class="ghost-button" @click=${this.stopScanning}>카메라 닫기</button>
+                ` : html`<button type="button" class="solid-button" @click=${this.scanNotebookQr}>노트북 QR로 연결하기</button>`}
+                ${this.note('qr-scan')}
+                <details class="connection-manual">
+                  <summary>처음 연결하기</summary>
+              <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="저장소" placeholder="아이디/저장소 이름"
+                .value=${this.repo} @input=${(e: Event) => this.setRepo((e.target as HTMLInputElement).value.trim())}>
+              <div class="inline">
+                <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="GitHub 토큰" placeholder="github_pat_로 시작하는 토큰"
+                  .value=${this.token} @input=${(e: Event) => { this.token = (e.target as HTMLInputElement).value.trim(); }}>
+                <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${this.connect}>
+                  ${this.busy === 'github' ? '연결 중' : '연결하기'}</button>
+              </div>
+              ${this.guide('github', [
+                html`${link('https://github.com/settings/personal-access-tokens/new', 'GitHub 새 토큰 화면')}을 열어요(Fine-grained token)`,
+                '"Repository access"에서 "Only select repositories"를 고르고 이 저장소 하나만 골라요',
+                '"Permissions"에서 Secrets와 Variables를 "Read and write"로 바꿔요. 다른 권한은 주지 않아요',
+                '만료일을 정하고 만든 토큰을 복사해 위 칸에 넣어요',
+                '저장소가 아직 없으면 연결 키 화면의 ".env 양식 복사하기"로 컴퓨터에서 먼저 써요',
+              ])}
+                </details>
+              ` : nothing}
+              `}
+              ${this.status.github && !this.status.github.ok ? this.note('github') : nothing}
+
+            </div>
+          </div>
+
+          </div>
+        </section>
+  `; }
+
+  private notificationSettings() { return html`
+        <section aria-labelledby="s-notify">
+          <h2 id="s-notify" class="settings-head">알림 받을 곳</h2>
+          <div class="box">
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">이 기기 알림</p>
+              <p class="setting-help">앱과 탭을 닫아도 브라우저가 켜져 있으면 휴대폰이나 PC 알림으로 받아요. 소리는 기기의 알림 설정을 따라요</p>
+            </div>
+            <div class="setting-control" data-needs-link>
+              <p class="field-note link-note">기기 연결에서 노트북 QR로 연결하면 쓸 수 있어요</p>
+              ${this.browserNotifications ? html`<span class="setting-state">켜짐</span>` : html`<span class="setting-state">꺼짐</span>`}
+              <div class="inline">
+                <button type="button" class="ghost-button" ?disabled=${this.busy === 'browser-push' || !supportsBrowserPush()}
+                  @click=${this.toggleBrowserNotifications}>${this.busy === 'browser-push' ? '연결 중' : this.browserNotifications ? '알림 끄기' : '알림 받기'}</button>
+                ${this.browserNotifications ? html`<button type="button" class="ghost-button" @click=${this.testBrowserNotifications}>테스트 알림 띄우기</button>` : nothing}
+              </div>
+              ${!supportsBrowserPush() ? html`<p class="field-note">최신 브라우저에서 알림을 연결해 주세요</p>` : nothing}
+              ${this.status['browser-push'] && !this.status['browser-push'].ok ? this.note('browser-push') : nothing}
+              <p class="field-note">알림 수신은 이 기기에만 적용해요</p>
+            </div>
+          </div>
+          <div class="setting">
+            <div class="setting-text"><p class="setting-name">받을 공지</p><p class="setting-help">목록에서는 모든 공고를 볼 수 있어요</p></div>
+            <div class="setting-control"><p class="field-note">성대 공지는 모두, 인턴 공고는 지원할 수 있는 소프트웨어 직무만 알려요</p></div>
+          </div>
+          </div>
+        </section>
+        <section aria-labelledby="s-canvas">
+          <h2 id="s-canvas" class="settings-head">아이캠퍼스</h2>
+          <div class="box">
+            <div class="setting">
+              <div class="setting-text">
+                <p class="setting-name">이 기기 아캠 알림</p>
+                <p class="setting-help">휴대폰은 성공에서 받고, 아캠플러스를 쓰는 노트북에서는 끌 수 있어요</p>
+              </div>
+              <div class="setting-control">
+                ${!this.linked ? html`<p class="field-note">기기 연결에서 노트북 QR로 연결하면 알림을 설정할 수 있어요</p>` : nothing}
+                <div class="segmented" role="radiogroup" aria-label="이 기기 아캠 알림">
+                  ${CANVAS_MODES.map(({ value, label }) => html`
+                    <button type="button" role="radio" aria-checked=${String(this.browserNotifications && this.canvasMode === value)}
+                      ?disabled=${!this.linked || !this.browserNotifications || this.busy !== ''}
+                      @click=${() => this.setCanvasMode(value)}>${label}</button>`)}
+                </div>
+                <p class="field-note">하루 요약은 오전 9시 이후 한 번, 요약과 마감은 하루 전과 3시간 전에도 알려요. 수집 시각에 따라 늦을 수 있어요</p>
+                <p class="field-note">기기마다 따로 적용해요. 먼저 위의 이 기기 알림을 켜 주세요. 아이캠퍼스 토큰은 연결 키에 한 번만 넣으면 돼요</p>
+                ${this.status['canvas-mode'] && !this.status['canvas-mode'].ok ? this.note('canvas-mode') : nothing}
+              </div>
+            </div>
+          </div>
+        </section>
+        <details class="connection-manual"><summary>RSS 피드로 받기</summary>
+        <section aria-labelledby="s-feeds">
+          <h2 id="s-feeds" class="settings-head">RSS 피드</h2>
+          <div class="box">
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">RSS 피드</p>
+              <p class="setting-help">피드 앱(Feedly, Inoreader 등)에서 새 공지를 받아 봐요</p>
+            </div>
+            <div class="setting-control">
+              <button type="button" class="ghost-button" @click=${() => this.copyFeed('feed', 'feed.xml')}>피드 주소 복사하기</button>
+              ${this.note('feed')}
+            </div>
+          </div>
+          </div>
+        </section>
+        </details>
+  `; }
+
+  private keywordSettings() { return html`
+        <section aria-labelledby="s-keywords">
+          <h2 id="s-keywords" class="settings-head">관심 키워드</h2>
+          <div class="box">
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">키워드</p>
+              <p class="setting-help">제목이나 본문에 이 글자가 그대로 들어간 공지를 "관심"으로 표시해요</p>
+            </div>
+            <div class="setting-control">
+              <div class="inline">
+                <input class="input" type="text" autocomplete="off" aria-label="새 키워드" placeholder="예: 겨울방학 인턴" .value=${this.keywordDraft}
+                  @input=${(e: Event) => { this.keywordDraft = (e.target as HTMLInputElement).value; }}
+                  @keydown=${(e: KeyboardEvent) => { if (e.key === 'Enter' && !e.isComposing) this.addKeyword(); }}>
+                <button type="button" class="ghost-button" @click=${this.addKeyword}>추가하기</button>
+              </div>
+              ${this.keywords.length ? html`<ul class="keyword-list">${this.keywords.map((word) => html`
+                <li><span>${word}</span><button type="button" class="text-button" aria-label="${word} 삭제"
+                  @click=${() => this.emit('keywords-change', this.keywords.filter((w) => w !== word))}>삭제</button></li>`)}</ul>` : nothing}
+              ${this.linked ? this.note('keywords') : html`<p class="field-note">기기를 연결하면 다른 기기와 같은 키워드를 써요</p>`}
+            </div>
+          </div>
+          </div>
+        </section>
+  `; }
+
   private googleKeyRow() {
     return html`
           <div class="setting">
             <div class="setting-text">
-              <p class="setting-name">구글 캘린더 자동 연결</p>
-              <p class="setting-help">성대 공지와 저장한 인턴 공고의 마감을 "성대 공지" 캘린더에 15분마다 맞춰 넣어요. 기기를 꺼 둬도 돼요. 마감 30분 전에 구글 알림이 울려요</p>
+              <p class="setting-name">Google 캘린더</p>
+              <p class="setting-help">성대 공지와 저장한 인턴 공고의 마감을 자동으로 모아요</p>
             </div>
             <div class="setting-control">
-              ${!this.linked ? html`<p class="field-note">일반 설정에서 GitHub에 연결하면 쓸 수 있어요</p>` : nothing}
+
               ${this.saved.GOOGLE_REFRESH_TOKEN ? html`
-                <p class="setting-saved">연결돼 있어요</p>
-                <button type="button" class="ghost-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.disconnectGoogle}>연결 끊기</button>
+                <span class="setting-state">연결됨</span>
+                <details class="connection-manual"><summary>연결 관리</summary>
+                <button type="button" class="ghost-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.disconnectGoogle}>연결 끊기</button></details>
               ` : html`
+                <span class="setting-state">${this.linked ? '미연결' : '확인 필요'}</span>
+                <details class="connection-manual"><summary>연결하기</summary>
                 <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="구글 클라이언트 ID" placeholder="클라이언트 ID (apps.googleusercontent.com으로 끝나요)"
                   .value=${this.values.GOOGLE_CLIENT_ID ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_ID: (e.target as HTMLInputElement).value }; }}>
                 <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="구글 클라이언트 보안 비밀번호" placeholder="클라이언트 보안 비밀번호"
@@ -688,8 +748,6 @@ export class SettingsView extends LitElement {
                 <button type="button" class="solid-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.connectGoogle}>
                   ${this.busy === 'google' ? '연결 중' : '구글 캘린더 연결하기'}</button>
                 ${this.linked ? nothing : html`<p class="field-note">GitHub에 연결하면 쓸 수 있어요</p>`}
-              `}
-              ${this.note('google')}
               ${this.guide('google', [
                 html`${link('https://console.cloud.google.com/apis/credentials', 'Google Cloud 사용자 인증 정보')}를 열어요. 아캠 플러스 때 만든 프로젝트를 그대로 써도 돼요`,
                 html`${link('https://console.cloud.google.com/apis/library/calendar-json.googleapis.com', 'Google Calendar API')}를 "사용"으로 켜요`,
@@ -701,6 +759,10 @@ export class SettingsView extends LitElement {
                 '클라이언트 ID와 보안 비밀번호를 위 칸에 붙여 넣고 연결하기를 눌러요',
                 '"외부"로 두었다면 "확인되지 않은 앱" 화면이 나와요. 내가 만든 앱이니 고급, 이동을 눌러요',
               ], '연결하는 방법')}
+                </details>
+              `}
+              ${this.status.google && !this.status.google.ok ? this.note('google') : nothing}
+
             </div>
           </div>
     `;
@@ -710,46 +772,47 @@ export class SettingsView extends LitElement {
     const name = field.secret;
     const shown = Boolean(this.reveal[name]);
     const value = this.values[name] ?? '';
-    const locked = Boolean(this.saved[name]) && !this.editing[name];
+    const editing = Boolean(this.editing[name]);
+    const state = this.saved[name] ? '저장됨' : this.linked ? '미설정' : '확인 필요';
     const onInput = (e: Event) => { this.values = { ...this.values, [name]: (e.target as HTMLInputElement).value }; };
     return html`
-      <div class="setting">
+      <div class="setting" data-key=${name}>
         <div class="setting-text">
           <p class="setting-name">${field.label}</p>
           <p class="setting-help">${field.help}</p>
-          ${this.saved[name] ? html`<p class="setting-saved">입력돼 있어요</p>` : nothing}
         </div>
         <div class="setting-control">
-          ${!this.linked ? html`<p class="field-note">일반 설정에서 GitHub에 연결하면 쓸 수 있어요</p>` : nothing}
-          ${locked ? html`
-            <p class="field-note">저장한 값은 숨겨 두었어요</p>
-            <button type="button" class="ghost-button" @click=${() => { this.editing = { ...this.editing, [name]: true }; }}>수정하기</button>
+          ${editing ? html`
+            ${field.multiline
+              ? html`<textarea class="input" rows="5" autocomplete="off" spellcheck="false" aria-label=${field.label}
+                  placeholder=${field.placeholder} .value=${value} @input=${onInput}></textarea>`
+              : html`<div class="inline">
+                  <input class="input" type=${shown ? 'text' : 'password'} autocomplete="off" spellcheck="false" aria-label=${field.label}
+                    placeholder=${field.placeholder} .value=${value} @input=${onInput}>
+                  <button type="button" class="ghost-button" aria-pressed=${String(shown)}
+                    @click=${() => { this.reveal = { ...this.reveal, [name]: !shown }; }}>${shown ? '숨기기' : '보기'}</button>
+                </div>`}
+            <div class="inline">
+              ${name === 'GEMINI_API_KEY' ? html`<button type="button" class="ghost-button" ?disabled=${this.busy === name} @click=${() => this.check(name)}>키 확인하기</button>` : nothing}
+              <button type="button" class="solid-button" ?disabled=${!this.connected() || this.busy === name} @click=${() => this.save(name, value)}>
+                ${this.busy === name ? '저장 중' : '저장하기'}</button>
+              <button type="button" class="ghost-button" ?disabled=${this.busy === name} @click=${() => this.closeEdit(name)}>닫기</button>
+            </div>
+            ${this.connected() && value.trim() ? html`<p class="field-note">아직 저장하지 않았어요</p>` : nothing}
+            ${this.note(name)}
+            ${this.guide(name, field.steps, field.multiline ? '쓰는 방법' : '받는 방법')}
           ` : html`
-          ${field.multiline
-            ? html`<textarea class="input" rows="5" autocomplete="off" spellcheck="false" aria-label=${field.label}
-                placeholder=${field.placeholder} .value=${value} @input=${onInput}></textarea>`
-            : html`<div class="inline">
-                <input class="input" type=${shown ? 'text' : 'password'} autocomplete="off" spellcheck="false" aria-label=${field.label}
-                  placeholder=${field.placeholder} .value=${value} @input=${onInput}>
-                <button type="button" class="ghost-button" aria-pressed=${String(shown)}
-                  @click=${() => { this.reveal = { ...this.reveal, [name]: !shown }; }}>${shown ? '숨기기' : '보기'}</button>
-              </div>`}
-          <div class="inline">
-            ${name === 'GEMINI_API_KEY' ? html`<button type="button" class="ghost-button" ?disabled=${this.busy === name} @click=${() => this.check(name)}>키 확인하기</button>` : nothing}
-            <button type="button" class="solid-button" ?disabled=${!this.connected() || this.busy === name} @click=${() => this.save(name, value)}>
-              ${this.busy === name ? '저장 중' : 'GitHub에 저장하기'}</button>
-            ${this.saved[name] ? html`<button type="button" class="ghost-button" ?disabled=${this.busy === name}
-              @click=${() => this.closeEdit(name)}>닫기</button>` : nothing}
-          </div>
-          ${this.connected()
-            ? value.trim() ? html`<p class="field-note">아직 저장하지 않았어요. GitHub에 저장하기를 눌러 주세요</p>` : nothing
-            : html`<p class="field-note">GitHub에 연결하면 저장할 수 있어요</p>`}
+            <div class="connection-summary">
+              <span class="setting-state">${state}</span>
+              <button type="button" class="text-button key-action" aria-label=${`${field.label} ${this.saved[name] ? '수정하기' : '입력하기'}`}
+                @click=${() => { this.editing = { ...this.editing, [name]: true }; }}>${this.saved[name] ? '수정하기' : '입력하기'}</button>
+            </div>
+            ${this.status[name] && !this.status[name].ok ? this.note(name) : nothing}
           `}
-          ${this.note(name)}
-          ${this.guide(name, field.steps, field.multiline ? '쓰는 방법' : '받는 방법')}
         </div>
       </div>`;
   }
+
 }
 
 customElements.define('settings-view', SettingsView);

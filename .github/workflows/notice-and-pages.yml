@@ -46,7 +46,6 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
@@ -106,7 +105,6 @@ jobs:
           NOTIFY_URLS: ${{ secrets.NOTIFY_URLS }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
-          CANVAS_ALERT_MODE: ${{ vars.CANVAS_ALERT_MODE }}
           PROFILE_YAML: ${{ secrets.PROFILE_YAML }}
           INTEREST_KEYWORDS: ${{ vars.INTEREST_KEYWORDS }}
           MUTED_CATEGORIES: ${{ vars.MUTED_CATEGORIES }}
@@ -180,14 +178,27 @@ jobs:
         with:
           path: site
 
-      - name: Deploy Pages
-        if: steps.run_notice.outcome == 'success'
-        id: deployment
-        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
-
       - name: Report notice failure
         if: steps.run_notice.outcome == 'failure'
         run: exit 1
+
+  # 배포만 직렬화한다. UI 변경이 몰려도 이미 대기 중인 수집 자체는 취소하지 않는다.
+  deploy:
+    needs: notice
+    concurrency:
+      group: pages-deploy
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
 
   # 이어 달리기: 14분 쉬고 다음 실행을 부른다(수집이 1분 남짓이라 간격은 15~16분). 워크플로를 끄면 부르기가 실패해 멈춘다.
   # GITHUB_TOKEN이 부른 workflow_dispatch는 새 실행을 만든다(GitHub 문서 "When GITHUB_TOKEN triggers workflow runs").

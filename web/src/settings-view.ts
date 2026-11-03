@@ -67,8 +67,6 @@ const remember = (key: string, value?: string | null) => {
   return null;
 };
 
-const savedDate = (iso: string) =>
-  new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', month: 'long', day: 'numeric' }).format(new Date(iso));
 
 export class SettingsView extends LitElement {
   static properties = {
@@ -360,7 +358,7 @@ export class SettingsView extends LitElement {
             </div>
             <div class="setting-control">
               ${this.saved.NOTIFY_URLS && !this.editing.NOTIFY_URLS ? html`
-                <p class="setting-saved">${savedDate(this.saved.NOTIFY_URLS)}에 저장했어요</p>
+                <p class="setting-saved">입력돼 있어요</p>
                 <p class="field-note">저장한 이름은 숨겨 두었어요</p>
                 <button type="button" class="ghost-button" @click=${() => { this.editing = { ...this.editing, NOTIFY_URLS: true }; }}>수정하기</button>
               ` : html`
@@ -473,7 +471,7 @@ export class SettingsView extends LitElement {
         <div class="setting-text">
           <p class="setting-name">${field.label}</p>
           <p class="setting-help">${field.help}</p>
-          ${this.saved[name] ? html`<p class="setting-saved">${savedDate(this.saved[name])}에 저장했어요</p>` : nothing}
+          ${this.saved[name] ? html`<p class="setting-saved">입력돼 있어요</p>` : nothing}
         </div>
         <div class="setting-control">
           ${locked ? html`

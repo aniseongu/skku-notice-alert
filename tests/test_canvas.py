@@ -26,6 +26,30 @@ def test_fixture_filters_completed_and_classifies() -> None:
     ]
 
 
+def test_canvas_pat_never_goes_to_learningx_session_api(monkeypatch) -> None:
+    requests = []
+
+    def respond(request):
+        requests.append(request)
+        if request.url.path.endswith("favorites/courses"):
+            return httpx.Response(200, json=[{"id": 101, "name": "테스트 과목"}])
+        if request.url.path.endswith("assignments"):
+            return httpx.Response(200, json=[{
+                "id": 1, "name": "미제출 과제", "due_at": "2026-11-03T12:00:00Z",
+                "submission_types": ["online_upload"], "submission": {},
+            }])
+        raise AssertionError("Canvas PAT was sent to a non-Canvas resource")
+
+    original = httpx.Client
+    monkeypatch.setattr(canvas.httpx, "Client", lambda **kwargs: original(
+        transport=httpx.MockTransport(respond), **kwargs,
+    ))
+    items = canvas.read_canvas("fixture-pat", NOW, gap=0)
+    assert [item.title for item in items] == ["미제출 과제"]
+    assert len(requests) == 2
+    assert all(request.url.path.startswith("/api/v1/") for request in requests)
+
+
 def test_baseline_missed_lead_and_ttl() -> None:
     items = canvas.read_canvas("", NOW, FIXTURES)
     alerts, baseline = plan_alerts(items, CanvasState(), NOW, [1440, 180], time(9))

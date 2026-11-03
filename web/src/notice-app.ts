@@ -15,12 +15,14 @@ import { SAVED_VARIABLE, type SavedNotice, loadSaved, parseSaved, storeSaved, to
 import { READ_VARIABLE, addRead, loadRead, mergeRead, parseRead, storeRead } from './read-notices';
 import type { Theme } from './settings-view';
 
-type Tab = 'mine' | 'deadline' | 'all' | 'saved';
+type Tab = 'mine' | 'deadline' | 'all' | 'intern' | 'saved';
 type View = Tab | 'settings';
 const TABS: { id: Tab; label: string; icon: IconName }[] = [
   { id: 'mine', label: '내 공지', icon: 'user-check' },
   { id: 'deadline', label: '마감 임박', icon: 'alarm' },
   { id: 'all', label: '전체', icon: 'list' },
+  // 전체는 성균관대 공지만, 인턴 공고는 링커리어와 자소설닷컴(사용자 결정 2026-11-03, D-026).
+  { id: 'intern', label: '인턴 공고', icon: 'briefcase' },
   { id: 'saved', label: '저장', icon: 'bookmark' },
 ];
 const STALE_MS = 2 * 3600_000;
@@ -49,17 +51,28 @@ function loadKeywords(): string[] {
   } catch { return []; }
 }
 
+// 설치한 앱의 상태바와 제목 표시줄 색(theme-color)도 실제 바탕색에 맞춘다.
+// 기본 meta는 기기 설정(prefers-color-scheme)만 따르므로, 화면 모드를 직접 고르면 어긋났다.
+function syncThemeColor() {
+  const color = getComputedStyle(document.body).backgroundColor;
+  for (const meta of document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]')) meta.content = color;
+}
+
 function applyTheme(theme: Theme) {
   if (theme === 'auto') delete document.documentElement.dataset.theme;
   else document.documentElement.dataset.theme = theme;
+  requestAnimationFrame(syncThemeColor);
 }
+
+// 자동 모드에서 기기 설정이 바뀌어도 맞춘다.
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => requestAnimationFrame(syncThemeColor));
 
 // 단축키 표시(Primer KeybindingHint 방식: 키 하나에 kbd 하나, 사방 1px 테두리). 화면 낭독기에는 aria-keyshortcuts로 알린다.
 const kbd = (...keys: string[]) => html`<span class="kbd-group" aria-hidden="true">${keys.map((k) => html`<kbd class="kbd">${k}</kbd>`)}</span>`;
 
 const SHORTCUTS: { group: string; items: [string, string[]][] }[] = [
   { group: '목록', items: [['다음 공지', ['J']], ['이전 공지', ['K']], ['원문 열기', ['Enter']], ['저장하기', ['S']], ['상세 칸 닫기', ['Esc']]] },
-  { group: '이동', items: [['내 공지', ['1']], ['마감 임박', ['2']], ['전체', ['3']], ['저장', ['4']], ['검색', ['/']]] },
+  { group: '이동', items: [['내 공지', ['1']], ['마감 임박', ['2']], ['전체', ['3']], ['인턴 공고', ['4']], ['저장', ['5']], ['검색', ['/']]] },
   { group: '그 밖', items: [['새로고침', ['R']], ['설정 닫기', ['Esc']], ['단축키 보기', ['?']]] },
 ];
 
@@ -74,7 +87,7 @@ export class NoticeApp extends LitElement {
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true },
-    saved: { state: true }, read: { state: true },
+    saved: { state: true }, read: { state: true }, collapsed: { state: true },
   };
 
   notices: Notice[] = [];
@@ -87,6 +100,7 @@ export class NoticeApp extends LitElement {
   keyword: string | null = null;
   keywords = loadKeywords();
   saved: SavedNotice[] = loadSaved();
+  collapsed: string[] = (() => { try { const v = JSON.parse(remember('side-collapsed') ?? '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; } })();
   // 읽은 글 id(최근 것만). null이면 이 기기에서 처음 연 것이라 지금 글을 모두 읽은 것으로 둔다.
   read: string[] | null = loadRead();
   private readTimer = 0;
@@ -258,24 +272,34 @@ export class NoticeApp extends LitElement {
   private filtered(notices = this.notices): Notice[] {
     const query = this.query.trim().toLowerCase();
     return notices.filter((n) => {
-      if (this.board !== 'all' && n.source_id !== this.board) return false;
+      const board = this.activeBoard();
+      if (board !== 'all' && n.source_id !== board) return false;
       if (this.keyword && !this.interests(n).includes(this.keyword)) return false;
       if (!query) return true;
       return `${n.title} ${n.title_ko ?? ''} ${n.category ?? ''} ${this.judgement(n)?.ai?.reason ?? ''}`.toLowerCase().includes(query);
     });
   }
 
+  // 지금 탭에 맞는 게시판들. 인턴 공고 탭은 외부 게시판, 그 밖은 학교 게시판.
+  private tabSources(): Source[] { return this.sources.filter((s) => Boolean(s.external) === (this.tab() === 'intern')); }
+
+  // 고른 게시판이 지금 탭에 없으면 모든 게시판으로 본다(탭을 오가도 빈 목록이 되지 않게).
+  private activeBoard(): string { return this.tabSources().some((s) => s.id === this.board) ? this.board : 'all'; }
+
   private isExternal(notice: Notice): boolean { return Boolean(this.sources.find((s) => s.id === notice.source_id)?.external); }
 
   private byTab(list: Notice[], tab: Tab): Notice[] {
     if (tab === 'mine') return list.filter((n) => this.mine(n));
-    // 외부 인턴 공고는 하루 수십 건이라 학교 공지를 덮지 않게, 그 게시판을 고르지 않으면 전체와 마감 임박에서 뺀다(D-026).
-    const school = this.board === 'all' ? list.filter((n) => !this.isExternal(n)) : list;
-    if (tab === 'deadline') {
-      return school.filter((n) => n.deadline && !deadlinePassed(n.deadline))
-        .sort((a, b) => Date.parse(a.deadline!) - Date.parse(b.deadline!));
+    if (tab === 'saved') return list;
+    const external = tab === 'intern';
+    const scoped = list.filter((n) => this.isExternal(n) === external);
+    if (tab === 'deadline' || tab === 'intern') {
+      // 마감이 남은 글을 가까운 순으로. 인턴 공고는 마감 없는 공고도 맨 뒤에 둔다.
+      const open = scoped.filter((n) => !n.deadline || !deadlinePassed(n.deadline));
+      const dated = open.filter((n) => n.deadline).sort((a, b) => Date.parse(a.deadline!) - Date.parse(b.deadline!));
+      return external ? [...dated, ...open.filter((n) => !n.deadline)] : dated;
     }
-    return school;
+    return scoped;
   }
 
   private tab(): Tab { return this.view === 'settings' ? 'mine' : this.view; }
@@ -388,7 +412,7 @@ export class NoticeApp extends LitElement {
       j: () => move(1), ArrowDown: () => move(1), k: () => move(-1), ArrowUp: () => move(-1),
       Enter: () => { const notice = list[index]; if (notice) { this.markRead(notice); window.open(safeUrl(notice.url), '_blank', 'noopener'); } },
       r: () => this.refresh(), 1: () => this.setView('mine'), 2: () => this.setView('deadline'), 3: () => this.setView('all'),
-      4: () => this.setView('saved'),
+      4: () => this.setView('intern'), 5: () => this.setView('saved'),
       s: () => { const notice = list[index]; if (notice) this.toggleSave(notice); },
     };
     const action = actions[event.key];
@@ -449,22 +473,14 @@ export class NoticeApp extends LitElement {
             ${tabs.map((t) => this.sideItem(t.label, counts[t.id], this.view === t.id && !this.keyword, () => { this.keyword = null; this.setView(t.id); },
               String(TABS.findIndex((x) => x.id === t.id) + 1)))}
           </nav>
-          <p class="side-head">관심 키워드</p>
-          <div class="side-group">
+          ${this.sideGroup('keywords', '관심 키워드', html`
             ${this.keywords.map((word) => this.sideItem(word, this.notices.filter((n) => this.interests(n).includes(word)).length,
               this.keyword === word && !settings, () => this.setKeyword(this.keyword === word ? null : word)))}
-            <button type="button" class="side-item add" @click=${() => this.setView('settings')}>${this.keywords.length ? '키워드 관리하기' : '키워드 추가하기'}</button>
-          </div>
-          <p class="side-head">게시판</p>
-          <div class="side-group">
-            ${[{ id: 'all', label: '모든 게시판' }, ...this.sources.filter((s) => !s.external).map((s) => ({ id: s.id, label: boardName(s, s.id) }))]
-              .map((b) => this.sideItem(b.label, null, this.board === b.id && !settings, () => { this.setBoard(b.id); if (settings) this.leaveSettings(); }))}
-          </div>
-          ${this.sources.some((s) => s.external) ? html`<p class="side-head">인턴 공고</p>
-          <div class="side-group">
-            ${this.sources.filter((s) => s.external).map((s) => this.sideItem(boardName(s, s.id), null, this.board === s.id && !settings,
-              () => { this.setBoard(s.id); if (settings) this.leaveSettings(); }))}
-          </div>` : nothing}
+            <button type="button" class="side-item add" @click=${() => this.setView('settings')}>${this.keywords.length ? '키워드 관리하기' : '키워드 추가하기'}</button>`)}
+          ${this.sideGroup('boards', this.tab() === 'intern' ? '인턴 공고 사이트' : '게시판', html`
+            ${[{ id: 'all', label: this.tab() === 'intern' ? '모든 사이트' : '모든 게시판' },
+              ...this.tabSources().map((s) => ({ id: s.id, label: boardName(s, s.id) }))]
+              .map((b) => this.sideItem(b.label, null, this.activeBoard() === b.id && !settings, () => { this.setBoard(b.id); if (settings) this.leaveSettings(); }))}`)}
           <div class="side-foot">
             ${this.install ? html`<button type="button" class="side-item" @click=${this.runInstall}>앱으로 설치하기</button>` : nothing}
             <button type="button" class="side-item kbd-only" aria-keyshortcuts="?" @click=${() => { this.shortcutsOpen = true; }}>
@@ -608,6 +624,17 @@ export class NoticeApp extends LitElement {
     </dialog>`;
   }
 
+  // 사이드바 묶음은 머리를 눌러 접고 편다. 접은 묶음은 기억한다(사용자 요청 2026-11-03).
+  private sideGroup(id: string, title: string, items: TemplateResult) {
+    const open = !this.collapsed.includes(id);
+    return html`<button type="button" class="side-head" aria-expanded=${String(open)} aria-controls="side-${id}"
+        @click=${() => {
+          this.collapsed = open ? [...this.collapsed, id] : this.collapsed.filter((x) => x !== id);
+          remember('side-collapsed', JSON.stringify(this.collapsed));
+        }}><span>${title}</span><span class="side-chevron" aria-hidden="true"></span></button>
+      <div class="side-group" id="side-${id}" ?hidden=${!open}>${items}</div>`;
+  }
+
   private sideItem(label: string, count: number | null, active: boolean, onClick: () => void, shortcut?: string) {
     return html`<button type="button" class="side-item" aria-current=${active ? 'page' : 'false'} @click=${onClick}
       aria-keyshortcuts=${shortcut ?? nothing} title=${shortcut ? `${label} (${shortcut})` : nothing}>
@@ -642,6 +669,7 @@ export class NoticeApp extends LitElement {
         mine: ['지금 챙길 공지가 없어요', '기준이나 관심 키워드에 맞는 새 글이 오면 여기 쌓여요'],
         deadline: ['다가오는 마감이 없어요', '제목에 마감일이 적힌 공지만 여기에 나와요'],
         all: ['이 게시판에 공지가 없어요', '다른 게시판을 골라 보세요'],
+        intern: ['열린 인턴 공고가 없어요', '링커리어와 자소설닷컴에 새 공고가 오면 여기에 모여요'],
         saved: ['저장한 공지가 없어요', '공지를 열어 저장하면 여기에 모여요'],
       }[this.tab()];
       return html`${boardPicker}${this.empty(empty[0], empty[1])}`;
@@ -649,7 +677,8 @@ export class NoticeApp extends LitElement {
     const today = todayKst();
     const groups = new Map<string, Notice[]>();
     for (const notice of list) {
-      const key = this.view === 'deadline' ? deadlineGroup(notice.deadline!, today) : postedGroup(notice.posted_on, today);
+      const key = (this.view === 'deadline' || this.view === 'intern') && notice.deadline
+        ? deadlineGroup(notice.deadline, today) : postedGroup(notice.posted_on, today);
       groups.set(key, [...(groups.get(key) ?? []), notice]);
     }
     return [...groups].map(([title, items], index) => html`
@@ -661,8 +690,8 @@ export class NoticeApp extends LitElement {
 
   private boardSelect() {
     const boards = [{ id: 'all', label: '모든 게시판' },
-      ...this.sources.map((s) => ({ id: s.id, label: boardName(s, s.id) }))];
-    const current = boards.find((b) => b.id === this.board)?.label ?? boards[0].label;
+      ...this.tabSources().map((s) => ({ id: s.id, label: boardName(s, s.id) }))];
+    const current = boards.find((b) => b.id === this.activeBoard())?.label ?? boards[0].label;
     return html`<div class="board-picker narrow-only">
       <button type="button" class="board-trigger" aria-label="게시판: ${current}" aria-expanded=${String(this.boardMenuOpen)}
         aria-controls="board-options" @click=${() => {
@@ -680,9 +709,9 @@ export class NoticeApp extends LitElement {
               : event.key === 'Home' ? 0 : event.key === 'End' ? options.length - 1 : -1;
           if (next >= 0) { event.preventDefault(); options[next]?.focus(); }
         }}>
-        ${boards.map((b) => html`<button type="button" class="board-option" aria-pressed=${String(this.board === b.id)}
+        ${boards.map((b) => html`<button type="button" class="board-option" aria-pressed=${String(this.activeBoard() === b.id)}
           @click=${() => { this.setBoard(b.id); this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.board-trigger')?.focus()); }}>
-          <span>${b.label}</span>${this.board === b.id ? html`<span class="board-check" aria-hidden="true"></span>` : nothing}</button>`)}
+          <span>${b.label}</span>${this.activeBoard() === b.id ? html`<span class="board-check" aria-hidden="true"></span>` : nothing}</button>`)}
       </div>` : nothing}
     </div>`;
   }

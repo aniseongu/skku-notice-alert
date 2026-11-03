@@ -144,3 +144,40 @@ def test_external_detail_backfills_once_and_exports(tmp_path, monkeypatch):
     import json
     detail = json.loads((tmp_path / "site/api/v1/notices/jasoseol-intern/107002.json").read_text())
     assert detail["images"] and "<img" in detail["body_html"]
+
+
+def test_linkareer_detail_reuses_public_graphql_query(tmp_path, monkeypatch):
+    from types import SimpleNamespace
+
+    from skku_notice import cli
+
+    notice = jobs.linkareer(lambda *a: {"data": {"activities": {"nodes": [{
+        "id": "361618", "title": "인턴", "recruitCloseAt": 1801493999999,
+    }]}}}, NOW, "linkareer-intern")[0][0]
+    calls = []
+    data = {"data": {"activity": {"id": "361618", "detailText": {"text": "<p>지원 방법 본문</p>"}}}}
+    monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
+    monkeypatch.setattr(cli.time, "sleep", lambda _: None)
+    monkeypatch.setattr(cli, "fetch_json_post", lambda *args: calls.append(args) or data)
+    monkeypatch.setattr(cli, "fetch_detail", lambda *args: pytest.fail("링커리어는 본문 API를 쓴다"))
+    source = {"id": "linkareer-intern", "kind": "linkareer", "external": True}
+    state = SimpleNamespace(sources={source["id"]: SimpleNamespace(seen={})})
+    archive = cli._fill_details(Archive(), state, [(source, [notice])],
+                                {"user_agent": "test", "timeout_seconds": 10}, False, NOW)
+    assert calls[0][0] == jobs.LK_API
+    assert calls[0][1] == {"query": jobs.LK_DETAIL, "variables": {"id": "361618"}}
+    assert "지원 방법" in archive.items["linkareer-intern/361618"]["body_text"]
+    with pytest.raises(jobs.ParseError):
+        jobs.parse_linkareer_detail(data, "999", "https://linkareer.com/activity/999")
+
+
+def test_external_api_malformed_json_is_a_recoverable_fetch_error(monkeypatch):
+    import httpx
+
+    real_client = httpx.Client
+    monkeypatch.setattr(fetch, "_resolve_addresses", lambda _: {"8.8.8.8"})
+    monkeypatch.setattr(fetch.httpx, "Client", lambda **kwargs: real_client(
+        transport=httpx.MockTransport(lambda request: httpx.Response(200, text="BROKEN_RESPONSE"))))
+    with pytest.raises(fetch.FetchError) as caught:
+        fetch.fetch_json_post(jobs.LK_API, {}, "ua", 1)
+    assert "BROKEN_RESPONSE" not in str(caught.value)

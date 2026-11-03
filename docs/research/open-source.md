@@ -1,5 +1,10 @@
 # 비슷한 프로젝트와 쓸 오픈소스 (2026-11-02 조사)
 
+## 인턴 본문 재사용 (2026-11-03, Codex)
+
+- `hg111911190-sketch/skku-notice`의 [jobs.py](https://github.com/hg111911190-sketch/skku-notice/blob/main/jobs.py)의 `LK_DETAIL`, `linkareer_detail`, `jasoseol_detail`을 확인했다. 링커리어 공개 GraphQL 쿼리와 자소설닷컴의 Next.js 데이터 추출 방식을 재사용하고, 기존 안전한 HTML 정제와 공고 번호 검증을 덧붙였다.
+- 두 사이트 공개 상세와 링커리어 본문 API를 실제 확인했다. 참고 코드의 대량 페이지 수집과 외부 이미지 OCR 대신 게시판별 5건과 기존 요청 간격을 쓴다.
+
 ## 화면 참고 (2026-11-02, Codex)
 
 - [GitHub Primer ActionMenu](https://github.com/primer/react/tree/main/packages/react/src/ActionMenu)와 [ActionList](https://github.com/primer/react/tree/main/packages/react/src/ActionList): 단일 선택 메뉴의 현재 항목 표시, 선택 후 메뉴 닫기와 단추로 포커스 반환을 참고했다. React 코드는 가져오지 않고 Lit 화면에 맞춰 구현했다. 색, 글꼴, 반경은 이 프로젝트의 `docs/DESIGN.md` 토큰을 쓴다.

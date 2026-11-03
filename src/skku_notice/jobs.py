@@ -20,6 +20,8 @@ LK_LIST = (
     "{nodes{id title organizationName recruitStartAt recruitCloseAt"
     " categories{name} distinctInternTypes{name}}}}"
 )
+# 출처: https://github.com/hg111911190-sketch/skku-notice/blob/main/jobs.py (linkareer_detail)
+LK_DETAIL = "query($id:ID!){activity(id:$id){id detailText{text}}}"
 JSS_CAL = "https://jasoseol.com/employment/calendar_list.json"
 
 Post = Callable[[str, dict, dict], dict]
@@ -112,4 +114,18 @@ def parse_job_detail(html: str, kind: str, article_no: str, url: str) -> Detail:
             raise ValueError("invalid detail")
     except (KeyError, TypeError, ValueError) as exc:
         raise ParseError("external detail data missing or invalid") from exc
+    return parse_external_fragment(markup, url)
+
+
+def parse_linkareer_detail(data: dict, article_no: str, url: str) -> Detail:
+    """Read the public GraphQL detail response used by the source project's scraper."""
+    try:
+        posting = data["data"]["activity"]
+        if data.get("errors") or str(posting["id"]) != article_no:
+            raise ValueError("detail id mismatch")
+        markup = posting["detailText"]["text"]
+        if not isinstance(markup, str):
+            raise ValueError("invalid detail")
+    except (KeyError, TypeError, ValueError) as exc:
+        raise ParseError("linkareer detail data missing or invalid") from exc
     return parse_external_fragment(markup, url)

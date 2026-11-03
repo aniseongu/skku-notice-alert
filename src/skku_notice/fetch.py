@@ -164,7 +164,10 @@ def fetch_json_post(url: str, body: dict, user_agent: str, timeout_seconds: floa
                 error: Exception = exc
             else:
                 if response.status_code == 200:
-                    return response.json()
+                    try:
+                        return response.json()
+                    except ValueError as exc:
+                        raise FetchError(f"{host}: invalid JSON") from exc
                 if response.status_code not in RETRY_STATUS:
                     raise FetchError(f"{host}: HTTP {response.status_code}")
                 error = FetchError(f"{host}: HTTP {response.status_code}")

@@ -89,3 +89,10 @@ def test_notification_interest_is_first_line(monkeypatch) -> None:
     monkeypatch.setattr("skku_notice.notify.apprise.Apprise", Sender)
     assert send_notice(notice("겨울방학 인턴"), "게시판", "high", None, "관련 공지",
                        ("겨울방학 인턴",))
+
+
+def test_muted_categories_from_settings_variable():
+    from skku_notice.interests import muted_from_env
+
+    assert muted_from_env("행사/세미나\n 학사 ,\n") == frozenset({"행사/세미나", "학사"})
+    assert muted_from_env("") == frozenset()

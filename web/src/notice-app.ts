@@ -4,7 +4,7 @@ import { LitElement, html, nothing, type TemplateResult } from 'lit';
 import {
   type IconName, type Judgement, type MatchedFile, type Notice, type NoticeBody, type NoticesFile, type Source,
   VERDICT_LABEL, boardName, cleanTitle, deadlineDetail, deadlineGroup, deadlinePassed, deadlineText,
-  daysLeft, fetchBody, fetchJson, isMine, keywordMatches, koreanDate, postedGroup, safeUrl, todayKst,
+  daysLeft, fetchBody, fetchJson, keywordMatches, koreanDate, postedGroup, safeUrl, todayKst,
 } from './data';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { cleanHtml, fileType } from './rich';
@@ -15,10 +15,9 @@ import { SAVED_VARIABLE, type SavedNotice, loadSaved, parseSaved, storeSaved, to
 import { READ_VARIABLE, addRead, loadRead, mergeRead, parseRead, storeRead } from './read-notices';
 import type { Theme } from './settings-view';
 
-type Tab = 'mine' | 'all' | 'intern' | 'saved';
+type Tab = 'all' | 'intern' | 'saved';
 type View = Tab | 'settings';
 const TABS: { id: Tab; label: string; icon: IconName }[] = [
-  { id: 'mine', label: '내 공지', icon: 'user-check' },
   { id: 'all', label: '성대 공지', icon: 'list' },
   // 전체는 성균관대 공지만, 인턴 공고는 링커리어와 자소설닷컴(사용자 결정 2026-11-03, D-026).
   { id: 'intern', label: '인턴 공고', icon: 'briefcase' },
@@ -29,6 +28,7 @@ const STALE_MS = 2 * 3600_000;
 const REFRESH_MS = 5 * 60_000;
 const SOON_DAYS = 3;
 const isTab = (value: string | null): value is Tab => TABS.some((t) => t.id === value);
+const normalizeTab = (value: string | null) => value === 'mine' || value === 'deadline' ? 'all' : value;
 const INTERACTIVE = 'a, button, input, textarea, select, [contenteditable]';
 const wide = matchMedia('(min-width: 1080px)');
 const browserTab = matchMedia('(display-mode: browser)');
@@ -79,7 +79,7 @@ const kbd = (...keys: string[]) => html`<span class="kbd-group" aria-hidden="tru
 
 const SHORTCUTS: { group: string; items: [string, string[]][] }[] = [
   { group: '목록', items: [['다음 공지', ['J']], ['이전 공지', ['K']], ['원문 열기', ['Enter']], ['저장하기', ['S']], ['상세 칸 닫기', ['Esc']]] },
-  { group: '이동', items: [['내 공지', ['1']], ['성대 공지', ['2']], ['인턴 공고', ['3']], ['저장', ['4']], ['검색', ['/']]] },
+  { group: '이동', items: [['성대 공지', ['1']], ['인턴 공고', ['2']], ['저장', ['3']], ['검색', ['/']]] },
   { group: '그 밖', items: [['새로고침', ['R']], ['설정 닫기', ['Esc']], ['단축키 보기', ['?']]] },
 ];
 
@@ -95,6 +95,7 @@ export class NoticeApp extends LitElement {
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true }, sortMenuOpen: { state: true },
     saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true },
+    unreadOnly: { state: true }, hidePinned: { state: true },
   };
 
   notices: Notice[] = [];
@@ -102,9 +103,10 @@ export class NoticeApp extends LitElement {
   matched: MatchedFile | null = null;
   generatedAt: string | null = null;
   view: View = new URLSearchParams(location.search).get('view') === 'settings'
-    ? 'settings' : new URLSearchParams(location.search).get('tab') === 'deadline' ? 'all'
-      : [new URLSearchParams(location.search).get('tab'), remember('tab') === 'deadline' ? 'all' : remember('tab')].find(isTab) ?? 'mine';
+    ? 'settings' : [normalizeTab(new URLSearchParams(location.search).get('tab')), normalizeTab(remember('tab'))].find(isTab) ?? 'all';
   sort: 'latest' | 'deadline' = new URLSearchParams(location.search).get('tab') === 'deadline' || new URLSearchParams(location.search).get('sort') === 'deadline' || (new URLSearchParams(location.search).get('sort') !== 'latest' && remember('notice-sort') === 'deadline') ? 'deadline' : 'latest';
+  unreadOnly = remember('view-unread') === '1';
+  hidePinned = remember('view-hide-pinned') === '1';
   board = remember('board') ?? 'all';
   keyword: string | null = null;
   keywords = loadKeywords();
@@ -142,6 +144,8 @@ export class NoticeApp extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
+    // 새 문서는 목록에서 시작한다. 이전 문서의 상세 history 상태가 설정 닫기에서 되살아나지 않게 맞춘다.
+    if (history.state?.notice) history.replaceState(null, '');
     applyTheme(this.theme);
     this.refresh();
     this.syncFromGitHub();
@@ -181,7 +185,6 @@ export class NoticeApp extends LitElement {
       this.failed = false;
       // 처음 열면 이미 있던 글이 모두 굵게 보이지 않게, 그때 있던 글은 읽은 것으로 시작한다.
       if (this.read === null) { this.read = this.notices.map((n) => n.id); storeRead(this.read); }
-      if (!matched && this.view === 'mine' && !this.keywords.length) this.view = 'all';
       if (this.board !== 'all' && !this.sources.some((s) => s.id === this.board)) this.board = 'all';
     } catch (error) {
       console.error(error);
@@ -277,11 +280,6 @@ export class NoticeApp extends LitElement {
     return [...found];
   }
 
-  private mine(notice: Notice): boolean {
-    if (this.isExternal(notice)) return isMine(this.judgement(notice), true);
-    return isMine(this.judgement(notice)) || this.interests(notice).length > 0;
-  }
-
   private filtered(notices = this.notices): Notice[] {
     const query = this.query.trim().toLowerCase();
     return notices.filter((n) => {
@@ -302,10 +300,13 @@ export class NoticeApp extends LitElement {
   private isExternal(notice: Notice): boolean { return Boolean(this.sources.find((s) => s.id === notice.source_id)?.external); }
 
   private byTab(list: Notice[], tab: Tab): Notice[] {
-    if (tab === 'mine') return list.filter((n) => this.mine(n));
     if (tab === 'saved') return list;
     const external = tab === 'intern';
-    const scoped = list.filter((n) => this.isExternal(n) === external);
+    // 출처: https://freshrss.github.io/FreshRSS/en/users/10_filter.html (읽음 상태 필터)
+    // 읽고 있는 글은 상세를 닫거나 다른 글로 옮길 때까지 남긴다.
+    const scoped = list.filter((n) => this.isExternal(n) === external)
+      .filter((n) => !this.unreadOnly || !this.isRead(n) || n.id === this.selectedId || n.id === this.openedId)
+      .filter((n) => tab !== 'all' || !this.hidePinned || !n.pinned);
     if ((tab === 'all' && this.sort === 'deadline') || tab === 'intern') {
       // 마감이 남은 글을 가까운 순으로. 인턴 공고는 마감 없는 공고도 맨 뒤에 둔다.
       const open = scoped.filter((n) => !n.deadline || !deadlinePassed(n.deadline));
@@ -315,7 +316,7 @@ export class NoticeApp extends LitElement {
     return tab === 'all' ? [...scoped].sort((a, b) => b.posted_on.localeCompare(a.posted_on)) : scoped;
   }
 
-  private tab(): Tab { return this.view === 'settings' ? 'mine' : this.view; }
+  private tab(): Tab { return this.view === 'settings' ? 'all' : this.view; }
   private visible(): Notice[] {
     return this.tab() === 'saved' ? this.filtered(this.savedNotices()) : this.byTab(this.filtered(), this.tab());
   }
@@ -339,8 +340,8 @@ export class NoticeApp extends LitElement {
   private leaveSettings = () => {
     // 이 화면에서 설정을 열었으면 기록을 하나 되돌린다(주소에서 view=settings가 빠진다). 바로 설정 주소로 들어왔으면 바꿔 쓴다.
     if (history.state?.view === 'settings') { history.back(); return; }
-    const last = remember('tab');
-    this.setView(isTab(last) ? last : 'mine');
+    const last = normalizeTab(remember('tab'));
+    this.setView(isTab(last) ? last : 'all');
   };
 
   private onPopState = () => {
@@ -349,7 +350,7 @@ export class NoticeApp extends LitElement {
     this.sortMenuOpen = false;
     const params = new URLSearchParams(location.search);
     const view: View = params.get('view') === 'settings' ? 'settings'
-      : params.get('tab') === 'deadline' ? 'all' : [params.get('tab'), remember('tab')].find(isTab) ?? 'mine';
+      : [normalizeTab(params.get('tab')), normalizeTab(remember('tab'))].find(isTab) ?? 'all';
     if (params.get('tab') === 'deadline' || params.get('sort') === 'deadline') this.sort = 'deadline';
     else if (params.get('sort') === 'latest') this.sort = 'latest';
     if (view !== this.view) { this.view = view; this.selectedId = null; }
@@ -440,8 +441,7 @@ export class NoticeApp extends LitElement {
       '/': () => this.querySelector<HTMLInputElement>('.search input')?.focus(),
       j: () => move(1), ArrowDown: () => move(1), k: () => move(-1), ArrowUp: () => move(-1),
       Enter: () => { const notice = list[index]; if (notice) { this.markRead(notice); window.open(safeUrl(notice.url), '_blank', 'noopener'); } },
-      r: () => this.refresh(), 1: () => this.setView('mine'), 2: () => this.setView('all'), 3: () => this.setView('intern'),
-      4: () => this.setView('saved'),
+      r: () => this.refresh(), 1: () => this.setView('all'), 2: () => this.setView('intern'), 3: () => this.setView('saved'),
       s: () => { const notice = list[index]; if (notice) this.toggleSave(notice); },
     };
     const action = actions[event.key];
@@ -460,7 +460,11 @@ export class NoticeApp extends LitElement {
     window.scrollTo({ top: 0 });
   }
 
-  private setDetail(open: boolean) { this.detailOpen = open; remember('detail', open ? '1' : '0'); }
+  private setDetail(open: boolean) {
+    this.detailOpen = open;
+    if (!open && this.unreadOnly) this.selectedId = null;
+    remember('detail', open ? '1' : '0');
+  }
 
   private body(notice: Notice): NoticeBody | null | 'loading' {
     const cached = this.bodies.get(notice.id);
@@ -487,7 +491,7 @@ export class NoticeApp extends LitElement {
 
   render() {
     const filtered = this.filtered();
-    const tabs = TABS.filter((t) => t.id !== 'mine' || this.matched || this.keywords.length);
+    const tabs = TABS;
     const counts = Object.fromEntries(tabs.map((t) => [t.id, t.id === 'saved'
       ? this.filtered(this.savedNotices()).length : this.byTab(filtered, t.id).length]));
     const list = this.visible();
@@ -562,6 +566,7 @@ export class NoticeApp extends LitElement {
                 <button type="button" class="chip-add" @click=${() => this.setView('settings')}>${icon('plus')}키워드 추가하기</button>
               </div>
             </div>
+            ${this.viewFilters()}
             <div class="list" aria-live="polite" aria-busy=${this.loading ? 'true' : 'false'}>${this.listBody(list)}</div>`}`}
         </main>
 
@@ -709,8 +714,9 @@ export class NoticeApp extends LitElement {
       const boardPicker = html`<div class="group-head empty-head"><span></span><div class="list-controls">${this.sortSelect()}${this.boardSelect()}</div></div>`;
       if (this.query) return html`${boardPicker}${this.empty(`'${this.query}'에 맞는 공지가 없어요`, '다른 단어로 찾아보세요', '검색어 지우기', () => { this.query = ''; })}`;
       if (this.keyword) return html`${boardPicker}${this.empty(`'${this.keyword}'에 맞는 공지가 아직 없어요`, '새 글이 오면 여기에 모여요')}`;
+      if (this.view !== 'saved' && this.unreadOnly) return html`${boardPicker}${this.empty('읽지 않은 공지가 없어요', '읽지 않은 공지만 보기를 끄면 모든 공지를 볼 수 있어요')}`;
+      if (this.view === 'all' && this.hidePinned) return html`${boardPicker}${this.empty('지금 표시할 공지가 없어요', '고정 공지 숨기기를 끄거나 다른 게시판을 골라 보세요')}`;
       const empty = {
-        mine: ['지금 챙길 공지가 없어요', '기준이나 관심 키워드에 맞는 새 글이 오면 여기 쌓여요'],
         all: this.sort === 'deadline' ? ['다가오는 마감이 없어요', '마감일이 남은 공지만 여기에 나와요'] : ['이 게시판에 공지가 없어요', '다른 게시판을 골라 보세요'],
         intern: ['열린 인턴 공고가 없어요', '링커리어와 자소설닷컴에 새 공고가 오면 여기에 모여요'],
         saved: ['저장한 공지가 없어요', '공지를 열어 저장하면 여기에 모여요'],
@@ -729,6 +735,22 @@ export class NoticeApp extends LitElement {
         <div class="group-head"><h2>${title}</h2>${index === 0 ? html`<div class="list-controls">${this.sortSelect()}${this.boardSelect()}</div>` : nothing}</div>
         <ol class="rows">${items.map((n) => this.row(n, today))}</ol>
       </section>`);
+  }
+
+  private viewFilters() {
+    if (this.view === 'saved') return nothing;
+    return html`<div class="view-options" role="group" aria-label="공지 보기 조건">
+      <button type="button" class="chip" aria-pressed=${String(this.unreadOnly)} @click=${() => {
+        this.unreadOnly = !this.unreadOnly;
+        this.selectedId = null;
+        remember('view-unread', this.unreadOnly ? '1' : '0');
+      }}>읽지 않은 공지만</button>
+      ${this.view === 'all' ? html`<button type="button" class="chip" aria-pressed=${String(this.hidePinned)} @click=${() => {
+        this.hidePinned = !this.hidePinned;
+        this.selectedId = null;
+        remember('view-hide-pinned', this.hidePinned ? '1' : '0');
+      }}>고정 공지 숨기기</button>` : nothing}
+    </div>`;
   }
 
   private sortSelect() {

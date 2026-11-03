@@ -7,7 +7,7 @@ async (page) => {
   const assert = (condition, message) => { if (!condition) throw new Error(message); };
   async function check(name, fn) {
     try { await fn(); results.push({ name, pass: true }); }
-    catch (error) { results.push({ name, pass: false, error: error.message.split('\n')[0] }); }
+    catch (error) { results.push({ name, pass: false, error: error.message.split('\n').slice(0, 12).join('\n') }); }
   }
   async function open(width, tab = 'all') {
     const context = await page.context().browser().newContext({
@@ -24,8 +24,8 @@ async (page) => {
   try {
     const d = await open(1280);
     const sideTab = label => d.locator('.sidebar nav').getByRole('button', { name: new RegExp(`^${label}`) });
-    await check('PC 탭 네 개 연속 이동', async () => {
-      for (const [label, id] of [['인턴 공고', 'intern'], ['저장', 'saved'], ['성대 공지', 'all'], ['내 공지', 'mine']]) {
+    await check('PC 탭 세 개 연속 이동', async () => {
+      for (const [label, id] of [['인턴 공고', 'intern'], ['저장', 'saved'], ['성대 공지', 'all']]) {
         await sideTab(label).click();
         assert(await d.locator('notice-app').evaluate(e => e.view) === id, id);
       }
@@ -40,6 +40,17 @@ async (page) => {
     await check('검색어 지우고 목록 복구', async () => {
       await d.getByRole('button', { name: '검색어 지우기', exact: true }).click();
       await d.locator('.row').first().waitFor();
+    });
+    await check('제목 검색으로 실제 공지 찾기', async () => {
+      const row = d.locator('.row').first();
+      const id = await row.getAttribute('data-id');
+      const title = await row.locator('.title').innerText();
+      const word = title.split(/\s+/).find(w => w.length >= 3);
+      await d.locator('.search input').filter({ visible: true }).fill(word);
+      await d.locator(`[data-id="${id}"]`).waitFor();
+      await d.locator(`[data-id="${id}"]`).click();
+      await d.locator('.detail-pane .detail-title').waitFor();
+      await d.locator('.search input').filter({ visible: true }).fill('');
     });
     await check('정렬 선택 뒤 새로고침 유지', async () => {
       await d.locator('.sort-trigger').click();
@@ -92,6 +103,19 @@ async (page) => {
 
     const m = await open(412, 'intern');
     const mobileTab = label => m.locator('.tabbar').getByRole('button', { name: label, exact: true });
+    await check('휴대폰 검색 뒤 공지와 목록 왕복', async () => {
+      const row = m.locator('.row').first();
+      const id = await row.getAttribute('data-id');
+      const title = await row.locator('.title').innerText();
+      const word = title.split(/\s+/).find(w => w.length >= 3);
+      const input = m.locator('.search input').filter({ visible: true });
+      await input.fill(word);
+      await m.locator(`[data-id="${id}"]`).click();
+      await m.locator('.reading').waitFor();
+      await m.getByRole('button', { name: '목록으로', exact: true }).click();
+      assert(await input.inputValue() === word, '검색어 유실');
+      await input.fill('');
+    });
     await check('휴대폰 공지 열고 목록으로', async () => {
       await m.locator('.row').first().click();
       await m.getByRole('button', { name: '목록으로', exact: true }).click();
@@ -171,6 +195,128 @@ async (page) => {
       const popupPromise = m.waitForEvent('popup'); await link.click();
       const popup = await popupPromise; await popup.waitForLoadState();
       assert(popup.url() === target, '원문 주소 불일치'); await popup.close();
+    });
+
+    await m.goto(`${origin}?tab=all`);
+    await check('관심 키워드 추가와 중복 입력, 필터 선택', async () => {
+      await m.getByRole('button', { name: '설정', exact: true }).filter({ visible: true }).click();
+      const input = m.getByRole('textbox', { name: '새 키워드', exact: true });
+      await input.fill('검증용관심조건xyz'); await input.press('Enter');
+      await input.fill('검증용관심조건xyz'); await input.press('Enter');
+      assert(await m.locator('.keyword-list li').count() === 1, '중복 키워드');
+      await m.getByRole('button', { name: '설정 닫기', exact: true }).filter({ visible: true }).click();
+      await m.locator('.tools .chips').getByRole('button', { name: '검증용관심조건xyz', exact: true }).click();
+      await m.locator('.empty strong').filter({ hasText: '검증용관심조건xyz' }).waitFor();
+    });
+    await check('선택된 관심 키워드 삭제 뒤 목록 복구', async () => {
+      await m.getByRole('button', { name: '설정', exact: true }).filter({ visible: true }).click();
+      await m.getByRole('button', { name: '검증용관심조건xyz 삭제', exact: true }).click();
+      await m.getByRole('button', { name: '설정 닫기', exact: true }).filter({ visible: true }).click();
+      await m.locator('.row').first().waitFor();
+      assert(await m.locator('.tools .chips').getByRole('button', { name: '검증용관심조건xyz', exact: true }).count() === 0,
+        '지운 키워드가 남음');
+    });
+    await check('목록 요청 실패 안내 뒤 재시도로 복구', async () => {
+      const context = await page.context().browser().newContext({
+        serviceWorkers: 'block', viewport: { width: 412, height: 891 },
+      });
+      contexts.push(context);
+      const p = await context.newPage();
+      p.setDefaultTimeout(6000);
+      let fail = true;
+      await p.route('**/api/v1/notices.json', route => fail
+        ? route.fulfill({ status: 500, body: 'test failure' }) : route.continue());
+      await p.goto(`${origin}?tab=all`);
+      await p.getByText('목록을 불러오지 못했어요', { exact: true }).waitFor();
+      fail = false;
+      await p.getByRole('button', { name: '다시 불러오기', exact: true }).click();
+      await p.locator('.row').first().waitFor();
+    });
+
+    const f = await open(412);
+    await check('내 공지 탭이 없고 세 탭만 표시', async () => {
+      assert(await f.locator('.tabbar button').count() === 3, '탭 개수');
+      assert(await f.getByRole('button', { name: /내 공지/ }).count() === 0, '내 공지가 남음');
+    });
+    await check('기존 내 공지 주소는 성대 공지로 열림', async () => {
+      await f.goto(`${origin}?tab=mine`);
+      await f.locator('.row').first().waitFor();
+      assert(await f.locator('notice-app').evaluate(e => e.view) === 'all', '기존 주소 호환');
+    });
+    await check('기존 마감 임박 주소는 성대 공지 마감순', async () => {
+      await f.goto(`${origin}?tab=deadline`);
+      await f.locator('.sort-trigger').waitFor();
+      assert((await f.locator('.sort-trigger').innerText()).trim() === '마감순', '기존 마감 주소');
+      await f.locator('.sort-trigger').click();
+      await f.getByRole('button', { name: '최신순', exact: true }).click();
+    });
+    await check('PWA 바로가기에서 내 공지 제거', async () => {
+      const manifest = await (await f.request.get(`${origin}manifest.webmanifest`)).json();
+      assert(!manifest.shortcuts.some(s => s.name === '내 공지'), '이전 바로가기');
+      assert(manifest.shortcuts.some(s => s.name === '성대 공지'), '학교 바로가기 없음');
+    });
+    await check('새 단축키 1, 2, 3으로 세 탭 이동', async () => {
+      for (const [key, expected] of [['2', 'intern'], ['3', 'saved'], ['1', 'all']]) {
+        await f.locator('h1').click(); await f.keyboard.press(key);
+        assert(await f.locator('notice-app').evaluate(e => e.view) === expected, '단축키 불일치');
+      }
+    });
+    await check('읽지 않은 공지만 보기와 새로고침 유지', async () => {
+      const toggle = f.getByRole('button', { name: '읽지 않은 공지만', exact: true });
+      await toggle.click();
+      await f.getByText('읽지 않은 공지가 없어요', { exact: true }).waitFor();
+      await f.reload(); await toggle.waitFor();
+      assert(await toggle.getAttribute('aria-pressed') === 'true', '읽음 보기 유실');
+      await toggle.click(); await f.locator('.row').first().waitFor();
+    });
+    await check('고정 공지 숨기기와 새로고침 유지', async () => {
+      const toggle = f.getByRole('button', { name: '고정 공지 숨기기', exact: true });
+      await toggle.click(); await f.reload(); await toggle.waitFor();
+      assert(await toggle.getAttribute('aria-pressed') === 'true', '고정 보기 유실');
+      const metadata = await f.locator('.row .cat').allTextContents();
+      assert(!metadata.some(text => text.split(', ').includes('고정')), '고정 글이 남음');
+      await toggle.click();
+    });
+    await check('인턴 탭에는 학교 고정 공지 조건 없음', async () => {
+      await f.locator('.tabbar').getByRole('button', { name: '인턴 공고', exact: true }).click();
+      assert(await f.getByRole('button', { name: '고정 공지 숨기기', exact: true }).count() === 0, '다른 탭에 조건 노출');
+    });
+    await check('읽지 않은 글을 열고 돌아오면 목록에서 빠짐', async () => {
+      const context = await page.context().browser().newContext({
+        serviceWorkers: 'block', viewport: { width: 412, height: 891 },
+      });
+      contexts.push(context);
+      await context.addInitScript(() => localStorage.setItem('read-notices', '[]'));
+      const p = await context.newPage(); p.setDefaultTimeout(6000);
+      await p.goto(`${origin}?tab=all`); await p.locator('.row').first().waitFor();
+      await p.getByRole('button', { name: '읽지 않은 공지만', exact: true }).click();
+      const id = await p.locator('.row').first().getAttribute('data-id');
+      await p.locator('.row').first().click(); await p.locator('.reading').waitFor();
+      await p.locator('.read-actions').getByRole('button', { name: '저장하기', exact: true }).click();
+      await p.getByRole('button', { name: '목록으로', exact: true }).click();
+      await p.locator('.tabbar').waitFor({ state: 'visible' });
+      assert(await p.locator(`[data-id="${id}"]`).count() === 0, '읽은 글이 남음');
+      await p.locator('.tabbar').getByRole('button', { name: '저장', exact: true }).click();
+      await p.locator(`[data-id="${id}"]`).waitFor();
+      assert(await p.locator('.view-options').count() === 0, '저장 목록에 보기 조건이 적용됨');
+    });
+
+    await check('PC 읽지 않은 글 선택과 상세 닫기', async () => {
+      const context = await page.context().browser().newContext({
+        serviceWorkers: 'block', viewport: { width: 1280, height: 900 },
+      });
+      contexts.push(context);
+      await context.addInitScript(() => localStorage.setItem('read-notices', '[]'));
+      const p = await context.newPage(); p.setDefaultTimeout(6000);
+      await p.goto(`${origin}?tab=all`); await p.locator('.row').first().waitFor();
+      await p.getByRole('button', { name: '읽지 않은 공지만', exact: true }).click();
+      const row = p.locator('.row').nth(1);
+      const id = await row.getAttribute('data-id');
+      await row.click();
+      assert(await p.locator('notice-app').evaluate(e => e.selectedId) === id, '선택 불일치');
+      await p.locator('.detail-pane .detail-title').waitFor();
+      await p.getByRole('button', { name: '상세 칸 닫기', exact: true }).click();
+      assert(await p.locator(`[data-id="${id}"]`).count() === 0, '닫은 뒤 읽은 글이 남음');
     });
 
     // 서버 상태별 문구는 실제 계정이나 공개 데이터를 바꾸지 않고 응답만 제어한다.

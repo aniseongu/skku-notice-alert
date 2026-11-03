@@ -526,7 +526,7 @@ export class SettingsView extends LitElement {
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">키워드</p>
-              <p class="setting-help">제목이나 본문에 이 글자가 그대로 들어간 공지를 "관심"으로 표시하고 내 공지에 올려요</p>
+              <p class="setting-help">제목이나 본문에 이 글자가 그대로 들어간 공지를 "관심"으로 표시해요</p>
             </div>
             <div class="setting-control">
               <div class="inline">

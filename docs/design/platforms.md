@@ -39,7 +39,7 @@
 - 그때 상단 바를 `env(titlebar-area-x)`, `env(titlebar-area-width)`, `env(titlebar-area-height)` 안에 두고, 빈 곳은 `app-region: drag`(창 끌기), 단추와 검색칸은 `app-region: no-drag`.
 - 창이 좁아지면 모바일 배치로 그대로 내려간다(같은 반응형 기준). 200px 폭에서도 깨지지 않는지 본다.
 - `launch_handler: { client_mode: "focus-existing" }`: 이미 열린 창이 있으면 새 창을 띄우지 않는다.
-- 바로가기(`shortcuts`): 작업 표시줄 아이콘 우클릭에 "내 공지", "마감 임박". 휴대폰에서는 아이콘 길게 누르기.
+- 바로가기(`shortcuts`): 작업 표시줄 아이콘 우클릭에 "성대 공지", "마감 임박", "인턴 공고", "저장". 휴대폰에서는 아이콘 길게 누르기.
 
 ## 오프라인과 갱신
 

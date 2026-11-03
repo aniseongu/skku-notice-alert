@@ -4,7 +4,7 @@
 
 ## 상태
 
-- 사용성 검토와 클릭 순서 검증 진행 중: `docs/plans/2026-11-03_usability-review.md`. 본문 상태 구분, 검색 상세와 앞으로 가기, 메뉴 포커스 문제 수정. 배포 후 `scripts/verify_browser_flows.js`로 재검증 필요.
+- 사용성 검토와 클릭 순서 검증 진행 중: `docs/plans/2026-11-03_usability-review.md`. 본문 상태와 탐색 오류를 수정했고 사용자 요청으로 내 공지를 제거해 세 탭과 두 보기 조건을 추가했다. 배포 후 `scripts/verify_browser_flows.js`로 재검증 필요.
 
 - 정식 사이트: https://aniseongu.github.io/skku-notice-alert/ . 화면 확인은 이 주소에서만 한다.
 - 인턴 본문 기능 완료: 계획 `docs/plans/2026-11-03_intern-details.md`. 구현 e781711, 오픈소스 본문 쿼리 재사용과 본문 자동 갱신 da0606a. 웹 빌드, 웹 테스트, scripts/check.sh 통과.

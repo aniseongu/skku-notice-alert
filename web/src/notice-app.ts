@@ -15,11 +15,10 @@ import { SAVED_VARIABLE, type SavedNotice, loadSaved, parseSaved, storeSaved, to
 import { READ_VARIABLE, addRead, loadRead, mergeRead, parseRead, storeRead } from './read-notices';
 import type { Theme } from './settings-view';
 
-type Tab = 'mine' | 'deadline' | 'all' | 'intern' | 'saved';
+type Tab = 'mine' | 'all' | 'intern' | 'saved';
 type View = Tab | 'settings';
 const TABS: { id: Tab; label: string; icon: IconName }[] = [
   { id: 'mine', label: '내 공지', icon: 'user-check' },
-  { id: 'deadline', label: '마감 임박', icon: 'alarm' },
   { id: 'all', label: '성대 공지', icon: 'list' },
   // 전체는 성균관대 공지만, 인턴 공고는 링커리어와 자소설닷컴(사용자 결정 2026-11-03, D-026).
   { id: 'intern', label: '인턴 공고', icon: 'briefcase' },
@@ -80,7 +79,7 @@ const kbd = (...keys: string[]) => html`<span class="kbd-group" aria-hidden="tru
 
 const SHORTCUTS: { group: string; items: [string, string[]][] }[] = [
   { group: '목록', items: [['다음 공지', ['J']], ['이전 공지', ['K']], ['원문 열기', ['Enter']], ['저장하기', ['S']], ['상세 칸 닫기', ['Esc']]] },
-  { group: '이동', items: [['내 공지', ['1']], ['마감 임박', ['2']], ['성대 공지', ['3']], ['인턴 공고', ['4']], ['저장', ['5']], ['검색', ['/']]] },
+  { group: '이동', items: [['내 공지', ['1']], ['성대 공지', ['2']], ['인턴 공고', ['3']], ['저장', ['4']], ['검색', ['/']]] },
   { group: '그 밖', items: [['새로고침', ['R']], ['설정 닫기', ['Esc']], ['단축키 보기', ['?']]] },
 ];
 
@@ -95,7 +94,7 @@ export class NoticeApp extends LitElement {
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true },
-    saved: { state: true }, read: { state: true }, collapsed: { state: true },
+    saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true },
   };
 
   notices: Notice[] = [];
@@ -103,7 +102,9 @@ export class NoticeApp extends LitElement {
   matched: MatchedFile | null = null;
   generatedAt: string | null = null;
   view: View = new URLSearchParams(location.search).get('view') === 'settings'
-    ? 'settings' : [new URLSearchParams(location.search).get('tab'), remember('tab')].find(isTab) ?? 'mine';
+    ? 'settings' : new URLSearchParams(location.search).get('tab') === 'deadline' ? 'all'
+      : [new URLSearchParams(location.search).get('tab'), remember('tab') === 'deadline' ? 'all' : remember('tab')].find(isTab) ?? 'mine';
+  sort: 'latest' | 'deadline' = new URLSearchParams(location.search).get('tab') === 'deadline' || new URLSearchParams(location.search).get('sort') === 'deadline' || (new URLSearchParams(location.search).get('sort') !== 'latest' && remember('notice-sort') === 'deadline') ? 'deadline' : 'latest';
   board = remember('board') ?? 'all';
   keyword: string | null = null;
   keywords = loadKeywords();
@@ -301,13 +302,13 @@ export class NoticeApp extends LitElement {
     if (tab === 'saved') return list;
     const external = tab === 'intern';
     const scoped = list.filter((n) => this.isExternal(n) === external);
-    if (tab === 'deadline' || tab === 'intern') {
+    if ((tab === 'all' && this.sort === 'deadline') || tab === 'intern') {
       // 마감이 남은 글을 가까운 순으로. 인턴 공고는 마감 없는 공고도 맨 뒤에 둔다.
       const open = scoped.filter((n) => !n.deadline || !deadlinePassed(n.deadline));
       const dated = open.filter((n) => n.deadline).sort((a, b) => Date.parse(a.deadline!) - Date.parse(b.deadline!));
       return external ? [...dated, ...open.filter((n) => !n.deadline)] : dated;
     }
-    return scoped;
+    return tab === 'all' ? [...scoped].sort((a, b) => b.posted_on.localeCompare(a.posted_on)) : scoped;
   }
 
   private tab(): Tab { return this.view === 'settings' ? 'mine' : this.view; }
@@ -339,7 +340,9 @@ export class NoticeApp extends LitElement {
     this.openedId = null;
     const params = new URLSearchParams(location.search);
     const view: View = params.get('view') === 'settings' ? 'settings'
-      : [params.get('tab'), remember('tab')].find(isTab) ?? 'mine';
+      : params.get('tab') === 'deadline' ? 'all' : [params.get('tab'), remember('tab')].find(isTab) ?? 'mine';
+    if (params.get('tab') === 'deadline' || params.get('sort') === 'deadline') this.sort = 'deadline';
+    else if (params.get('sort') === 'latest') this.sort = 'latest';
     if (view !== this.view) { this.view = view; this.selectedId = null; }
   };
 
@@ -419,8 +422,8 @@ export class NoticeApp extends LitElement {
       '/': () => this.querySelector<HTMLInputElement>('.search input')?.focus(),
       j: () => move(1), ArrowDown: () => move(1), k: () => move(-1), ArrowUp: () => move(-1),
       Enter: () => { const notice = list[index]; if (notice) { this.markRead(notice); window.open(safeUrl(notice.url), '_blank', 'noopener'); } },
-      r: () => this.refresh(), 1: () => this.setView('mine'), 2: () => this.setView('deadline'), 3: () => this.setView('all'),
-      4: () => this.setView('intern'), 5: () => this.setView('saved'),
+      r: () => this.refresh(), 1: () => this.setView('mine'), 2: () => this.setView('all'), 3: () => this.setView('intern'),
+      4: () => this.setView('saved'),
       s: () => { const notice = list[index]; if (notice) this.toggleSave(notice); },
     };
     const action = actions[event.key];
@@ -671,13 +674,12 @@ export class NoticeApp extends LitElement {
       return this.empty('목록을 불러오지 못했어요', '인터넷 연결을 확인하고 다시 시도해 주세요', '다시 불러오기', () => this.refresh());
     }
     if (!list.length) {
-      const boardPicker = html`<div class="group-head empty-head"><span></span>${this.boardSelect()}</div>`;
+      const boardPicker = html`<div class="group-head empty-head"><span></span><div class="list-controls">${this.sortSelect()}${this.boardSelect()}</div></div>`;
       if (this.query) return html`${boardPicker}${this.empty(`'${this.query}'에 맞는 공지가 없어요`, '다른 단어로 찾아보세요', '검색어 지우기', () => { this.query = ''; })}`;
       if (this.keyword) return html`${boardPicker}${this.empty(`'${this.keyword}'에 맞는 공지가 아직 없어요`, '새 글이 오면 여기에 모여요')}`;
       const empty = {
         mine: ['지금 챙길 공지가 없어요', '기준이나 관심 키워드에 맞는 새 글이 오면 여기 쌓여요'],
-        deadline: ['다가오는 마감이 없어요', '제목에 마감일이 적힌 공지만 여기에 나와요'],
-        all: ['이 게시판에 공지가 없어요', '다른 게시판을 골라 보세요'],
+        all: this.sort === 'deadline' ? ['다가오는 마감이 없어요', '마감일이 남은 공지만 여기에 나와요'] : ['이 게시판에 공지가 없어요', '다른 게시판을 골라 보세요'],
         intern: ['열린 인턴 공고가 없어요', '링커리어와 자소설닷컴에 새 공고가 오면 여기에 모여요'],
         saved: ['저장한 공지가 없어요', '공지를 열어 저장하면 여기에 모여요'],
       }[this.tab()];
@@ -686,15 +688,25 @@ export class NoticeApp extends LitElement {
     const today = todayKst();
     const groups = new Map<string, Notice[]>();
     for (const notice of list) {
-      const key = (this.view === 'deadline' || this.view === 'intern') && notice.deadline
+      const key = ((this.view === 'all' && this.sort === 'deadline') || this.view === 'intern') && notice.deadline
         ? deadlineGroup(notice.deadline, today) : postedGroup(notice.posted_on, today);
       groups.set(key, [...(groups.get(key) ?? []), notice]);
     }
     return [...groups].map(([title, items], index) => html`
       <section class="group" aria-label=${title}>
-        <div class="group-head"><h2>${title}</h2>${index === 0 ? this.boardSelect() : nothing}</div>
+        <div class="group-head"><h2>${title}</h2>${index === 0 ? html`<div class="list-controls">${this.sortSelect()}${this.boardSelect()}</div>` : nothing}</div>
         <ol class="rows">${items.map((n) => this.row(n, today))}</ol>
       </section>`);
+  }
+
+  private sortSelect() {
+    if (this.view !== 'all') return nothing;
+    return html`<label class="sort-picker"><select aria-label="정렬" .value=${this.sort} @change=${(event: Event) => {
+      this.sort = (event.target as HTMLSelectElement).value === 'deadline' ? 'deadline' : 'latest';
+      remember('notice-sort', this.sort);
+      this.selectedId = null;
+      history.replaceState(null, '', `${location.pathname}?tab=all&sort=${this.sort}`);
+    }}><option value="latest" ?selected=${this.sort === 'latest'}>최신순</option><option value="deadline" ?selected=${this.sort === 'deadline'}>마감순</option></select></label>`;
   }
 
   private boardSelect() {

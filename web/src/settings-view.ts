@@ -81,7 +81,6 @@ export class SettingsView extends LitElement {
   categories: string[] = [];
   muted: string[] = [];
   theme: Theme = 'auto';
-  // 토픽은 아는 사람 누구나 구독할 수 있는 비밀이라 브라우저에 남기지 않는다(메모리에만, 화면을 닫으면 잊는다).
   repo = remember('github-repo') ?? '';
   // 사용자 요청(2026-11-03)으로 연결 토큰은 이 기기에 암호화해 기억한다(D-017). 키 값은 남기지 않는다.
   token = '';
@@ -288,7 +287,7 @@ export class SettingsView extends LitElement {
 
   // 키 값은 클립보드에 넣지 않는다(클립보드 기록에 남는다). 이름만 있는 양식을 복사하고 값은 사용자가 직접 붙여 넣는다.
   private envText() {
-    return ['NOTIFY_URLS=ntfys://', ...KEY_FIELDS.filter((f) => !f.multiline).map((f) => `${f.secret}=`)].join('\n');
+    return KEY_FIELDS.filter((f) => !f.multiline).map((f) => `${f.secret}=`).join('\n');
   }
 
   // 마감 캘린더(deadlines.ics)와 RSS(feed.xml)는 Actions가 15분마다 새로 쓴다(GOAL.md M3).

@@ -487,8 +487,8 @@ export class NoticeApp extends LitElement {
 
         <aside class="detail-pane" aria-label="공지 상세">
           <div class="pane-head detail-head">
-            <button type="button" class="icon-button" aria-label="상세 칸 닫기" title="상세 칸 닫기 (Esc)" aria-keyshortcuts="Escape"
-              @click=${() => this.setDetail(false)}>${icon('close')}</button>
+            ${selected ? html`<button type="button" class="icon-button" aria-label="상세 칸 닫기" title="상세 칸 닫기 (Esc)" aria-keyshortcuts="Escape"
+              @click=${() => this.setDetail(false)}>${icon('close')}</button>` : nothing}
             ${selected ? html`<div class="detail-actions">
               ${this.saveButton(selected)}
               <button type="button" class="ghost-button" @click=${() => this.copyLink(selected)}>링크 복사하기</button>

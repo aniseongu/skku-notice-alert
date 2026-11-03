@@ -12,7 +12,7 @@
 
 ## 가져올 코드
 
-기존 `notice.yml`의 SHA 고정 빌드와 Pages 업로드, 배포 단계를 재사용한다.
+기존 `notice-and-pages.yml`의 SHA 고정 빌드와 Pages 업로드, 배포 단계를 재사용한다.
 
 ## 단계
 

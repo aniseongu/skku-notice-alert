@@ -34,7 +34,13 @@
       "images": [],
       "summary": null,
       "body_attempts": 0,
-      "fetched_at": null
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      }
     },
     "linkareer-intern/361803": {
       "notice": {

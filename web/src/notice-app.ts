@@ -485,11 +485,11 @@ export class NoticeApp extends LitElement {
           ${this.sideGroup('keywords', '관심 키워드', html`
             ${this.keywords.map((word) => this.sideItem(word, this.notices.filter((n) => this.interests(n).includes(word)).length,
               this.keyword === word && !settings, () => this.setKeyword(this.keyword === word ? null : word)))}
-            <button type="button" class="side-item add" @click=${() => this.setView('settings')}>${this.keywords.length ? '키워드 관리하기' : '키워드 추가하기'}</button>`)}
+            <button type="button" class="side-item add" @click=${() => this.setView('settings')}>${this.keywords.length ? '키워드 관리하기' : '키워드 추가하기'}</button>`, this.keywords.length)}
           ${this.sideGroup('boards', this.tab() === 'intern' ? '인턴 공고 사이트' : '게시판', html`
             ${[{ id: 'all', label: this.tab() === 'intern' ? '모든 사이트' : '모든 게시판' },
               ...this.tabSources().map((s) => ({ id: s.id, label: boardName(s, s.id) }))]
-              .map((b) => this.sideItem(b.label, null, this.activeBoard() === b.id && !settings, () => { this.setBoard(b.id); if (settings) this.leaveSettings(); }))}`)}
+              .map((b) => this.sideItem(b.label, null, this.activeBoard() === b.id && !settings, () => { this.setBoard(b.id); if (settings) this.leaveSettings(); }))}`, this.tabSources().length)}
           <div class="side-foot">
             ${this.install ? html`<button type="button" class="side-item" @click=${this.runInstall}>앱으로 설치하기</button>` : nothing}
             <button type="button" class="side-item kbd-only" aria-keyshortcuts="?" @click=${() => { this.shortcutsOpen = true; }}>
@@ -530,7 +530,7 @@ export class NoticeApp extends LitElement {
                 <input type="search" placeholder="제목, 분류, 판정 이유로 찾기" autocomplete="off" aria-label="공지 검색" .value=${this.query}
                   @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; }}></label>
               <div class="chips" role="group" aria-label="관심 키워드">
-                <button type="button" class="chip" aria-pressed=${String(!this.keyword)} @click=${() => this.setKeyword(null)}>모두</button>
+                ${this.keywords.length ? html`<button type="button" class="chip" aria-pressed=${String(!this.keyword)} @click=${() => this.setKeyword(null)}>모두</button>` : nothing}
                 ${this.keywords.map((word) => html`<button type="button" class="chip" aria-pressed=${String(this.keyword === word)}
                   @click=${() => this.setKeyword(this.keyword === word ? null : word)}>${word}</button>`)}
                 <button type="button" class="chip-add" @click=${() => this.setView('settings')}>${icon('plus')}키워드 추가하기</button>
@@ -634,13 +634,13 @@ export class NoticeApp extends LitElement {
   }
 
   // 사이드바 묶음은 머리를 눌러 접고 편다. 접은 묶음은 기억한다(사용자 요청 2026-11-03).
-  private sideGroup(id: string, title: string, items: TemplateResult) {
+  private sideGroup(id: string, title: string, items: TemplateResult, count?: number) {
     const open = !this.collapsed.includes(id);
     return html`<button type="button" class="side-head" aria-expanded=${String(open)} aria-controls="side-${id}"
         @click=${() => {
           this.collapsed = open ? [...this.collapsed, id] : this.collapsed.filter((x) => x !== id);
           remember('side-collapsed', JSON.stringify(this.collapsed));
-        }}><span>${title}</span><span class="side-chevron" aria-hidden="true"></span></button>
+        }}><span>${title}${!open && count ? html`<span class="side-count">${count}</span>` : nothing}</span><span class="side-chevron" aria-hidden="true"></span></button>
       <div class="side-group" id="side-${id}" ?hidden=${!open}>${items}</div>`;
   }
 

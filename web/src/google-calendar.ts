@@ -1,0 +1,95 @@
+// 구글 캘린더 자동 연결(docs/plans/2026-11-03_google-calendar-sync.md).
+// 출처: https://github.com/aniseongu/WhaleExtentions/blob/main/extensions/icampus-check/gcal.js (범위, 코드 흐름, PKCE)
+// 브라우저는 한 번 승인만 받고, 갱신 토큰과 비밀번호는 GitHub Secrets로만 보낸다. 일정은 Actions가 15분마다 맞춘다.
+import { GitHubError, readVariable, saveSecret, saveVariable } from './github';
+
+const SCOPE = 'https://www.googleapis.com/auth/calendar.app.created';
+const CALENDAR_NAME = '성대 공지';
+export const GOOGLE_SECRETS = ['GOOGLE_CLIENT_ID', 'GOOGLE_CLIENT_SECRET', 'GOOGLE_REFRESH_TOKEN'] as const;
+// 캘린더 id는 열쇠가 아니라서 변수로 둔다. 다시 연결할 때 같은 캘린더를 쓰려고 읽는다.
+export const CALENDAR_VARIABLE = 'GOOGLE_CALENDAR_ID';
+
+export class GoogleError extends Error {}
+
+const b64url = (bytes: Uint8Array) => btoa(String.fromCharCode(...bytes)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+const random = () => b64url(crypto.getRandomValues(new Uint8Array(32)));
+const redirectUri = () => new URL('oauth-callback.html', document.baseURI).href;
+
+export function validClientId(value: string) { return /^[\w-]+\.apps\.googleusercontent\.com$/.test(value.trim()); }
+
+// 팝업은 단추를 누른 그 순간에 열어야 막히지 않는다. 그래서 먼저 열고 주소는 나중에 넣는다.
+function waitForCode(popup: Window, state: string): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const channel = new BroadcastChannel('google-oauth');
+    const timer = window.setInterval(() => {
+      if (popup.closed) { cleanup(); reject(new GoogleError('구글 창이 닫혔어요. 다시 눌러 주세요')); }
+    }, 800);
+    const cleanup = () => { channel.close(); clearInterval(timer); };
+    channel.onmessage = (event: MessageEvent<{ code?: string; state?: string; error?: string }>) => {
+      if (event.data?.state !== state) return;
+      cleanup();
+      if (event.data.code) resolve(event.data.code);
+      else reject(new GoogleError(event.data.error === 'access_denied' ? '구글에서 허용하지 않았어요' : '구글 연결이 끝나지 않았어요. 클라이언트 설정을 확인해 주세요'));
+    };
+  });
+}
+
+async function google(url: string, init: RequestInit): Promise<Record<string, unknown>> {
+  const response = await fetch(url, init);
+  const body = await response.json().catch(() => ({})) as Record<string, unknown>;
+  if (!response.ok) {
+    const code = String(body.error ?? response.status);
+    if (/invalid_client|unauthorized_client|redirect_uri_mismatch/.test(code)) throw new GoogleError('클라이언트 ID나 보안 비밀번호, 리디렉션 URI를 다시 확인해 주세요');
+    throw new GoogleError(`구글 오류 (${response.status})`);
+  }
+  return body;
+}
+
+export async function connectGoogleCalendar(repo: string, token: string, clientId: string, clientSecret: string): Promise<void> {
+  const popup = window.open('about:blank', 'google-oauth', 'popup,width=480,height=640');
+  if (!popup) throw new GoogleError('팝업이 막혔어요. 주소창에서 팝업을 허용해 주세요');
+  const verifier = random() + random();
+  const challenge = b64url(new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(verifier))));
+  const state = random();
+  const auth = new URL('https://accounts.google.com/o/oauth2/v2/auth');
+  auth.search = new URLSearchParams({
+    client_id: clientId, redirect_uri: redirectUri(), response_type: 'code', scope: SCOPE,
+    access_type: 'offline', prompt: 'consent', code_challenge: challenge, code_challenge_method: 'S256', state,
+  }).toString();
+  popup.location.href = auth.href;
+  const code = await waitForCode(popup, state);
+  const tokens = await google('https://oauth2.googleapis.com/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      code, client_id: clientId, client_secret: clientSecret, code_verifier: verifier,
+      redirect_uri: redirectUri(), grant_type: 'authorization_code',
+    }),
+  });
+  const access = String(tokens.access_token ?? '');
+  const refresh = String(tokens.refresh_token ?? '');
+  if (!access || !refresh) throw new GoogleError('구글이 오래 쓰는 열쇠를 주지 않았어요. 구글 계정 권한에서 이 앱을 지우고 다시 연결해 주세요');
+  const headers = { Authorization: `Bearer ${access}`, 'Content-Type': 'application/json' };
+  // 예전에 만든 캘린더가 있으면 그대로 쓴다(다시 연결해도 캘린더가 늘지 않게).
+  let calendarId = (await readVariable(repo, token, CALENDAR_VARIABLE).catch(() => null)) ?? '';
+  if (calendarId) {
+    const found = await fetch(`https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}`, { headers });
+    if (!found.ok) calendarId = '';
+  }
+  if (!calendarId) {
+    const created = await google('https://www.googleapis.com/calendar/v3/calendars', {
+      method: 'POST', headers,
+      body: JSON.stringify({ summary: CALENDAR_NAME, timeZone: 'Asia/Seoul', description: '성대 공지 앱이 내 공지와 저장한 공지의 마감을 넣는 캘린더예요' }),
+    });
+    calendarId = String(created.id ?? '');
+  }
+  if (!calendarId) throw new GoogleError('캘린더를 만들지 못했어요');
+  try {
+    await saveSecret(repo, token, 'GOOGLE_CLIENT_ID', clientId.trim());
+    await saveSecret(repo, token, 'GOOGLE_CLIENT_SECRET', clientSecret.trim());
+    await saveSecret(repo, token, 'GOOGLE_REFRESH_TOKEN', refresh);
+    await saveVariable(repo, token, CALENDAR_VARIABLE, calendarId);
+  } catch (error) {
+    throw error instanceof GitHubError ? error : new GoogleError('GitHub에 저장하지 못했어요');
+  }
+}

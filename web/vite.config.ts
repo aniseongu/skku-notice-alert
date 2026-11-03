@@ -47,7 +47,8 @@ export default defineConfig({
         // 암호화 라이브러리(약 420KB)는 설정에서 키를 저장할 때만 불러오므로 미리 저장하지 않는다.
         globIgnores: ['**/libsodium*.js', '**/*-dark.png', '**/icons/notify/**'],
         navigateFallback: 'index.html',
-        navigateFallbackDenylist: [/\/api\//],
+        // 구글 연결에서 돌아오는 페이지는 주소 뒤에 code가 붙어 미리 저장본과 안 맞는다. 첫 화면으로 바꾸지 않는다.
+        navigateFallbackDenylist: [/\/api\//, /oauth-callback/],
         runtimeCaching: [
           {
             // 공지 목록은 네트워크 우선: 오래된 목록을 최신처럼 보이지 않게 한다.

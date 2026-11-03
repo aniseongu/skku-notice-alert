@@ -117,6 +117,18 @@ jobs:
           WEB_PUSH_PRIVATE_KEY: ${{ secrets.WEB_PUSH_PRIVATE_KEY }}
         run: uv run skku-notice --export site
 
+      # 구글 캘린더 자동 연결(설정에서 연결했을 때만). 실패해도 공지 수집과 배포는 그대로 간다.
+      - name: Sync Google Calendar
+        if: steps.run_notice.outcome == 'success'
+        continue-on-error: true
+        env:
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          GOOGLE_CALENDAR_ID: ${{ vars.GOOGLE_CALENDAR_ID }}
+          SAVED_NOTICES: ${{ vars.SAVED_NOTICES }}
+        run: uv run python -m skku_notice.gcal
+
       - name: Save Canvas state
         if: always() && hashFiles('state/canvas.json') != ''
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6

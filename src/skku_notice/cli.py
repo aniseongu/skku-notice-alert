@@ -30,7 +30,6 @@ from skku_notice.canvas import CanvasError, read_canvas
 from skku_notice.canvas_alerts import (
     load_canvas_state,
     mark_sent,
-    notification_mode,
     plan_alerts,
     problem_alert,
     save_canvas_state,
@@ -43,7 +42,6 @@ from skku_notice.interests import (
     is_mine,
     load_interests,
     match_interests,
-    muted_from_env,
     refresh_archive_interests,
 )
 from skku_notice.jobs import (
@@ -54,8 +52,9 @@ from skku_notice.jobs import (
     parse_job_detail,
     parse_linkareer_detail,
 )
-from skku_notice.judge import Judgment, decide_priority, judge_notices
+from skku_notice.judge import Judgment, judge_notices
 from skku_notice.model import Match, Notice
+from skku_notice.notification_policy import alert_priority, internship_title_ineligible
 from skku_notice.notify import has_notification_channel, send_canvas, send_notice
 from skku_notice.ocr import read_images
 from skku_notice.parse import ParseError, parse_detail, parse_list
@@ -355,7 +354,6 @@ def run(args: argparse.Namespace) -> int:
     try:
         rules = load_rules(args.rules)
         interests = load_interests(INTERESTS_PATH, os.environ.get("INTEREST_KEYWORDS", ""))
-        muted_categories = muted_from_env(os.environ.get("MUTED_CATEGORIES", ""))
         settings = yaml.safe_load(SOURCES_PATH.read_text(encoding="utf-8"))
         ai = yaml.safe_load(AI_PATH.read_text(encoding="utf-8"))
         state = load_state(STATE_PATH)
@@ -441,8 +439,12 @@ def run(args: argparse.Namespace) -> int:
         for notice in notices:
             record = state.sources.get(source["id"])
             seen = record.seen.get(notice.article_no) if record else None
+            entry = archive.items.get(f"{source['id']}/{notice.article_no}", {})
+            deferred = (source.get("external") and seen is not None and seen.status == "pending"
+                        and not (entry.get("match") or {}).get("priority")
+                        and entry.get("body_text") is not None)
             if (args.dry_run and (args.all or is_new(state, notice))) or (
-                not args.dry_run and record is not None and seen is None
+                not args.dry_run and record is not None and (seen is None or deferred)
             ):
                 if not source.get("external"):
                     image_candidates.append(notice)
@@ -506,27 +508,26 @@ def run(args: argparse.Namespace) -> int:
                 word for word in interests
                 if word in text_interests
             )
-            # 외부 인턴 공고는 모두 '인턴'이라 키워드만으로 알리지 않는다(D-026).
-            priority = (decide_priority(match, judgment, () if source.get("external") else text_interests)
-                        if process and not excluded else None)
-            # 꺼 둔 분류는 "모두 알림"만 빠진다. 기준, 관심 키워드, Gemini 해당은 그대로 알린다(D-018).
-            # 외부 인턴 공고는 하루에도 수십 건이라 "모두 알림"에서 뺀다(D-026). 맞는 공고만 알린다.
-            if (process and priority is None and rules.notify_all and not source.get("external")
-                    and notice.category not in muted_categories):
-                priority = "low"
+            # 실패했던 알림도 이전 판정과 현재 정책으로 다시 확인한다.
+            previous_priority = None
             if not args.dry_run and seen is not None and seen.status == "pending":
-                previous = archive.items.get(f"{source['id']}/{notice.article_no}", {}).get("match", {})
-                if previous.get("rule_name"):
-                    match = Match(
-                        notice,
-                        previous["rule_name"],
-                        previous["priority"],
-                        tuple(previous.get("reasons", [])),
-                    )
-                ai_data = previous.get("ai")
-                judgment = Judgment(**ai_data) if ai_data else None
-                shown_interests = tuple(previous.get("interests", [])) or shown_interests
-                priority = previous.get("priority") or priority or "default"
+                previous = archive.items.get(f"{source['id']}/{notice.article_no}", {}).get("match") or {}
+                previous_priority = previous.get("priority")
+                # priority가 없는 pending은 본문을 기다린 글이므로 새 판정을 쓴다.
+                if previous_priority:
+                    if previous.get("rule_name"):
+                        match = Match(notice, previous["rule_name"], previous_priority,
+                                      tuple(previous.get("reasons", [])))
+                    ai_data = previous.get("ai")
+                    judgment = Judgment(**ai_data) if ai_data else None
+                    shown_interests = tuple(previous.get("interests", [])) or shown_interests
+            body = "\n".join(filter(None, (item.get("body_text"), item.get("ocr_text"))))
+            external = bool(source.get("external"))
+            priority = (alert_priority(external=external, title=notice.title, body=body, match=match,
+                                       judgment=judgment, interests=shown_interests)
+                        if process and not (external and excluded) else None)
+            if priority is not None and previous_priority:
+                priority = previous_priority
             if args.dry_run:
                 name = match.rule_name if match else "-"
                 ai_text = f" AI={judgment.verdict}: {judgment.reason}" if judgment else ""
@@ -543,6 +544,21 @@ def run(args: argparse.Namespace) -> int:
                 )
                 continue
             if not process:
+                continue
+            if (external and priority is None and not excluded
+                    and not internship_title_ineligible(notice.title)
+                    and item.get("body_text") is None and item.get("body_attempts", 0) < 3):
+                # 본문 대기는 발송 실패가 아니다. 배송 재시도 횟수를 보존한다.
+                state = record_result(state, notice, "pending", now)
+                current_source = state.sources[notice.source_id]
+                current_record = current_source.seen[notice.article_no]
+                preserved = replace(current_record, status="pending", attempts=seen.attempts if seen else 0)
+                updated_source = replace(current_source,
+                                         seen={**current_source.seen, notice.article_no: preserved})
+                state = replace(state, sources={**state.sources, notice.source_id: updated_source})
+                save_state(STATE_PATH, state)
+                archive = add_notice(archive, notice, preserved.first_seen)
+                save_archive(ARCHIVE_PATH, archive)
                 continue
             if priority is None:
                 state = record_result(state, notice, "skipped", now)
@@ -588,8 +604,7 @@ def run(args: argparse.Namespace) -> int:
             canvas_config = yaml.safe_load(CANVAS_CONFIG_PATH.read_text(encoding="utf-8"))
             fixture_dir = getattr(args, "canvas_fixtures", None)
             token = os.environ.get("CANVAS_TOKEN", "")
-            mode = notification_mode(os.environ.get("CANVAS_ALERT_MODE"))
-            if canvas_config.get("enabled") and mode != "off" and (token or fixture_dir):
+            if canvas_config.get("enabled") and (token or fixture_dir):
                 canvas_state = load_canvas_state(CANVAS_STATE_PATH)
                 minimum = max(30, int(canvas_config.get("min_refresh_minutes", 30)))
                 recently_refreshed = (
@@ -602,11 +617,9 @@ def run(args: argparse.Namespace) -> int:
                     summary_time = datetime.strptime(canvas_config["summary_time"], "%H:%M").time()
                     alerts, next_state = plan_alerts(
                         items, canvas_state, now,
-                        canvas_config["leads"] if mode == "reminders" else [], summary_time
+                        canvas_config["leads"], summary_time
                     )
                     if canvas_state.problem:
-                        from dataclasses import replace
-
                         next_state = replace(next_state, problem=None)
                     if args.dry_run:
                         for alert in alerts:
@@ -617,19 +630,18 @@ def run(args: argparse.Namespace) -> int:
                         save_canvas_state(CANVAS_STATE_PATH, next_state)
                     else:
                         for alert in alerts:
-                            if send_canvas(alert.title, alert.body, alert.url, alert.priority):
+                            if send_canvas(alert.title, alert.body, alert.url, alert.priority,
+                                           summary=bool(alert.summary_day)):
                                 next_state = mark_sent(next_state, alert, now)
                                 save_canvas_state(CANVAS_STATE_PATH, next_state)
                             else:
                                 failed = True
                                 print("Canvas 알림 실패", file=sys.stderr)
                         save_canvas_state(CANVAS_STATE_PATH, next_state)
-            elif canvas_config.get("enabled") and mode != "off":
+            elif canvas_config.get("enabled"):
                 print("CANVAS_TOKEN 없음: Canvas 건너뜀")
         except CanvasError as exc:
             if str(exc) == "토큰 거절":
-                from dataclasses import replace
-
                 current = load_canvas_state(CANVAS_STATE_PATH)
                 problem = current.problem or {"code": "token-rejected", "notifiedProblem": False}
                 current = replace(current, problem=problem)
@@ -638,7 +650,9 @@ def run(args: argparse.Namespace) -> int:
                     print(f"[Canvas 알림 예정] {alert.title}")
                 else:
                     save_canvas_state(CANVAS_STATE_PATH, current)
-                    if alert and send_canvas(alert.title, alert.body, alert.url, alert.priority):
+                    if alert and send_canvas(
+                        alert.title, alert.body, alert.url, alert.priority, summary=True,
+                    ):
                         save_canvas_state(
                             CANVAS_STATE_PATH, replace(current, problem={**problem, "notifiedProblem": True})
                         )

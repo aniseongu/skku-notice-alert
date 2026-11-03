@@ -56,7 +56,7 @@ async (page) => {
         await p.locator('.row').first().waitFor();
         assert(await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth), '목록 가로 넘침');
         await p.getByRole('button', {name:'설정', exact:true}).filter({visible:true}).click();
-        await p.getByRole('radiogroup', {name:'아캠 알림', exact:true}).waitFor();
+        await p.getByRole('link', {name:/^알림/}).waitFor();
         assert(await p.evaluate(() => document.documentElement.scrollWidth <= innerWidth), '설정 가로 넘침');
         await p.getByRole('button', {name:'설정 닫기', exact:true}).filter({visible:true}).click();
       }
@@ -65,11 +65,12 @@ async (page) => {
     await check('연결 키 화면 분리와 일반 설정 복귀', async () => {
       await p.getByRole('button', {name:'설정', exact:true}).filter({visible:true}).click();
       assert(await p.getByLabel('아이캠퍼스 토큰', {exact:true}).count() === 0, '일반 설정에 토큰 입력 노출');
-      await p.getByRole('link', {name:'연결 키 설정하기', exact:true}).click();
+      await p.getByRole('link', {name:/^연결 키/}).click();
+      await p.getByRole('button', {name:'아이캠퍼스 토큰 입력하기', exact:true}).click();
       await p.getByLabel('아이캠퍼스 토큰', {exact:true}).waitFor();
       assert(await p.title() === '연결 키 - 성공', '키 화면 제목');
-      await p.getByRole('link', {name:'일반 설정으로', exact:true}).click();
-      await p.getByRole('radiogroup', {name:'아캠 알림', exact:true}).waitFor();
+      await p.getByRole('link', {name:'설정으로', exact:true}).click();
+      await p.getByRole('link', {name:/^알림/}).waitFor();
       await p.getByRole('button', {name:'설정 닫기', exact:true}).filter({visible:true}).click();
     });
     await check('화면 모드와 상태 표시줄 색 동기화', async () => {

@@ -170,10 +170,13 @@ async (page) => {
     });
     await check('미입력 연결에서 안내 표시', async () => {
       await m.getByRole('button', { name: '설정', exact: true }).filter({ visible: true }).click();
+      await m.getByRole('link', { name: /^기기 연결/ }).click();
+      await m.getByText('처음 연결하기', { exact: true }).click();
       await m.getByRole('button', { name: '연결하기', exact: true }).click();
       await m.getByText('저장소는 아이디/저장소 이름으로, 토큰은 github_pat_로 시작하는 값을 넣어 주세요', { exact: true }).waitFor();
     });
     await check('화면 모드 변경과 설정 닫기', async () => {
+      await m.getByRole('link', { name: '설정으로', exact: true }).click();
       await m.getByRole('radio', { name: '어둡게', exact: true }).click();
       await m.getByRole('button', { name: '설정 닫기', exact: true }).filter({ visible: true }).click();
       assert(await m.evaluate(() => document.documentElement.dataset.theme === 'dark'), '화면 모드 미반영');
@@ -200,17 +203,23 @@ async (page) => {
     await m.goto(`${origin}?tab=all`);
     await check('관심 키워드 추가와 중복 입력, 필터 선택', async () => {
       await m.getByRole('button', { name: '설정', exact: true }).filter({ visible: true }).click();
+      await m.getByRole('link', { name: /^관심 키워드/ }).click();
       const input = m.getByRole('textbox', { name: '새 키워드', exact: true });
       await input.fill('검증용관심조건xyz'); await input.press('Enter');
       await input.fill('검증용관심조건xyz'); await input.press('Enter');
       assert(await m.locator('.keyword-list li').count() === 1, '중복 키워드');
+      await m.getByRole('button', { name: '설정 닫기', exact: true }).filter({ visible: true }).click();
+      await m.getByRole('link', { name: /^관심 키워드/ }).waitFor();
       await m.getByRole('button', { name: '설정 닫기', exact: true }).filter({ visible: true }).click();
       await m.locator('.tools .chips').getByRole('button', { name: '검증용관심조건xyz', exact: true }).click();
       await m.locator('.empty strong').filter({ hasText: '검증용관심조건xyz' }).waitFor();
     });
     await check('선택된 관심 키워드 삭제 뒤 목록 복구', async () => {
       await m.getByRole('button', { name: '설정', exact: true }).filter({ visible: true }).click();
+      await m.getByRole('link', { name: /^관심 키워드/ }).click();
       await m.getByRole('button', { name: '검증용관심조건xyz 삭제', exact: true }).click();
+      await m.getByRole('button', { name: '설정 닫기', exact: true }).filter({ visible: true }).click();
+      await m.getByRole('link', { name: /^관심 키워드/ }).waitFor();
       await m.getByRole('button', { name: '설정 닫기', exact: true }).filter({ visible: true }).click();
       await m.locator('.row').first().waitFor();
       assert(await m.locator('.tools .chips').getByRole('button', { name: '검증용관심조건xyz', exact: true }).count() === 0,

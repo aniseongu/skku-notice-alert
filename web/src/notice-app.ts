@@ -35,6 +35,12 @@ const INTERACTIVE = 'a, button, input, textarea, select, [contenteditable]';
 const wide = matchMedia('(min-width: 1080px)');
 const browserTab = matchMedia('(display-mode: browser)');
 
+function settingsTitle(): string {
+  const params = new URLSearchParams(location.search);
+  if (params.get('keys') === '1') return '연결 키';
+  return ({ notifications: '알림', keywords: '관심 키워드', connection: '기기 연결' } as Record<string, string>)[params.get('section') ?? ''] ?? '설정';
+}
+
 interface InstallPrompt extends Event { prompt(): Promise<void> }
 
 function remember(key: string, value?: string): string | null {
@@ -346,6 +352,8 @@ export class NoticeApp extends LitElement {
 
   // 설정을 닫으면 들어오기 전에 보던 보기로 돌아간다.
   private leaveSettings = () => {
+    const params = new URLSearchParams(location.search);
+    if (params.has('keys') || params.has('section')) { location.assign('?view=settings'); return; }
     // 이 화면에서 설정을 열었으면 기록을 하나 되돌린다(주소에서 view=settings가 빠진다). 바로 설정 주소로 들어왔으면 바꿔 쓴다.
     if (history.state?.view === 'settings') { history.back(); return; }
     const last = normalizeTab(remember('tab'));
@@ -498,7 +506,7 @@ export class NoticeApp extends LitElement {
     const dialog = this.querySelector<HTMLDialogElement>('dialog.shortcuts');
     if (dialog && this.shortcutsOpen && !dialog.open) dialog.showModal();
     if (this.view === 'settings') {
-      document.title = `${new URLSearchParams(location.search).get('keys') === '1' ? '연결 키' : '설정'} - ${APP_NAME}`;
+      document.title = `${settingsTitle()} - ${APP_NAME}`;
       return;
     }
     document.title = APP_NAME;
@@ -511,7 +519,7 @@ export class NoticeApp extends LitElement {
       ? this.filtered(this.savedNotices()).length : this.byTab(filtered, t.id).length]));
     const list = this.visible();
     const settings = this.view === 'settings';
-    const title = settings ? (new URLSearchParams(location.search).get('keys') === '1' ? '연결 키' : '설정')
+    const title = settings ? settingsTitle()
       : this.keyword ? this.keyword : TABS.find((t) => t.id === this.view)!.label;
     const selected = settings ? undefined
       : list.find((n) => n.id === this.selectedId) ?? (this.isWide ? list[0] : undefined);

@@ -78,14 +78,19 @@ def web_push_config() -> WebPushConfig | None:
         raise ValueError("웹 푸시 구독 정보나 발송 키가 맞지 않아요") from None
     # 같은 기기가 예전 이름(WEB_PUSH_SUBSCRIPTION)과 새 이름에 함께 있으면 한 번만 보낸다.
     unique: dict[str, dict] = {}
+    invalid = 0
     for value in raw:
         subscription = _valid_subscription(value)
         if subscription:
-            unique.setdefault(subscription["endpoint"], subscription)
+            previous = unique.get(subscription["endpoint"])
+            if previous is None or _has_canvas_preference(subscription):
+                unique[subscription["endpoint"]] = subscription
+        else:
+            invalid += 1
     if not unique:
         raise ValueError("웹 푸시 구독 정보나 발송 키가 맞지 않아요")
-    if len(unique) < len(set(raw)):
-        print(f"웹 푸시: 쓸 수 없는 구독 {len(set(raw)) - len(unique)}개를 건너뛰어요", file=sys.stderr)
+    if invalid:
+        print(f"웹 푸시: 쓸 수 없는 구독 {invalid}개를 건너뛰어요", file=sys.stderr)
     # py_vapid는 경로가 붙은 https 주소를 거부한다. 메일 주소는 공개 코드에 두지 않는다.
     subject = os.environ.get("WEB_PUSH_SUBJECT", "https://aniseongu.github.io").strip()
     if not subject.startswith(("https://", "mailto:")):
@@ -93,21 +98,46 @@ def web_push_config() -> WebPushConfig | None:
     return WebPushConfig(tuple(unique.values()), private_key, subject)
 
 
-def send_web_push(title: str, body: str, url: str, tag: str, priority: str) -> bool:
-    """Send to every connected device. A device whose subscription expired (404, 410) is skipped."""
+def _has_canvas_preference(subscription: dict) -> bool:
+    preferences = subscription.get("preferences")
+    return isinstance(preferences, dict) and "canvas" in preferences
+
+
+def _accepts_canvas(subscription: dict, summary: bool) -> bool:
+    if not _has_canvas_preference(subscription):
+        return False
+    mode = subscription["preferences"]["canvas"]
+    return mode == "reminders" or (mode == "summary" and summary)
+
+
+def _standard_subscription(subscription: dict) -> dict:
+    standard = {field: subscription[field] for field in ("endpoint", "expirationTime")
+                if field in subscription}
+    standard["keys"] = {field: subscription["keys"][field] for field in ("p256dh", "auth")}
+    return standard
+
+
+def send_web_push(
+    title: str, body: str, url: str, tag: str, priority: str, *, canvas_summary: bool | None = None,
+) -> bool:
+    """Filter private Canvas alerts by device; ordinary notices reach every device."""
     try:
         config = web_push_config()
     except ValueError:
         return False
     if config is None:
-        return False
+        return canvas_summary is not None
+    subscriptions = [subscription for subscription in config.subscriptions
+                     if canvas_summary is None or _accepts_canvas(subscription, canvas_summary)]
+    if not subscriptions:
+        return True
     payload = json.dumps({"title": title[:180], "body": body[:600], "url": url, "tag": tag,
                           "silent": priority == "low"}, ensure_ascii=False)
     delivered = failed = gone = 0
-    for subscription in config.subscriptions:
+    for subscription in subscriptions:
         try:
             webpush(
-                subscription_info=subscription,
+                subscription_info=_standard_subscription(subscription),
                 data=payload,
                 vapid_private_key=config.private_key,
                 vapid_claims={"sub": config.subject},
@@ -130,4 +160,4 @@ def send_web_push(title: str, body: str, url: str, tag: str, priority: str) -> b
     if gone:
         print(f"웹 푸시: 만료된 기기 {gone}개는 설정에서 알림을 다시 켜 주세요", file=sys.stderr)
     # 한 기기라도 일시 실패면 다음 실행에 다시 보낸다(D-005, 드문 중복은 감수).
-    return failed == 0 and delivered > 0
+    return failed == 0 and (delivered > 0 or canvas_summary is not None)

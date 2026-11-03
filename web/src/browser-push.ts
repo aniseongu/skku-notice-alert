@@ -7,6 +7,8 @@ const LEGACY = 'browser-push-registered';
 // 지금은 기기마다 빈 칸 WEB_PUSH_SUB_1..8 하나에 저장한다(D-019). 여러 기기가 함께 받는다.
 // 이 기기가 쓰는 칸과 구독 지문을 기억해 두었다가 끌 때 그 칸만 지운다.
 const DEVICE = 'browser-push-device';
+const CANVAS_MODE = 'browser-push-canvas-mode';
+export type CanvasPushMode = 'off' | 'summary' | 'reminders';
 export const DEVICE_SLOTS = Array.from({ length: 8 }, (_, index) => `WEB_PUSH_SUB_${index + 1}`);
 
 function myDevice(): { fingerprint: string; slot: string } | null {
@@ -18,6 +20,18 @@ function myDevice(): { fingerprint: string; slot: string } | null {
     }
   } catch { /* 모르면 새 칸을 고른다 */ }
   return null;
+}
+
+export function defaultCanvasPushMode(): CanvasPushMode {
+  return typeof matchMedia === 'function'
+    && matchMedia('(pointer: coarse)').matches && matchMedia('(hover: none)').matches ? 'reminders' : 'off';
+}
+
+export function canvasPushMode(): CanvasPushMode | null {
+  try {
+    const mode = localStorage.getItem(CANVAS_MODE);
+    return mode === 'off' || mode === 'summary' || mode === 'reminders' ? mode : null;
+  } catch { return null; }
 }
 
 export function supportsBrowserPush(): boolean {
@@ -64,17 +78,37 @@ export async function subscribeBrowserPush(): Promise<PushSubscription> {
   }
 }
 
-export async function connectBrowserPush(repo: string, token: string): Promise<void> {
-  const subscription = await subscribeBrowserPush();
+async function saveDeviceSubscription(
+  repo: string, token: string, subscription: PushSubscription, mode: CanvasPushMode,
+): Promise<void> {
   const config = await pushConfiguration();
   if (repo !== config.repository) throw new GitHubError('이 사이트를 배포한 GitHub 저장소에 연결해 주세요');
   const mine = await fingerprint(subscription);
-  // 이 기기가 이미 쓰던 칸이 있으면 그 칸을 덮어쓴다. 없으면 GitHub에 없는 첫 칸을 고른다.
+  const device = myDevice();
+  // 현재 구독과 지문이 다르면 기존 칸을 덮지 않는다. 예전 구독은 빈 기기 칸에 복사한다.
   const used = await listSecrets(repo, token);
-  const slot = myDevice()?.slot ?? DEVICE_SLOTS.find((name) => !used[name]);
+  const slot = (device?.fingerprint === mine ? device.slot : undefined)
+    ?? DEVICE_SLOTS.find((name) => !used[name]);
   if (!slot) throw new GitHubError('알림은 기기 8대까지 받을 수 있어요. 안 쓰는 기기에서 알림을 먼저 꺼 주세요');
-  await saveSecret(repo, token, slot, JSON.stringify(subscription.toJSON()));
-  try { localStorage.setItem(DEVICE, JSON.stringify({ fingerprint: mine, slot })); } catch { /* 비공개 모드에서도 구독은 저장한다 */ }
+  await saveSecret(repo, token, slot, JSON.stringify({ ...subscription.toJSON(), preferences: { canvas: mode } }));
+  try { localStorage.setItem(DEVICE, JSON.stringify({ fingerprint: mine, slot })); } catch { /* 저장 실패 시 서버 구독은 유지한다 */ }
+}
+
+export async function connectBrowserPush(repo: string, token: string): Promise<void> {
+  const subscription = await subscribeBrowserPush();
+  const mode = canvasPushMode() ?? defaultCanvasPushMode();
+  await saveDeviceSubscription(repo, token, subscription, mode);
+  try { localStorage.setItem(CANVAS_MODE, mode); } catch { /* 서버에 저장된 기기 설정은 유지한다 */ }
+}
+
+/** 이 기기의 기존 구독만 바꾼다. 새 구독과 알림 권한 요청은 하지 않는다. */
+export async function setCanvasPushMode(repo: string, token: string, mode: CanvasPushMode): Promise<void> {
+  if (mode !== 'off' && mode !== 'summary' && mode !== 'reminders') throw new Error('알림 방식을 다시 골라 주세요');
+  const registration = await navigator.serviceWorker?.getRegistration();
+  const subscription = await registration?.pushManager.getSubscription();
+  if (!subscription) throw new Error('먼저 이 기기에서 알림 받기를 켜 주세요');
+  await saveDeviceSubscription(repo, token, subscription, mode);
+  try { localStorage.setItem(CANVAS_MODE, mode); } catch { /* 설정은 서버 구독에 저장했다 */ }
 }
 
 export async function disconnectBrowserPush(repo: string, token: string): Promise<void> {

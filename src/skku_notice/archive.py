@@ -8,7 +8,8 @@ from skku_notice.deadline import extract_deadline
 from skku_notice.judge import Judgment
 from skku_notice.model import Match, Notice
 
-MAX_ARCHIVE = 300
+# 외부 인턴 공고(D-026)까지 담아 학교 공지가 밀려나지 않게 늘렸다.
+MAX_ARCHIVE = 500
 
 
 @dataclass(frozen=True)
@@ -191,3 +192,13 @@ def note_body_change(archive: Archive, key: str, body: str | None, now: str) -> 
     rest = {k: v for k, v in item.items() if k not in REDO_ON_CHANGE}
     return Archive({**archive.items, key: {**rest, "body_text": body, "rechecked_at": now,
                                            "changed_at": now, "change_kind": "본문"}}), True
+
+
+def set_source_deadlines(archive: Archive, deadlines: dict[str, str]) -> Archive:
+    """External postings carry their own deadline, stored like a body-read one for export and calendars."""
+    items = dict(archive.items)
+    for key, at in deadlines.items():
+        if key in items:
+            found = {"checked": True, "kind": "마감", "at": at, "model": "source"}
+            items[key] = {**items[key], "ai_deadline": found}
+    return Archive(items)

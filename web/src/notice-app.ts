@@ -262,13 +262,17 @@ export class NoticeApp extends LitElement {
     });
   }
 
+  private isExternal(notice: Notice): boolean { return Boolean(this.sources.find((s) => s.id === notice.source_id)?.external); }
+
   private byTab(list: Notice[], tab: Tab): Notice[] {
     if (tab === 'mine') return list.filter((n) => this.mine(n));
+    // 외부 인턴 공고는 하루 수십 건이라 학교 공지를 덮지 않게, 그 게시판을 고르지 않으면 전체와 마감 임박에서 뺀다(D-026).
+    const school = this.board === 'all' ? list.filter((n) => !this.isExternal(n)) : list;
     if (tab === 'deadline') {
-      return list.filter((n) => n.deadline && !deadlinePassed(n.deadline))
+      return school.filter((n) => n.deadline && !deadlinePassed(n.deadline))
         .sort((a, b) => Date.parse(a.deadline!) - Date.parse(b.deadline!));
     }
-    return list;
+    return school;
   }
 
   private tab(): Tab { return this.view === 'settings' ? 'mine' : this.view; }
@@ -450,9 +454,14 @@ export class NoticeApp extends LitElement {
           </div>
           <p class="side-head">게시판</p>
           <div class="side-group">
-            ${[{ id: 'all', label: '모든 게시판' }, ...this.sources.map((s) => ({ id: s.id, label: boardName(s, s.id) }))]
+            ${[{ id: 'all', label: '모든 게시판' }, ...this.sources.filter((s) => !s.external).map((s) => ({ id: s.id, label: boardName(s, s.id) }))]
               .map((b) => this.sideItem(b.label, null, this.board === b.id && !settings, () => { this.setBoard(b.id); if (settings) this.leaveSettings(); }))}
           </div>
+          ${this.sources.some((s) => s.external) ? html`<p class="side-head">인턴 공고</p>
+          <div class="side-group">
+            ${this.sources.filter((s) => s.external).map((s) => this.sideItem(boardName(s, s.id), null, this.board === s.id && !settings,
+              () => { this.setBoard(s.id); if (settings) this.leaveSettings(); }))}
+          </div>` : nothing}
           <div class="side-foot">
             ${this.install ? html`<button type="button" class="side-item" @click=${this.runInstall}>앱으로 설치하기</button>` : nothing}
             <button type="button" class="side-item kbd-only" aria-keyshortcuts="?" @click=${() => { this.shortcutsOpen = true; }}>
@@ -543,8 +552,9 @@ export class NoticeApp extends LitElement {
       <div class="original-body" lang="en">${this.bodyView(loaded, '영어 원문')}</div>`;
   }
 
-  private bodyView(loaded: NoticeBody | null, heading = '본문') {
+  private bodyView(loaded: NoticeBody | null, heading = '본문', external = false) {
     if (!loaded) return html`<p class="detail-note">본문은 아직 받지 않았어요. 원문 열기로 볼 수 있어요</p>`;
+    if (external && !loaded.body) return html`<p class="detail-note">자세한 내용과 지원 방법은 원문 열기에서 볼 수 있어요</p>`;
     const paragraphs = (loaded.body ?? '').split(/\n+/).filter(Boolean);
     // 정제한 본문 HTML이 있으면 표, 굵게, 링크, 목록을 살려 그린다(D-016). 그림도 그 안에 들어 있다.
     if (loaded.body_html && !loaded.body_from_image) {
@@ -735,7 +745,8 @@ export class NoticeApp extends LitElement {
         ${notice.changed_at ? html`<p class="detail-change">${koreanDate(notice.changed_at.slice(0, 10))}에 학교가 ${notice.change_kind === '제목' ? '제목을' : '본문을'} 고쳤어요</p>` : nothing}
         ${loaded?.summary ? html`<section class="detail-section summary" aria-label="요약">
           <h3>요약</h3>${loaded.summary.split('\n').filter(Boolean).map((line) => html`<p>${line}</p>`)}</section>` : nothing}
-        ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>` : this.translatedView(loaded)}
+        ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>`
+          : this.isExternal(notice) ? this.bodyView(loaded, '본문', true) : this.translatedView(loaded)}
         ${loaded?.attachments?.length ? this.attachmentsView(loaded) : nothing}
         <dl class="facts" aria-label="글 정보">
           <div><dt>게시일</dt><dd>${koreanDate(notice.posted_on)}</dd></div>

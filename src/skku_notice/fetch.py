@@ -137,3 +137,37 @@ def fetch_images(urls: list[str], user_agent: str, limit: int) -> list[ImageData
         if image is not None:
             images.append(image)
     return images
+
+
+# 외부 인턴 공고 API(D-026). 학교 주소가 아니라서 이 둘만 따로 허용한다.
+EXTERNAL_API_HOSTS = frozenset({"api.linkareer.com", "jasoseol.com"})
+
+
+def fetch_json_post(url: str, body: dict, user_agent: str, timeout_seconds: float,
+                    headers: dict[str, str] | None = None) -> dict:
+    parsed = urlsplit(url)
+    host = (parsed.hostname or "").lower()
+    if parsed.scheme != "https" or host not in EXTERNAL_API_HOSTS or parsed.port not in (None, 443):
+        raise UnsafeURL(f"https://{host}")
+    try:
+        addresses = _resolve_addresses(host)
+    except OSError as exc:
+        raise FetchError(f"{host}: 주소를 찾지 못했어요") from exc
+    if not addresses or any(not ipaddress.ip_address(address).is_global for address in addresses):
+        raise UnsafeURL(f"https://{host}")
+    request_headers = {"User-Agent": user_agent, **(headers or {})}
+    with httpx.Client(headers=request_headers, timeout=timeout_seconds, follow_redirects=False) as client:
+        for attempt in range(3):
+            try:
+                response = client.post(url, json=body)
+            except httpx.TransportError as exc:
+                error: Exception = exc
+            else:
+                if response.status_code == 200:
+                    return response.json()
+                if response.status_code not in RETRY_STATUS:
+                    raise FetchError(f"{host}: HTTP {response.status_code}")
+                error = FetchError(f"{host}: HTTP {response.status_code}")
+            if attempt < 2:
+                time.sleep(2**attempt)
+    raise FetchError(f"{host}: failed after 3 attempts ({error})") from error

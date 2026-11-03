@@ -45,7 +45,14 @@ from skku_notice.interests import (
     muted_from_env,
     refresh_archive_interests,
 )
-from skku_notice.jobs import COLLECTORS, parse_job_detail
+from skku_notice.jobs import (
+    COLLECTORS,
+    LK_API,
+    LK_DETAIL,
+    LK_HEADERS,
+    parse_job_detail,
+    parse_linkareer_detail,
+)
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match, Notice
 from skku_notice.notify import has_notification_channel, send_canvas, send_notice
@@ -114,11 +121,17 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
                 time.sleep(gap)
             count += 1
             try:
-                if html is None:
-                    html = fetch_detail(url, settings["user_agent"],
-                                        float(settings["timeout_seconds"]))
-                detail = (parse_job_detail(html, source["kind"], article_no, url)
-                          if source.get("external") else parse_detail(html, url))
+                if not from_fixtures and source.get("kind") == "linkareer":
+                    data = fetch_json_post(
+                        LK_API, {"query": LK_DETAIL, "variables": {"id": article_no}},
+                        settings["user_agent"], float(settings["timeout_seconds"]), LK_HEADERS)
+                    detail = parse_linkareer_detail(data, article_no, url)
+                else:
+                    if html is None:
+                        html = fetch_detail(url, settings["user_agent"],
+                                            float(settings["timeout_seconds"]))
+                    detail = (parse_job_detail(html, source["kind"], article_no, url)
+                              if source.get("external") else parse_detail(html, url))
             except (FetchError, ParseError) as exc:
                 if not isinstance(exc, UnsafeURL):
                     print(f"{key}: 본문 읽기 실패: {exc}", file=sys.stderr)

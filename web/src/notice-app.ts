@@ -172,6 +172,8 @@ export class NoticeApp extends LitElement {
       let [notices, matched] = await load();
       // 두 파일은 같은 실행에서 함께 만들어진다. 한쪽만 저장본이면 한 번 더 받는다.
       if (matched && matched.generated_at !== notices!.generated_at) [notices, matched] = await load();
+      // 뒤늦게 채운 본문도 새 수집 결과와 함께 다시 받는다.
+      if (this.generatedAt !== notices!.generated_at) this.bodies.clear();
       this.notices = notices!.notices;
       this.sources = notices!.sources;
       this.generatedAt = notices!.generated_at;
@@ -457,7 +459,12 @@ export class NoticeApp extends LitElement {
     const cached = this.bodies.get(notice.id);
     if (cached !== undefined) return cached;
     this.bodies.set(notice.id, 'loading');
-    fetchBody(notice).catch(() => null).then((body) => { this.bodies.set(notice.id, body); this.requestUpdate(); });
+    const generation = this.generatedAt;
+    fetchBody(notice).catch(() => null).then((body) => {
+      if (generation !== this.generatedAt) return;
+      this.bodies.set(notice.id, body);
+      this.requestUpdate();
+    });
     return 'loading';
   }
 

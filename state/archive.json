@@ -21,7 +21,12 @@
           "인턴"
         ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "시설, 물류, 일반관리 직무를 모집하며 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -42,6 +47,12 @@
         "kind": "마감",
         "at": "2026-11-13T23:59:00+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "40992fb138c1cf309f8ff1c88e0dec51bd3e365fa6eee43c5d4bf24dc21bc924",
+        "verdict": "not_relevant",
+        "reason": "시설, 물류, 일반관리 직무를 모집하며 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361860": {
@@ -66,11 +77,9 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "학사 학위 소지자나 졸업 예정자를 대상으로 하며 학부생이 지원하기에는 적합하지 않아요.",
+          "reason": "시설, 물류, 일반관리 직무를 모집하며 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
-          "interests": [
-            "인턴"
-          ]
+          "interests": []
         },
         "notified": false
       },
@@ -92,6 +101,12 @@
         "kind": "마감",
         "at": "2026-11-13T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "b8f65fbbd15075776b4bee37e4ba7b9e2349a2ca21e551fe4eb55a5cc50f432b",
+        "verdict": "not_relevant",
+        "reason": "시설, 물류, 일반관리 직무를 모집하며 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361865": {
@@ -116,11 +131,9 @@
         "reasons": [],
         "ai": {
           "verdict": "relevant",
-          "reason": "금융 IT 분야와 연관성이 높고 겨울방학 인턴십이라 학부생으로서 지원하기 적합해요.",
+          "reason": "계리 모델링 및 데이터 분석 업무를 수행하며 파이썬 활용 능력을 요구하므로 소프트웨어 관련 직무로 지원 가능합니다.",
           "model": "gemini-3.1-flash-lite",
-          "interests": [
-            "인턴"
-          ]
+          "interests": []
         },
         "notified": true
       },
@@ -142,6 +155,12 @@
         "kind": "마감",
         "at": "2026-11-17T16:00:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "44967139f59bf20d01d4c978bd07351e13400abdf17ffa9773a2178be5bddefd",
+        "verdict": "relevant",
+        "reason": "계리 모델링 및 데이터 분석 업무를 수행하며 파이썬 활용 능력을 요구하므로 소프트웨어 관련 직무로 지원 가능합니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361864": {
@@ -165,12 +184,10 @@
         ],
         "reasons": [],
         "ai": {
-          "verdict": "maybe",
-          "reason": "금융 IT와 데이터 분석 직무는 관련이 있으나, 구체적인 지원 자격 정보가 부족하여 확인이 필요해요.",
+          "verdict": "relevant",
+          "reason": "AI를 활용한 데이터 분석 및 업무 효율화 지원 업무를 포함하고 있어 소프트웨어 관련 직무로 지원 가능합니다.",
           "model": "gemini-3.1-flash-lite",
-          "interests": [
-            "인턴"
-          ]
+          "interests": []
         },
         "notified": true
       },
@@ -192,6 +209,12 @@
         "kind": "마감",
         "at": "2026-11-17T16:00:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "d4ecec8b3c11c60849a04607c59b3357194dee538a43e65fef292d56010525ee",
+        "verdict": "relevant",
+        "reason": "AI를 활용한 데이터 분석 및 업무 효율화 지원 업무를 포함하고 있어 소프트웨어 관련 직무로 지원 가능합니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361851": {
@@ -214,7 +237,12 @@
           "인턴"
         ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "학과 및 행정부서 행정지원 업무를 수행하는 행정인턴으로 소프트웨어 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[중앙대학교] 다빈치캠퍼스 행정인턴 채용 공고\n\n\n[담당업무]\n중앙대학교 다빈치캠퍼스 내 학과 및 행정부서 행정지원\n\n\n[접수기간]\n11월 03일 ~ 채용시 마감\n\n\n[채용공고]",
@@ -235,6 +263,12 @@
         "kind": "마감",
         "at": "2027-02-01T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "a36fa7ad26ca0206a240e91ed558de8bbc089602d10b2c3b83cf5a1edecb1ef9",
+        "verdict": "not_relevant",
+        "reason": "학과 및 행정부서 행정지원 업무를 수행하는 행정인턴으로 소프트웨어 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361846": {
@@ -257,7 +291,12 @@
           "인턴"
         ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "relevant",
+          "reason": "컴퓨터공학 전공자를 우대하며 소프트웨어 플랫폼 배포 및 기술 지원 업무를 수행하므로 소프트웨어 관련 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[다쏘시스템코리아] R&D Customer Success Intern (2-Month)\n\n\n[담당업무]\nSupport 3DEXPERIENCE Platform deployment projects\nCreate User Request for product bugs/defects and document Value Request\nCommunicate with the R&D teams\nMonitor registered issues, check the progress, and update related departments\nVisit customer sites with senior engineers to observe and understand workflows\n\n\n[접수기간]\n11월 03일 ~ 채용시 마감\n\n\n[채용공고]",
@@ -282,6 +321,12 @@
       "translation": {
         "title": "[다쏘시스템코리아] R&D Customer Success 인턴 (2개월)",
         "body": "[다쏘시스템코리아] R&D Customer Success 인턴 (2개월)\n\n\n[담당업무]\n3DEXPERIENCE 플랫폼 구축 프로젝트 지원\n제품 버그/결함에 대한 사용자 요청 생성 및 가치 요청 문서화\nR&D 팀과의 소통\n등록된 이슈 모니터링, 진행 상황 확인 및 관련 부서 업데이트\n선임 엔지니어와 함께 고객사 방문 및 워크플로우 관찰과 이해\n\n\n[접수기간]\n11월 03일 ~ 채용시 마감\n\n\n[채용공고]",
+        "model": "gemini-3.1-flash-lite"
+      },
+      "intern_judgment": {
+        "fingerprint": "2c9d4a784b7c98e91de92b0929ecf1685b7b1550bef9ee1de18e811952a39368",
+        "verdict": "relevant",
+        "reason": "컴퓨터공학 전공자를 우대하며 소프트웨어 플랫폼 배포 및 기술 지원 업무를 수행하므로 소프트웨어 관련 직무입니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },

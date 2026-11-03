@@ -1,50 +1,93 @@
 # 성공
 
-성균관대 공지 게시판(전체 공지, 소프트웨어학과 공지)을 15분마다 읽고, **내가 정한 기준에 맞는 글만** 휴대폰과 PC에 알림으로 보낸다.
-알림을 누르면 원문이 열린다. PC가 꺼져 있어도 GitHub Actions에서 돈다. 같은 데이터를 JSON API로도 낸다.
+성균관대 공지와 인턴 공고를 모아 보고, 관심 있는 글의 마감을 챙기는 개인용 PWA예요.
 
-- 진행 상황은 [HANDOFF.md](HANDOFF.md), 목표는 [GOAL.md](GOAL.md).
-- 구조: Python, httpx, selectolax, 웹 푸시(pywebpush), GitHub Actions, GitHub Pages. 결정 이유는 [docs/DECISIONS.md](docs/DECISIONS.md).
-- 참고한 프로젝트: [docs/research/open-source.md](docs/research/open-source.md).
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Lit](https://img.shields.io/badge/Lit-324FFF?style=flat-square&logo=lit&logoColor=white)](https://lit.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev/)
+[![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
+[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/aniseongu/skku-notice-alert/actions)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white)](https://aniseongu.github.io/skku-notice-alert/)
 
-## 사이트 열기
+**[성공 열기](https://aniseongu.github.io/skku-notice-alert/)**
 
-휴대폰과 PC에서는 [성공](https://aniseongu.github.io/skku-notice-alert/)를 연다. PC를 켜 두거나 로컬 서버를 실행할 필요가 없다. 브라우저에서 앱으로 설치하면 아이콘으로 열 수 있다.
+휴대폰과 노트북 브라우저에서 열고 앱으로 설치할 수 있어요. 수집과 알림은 GitHub Actions에서 실행하므로 내 PC를 켜 둘 필요가 없어요. 성균관대학교의 공식 서비스는 아니에요.
 
-`Publish website`가 화면을 GitHub Pages에 배포한다. `main`에 `web/` 변경을 push하면 자동 실행되며, Actions에서 수동으로 실행할 수도 있다. 알림 키 없이도 배포할 수 있다. 공개 archive가 있으면 그 판정과 본문을 사용하고, 첫 배포에는 공개 게시판 목록을 읽어 표시한다. 공지 자동 수집과 알림은 아래 `Notice and Pages` 설정을 마친 뒤 켠다.
+## 기능
 
-`localhost` 주소는 화면을 개발할 때만 쓴다.
+- 성대 공지, 인턴 공고, 저장한 글을 세 탭에서 확인해요.
+- 최신순과 마감순, 게시판 필터, 읽지 않은 공지만 보기를 지원해요.
+- 제목, 분류, 판정 이유로 검색해요. 전체 본문 검색은 아직 지원하지 않아요.
+- 공지 본문과 이미지, 요약, 번역을 보고 원문을 바로 열어요. 아직 수집하지 못한 본문은 준비 상태를 표시해요.
+- 관심 키워드와 개인 기준에 맞는 새 공지를 웹 푸시로 받아요. 수정된 공지와 마감 알림도 지원해요.
+- 구글 캘린더에 학교 공지 전체와 저장한 인턴 공고의 남은 일정을 넣어요.
+- 라이트와 다크 모드, 키보드 탐색, 오프라인에서 마지막으로 받은 목록을 지원해요.
+- 아이캠퍼스 개인 액세스 토큰을 연결하면 강의와 과제 마감도 알려줘요. 아캠플러스와 겹치면 알림을 끄거나 하루 요약만 받을 수 있어요. 기본은 꺼짐이고, 필요한 경우 하루 요약이나 마감 알림을 켜요. 개인 강의 내용은 공개 목록에 내보내지 않아요.
 
-## 쓰는 법 (M2 이후)
+## 구성
 
-1. 사이트 설정의 "이 기기 알림"에서 휴대폰과 PC마다 "알림 받기"를 누른다(기기 8대까지, D-019). 알림은 브라우저 웹 푸시로 온다.
-2. Apprise 주소로도 받고 싶으면 선택으로 `NOTIFY_URLS`를 넣는다(기본은 쓰지 않는다).
-3. `config/rules.example.yaml`을 `config/rules.yaml`로 복사해 기준을 고친다.
-4. `uv run skku-notice --dry-run --all`로 어떤 글이 올지 미리 본다.
+| 영역 | 사용 기술 |
+|---|---|
+| 수집과 파싱 | Python, httpx, selectolax, nh3 |
+| 판정과 요약 | Google Gen AI SDK, Gemini, 키가 없으면 규칙 적용 |
+| 이미지 글자 인식 | RapidOCR, ONNX Runtime |
+| 화면 | TypeScript, Lit, Vite, Pretendard |
+| 설치와 오프라인 | vite-plugin-pwa, Workbox |
+| 알림 | pywebpush, Apprise |
+| 실행과 배포 | uv, GitHub Actions, GitHub Pages |
 
-## 실제로 돌리기 (M3)
+공개 게시판에서 받은 글을 파싱하고 중복을 걸러 기준을 적용한 뒤 알림과 정적 API를 만들어요. 화면은 이 API를 읽어요. 참고한 오픈소스와 재사용한 부분은 [조사 기록](docs/research/open-source.md)에 정리했어요.
 
-1. 이 코드를 **공개** GitHub 저장소에 올린다. `Settings > Pages > Build and deployment > Source`를 **GitHub Actions**로 설정한다. `Settings > Actions > General > Workflow permissions`에서 `Read and write permissions`를 선택해 봇이 `state/`를 push할 수 있게 한다.
-2. `Settings > Secrets and variables > Actions`에 아래 키를 등록한다. 첫 배포 전에는 GitHub 화면에서 등록하고, Pages가 열린 뒤에는 앱의 **설정** 화면에서 키와 관심 키워드를 저장할 수도 있다. 앱 설정을 쓰려면 화면 안내에 따라 GitHub 토큰을 연결한다.
+## 내 저장소에서 실행하기
 
-   | 종류 | 이름 | 용도 |
-   |---|---|---|
-   | Secret, 필수 | `WEB_PUSH_PRIVATE_KEY` | 웹 푸시 발송 키(VAPID). 공개키는 `web/public/web-push.json`. |
-   | Secret, 앱이 저장 | `WEB_PUSH_SUB_1`..`8` | 기기별 알림 구독. 설정의 "알림 받기"가 빈 칸에 저장한다. |
-   | Secret, 선택 | `NOTIFY_URLS` | Apprise 알림 주소. 쓰지 않으면 비워 둔다. |
-   | Secret, 선택 | `GEMINI_API_KEY` | 판정과 요약. 없으면 규칙으로 처리한다. |
-   | Secret, 선택 | `PROFILE_YAML` | Gemini용 프로필 YAML 본문. 저장소에 올리지 않는다. |
-   | Secret, 선택 | `CANVAS_TOKEN` | 아이캠퍼스 알림. Canvas 내용은 Pages와 공개 커밋에 넣지 않는다. |
-   | Variable, 선택 | `INTEREST_KEYWORDS` | 관심 키워드. |
-   | Variable, 앱이 저장 | `MUTED_CATEGORIES`, `SAVED_NOTICES`, `READ_NOTICES` | 끈 분류, 저장한 공지, 읽은 글(D-018). |
+1. 저장소를 준비하고 `Settings > Pages > Build and deployment > Source`를 **GitHub Actions**로 설정해요. 워크플로마다 필요한 권한을 선언하므로 저장소 전체의 기본 권한을 넓힐 필요는 없어요.
+2. `Settings > Secrets and variables > Actions`에서 필요한 값을 등록해요. Pages가 열린 뒤에는 앱 설정에서 저장소를 연결해 키와 관심 키워드를 넣을 수도 있어요.
+3. `Actions > Publish website > Run workflow`로 화면을 배포해요. 알림 키가 없어도 공개 화면을 배포할 수 있어요.
+4. `Actions > Check overseas access > Run workflow`로 공개 게시판과 Canvas의 접근 상태를 확인해요.
+5. `Actions > Notice and Pages > Run workflow`로 수집을 시작해요. **첫 실행에는 기준선만 만들고 알림을 보내지 않아요.** 이후 약 15분 간격으로 확인하며 Actions 사정에 따라 늦어질 수 있어요.
+6. 앱 설정의 **이 기기 알림**에서 휴대폰과 노트북을 각각 연결해요. 웹 푸시는 최대 8대까지 등록해요.
 
-3. `Actions > Check overseas access > Run workflow`를 먼저 실행해 두 게시판과 Canvas 주소의 HTTP 상태 코드와 크기를 확인한다. 각 주소를 한 번씩만 요청한다. 해외 러너에서 막히면 예약 실행 설정을 다시 검토해야 한다.
-4. `Actions > Notice and Pages > Run workflow`를 수동 실행한다. **첫 실행은 게시판별 기준선만 저장하고 공지 알림을 보내지 않는다.** Canvas도 첫 실행에는 기준선만 만든다. `state/seen.json`과 `state/archive.json`은 봇이 커밋한다. 이후 15분 간격 예약 실행에서 새 글을 처리한다. 예약 실행은 정시보다 늦을 수 있다.
-5. `https://<계정>.github.io/<저장소>/`를 휴대폰과 PC 브라우저에서 열고 앱으로 설치한다. 공지 목록과 상세, 내 공지 판정, 요약은 공개 Pages에 올라간다. 다른 사람도 이 데이터를 볼 수 있다. `config/rules.yaml`을 저장소에 커밋하면 그 규칙도 공개된다. 워크플로는 파일이 없으면 `config/rules.example.yaml`을 사용한다.
+| 종류 | 이름 | 용도 |
+|---|---|---|
+| Secret | `WEB_PUSH_PRIVATE_KEY` | 웹 푸시 발송용 VAPID 비밀키. 대응 공개키는 `web/public/web-push.json`에 둬요. |
+| Secret, 앱이 저장 | `WEB_PUSH_SUB_1`부터 `WEB_PUSH_SUB_8` | 기기별 알림 구독 정보 |
+| Secret, 선택 | `GEMINI_API_KEY` | Gemini 판정, 요약과 번역 |
+| Secret, 선택 | `PROFILE_YAML` | 개인 프로필. 파일 대신 Secret에 넣어요. |
+| Secret, 선택 | `CANVAS_TOKEN` | 아이캠퍼스 개인 액세스 토큰 |
+| Secret, 선택 | `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN` | 구글 캘린더 연결 |
+| Secret, 선택 | `NOTIFY_URLS` | Apprise 추가 알림 경로 |
+| Variable, 앱이 저장 | `INTEREST_KEYWORDS`, `MUTED_CATEGORIES` | 관심 키워드와 끈 분류 |
+| Variable, 앱이 저장 | `SAVED_NOTICES`, `READ_NOTICES` | 저장한 글과 읽음 상태 |
+| Variable, 앱이 저장 | `CANVAS_ALERT_MODE` | `off`, `summary`, `reminders`. 기본 `off` |
 
-Canvas 알림 상태는 공개 저장소 대신 Actions 캐시에 보관한다. 캐시가 삭제되면 다음 실행에서 Canvas 기준선을 다시 만들기 때문에 일부 리마인드가 빠질 수 있다. 실제 알림 수신과 Pages 설치는 저장소를 만든 뒤 확인해야 한다.
+GitHub 연결 토큰은 이 저장소 하나에만 접근하는 Fine-grained token을 사용해요. 앱 안내에 따라 필요한 Secrets와 Variables 권한만 부여해요. 다른 기기 연결 QR에는 연결 열쇠가 들어 있으니 공유하거나 캡처해서 올리지 마세요.
 
-## AI로 개발하기
+## 공개되는 정보
 
-Claude Code와 Codex가 번갈아 작업한다. 규칙 정본은 [AGENTS.md](AGENTS.md), 역할 분담은 [docs/WORKFLOW.md](docs/WORKFLOW.md).
-새 세션에서는 "HANDOFF 보고 이어서 해줘"라고 하면 된다.
+공개 저장소에는 코드와 게시판 목록, 공지 보관본이 올라가요. GitHub Pages의 JSON API에는 공지 본문, 요약과 개인화된 판정 이유도 포함돼요. 프로필 원문을 공개하지 않아도 판정 이유에서 관심 분야나 일부 조건이 드러날 수 있어요. 개인 판단을 비공개로 써야 한다면 공개 정적 API 구조를 그대로 사용하면 안 돼요.
+
+키와 토큰, 알림 구독 주소는 GitHub Secrets에 넣고 커밋하지 마세요. `.env`, `config/profile.yaml`, `state/canvas.json`은 Git에서 제외해요. 아이캠퍼스 알림 상태는 토큰에서 파생한 키로 암호화해 캐시하고, 복호화한 상태는 실행 중인 러너에만 둬요. 토큰이 바뀌거나 캐시가 사라지면 기준선을 다시 만들어요. Actions 캐시 자체는 비밀 저장소가 아니므로 민감한 원문을 넣지 마세요. 공개 보안 점검 범위와 한계는 [점검 기록](docs/research/2026-11-04_public-security.md)에 있어요.
+
+## 로컬 개발
+
+Python 3.12 이상, uv와 Node.js가 필요해요.
+
+```sh
+uv sync --frozen
+cp config/rules.example.yaml config/rules.yaml
+uv run skku-notice --dry-run --all --no-canvas
+scripts/check.sh
+```
+
+`--dry-run`은 알림과 상태 저장 없이 결과를 확인해요. 개인 규칙을 담은 `config/rules.yaml`은 커밋하기 전에 공개 가능한 내용인지 확인하세요.
+
+```sh
+cd web
+npm ci
+npm run dev
+npm run build
+npm test
+```
+
+`localhost`는 화면 개발용이에요. 실제 배포와 설치 검증은 [정식 사이트](https://aniseongu.github.io/skku-notice-alert/)에서 진행해요.

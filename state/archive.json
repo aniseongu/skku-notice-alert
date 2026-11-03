@@ -1,6 +1,55 @@
 {
   "version": 1,
   "items": {
+    "skku-notice01/140686": {
+      "notice": {
+        "id": "skku-notice01/140686",
+        "source_id": "skku-notice01",
+        "article_no": "140686",
+        "title": "2027년 엔지니어링인재육성재단 제2기 장학생 모집 안내",
+        "category": "장학",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=140686",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T16:16:48.342507+09:00"
+      },
+      "match": {
+        "rule_name": "장학",
+        "priority": "low",
+        "interests": [],
+        "reasons": [
+          "category:장학"
+        ],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "장학금 모집 공고이며 학부생 인턴이나 개발 관련 실무 교육 및 활동이 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "(재)엔지니어링인재육성재단에서 대한민국 엔지니어링 산업의 미래를 이끌어 갈 우수 인재를 발굴·육성하기 위하여 제 2기(2027년도) 장학생 선발을 다음과 같이 공고하오니, 학생여러분의 많은 지원 바랍니다.\n\n1. 접수 기간 : 2026년 10월 19일(월) 12시 ~ 2026년 11월 13일(금) 18시\n\n2. 지원 대상 : 엔지니어링 및 신ㆍ재생에너지 관련 학과 재학생\n※ 장학금 수혜기간(2027년도) 중 국내에서 정규 학기 정상 이수 예정자(한국인)\n- 국내 4년제 대학교, 3학기 이상 재학중인 자\n- 최근 이수 학기 및 전체 학기 평균 평점이 각각 3.0/4.5 이상인 자\n- 최근 이수 학기 이수 학점이 12학점 이상인 자\n- 추천서(학과장·학부장·지도교수) 제출자\n\n3. 접수 방법 및 절차 : 관련 서류 이메일 제출 + 구글폼 작성(두 가지 모두 필수)\n\n4. 합격자 발표 : 2027년 2월 예정 / (일정 변경시 홈페이지 공고 예정)\n\n* 자세한 지원 요건, 제출 서류 및 선발 기준은 재단 홈페이지 공지사항을 반드시 확인하시기 바랍니다.\n\n* 해당 재단의 추천서의 경우 추천인의 추천사유 및 인적사항을 기재하게 되어 있으므로 총장 직인 신청이 불가능한 양식입니다. 소속 학과장, 학부장, 지도교수 등 추천을 받으시려는 분께 직접 의뢰하시기 바랍니다.\n\n5. 문의처\n- 엔지니어링인재육성재단 사무국\n홈페이지 : egifoundation.or.kr / 이메일 : egisf@egifoundation.or.kr",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "[붙임1][공고문]제2기(2027년도) 장학생 선발.pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=140686&attachNo=118460",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<p>(재)엔지니어링인재육성재단에서 대한민국 엔지니어링 산업의 미래를 이끌어 갈 우수 인재를 발굴·육성하기 위하여 제 2기(2027년도) 장학생 선발을 다음과 같이 공고하오니, 학생여러분의 많은 지원 바랍니다.</p><p>1. 접수 기간 : 2026년 10월 19일(월) 12시 ~ 2026년 11월 13일(금) 18시</p><p>2. 지원 대상 : 엔지니어링 및 신ㆍ재생에너지 관련 학과 재학생</p><p>※ 장학금 수혜기간(2027년도) 중 국내에서 정규 학기 정상 이수 예정자(한국인)</p><ul><li>국내 4년제 대학교, 3학기 이상 재학중인 자</li><li>최근 이수 학기 및 전체 학기 평균 평점이 각각 3.0/4.5 이상인 자</li><li>최근 이수 학기 이수 학점이 12학점 이상인 자</li><li>추천서(학과장·학부장·지도교수) 제출자</li></ul><p>3. 접수 방법 및 절차 : 관련 서류 이메일 제출 + 구글폼 작성(두 가지 모두 필수)</p><p>4. 합격자 발표 : 2027년 2월 예정 / (일정 변경시 홈페이지 공고 예정)</p><p>* 자세한 지원 요건, 제출 서류 및 선발 기준은 재단 홈페이지 공지사항을 반드시 확인하시기 바랍니다.</p><p>* 해당 재단의 추천서의 경우 추천인의 추천사유 및 인적사항을 기재하게 되어 있으므로 총장 직인 신청이 불가능한 양식입니다. 소속 학과장, 학부장, 지도교수 등 추천을 받으시려는 분께 직접 의뢰하시기 바랍니다.</p><p>5. 문의처</p><ul><li>엔지니어링인재육성재단 사무국</li></ul><p>홈페이지 : egifoundation.or.kr / 이메일 : egisf@egifoundation.or.kr</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/10/RJAGWNvlSwXUNoUkGZyf.png\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/10/RJAGWNvlSwXUNoUkGZyf.png"
+      ],
+      "summary": "엔지니어링 관련 학과 3학기 이상 재학 중인 학생은 11월 13일까지 지원 서류를 이메일로 제출하고 구글폼을 작성하세요. 학과장이나 지도교수의 추천서가 필요합니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T16:16:48.342507+09:00"
+    },
     "skku-notice01/141534": {
       "notice": {
         "id": "skku-notice01/141534",
@@ -717,7 +766,12 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00"
+      "fetched_at": "2026-11-03T12:27:42.906254+09:00",
+      "translation": {
+        "title": "노이즈가 핵심일 때: 인문학적 과업이 우리의 데이터 파이프라인에 대해 시사하는 점 (11/18 10:30)",
+        "body": "제목: 노이즈가 핵심일 때: 인문학적 과업이 우리의 데이터 파이프라인에 대해 시사하는 점\n\n연사: Maria Antoniak 교수 (University of Colorado Boulder)\n\n일시: 2026년 11월 18일 10:30 - 11:30\n\n장소:\n온라인: https://hli.skku.edu/InvitedTalk261118\n\n언어: 영어 강연 및 영어 슬라이드\n\n초록:\n스토리텔링이나 시와 같은 인문학적 과업에 대한 전산 연구를 수행하다 보면, 표준 NLP 파이프라인을 어렵게 만드는 특성을 가진 데이터셋을 자주 마주하게 됩니다. 이번 강연에서는 저와 공동 연구자들이 이러한 마찰을 겪었던 세 가지 사례를 다룹니다. 첫째, WildChat과 같은 사용자-챗봇 대화에 대해 논의합니다. 창의적인 요청이 길고 상세하며 빈번하게 수정되는 이러한 기록은 사람들이 챗봇과 어떻게 글을 쓰는지 보여주는 풍부하면서도 복잡한 자료입니다. 둘째, 사전 학습 데이터 내의 매우 방대하고 이질적인 웹 텍스트를 위한 세밀한 서사 주석 체계 개발 과정을 설명합니다. 이 과정에서 인문학적 개념을 운용하는 것은 데이터의 다양성으로 인해 복잡해집니다. 셋째, 시를 다룹니다. 학습 말뭉치를 구축하는 데 사용되는 선형화 시스템은 시인들이 의도적으로 사용하는 서식을 일상적으로 평탄화하거나 삭제합니다. 이러한 사례들을 통해 저는 무엇을 노이즈로 간주할지는 누가 어떤 목적으로 읽느냐에 달려 있으며, 인문학적 관점을 진지하게 고려하는 것이 사람들이 실제로 언어를 사용하는 방식을 더 잘 반영하는 데이터 관행, 주석 체계 및 평가를 구축하는 데 도움이 될 것이라고 주장합니다.\n\n연사 약력:\nMaria Antoniak은 University of Colorado Boulder의 컴퓨터과학과 조교수이며, 정보과학과 소속이자 Boulder NLP 그룹의 일원입니다. 이전에는 Allen Institute for AI의 Young Investigator였으며, University of Copenhagen의 Pioneer Centre for AI에서 박사후 연구원을 지냈습니다. Cornell University에서 정보과학 박사 학위를, University of Washington에서 전산언어학 석사 학위를 받았습니다. 또한 ETH Zürich, Microsoft Research FATE, Twitter Cortex, Facebook Core Data Science 등에서 근무한 바 있습니다. 연구 분야는 자연어 처리 및 문화 분석입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "skku-notice01/141498": {
       "notice": {

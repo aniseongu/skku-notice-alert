@@ -287,6 +287,8 @@
   .board-option[aria-pressed="true"] { background: var(--sunken); color: var(--text); font-weight: 600; }
   .board-check { width: 7px; height: 12px; margin-right: 3px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); }
 
+  .view-options { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 var(--gutter) 4px; }
+  .view-options .chip { min-height: 44px; }
   .list { padding: 0 var(--gutter); }
   .group + .group { margin-top: 20px; }
   .list-controls { display: flex; align-items: center; gap: 4px; margin-left: auto; }
@@ -381,6 +383,7 @@
     .side-item.add { color: var(--text-3); }
     .side-foot { display: flex; flex-direction: column; gap: 1px; margin-top: auto; padding-top: 12px; }
 
+    .view-options { padding: 12px 24px 0; }
     .list { padding: 0; }
     .group + .group { margin-top: 8px; }
     .group-head { min-height: 0; margin: 0; padding: 14px 24px 6px; }

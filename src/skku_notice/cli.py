@@ -30,7 +30,7 @@ from skku_notice.canvas_alerts import (
 from skku_notice.deadline import KST
 from skku_notice.export import export_site
 from skku_notice.fetch import FetchError, UnsafeURL, fetch_detail, fetch_images, fetch_list
-from skku_notice.interests import load_interests, match_interests
+from skku_notice.interests import load_interests, match_interests, muted_from_env
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match
 from skku_notice.notify import has_notification_channel, send_canvas, send_notice
@@ -176,6 +176,7 @@ def run(args: argparse.Namespace) -> int:
     try:
         rules = load_rules(args.rules)
         interests = load_interests(INTERESTS_PATH, os.environ.get("INTEREST_KEYWORDS", ""))
+        muted_categories = muted_from_env(os.environ.get("MUTED_CATEGORIES", ""))
         settings = yaml.safe_load(SOURCES_PATH.read_text(encoding="utf-8"))
         ai = yaml.safe_load(AI_PATH.read_text(encoding="utf-8"))
         state = load_state(STATE_PATH)
@@ -289,7 +290,8 @@ def run(args: argparse.Namespace) -> int:
                 if word in text_interests or (judgment and word in judgment.interests)
             )
             priority = decide_priority(match, judgment, text_interests) if process and not excluded else None
-            if process and priority is None and rules.notify_all:
+            # 꺼 둔 분류는 "모두 알림"만 빠진다. 기준, 관심 키워드, Gemini 해당은 그대로 알린다(D-018).
+            if process and priority is None and rules.notify_all and notice.category not in muted_categories:
                 priority = "low"
             if not args.dry_run and seen is not None and seen.status == "pending":
                 previous = archive.items.get(f"{source['id']}/{notice.article_no}", {}).get("match", {})

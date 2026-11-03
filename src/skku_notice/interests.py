@@ -43,3 +43,8 @@ def match_interests(notice: Notice, keywords: tuple[str, ...], ocr_text: str = "
         ):
             matched.append(keyword)
     return tuple(matched)
+
+
+def muted_from_env(value: str) -> frozenset[str]:
+    """Categories the user turned off in settings (Actions variable MUTED_CATEGORIES)."""
+    return frozenset(word.strip() for word in re.split(r"[,\n]", value) if word.strip())

@@ -119,6 +119,19 @@ def mark_image_attempted(archive: Archive, key: str) -> Archive:
     return Archive({**archive.items, key: {**archive.items[key], "image_attempted": True}})
 
 
+def update_ai_deadlines(archive: Archive, results: dict, model: str) -> Archive:
+    """Body-read dates for notices whose title has none. Checked notices are not asked again."""
+    items = dict(archive.items)
+    for key, found in results.items():
+        if key not in items:
+            continue
+        entry = {"checked": True, "model": model}
+        if found:
+            entry.update(kind=found[0], at=found[1])
+        items[key] = {**items[key], "ai_deadline": entry}
+    return Archive(items)
+
+
 def update_translation(archive: Archive, key: str, result: tuple[str, str] | None, model: str) -> Archive:
     """Korean translation of an English notice. Failures count attempts so a broken notice stops retrying."""
     item = archive.items[key]

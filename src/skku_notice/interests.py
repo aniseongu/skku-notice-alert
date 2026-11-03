@@ -7,11 +7,7 @@ import yaml
 
 from skku_notice.model import Notice
 
-SIMILAR = (
-    ("인턴", "현장실습", "체험형"),
-    ("장학", "장학금"),
-    ("공모전", "경진대회", "챌린지"),
-)
+# 관심 키워드는 그 글자가 제목, 분류, 본문, 그림 글자에 그대로 있을 때만 맞는다(D-024).
 
 
 def load_interests(path: Path, environment: str = "") -> tuple[str, ...]:
@@ -35,12 +31,7 @@ def match_interests(notice: Notice, keywords: tuple[str, ...], ocr_text: str = "
     matched = []
     for keyword in keywords:
         words = keyword.split()
-        if words and all(
-            any(_compact(variant) in haystack for variant in next(
-                (group for group in SIMILAR if word.casefold() in group), (word,)
-            ))
-            for word in words
-        ):
+        if words and all(_compact(word) in haystack for word in words):
             matched.append(keyword)
     return tuple(matched)
 

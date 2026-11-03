@@ -15,6 +15,8 @@ export interface Notice {
   first_seen: string | null;
   // 영어 공지를 Gemini가 옮긴 제목(추가 필드). 없으면 원문 제목을 쓴다.
   title_ko?: string | null;
+  // 제목에 마감이 없을 때 Gemini가 본문에서 읽은 날짜의 종류(추가 필드, D-023). 없으면 마감.
+  deadline_kind?: '마감' | '일정';
 }
 
 export type Verdict = 'relevant' | 'maybe' | 'not_relevant';
@@ -85,11 +87,10 @@ export const VERDICT_LABEL: Record<Verdict, string> = { relevant: '해당', mayb
 export function isMine(judgement: Judgement | undefined): boolean {
   if (!judgement) return false;
   const verdict = judgement.ai?.verdict;
-  const interested = Boolean(judgement.interests?.length) || Boolean(judgement.ai?.interests?.length);
+  const interested = Boolean(judgement.interests?.length);
   // 기준에 맞아도 Gemini가 "해당 없음"이라고 본 글은 내 공지에 올리지 않는다(알림도 조용히 간다, decide_priority).
   if (verdict === 'not_relevant' && !interested) return false;
-  return Boolean(judgement.rule_name) || Boolean(judgement.interests?.length) || Boolean(judgement.ai?.interests?.length)
-    || verdict === 'relevant' || verdict === 'maybe';
+  return Boolean(judgement.rule_name) || interested || verdict === 'relevant' || verdict === 'maybe';
 }
 
 export const boardName = (source: Source | undefined, fallback: string) => (source?.name ?? fallback).replace(/\s*공지$/, '');
@@ -100,16 +101,13 @@ export const cleanTitle = (title: string) =>
 
 // 관심 키워드 글자 매칭. 서버(src/skku_notice/interests.py)와 같은 규칙: 띄어쓰기로 나눈 낱말이 모두 들어 있으면 맞음,
 // 띄어쓰기 무시, 비슷한 말 포함(docs/design/ux-rules.md 2-1절).
-const SYNONYMS: string[][] = [['인턴', '현장실습', '체험형'], ['장학', '장학금'], ['공모전', '경진대회', '챌린지']];
 const squash = (text: string) => text.replace(/\s+/g, '').toLowerCase();
 
 export function keywordMatches(keyword: string, text: string): boolean {
   const haystack = squash(text);
   const words = keyword.split(/\s+/).filter(Boolean);
-  return words.length > 0 && words.every((word) => {
-    const group = SYNONYMS.find((g) => g.includes(word)) ?? [word];
-    return group.some((w) => haystack.includes(squash(w)));
-  });
+  // 그 글자가 그대로 있을 때만 맞는다. 비슷한 말이나 뜻으로는 맞추지 않는다(D-024).
+  return words.length > 0 && words.every((word) => haystack.includes(squash(word)));
 }
 
 // 날짜 계산은 모두 한국 시간 기준 날짜(YYYY-MM-DD)로 한다.

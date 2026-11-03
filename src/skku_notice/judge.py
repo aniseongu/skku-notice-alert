@@ -54,8 +54,6 @@ def decide_priority(
         return rule_priority
     if rule_priority:
         return "low" if judgment.verdict == "not_relevant" else rule_priority
-    if judgment.interests:
-        return "default"
     return {"relevant": "default", "maybe": "low"}.get(judgment.verdict)
 
 
@@ -97,8 +95,8 @@ def judge_notices(
         "summary는 해요체 1~3문장으로, 각 문장을 줄바꿈으로 구분하세요. "
         "누가 언제까지 무엇을 하면 되는지 위주로 쓰세요. "
         "이유 문장에서 판정어(해당, 확인 필요, 해당 없음)를 되풀이하지 마세요. "
-        "interests에는 주어진 관심 키워드 중 글과 뜻이 맞는 값만 넣으세요. "
-        "글자에 직접 없어도 뜻이 맞으면 포함하고, 관심 키워드가 없으면 빈 배열로 반환하세요. "
+        "interests에는 주어진 관심 키워드 중 제목이나 본문에 그 글자가 그대로 있는 값만 넣으세요. "
+        "뜻이 비슷하다고 넣지 말고, 관심 키워드가 없으면 빈 배열로 반환하세요. "
         "본문이 빈 글은 제목만으로 판정하고 모르는 자격은 단정하지 마세요. "
         "그림이 있으면 그림 내용도 판정, 이유, 요약에 반영하세요. "
         "image_text에는 그림 속 글자를 읽기 순서대로 옮겨 적고 없으면 빈 문자열을 쓰세요."

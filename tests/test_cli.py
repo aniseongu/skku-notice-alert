@@ -91,7 +91,7 @@ def test_fixture_dry_run_shows_interest_and_high_priority(tmp_path: Path, monkey
     monkeypatch.setattr(
         cli, "parse_list",
         lambda html, source_id, url: [
-            Notice(source_id, "123", "겨울 방학 현장실습 모집", "일반", url, date(2026, 11, 2), False)
+            Notice(source_id, "123", "겨울 방학 인턴 모집", "일반", url, date(2026, 11, 2), False)
         ],
     )
     monkeypatch.setenv("INTEREST_KEYWORDS", "겨울방학 인턴")
@@ -101,7 +101,7 @@ def test_fixture_dry_run_shows_interest_and_high_priority(tmp_path: Path, monkey
     )
     assert cli.run(args) == 0
     output = capsys.readouterr().out
-    assert "[high] 겨울 방학 현장실습 모집" in output
+    assert "[high] 겨울 방학 인턴 모집" in output
     assert "관심 겨울방학 인턴" in output
 
 

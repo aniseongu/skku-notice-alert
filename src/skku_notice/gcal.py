@@ -37,7 +37,7 @@ def _mine(judgement: dict | None) -> bool:
     if not judgement:
         return False
     ai = judgement.get("ai") or {}
-    interested = bool(judgement.get("interests")) or bool(ai.get("interests"))
+    interested = bool(judgement.get("interests"))
     if ai.get("verdict") == "not_relevant" and not interested:
         return False
     return bool(judgement.get("rule_name")) or interested or ai.get("verdict") in ("relevant", "maybe")
@@ -53,13 +53,16 @@ def desired_events(notices: list[dict], matched: dict, saved: list[dict], now: d
     for notice in chosen.values():
         if not notice.get("deadline") or not notice.get("url", "").startswith("https://"):
             continue
-        end = datetime.fromisoformat(notice["deadline"]).astimezone(KST)
+        at = datetime.fromisoformat(notice["deadline"]).astimezone(KST)
+        kind = notice.get("deadline_kind") or "마감"
+        # 마감은 30분 전부터 마감까지(알림이 마감 전에 울리게), 일정은 시작부터 한 시간.
+        start, end = (at, at + timedelta(hours=1)) if kind == "일정" else (at - LEAD, at)
         if end <= now:
             continue
         events[_event_id(notice["id"])] = {
-            "summary": f"[마감] {notice['title']}"[:250],
+            "summary": f"[{kind}] {notice.get('title_ko') or notice['title']}"[:250],
             "description": f"{notice['url']}\n성대 공지 앱이 넣은 일정이에요. 저장을 지우면 함께 빠져요.",
-            "start": {"dateTime": (end - LEAD).isoformat(), "timeZone": "Asia/Seoul"},
+            "start": {"dateTime": start.isoformat(), "timeZone": "Asia/Seoul"},
             "end": {"dateTime": end.isoformat(), "timeZone": "Asia/Seoul"},
             "source": {"title": "원문", "url": notice["url"]},
             "transparency": "transparent",

@@ -17,6 +17,7 @@ from skku_notice.archive import (
     load_archive,
     mark_image_attempted,
     save_archive,
+    update_ai_deadlines,
     update_detail,
     update_image_text,
     update_translation,
@@ -30,6 +31,7 @@ from skku_notice.canvas_alerts import (
     save_canvas_state,
 )
 from skku_notice.deadline import KST
+from skku_notice.deadline_ai import BATCH, read_deadlines
 from skku_notice.export import export_site
 from skku_notice.fetch import FetchError, UnsafeURL, fetch_detail, fetch_images, fetch_list
 from skku_notice.interests import load_interests, match_interests, muted_from_env
@@ -134,6 +136,24 @@ def _translate(archive, ai: dict, api_key: str):
         done += 1
         result = translate_notice(item["notice"]["title"], item.get("body_text"), ai["model"], api_key)
         archive = update_translation(archive, key, result, ai["model"])
+        save_archive(ARCHIVE_PATH, archive)
+    return archive
+
+
+def _ai_deadlines(archive, ai: dict, api_key: str):
+    # 제목에 마감이 없는 글만, 본문을 받은 뒤 한 번 호출에 BATCH개씩 묻는다(D-023).
+    if not api_key:
+        return archive
+    waiting = [
+        {"id": key, "title": item["notice"]["title"], "posted_on": item["notice"]["posted_on"],
+         "body": item.get("body_text") or item.get("ocr_text") or ""}
+        for key, item in archive.items.items()
+        if not item["notice"].get("deadline") and not (item.get("ai_deadline") or {}).get("checked")
+        and (item.get("body_text") is not None or item.get("body_attempts", 0) >= 3)
+    ][:BATCH]
+    results = read_deadlines(waiting, ai["model"], api_key)
+    if results:
+        archive = update_ai_deadlines(archive, results, ai["model"])
         save_archive(ARCHIVE_PATH, archive)
     return archive
 
@@ -247,6 +267,7 @@ def run(args: argparse.Namespace) -> int:
         save_archive(ARCHIVE_PATH, archive)
         if ai.get("enabled") and not getattr(args, "no_ai", False) and not args.from_fixtures:
             archive = _translate(archive, ai, os.environ.get("GEMINI_API_KEY", ""))
+            archive = _ai_deadlines(archive, ai, os.environ.get("GEMINI_API_KEY", ""))
     candidates = []
     image_candidates = []
     for source, notices in boards:
@@ -309,12 +330,13 @@ def run(args: argparse.Namespace) -> int:
             )
             item = archive.items.get(f"{source['id']}/{notice.article_no}", {})
             text_interests = (
-                match_interests(notice, interests, item.get("ocr_text") or "")
+                match_interests(notice, interests,
+                                f"{item.get('body_text') or ''} {item.get('ocr_text') or ''}")
                 if process and not excluded else ()
             )
             shown_interests = tuple(
                 word for word in interests
-                if word in text_interests or (judgment and word in judgment.interests)
+                if word in text_interests
             )
             priority = decide_priority(match, judgment, text_interests) if process and not excluded else None
             # 꺼 둔 분류는 "모두 알림"만 빠진다. 기준, 관심 키워드, Gemini 해당은 그대로 알린다(D-018).

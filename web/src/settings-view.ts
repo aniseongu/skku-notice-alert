@@ -121,10 +121,11 @@ export class SettingsView extends LitElement {
     super.connectedCallback();
     window.addEventListener('beforeunload', this.warnUnsaved);
     browserPushEnabled().then((enabled) => { this.browserNotifications = enabled; this.canvasMode = enabled ? canvasPushMode() : null; }).catch(() => {});
-    if (!this.takeHandoff()) loadToken().then((token) => {
+    const receivedHandoff = this.takeHandoff();
+    if (!receivedHandoff) loadToken().then((token) => {
       if (token && !this.token) { this.token = token; if (this.connected()) this.connect(); }
     });
-    if (!this.repo) pushConfiguration().then((config) => {
+    if (!this.repo && !receivedHandoff) pushConfiguration().then((config) => {
       if (!this.repo) { this.setRepo(config.repository); remember('github-repo', config.repository); }
     }).catch(() => {});
     this.updateComplete.then(() => {
@@ -491,23 +492,19 @@ export class SettingsView extends LitElement {
   render() {
     if (new URLSearchParams(location.search).get('keys') === '1') return html`
       <div class="settings ${this.linked ? '' : 'unlinked'}">
-        <a class="ghost-button" href="?view=settings">설정으로</a>
+        <a class="settings-back" href="?view=settings">설정으로</a>
         ${!this.linked ? html`<p class="field-note">일반 설정에서 GitHub에 먼저 연결하면 키를 저장할 수 있어요</p>` : nothing}
         <section aria-labelledby="s-keys">
           <h2 id="s-keys" class="settings-head">연결 키</h2>
           <div class="box">
           ${KEY_FIELDS.map((field) => this.keyRow(field))}
 
-          <div class="setting">
-            <div class="setting-text">
-              <p class="setting-name">컴퓨터에서 먼저 쓰기</p>
-              <p class="setting-help">저장소를 만들기 전에는 프로젝트 폴더의 .env 파일에 키를 적어요</p>
-            </div>
-            <div class="setting-control">
-              <button type="button" class="ghost-button" @click=${this.copyEnv}>.env 양식 복사하기</button>
-              ${this.note('env')}
-            </div>
-          </div>
+          <details class="connection-manual">
+            <summary>컴퓨터에서 먼저 쓰기</summary>
+            <p class="field-note">저장소를 만들기 전에는 프로젝트 폴더의 .env 파일에 키를 적어요</p>
+            <button type="button" class="ghost-button" @click=${this.copyEnv}>.env 양식 복사하기</button>
+            ${this.note('env')}
+          </details>
           </div>
         </section>
 
@@ -653,7 +650,7 @@ export class SettingsView extends LitElement {
           </div>
           <div class="setting">
             <div class="setting-text"><p class="setting-name">받을 공지</p><p class="setting-help">목록에서는 모든 공고를 볼 수 있어요</p></div>
-            <div class="setting-control"><p class="field-note">성대 공지는 모두, 인턴 공고는 지원할 수 있는 소프트웨어 직무만 알려요</p></div>
+            <div class="setting-control"><p class="field-note">성대 공지는 모두 알려요. 인턴은 Gemini가 본문을 읽고 지원할 만한 IT 직무로 판단한 공고만 알려요</p></div>
           </div>
           </div>
         </section>

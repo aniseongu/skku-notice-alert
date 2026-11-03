@@ -44,6 +44,8 @@ from skku_notice.interests import (
     match_interests,
     refresh_archive_interests,
 )
+from skku_notice.intern_ai import BATCH as INTERN_BATCH
+from skku_notice.intern_ai import intern_fingerprint, judge_internships
 from skku_notice.jobs import (
     COLLECTORS,
     LK_API,
@@ -54,7 +56,7 @@ from skku_notice.jobs import (
 )
 from skku_notice.judge import Judgment, judge_notices
 from skku_notice.model import Match, Notice
-from skku_notice.notification_policy import alert_priority, internship_title_ineligible
+from skku_notice.notification_policy import alert_priority
 from skku_notice.notify import has_notification_channel, send_canvas, send_notice
 from skku_notice.ocr import read_images
 from skku_notice.parse import ParseError, parse_detail, parse_list
@@ -302,10 +304,11 @@ def _profile() -> dict:
 
 
 def _images_for_judgment(
-    archive: Archive, notices: list, now: datetime, user_agent: str,
+    archive: Archive, notices: list, now: datetime, user_agent: str, budget: list[int] | None = None,
 ) -> tuple[Archive, dict]:
     images = {}
-    remaining = 10
+    budget = budget if budget is not None else [10]
+    remaining = budget[0]
     for notice in notices:
         key = f"{notice.source_id}/{notice.article_no}"
         item = archive.items.get(key)
@@ -324,8 +327,74 @@ def _images_for_judgment(
         if fetched:
             images[key] = fetched
         remaining -= len(urls)
+        budget[0] = remaining
     return archive, images
 
+
+
+def _intern_decisions(archive: Archive, state, sources: list[dict], ai: dict, api_key: str,
+                      budget: list[int], user_agent: str) -> tuple[Archive, dict[str, Judgment]]:
+    """Judge up to six ready public internships; cached decisions never create an alert by themselves."""
+    if not api_key:
+        return archive, {}
+    external = {s["id"] for s in sources if s.get("external")}
+    ranked = []
+    judgments = {}
+    model = ai["model"]
+    # 사용자 프로필을 공개 판정 이유에 노출하지 않도록 학부생 기본 맥락만 쓴다.
+    profile: dict = {}
+    for key, item in archive.items.items():
+        notice = item["notice"]
+        if notice["source_id"] not in external or item.get("body_text") is None:
+            continue
+        body = "\n".join(filter(None, (item.get("body_text"), item.get("ocr_text"))))
+        urls = item.get("images") or []
+        fingerprint = intern_fingerprint(notice["title"], body, urls, model, profile)
+        cache = item.get("intern_judgment") or {}
+        if (cache.get("fingerprint") == fingerprint
+                and cache.get("verdict") in {"relevant", "maybe", "not_relevant"}):
+            judgments[key] = Judgment(cache["verdict"], cache.get("reason", ""), model)
+            continue
+        source = state.sources.get(notice["source_id"])
+        seen = source.seen.get(notice["article_no"]) if source else None
+        rank = 0 if seen is None or seen.status == "pending" else 1
+        ranked.append((rank, key, item, body, urls, fingerprint))
+    ranked.sort(key=lambda entry: entry[0])
+    selected, images, fingerprints = [], {}, {}
+    for _, key, item, body, urls, fingerprint in ranked:
+        if len(selected) >= INTERN_BATCH:
+            break
+        parts = []
+        image_urls = urls[:3]
+        if image_urls and budget[0] >= len(image_urls):
+            if budget[0] < 10:
+                time.sleep(1)
+            parts = fetch_images(image_urls, user_agent, len(image_urls), allow_external=True)
+            budget[0] -= len(image_urls)
+        # 그림이 있으면 판단에 함께 필요하다. 못 받았거나 예산이 없으면 다음 실행에 맡긴다.
+        if (image_urls and len(parts) != len(image_urls)) or (not body.strip() and not parts):
+            continue
+        if parts:
+            images[key] = parts
+        selected.append({"id": key, "title": item["notice"]["title"], "body": body})
+        fingerprints[key] = fingerprint
+    if selected:
+        found = judge_internships(selected, model, api_key, profile=profile, images=images)
+        items = dict(archive.items)
+        for key, result in found.items():
+            if key not in fingerprints:
+                continue
+            old = items[key]
+            decision = {"fingerprint": fingerprints[key], "verdict": result.verdict,
+                        "reason": result.reason, "model": model}
+            match = {**(old.get("match") or {}), "ai": {"verdict": result.verdict,
+                     "reason": result.reason, "model": model, "interests": []}}
+            items[key] = {**old, "intern_judgment": decision, "match": match}
+            judgments[key] = result
+        if found:
+            archive = Archive(items)
+            save_archive(ARCHIVE_PATH, archive)
+    return archive, judgments
 
 def _apply_ocr(archive: Archive, images: dict) -> Archive:
     for notice_id, parts in images.items():
@@ -448,15 +517,17 @@ def run(args: argparse.Namespace) -> int:
             ):
                 if not source.get("external"):
                     image_candidates.append(notice)
-                if not any(
+                if not source.get("external") and not any(
                     word.strip().casefold() in notice.title.casefold() for word in rules.exclude_title
                 ):
                     candidates.append(notice)
     judgments = {}
+    intern_judgments: dict[str, Judgment] = {}
     image_parts = {}
+    image_budget = [10]
     if image_candidates and not args.dry_run and not args.from_fixtures:
         archive, image_parts = _images_for_judgment(
-            archive, image_candidates, now, settings["user_agent"]
+            archive, image_candidates, now, settings["user_agent"], image_budget
         )
         archive = _apply_ocr(archive, image_parts)
         if image_parts:
@@ -481,6 +552,12 @@ def run(args: argparse.Namespace) -> int:
                 ))) for key, item in archive.items.items()},
                 images=image_parts,
             )
+    if (not args.dry_run and not args.from_fixtures and ai.get("enabled")
+            and not getattr(args, "no_ai", False)):
+        archive, intern_judgments = _intern_decisions(
+            archive, state, settings["sources"], ai, os.environ.get("GEMINI_API_KEY", ""),
+            image_budget, settings["user_agent"],
+        )
     for source, notices in boards:
         if args.dry_run and source["id"] not in state.sources:
             print(f"{source['id']}: state 없음: 실제 첫 실행이면 알림 없이 기준선만 저장")
@@ -495,9 +572,11 @@ def run(args: argparse.Namespace) -> int:
             )
             excluded = any(word.strip().casefold() in notice.title.casefold() for word in rules.exclude_title)
             match = match_notice(notice, rules) if process and not excluded else None
-            judgment = (
-                judgments.get(f"{source['id']}/{notice.article_no}") if process and not excluded else None
-            )
+            if source.get("external"):
+                judgment = intern_judgments.get(f"{source['id']}/{notice.article_no}")
+            else:
+                judgment = (judgments.get(f"{source['id']}/{notice.article_no}")
+                            if process and not excluded else None)
             item = archive.items.get(f"{source['id']}/{notice.article_no}", {})
             text_interests = (
                 match_interests(notice, interests,
@@ -514,7 +593,7 @@ def run(args: argparse.Namespace) -> int:
                 previous = archive.items.get(f"{source['id']}/{notice.article_no}", {}).get("match") or {}
                 previous_priority = previous.get("priority")
                 # priority가 없는 pending은 본문을 기다린 글이므로 새 판정을 쓴다.
-                if previous_priority:
+                if previous_priority and not source.get("external"):
                     if previous.get("rule_name"):
                         match = Match(notice, previous["rule_name"], previous_priority,
                                       tuple(previous.get("reasons", [])))
@@ -525,7 +604,7 @@ def run(args: argparse.Namespace) -> int:
             external = bool(source.get("external"))
             priority = (alert_priority(external=external, title=notice.title, body=body, match=match,
                                        judgment=judgment, interests=shown_interests)
-                        if process and not (external and excluded) else None)
+                        if process else None)
             if priority is not None and previous_priority:
                 priority = previous_priority
             if args.dry_run:
@@ -545,9 +624,7 @@ def run(args: argparse.Namespace) -> int:
                 continue
             if not process:
                 continue
-            if (external and priority is None and not excluded
-                    and not internship_title_ineligible(notice.title)
-                    and item.get("body_text") is None and item.get("body_attempts", 0) < 3):
+            if external and priority is None and judgment is None:
                 # 본문 대기는 발송 실패가 아니다. 배송 재시도 횟수를 보존한다.
                 state = record_result(state, notice, "pending", now)
                 current_source = state.sources[notice.source_id]

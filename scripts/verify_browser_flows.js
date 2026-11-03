@@ -126,6 +126,13 @@ async (page) => {
       await mobileTab('인턴 공고').click(); await m.locator('.row').first().waitFor();
       await mobileTab('성대 공지').click();
     });
+    await check('게시판 Esc와 선택 후 포커스 복귀', async () => {
+      const trigger = m.locator('.board-picker .board-trigger');
+      await trigger.click(); await m.keyboard.press('Escape');
+      assert(await trigger.evaluate(e => e === document.activeElement), 'Esc 포커스가 다른 메뉴로 감');
+      await trigger.click(); await m.locator('.board-option:not(.sort-option)').first().click();
+      assert(await trigger.evaluate(e => e === document.activeElement), '선택 후 포커스가 다른 메뉴로 감');
+    });
     await check('게시판 메뉴 Tab 이탈 시 닫기', async () => {
       await m.locator('.board-trigger:not(.sort-trigger)').click();
       await m.locator('.board-option:not(.sort-option)').last().focus();

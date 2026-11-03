@@ -23,7 +23,7 @@
 | 높음 | 미수집 글도 원문으로 가라는 안내만 있어 오류로 보임 | 준비 중, 재시도와 실패를 구분해 수정 |
 | 높음 | PC에서 검색 결과가 없어도 전에 고른 공지가 상세에 남음 | 선택을 필터 결과 안에서만 찾도록 수정 |
 | 중간 | 휴대폰에서 뒤로 간 다음 앞으로 가면 상세가 복원되지 않음 | 브라우저 history의 공지 상태를 복원하도록 수정 |
-| 중간 | 게시판 메뉴가 Tab으로 빠져나와도 남음 | 메뉴 밖으로 포커스가 나가면 닫도록 수정 |
+| 중간 | 게시판 메뉴가 Tab으로 빠져나와도 남고 Esc 후 정렬 단추로 포커스가 감 | 포커스 이탈 시 닫고 해당 게시판 단추로 정확히 복귀하도록 수정 |
 | 중간 | 내 공지에 해당 없음인 글도 포함되어 이해하기 어려움 | 관심 키워드가 맞으면 포함되는 현재 규칙을 화면에서 설명할 필요. 오분류로 단정하지 않음 |
 | 중간 | 마감순은 정렬과 함께 마감 없는 글과 지난 글도 숨김 | 마감이 남은 글만 보여 준다는 설명 권장 |
 | 중간 | 이미지형 공고의 작은 글씨와 전체 내용의 텍스트 대안이 부족 | 확대 보기와 텍스트 대안을 차기 기능으로 권장. rich HTML의 원본 alt는 유지됨 |
@@ -39,7 +39,7 @@
 | [KNUTICE, 한국교통대](https://github.com/KNUTICE/KNUTICE-Android) | 학과 공지 모음, AI 요약, 검색, 북마크와 메모, 알림 필터, 공지 위젯. 학식과 열람실도 제공한다고 README에 소개 | 저장한 공지에 개인 메모. 위젯은 네이티브 앱 기능이라 PWA에 그대로 옮기기 어려움 |
 | [KW 알리미, 광운대](https://github.com/kw-service/kw-notice-v1) | 새 공지와 수정 알림, 게시판 목록과 필터, 즐겨찾기 관리 | 수정 감지와 저장은 이미 있음. 현재 동작의 일관성을 비교하기 좋음. 이전 버전 저장소이며 현재 앱 상태는 미검증 |
 | [SKKU 공지 모아보기](https://github.com/hg111911190-sketch/skku-notice) | 게시판 필터, 검색, 고정 공지 숨김. 인턴 회사와 직무별 필터, 자격 판정, 이미지 OCR, 캘린더와 마감 알림 | 회사와 직무 필터, 고정 공지 숨기기. 본문 수집 코드는 이미 재사용 |
-| [FreshRSS 필터](https://freshrss.github.io/FreshRSS/en/users/10_filter.html)와 [보기](https://freshrss.github.io/FreshRSS/en/users/03_Main_view.html) | 읽음과 즐겨찾기 상태 조합, 게시판과 분류별 보기, 검색, 여러 읽기 화면 | 읽지 않은 공지만 보기, 저장 목록 안 검색, 자주 쓰는 조건을 다시 쓰기 |
+| [FreshRSS 필터](https://freshrss.github.io/FreshRSS/en/users/10_filter.html)와 [보기](https://freshrss.github.io/FreshRSS/en/users/03_Main_view.html), [검색 조건 저장](https://freshrss.github.io/FreshRSS/en/users/user_queries.html) | 읽음과 즐겨찾기 상태 조합, 게시판과 분류별 보기, 검색 조건 저장, 여러 읽기 화면 | 읽지 않은 공지만 보기, 저장 목록 안 검색, 자주 쓰는 조건을 다시 쓰기 |
 | [Miniflux 기능](https://miniflux.app/features.html), [코드](https://github.com/miniflux/v2) | 원문 본문 추출, 전체 본문 검색, 분류와 북마크, 정규식 포함과 제외, 키보드, 모바일 화면 | 본문 검색, 방해가 적은 읽기 화면, 키보드 탐색 |
 | [changedetection.io](https://github.com/dgtlmoon/changedetection.io) | 단어와 줄별 변경 비교, 특정 영역 감시, 조건부 알림, 점검 시간대 설정, PDF와 JSON 변경 감지 | 마감 연장 전후 비교, 중요한 변경만 알림, 게시판 수집 상태 확인 |
 

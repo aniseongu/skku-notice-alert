@@ -416,7 +416,7 @@ export class NoticeApp extends LitElement {
     if (event.key === 'Escape' && this.boardMenuOpen) {
       event.preventDefault();
       this.boardMenuOpen = false;
-      this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.board-trigger')?.focus());
+      this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.board-picker .board-trigger')?.focus());
       return;
     }
     if (event.key === 'Escape' && target instanceof HTMLInputElement) { target.blur(); return; }
@@ -788,7 +788,7 @@ export class NoticeApp extends LitElement {
           if (next >= 0) { event.preventDefault(); options[next]?.focus(); }
         }}>
         ${boards.map((b) => html`<button type="button" class="board-option" aria-pressed=${String(this.activeBoard() === b.id)}
-          @click=${() => { this.setBoard(b.id); this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.board-trigger')?.focus()); }}>
+          @click=${() => { this.setBoard(b.id); this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.board-picker .board-trigger')?.focus()); }}>
           <span>${b.label}</span>${this.activeBoard() === b.id ? html`<span class="board-check" aria-hidden="true"></span>` : nothing}</button>`)}
       </div>` : nothing}
     </div>`;

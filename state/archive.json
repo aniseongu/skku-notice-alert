@@ -1,6 +1,53 @@
 {
   "version": 1,
   "items": {
+    "skku-notice01/141528": {
+      "notice": {
+        "id": "skku-notice01/141528",
+        "source_id": "skku-notice01",
+        "article_no": "141528",
+        "title": "2027년도 관정재단 학부(대학생) 장학생 선발안내( ~ 11.11(수) 09:00까지)",
+        "category": "장학",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141528",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": "2026-11-11T09:00:00+09:00",
+        "first_seen": "2026-11-03T13:53:22.645265+09:00"
+      },
+      "match": {
+        "rule_name": "장학",
+        "priority": "low",
+        "interests": [],
+        "reasons": [
+          "category:장학"
+        ],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "장학금 모집 공고로 본인이 찾는 개발 인턴이나 산학협력 프로젝트와는 무관합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "삼영화학그룹 이종환 회장의 사재출연으로 2000년 6월 23일 설립되어 2024년 현재, 국내를 넘어 아시아 최대 규모의 장학재단으로 자리매김한 관정재단에서 2027년도 학부(대학생) 장학생을 모집합니다.\n아래 및 첨부된 내용을 반드시 확인하시어 관심있는 학생들의 많은 지원 부탁드립니다.\n\n1. 재단 추천인원 : 10명\n\n2. 계열별 추천 인원 비율 : 자연이공계열 80%(8명) + 인문사회계열 20%(2명)\n\n3. 지원자격 (각 항목을 모두 충족해야 함)\n\n가. 대한민국 국적 보유자로서 대한민국에서 고등학교를 졸업한 자\n(단, 주재원파견 등 학부모 국외근무로 부득이 국외에서 고등학교 과정을 수학한 경우와 검정고시 합격자는 지원가능, 영주권자 및 복수국적자는 지원불가)\n나. 2027학년도 1학기 5학기(3학년 1학기) 진학 예정이며 재학 예정인 자 (휴학예정인자 제외)\n다. 학부 1~3학기 총 평점평균이 4.0/4.5 이상인 자\n(단, 휴학 등으로 인하여 2학년 2학기 성적이 존재하는 경우, 해당 학기 성적 포함 必)\n라. 만 24세 이하(2027년 기준/2003.1.1. 이후 출생), 단 군필자는 군 복무기간 제외\n마. 편입생은 지원대상에서 제외됨\n\n* 2027학년도 1학기에 휴학 계획이 없는 학생만 지원하시기 바랍니다.\n\n4. 장학금액 (A/B형 선택수혜 가능(학부생)) → 추후 각 단계별 전형시 택 1\n\n- (A형) 관정성적우수장학금 : 학부, 600만원, 타 장학금 중복수혜 불가\n- (B형) 관정학업장려장학금 : 학부, 최고 400만원, 국가 및 학교 등록금감면 장학금과 중복수혜 가능\n(* 타 민간재단 장학금 중복수혜 불가)\n- 타 장학금 수혜현황 및 지둰내용을 고려하여 재단 내부규정에 따라 지급액을 조정할 수 있으며, 해당자에게는 적용 기준 및 조정 금액을 개별 안내하고 사전 협의를 거쳐 확정함\n\n5. 선발일정\n\n가. 신청기간 : 2026년 11월 4일(수) 09:00 ~ 11월 11일(수) 09:00,\nGLS-[장학영역]-[장학금보기]-[장학금모아보기]에서 장학금명 클릭 후 신청\n서류신청시 2026.11월 3일 이후 발급된 2026-2학기 학자금지원구간 통지서 업로드\n(※ 한국장학재단에서 발급가능, 암호 제거 必, 국가장학금 증명서는 해당 서류 아님)\n※ 마감시간 내에 신청 완료해야 함.\n(마감시간 이후 제출할 경우 오류발생, 제출처리가 완료되지 않으므로 시간 엄수하시기 바랍니다.)\n\n* 학교 추천자로 선발될 경우, 단계별 전형에 대한 안내는 재단에서 GLS에 입력한 이메일로 별도 안내할 예정\n\n* 지원하시려는 학생분들은 반드시 첨부된 장학 일정에 대한 세부 사항을 확인하시기 바랍니다.\n\n6. 문의\n\n가. 온라인 신청 및 학교 추천자에 대한 선발 문의\n학생지원팀(02-760-1167 AM 09:00~PM 17:30 [점심시간 12시~13시]\n\n나. 학교 추천자 선발 이후 각 단계별 전형에 관한 문의\n관정재단 홈페이지 질의응답, 관정재단 (scholar002@ikef.or.kr)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "관정재단 2027년도 국내대학 장학생 제출서류 목록(단계별 참고용).hwp",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141528&attachNo=118772",
+          "type": "HWP",
+          "size": null
+        }
+      ],
+      "body_html": "<p>삼영화학그룹 이종환 회장의 사재출연으로 2000년 6월 23일 설립되어 2024년 현재, 국내를 넘어 아시아 최대 규모의 장학재단으로 자리매김한 관정재단에서 2027년도 학부(대학생) 장학생을 모집합니다.</p><p>아래 및 첨부된 내용을 반드시 확인하시어 관심있는 학생들의 많은 지원 부탁드립니다.</p><p>​1. 재단 추천인원 : 10명</p><p>2. 계열별 추천 인원 비율 :&nbsp;자연이공계열 80%(8명)&nbsp;+&nbsp;인문사회계열 20%(2명)</p><p>3. 지원자격 (각 항목을 모두 충족해야 함)</p><p>가. 대한민국 국적 보유자로서 대한민국에서 고등학교를 졸업한 자</p><p>(단, 주재원파견 등 학부모 국외근무로 부득이 국외에서 고등학교 과정을 수학한 경우와 검정고시 합격자는 지원가능,&nbsp; 영주권자 및 복수국적자는 지원불가)</p><p>나.&nbsp;2027학년도 1학기 5학기(3학년 1학기) 진학 예정이며 재학 예정인 자 (휴학예정인자 제외)</p><p>다. 학부 1~3학기 총 평점평균이 4.0/4.5 이상인 자</p><p>(단, 휴학 등으로 인하여 2학년 2학기 성적이 존재하는 경우, 해당 학기 성적 포함 必)</p><p>라. 만 24세 이하(2027년 기준/2003.1.1. 이후 출생), 단 군필자는 군 복무기간 제외</p><p>마. 편입생은 지원대상에서 제외됨</p><p>*&nbsp;2027학년도 1학기에 휴학 계획이 없는 학생만 지원하시기 바랍니다.</p><p>4.&nbsp; 장학금액 (A/B형 선택수혜 가능(학부생)) → 추후 각 단계별 전형시 택 1</p><ul><li>(A형) 관정성적우수장학금 : 학부, 600만원, 타 장학금 중복수혜 불가</li><li>(B형) 관정학업장려장학금 : 학부, 최고 400만원, 국가 및 학교 등록금감면 장학금과 중복수혜 가능</li></ul><p>(* 타 민간재단 장학금 중복수혜 불가)</p><ul><li>타 장학금 수혜현황 및 지둰내용을 고려하여 재단 내부규정에 따라 지급액을 조정할 수 있으며, 해당자에게는 적용 기준 및 조정 금액을 개별 안내하고 사전 협의를 거쳐 확정함</li></ul><p>5. 선발일정</p><p>가.&nbsp;신청기간&nbsp;: 2026년 11월 4일(수) 09:00 ~ 11월 11일(수) 09:00,</p><p>GLS-[장학영역]-[장학금보기]-[장학금모아보기]에서 장학금명 클릭 후 신청</p><p>서류신청시 2026.11월 3일 이후 발급된 2026-2학기 학자금지원구간 통지서 업로드</p><p>(※ 한국장학재단에서 발급가능, 암호 제거 必, 국가장학금 증명서는 해당 서류 아님)</p><p>※ 마감시간 내에 신청 완료해야 함.</p><p>(마감시간 이후 제출할 경우 오류발생, 제출처리가 완료되지 않으므로 시간 엄수하시기 바랍니다.)</p><p>* 학교 추천자로 선발될 경우, 단계별 전형에 대한 안내는 재단에서 GLS에 입력한 이메일로 별도 안내할 예정</p><p>* 지원하시려는 학생분들은 반드시 첨부된 장학 일정에 대한 세부 사항을 확인하시기 바랍니다.</p><p>6. 문의</p><p>가. 온라인 신청 및 학교 추천자에 대한 선발 문의</p><p>학생지원팀(02-760-1167 AM 09:00~PM 17:30 [점심시간 12시~13시]</p><p>나. 학교 추천자 선발 이후 각 단계별 전형에 관한 문의</p><p>관정재단 홈페이지 질의응답, 관정재단 (scholar002@ikef.or.kr)</p>",
+      "images": [],
+      "summary": "관정재단에서 2027학년도 1학기 3학년 진학 예정자를 대상으로 장학생을 선발합니다. 희망자는 11월 11일 오전 9시까지 GLS를 통해 신청 서류를 제출해야 합니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
+    },
     "skku-notice01/141523": {
       "notice": {
         "id": "skku-notice01/141523",
@@ -195,17 +242,24 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "성균관대학교 양자생명물리과학원에서 근무할 직원을 아래와 같이 모집하오니 많은 관심과 지원을 바랍니다.\n\n1. 모집부문 및 근무조건\n가. 채용분야 및 인원 : 행정 1명\n나. 업무내용 : 양자생명물리과학원 기관 행정 업무 제반\n다. 근무조건\n(1) 계약직(1년 계약 후 근무평가에 따라 연장 가능)\n(2) 주5일 근무(주중 09:00~17:30)\n(3) 보수 수준 : 내부 규정에 따름\n(4) 근무장소 : 성균관대학교 자연과학캠퍼스 N센터 (경기도 수원)\n라. 우대사항\n(1) 즉시 근무 가능한 자\n(2) 인근 거주자\n(3) 영어가능자 (간단한 의사소통)\n\n2. 지원자격\n가. 4년제 대학 졸업자\n나. 성균관대학교 직원 임용규정상 결격사유가 없는 자\n\n3. 제출서류\n- 첨부의 이력서 서식으로 파일명(양자생명물리과학원 지원자_홍길동) 기재 후, 이메일 제출(ohjuyi@skku.edu)\n\n* 최종합격자에 한해 임용에 필요한 추가서류 접수예정.\n* 제출서류는 반환하지 않습니다.\n\n4. 모집기간 및 지원방법\n가. 모집기간 : 2026.10.30(금)~2026.11.10(화)까지\n나. 지원방법 : 이메일지원 ohjuyi@skku.edu\n\n5. 전형절차\n가. 1단계 : 서류전형\n나. 2단계 : 면접 (서류전형 합격자에 한해 면접일자 개별통보)\n\n6. 문의 및 접수: 양자생명물리과학원\nohjuyi@skku.edu, 031-299-4790",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
-      "attachments": [],
-      "body_html": null,
+      "attachments": [
+        {
+          "name": "양자생명물리과학원 지원자_홍길동.hwp",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141131&attachNo=118689",
+          "type": "HWP",
+          "size": null
+        }
+      ],
+      "body_html": "<p>성균관대학교 양자생명물리과학원에서 근무할 직원을 아래와 같이 모집하오니 많은 관심과 지원을 바랍니다.</p><p>1. 모집부문 및 근무조건</p><p>가. 채용분야 및 인원 : 행정 1명</p><p>나. 업무내용 : 양자생명물리과학원  기관 행정 업무 제반</p><p>다. 근무조건</p><p>(1) 계약직(1년 계약 후 근무평가에 따라 연장 가능)</p><p>(2) 주5일 근무(주중 09:00~17:30)</p><p>(3) 보수 수준 : 내부 규정에 따름</p><p>(4) 근무장소 : 성균관대학교 자연과학캠퍼스 N센터 (경기도 수원)</p><p>라. 우대사항</p><p>(1) 즉시 근무 가능한 자</p><p>(2) 인근 거주자</p><p>(3) 영어가능자 (간단한 의사소통)</p><p>2. 지원자격</p><p>가. 4년제 대학 졸업자</p><p>나. 성균관대학교 직원 임용규정상 결격사유가 없는 자</p><p>3. 제출서류</p><ul><li>첨부의 이력서 서식으로 파일명(양자생명물리과학원 지원자_홍길동) 기재 후, 이메일 제출(ohjuyi@skku.edu)</li></ul><p>* 최종합격자에 한해 임용에 필요한 추가서류 접수예정.</p><p>* 제출서류는 반환하지 않습니다.</p><p>4. 모집기간 및 지원방법</p><p>가. 모집기간 : 2026.10.30(금)~2026.11.10(화)까지</p><p>나. 지원방법 : 이메일지원 ohjuyi@skku.edu</p><p>5. 전형절차</p><p>가. 1단계 : 서류전형</p><p>나. 2단계 : 면접 (서류전형 합격자에 한해 면접일자 개별통보)</p><p>6. 문의 및 접수: 양자생명물리과학원</p><p>ohjuyi@skku.edu, 031-299-4790</p>",
       "images": [],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
     },
     "skku-notice01/140949": {
       "notice": {
@@ -228,17 +282,44 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "“다양한 전공의 만남, 새로운 프로젝트의 시작”\n\n성균융합원에서 2027학년도 1학기 융합연구학점제를 실시하오니 많은 관심과 참여 바랍니다.\n융합연구학점제를 통해 학술연구, 사회문제 해결, 예술 프로젝트 등 창의적이고 도전적인 연구를 수행하길 적극 응원합니다.\n\n○ 융합연구학점제 홍보 콘텐츠\n* 융합연구학점제 참여 학생들의 솔직한 찐리뷰! https://urp3.skku.edu/urp3/notice.do?mode=view&articleNo=186410\n* 융합연구학점제 어떻게 수행하는 걸까? https://urp3.skku.edu/urp3/index.do\n* 융합연구학점제 소개 영상 https://www.youtube.com/watch?v=yALtHf8s2mM\n\n○ 융합연구학점제(URP Ⅲ형) 개요\n1. 융합연구학점제란?\n다양한 전공의 학생들이 모여 한 학기(정규학기) 동안 ‘자기주도적 문제발굴 – 탐구 및 해법 모색 – 결과물 생성’의\n일련의 과정을 지도교수와 함께 수행하고, 이를 학점(일반선택학점 3학점)으로 인정 받는 제도\n2. 프로젝트 유형\n1) 학술연구(조사, 분석/실험, 실습)\n※ 단, 학생 주도가 아닌 특정 연구실에서 정해진 실험을 진행하는 연구 주제 지양\n2) 발명, 발견/사업, 기획/창업\n3) 정책제안/사회문제해결\n4) 문화/예술 프로젝트(전시, 공연, 창작)\n5) 생성형 AI를 활용한 창의적 콘텐츠 제작\n\n○ 혜택\n1. 학생\n1) 일반선택학점 3학점 취득\n※ 전공 및 교양학점이 아닌 일반선택학점으로 총 이수학점에만 산입\n※ 학기당 1개, 재학기간 중 최대 2개 교과목 이수(6학점 인정) 가능\n2) 3품인증제 인턴십 인증\n3) 우수 성과 시상: 상장(총장상 등) 제공 및 상금(최대 100만원) 지급\n4) 연구 멘토링: 융합연구학점제 전담 연구원의 연구 멘토링(필요시) 및 연구기초교육 제공\n5) 팀연구활동비 지급: 연구 수행과 직접적으로 관련된 항목에 대하여 1팀당 최대 10만원 지원,\n팀장 1인에게 장학금 지급을 통해 사후 정산 처리\n2. 교원\n1) 담당하는 팀 1개당 학부 책임학점 1학점 인정, 연간 최대 3개팀 지도 가능\n(지도교수 2인일 경우 교원 각 학부 책임학점 1학점씩 인정)\n※ 단, 원소속이 ‘정보통신대학’인 전임교원은 책임학점이 인정되지 않음(비전임은 강의시수 인정)\n※ 단, 팀연구학점제(URPⅡ형)와 병행하는 해에는 융합연구학점제(URPⅢ형) 수업 연간 1개만 지도 가능\n2) 교수 업적평가(학생지도-기타) 인정\n※ 단과대학별 자율배점으로 소속 단과대학에 따라 인정 점수 상이\n\n○ 신청자격\n- 2027학년도 1학기 재학 학부생으로 구성된 팀\n\n○ 신청방법\n1. 주제선정\n1) 학생 제안: 학생이 자유롭게 연구 주제를 정하고 연구제안서 작성 → 교수가 연구제안서 확인 후 수락하면\n지도교수로 선정\n2) 교수 제안: 교수가 주제를 정해 연구제안서를 작성 → 융합연구학점제 팀모집 홈페이지 통해 학생팀 모집\n2. 지도교수 선정(1~2명, 전임교원 1명 이상)\n- 지도교수는 학생팀 1개당 1명 이상의 재직 전임교원으로 구성하며 최대 2명까지 가능. (연구년일 경우 참여 불가)\n단, 명예교수는 비전임교원이지만 1인 지도 가능(①전임1 ②전임1+전임1 ③전임1+비전임1 모두 가능)\n3. 학생 팀원 구성(다양한 전공 3~4명)\n- 다양한 전공 3~4명으로 구성(동일 제1전공 2명 이내로 제한)\n※ 팀모집 홈페이지 운영: 교수·학생 모두 연구주제 제안 및 팀 구성원 모집 등에 자유롭게 활용\n(융합연구학점제 팀모집 홈페이지: https://urp3team.vercel.app/)\n※ 팀구성을 위해 위 게시판 외 SNS(에브리타임 등), LC모임, 동아리 등을 적극 활용 권장\n\n○ 주요 일정\n1. 신청 접수 및 지도교수 승인: 2026. 11. 1.(일) ~ 11. 25.(수)\n- 신청방법: GLS > 학업영역 > 학점인정 > 융합연구학점제신청\n※ 팀장 1인이 팀 대표로 신청 및 팀원 정보 입력, [붙임]신청 매뉴얼 참고\n※ 지도교수 사전 승인 필수 및 연구제안서 내 지도교수 서명 기재 필수\n- 팀모집 홈페이지 운영: 교수·학생 모두 연구주제 제안 및 팀원 모집에 자유롭게 활용\n※ 링크: https://urp3team.vercel.app/\n※ 팀 모집 완료 후 신청 기한 내 반드시 GLS 접수\n2. 융합연구학점제 성과전시회 개최: 2026. 11. 9.(월) ~ 11. 13.(금)\n- 성과전시회: 2025학년도 융합연구학점제 수행팀 포스터 전시 행사\n- 장소: (인)경영관 1층 로비, (자)삼성학술정보관 1층 입구\n- 온라인 성과전시(융합연구학점제 홈페이지): https://urp3.skku.edu/urp3/index.do\n3. 최종 수행팀 발표: 2026. 12. 11.(금) 15:00\n- 신청한 GLS 화면에서 프로젝트 승인/반려 확인\n- 수강 가능 학점 범위 내에서 융합연구학점제(3학점)를 수강하며, 직권 수강신청을 위해 여유 3학점 확보\n(예: 15학점 신청 가능 → 융합연구학점제: 3학점, 그 외 과목: 12학점)\n※ 2027년 2월 중 성균융합원행정실에서 직권 수강 신청 진행\n- 수강 취소는 원칙적으로 불가\n4. 프로젝트 수행: 2027. 3. 1.(월) ~ 6. 18.(금) (16주 운영)\n- 방학 중 오리엔테이션(필참) 및 연구기초교육 진행\n- 지도교수와 함께 매주 팀 활동을 진행하며, 팀활동보고서(총 10회) 제출 필수\n- 연구주제 변경: 지도교수와 협의 후 변경 가능하나 수정 연구계획서 제출 필수(2027. 3. 28.(일)까지만 가능)\n5. 중간보고서 제출: 2027년 4월 말\n- 연구 수행 중간 점검을 위한 중간보고서 제출\n6. 성과보고회 개최: 2027년 6월 말(필참)\n- 결과보고서 및 최종 결과물 바탕 성과보고회 및 우수 사례 시상식 진행\n\n○ 기타\n기타 사항은 붙임 문건을 확인바라며, 문의사항이 있을 경우 성균융합원행정실로 문의 요망 (031-290-5703)\n\n성균융합원장",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
-      "attachments": [],
-      "body_html": null,
-      "images": [],
+      "attachments": [
+        {
+          "name": "1. 2027-1학기 융합연구학점제 포스터.pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=140949&attachNo=118768",
+          "type": "PDF",
+          "size": null
+        },
+        {
+          "name": "2. 2027-1학기 융합연구학점제 안내문(교수 및 학생).pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=140949&attachNo=118769",
+          "type": "PDF",
+          "size": null
+        },
+        {
+          "name": "3. 융합연구학점제 신청 GLS 매뉴얼(학생).pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=140949&attachNo=118770",
+          "type": "PDF",
+          "size": null
+        },
+        {
+          "name": "4. 융합연구학점제 운영지침(2024.1.1.).pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=140949&attachNo=118771",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<p>“다양한 전공의 만남, 새로운 프로젝트의 시작”</p><p>성균융합원에서 2027학년도 1학기 융합연구학점제를 실시하오니 많은 관심과 참여 바랍니다.</p><p>융합연구학점제를 통해 학술연구, 사회문제 해결, 예술 프로젝트 등 창의적이고 도전적인 연구를 수행하길 적극 응원합니다.</p><p>○ 융합연구학점제 홍보 콘텐츠</p><p>* 융합연구학점제 참여 학생들의 솔직한 찐리뷰! <a href=\"https://urp3.skku.edu/urp3/notice.do?mode=view&amp;articleNo=186410\">https://urp3.skku.edu/urp3/notice.do?mode=view&amp;articleNo=186410</a></p><p>* 융합연구학점제 어떻게 수행하는 걸까? <a href=\"https://urp3.skku.edu/urp3/index.do\">https://urp3.skku.edu/urp3/index.do</a></p><p>* 융합연구학점제 소개 영상 <a href=\"https://www.youtube.com/watch?v=yALtHf8s2mM\">https://www.youtube.com/watch?v=yALtHf8s2mM</a></p><p>○ 융합연구학점제(URP Ⅲ형) 개요</p><p>1. 융합연구학점제란?</p><p>다양한 전공의 학생들이 모여 한 학기(정규학기) 동안 ‘자기주도적 문제발굴 – 탐구 및 해법 모색 – 결과물 생성’의</p><p>일련의 과정을 지도교수와 함께 수행하고, 이를 학점(일반선택학점 3학점)으로 인정 받는 제도</p><p>2. 프로젝트 유형</p><p>1) 학술연구(조사, 분석/실험, 실습)</p><p>※ 단, 학생 주도가 아닌 특정 연구실에서 정해진 실험을 진행하는 연구 주제 지양</p><p>2) 발명, 발견/사업, 기획/창업</p><p>3) 정책제안/사회문제해결</p><p>4) 문화/예술 프로젝트(전시, 공연, 창작)</p><p>5) 생성형 AI를 활용한 창의적 콘텐츠 제작</p><p>○ 혜택</p><p>1. 학생</p><p>1) 일반선택학점 3학점 취득</p><p>※ 전공 및 교양학점이 아닌 일반선택학점으로 총 이수학점에만 산입</p><p>※ 학기당 1개, 재학기간 중 최대 2개 교과목 이수(6학점 인정) 가능</p><p>2) 3품인증제 인턴십 인증</p><p>3) 우수 성과 시상: 상장(총장상 등) 제공 및 상금(최대 100만원) 지급</p><p>4) 연구 멘토링: 융합연구학점제 전담 연구원의 연구 멘토링(필요시) 및 연구기초교육 제공</p><p>5) 팀연구활동비 지급: 연구 수행과 직접적으로 관련된 항목에 대하여 1팀당 최대 10만원 지원,</p><p>팀장 1인에게 장학금 지급을 통해 사후 정산 처리</p><p>2. 교원</p><p>1) 담당하는 팀 1개당 학부 책임학점 1학점 인정, 연간 최대 3개팀 지도 가능</p><p>(지도교수 2인일 경우 교원 각 학부 책임학점 1학점씩 인정)</p><p>※ 단, 원소속이 ‘정보통신대학’인 전임교원은 책임학점이 인정되지 않음(비전임은 강의시수 인정)</p><p>※ 단, 팀연구학점제(URPⅡ형)와 병행하는 해에는 융합연구학점제(URPⅢ형) 수업 연간 1개만 지도 가능</p><p>2) 교수 업적평가(학생지도-기타) 인정</p><p>※ 단과대학별 자율배점으로 소속 단과대학에 따라 인정 점수 상이</p><p>○ 신청자격</p><ul><li>2027학년도 1학기 재학 학부생으로 구성된 팀</li></ul><p>○ 신청방법</p><p>1. 주제선정</p><p>1) 학생 제안: 학생이 자유롭게 연구 주제를 정하고 연구제안서 작성 → 교수가 연구제안서 확인 후 수락하면</p><p>지도교수로 선정</p><p>2) 교수 제안: 교수가 주제를 정해 연구제안서를 작성 → 융합연구학점제 팀모집 홈페이지 통해 학생팀 모집</p><p>2. 지도교수 선정(1~2명, 전임교원 1명 이상)</p><ul><li>지도교수는 학생팀 1개당 1명 이상의 재직 전임교원으로 구성하며 최대 2명까지 가능. (연구년일 경우 참여 불가)</li></ul><p>단, 명예교수는 비전임교원이지만 1인 지도 가능(①전임1 ②전임1+전임1 ③전임1+비전임1 모두 가능)</p><p>3. 학생 팀원 구성(다양한 전공 3~4명)</p><ul><li>다양한 전공 3~4명으로 구성(동일 제1전공 2명 이내로 제한)</li></ul><p>※ 팀모집 홈페이지 운영: 교수·학생 모두 연구주제 제안 및 팀 구성원 모집 등에 자유롭게 활용</p><p>(융합연구학점제 팀모집 홈페이지: <a href=\"https://urp3team.vercel.app/)\">https://urp3team.vercel.app/)</a></p><p>※ 팀구성을 위해 위 게시판 외 SNS(에브리타임 등), LC모임, 동아리 등을 적극 활용 권장</p><p>○ 주요 일정</p><p>1. 신청 접수 및 지도교수 승인: 2026. 11. 1.(일) ~ 11. 25.(수)</p><ul><li>신청방법: GLS &gt; 학업영역 &gt; 학점인정 &gt; 융합연구학점제신청</li></ul><p>※ 팀장 1인이 팀 대표로 신청 및 팀원 정보 입력, [붙임]신청 매뉴얼 참고</p><p>※ 지도교수 사전 승인 필수 및 연구제안서 내 지도교수 서명 기재 필수</p><ul><li>팀모집 홈페이지 운영: 교수·학생 모두 연구주제 제안 및 팀원 모집에 자유롭게 활용</li></ul><p>※ 링크: <a href=\"https://urp3team.vercel.app/\">https://urp3team.vercel.app/</a></p><p>※ 팀 모집 완료 후 신청 기한 내 반드시 GLS 접수</p><p>2. 융합연구학점제 성과전시회 개최: 2026. 11. 9.(월) ~ 11. 13.(금)</p><ul><li>성과전시회: 2025학년도 융합연구학점제 수행팀 포스터 전시 행사</li><li>장소: (인)경영관 1층 로비, (자)삼성학술정보관 1층 입구</li><li>온라인 성과전시(융합연구학점제 홈페이지): <a href=\"https://urp3.skku.edu/urp3/index.do\">https://urp3.skku.edu/urp3/index.do</a></li></ul><p>3. 최종 수행팀 발표: 2026. 12. 11.(금) 15:00</p><ul><li>신청한 GLS 화면에서 프로젝트 승인/반려 확인</li><li>수강 가능 학점 범위 내에서 융합연구학점제(3학점)를 수강하며, 직권 수강신청을 위해 여유 3학점 확보</li></ul><p>(예: 15학점 신청 가능 → 융합연구학점제: 3학점, 그 외 과목: 12학점)</p><p>※ 2027년 2월 중 성균융합원행정실에서 직권 수강 신청 진행</p><ul><li>수강 취소는 원칙적으로 불가</li></ul><p>4. 프로젝트 수행: 2027. 3. 1.(월) ~ 6. 18.(금) (16주 운영)</p><ul><li>방학 중 오리엔테이션(필참) 및 연구기초교육 진행</li><li>지도교수와 함께 매주 팀 활동을 진행하며, 팀활동보고서(총 10회) 제출 필수</li><li>연구주제 변경: 지도교수와 협의 후 변경 가능하나 수정 연구계획서 제출 필수(2027. 3. 28.(일)까지만 가능)</li></ul><p>5. 중간보고서 제출: 2027년 4월 말</p><ul><li>연구 수행 중간 점검을 위한 중간보고서 제출</li></ul><p>6. 성과보고회 개최: 2027년 6월 말(필참)</p><ul><li>결과보고서 및 최종 결과물 바탕 성과보고회 및 우수 사례 시상식 진행</li></ul><p>○ 기타</p><p>기타 사항은 붙임 문건을 확인바라며, 문의사항이 있을 경우 성균융합원행정실로 문의 요망 (031-290-5703)</p><p>성균융합원장</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/10/eGGizjjUMbJcpSQwIyKu.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/10/eGGizjjUMbJcpSQwIyKu.jpg"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
     },
     "skku-notice01/140924": {
       "notice": {
@@ -261,17 +342,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "안녕하세요. 성균인성교육센터입니다.\n\n성균인성교육센터에서는 대학혁신지원사업 일환으로\n\n멋진 가을 가족 및 지인들과 유대를 돈독히 하며 추억 한 편을 안겨드릴\n\n<2026학년도 학부모(동반자) 공감 프로그램> 을 진행합니다.\n\n1. 일 시: 2026.11.14.(토) 10:00~16:00\n\n2. 장 소: 성균관대학교 인문과학캠퍼스 600주년기념관 5층 조병두홀\n\n3. 참가자 및 모집\n\n- 참가 대상: 본교 학부생 90명 내외(학부모, 가족, 친구 포함) ✨ 1인 신청 가능 ✨\n\n- 신청 방법: QR 스캔 및 구글폼 작성\n\n✨ https://docs.google.com/forms/d/1QxcfQQ3Q-gJ-joVO5V45XedSQ7XA_ZiAL60wJkyowx0/edit\n\n- 신청 기간: 2026.10.28.(수) ~ 11.12.(목)\n\n- 선정자 발표: 2026.11.12.(목) 센터 홈페이지 또는 메세지 발송\n\n- 부모님 모두 또는 부모님 중 한 분 참여 가능, 형제자매, 가족, 친구, 개인 단위 참여 가능\n\n- 참가비 무료\n\n4. 부가 혜택\n\n- 참여 학생 창의품 8시간 부여, 신입생 FYE세미나 15점 추가 부여\n\n- 참여 인원 전체 중식 제공\n\n- 자호 족자 등 기념품 제공\n\n5. 세부 진행 내용\n\n- 성인례 프로그램 : 전통 성년례를 현대적으로 재해석하여 진행\n\n- 초례, 다례 프로그램 : 향음주례, 전통다례 관한 이해 및 실습\n\n- 갓 쓰고 유생복 체험 : 유생복 착용 및 폴라로이드 촬영\n\n- 자관자례 프로그램 : 족자에 자호 글 쓰기\n\n- 수묵 프로그램 : 서예와 사군자 체험\n\n6. 문의: 성균인성교육센터 chec@skku.edu, 02-760-0165",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p>안녕하세요. 성균인성교육센터입니다.</p><p>성균인성교육센터에서는 대학혁신지원사업 일환으로</p><p>멋진 가을 가족 및 지인들과 유대를 돈독히 하며 추억 한 편을 안겨드릴</p><p>&lt;2026학년도 학부모(동반자) 공감 프로그램&gt; 을 진행합니다.</p><p>1. 일 시: 2026.11.14.(토) 10:00~16:00</p><p>2. 장 소: 성균관대학교 인문과학캠퍼스 600주년기념관 5층 조병두홀</p><p>3. 참가자 및 모집</p><ul><li>참가 대상: 본교 학부생 90명 내외(학부모, 가족, 친구 포함) ✨ 1인 신청 가능 ✨</li></ul><ul><li>신청 방법: QR 스캔 및 구글폼 작성</li></ul><p>✨ <a href=\"https://docs.google.com/forms/d/1QxcfQQ3Q-gJ-joVO5V45XedSQ7XA_ZiAL60wJkyowx0/edit\">https://docs.google.com/forms/d/1QxcfQQ3Q-gJ-joVO5V45XedSQ7XA_ZiAL60wJkyowx0/edit</a></p><ul><li>신청 기간: 2026.10.28.(수) ~ 11.12.(목)</li></ul><ul><li>선정자 발표: 2026.11.12.(목) 센터 홈페이지 또는 메세지 발송</li></ul><ul><li> 부모님 모두 또는 부모님 중 한 분 참여 가능, 형제자매, 가족, 친구, 개인 단위 참여 가능</li></ul><ul><li> 참가비 무료</li></ul><p>4. 부가 혜택</p><ul><li>참여 학생 창의품 8시간 부여, 신입생 FYE세미나 15점 추가 부여</li></ul><ul><li>참여 인원 전체 중식 제공</li></ul><ul><li>자호 족자 등 기념품 제공</li></ul><p>5. 세부 진행 내용</p><ul><li>성인례 프로그램 : 전통 성년례를 현대적으로 재해석하여 진행</li></ul><ul><li>초례, 다례 프로그램 : 향음주례, 전통다례 관한 이해 및 실습</li></ul><ul><li>갓 쓰고 유생복 체험 : 유생복 착용 및 폴라로이드 촬영</li></ul><ul><li>자관자례 프로그램 : 족자에 자호 글 쓰기</li></ul><ul><li>수묵 프로그램 : 서예와 사군자 체험</li></ul><p>6. 문의: 성균인성교육센터 chec@skku.edu, 02-760-0165</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/10/eoIFcBTswdoNZkeJsqAe.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/10/eoIFcBTswdoNZkeJsqAe.jpg"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
     },
     "skku-notice01/140831": {
       "notice": {
@@ -294,17 +377,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "나의 관심 직무와 취업 준비, 현직자에게 직접 물어보세요! ☕\n대기업·금융·법조·회계 등 다양한 분야의 현직자 10명과 함께하는 「HUSS Career Connect」에 여러분을 초대합니다.\n두 차례의 소그룹 매칭 멘토링과 토크콘서트를 통해 실제 업무와 취업 준비 경험을 나눕니다. 나의 경험과 강점을 담은 개인 명함도 제작해 드리니, 명함 한 장으로 새로운 연결을 시작해 보세요!\n\n▪ 일시: 2026. 11. 12.(목) 18:30~20:30\n▪ 장소: 펄스맥 혜화점\n▪ 대상: 성균관대학교 HUSS 사업단 참여학과 재학생 및 타 컨소시엄·공통활용대학 참여 재학생\n▪ 모집 인원: 30명 내외\n▪ 주요 프로그램: 현직자 소개, 소그룹 매칭 멘토링 2회, 토크콘서트, 럭키 드로우\n▪ 참여 혜택: 개인 명함 제작, 음료·다과 제공, 전 과정 참여자 대상 경품 추첨\n▪ 신청 마감: 11월 9일(월)까지\n▪ 신청: https://forms.gle/68dHvraTKhydE7V58\n▪ 문의: 강민서 연구원 / 02-740-1692 / kmsuse1234@skku.edu\n\n진로를 탐색 중인 학생도 환영합니다. 자세한 내용은 첨부 포스터와 신청서를 확인해 주세요!",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p>나의 관심 직무와 취업 준비, 현직자에게 직접 물어보세요! ☕</p><p>대기업·금융·법조·회계 등 다양한 분야의 현직자 10명과 함께하는 「HUSS Career Connect」에 여러분을 초대합니다.</p><p>두 차례의 소그룹 매칭 멘토링과 토크콘서트를 통해 실제 업무와 취업 준비 경험을 나눕니다. 나의 경험과 강점을 담은 개인 명함도 제작해 드리니, 명함 한 장으로 새로운 연결을 시작해 보세요!</p><p>▪ 일시: 2026. 11. 12.(목) 18:30~20:30</p><p>▪ 장소: 펄스맥 혜화점</p><p>▪ 대상: 성균관대학교 HUSS 사업단 참여학과 재학생 및 타 컨소시엄·공통활용대학 참여 재학생</p><p>▪ 모집 인원: 30명 내외</p><p>▪ 주요 프로그램: 현직자 소개, 소그룹 매칭 멘토링 2회, 토크콘서트, 럭키 드로우</p><p>▪ 참여 혜택: 개인 명함 제작, 음료·다과 제공, 전 과정 참여자 대상 경품 추첨</p><p>▪ 신청 마감: 11월 9일(월)까지</p><p>▪ 신청: <a href=\"https://forms.gle/68dHvraTKhydE7V58\">https://forms.gle/68dHvraTKhydE7V58</a></p><p>▪ 문의: 강민서 연구원 / 02-740-1692 / kmsuse1234@skku.edu</p><p>진로를 탐색 중인 학생도 환영합니다. 자세한 내용은 첨부 포스터와 신청서를 확인해 주세요!</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/10/gjHEpQtUosfCUQOTyGVV.png\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/10/gjHEpQtUosfCUQOTyGVV.png"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
     },
     "skku-notice01/140798": {
       "notice": {
@@ -741,17 +826,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><img src=\"https://cse.skku.edu/_res/editor_image/2026/10/zKFfRpBPzBiljVCrlWVO0.jpg\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://cse.skku.edu/_res/editor_image/2026/10/zKFfRpBPzBiljVCrlWVO0.jpg"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
     },
     "cse-notice/227380": {
       "notice": {
@@ -774,17 +861,26 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "성균관대학교 AI중심대학사업단과 ㈜새온이 공동 주관하는 「2026년 자율주행 자동차 피지컬 AI 미션 챌린지」 행사 안내드립니다.\n\n이번 행사는 자율주행 자동차 '알티노 AI(ALTINO AI)'를 활용하여 AI 및 자율주행 기술의 기본 원리를 배우고, 참가자들이 직접 구현한 프로그램으로 다양한 주행 미션에 도전하는 실습형 프로그램입니다.\n\n■ 행사 개요\n- 행사명: 2026년 자율주행 자동차 피지컬 AI 미션 챌린지\n- 참가신청: ~2026년 10월 30일(금), 포스터 QR 신청\n- 행사일정: 2026년 11월 6일(금)~7일(토), 2일간\n- 행사장소: 성균관대학교 자연과학캠퍼스 삼성학술정보관 지하 1층 오디토리움 및 2층 솦ː콤\n- 대상: AI 및 자율주행 기술에 관심 있는 중학생·고등학생·대학생 및 일반인\n- 참가 방식: 2인 1팀, 중등부·고등부·대학(일반)부로 구분하여 운영\n- 주최: 한국로봇교육콘텐츠협회\n- 주관: 성균관대학교 AI중심대학사업단, ㈜새온\n\n■ 주요 일정\n- 11월 6일(금) 09:00~16:00: 대회 안내, 알티노 AI 교육, 객체 인식 학습 및 팀별 실습\n- 11월 7일(토) 09:00~17:00: 팀별 대회 연습 및 자율주행 미션 챌린지\n※ 대회는 12:00부터, 시상식은 16:30부터 진행될 예정입니다.\n\n■ 시상 안내(예정)\n- 금상: 경기도지사상\n- 은상: AI중심대학사업단장상\n- 동상: 한국로봇교육콘텐츠협회장상",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
-      "attachments": [],
-      "body_html": null,
-      "images": [],
+      "attachments": [
+        {
+          "name": "붙임1. WCRC 피지컬 AI 미션챌린지_포스터.png",
+          "url": "https://cse.skku.edu/cse/notice.do?mode=download&articleNo=227380&attachNo=204219",
+          "type": "PNG",
+          "size": null
+        }
+      ],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><span>성균관대학교 AI중심대학사업단과 ㈜새온이 공동 주관하는 <span>「2026년 자율주행 자동차 피지컬 AI 미션 챌린지」</span> 행사 안내드립니다.</span></p><p><span><span><br></span></span></p><p><span><span>이번 행사는 자율주행 자동차 '알티노 AI(ALTINO AI)'를 활용하여 AI 및 자율주행 기술의 기본 원리를 배우고, &nbsp;참가자들이 직접 구현한 프로그램으로 다양한 주행 미션에 도전하는 <span>실습형 프로그램</span>입니다.</span></span></p><p><span><span><br></span></span></p><p><span><span>■ 행사 개요</span></span></p><p><span><span>- 행사명: 2026년 자율주행 자동차 피지컬 AI 미션 챌린지</span></span></p><p><span><span>- 참가신청: <strong><span>~2026년 10월 30일(금), 포스터 QR 신청</span></strong></span></span></p><p><span><span>- 행사일정: <strong><span>2026년 11월 6일(금)~7일(토), 2일간</span></strong></span></span></p><p><span><span>- 행사장소: 성균관대학교 자연과학캠퍼스 삼성학술정보관 지하 1층 오디토리움 및 2층 솦ː콤</span></span></p><p><span><span>- 대상: AI 및 자율주행 기술에 관심 있는 중학생·고등학생·대학생 및 일반인</span></span></p><p><span><span>- 참가 방식: 2인 1팀, 중등부·고등부·대학(일반)부로 구분하여 운영</span></span></p><p><span><span>- 주최: 한국로봇교육콘텐츠협회</span></span></p><p><span><span>- 주관: 성균관대학교 AI중심대학사업단, ㈜새온</span></span></p><p><span><span><br></span></span></p><p><span><span><br></span></span></p><p><span><span>■ 주요 일정</span></span></p><p><span><span>- 11월 6일(금) 09:00~16:00: 대회 안내, 알티노 AI 교육, 객체 인식 학습 및 팀별 실습</span></span></p><p><span><span>- 11월 7일(토) 09:00~17:00: 팀별 대회 연습 및 자율주행 미션 챌린지</span></span></p><p><span><span>※ 대회는 12:00부터, 시상식은 16:30부터 진행될 예정입니다.</span></span></p><p><span><span><br></span></span></p><p><span><span><br></span></span></p><p><span><span>■ 시상 안내(예정)</span></span></p><p><span><span>- 금상: 경기도지사상</span></span></p><p><span><span>- 은상: AI중심대학사업단장상</span></span></p><p><span><span>- 동상: 한국로봇교육콘텐츠협회장상</span></span></p><p><span><span><br></span></span></p><p><img src=\"https://cse.skku.edu/_res/editor_image/2026/10/LSEZwMJVAFWTVTynzNqm0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://cse.skku.edu/_res/editor_image/2026/10/LSEZwMJVAFWTVTynzNqm0.png"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
     },
     "cse-notice/227362": {
       "notice": {
@@ -807,17 +903,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[84회] 글로벌 IT 전문가와 킹고인의 만남 시즌2 여든네번째 만남\n\n“미국 유학과 취업, 정말 나도 할 수 있을까?”\n\n유학과 해외 취업을 꿈꾸지만 어디서부터 시작해야 할지 막막한가요?\n\n성균관대학교 소프트웨어학과를 졸업하고, 컬럼비아대학교 석사를 거쳐 현재 Amazon Software Engineer로 근무 중이신 차승종(Daniel Cha) 님을 모셨습니다.\n\n학부 시절 같은 고민을 했던 솦대생으로서, 미국 유학을 준비한 과정부터 해외 취업에 도전한 경험, 그리고 직접 부딪히며 알게 된 현실적인 팁과 실제로 도움이 되었던 방법들을 솔직하게 나눕니다!\n\n★일시: 10월 28일(수) 12시 ~ 13시\n\n★강연방식: 온/오프라인 하이브리드 강연\n\n★강연자: 차승종 Daniel Cha (Amazon Software Engineer)\n\n★강연참여\n\n- (자) 산학협력센터 6층 (85605호)\n- (인) 다산경제관 5층 글로벌라운지 (32535호)\n- 온라인 참여: 신청 이메일로 참여 링크 발송 *받은 메일함 확인*\n\n※ 오프라인 참여자는 No Show 금지! 약속을 지키는 킹고인\n\n★ 참석 혜택: 오프라인 참석자에게 간단한 도시락 제공 (강연 종료 후)\n\n★행사 참석 신청 (사전 신청 필수)\n\nhttps://gdg.community.dev/gdg-on-campus-sungkyunkwan-university-seoul-south-korea/\n\n★신청 방법 가이드\n\nhttps://app.notion.com/p/1f61152c669c8086b332cec6bbbd871a?pvs=4\n\nGoogle Developer Groups on Campus @ Sungkyunkwan University\n\nhttps://www.instagram.com/gdg.skku/",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><div><span><strong>[84회] 글로벌 IT 전문가와 킹고인의 만남 시즌2 여든네번째 만남</strong></span></div><div><br></div><p><span><span><img src=\"https://sco.skku.edu/_res/editor_image/2026/10/kdYXHKPRPkfzNrPVANYH0.png\"></span></span></p><div><span><span>“미국 유학과 취업, 정말 나도 할 수 있을까?”</span></span></div><div><span><span><br></span></span></div><div><span><span>유학과 해외 취업을 꿈꾸지만 어디서부터 시작해야 할지 막막한가요?</span></span></div><div><span><span><br></span></span></div><div><span><span>성균관대학교 소프트웨어학과를 졸업하고, 컬럼비아대학교 석사를 거쳐 현재 Amazon Software Engineer로 근무 중이신 차승종(Daniel Cha) 님을 모셨습니다.</span></span></div><div><span><span><br></span></span></div><div><span><span>학부 시절 같은 고민을 했던 솦대생으로서, 미국 유학을 준비한 과정부터 해외 취업에 도전한 경험, 그리고 직접 부딪히며 알게 된 현실적인 팁과 실제로 도움이 되었던 방법들을 솔직하게 나눕니다!</span></span></div><div><span><span><br></span></span></div><p>&lt;span style=\" font-size: 18px;\"&gt;&lt;span style=\" font-family: 나눔고딕, NanumGothic, sans-serif; color: rgb(0, 0, 0);\"&gt;★일시: 10월 28일(수) 12시 ~ 13시&lt;/span&gt;&lt;/span&gt;</p><div><span><span><br></span></span></div><p>&lt;span style=\" font-size: 18px;\"&gt;&lt;span style=\" font-family: 나눔고딕, NanumGothic, sans-serif; color: rgb(0, 0, 0);\"&gt;★강연방식: 온/오프라인 하이브리드 강연&lt;/span&gt;&lt;/span&gt;</p><div><span><span><br></span></span></div><p>&lt;span style=\" font-size: 18px;\"&gt;&lt;span style=\" font-family: 나눔고딕, NanumGothic, sans-serif; color: rgb(0, 0, 0);\"&gt;★강연자: 차승종 Daniel Cha (Amazon Software Engineer)&lt;/span&gt;&lt;/span&gt;</p><div><span><span><br></span></span></div><p>&lt;span style=\" font-size: 18px;\"&gt;&lt;span style=\" font-family: 나눔고딕, NanumGothic, sans-serif; color: rgb(0, 0, 0);\"&gt;★강연참여&lt;/span&gt;&lt;/span&gt;</p><div><span><span><br></span></span></div><div><span><span>- (자) 산학협력센터 6층 (85605호)</span></span></div><div><span><span>- (인) 다산경제관 5층 글로벌라운지 (32535호)</span></span></div><div><span><span>- 온라인 참여: 신청 이메일로 참여 링크 발송 *받은 메일함 확인*</span></span></div><div><span><span><br></span></span></div><div><span><span>※ 오프라인 참여자는 No Show 금지! 약속을 지키는 킹고인</span></span></div><div><span><span><br></span></span></div><p>&lt;span style=\" font-size: 18px;\"&gt;&lt;span style=\" font-family: 나눔고딕, NanumGothic, sans-serif; color: rgb(0, 0, 0);\"&gt;★&nbsp;참석 혜택: 오프라인 참석자에게 간단한 도시락 제공 (강연 종료 후)&lt;/span&gt;&lt;/span&gt;</p><div><span><span><br></span></span></div><p>&lt;span style=\" font-size: 18px;\"&gt;&lt;span style=\" font-family: 나눔고딕, NanumGothic, sans-serif; color: rgb(0, 0, 0);\"&gt;★행사 참석 신청 (사전 신청 필수)&lt;/span&gt;&lt;/span&gt;</p><div><span><span><br></span></span></div><div><span><span><a href=\"https://gdg.community.dev/gdg-on-campus-sungkyunkwan-university-seoul-south-korea/\"></a><a href=\"https://gdg.community.dev/gdg-on-campus-sungkyunkwan-university-seoul-south-korea/\"><u>https://gdg.community.dev/gdg-on-campus-sungkyunkwan-university-seoul-south-korea/</u></a></span></span></div><div><span><span><br></span></span></div><p>&lt;span style=\" font-size: 18px;\"&gt;&lt;span style=\" font-family: 나눔고딕, NanumGothic, sans-serif; color: rgb(0, 0, 0);\"&gt;★신청 방법 가이드&lt;/span&gt;&lt;/span&gt;</p><div><span><span><br></span></span></div><div><span><span><a href=\"https://app.notion.com/p/1f61152c669c8086b332cec6bbbd871a?pvs=4\"></a><a href=\"https://app.notion.com/p/1f61152c669c8086b332cec6bbbd871a?pvs=4\"><u>https://app.notion.com/p/1f61152c669c8086b332cec6bbbd871a?pvs=4</u></a></span></span></div><div><span><span><br></span></span></div><div><span><span>Google Developer Groups on Campus @ Sungkyunkwan University</span></span></div><div><span><span><br></span></span></div><div><span><a href=\"https://www.instagram.com/gdg.skku/\"></a><a href=\"https://www.instagram.com/gdg.skku/\"><u>https://www.instagram.com/gdg.skku/</u></a></span></div></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://sco.skku.edu/_res/editor_image/2026/10/kdYXHKPRPkfzNrPVANYH0.png"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
     },
     "cse-notice/227334": {
       "notice": {
@@ -840,17 +938,17 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "- 지원 링크 : https://rideflux.career.greetinghr.com/ko/home\n- 서류 마감 : 11/1(일) 23:59\n\n라이드플럭스는 높은 인재밀도를 유지하고 있으며,\n최고의 인재들이 일하기 좋은 최고의 일터를 지향하고,\n엔지니어 퇴직율 1%대의 높은 리텐션을 유지하고 있습니다.",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p>- 지원 링크 : <a href=\"https://rideflux.career.greetinghr.com/ko/home\"></a><span><a href=\"https://rideflux.career.greetinghr.com/ko/home\"><strong>https://rideflux.career.greetinghr.com/ko/home</strong></a></span></p><p>- 서류 마감 : 11/1(일) 23:59</p><p>라이드플럭스는 높은 인재밀도를 유지하고 있으며,</p><p>최고의 인재들이 일하기 좋은 최고의 일터를 지향하고,</p><p>엔지니어 퇴직율 1%대의 높은 리텐션을 유지하고 있습니다.</p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
       "images": [],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
     },
     "cse-notice/227280": {
       "notice": {
@@ -873,17 +971,19 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "■ 지원서 접수\n\n접수기간\n2026.10.23(금) ~ 2026.11.01(일) 23시까지\n\n접수방법\n당사 채용홈페이지(https://kbinsure.recruiter.co.kr)를 통한 온라인 지원만 가능\n\n문의처\n채용홈페이지 Q&A 게시판, 전화(02-6900-2309)\n\n합격자 발표\n각 전형별 합격여부는 당사 채용홈페이지에서 조회 가능\n모집직무 중 1개 직무에 한해 지원 가능하며, 직무 간 중복지원은 불가합니다.\n\n■ 지원안내\n• AI·데이터 직무는 통합 모집하며, 본사의 다양한 부서에서 AI·데이터 분석·디지털 전환·IT 기획 관련 업무를 수행할 수 있습니다.\n세부 업무 및 배치부서는 지원자의 역량·적성과 회사의 인력운영 상황 등을 고려하여 결정합니다.\n• 우대사항은 필수 지원자격이 아닙니다. 직무 관련 경험을 작성할 때는 학업·프로젝트·동아리·대외활동·아르바이트·인턴 등 다양한 경험을 활용할 수 있습니다.\n• 공통 우대사항 : 2024년 상반기 KB손해보험 「임베디드 신상품 아이디어 공모전」 수상자(우수상 이상), 「국가유공자 등 예우 및 지원에 관한 법률」에 따른 보훈 대상자(서류제출 필수)\n\n■ 지원자격\n• 4년제 대학 기졸업자 또는 2027년 2월 졸업예정자로 2027년 1월 부터 정상근무 가능한 자\n• 해외여행에 결격사유가 없으며 당사 취업규칙상 채용 결격사유가 없는 자\n\n■ 유의사항\n• 아래 사항에 해당하는 경우, 전형 진행 중 불합격 처리되거나 합격 또는 입사가 취소될 수 있습니다.\n① 채용청탁 등 채용 관련 부정행위자\n② 입사지원서 또는 제출 서류에 허위 사실을 기재하거나, 기재사항을 확인하기 위한 서류를 제출하지 않은 자\n③ 면접전형 합격 후 채용검진 결과 정상근무 불가 판정자\n④ 기타 당사 취업규칙상 임용이 불가한 자\n• 회사소개 등 자세한 사항은 당사 홈페이지(www.kbinsure.co.kr)를 참고하시기 바랍니다.\n• 접수 마감 당일에는 인터넷 접속이 급증하여 지원서 제출이 어려울 수 있으므로 미리 접수하여 주시기 바랍니다.\n• 입사 후 취업규칙에 따른 수습기간을 운영하며, 직무수행 능력·근무태도 등에 대한 평가를 실시합니다. 수습기간 및 평가에 관한 세부 사항은 근로계약 체결 시 안내합니다.\n\n■ 제출서류(입사지원서 기재사항 증빙서류)\n• 졸업증명서 또는 졸업(예정)증명서\n• 자격증 사본 또는 경력증명서\n• 국가보훈대상자 증명서\n* 모든 서류는 임원면접 합격자에 한해 제출",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><img src=\"https://cse.skku.edu/_res/editor_image/2026/10/YYmHjehuNFCsFPsVCsUk0.jpg\"></p><p><span><strong><span>■ 지원서 접수</span></strong><span><br><br><strong>접수기간</strong><br>2026.10.23(금) ~ 2026.11.01(일) 23시까지<br><br><strong>접수방법</strong><br>당사 채용홈페이지(https://kbinsure.recruiter.co.kr)를 통한 온라인 지원만 가능<br><br><strong>문의처</strong><br>채용홈페이지 Q&amp;A 게시판, 전화(02-6900-2309)<br><br><strong>합격자 발표</strong><br>각 전형별 합격여부는 당사 채용홈페이지에서 조회 가능<br>모집직무 중 1개 직무에 한해 지원 가능하며, 직무 간 중복지원은 불가합니다.</span></span></p><p><span><span><strong>■ 지원안내</strong><br>• AI·데이터 직무는 통합 모집하며, 본사의 다양한 부서에서 AI·데이터 분석·디지털 전환·IT 기획 관련 업무를 수행할 수 있습니다.<br>세부 업무 및 배치부서는 지원자의 역량·적성과 회사의 인력운영 상황 등을 고려하여 결정합니다.<br>• 우대사항은 필수 지원자격이 아닙니다. 직무 관련 경험을 작성할 때는 학업·프로젝트·동아리·대외활동·아르바이트·인턴 등 다양한 경험을 활용할 수 있습니다.<br>• 공통 우대사항 : 2024년 상반기 KB손해보험 「임베디드 신상품 아이디어 공모전」 수상자(우수상 이상), 「국가유공자 등 예우 및 지원에 관한 법률」에 따른 보훈 대상자(서류제출 필수)<br><br><strong>■ 지원자격</strong><br>• 4년제 대학 기졸업자 또는 2027년 2월 졸업예정자로 2027년 1월 부터 정상근무 가능한 자<br>• 해외여행에 결격사유가 없으며 당사 취업규칙상 채용 결격사유가 없는 자<br><br><strong>■ 유의사항</strong><br>• 아래 사항에 해당하는 경우, 전형 진행 중 불합격 처리되거나 합격 또는 입사가 취소될 수 있습니다.<br>① 채용청탁 등 채용 관련 부정행위자<br>② 입사지원서 또는 제출 서류에 허위 사실을 기재하거나, 기재사항을 확인하기 위한 서류를 제출하지 않은 자<br>③ 면접전형 합격 후 채용검진 결과 정상근무 불가 판정자<br>④ 기타 당사 취업규칙상 임용이 불가한 자<br>• 회사소개 등 자세한 사항은 당사 홈페이지(www.kbinsure.co.kr)를 참고하시기 바랍니다.<br>• 접수 마감 당일에는 인터넷 접속이 급증하여 지원서 제출이 어려울 수 있으므로 미리 접수하여 주시기 바랍니다.<br>• 입사 후 취업규칙에 따른 수습기간을 운영하며, 직무수행 능력·근무태도 등에 대한 평가를 실시합니다. 수습기간 및 평가에 관한 세부 사항은 근로계약 체결 시 안내합니다.<br><br><strong>■ 제출서류(입사지원서 기재사항 증빙서류)</strong><br>• 졸업증명서 또는 졸업(예정)증명서<br>• 자격증 사본 또는 경력증명서<br>• 국가보훈대상자 증명서<br>* 모든 서류는 임원면접 합격자에 한해 제출</span></span></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://cse.skku.edu/_res/editor_image/2026/10/YYmHjehuNFCsFPsVCsUk0.jpg"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
     },
     "skku-notice01/140492": {
       "notice": {

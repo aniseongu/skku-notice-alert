@@ -16,6 +16,11 @@ RETRY_STATUS = {429, 500, 502, 503, 504}
 MAX_IMAGE_BYTES = 5 * 1024 * 1024
 SOURCES_PATH = Path("config/sources.yaml")
 LOGGER = logging.getLogger(__name__)
+# Exact public image hosts observed in collected internship notices; no wildcard CDN host matching.
+EXTERNAL_IMAGE_HOSTS = frozenset({
+    "daoift3qrrnil.cloudfront.net", "media-cdn.linkareer.com", "linkareer.com",
+    "image.ninehire.com", "file2.jobkorea.co.kr", "psk.recruiter.co.kr", "i0.wp.com",
+})
 
 
 @dataclass(frozen=True)
@@ -41,18 +46,27 @@ def _resolve_addresses(host: str) -> set[str]:
     return {entry[4][0] for entry in socket.getaddrinfo(host, None, type=socket.SOCK_STREAM)}
 
 
-def _validate_notice_url(url: str) -> None:
+def _external_source_hosts() -> set[str]:
+    settings = yaml.safe_load(SOURCES_PATH.read_text(encoding="utf-8"))
+    return {urlsplit(source["url"]).hostname.lower() for source in settings["sources"]
+            if source.get("external")}
+
+
+def _validate_notice_url(
+    url: str, *, allowed_hosts: set[str] | None = None, https_only: bool = False,
+) -> None:
     try:
         parsed = urlsplit(url)
         host = parsed.hostname
         safe_label = f"{parsed.scheme}://{host}" if host else "invalid URL"
         if (
-            parsed.scheme not in {"http", "https"}
+            parsed.scheme not in ({"https"} if https_only else {"http", "https"})
             or not host
             or parsed.username is not None
             or parsed.password is not None
-            or parsed.port is not None and parsed.port not in {80, 443}
-            or not (host in _source_hosts() or host.endswith(".skku.edu"))
+            or parsed.port is not None and parsed.port not in ({443} if https_only else {80, 443})
+            or not (host in (allowed_hosts if allowed_hosts is not None else _source_hosts())
+                    or host.endswith(".skku.edu"))
         ):
             raise UnsafeURL(safe_label)
         addresses = _resolve_addresses(host)
@@ -103,9 +117,12 @@ def fetch_detail(url: str, user_agent: str, timeout_seconds: float) -> str:
     return response.text
 
 
-def fetch_image(url: str, user_agent: str) -> ImageData | None:
+def fetch_image(url: str, user_agent: str, *, allow_external: bool = False) -> ImageData | None:
     try:
-        _validate_notice_url(url)
+        hosts = _source_hosts() - _external_source_hosts()
+        if allow_external:
+            hosts.update(EXTERNAL_IMAGE_HOSTS)
+        _validate_notice_url(url, allowed_hosts=hosts, https_only=True)
         with httpx.Client(headers={"User-Agent": user_agent}, timeout=10,
                           follow_redirects=False) as client:
             with client.stream("GET", url) as response:
@@ -122,18 +139,20 @@ def fetch_image(url: str, user_agent: str) -> ImageData | None:
                     if len(data) > MAX_IMAGE_BYTES:
                         return None
                 return ImageData(bytes(data), mime_type)
-    except (UnsafeURL, httpx.HTTPError, ValueError):
+    except (UnsafeURL, httpx.HTTPError, ValueError, OSError, yaml.YAMLError):
         return None
 
 
-def fetch_images(urls: list[str], user_agent: str, limit: int) -> list[ImageData]:
+def fetch_images(
+    urls: list[str], user_agent: str, limit: int, *, allow_external: bool = False,
+) -> list[ImageData]:
     images = []
     previous_request: float | None = None
     for url in urls[:min(3, max(0, limit))]:
         if previous_request is not None:
             time.sleep(max(0, 1 - (time.monotonic() - previous_request)))
         previous_request = time.monotonic()
-        image = fetch_image(url, user_agent)
+        image = fetch_image(url, user_agent, allow_external=allow_external)
         if image is not None:
             images.append(image)
     return images

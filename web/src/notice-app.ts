@@ -9,14 +9,18 @@ import {
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { cleanHtml, fileType } from './rich';
 import './settings-view';
+import { readVariable, saveVariable } from './github';
+import { loadToken } from './settings-storage';
+import { SAVED_VARIABLE, type SavedNotice, loadSaved, parseSaved, storeSaved, toggleSaved } from './saved-notices';
 import type { Theme } from './settings-view';
 
-type Tab = 'mine' | 'deadline' | 'all';
+type Tab = 'mine' | 'deadline' | 'all' | 'saved';
 type View = Tab | 'settings';
 const TABS: { id: Tab; label: string; icon: IconName }[] = [
   { id: 'mine', label: '내 공지', icon: 'user-check' },
   { id: 'deadline', label: '마감 임박', icon: 'alarm' },
   { id: 'all', label: '전체', icon: 'list' },
+  { id: 'saved', label: '저장', icon: 'bookmark' },
 ];
 const STALE_MS = 2 * 3600_000;
 // 화면을 켜 둔 채로 있어도 15분 주기의 새 공지와 D-day가 바뀌도록 5분마다 다시 받는다.
@@ -53,8 +57,8 @@ function applyTheme(theme: Theme) {
 const kbd = (...keys: string[]) => html`<span class="kbd-group" aria-hidden="true">${keys.map((k) => html`<kbd class="kbd">${k}</kbd>`)}</span>`;
 
 const SHORTCUTS: { group: string; items: [string, string[]][] }[] = [
-  { group: '목록', items: [['다음 공지', ['J']], ['이전 공지', ['K']], ['원문 열기', ['Enter']], ['상세 칸 닫기', ['Esc']]] },
-  { group: '이동', items: [['내 공지', ['1']], ['마감 임박', ['2']], ['전체', ['3']], ['검색', ['/']]] },
+  { group: '목록', items: [['다음 공지', ['J']], ['이전 공지', ['K']], ['원문 열기', ['Enter']], ['저장하기', ['S']], ['상세 칸 닫기', ['Esc']]] },
+  { group: '이동', items: [['내 공지', ['1']], ['마감 임박', ['2']], ['전체', ['3']], ['저장', ['4']], ['검색', ['/']]] },
   { group: '그 밖', items: [['새로고침', ['R']], ['단축키 보기', ['?']]] },
 ];
 
@@ -69,6 +73,7 @@ export class NoticeApp extends LitElement {
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true },
+    saved: { state: true },
   };
 
   notices: Notice[] = [];
@@ -80,6 +85,10 @@ export class NoticeApp extends LitElement {
   board = remember('board') ?? 'all';
   keyword: string | null = null;
   keywords = loadKeywords();
+  saved: SavedNotice[] = loadSaved();
+  // GitHub 연결(설정에서 한 번 넣은 토큰). 있으면 저장 목록과 키워드를 모든 기기와 맞춘다.
+  private github: { repo: string; token: string } | null = null;
+  private savedWrite: Promise<void> = Promise.resolve();
   query = '';
   loading = true;
   failed = false;
@@ -107,6 +116,7 @@ export class NoticeApp extends LitElement {
     super.connectedCallback();
     applyTheme(this.theme);
     this.refresh();
+    this.syncFromGitHub();
     wide.addEventListener('change', () => { this.isWide = wide.matches; });
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') this.refresh(); });
     window.setInterval(() => { if (document.visibilityState === 'visible') this.refresh(); }, REFRESH_MS);
@@ -149,6 +159,50 @@ export class NoticeApp extends LitElement {
     }
   }
 
+  // GitHub 값이 있으면 그것을 따른다(다른 기기에서 바꾼 것). 없으면 이 기기 것을 올린다.
+  private async syncFromGitHub() {
+    const repo = remember('github-repo');
+    const token = await loadToken();
+    if (!repo || !token) return;
+    this.github = { repo, token };
+    try {
+      const [saved, keywords] = await Promise.all([
+        readVariable(repo, token, SAVED_VARIABLE), readVariable(repo, token, 'INTEREST_KEYWORDS'),
+      ]);
+      if (saved !== null) { this.saved = parseSaved(saved); storeSaved(this.saved); }
+      else if (this.saved.length) this.pushSaved();
+      const words = (keywords ?? '').split(/[,\n]/).map((w) => w.trim()).filter(Boolean);
+      if (words.length) this.setKeywords(words);
+    } catch { /* 인터넷 오류면 이 기기 것을 그대로 보여 준다 */ }
+  }
+
+  private pushSaved() {
+    const github = this.github;
+    if (!github) return;
+    const value = JSON.stringify(this.saved);
+    // 빠르게 여러 번 눌러도 마지막 상태가 남도록 차례로 보낸다.
+    this.savedWrite = this.savedWrite.then(() => saveVariable(github.repo, github.token, SAVED_VARIABLE, value))
+      .catch(() => this.showToast('이 기기에만 저장했어요. 다른 기기에는 다음에 열 때 맞춰요'));
+  }
+
+  private isSaved(notice: Notice): boolean { return this.saved.some((item) => item.id === notice.id); }
+
+  private toggleSave(notice: Notice) {
+    const next = toggleSaved(this.saved, notice);
+    if (!next) { this.showToast('저장할 수 있는 공지가 가득 찼어요. 안 쓰는 저장을 지워 주세요'); return; }
+    const added = next.length > this.saved.length;
+    this.saved = next;
+    storeSaved(next);
+    this.pushSaved();
+    this.showToast(added ? '저장했어요' : '저장을 지웠어요');
+  }
+
+  /** 저장한 글. 지금 목록에 있으면 최신 정보로, 밀려났으면 저장할 때 정보로 보여 준다. */
+  private savedNotices(): Notice[] {
+    return this.saved.map((item) => this.notices.find((n) => n.id === item.id) ?? { ...item, first_seen: null })
+      .sort((a, b) => b.posted_on.localeCompare(a.posted_on));
+  }
+
   private judgement(notice: Notice): Judgement | undefined { return this.matched?.items[notice.id]; }
 
   /** 이 글에 맞는 관심 키워드: 이 기기의 글자 매칭 + 서버의 글자 매칭 + Gemini가 뜻으로 맞춘 것 */
@@ -164,9 +218,9 @@ export class NoticeApp extends LitElement {
 
   private mine(notice: Notice): boolean { return isMine(this.judgement(notice)) || this.interests(notice).length > 0; }
 
-  private filtered(): Notice[] {
+  private filtered(notices = this.notices): Notice[] {
     const query = this.query.trim().toLowerCase();
-    return this.notices.filter((n) => {
+    return notices.filter((n) => {
       if (this.board !== 'all' && n.source_id !== this.board) return false;
       if (this.keyword && !this.interests(n).includes(this.keyword)) return false;
       if (!query) return true;
@@ -184,7 +238,9 @@ export class NoticeApp extends LitElement {
   }
 
   private tab(): Tab { return this.view === 'settings' ? 'mine' : this.view; }
-  private visible(): Notice[] { return this.byTab(this.filtered(), this.tab()); }
+  private visible(): Notice[] {
+    return this.tab() === 'saved' ? this.filtered(this.savedNotices()) : this.byTab(this.filtered(), this.tab());
+  }
 
   private setView(view: View) {
     this.view = view;
@@ -264,6 +320,8 @@ export class NoticeApp extends LitElement {
       j: () => move(1), ArrowDown: () => move(1), k: () => move(-1), ArrowUp: () => move(-1),
       Enter: () => { const notice = list[index]; if (notice) window.open(safeUrl(notice.url), '_blank', 'noopener'); },
       r: () => this.refresh(), 1: () => this.setView('mine'), 2: () => this.setView('deadline'), 3: () => this.setView('all'),
+      4: () => this.setView('saved'),
+      s: () => { const notice = list[index]; if (notice) this.toggleSave(notice); },
     };
     const action = actions[event.key];
     if (action) { event.preventDefault(); action(); }
@@ -302,14 +360,16 @@ export class NoticeApp extends LitElement {
   render() {
     const filtered = this.filtered();
     const tabs = TABS.filter((t) => t.id !== 'mine' || this.matched || this.keywords.length);
-    const counts = Object.fromEntries(tabs.map((t) => [t.id, this.byTab(filtered, t.id).length]));
+    const counts = Object.fromEntries(tabs.map((t) => [t.id, t.id === 'saved'
+      ? this.filtered(this.savedNotices()).length : this.byTab(filtered, t.id).length]));
     const list = this.visible();
     const settings = this.view === 'settings';
     const title = settings ? '설정' : this.keyword ? this.keyword : TABS.find((t) => t.id === this.view)!.label;
     const selected = settings ? undefined
-      : this.notices.find((n) => n.id === this.selectedId) ?? (this.isWide ? list[0] : undefined);
+      : list.find((n) => n.id === this.selectedId) ?? this.notices.find((n) => n.id === this.selectedId) ?? (this.isWide ? list[0] : undefined);
     this.shownId = selected?.id ?? null;
-    const reading = !this.isWide && !settings ? this.notices.find((n) => n.id === this.openedId) : undefined;
+    const reading = !this.isWide && !settings
+      ? this.notices.find((n) => n.id === this.openedId) ?? list.find((n) => n.id === this.openedId) : undefined;
     const classes = [settings ? 'is-settings' : '', this.isWide && !this.detailOpen ? 'no-detail' : '', reading ? 'is-reading' : ''].join(' ');
     return html`
       <div class="wco-bar" aria-hidden="true"><svg class="brand-mark" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>성대 공지</div>
@@ -382,6 +442,7 @@ export class NoticeApp extends LitElement {
             <button type="button" class="icon-button" aria-label="상세 칸 닫기" title="상세 칸 닫기 (Esc)" aria-keyshortcuts="Escape"
               @click=${() => this.setDetail(false)}>${icon('close')}</button>
             ${selected ? html`<div class="detail-actions">
+              ${this.saveButton(selected)}
               <button type="button" class="ghost-button" @click=${() => this.copyLink(selected)}>링크 복사하기</button>
               <a class="solid-button" href=${safeUrl(selected.url)} target="_blank" rel="noopener" aria-keyshortcuts="Enter">원문 열기${kbd('Enter')}</a></div>` : nothing}
           </div>
@@ -433,6 +494,7 @@ export class NoticeApp extends LitElement {
       </header>
       <div class="reading">${this.detail(notice)}</div>
       <div class="read-actions glass">
+        ${this.saveButton(notice)}
         <button type="button" class="ghost-button" @click=${() => this.copyLink(notice)}>링크 복사하기</button>
         <a class="solid-button" href=${safeUrl(notice.url)} target="_blank" rel="noopener">원문 열기</a>
       </div>`;
@@ -488,6 +550,7 @@ export class NoticeApp extends LitElement {
         mine: ['지금 챙길 공지가 없어요', '기준이나 관심 키워드에 맞는 새 글이 오면 여기 쌓여요'],
         deadline: ['다가오는 마감이 없어요', '제목에 마감일이 적힌 공지만 여기에 나와요'],
         all: ['이 게시판에 공지가 없어요', '다른 게시판을 골라 보세요'],
+        saved: ['저장한 공지가 없어요', '공지를 열고 저장 단추를 누르면 여기에 모여요'],
       }[this.tab()];
       return html`${boardPicker}${this.empty(empty[0], empty[1])}`;
     }
@@ -565,7 +628,8 @@ export class NoticeApp extends LitElement {
         @click=${(e: MouseEvent) => this.onRow(e, notice)}>
         <span class="meta"><span class="board">${boardName(source, notice.source_id)}</span>${notice.category || notice.pinned
           ? html`<span class="cat">${[notice.category, notice.pinned ? '고정' : ''].filter(Boolean).join(', ')}</span>` : nothing}</span>
-        <span class="title">${cleanTitle(notice.title)}</span>
+        <span class="title">${cleanTitle(notice.title)}${this.view !== 'saved' && this.isSaved(notice)
+          ? html`<svg class="i saved-mark" role="img" aria-label="저장함"><use href="icons/sprite.svg#bookmark-on"></use></svg>` : nothing}</span>
         <span class="sub">${this.reasonLine(notice)}</span>
         ${this.dday(notice, today)}
       </a></li>`;
@@ -596,6 +660,13 @@ export class NoticeApp extends LitElement {
           ${judgement?.notified ? html`<div><dt>알림</dt><dd>휴대폰으로 보냈어요</dd></div>` : nothing}
         </dl>
       </div>`;
+  }
+
+  private saveButton(notice: Notice) {
+    const saved = this.isSaved(notice);
+    return html`<button type="button" class="icon-button save-button" aria-pressed=${String(saved)}
+      aria-label=${saved ? '저장 지우기' : '저장하기'} title=${saved ? '저장 지우기 (S)' : '저장하기 (S)'} aria-keyshortcuts="s"
+      @click=${() => this.toggleSave(notice)}>${icon(saved ? 'bookmark-on' : 'bookmark')}</button>`;
   }
 
   private attachmentsView(loaded: NoticeBody) {

@@ -59,7 +59,7 @@ export async function subscribeBrowserPush(): Promise<PushSubscription> {
   try {
     return await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key });
   } catch {
-    throw new Error('브라우저가 알림 연결을 완료하지 못했어요. 최신 버전인지 확인하고 다시 시도해 주세요');
+    throw new Error('브라우저가 알림을 연결하지 못했어요. 브라우저를 최신 버전으로 바꾸고 다시 눌러 주세요');
   }
 }
 

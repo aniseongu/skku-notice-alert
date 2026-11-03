@@ -399,6 +399,8 @@
       grid-template-areas: "meta title dday" "meta reason dday";
       gap: 2px 16px; padding: 12px 24px;
     }
+    /* 판정 줄이 없는 행은 그 줄 자리(18px)를 남기지 않는다. 그래서 행 높이가 제목 줄 수만 따른다. */
+    .row:has(> .sub:empty) { grid-template-areas: "meta title dday"; }
     .row .meta { flex-direction: column; gap: 0; padding-top: 2px; }
     .row .meta span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .row .meta .board { color: var(--text-2); font-weight: 600; }

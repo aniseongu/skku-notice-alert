@@ -380,6 +380,7 @@ def _intern_decisions(archive: Archive, state, sources: list[dict], ai: dict, ap
         fingerprints[key] = fingerprint
     if selected:
         found = judge_internships(selected, model, api_key, profile=profile, images=images)
+        print(f"인턴 AI: {len(selected)}건 요청, {len(found)}건 판정")
         items = dict(archive.items)
         for key, result in found.items():
             if key not in fingerprints:
@@ -394,6 +395,8 @@ def _intern_decisions(archive: Archive, state, sources: list[dict], ai: dict, ap
         if found:
             archive = Archive(items)
             save_archive(ARCHIVE_PATH, archive)
+    elif ranked:
+        print(f"인턴 AI: 본문과 이미지 준비 대기 {len(ranked)}건")
     return archive, judgments
 
 def _apply_ocr(archive: Archive, images: dict) -> Archive:

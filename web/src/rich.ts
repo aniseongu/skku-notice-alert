@@ -25,7 +25,7 @@ export function cleanHtml(html: string): string {
   });
 }
 
-// 첨부 형식은 확장자를 글자로 보여 준다(아이콘 대신, 웨일 DESIGN 1절).
+// 첨부 형식은 확장자를 글자로 보여 준다(아이콘 대신, docs/DESIGN.md).
 export function fileType(name: string, type?: string): string {
   const ext = (type ?? name.split('.').pop() ?? '').replace(/^\./, '').toUpperCase();
   return /^[A-Z0-9]{2,5}$/.test(ext) ? ext : '파일';

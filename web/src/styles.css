@@ -312,7 +312,7 @@
   .read-actions > * { flex: 1; }
 }
 
-/* Windows (웨일 창, 설치 앱): 바닥까지 닿는 평평한 칸, 칸마다 따로 스크롤, 64px 머리 줄이 한 줄로 이어진다 */
+/* PC (브라우저 창, 설치 앱): 바닥까지 닿는 평평한 칸, 칸마다 따로 스크롤, 64px 머리 줄이 한 줄로 이어진다 */
 @layer desktop {
   @media (min-width: 720px) {
     body { overflow: hidden; }

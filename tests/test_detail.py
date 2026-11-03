@@ -162,7 +162,7 @@ def test_detail_export_and_gemini_schema(tmp_path: Path) -> None:
                       "attachments": [{"name": "파일.pdf", "url": "https://example.com/a", "type": "PDF",
                                        "size": "123KB"}],
                       "images": ["https://example.com/image.png"], "body_from_image": False,
-                      "ocr_engine": None,
+                      "translation": None, "ocr_engine": None,
                       "fetched_at": "2026-11-02T01:00:00+09:00"}
     assert "summary" in SCHEMA["properties"]["items"]["items"]["required"]
 

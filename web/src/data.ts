@@ -13,6 +13,8 @@ export interface Notice {
   pinned: boolean;
   deadline: string | null;
   first_seen: string | null;
+  // 영어 공지를 Gemini가 옮긴 제목(추가 필드). 없으면 원문 제목을 쓴다.
+  title_ko?: string | null;
 }
 
 export type Verdict = 'relevant' | 'maybe' | 'not_relevant';
@@ -41,6 +43,8 @@ export interface NoticeBody {
   images?: string[];
   // 그림에서 기계가 읽어 옮긴 본문인지(D-014, D-015). 틀릴 수 있어 화면에 밝힌다.
   body_from_image?: boolean;
+  // 영어 공지의 한국어 번역(translate.py). 원문은 body, body_html 그대로 있다.
+  translation?: { title: string; body: string; model?: string } | null;
   fetched_at: string | null;
 }
 

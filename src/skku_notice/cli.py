@@ -4,6 +4,7 @@ import argparse
 import os
 import sys
 import time
+from dataclasses import replace
 from datetime import datetime
 from pathlib import Path
 
@@ -18,6 +19,7 @@ from skku_notice.archive import (
     save_archive,
     update_detail,
     update_image_text,
+    update_translation,
 )
 from skku_notice.canvas import CanvasError, read_canvas
 from skku_notice.canvas_alerts import (
@@ -38,6 +40,7 @@ from skku_notice.ocr import read_images
 from skku_notice.parse import ParseError, parse_detail, parse_list
 from skku_notice.rules import load_rules, match_notice
 from skku_notice.state import baseline, is_new, load_state, record_result, save_state
+from skku_notice.translate import needs_translation, translate_notice
 
 SOURCES_PATH = Path("config/sources.yaml")
 STATE_PATH = Path("state/seen.json")
@@ -110,6 +113,28 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
                 archive = update_detail(archive, key, detail.body_text, detail.attachments,
                                         now.isoformat(), detail.images, detail.body_html)
             save_archive(ARCHIVE_PATH, archive)
+    return archive
+
+
+# 무료 한도를 아끼려고 실행당 3건만 옮기고, 한 글은 두 번 실패하면 더 시도하지 않는다.
+TRANSLATE_PER_RUN = 3
+
+
+def _translate(archive, ai: dict, api_key: str):
+    if not api_key:
+        return archive
+    done = 0
+    for key, item in archive.items.items():
+        if done == TRANSLATE_PER_RUN:
+            break
+        ready = item.get("body_text") is not None or item.get("body_attempts", 0) >= 3
+        if (item.get("translation") or item.get("translation_attempts", 0) >= 2 or not ready
+                or not needs_translation(item["notice"]["title"], item.get("body_text"))):
+            continue
+        done += 1
+        result = translate_notice(item["notice"]["title"], item.get("body_text"), ai["model"], api_key)
+        archive = update_translation(archive, key, result, ai["model"])
+        save_archive(ARCHIVE_PATH, archive)
     return archive
 
 
@@ -220,6 +245,8 @@ def run(args: argparse.Namespace) -> int:
                 save_archive(ARCHIVE_PATH, archive)
         archive = _fill_details(archive, state, boards, settings, args.from_fixtures, now)
         save_archive(ARCHIVE_PATH, archive)
+        if ai.get("enabled") and not getattr(args, "no_ai", False) and not args.from_fixtures:
+            archive = _translate(archive, ai, os.environ.get("GEMINI_API_KEY", ""))
     candidates = []
     image_candidates = []
     for source, notices in boards:
@@ -337,9 +364,12 @@ def run(args: argparse.Namespace) -> int:
                 )
                 save_archive(ARCHIVE_PATH, archive)
                 continue
+            # 영어 공지는 옮긴 제목으로 알린다.
+            translated = archive.items.get(f"{source['id']}/{notice.article_no}", {}).get("translation") or {}
+            korean = translated.get("title")
             sent = send_notice(
-                notice, source["name"], priority, match, judgment.reason if judgment else None,
-                shown_interests,
+                replace(notice, title=korean) if korean else notice, source["name"], priority, match,
+                judgment.reason if judgment else None, shown_interests,
             )
             state = record_result(state, notice, "notified" if sent else "pending", now)
             save_state(STATE_PATH, state)

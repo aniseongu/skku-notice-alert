@@ -119,6 +119,17 @@ def mark_image_attempted(archive: Archive, key: str) -> Archive:
     return Archive({**archive.items, key: {**archive.items[key], "image_attempted": True}})
 
 
+def update_translation(archive: Archive, key: str, result: tuple[str, str] | None, model: str) -> Archive:
+    """Korean translation of an English notice. Failures count attempts so a broken notice stops retrying."""
+    item = archive.items[key]
+    if result is None:
+        attempts = item.get("translation_attempts", 0) + 1
+        return Archive({**archive.items, key: {**item, "translation_attempts": attempts}})
+    title, body = result
+    translation = {"title": title, "body": body, "model": model}
+    return Archive({**archive.items, key: {**item, "translation": translation}})
+
+
 def update_image_text(archive: Archive, key: str, text: str, engine: str = "rapidocr") -> Archive:
     return Archive({**archive.items, key: {
         **archive.items[key], "ocr_text": text, "ocr_engine": engine,

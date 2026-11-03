@@ -64,9 +64,9 @@ async (page) => {
     });
     await check('연결 키 화면 분리와 일반 설정 복귀', async () => {
       await p.getByRole('button', {name:'설정', exact:true}).filter({visible:true}).click();
-      assert(await p.getByRole('textbox', {name:'아이캠퍼스 토큰', exact:true}).count() === 0, '일반 설정에 토큰 입력 노출');
+      assert(await p.getByLabel('아이캠퍼스 토큰', {exact:true}).count() === 0, '일반 설정에 토큰 입력 노출');
       await p.getByRole('link', {name:'연결 키 설정하기', exact:true}).click();
-      await p.getByRole('textbox', {name:'아이캠퍼스 토큰', exact:true}).waitFor();
+      await p.getByLabel('아이캠퍼스 토큰', {exact:true}).waitFor();
       assert(await p.title() === '연결 키 - 성공', '키 화면 제목');
       await p.getByRole('link', {name:'일반 설정으로', exact:true}).click();
       await p.getByRole('radiogroup', {name:'아캠 알림', exact:true}).waitFor();

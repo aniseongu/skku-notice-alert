@@ -564,8 +564,8 @@ export class SettingsView extends LitElement {
                 <p class="setting-name">아캠 알림</p>
                 <p class="setting-help">아캠플러스에서도 마감 알림을 받으면 하루 요약만 골라 주세요</p>
               </div>
-              <div class="setting-control" data-needs-link>
-                <p class="field-note link-note">위 연결에서 GitHub에 연결하면 쓸 수 있어요</p>
+              <div class="setting-control">
+                ${!this.linked ? html`<p class="field-note">GitHub에 연결하면 알림 범위를 바꿀 수 있어요</p>` : nothing}
                 <div class="segmented" role="radiogroup" aria-label="아캠 알림">
                   ${CANVAS_MODES.map(({ value, label }) => html`
                     <button type="button" role="radio" aria-checked=${String(this.canvasMode === value)}
@@ -675,8 +675,8 @@ export class SettingsView extends LitElement {
               <p class="setting-name">구글 캘린더 자동 연결</p>
               <p class="setting-help">성대 공지와 저장한 인턴 공고의 마감을 "성대 공지" 캘린더에 15분마다 맞춰 넣어요. 기기를 꺼 둬도 돼요. 마감 30분 전에 구글 알림이 울려요</p>
             </div>
-            <div class="setting-control" data-needs-link>
-              <p class="field-note link-note">일반 설정에서 GitHub에 연결하면 쓸 수 있어요</p>
+            <div class="setting-control">
+              ${!this.linked ? html`<p class="field-note">일반 설정에서 GitHub에 연결하면 쓸 수 있어요</p>` : nothing}
               ${this.saved.GOOGLE_REFRESH_TOKEN ? html`
                 <p class="setting-saved">연결돼 있어요</p>
                 <button type="button" class="ghost-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.disconnectGoogle}>연결 끊기</button>
@@ -719,8 +719,8 @@ export class SettingsView extends LitElement {
           <p class="setting-help">${field.help}</p>
           ${this.saved[name] ? html`<p class="setting-saved">입력돼 있어요</p>` : nothing}
         </div>
-        <div class="setting-control" data-needs-link>
-          <p class="field-note link-note">일반 설정에서 GitHub에 연결하면 쓸 수 있어요</p>
+        <div class="setting-control">
+          ${!this.linked ? html`<p class="field-note">일반 설정에서 GitHub에 연결하면 쓸 수 있어요</p>` : nothing}
           ${locked ? html`
             <p class="field-note">저장한 값은 숨겨 두었어요</p>
             <button type="button" class="ghost-button" @click=${() => { this.editing = { ...this.editing, [name]: true }; }}>수정하기</button>

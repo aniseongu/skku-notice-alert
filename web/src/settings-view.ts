@@ -70,13 +70,16 @@ const remember = (key: string, value?: string | null) => {
 
 export class SettingsView extends LitElement {
   static properties = {
-    keywords: { attribute: false }, theme: { attribute: false },
+    keywords: { attribute: false }, theme: { attribute: false }, categories: { attribute: false }, muted: { state: true },
     topic: { state: true }, repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
     keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true },
   };
 
   keywords: string[] = [];
+  // 지금 목록에 있는 분류(notice-app이 넘긴다)와 알림을 끈 분류(Actions 변수 MUTED_CATEGORIES, D-018).
+  categories: string[] = [];
+  muted: string[] = [];
   theme: Theme = 'auto';
   // 토픽은 아는 사람 누구나 구독할 수 있는 비밀이라 브라우저에 남기지 않는다(메모리에만, 화면을 닫으면 잊는다).
   topic = '';
@@ -203,6 +206,8 @@ export class SettingsView extends LitElement {
         this.saved = saved;
         this.linked = true;
         await this.pullKeywords(repo, token);
+        const muted = await readVariable(repo, token, 'MUTED_CATEGORIES');
+        this.muted = (muted ?? '').split(/[,\n]/).map((w) => w.trim()).filter(Boolean);
         this.setStatus('github', true, '연결했어요. 다음에 열 때도 연결돼 있어요');
       }
     } catch (error) {
@@ -278,6 +283,19 @@ export class SettingsView extends LitElement {
       this.setStatus('keywords', true, '모든 기기에 저장했어요');
     } catch (error) {
       this.setStatus('keywords', false, error instanceof GitHubError ? `${error.message}. 다시 바꾸면 또 저장해요` : '인터넷 연결을 확인해 주세요');
+    }
+  }
+
+  private async toggleCategory(category: string) {
+    if (!this.linked) { this.setStatus('muted', false, '위에서 GitHub에 연결하면 바꿀 수 있어요'); return; }
+    const before = this.muted;
+    this.muted = before.includes(category) ? before.filter((c) => c !== category) : [...before, category];
+    try {
+      await saveVariable(this.repo, this.token, 'MUTED_CATEGORIES', this.muted.join('\n'));
+      this.setStatus('muted', true, this.muted.includes(category) ? `${category} 알림을 껐어요` : `${category} 알림을 켰어요`);
+    } catch (error) {
+      this.muted = before;
+      this.setStatus('muted', false, error instanceof GitHubError ? error.message : '인터넷 연결을 확인해 주세요');
     }
   }
 
@@ -387,6 +405,19 @@ export class SettingsView extends LitElement {
               ${!supportsBrowserPush() ? html`<p class="field-note">최신 브라우저에서 알림을 연결해 주세요</p>` : nothing}
               ${this.note('browser-push')}
               <p class="field-note">한 번 연결하면 계속 받아요. 다른 브라우저에서 연결하면 받을 기기가 바뀌어요.</p>
+            </div>
+          </div>
+          <div class="setting">
+            <div class="setting-text">
+              <p class="setting-name">알림 받을 분류</p>
+              <p class="setting-help">끈 분류의 글은 목록에만 보이고 알림은 오지 않아요. 관심 키워드나 내 정보에 맞는 글은 그래도 알려요</p>
+            </div>
+            <div class="setting-control">
+              ${this.categories.length ? html`<div class="chips" role="group" aria-label="알림 받을 분류">
+                ${this.categories.map((category) => html`<button type="button" class="chip" aria-pressed=${String(!this.muted.includes(category))}
+                  ?disabled=${!this.linked} @click=${() => this.toggleCategory(category)}>${category}</button>`)}
+              </div>` : html`<p class="field-note">공지를 불러오면 분류가 보여요</p>`}
+              ${this.linked ? this.note('muted') : html`<p class="field-note">위에서 GitHub에 연결하면 바꿀 수 있어요</p>`}
             </div>
           </div>
           <div class="setting">

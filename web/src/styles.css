@@ -116,6 +116,9 @@
   /* 저장: 옆 단추와 같은 테두리와 높이. 저장하면 옅은 진녹 바탕에 진녹 책갈피(DESIGN 2절 주 동작 "저장") */
   .save-button { width: 44px; height: 44px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); color: var(--text); }
   .save-button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); }
+  /* 읽은 글은 제목을 한 단계 가볍게(색과 굵기). 안 읽은 글이 먼저 눈에 들어온다. */
+  .row.read .title { font-weight: 500; color: var(--text-2); }
+  .setting-control .chips { flex-wrap: wrap; margin: 0; padding: 0; overflow: visible; }
 
   .reason b, .verdict { margin-right: 6px; font-weight: 600; }
   .reason.relevant b, .verdict.relevant, .interest { color: var(--accent); font-weight: 600; }

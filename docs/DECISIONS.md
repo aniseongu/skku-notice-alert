@@ -177,7 +177,7 @@
 ## D-020 예약 실행 대신 이어 달리기로 15분마다 수집한다 (2026-11-03, 확정)
 
 - 사실: 켠 뒤 2시간 가까이 이 저장소에 schedule 실행이 한 번도 생기지 않았다. GitHub 상태 정상, 정각 회피, 재활성화, 파일 이름 변경 모두 효과 없음. 2026-08 이후 커뮤니티에 같은 보고가 여럿 있고 원인과 해결책이 없다.
-- 결정: `notice-and-pages.yml`의 마지막 job(chain)이 13분 쉬고 `workflow_dispatch`로 자신을 부른다(GITHUB_TOKEN의 workflow_dispatch는 새 실행을 만든다, GitHub 문서). cron은 살아나면 쓰도록 남긴다.
+- 결정: `notice-and-pages.yml`의 마지막 job(chain)이 14분 쉬고 `workflow_dispatch`로 자신을 부른다(GITHUB_TOKEN의 workflow_dispatch는 새 실행을 만든다, GitHub 문서). cron은 살아나면 쓰도록 남긴다.
 - 학교 서버: 첫 job(gate)이 사이트 `notices.json`의 수집 시각에서 14분이 안 지났으면 수집을 건너뛴다. 다른 실행이 대기 중이면 부르지 않는다. 대기 줄은 화면 배포와 나눈다(notice-crawl).
 - 끄기: 워크플로를 끄면 부르기가 실패해 멈춘다. 공개 저장소라 실행 시간 요금은 없다.
 

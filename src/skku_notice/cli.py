@@ -20,6 +20,7 @@ from skku_notice.archive import (
     note_body_change,
     note_list_changes,
     save_archive,
+    set_source_deadlines,
     update_ai_deadlines,
     update_detail,
     update_image_text,
@@ -36,7 +37,7 @@ from skku_notice.canvas_alerts import (
 from skku_notice.deadline import KST
 from skku_notice.deadline_ai import BATCH, read_deadlines
 from skku_notice.export import export_site
-from skku_notice.fetch import FetchError, UnsafeURL, fetch_detail, fetch_images, fetch_list
+from skku_notice.fetch import FetchError, UnsafeURL, fetch_detail, fetch_images, fetch_json_post, fetch_list
 from skku_notice.interests import (
     is_mine,
     load_interests,
@@ -44,6 +45,7 @@ from skku_notice.interests import (
     muted_from_env,
     refresh_archive_interests,
 )
+from skku_notice.jobs import COLLECTORS
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match, Notice
 from skku_notice.notify import has_notification_channel, send_canvas, send_notice
@@ -82,6 +84,8 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
                   from_fixtures: bool, now: datetime) -> Archive:
     gap = max(1.0, float(settings.get("request_gap_seconds", 1)))
     for source, notices in boards:
+        if source.get("external"):
+            continue
         count = 0
         new = [notice for notice in notices if notice.article_no not in state.sources[source["id"]].seen]
         for notice in new:
@@ -177,6 +181,7 @@ def _recheck_details(archive, settings: dict, now: datetime):
         deadline = item["notice"].get("deadline") or (item.get("ai_deadline") or {}).get("at")
         last = item.get("rechecked_at") or item.get("fetched_at")
         if (not _important(item, saved) or item.get("body_text") is None
+                or ".skku.edu/" not in item["notice"]["url"]
                 or (deadline and datetime.fromisoformat(deadline) < now)
                 or (last and now - datetime.fromisoformat(last) < timedelta(hours=RECHECK_HOURS))):
             continue
@@ -316,8 +321,28 @@ def run(args: argparse.Namespace) -> int:
     previous_network = False
     failed = False
     boards: list[tuple[dict, list]] = []
+    external_deadlines: dict[str, str] = {}
     for source in settings["sources"]:
         source_id = source["id"]
+        if source.get("kind") in COLLECTORS:
+            # 외부 인턴 공고(D-026): 사이트마다 한 번 요청, 상세는 읽지 않는다. fixture 실행에서는 건너뛴다.
+            if args.from_fixtures:
+                continue
+            if previous_network:
+                time.sleep(gap)
+            previous_network = True
+            try:
+                postings = COLLECTORS[source["kind"]](
+                    lambda url, body, headers: fetch_json_post(
+                        url, body, settings["user_agent"], float(settings["timeout_seconds"]), headers),
+                    now, source_id)
+            except (FetchError, KeyError, TypeError, ValueError) as exc:
+                print(f"{source_id}: 외부 공고 읽기 실패: {type(exc).__name__}", file=sys.stderr)
+                continue
+            external_deadlines.update({f"{source_id}/{n.article_no}": d for n, d in postings if d})
+            if postings:
+                boards.append((source, [notice for notice, _ in postings]))
+            continue
         try:
             if args.from_fixtures:
                 html = _fixture(source_id)
@@ -344,6 +369,7 @@ def run(args: argparse.Namespace) -> int:
                 for notice in notices:
                     archive = add_notice(archive, notice, now.isoformat())
                 save_archive(ARCHIVE_PATH, archive)
+        archive = set_source_deadlines(archive, external_deadlines)
         for _source, notices in boards:
             archive, title_changes = note_list_changes(archive, notices, now.isoformat())
             if title_changes:
@@ -427,7 +453,9 @@ def run(args: argparse.Namespace) -> int:
             )
             priority = decide_priority(match, judgment, text_interests) if process and not excluded else None
             # 꺼 둔 분류는 "모두 알림"만 빠진다. 기준, 관심 키워드, Gemini 해당은 그대로 알린다(D-018).
-            if process and priority is None and rules.notify_all and notice.category not in muted_categories:
+            # 외부 인턴 공고는 하루에도 수십 건이라 "모두 알림"에서 뺀다(D-026). 맞는 공고만 알린다.
+            if (process and priority is None and rules.notify_all and not source.get("external")
+                    and notice.category not in muted_categories):
                 priority = "low"
             if not args.dry_run and seen is not None and seen.status == "pending":
                 previous = archive.items.get(f"{source['id']}/{notice.article_no}", {}).get("match", {})

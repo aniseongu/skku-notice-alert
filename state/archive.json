@@ -1,6 +1,97 @@
 {
   "version": 1,
   "items": {
+    "linkareer-intern/361851": {
+      "notice": {
+        "id": "linkareer-intern/361851",
+        "source_id": "linkareer-intern",
+        "article_no": "361851",
+        "title": "[중앙대학교] 다빈치캠퍼스 행정인턴 채용 공고",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361851",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T22:18:45.844729+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[중앙대학교] 다빈치캠퍼스 행정인턴 채용 공고\n\n\n[담당업무]\n중앙대학교 다빈치캠퍼스 내 학과 및 행정부서 행정지원\n\n\n[접수기간]\n11월 03일 ~ 채용시 마감\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[중앙대학교] 다빈치캠퍼스 행정인턴 채용 공고</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>중앙대학교 다빈치캠퍼스 내 학과 및 행정부서 행정지원</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 03일 ~ 채용시 마감</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/979480\" title=\"image.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/979480"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T22:18:45.844729+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361846": {
+      "notice": {
+        "id": "linkareer-intern/361846",
+        "source_id": "linkareer-intern",
+        "article_no": "361846",
+        "title": "[다쏘시스템코리아] R&D Customer Success Intern (2-Month)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361846",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T22:18:45.844729+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[다쏘시스템코리아] R&D Customer Success Intern (2-Month)\n\n\n[담당업무]\nSupport 3DEXPERIENCE Platform deployment projects\nCreate User Request for product bugs/defects and document Value Request\nCommunicate with the R&D teams\nMonitor registered issues, check the progress, and update related departments\nVisit customer sites with senior engineers to observe and understand workflows\n\n\n[접수기간]\n11월 03일 ~ 채용시 마감\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[다쏘시스템코리아] R&amp;D Customer Success Intern (2-Month)</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>Support 3DEXPERIENCE Platform deployment projects</span></p><p><span>Create User Request for product bugs/defects and document Value Request</span></p><p><span>Communicate with the R&amp;D teams</span></p><p><span>Monitor registered issues, check the progress, and update related departments</span></p><p><span>Visit customer sites with senior engineers to observe and understand workflows</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 03일 ~ 채용시 마감</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/979472\" title=\"스크린샷_3-11-2026_213224_www.3ds.com.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/979472"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T21:48:39.601486+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-01T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "translation": {
+        "title": "[다쏘시스템코리아] R&D Customer Success 인턴 (2개월)",
+        "body": "[다쏘시스템코리아] R&D Customer Success 인턴 (2개월)\n\n\n[담당업무]\n3DEXPERIENCE 플랫폼 구축 프로젝트 지원\n제품 버그/결함에 대한 사용자 요청 생성 및 가치 요청 문서화\nR&D 팀과의 소통\n등록된 이슈 모니터링, 진행 상황 확인 및 관련 부서 업데이트\n선임 엔지니어와 함께 고객사 방문 및 워크플로우 관찰과 이해\n\n\n[접수기간]\n11월 03일 ~ 채용시 마감\n\n\n[채용공고]",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "linkareer-intern/361848": {
       "notice": {
         "id": "linkareer-intern/361848",
@@ -49,52 +140,6 @@
         "kind": "마감",
         "at": "2026-12-15T23:59:59.999000+09:00",
         "model": "source"
-      }
-    },
-    "linkareer-intern/361846": {
-      "notice": {
-        "id": "linkareer-intern/361846",
-        "source_id": "linkareer-intern",
-        "article_no": "361846",
-        "title": "[다쏘시스템코리아] R&D Customer Success Intern (2-Month)",
-        "category": "체험형 인턴",
-        "url": "https://linkareer.com/activity/361846",
-        "posted_on": "2026-11-03",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T21:48:39.601486+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "[다쏘시스템코리아] R&D Customer Success Intern (2-Month)\n\n\n[담당업무]\nSupport 3DEXPERIENCE Platform deployment projects\nCreate User Request for product bugs/defects and document Value Request\nCommunicate with the R&D teams\nMonitor registered issues, check the progress, and update related departments\nVisit customer sites with senior engineers to observe and understand workflows\n\n\n[접수기간]\n11월 03일 ~ 채용시 마감\n\n\n[채용공고]",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><b><span>[다쏘시스템코리아] R&amp;D Customer Success Intern (2-Month)</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>Support 3DEXPERIENCE Platform deployment projects</span></p><p><span>Create User Request for product bugs/defects and document Value Request</span></p><p><span>Communicate with the R&amp;D teams</span></p><p><span>Monitor registered issues, check the progress, and update related departments</span></p><p><span>Visit customer sites with senior engineers to observe and understand workflows</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 03일 ~ 채용시 마감</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/979472\" title=\"스크린샷_3-11-2026_213224_www.3ds.com.jpeg\"><br><br></p>",
-      "images": [
-        "https://media-cdn.linkareer.com/se2editor/image/979472"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T21:48:39.601486+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2027-02-01T23:59:59.999000+09:00",
-        "model": "source"
-      },
-      "translation": {
-        "title": "[다쏘시스템코리아] R&D Customer Success 인턴 (2개월)",
-        "body": "[다쏘시스템코리아] R&D Customer Success 인턴 (2개월)\n\n\n[담당업무]\n3DEXPERIENCE 플랫폼 구축 프로젝트 지원\n제품 버그/결함에 대한 사용자 요청 생성 및 가치 요청 문서화\nR&D 팀과의 소통\n등록된 이슈 모니터링, 진행 상황 확인 및 관련 부서 업데이트\n선임 엔지니어와 함께 고객사 방문 및 워크플로우 관찰과 이해\n\n\n[접수기간]\n11월 03일 ~ 채용시 마감\n\n\n[채용공고]",
-        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361618": {

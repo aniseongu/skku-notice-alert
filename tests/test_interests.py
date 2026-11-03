@@ -97,3 +97,17 @@ def test_muted_categories_from_settings_variable():
 
     assert muted_from_env("행사/세미나\n 학사 ,\n") == frozenset({"행사/세미나", "학사"})
     assert muted_from_env("") == frozenset()
+
+
+def test_archived_interests_are_recomputed_literally():
+    from skku_notice.interests import refresh_archive_interests
+
+    items = {
+        "a/1": {"notice": {"title": "AI Campus 교육생 모집", "category": "채용/모집"},
+                "match": {"rule_name": None, "interests": ["인턴"]}},
+        "a/2": {"notice": {"title": "장학생 선발", "category": "장학"}, "body_text": "체험형 인턴 과정",
+                "match": {"interests": []}},
+    }
+    refreshed = refresh_archive_interests(items, ("인턴", "장학"))
+    assert refreshed["a/1"]["match"]["interests"] == []
+    assert refreshed["a/2"]["match"]["interests"] == ["인턴", "장학"]

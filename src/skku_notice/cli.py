@@ -34,7 +34,7 @@ from skku_notice.deadline import KST
 from skku_notice.deadline_ai import BATCH, read_deadlines
 from skku_notice.export import export_site
 from skku_notice.fetch import FetchError, UnsafeURL, fetch_detail, fetch_images, fetch_list
-from skku_notice.interests import load_interests, match_interests, muted_from_env
+from skku_notice.interests import load_interests, match_interests, muted_from_env, refresh_archive_interests
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match
 from skku_notice.notify import has_notification_channel, send_canvas, send_notice
@@ -474,6 +474,8 @@ def run(args: argparse.Namespace) -> int:
             print(f"Canvas 설정 또는 fixture 오류: {type(exc).__name__}", file=sys.stderr)
             failed = True
     if getattr(args, "export", None):
+        # 예전 규칙(비슷한 말)으로 저장된 관심 표시도 지금 키워드와 글자 그대로 다시 맞춘다(D-024).
+        archive = Archive(refresh_archive_interests(archive.items, interests))
         export_site(args.export, archive, settings["sources"], now)
     return 1 if failed else 0
 

@@ -3,7 +3,7 @@ import { LitElement, html, nothing, type TemplateResult } from 'lit';
 import {
   GitHubError, REPO_PATTERN, checkGeminiKey, listSecrets, newTopic, readVariable, saveSecret, saveVariable, sendTestNotification,
 } from './github';
-import { readSavedSecrets, rememberSavedSecrets } from './settings-storage';
+import { forgetToken, loadToken, readSavedSecrets, rememberSavedSecrets, storeToken } from './settings-storage';
 import { browserPushEnabled, connectBrowserPush, disconnectBrowserPush, pushConfiguration, supportsBrowserPush, testBrowserNotification } from './browser-push';
 
 export type Theme = 'auto' | 'light' | 'dark';
@@ -81,8 +81,8 @@ export class SettingsView extends LitElement {
   // 토픽은 아는 사람 누구나 구독할 수 있는 비밀이라 브라우저에 남기지 않는다(메모리에만, 화면을 닫으면 잊는다).
   topic = '';
   repo = remember('github-repo') ?? '';
-  // 사용자 요청(2026-11-03)으로 연결 토큰은 이 기기에 기억한다. 키 값은 여전히 남기지 않는다.
-  token = remember('github-token') ?? '';
+  // 사용자 요청(2026-11-03)으로 연결 토큰은 이 기기에 암호화해 기억한다(D-017). 키 값은 남기지 않는다.
+  token = '';
   linked = false;
   // GitHub에 있는 키워드(모든 기기 공용)와 같은지 비교해 바뀐 것만 저장한다.
   private syncedKeywords: string | null = null;
@@ -102,7 +102,9 @@ export class SettingsView extends LitElement {
     super.connectedCallback();
     window.addEventListener('beforeunload', this.warnUnsaved);
     browserPushEnabled().then((enabled) => { this.browserNotifications = enabled; }).catch(() => {});
-    if (this.connected()) this.connect();
+    loadToken().then((token) => {
+      if (token && !this.token) { this.token = token; if (this.connected()) this.connect(); }
+    });
     if (!this.repo) pushConfiguration().then((config) => {
       if (!this.repo) { this.setRepo(config.repository); remember('github-repo', config.repository); }
     }).catch(() => {});
@@ -121,7 +123,8 @@ export class SettingsView extends LitElement {
 
   private emit(name: string, detail: unknown) { this.dispatchEvent(new CustomEvent(name, { detail, bubbles: true })); }
   private setStatus(key: string, ok: boolean, text: string) { this.status = { ...this.status, [key]: { ok, text } }; }
-  private connected() { return REPO_PATTERN.test(this.repo) && this.token.length > 0; }
+  // 저장소 하나에만 권한을 주는 Fine-grained 토큰만 받는다. classic 토큰(ghp_)은 모든 저장소에 닿는다.
+  private connected() { return REPO_PATTERN.test(this.repo) && this.token.startsWith('github_pat_'); }
 
   private setRepo(repo: string) {
     if (this.repo === repo) return;
@@ -158,7 +161,7 @@ export class SettingsView extends LitElement {
         await connectBrowserPush(this.repo, this.token);
         this.browserNotifications = true;
         this.saved = { ...this.saved, WEB_PUSH_SUBSCRIPTION: new Date().toISOString() };
-        this.setStatus('browser-push', true, '연결했어요. 앱을 닫아도 웨일이 실행 중이면 알림을 받아요');
+        this.setStatus('browser-push', true, '연결했어요. 앱을 닫아도 브라우저가 켜져 있으면 알림을 받아요');
       }
       rememberSavedSecrets(this.repo, this.saved);
     } catch (error) {
@@ -195,7 +198,7 @@ export class SettingsView extends LitElement {
     try {
       const saved = await listSecrets(repo, token);
       rememberSavedSecrets(repo, saved);
-      remember('github-token', token);
+      await storeToken(token);
       if (this.repo === repo) {
         this.saved = saved;
         this.linked = true;
@@ -204,13 +207,13 @@ export class SettingsView extends LitElement {
       }
     } catch (error) {
       // 만료되거나 지운 토큰은 기억하지 않는다. 인터넷 오류면 다음에 다시 시도한다.
-      if (error instanceof GitHubError) { remember('github-token', null); this.linked = false; }
+      if (error instanceof GitHubError) { await forgetToken(); this.token = ''; this.linked = false; }
       this.setStatus('github', false, error instanceof GitHubError ? `${error.message}. 새 토큰을 넣어 주세요` : '인터넷 연결을 확인해 주세요');
     } finally { this.busy = ''; }
   }
 
-  private disconnect() {
-    remember('github-token', null);
+  private async disconnect() {
+    await forgetToken();
     this.token = '';
     this.linked = false;
     this.syncedKeywords = null;
@@ -360,7 +363,7 @@ export class SettingsView extends LitElement {
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">이 기기 알림</p>
-              <p class="setting-help">앱과 탭을 닫아도 웨일이 실행 중이면 Windows 알림으로 받아요. 소리는 Windows 알림 설정을 따라요.</p>
+              <p class="setting-help">앱과 탭을 닫아도 브라우저가 켜져 있으면 Windows 알림으로 받아요. 소리는 Windows 알림 설정을 따라요.</p>
             </div>
             <div class="setting-control">
               <p class="setting-saved">${this.browserNotifications ? '알림을 받고 있어요' : '알림을 연결해 주세요'}</p>
@@ -369,7 +372,7 @@ export class SettingsView extends LitElement {
                   @click=${this.toggleBrowserNotifications}>${this.busy === 'browser-push' ? '연결 중' : this.browserNotifications ? '알림 끄기' : '알림 받기'}</button>
                 ${this.browserNotifications ? html`<button type="button" class="ghost-button" @click=${this.testBrowserNotifications}>테스트 알림 띄우기</button>` : nothing}
               </div>
-              ${!supportsBrowserPush() ? html`<p class="field-note">최신 웨일이나 Chrome에서 알림을 연결해 주세요</p>` : nothing}
+              ${!supportsBrowserPush() ? html`<p class="field-note">최신 브라우저에서 알림을 연결해 주세요</p>` : nothing}
               ${this.note('browser-push')}
               <p class="field-note">한 번 연결하면 계속 받아요. 다른 브라우저에서 연결하면 받을 기기가 바뀌어요.</p>
             </div>
@@ -412,11 +415,11 @@ export class SettingsView extends LitElement {
                 '"테스트 알림 보내기"로 알림이 오는지 확인해요',
               ], '휴대폰(Galaxy)에서 받는 방법')}
               ${this.guide('pc', [
-                html`웨일에서 ${link('https://ntfy.sh/app', 'ntfy.sh/app')}을 열고 "구독 추가"에 같은 토픽 이름을 넣어요`,
+                html`브라우저에서 ${link('https://ntfy.sh/app', 'ntfy.sh/app')}을 열고 "구독 추가"에 같은 토픽 이름을 넣어요`,
                 '알림 허용을 묻으면 "허용"을 눌러요. 설정 탭에서 "백그라운드 알림"을 켜요',
-                '주소창 오른쪽의 앱 설치 단추로 설치하면 창을 닫아도 웨일이 켜져 있는 동안 알림이 와요',
-                '알림이 오지 않으면 ntfy 탭을 고정해 두세요(웨일의 웹 푸시 지원 여부는 아직 확인 중이에요)',
-              ], 'Windows(웨일)에서 받는 방법')}
+                '주소창 오른쪽의 앱 설치 단추로 설치하면 창을 닫아도 브라우저가 켜져 있는 동안 알림이 와요',
+                '알림이 오지 않으면 ntfy 탭을 고정해 두세요',
+              ], 'PC 브라우저에서 받는 방법')}
             </div>
           </div>
           </div>

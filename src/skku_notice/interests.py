@@ -39,3 +39,18 @@ def match_interests(notice: Notice, keywords: tuple[str, ...], ocr_text: str = "
 def muted_from_env(value: str) -> frozenset[str]:
     """Categories the user turned off in settings (Actions variable MUTED_CATEGORIES)."""
     return frozenset(word.strip() for word in re.split(r"[,\n]", value) if word.strip())
+
+
+def refresh_archive_interests(items: dict, keywords: tuple[str, ...]) -> dict:
+    """Recompute every archived notice's interests with literal matching (old ones used similar words)."""
+    refreshed = {}
+    for key, item in items.items():
+        notice = item["notice"]
+        haystack = _compact(" ".join(filter(None, (
+            notice.get("title"), notice.get("category"), item.get("body_text"), item.get("ocr_text"),
+        ))))
+        found = [word for word in keywords
+                 if word.split() and all(_compact(w) in haystack for w in word.split())]
+        match = {**(item.get("match") or {}), "interests": found}
+        refreshed[key] = {**item, "match": match}
+    return refreshed

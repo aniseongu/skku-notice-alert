@@ -31,13 +31,13 @@ sources:
   # 외부 인턴 공고(D-026, 사용자 요청 2026-11-03). 사이트마다 실행당 한 번 요청, 상세는 읽지 않는다.
   # robots.txt 확인(2026-11-03): linkareer.com은 / 허용, api.linkareer.com은 robots.txt 없음, jasoseol.com은 / 허용.
   - id: linkareer-intern
-    name: 링커리어 인턴
+    name: 링커리어
     kind: linkareer
     url: https://linkareer.com/list/intern
     external: true
 
   - id: jasoseol-intern
-    name: 자소설닷컴 인턴
+    name: 자소설닷컴
     kind: jasoseol
     url: https://jasoseol.com/recruit
     external: true

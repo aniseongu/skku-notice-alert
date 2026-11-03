@@ -36,6 +36,11 @@ export default defineConfig({
           // 안드로이드 테마 아이콘(One UI 포함)이 배경색에 맞춰 칠하는 흰 실루엣. 다크 모드 대응은 런처가 한다.
           { src: 'icon-monochrome-512.png', sizes: '512x512', type: 'image/png', purpose: 'monochrome' },
         ],
+        // 설치 창(안드로이드, PC Chrome)에 보이는 화면 미리보기. 정식 주소에서 찍은 실제 화면이다.
+        screenshots: [
+          { src: 'screenshots/phone.png', sizes: '794x1782', type: 'image/png', form_factor: 'narrow', label: '성균관대 공지 목록' },
+          { src: 'screenshots/desktop.png', sizes: '1425x900', type: 'image/png', form_factor: 'wide', label: '목록과 상세를 함께 보는 PC 화면' },
+        ],
         shortcuts: [
           { name: '내 공지', url: './?tab=mine', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
           { name: '마감 임박', url: './?tab=deadline', icons: [{ src: 'icon-192.png', sizes: '192x192' }] },
@@ -47,7 +52,7 @@ export default defineConfig({
         importScripts: ['push-handler.js'],
         globPatterns: ['**/*.{html,js,css,svg,png}'],
         // 암호화 라이브러리(약 420KB)는 설정에서 키를 저장할 때만 불러오므로 미리 저장하지 않는다.
-        globIgnores: ['**/libsodium*.js', '**/*-dark.png', '**/icons/notify/**'],
+        globIgnores: ['**/libsodium*.js', '**/*-dark.png', '**/icons/notify/**', '**/screenshots/**'],
         navigateFallback: 'index.html',
         // 구글 연결에서 돌아오는 페이지는 주소 뒤에 code가 붙어 미리 저장본과 안 맞는다. 첫 화면으로 바꾸지 않는다.
         navigateFallbackDenylist: [/\/api\//, /oauth-callback/],

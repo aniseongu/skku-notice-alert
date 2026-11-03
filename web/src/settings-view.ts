@@ -411,7 +411,7 @@ export class SettingsView extends LitElement {
 
   render() {
     return html`
-      <div class="settings">
+      <div class="settings ${this.linked ? '' : 'unlinked'}">
         <section aria-labelledby="s-github">
           <h2 id="s-github" class="settings-head">연결</h2>
           <div class="box">
@@ -472,7 +472,8 @@ export class SettingsView extends LitElement {
               <p class="setting-name">이 기기 알림</p>
               <p class="setting-help">앱과 탭을 닫아도 브라우저가 켜져 있으면 휴대폰이나 PC 알림으로 받아요. 소리는 기기의 알림 설정을 따라요</p>
             </div>
-            <div class="setting-control">
+            <div class="setting-control" data-needs-link>
+              <p class="field-note link-note">위 연결에서 GitHub에 연결하면 쓸 수 있어요</p>
               ${this.browserNotifications ? html`<p class="setting-saved">알림을 받고 있어요</p>` : html`<p class="field-note">알림이 꺼져 있어요</p>`}
               <div class="inline">
                 <button type="button" class="ghost-button" ?disabled=${this.busy === 'browser-push' || !supportsBrowserPush()}
@@ -489,7 +490,8 @@ export class SettingsView extends LitElement {
               <p class="setting-name">알림 받을 분류</p>
               <p class="setting-help">켠 분류의 글만 알림으로 받아요. 끈 분류도 관심 키워드나 내 정보에 맞는 글은 알려요</p>
             </div>
-            <div class="setting-control">
+            <div class="setting-control" data-needs-link>
+              <p class="field-note link-note">위 연결에서 GitHub에 연결하면 쓸 수 있어요</p>
               ${this.categories.length ? html`<div class="chips" role="group" aria-label="알림 받을 분류">
                 ${this.categories.map((category) => html`<button type="button" class="chip" aria-pressed=${String(!this.muted.includes(category))}
                   ?disabled=${!this.linked} @click=${() => this.toggleCategory(category)}>${category}</button>`)}
@@ -550,7 +552,8 @@ export class SettingsView extends LitElement {
               <p class="setting-name">구글 캘린더 자동 연결</p>
               <p class="setting-help">내 공지와 저장한 공지의 마감을 "성대 공지" 캘린더에 15분마다 맞춰 넣어요. 기기를 꺼 둬도 돼요. 마감 30분 전에 구글 알림이 울려요</p>
             </div>
-            <div class="setting-control">
+            <div class="setting-control" data-needs-link>
+              <p class="field-note link-note">위 연결에서 GitHub에 연결하면 쓸 수 있어요</p>
               ${this.saved.GOOGLE_REFRESH_TOKEN ? html`
                 <p class="setting-saved">연결돼 있어요</p>
                 <button type="button" class="ghost-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.disconnectGoogle}>연결 끊기</button>
@@ -634,7 +637,8 @@ export class SettingsView extends LitElement {
           <p class="setting-help">${field.help}</p>
           ${this.saved[name] ? html`<p class="setting-saved">입력돼 있어요</p>` : nothing}
         </div>
-        <div class="setting-control">
+        <div class="setting-control" data-needs-link>
+          <p class="field-note link-note">위 연결에서 GitHub에 연결하면 쓸 수 있어요</p>
           ${locked ? html`
             <p class="field-note">저장한 값은 숨겨 두었어요</p>
             <button type="button" class="ghost-button" @click=${() => { this.editing = { ...this.editing, [name]: true }; }}>수정하기</button>

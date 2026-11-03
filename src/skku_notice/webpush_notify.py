@@ -5,6 +5,7 @@ import base64
 import ipaddress
 import json
 import os
+import re
 import sys
 from dataclasses import dataclass, field
 from urllib.parse import urlsplit
@@ -12,10 +13,14 @@ from urllib.parse import urlsplit
 from py_vapid import Vapid
 from pywebpush import WebPushException, webpush
 
+# 기기마다 Secret 하나(WEB_PUSH_SUB_<16진수>). 브라우저는 Secret을 읽을 수 없어 목록에 덧붙이지 못하므로
+# 기기별 이름으로 따로 저장하고, Actions는 toJSON(secrets)에서 이 이름만 골라 쓴다(D-019).
+DEVICE_SECRET = re.compile(r"^WEB_PUSH_SUB_[0-9A-F]{8,32}$")
+
 
 @dataclass(frozen=True, repr=False)
 class WebPushConfig:
-    subscription: dict = field(repr=False)
+    subscriptions: tuple[dict, ...] = field(repr=False)
     private_key: str = field(repr=False)
     subject: str
 
@@ -38,56 +43,98 @@ def _decode_key(value: str) -> bytes:
     return base64.b64decode(value + "=" * (-len(value) % 4), altchars=b"-_", validate=True)
 
 
-def web_push_config() -> WebPushConfig | None:
-    """Validate before processing notices, using only safe error messages."""
-    raw = os.environ.get("WEB_PUSH_SUBSCRIPTION", "").strip()
-    private_key = os.environ.get("WEB_PUSH_PRIVATE_KEY", "").strip()
-    if not raw and not private_key:
-        return None
-    if not raw or not private_key:
-        raise ValueError("WEB_PUSH_SUBSCRIPTION과 WEB_PUSH_PRIVATE_KEY를 함께 설정하세요")
+def _valid_subscription(raw: str) -> dict | None:
     try:
         subscription = json.loads(raw)
         if not isinstance(subscription, dict) or not _public_endpoint(subscription.get("endpoint", "")):
-            raise ValueError
+            return None
         keys = subscription["keys"]
         public = _decode_key(keys["p256dh"])
         auth = _decode_key(keys["auth"])
         if len(public) != 65 or public[0] != 4 or len(auth) != 16:
-            raise ValueError
+            return None
+        return subscription
+    except Exception:
+        return None
+
+
+def _raw_subscriptions() -> list[str]:
+    values = [os.environ.get("WEB_PUSH_SUBSCRIPTION", "").strip()]
+    try:
+        every = json.loads(os.environ.get("WEB_PUSH_DEVICE_SECRETS", "") or "{}")
+    except ValueError:
+        every = {}
+    if isinstance(every, dict):
+        values += [str(value).strip() for name, value in sorted(every.items()) if DEVICE_SECRET.match(name)]
+    return [value for value in values if value]
+
+
+def web_push_config() -> WebPushConfig | None:
+    """Validate before processing notices, using only safe error messages."""
+    raw = _raw_subscriptions()
+    private_key = os.environ.get("WEB_PUSH_PRIVATE_KEY", "").strip()
+    # 연결한 기기가 없으면 웹 푸시는 쓰지 않는다(발송 키만 남아 있어도 된다).
+    if not raw:
+        return None
+    if not private_key:
+        raise ValueError("WEB_PUSH_SUBSCRIPTION과 WEB_PUSH_PRIVATE_KEY를 함께 설정하세요")
+    try:
         Vapid.from_string(private_key)
     except Exception:
-        # Library exceptions can contain subscription URLs or key material.
+        # Library exceptions can contain key material.
         raise ValueError("웹 푸시 구독 정보나 발송 키가 맞지 않아요") from None
+    # 같은 기기가 예전 이름(WEB_PUSH_SUBSCRIPTION)과 새 이름에 함께 있으면 한 번만 보낸다.
+    unique: dict[str, dict] = {}
+    for value in raw:
+        subscription = _valid_subscription(value)
+        if subscription:
+            unique.setdefault(subscription["endpoint"], subscription)
+    if not unique:
+        raise ValueError("웹 푸시 구독 정보나 발송 키가 맞지 않아요")
+    if len(unique) < len(set(raw)):
+        print(f"웹 푸시: 쓸 수 없는 구독 {len(set(raw)) - len(unique)}개를 건너뛰어요", file=sys.stderr)
     # py_vapid는 경로가 붙은 https 주소를 거부한다. 메일 주소는 공개 코드에 두지 않는다.
     subject = os.environ.get("WEB_PUSH_SUBJECT", "https://aniseongu.github.io").strip()
     if not subject.startswith(("https://", "mailto:")):
         raise ValueError("WEB_PUSH_SUBJECT는 https 또는 mailto 주소로 설정하세요")
-    return WebPushConfig(subscription, private_key, subject)
+    return WebPushConfig(tuple(unique.values()), private_key, subject)
 
 
 def send_web_push(title: str, body: str, url: str, tag: str, priority: str) -> bool:
+    """Send to every connected device. A device whose subscription expired (404, 410) is skipped."""
     try:
         config = web_push_config()
-        if config is None:
-            return False
-        payload = {"title": title[:180], "body": body[:600], "url": url, "tag": tag,
-                   "silent": priority == "low"}
-        webpush(
-            subscription_info=config.subscription,
-            data=json.dumps(payload, ensure_ascii=False),
-            vapid_private_key=config.private_key,
-            vapid_claims={"sub": config.subject},
-            timeout=10,
-            ttl=86400,
-        )
-        return True
-    except WebPushException as exc:
-        # 상태 코드만 남긴다. 구독 주소와 응답 본문은 비밀이다(410은 구독 만료, 403은 발송 키 불일치).
-        status = getattr(getattr(exc, "response", None), "status_code", None)
-        print(f"웹 푸시 실패: HTTP {status or '응답 없음'}", file=sys.stderr)
+    except ValueError:
         return False
-    except Exception as exc:
-        # Retain pending state for the next run; never log private endpoints or responses.
-        print(f"웹 푸시 실패: {type(exc).__name__}", file=sys.stderr)
+    if config is None:
         return False
+    payload = json.dumps({"title": title[:180], "body": body[:600], "url": url, "tag": tag,
+                          "silent": priority == "low"}, ensure_ascii=False)
+    delivered = failed = gone = 0
+    for subscription in config.subscriptions:
+        try:
+            webpush(
+                subscription_info=subscription,
+                data=payload,
+                vapid_private_key=config.private_key,
+                vapid_claims={"sub": config.subject},
+                timeout=10,
+                ttl=86400,
+            )
+            delivered += 1
+        except WebPushException as exc:
+            # 상태 코드만 남긴다. 구독 주소와 응답 본문은 비밀이다(410은 구독 만료, 403은 발송 키 불일치).
+            status = getattr(getattr(exc, "response", None), "status_code", None)
+            if status in (404, 410):
+                gone += 1
+            else:
+                failed += 1
+                print(f"웹 푸시 실패: HTTP {status or '응답 없음'}", file=sys.stderr)
+        except Exception as exc:
+            # Retain pending state for the next run; never log private endpoints or responses.
+            failed += 1
+            print(f"웹 푸시 실패: {type(exc).__name__}", file=sys.stderr)
+    if gone:
+        print(f"웹 푸시: 만료된 기기 {gone}개는 설정에서 알림을 다시 켜 주세요", file=sys.stderr)
+    # 한 기기라도 일시 실패면 다음 실행에 다시 보낸다(D-005, 드문 중복은 감수).
+    return failed == 0 and delivered > 0

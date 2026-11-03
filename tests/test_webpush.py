@@ -159,3 +159,56 @@ def test_default_subject_is_accepted_by_vapid_signer(browser_config):
     # webpush를 대역으로 바꾸면 서명 단계 오류를 못 잡는다. 실제 서명기로 기본 sub를 확인한다.
     config = webpush_notify.web_push_config()
     Vapid.from_string(config.private_key).sign({"sub": config.subject, "aud": "https://fcm.googleapis.com"})
+
+
+def _device(seed: bytes) -> dict:
+    return {
+        "endpoint": f"https://fcm.googleapis.com/fcm/send/{seed.hex()}",
+        "keys": {
+            "p256dh": base64.urlsafe_b64encode(b"\x04" + seed * (64 // len(seed))).decode().rstrip("="),
+            "auth": base64.urlsafe_b64encode(b"a" * 16).decode().rstrip("="),
+        },
+    }
+
+
+def test_every_connected_device_gets_one_push(monkeypatch, browser_config, notice):
+    phone, pc = _device(b"ph"), _device(b"pc")
+    monkeypatch.setenv("WEB_PUSH_DEVICE_SECRETS", json.dumps({
+        "WEB_PUSH_SUB_0A1B2C3D": json.dumps(phone), "WEB_PUSH_SUB_99887766": json.dumps(pc),
+        # 예전 이름과 같은 기기는 한 번만, 다른 Secret은 읽지 않는다.
+        "WEB_PUSH_SUB_DEADBEEF": json.dumps(browser_config), "GEMINI_API_KEY": "not a subscription",
+    }))
+    sent = []
+    monkeypatch.setattr(
+        webpush_notify, "webpush", lambda **kwargs: sent.append(kwargs["subscription_info"]["endpoint"])
+    )
+    assert notify.send_notice(notice, "학과", "default", None, None)
+    assert sorted(sent) == sorted({phone["endpoint"], pc["endpoint"], browser_config["endpoint"]})
+
+
+def test_expired_device_is_skipped_but_other_failures_retry(monkeypatch, browser_config, notice, capsys):
+    other = _device(b"zz")
+    monkeypatch.setenv("WEB_PUSH_DEVICE_SECRETS", json.dumps({"WEB_PUSH_SUB_12345678": json.dumps(other)}))
+
+    class Gone:
+        status_code = 410
+
+    def expired(**kwargs):
+        if kwargs["subscription_info"]["endpoint"] == other["endpoint"]:
+            raise WebPushException("gone", response=Gone())
+
+    monkeypatch.setattr(webpush_notify, "webpush", expired)
+    assert notify.send_notice(notice, "학과", "default", None, None)
+    assert "만료된 기기 1개" in capsys.readouterr().err
+
+    def flaky(**kwargs):
+        if kwargs["subscription_info"]["endpoint"] == other["endpoint"]:
+            raise WebPushException("temporary")
+
+    monkeypatch.setattr(webpush_notify, "webpush", flaky)
+    assert not notify.send_notice(notice, "학과", "default", None, None)
+
+
+def test_private_key_without_devices_is_not_a_channel(monkeypatch, browser_config):
+    monkeypatch.delenv("WEB_PUSH_SUBSCRIPTION")
+    assert not notify.has_notification_channel()

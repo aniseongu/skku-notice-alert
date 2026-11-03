@@ -1,7 +1,7 @@
 // 설정 화면. 규칙은 docs/design/ux-rules.md 2-2절: 한 열, 왼쪽 이름과 도움말, 오른쪽 입력, 1px 구분선, 카드 없음.
 import { LitElement, html, nothing, type TemplateResult } from 'lit';
 import {
-  GitHubError, REPO_PATTERN, checkGeminiKey, listSecrets, newTopic, readVariable, saveSecret, saveVariable, sendTestNotification,
+  GitHubError, REPO_PATTERN, checkGeminiKey, listSecrets, readVariable, saveSecret, saveVariable,
 } from './github';
 import { forgetToken, loadToken, readSavedSecrets, rememberSavedSecrets, storeToken } from './settings-storage';
 import { browserPushEnabled, connectBrowserPush, disconnectBrowserPush, pushConfiguration, supportsBrowserPush, testBrowserNotification } from './browser-push';
@@ -71,7 +71,7 @@ const remember = (key: string, value?: string | null) => {
 export class SettingsView extends LitElement {
   static properties = {
     keywords: { attribute: false }, theme: { attribute: false }, categories: { attribute: false }, muted: { state: true },
-    topic: { state: true }, repo: { state: true }, token: { state: true }, values: { state: true },
+    repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
     keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true },
   };
@@ -82,7 +82,6 @@ export class SettingsView extends LitElement {
   muted: string[] = [];
   theme: Theme = 'auto';
   // 토픽은 아는 사람 누구나 구독할 수 있는 비밀이라 브라우저에 남기지 않는다(메모리에만, 화면을 닫으면 잊는다).
-  topic = '';
   repo = remember('github-repo') ?? '';
   // 사용자 요청(2026-11-03)으로 연결 토큰은 이 기기에 암호화해 기억한다(D-017). 키 값은 남기지 않는다.
   token = '';
@@ -119,7 +118,7 @@ export class SettingsView extends LitElement {
   }
 
   private warnUnsaved = (event: BeforeUnloadEvent) => {
-    if (!this.topic.trim() && !Object.values(this.values).some((value) => value.trim())) return;
+    if (!Object.values(this.values).some((value) => value.trim())) return;
     event.preventDefault();
     event.returnValue = '';
   };
@@ -141,13 +140,11 @@ export class SettingsView extends LitElement {
     this.editing = { ...this.editing, [name]: false };
     this.values = { ...this.values, [name]: '' };
     this.reveal = { ...this.reveal, [name]: false };
-    if (name === 'NOTIFY_URLS') this.topic = '';
     const status = { ...this.status };
     delete status[name];
     this.status = status;
   }
 
-  private setTopic(value: string) { this.topic = value.trim(); }
 
   private async toggleBrowserNotifications() {
     if (!this.connected()) { this.setStatus('browser-push', false, '위에서 GitHub에 한 번 연결하면 이 기기의 알림을 켤 수 있어요'); return; }
@@ -156,17 +153,12 @@ export class SettingsView extends LitElement {
       if (this.browserNotifications) {
         await disconnectBrowserPush(this.repo, this.token);
         this.browserNotifications = false;
-        const saved = { ...this.saved };
-        delete saved.WEB_PUSH_SUBSCRIPTION;
-        this.saved = saved;
-        this.setStatus('browser-push', true, '이 기기 알림을 껐어요');
+        this.setStatus('browser-push', true, '이 기기 알림을 껐어요. 다른 기기는 그대로 받아요');
       } else {
         await connectBrowserPush(this.repo, this.token);
         this.browserNotifications = true;
-        this.saved = { ...this.saved, WEB_PUSH_SUBSCRIPTION: new Date().toISOString() };
         this.setStatus('browser-push', true, '연결했어요. 앱을 닫아도 브라우저가 켜져 있으면 알림을 받아요');
       }
-      rememberSavedSecrets(this.repo, this.saved);
     } catch (error) {
       this.setStatus('browser-push', false, error instanceof Error ? error.message : '알림을 연결하지 못했어요');
     } finally { this.busy = ''; }
@@ -179,17 +171,6 @@ export class SettingsView extends LitElement {
     } catch (error) {
       this.setStatus('browser-push', false, error instanceof Error ? error.message : '테스트 알림을 띄우지 못했어요');
     }
-  }
-
-  private async testNotification() {
-    if (!/^[\w-]{6,64}$/.test(this.topic)) { this.setStatus('topic', false, '이름은 영문, 숫자, -, _로 6자 넘게 써 주세요'); return; }
-    this.busy = 'topic';
-    try {
-      const ok = await sendTestNotification(this.topic);
-      this.setStatus('topic', ok, ok ? '보냈어요. 휴대폰과 PC에 알림이 왔는지 봐 주세요' : '알림을 보내지 못했어요. 잠시 뒤 다시 보내 주세요');
-    } catch {
-      this.setStatus('topic', false, '인터넷 연결을 확인해 주세요');
-    } finally { this.busy = ''; }
   }
 
   private async connect() {
@@ -393,7 +374,7 @@ export class SettingsView extends LitElement {
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">이 기기 알림</p>
-              <p class="setting-help">앱과 탭을 닫아도 브라우저가 켜져 있으면 Windows 알림으로 받아요. 소리는 Windows 알림 설정을 따라요.</p>
+              <p class="setting-help">앱과 탭을 닫아도 브라우저가 켜져 있으면 휴대폰이나 PC 알림으로 받아요. 소리는 기기의 알림 설정을 따라요.</p>
             </div>
             <div class="setting-control">
               <p class="setting-saved">${this.browserNotifications ? '알림을 받고 있어요' : '알림을 연결해 주세요'}</p>
@@ -404,7 +385,7 @@ export class SettingsView extends LitElement {
               </div>
               ${!supportsBrowserPush() ? html`<p class="field-note">최신 브라우저에서 알림을 연결해 주세요</p>` : nothing}
               ${this.note('browser-push')}
-              <p class="field-note">한 번 연결하면 계속 받아요. 다른 브라우저에서 연결하면 받을 기기가 바뀌어요.</p>
+              <p class="field-note">한 번 연결하면 계속 받아요. 휴대폰과 PC에서 각각 켜면 모두 받아요.</p>
             </div>
           </div>
           <div class="setting">
@@ -418,51 +399,6 @@ export class SettingsView extends LitElement {
                   ?disabled=${!this.linked} @click=${() => this.toggleCategory(category)}>${category}</button>`)}
               </div>` : html`<p class="field-note">공지를 불러오면 분류가 보여요</p>`}
               ${this.linked ? this.note('muted') : html`<p class="field-note">위에서 GitHub에 연결하면 바꿀 수 있어요</p>`}
-            </div>
-          </div>
-          <div class="setting">
-            <div class="setting-text">
-              <p class="setting-name">다른 기기에서도 받기</p>
-              <p class="setting-help">휴대폰과 PC의 ntfy 앱에서 이 이름을 구독하면 알림이 와요. 아는 사람은 누구나 받을 수 있으니 비밀번호처럼 다뤄 주세요.
-                ${this.saved.NOTIFY_URLS ? nothing : '이 화면을 닫으면 사라지니 앱과 GitHub에 먼저 넣어 두세요'}</p>
-            </div>
-            <div class="setting-control">
-              ${this.saved.NOTIFY_URLS && !this.editing.NOTIFY_URLS ? html`
-                <p class="setting-saved">입력돼 있어요</p>
-                <p class="field-note">저장한 이름은 숨겨 두었어요</p>
-                <button type="button" class="ghost-button" @click=${() => { this.editing = { ...this.editing, NOTIFY_URLS: true }; }}>수정하기</button>
-              ` : html`
-              <div class="inline">
-                <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="알림 받을 이름"
-                  placeholder="skku-로 시작하는 긴 이름" .value=${this.topic} @input=${(e: Event) => this.setTopic((e.target as HTMLInputElement).value)}>
-                <button type="button" class="ghost-button" @click=${() => this.setTopic(newTopic())}>새로 만들기</button>
-              </div>
-              <div class="inline">
-                <button type="button" class="ghost-button" ?disabled=${this.busy === 'topic' || !this.topic} @click=${this.testNotification}>
-                  ${this.busy === 'topic' ? '보내는 중' : '테스트 알림 보내기'}</button>
-                <button type="button" class="solid-button" ?disabled=${!this.connected() || !this.topic || this.busy === 'NOTIFY_URLS'}
-                  @click=${() => this.save('NOTIFY_URLS', `ntfys://${this.topic}`)}>GitHub에 저장하기</button>
-                ${this.saved.NOTIFY_URLS ? html`<button type="button" class="ghost-button" ?disabled=${this.busy === 'NOTIFY_URLS'}
-                  @click=${() => this.closeEdit('NOTIFY_URLS')}>닫기</button>` : nothing}
-              </div>
-              ${!this.topic ? html`<p class="field-note">이름을 만들거나 붙여 넣으면 보낼 수 있어요</p>`
-                : !this.connected() ? html`<p class="field-note">아직 저장하지 않았어요. 위에서 GitHub에 연결한 뒤 저장해 주세요</p>`
-                  : html`<p class="field-note">아직 저장하지 않았어요. GitHub에 저장하기를 눌러 주세요</p>`}
-              `}
-              ${this.note('NOTIFY_URLS')}
-              ${this.note('topic')}
-              ${this.guide('phone', [
-                'Play 스토어에서 "ntfy"를 설치해요',
-                html`앱에서 + 를 누르고 토픽 이름에 <b class="mono-free">${this.topic || '위의 이름'}</b>을 넣어 구독해요. 서버는 ntfy.sh 그대로 둬요`,
-                'Galaxy는 설정 > 애플리케이션 > ntfy > 배터리에서 "제한 없음"을 골라야 알림이 늦지 않아요',
-                '"테스트 알림 보내기"로 알림이 오는지 확인해요',
-              ], '휴대폰(Galaxy)에서 받는 방법')}
-              ${this.guide('pc', [
-                html`브라우저에서 ${link('https://ntfy.sh/app', 'ntfy.sh/app')}을 열고 "구독 추가"에 같은 토픽 이름을 넣어요`,
-                '알림 허용을 묻으면 "허용"을 눌러요. 설정 탭에서 "백그라운드 알림"을 켜요',
-                '주소창 오른쪽의 앱 설치 단추로 설치하면 창을 닫아도 브라우저가 켜져 있는 동안 알림이 와요',
-                '알림이 오지 않으면 ntfy 탭을 고정해 두세요',
-              ], 'PC 브라우저에서 받는 방법')}
             </div>
           </div>
           </div>

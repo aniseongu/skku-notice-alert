@@ -158,7 +158,7 @@ def test_detail_export_and_gemini_schema(tmp_path: Path) -> None:
     export_site(tmp_path, archive, [], datetime.now(ZoneInfo("Asia/Seoul")), web_path=tmp_path / "missing")
     output = json.loads((tmp_path / "api/v1/notices/cse-notice/123.json").read_text())
     assert output == {"version": 1, "id": "cse-notice/123", "summary": "지원자는 신청해요.",
-                      "body": "본문", "body_html": "<p>본문</p>",
+                      "body": "본문", "body_html": "<p>본문</p>", "body_status": "ready",
                       "attachments": [{"name": "파일.pdf", "url": "https://example.com/a", "type": "PDF",
                                        "size": "123KB"}],
                       "images": ["https://example.com/image.png"], "body_from_image": False,
@@ -178,3 +178,15 @@ def test_detail_export_and_gemini_schema(tmp_path: Path) -> None:
     result = judge_notices([notice], {"cse-notice": "학과"}, {}, "test", "unused", client,
                            bodies={"cse-notice/123": "가" * 2000})
     assert result["cse-notice/123"].summary == "신청해요"
+
+
+def test_export_distinguishes_body_waiting_retry_failure_and_image_only(tmp_path: Path) -> None:
+    archive = Archive()
+    for number, attempts, body in [(1, 0, None), (2, 1, None), (3, 3, None), (4, 1, "")]:
+        archive = add_notice(archive, make_notice(number), "2026-11-03T00:00:00+09:00")
+        archive.items[f"cse-notice/{number}"].update(body_attempts=attempts, body_text=body)
+    archive.items["cse-notice/4"]["images"] = ["https://cse.skku.edu/poster.png"]
+    export_site(tmp_path, archive, [], datetime.now(ZoneInfo("Asia/Seoul")), web_path=tmp_path / "missing")
+    statuses = [json.loads((tmp_path / f"api/v1/notices/cse-notice/{i}.json").read_text())["body_status"]
+                for i in range(1, 5)]
+    assert statuses == ["pending", "retrying", "unavailable", "ready"]

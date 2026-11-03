@@ -67,9 +67,13 @@ def export_site(
         notice = item["notice"]
         target = api / "notices" / notice["source_id"] / f"{notice['article_no']}.json"
         target.parent.mkdir(parents=True, exist_ok=True)
+        attempts = item.get("body_attempts", 0)
+        body_status = ("ready" if item.get("body_text") is not None else
+                       "unavailable" if attempts >= 3 else "retrying" if attempts else "pending")
         detail = {
             "version": 1, "id": notice["id"], "summary": item.get("summary"),
             "body": item.get("body_text"), "body_html": item.get("body_html"),
+            "body_status": body_status,
             "attachments": [{field: attachment.get(field) for field in ("name", "url", "type", "size")}
                             for attachment in item.get("attachments", [])],
             "images": item.get("images", []),

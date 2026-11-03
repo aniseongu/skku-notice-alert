@@ -42,6 +42,7 @@ export interface NoticeBody {
   id: string;
   summary: string | null;
   body: string | null;
+  body_status?: 'pending' | 'retrying' | 'unavailable' | 'ready';
   // type, size는 D-016에 추가된 필드(형식, 크기 글자). 없을 수 있다. 첨부는 학교 다운로드 주소로 바로 받는다.
   attachments: { name: string; url: string; type?: string; size?: string | null }[];
   // 서버가 nh3로 정제한 본문 HTML(D-016). 없으면 글자 본문(body)을 그린다.

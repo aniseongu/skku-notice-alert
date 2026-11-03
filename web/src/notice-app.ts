@@ -323,6 +323,8 @@ export class NoticeApp extends LitElement {
   private setView(view: View) {
     const entering = view === 'settings' && this.view !== 'settings';
     this.view = view;
+    this.openedId = null;
+    this.boardMenuOpen = false;
     this.sortMenuOpen = false;
     if (view !== 'settings') remember('tab', view);
     // 주소도 보기와 맞춘다. 설정은 기록에 쌓아 뒤로 가기로 닫히고, 탭은 바꿔 써서 새로고침해도 같은 보기가 열린다.
@@ -342,7 +344,9 @@ export class NoticeApp extends LitElement {
   };
 
   private onPopState = () => {
-    this.openedId = null;
+    this.openedId = typeof history.state?.notice === 'string' ? history.state.notice : null;
+    this.boardMenuOpen = false;
+    this.sortMenuOpen = false;
     const params = new URLSearchParams(location.search);
     const view: View = params.get('view') === 'settings' ? 'settings'
       : params.get('tab') === 'deadline' ? 'all' : [params.get('tab'), remember('tab')].find(isTab) ?? 'mine';
@@ -351,9 +355,12 @@ export class NoticeApp extends LitElement {
     if (view !== this.view) { this.view = view; this.selectedId = null; }
   };
 
-  private setBoard(board: string) { this.board = board; this.boardMenuOpen = false; remember('board', board); }
+  private setBoard(board: string) {
+    this.board = board; this.boardMenuOpen = false; this.selectedId = null; remember('board', board);
+  }
   private setKeyword(word: string | null) {
     this.keyword = word;
+    this.selectedId = null;
     if (this.view === 'settings') this.setView('all');
   }
 
@@ -487,7 +494,7 @@ export class NoticeApp extends LitElement {
     const settings = this.view === 'settings';
     const title = settings ? '설정' : this.keyword ? this.keyword : TABS.find((t) => t.id === this.view)!.label;
     const selected = settings ? undefined
-      : list.find((n) => n.id === this.selectedId) ?? this.notices.find((n) => n.id === this.selectedId) ?? (this.isWide ? list[0] : undefined);
+      : list.find((n) => n.id === this.selectedId) ?? (this.isWide ? list[0] : undefined);
     this.shownId = selected?.id ?? null;
     const reading = !this.isWide && !settings
       ? this.notices.find((n) => n.id === this.openedId) ?? list.find((n) => n.id === this.openedId) : undefined;
@@ -529,7 +536,7 @@ export class NoticeApp extends LitElement {
             ${settings ? nothing : html`
               <label class="search wide-only">${icon('search')}
                 <input type="search" placeholder="공지 찾기" autocomplete="off" aria-label="공지 검색" aria-keyshortcuts="/" .value=${this.query}
-                  @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; }}>${this.query ? nothing : kbd('/')}</label>
+                  @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; this.selectedId = null; }}>${this.query ? nothing : kbd('/')}</label>
               ${this.detailOpen ? nothing : html`<button type="button" class="icon-button wide-only" aria-label="상세 칸 열기" title="상세 칸 열기"
                 @click=${() => this.setDetail(true)}>${icon('panel')}</button>`}
               <button type="button" class="icon-button" aria-label="새로고침" title="새로고침 (R)" aria-keyshortcuts="r"
@@ -547,7 +554,7 @@ export class NoticeApp extends LitElement {
             <div class="tools narrow-only">
               <label class="search">${icon('search')}
                 <input type="search" placeholder="제목, 분류, 판정 이유로 찾기" autocomplete="off" aria-label="공지 검색" .value=${this.query}
-                  @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; }}></label>
+                  @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; this.selectedId = null; }}></label>
               <div class="chips" role="group" aria-label="관심 키워드">
                 ${this.keywords.length ? html`<button type="button" class="chip" aria-pressed=${String(!this.keyword)} @click=${() => this.setKeyword(null)}>모두</button>` : nothing}
                 ${this.keywords.map((word) => html`<button type="button" class="chip" aria-pressed=${String(this.keyword === word)}
@@ -599,9 +606,18 @@ export class NoticeApp extends LitElement {
       <div class="original-body" lang="en">${this.bodyView(loaded, '영어 원문')}</div>`;
   }
 
-  private bodyView(loaded: NoticeBody | null, heading = '본문', external = false) {
-    if (!loaded) return html`<p class="detail-note">본문은 아직 받지 않았어요. 원문 열기로 볼 수 있어요</p>`;
-    if (external && !loaded.body && !loaded.body_html && !loaded.images?.length) return html`<p class="detail-note">자세한 내용과 지원 방법은 원문 열기에서 볼 수 있어요</p>`;
+  private bodyView(loaded: NoticeBody | null, heading = '본문') {
+    if (!loaded) return html`<p class="detail-note" role="status">본문을 불러오지 못했어요. 원문에서 확인해 주세요</p>`;
+    if (!loaded.body && !loaded.body_html && !loaded.images?.length && loaded.body_status !== 'ready') {
+      const status = loaded.body_status ?? (loaded.fetched_at ? 'ready' : 'pending');
+      const message = {
+        pending: '본문을 준비하고 있어요. 먼저 원문을 볼 수 있어요',
+        retrying: '본문을 다시 가져올 예정이에요. 먼저 원문을 볼 수 있어요',
+        unavailable: '본문을 가져오지 못했어요. 원문에서 확인해 주세요',
+        ready: '본문에 내용이 없어요. 원문에서 확인해 주세요',
+      }[status];
+      return html`<p class="detail-note" role="status">${message}</p>`;
+    }
     const paragraphs = (loaded.body ?? '').split(/\n+/).filter(Boolean);
     // 정제한 본문 HTML이 있으면 표, 굵게, 링크, 목록을 살려 그린다(D-016). 그림도 그 안에 들어 있다.
     if (loaded.body_html && !loaded.body_from_image) {
@@ -752,7 +768,9 @@ export class NoticeApp extends LitElement {
     const boards = [{ id: 'all', label: this.tab() === 'intern' ? '모든 사이트' : '모든 게시판' },
       ...this.tabSources().map((s) => ({ id: s.id, label: boardName(s, s.id) }))];
     const current = boards.find((b) => b.id === this.activeBoard())?.label ?? boards[0].label;
-    return html`<div class="board-picker narrow-only">
+    return html`<div class="board-picker narrow-only" @focusout=${(event: FocusEvent) => {
+      if (!(event.currentTarget as HTMLElement).contains(event.relatedTarget as Node | null)) this.boardMenuOpen = false;
+    }}>
       <button type="button" class="board-trigger" aria-label="게시판: ${current}" aria-expanded=${String(this.boardMenuOpen)}
         aria-controls="board-options" @click=${() => {
           this.boardMenuOpen = !this.boardMenuOpen;
@@ -838,7 +856,7 @@ export class NoticeApp extends LitElement {
         ${loaded?.summary ? html`<section class="detail-section summary" aria-label="요약">
           <h3>요약</h3>${loaded.summary.split('\n').filter(Boolean).map((line) => html`<p>${line}</p>`)}</section>` : nothing}
         ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>`
-          : this.isExternal(notice) ? this.bodyView(loaded, '본문', true) : this.translatedView(loaded)}
+          : this.isExternal(notice) ? this.bodyView(loaded, '본문') : this.translatedView(loaded)}
         ${loaded?.attachments?.length ? this.attachmentsView(loaded) : nothing}
         <dl class="facts" aria-label="글 정보">
           <div><dt>게시일</dt><dd>${koreanDate(notice.posted_on)}</dd></div>

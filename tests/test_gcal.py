@@ -16,7 +16,7 @@ def _notice(no: str, deadline: str | None, url: str = "https://cse.skku.edu/") -
             "deadline": deadline, "first_seen": None}
 
 
-def test_desired_events_are_mine_and_saved_with_future_deadlines():
+def test_desired_events_include_all_school_notices_with_future_deadlines():
     notices = [
         _notice("1", "2026-11-16T10:00:00+09:00"),   # 기준에 맞음
         _notice("2", "2026-11-16T10:00:00+09:00"),   # 해당 없음
@@ -25,15 +25,9 @@ def test_desired_events_are_mine_and_saved_with_future_deadlines():
         _notice("5", None),                           # 마감 없음
         _notice("6", "2026-11-16T10:00:00+09:00", url="javascript:alert"),
     ]
-    matched = {
-        "cse-notice:1": {"rule_name": "채용", "interests": []},
-        "cse-notice:2": {"rule_name": "채용", "ai": {"verdict": "not_relevant", "interests": []}},
-        "cse-notice:3": {"rule_name": "채용"},
-        "cse-notice:6": {"rule_name": "채용"},
-    }
-    events = gcal.desired_events(notices, matched, [notices[3], {"bad": 1}], NOW)
+    events = gcal.desired_events(notices, [notices[3], {"bad": 1}], NOW)
     titles = sorted(event["summary"] for event in events.values())
-    assert titles == ["[마감] 공지 1", "[마감] 공지 4"]
+    assert titles == ["[마감] 공지 1", "[마감] 공지 2", "[마감] 공지 4"]
     first = events[gcal._event_id("cse-notice:1")]
     assert first["start"]["dateTime"] == "2026-11-16T09:30:00+09:00"
     assert first["end"]["dateTime"] == "2026-11-16T10:00:00+09:00"
@@ -41,11 +35,22 @@ def test_desired_events_are_mine_and_saved_with_future_deadlines():
     assert all(set(key) <= set("abcdefghijklmnopqrstuv0123456789") for key in events)
 
 
+def test_external_notices_require_save_and_use_current_or_saved_snapshot():
+    current = {**_notice("1", "2026-11-20T10:00:00+09:00"), "id": "jobs:1", "source_id": "jobs"}
+    unsaved = {**current, "id": "jobs:2", "title": "저장하지 않은 인턴"}
+    snapshot = {**current, "deadline": "2026-11-19T10:00:00+09:00"}
+    archived = {**snapshot, "id": "jobs:3", "title": "목록에서 빠진 인턴"}
+    events = gcal.desired_events([current, unsaved], [snapshot, archived], NOW, frozenset({"jobs"}))
+    assert set(events) == {gcal._event_id("jobs:1"), gcal._event_id("jobs:3")}
+    assert events[gcal._event_id("jobs:1")]["end"]["dateTime"] == current["deadline"]
+    assert not gcal.desired_events([unsaved], [], NOW, frozenset({"jobs"}))
+
+
 def test_sync_only_touches_events_this_app_made():
     keep = gcal.desired_events([_notice("1", "2026-11-16T10:00:00+09:00")],
-                               {"cse-notice:1": {"rule_name": "채용"}}, [], NOW)
+                               [], NOW)
     new = gcal.desired_events([_notice("9", "2026-11-18T10:00:00+09:00")],
-                              {"cse-notice:9": {"rule_name": "채용"}}, [], NOW)
+                              [], NOW)
     keep_id = next(iter(keep))
     listing = {"items": [
         {"id": keep_id, **keep[keep_id]},

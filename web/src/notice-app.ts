@@ -277,6 +277,12 @@ export class NoticeApp extends LitElement {
     }
   }
 
+  // 휴대폰은 카카오톡 같은 앱으로 바로 보내는 공유 창을 쓴다. 없으면 링크를 복사한다.
+  private async share(notice: Notice) {
+    if (!navigator.share) { this.copyLink(notice); return; }
+    try { await navigator.share({ title: cleanTitle(notice.title), url: safeUrl(notice.url) }); } catch { /* 닫으면 그대로 둔다 */ }
+  }
+
   private showToast(text: string) {
     this.toast = text;
     clearTimeout(this.toastTimer);
@@ -495,7 +501,9 @@ export class NoticeApp extends LitElement {
       <div class="reading">${this.detail(notice)}</div>
       <div class="read-actions glass">
         ${this.saveButton(notice)}
-        <button type="button" class="ghost-button" @click=${() => this.copyLink(notice)}>링크 복사하기</button>
+        ${'share' in navigator
+          ? html`<button type="button" class="ghost-button" @click=${() => this.share(notice)}>공유하기</button>`
+          : html`<button type="button" class="ghost-button" @click=${() => this.copyLink(notice)}>링크 복사하기</button>`}
         <a class="solid-button" href=${safeUrl(notice.url)} target="_blank" rel="noopener">원문 열기</a>
       </div>`;
   }
@@ -626,10 +634,11 @@ export class NoticeApp extends LitElement {
       <a class="row ${dim ? 'dim' : ''}" href=${safeUrl(notice.url)} target="_blank" rel="noopener"
         data-id=${notice.id} aria-current=${this.isWide && this.shownId === notice.id ? 'true' : 'false'}
         @click=${(e: MouseEvent) => this.onRow(e, notice)}>
-        <span class="meta"><span class="board">${boardName(source, notice.source_id)}</span>${notice.category || notice.pinned
-          ? html`<span class="cat">${[notice.category, notice.pinned ? '고정' : ''].filter(Boolean).join(', ')}</span>` : nothing}</span>
-        <span class="title">${cleanTitle(notice.title)}${this.view !== 'saved' && this.isSaved(notice)
-          ? html`<svg class="i saved-mark" role="img" aria-label="저장함"><use href="icons/sprite.svg#bookmark-on"></use></svg>` : nothing}</span>
+        <span class="meta"><span class="board">${boardName(source, notice.source_id)}</span>${(() => {
+          const tags = [notice.category, notice.pinned ? '고정' : '', this.view !== 'saved' && this.isSaved(notice) ? '저장함' : ''].filter(Boolean);
+          return tags.length ? html`<span class="cat">${tags.join(', ')}</span>` : nothing;
+        })()}</span>
+        <span class="title">${cleanTitle(notice.title)}</span>
         <span class="sub">${this.reasonLine(notice)}</span>
         ${this.dday(notice, today)}
       </a></li>`;

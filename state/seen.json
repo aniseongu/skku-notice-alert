@@ -198,6 +198,11 @@
           "first_seen": "2026-11-03T12:27:42.906254+09:00",
           "status": "baseline",
           "attempts": 0
+        },
+        "228013": {
+          "first_seen": "2026-11-03T17:08:06.491881+09:00",
+          "status": "notified",
+          "attempts": 0
         }
       }
     }

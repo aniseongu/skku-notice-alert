@@ -43,7 +43,7 @@ const KEY_FIELDS: KeyField[] = [
   {
     secret: 'CANVAS_TOKEN',
     label: '아이캠퍼스 토큰',
-    help: '아이캠퍼스 강의, 과제, 퀴즈 마감을 알려요',
+    help: '아이캠퍼스 과제와 퀴즈 마감을 알려요',
     placeholder: '아이캠퍼스에서 만든 액세스 토큰',
     steps: [
       html`${link('https://canvas.skku.edu/profile/settings', '아이캠퍼스(Canvas) 설정')}에 로그인해요. 왼쪽 "계정"에서 "설정"으로 가도 돼요`,
@@ -660,7 +660,7 @@ export class SettingsView extends LitElement {
             <div class="setting">
               <div class="setting-text">
                 <p class="setting-name">이 기기 아캠 알림</p>
-                <p class="setting-help">휴대폰은 성공에서 받고, 아캠플러스를 쓰는 노트북에서는 끌 수 있어요</p>
+                <p class="setting-help">과제와 퀴즈 마감을 받아요. 아캠플러스를 쓰는 노트북에서는 끌 수 있어요</p>
               </div>
               <div class="setting-control">
                 ${!this.linked ? html`<p class="field-note">기기 연결에서 노트북 QR로 연결하면 알림을 설정할 수 있어요</p>` : nothing}

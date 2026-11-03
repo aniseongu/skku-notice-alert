@@ -1,5 +1,5 @@
 # 출처: WhaleExtentions/extensions/icampus-check/executescript.js
-"""Read favorite Canvas courses and their pending assignments and LearningX modules."""
+"""Read Canvas assignments and quizzes; keep legacy lecture parsing fixture-only."""
 
 import json
 import time
@@ -182,11 +182,9 @@ def _read_courses(courses: list[dict], now: datetime, get, gap: float, network: 
             if not network
             else f"/api/v1/courses/{course_id}/assignments?include%5B%5D=submission&per_page=100"
         )
-        if network:
-            time.sleep(gap)
-        modules = get(
-            f"modules_{course_id}.json" if not network else f"/learningx/api/v1/courses/{course_id}/modules"
-        )
+        # LearningX modules need a separate session-issued xn_api_token, not a Canvas PAT.
+        # Keep production requests within the authorized Canvas token API boundary.
+        modules = [] if network else get(f"modules_{course_id}.json")
         for row in assignments:
             item = _assignment(course, row, now)
             if item:

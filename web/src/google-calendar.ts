@@ -39,7 +39,10 @@ async function google(url: string, init: RequestInit): Promise<Record<string, un
   const body = await response.json().catch(() => ({})) as Record<string, unknown>;
   if (!response.ok) {
     const code = String(body.error ?? response.status);
-    if (/invalid_client|unauthorized_client|redirect_uri_mismatch/.test(code)) throw new GoogleError('클라이언트 ID나 보안 비밀번호, 리디렉션 URI를 다시 확인해 주세요');
+    // 오류 이름은 비밀이 아니라서 보여 준다. 어느 값을 고쳐야 하는지 바로 알 수 있다.
+    if (code === 'invalid_client') throw new GoogleError('보안 비밀번호가 맞지 않아요(invalid_client). 구글 클라우드에서 보안 비밀번호를 새로 추가해 바로 복사해 넣어 주세요');
+    if (code === 'redirect_uri_mismatch') throw new GoogleError('돌아올 주소가 클라이언트에 없어요(redirect_uri_mismatch). 리디렉션 URI를 확인해 주세요');
+    if (code === 'unauthorized_client' || code === 'invalid_grant') throw new GoogleError(`구글이 이 연결을 받지 않았어요(${code}). 연결하기를 다시 눌러 주세요`);
     throw new GoogleError(`구글이 요청을 받지 않았어요(오류 ${response.status}). 잠시 뒤 다시 눌러 주세요`);
   }
   return body;

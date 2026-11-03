@@ -573,8 +573,10 @@ export class SettingsView extends LitElement {
                 '"OAuth 클라이언트 ID"의 웹 애플리케이션을 열거나 새로 만들어요',
                 '"승인된 자바스크립트 원본"에 https://aniseongu.github.io 를 넣어요',
                 `"승인된 리디렉션 URI"에 ${new URL('oauth-callback.html', document.baseURI).href} 를 넣어요`,
-                html`${link('https://console.cloud.google.com/auth/audience', 'OAuth 대상')}에서 게시 상태를 "프로덕션"으로 바꿔요. "테스트"면 7일마다 연결이 끊겨요`,
-                '클라이언트 ID와 보안 비밀번호를 위 칸에 붙여 넣고 연결하기를 눌러요. "확인되지 않은 앱" 화면이 나오면 고급, 이동을 눌러요(내가 만든 앱이에요)',
+                html`${link('https://console.cloud.google.com/auth/audience', 'OAuth 대상')}에서 사용자 유형을 "내부로 설정"해요. 학교 계정(g.skku.edu)으로 쓰면 이것만으로 돼요`,
+                '학교 밖 계정(개인 Gmail)으로 쓰려면 "외부"로 두고 브랜딩을 채운 뒤 게시 상태를 "프로덕션"으로 바꿔요. "테스트"로 두면 7일마다 연결이 끊겨요',
+                '클라이언트 ID와 보안 비밀번호를 위 칸에 붙여 넣고 연결하기를 눌러요',
+                '"외부"로 두었다면 "확인되지 않은 앱" 화면이 나와요. 내가 만든 앱이니 고급, 이동을 눌러요',
               ], '연결하는 방법')}
             </div>
           </div>

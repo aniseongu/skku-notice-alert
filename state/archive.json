@@ -1,6 +1,53 @@
 {
   "version": 1,
   "items": {
+    "skku-notice01/141534": {
+      "notice": {
+        "id": "skku-notice01/141534",
+        "source_id": "skku-notice01",
+        "article_no": "141534",
+        "title": "'Meredith Martin' 교수님 초청 강연 안내 - The Trap of Bias: Human, Data, Model, Human. (11/20(금) 10:30)",
+        "category": "행사/세미나",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141534",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-03T16:01:42.656340+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "디지털 인문학과 AI 윤리에 관한 강연으로, 인턴이나 실무 개발 역량과는 거리가 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "이번 11월 20일 (금) 오전 10시30에는 프린스턴(Princeton) 대학 디지털인문학연구소(Center for Digital Humanities) 창립자이자 현 소장이신 메러디스 마틴(Meredith Martin) 교수의 특강이 1시간 가량 예정되어 있으니 많은 참여 바랍니다.\n\n1. 강연자: Prof. Meredith Martin (Princeton University)\nhttps://cdh.princeton.edu/people/meredith-martin/\n\n2. 특강 주제: \"The Trap of Bias: Human, Data, Model, Human.\"\n\n3. 주관 : 문과대학 영어영문학과 이지은 교수의 디지털인문학입문 Introduction to Digital Humanities 수업 네 가지 주제인 New Forms of Reading, Data, Text Analysis & Visualization, Reading with (Generative) AI and Ethics 중 마지막 네번째 세션에 해당\n\n4. 일시 및 장소: 2026년 11월 20일(금), 오전 10시30분 ~ 11시45분, 경제관 2층 SPACE 1398\n\n5. Zoom 참석 링크 : https://skku-edu.zoom.us/j/2677967591?pwd=WjJBNlNUcDNOVUt0QlhFb2pWR1ZGZz09\nID 267 796 7591\npw 333009\n6. 문의 : 문과대학 영어영문학과 이지은 교수 (02-760-0261, jieunclee@skku.edu)\n\n* 참여학생들은 Video On, Mic Off 하여 주시기 바랍니다\n* 강연과 토론은 영어로 진행되며 Q&A는 한국어로 질문하면 사회자가 통역해줄 예정",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "Nov20-Martin-bias-poster.pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141534&attachNo=118778",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<p>이번 11월 20일 (금) 오전 10시30에는 프린스턴(Princeton) 대학 디지털인문학연구소(Center for Digital Humanities) 창립자이자 현 소장이신 메러디스 마틴(Meredith Martin) 교수의 특강이 1시간 가량 예정되어 있으니 많은 참여 바랍니다.</p><p>1. 강연자: Prof. Meredith Martin (Princeton University)</p><p><a href=\"https://cdh.princeton.edu/people/meredith-martin/\">https://cdh.princeton.edu/people/meredith-martin/</a></p><p>2. 특강 주제: \"The Trap of Bias: Human, Data, Model, Human.\"</p><p>3. 주관 : 문과대학 영어영문학과 이지은 교수의 디지털인문학입문 Introduction to Digital Humanities 수업 네 가지 주제인 New Forms of Reading, Data, Text Analysis &amp; Visualization, Reading with (Generative) AI and Ethics 중 마지막 네번째 세션에 해당</p><p>4. 일시 및 장소: 2026년 11월 20일(금), 오전 10시30분 ~ 11시45분, 경제관 2층 SPACE 1398</p><p>5. Zoom 참석 링크 : <a href=\"https://skku-edu.zoom.us/j/2677967591?pwd=WjJBNlNUcDNOVUt0QlhFb2pWR1ZGZz09\">https://skku-edu.zoom.us/j/2677967591?pwd=WjJBNlNUcDNOVUt0QlhFb2pWR1ZGZz09</a></p><p>ID 267 796 7591</p><p>pw 333009</p><p>6. 문의 : 문과대학 영어영문학과 이지은 교수 (02-760-0261, jieunclee@skku.edu)</p><p>* 참여학생들은 Video On, Mic Off 하여 주시기 바랍니다</p><p>* 강연과 토론은 영어로 진행되며 Q&amp;A는 한국어로 질문하면 사회자가 통역해줄 예정</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"Nov20-Martin-bias-poster.\" src=\"https://www.skku.edu/_attach/image/2026/11/tzMsEKbtpFtYtrCscJjz.png\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/tzMsEKbtpFtYtrCscJjz.png"
+      ],
+      "summary": "11월 20일 오전 10시 30분, 경제관 SPACE 1398 또는 줌에서 메러디스 마틴 교수의 AI 윤리 특강이 진행됩니다. 디지털 인문학에 관심 있는 학생은 누구나 참여할 수 있습니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-03T16:01:42.656340+09:00"
+    },
     "skku-notice01/140808": {
       "notice": {
         "id": "skku-notice01/140808",

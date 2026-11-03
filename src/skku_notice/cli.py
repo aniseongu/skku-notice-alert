@@ -33,7 +33,7 @@ from skku_notice.fetch import FetchError, UnsafeURL, fetch_detail, fetch_images,
 from skku_notice.interests import load_interests, match_interests
 from skku_notice.judge import Judgment, decide_priority, judge_notices
 from skku_notice.model import Match
-from skku_notice.notify import send_canvas, send_notice
+from skku_notice.notify import has_notification_channel, send_canvas, send_notice
 from skku_notice.ocr import read_images
 from skku_notice.parse import ParseError, parse_detail, parse_list
 from skku_notice.rules import load_rules, match_notice
@@ -165,10 +165,14 @@ def run(args: argparse.Namespace) -> int:
         print(f"{args.rules} 없음: config/rules.example.yaml을 복사하세요", file=sys.stderr)
         return 2
     load_dotenv(override=False)
-    notify_urls = os.environ.get("NOTIFY_URLS", "").split(",")
-    if not args.dry_run and not any(url.strip() for url in notify_urls):
-        print("설정 오류: NOTIFY_URLS 없음", file=sys.stderr)
-        return 2
+    if not args.dry_run:
+        try:
+            if not has_notification_channel():
+                print("설정 오류: NOTIFY_URLS 또는 웹 푸시 설정이 필요해요", file=sys.stderr)
+                return 2
+        except ValueError as exc:
+            print(f"설정 오류: {exc}", file=sys.stderr)
+            return 2
     try:
         rules = load_rules(args.rules)
         interests = load_interests(INTERESTS_PATH, os.environ.get("INTEREST_KEYWORDS", ""))

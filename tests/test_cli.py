@@ -33,6 +33,8 @@ def test_missing_rules_exits_two(tmp_path: Path, capsys) -> None:
 def test_missing_notify_urls_exits_before_state_or_fetch(
     tmp_path: Path, monkeypatch, capsys, notify_urls
 ) -> None:
+    monkeypatch.delenv("WEB_PUSH_SUBSCRIPTION", raising=False)
+    monkeypatch.delenv("WEB_PUSH_PRIVATE_KEY", raising=False)
     if notify_urls is None:
         monkeypatch.delenv("NOTIFY_URLS", raising=False)
     else:
@@ -46,7 +48,7 @@ def test_missing_notify_urls_exits_before_state_or_fetch(
         no_ai=True, export=None,
     )
     assert cli.run(args) == 2
-    assert capsys.readouterr().err.strip() == "설정 오류: NOTIFY_URLS 없음"
+    assert capsys.readouterr().err.strip() == "설정 오류: NOTIFY_URLS 또는 웹 푸시 설정이 필요해요"
     assert not cli.STATE_PATH.exists()
     assert not cli.ARCHIVE_PATH.exists()
 

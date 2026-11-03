@@ -41,6 +41,10 @@ export async function saveSecret(repo: string, token: string, name: string, valu
   });
 }
 
+export async function deleteSecret(repo: string, token: string, name: string): Promise<void> {
+  await call(`/repos/${repo}/actions/secrets/${name}`, token, { method: 'DELETE' });
+}
+
 // 관심 키워드는 비밀이 아니라서 Actions 변수(INTEREST_KEYWORDS)로 둔다.
 export async function saveVariable(repo: string, token: string, name: string, value: string): Promise<void> {
   const created = await call(`/repos/${repo}/actions/variables`, token, { method: 'POST', body: JSON.stringify({ name, value }) }, true);

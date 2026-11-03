@@ -71,6 +71,13 @@ def test_export_contains_no_canvas_data(tmp_path: Path) -> None:
 
 
 def test_cli_fixture_dry_run_does_not_write_canvas_state(tmp_path: Path, monkeypatch, capsys) -> None:
+    class FixtureDateTime(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return NOW.astimezone(tz)
+
+    # fixture의 강의 마감 뒤에 실행해도 같은 알림 경로를 검증한다.
+    monkeypatch.setattr(cli, "datetime", FixtureDateTime)
     monkeypatch.setattr(cli, "CANVAS_STATE_PATH", tmp_path / "canvas.json")
     monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
     monkeypatch.setattr(cli, "load_dotenv", lambda **kwargs: None)

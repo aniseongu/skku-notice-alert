@@ -76,6 +76,8 @@ jobs:
           CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
           PROFILE_YAML: ${{ secrets.PROFILE_YAML }}
           INTEREST_KEYWORDS: ${{ vars.INTEREST_KEYWORDS }}
+          WEB_PUSH_SUBSCRIPTION: ${{ secrets.WEB_PUSH_SUBSCRIPTION }}
+          WEB_PUSH_PRIVATE_KEY: ${{ secrets.WEB_PUSH_PRIVATE_KEY }}
         run: uv run skku-notice --export site
 
       - name: Save Canvas state

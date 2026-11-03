@@ -13,7 +13,7 @@
 
 ## 주의
 
-- `NOTIFY_URLS` Secret 삭제는 권한 검사(Secret-Store Writes)로 막혀 사용자가 직접 해야 한다: `gh secret delete NOTIFY_URLS`. 지우기 전까지 ntfy로도 보낸다.
+- `NOTIFY_URLS` Secret은 사용자가 지웠다(2026-11-03). Secret 쓰기와 지우기는 권한 검사로 막히니 사용자에게 명령을 안내한다.
 - 개인 내용(`config/profile.yaml`, Secrets 값)은 문서나 커밋에 넣지 않는다. `.env`는 읽지 않는다.
 - Canvas state는 Actions 캐시. 아이캠퍼스 토큰은 아직 입력되지 않았다.
 

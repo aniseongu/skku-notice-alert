@@ -726,12 +726,12 @@
         },
         "362118": {
           "first_seen": "2026-11-04T17:19:32.059715+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         },
         "362116": {
           "first_seen": "2026-11-04T17:19:32.059715+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         }
       }

@@ -1,6 +1,114 @@
 {
   "version": 1,
   "items": {
+    "jasoseol-intern/107061": {
+      "notice": {
+        "id": "jasoseol-intern/107061",
+        "source_id": "jasoseol-intern",
+        "article_no": "107061",
+        "title": "[넷마블네오] 2026 AI 인턴십 (게임개발/기획 통합 직무, 인턴십 5개월, 채용전환형)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107061",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-05T01:28:55.954651+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "maybe",
+          "reason": "AI 인턴십 공고이나 상세 모집 요강이 공개되지 않아 구체적인 지원 자격 및 직무 적합성을 판단하기 어렵습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/783/webp/%EC%82%AC%EC%A0%84%EC%98%88%EA%B3%A0_%ED%8F%AC%EC%8A%A4%ED%84%B0_C%EC%95%88_%EB%B8%94%EB%9E%99_%EB%AC%BC%EA%B2%B0_20261015.webp?1793701697\" alt=\"넷마블네오 2026 AI 인턴십 (게임개발/기획 통합 직무, 인턴십 5개월, 채용전환형)\"><a href=\"https://AI-Internship2026.netmarbleneo.com\">​</a>\n</div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/783/webp/%EC%82%AC%EC%A0%84%EC%98%88%EA%B3%A0_%ED%8F%AC%EC%8A%A4%ED%84%B0_C%EC%95%88_%EB%B8%94%EB%9E%99_%EB%AC%BC%EA%B2%B0_20261015.webp?1793701697"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T01:28:55.954651+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-24T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "2ca756e42e4beb2b956df10b5f953fa517f9ccdd3fd2bd70c6f19173b1acbc2c",
+        "verdict": "maybe",
+        "reason": "AI 인턴십 공고이나 상세 모집 요강이 공개되지 않아 구체적인 지원 자격 및 직무 적합성을 판단하기 어렵습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107070": {
+      "notice": {
+        "id": "jasoseol-intern/107070",
+        "source_id": "jasoseol-intern",
+        "article_no": "107070",
+        "title": "[비테스코테크놀로지스코리아] 이천사업장 11월 신입 및 경력직 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107070",
+        "posted_on": "2026-11-05",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-05T01:28:55.954651+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "Electronic Engineer Intern 직무는 학부생 지원이 가능할 수 있으나, 공고된 다른 직무들은 경력직 위주이거나 소프트웨어 개발 직무와 거리가 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n<div><a href=\"https://jobs.schaeffler.com/job/preview/0/?locale=en_US&amp;extJobId=V_42632-en_US&amp;mapping=\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://jobs.schaeffler.com/job/preview/0/?locale=en_US&amp;extJobId=V_43088-en_US&amp;mapping=\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://jobs.schaeffler.com/job/preview/0/?locale=en_US&amp;extJobId=V_43074-en_US&amp;mapping=\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://jobs.schaeffler.com/job/preview/0/?locale=en_US&amp;extJobId=V_43016-en_US&amp;mapping=\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://jobs.schaeffler.com/job/Wooster%2C-OH-Industrial-Engineer-OH-44691/1450469033/?locale=en_US\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://www.schaeffler.kr/ko/%EC%A0%9C%ED%92%88-%EB%B0%8F-%EC%86%94%EB%A3%A8%EC%85%98/e-mobility/\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://blog.naver.com/schaeffler_korea\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://www.schaeffler.kr/ko/%ED%9A%8C%EC%82%AC/?NaPm=ct%3Dmhke9jus%7Cci%3DER8b74c90d-b964-11f0-8418-de88388fce70%7Ctr%3Dbrnd%7Chk%3D56d670e7213c0a316a95281512e72c1e35601d10%7Cnacn%3DjSXZBgArxr8e\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://www.youtube.com/watch?v=cwc46_B4U7k&amp;source_ve_path=MTc4NDI0\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/895/webp/image.webp?1793777512\" alt=\"비테스코테크놀로지스코리아 이천사업장 11월 신입 및 경력직 채용\"></div>\n</div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/895/webp/image.webp?1793777512"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T01:28:55.954651+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "05ac2af367e39a6ef34903adb7451942c119f62b131733de9ba24993ab8a2416",
+        "verdict": "not_relevant",
+        "reason": "Electronic Engineer Intern 직무는 학부생 지원이 가능할 수 있으나, 공고된 다른 직무들은 경력직 위주이거나 소프트웨어 개발 직무와 거리가 있습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "jasoseol-intern/107019": {
       "notice": {
         "id": "jasoseol-intern/107019",
@@ -107,6 +215,198 @@
         "verdict": "not_relevant",
         "reason": "시설, 물류, 일반관리 직무를 모집하며 소프트웨어 관련 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107072": {
+      "notice": {
+        "id": "jasoseol-intern/107072",
+        "source_id": "jasoseol-intern",
+        "article_no": "107072",
+        "title": "[에이피알] [경영지원] 해외법인 관리/결산 채용연계형 인턴사원 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107072",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-05T01:28:55.954651+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-01-02T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/107069": {
+      "notice": {
+        "id": "jasoseol-intern/107069",
+        "source_id": "jasoseol-intern",
+        "article_no": "107069",
+        "title": "[청년취업사관학교] [취업·인턴 연계] SeSAC AI 서비스 기획·PM·제조AI 부트캠프 교육생 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107069",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-05T01:28:55.954651+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 인턴 채용이 아닌 교육생 모집 과정이며, 교육 수료 후 인턴 연계가 이루어지는 형태입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "⚠️ 캠퍼스별로 모집 기간이 상이하므로,\n\n지원하시는 캠퍼스의 일정을 반드시 확인해 주시기 바랍니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div>\n<h3><strong>⚠️ 캠퍼스별로 모집 기간이 상이하므로,&nbsp;</strong></h3>\n<h3><strong>지원하시는 캠퍼스의 일정을 반드시 확인해 주시기 바랍니다.</strong></h3>\n</div></div>\n<div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/891/webp/image.webp?1793777260\" alt=\"청년취업사관학교 [취업·인턴 연계] SeSAC AI 서비스 기획·PM·제조AI 부트캠프 교육생 모집\"><a href=\"https://docs.google.com/forms/d/e/1FAIpQLSeRS4QX2GuXVh_GtqLo9ksAaglqX3JK_HyCKJWPqKuczFhDbg/viewform\">​</a>\n</div>\n<div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/892/webp/image.webp?1793777264\" alt=\"청년취업사관학교 [취업·인턴 연계] SeSAC AI 서비스 기획·PM·제조AI 부트캠프 교육생 모집\"><a href=\"https://sesac.seoul.kr/sesac/course/offline/courseDetail.do?crsSn=1462\">​</a>\n</div>\n<div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/893/webp/image.webp?1793777270\" alt=\"청년취업사관학교 [취업·인턴 연계] SeSAC AI 서비스 기획·PM·제조AI 부트캠프 교육생 모집\"><a href=\"https://sesac.seoul.kr/sesac/course/offline/courseDetail.do?crsSn=1466\">​</a>\n</div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/891/webp/image.webp?1793777260",
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/892/webp/image.webp?1793777264",
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/893/webp/image.webp?1793777270"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T01:28:55.954651+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-29T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "d61651f0311bdfc0ce4b63716ab10ca418a33ca96feb4441c03c9dd68edad097",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 인턴 채용이 아닌 교육생 모집 과정이며, 교육 수료 후 인턴 연계가 이루어지는 형태입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107067": {
+      "notice": {
+        "id": "jasoseol-intern/107067",
+        "source_id": "jasoseol-intern",
+        "article_no": "107067",
+        "title": "[청년취업사관학교] [취업·인턴 연계] SeSAC 생성형 AI 데이터분석·AI Agent 교육생 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107067",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-05T01:28:55.954651+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 인턴 채용이 아닌 교육생 모집 과정이며, 교육 수료 후 인턴 연계가 이루어지는 형태입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "⚠️ 캠퍼스별로 모집 기간이 상이하므로,\n\n지원하시는 캠퍼스의 일정을 반드시 확인해 주시기 바랍니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div>\n<h3><strong>⚠️ 캠퍼스별로 모집 기간이 상이하므로,&nbsp;</strong></h3>\n<h3><strong>지원하시는 캠퍼스의 일정을 반드시 확인해 주시기 바랍니다.</strong></h3>\n</div></div>\n<div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/885/webp/image.webp?1793776722\" alt=\"청년취업사관학교 [취업·인턴 연계] SeSAC 생성형 AI 데이터분석·AI Agent 교육생 모집\"><a href=\"https://docs.google.com/forms/d/e/1FAIpQLSeRS4QX2GuXVh_GtqLo9ksAaglqX3JK_HyCKJWPqKuczFhDbg/viewform\">​</a>\n</div>\n<div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/886/webp/image.webp?1793776727\" alt=\"청년취업사관학교 [취업·인턴 연계] SeSAC 생성형 AI 데이터분석·AI Agent 교육생 모집\"><a href=\"https://sesac.seoul.kr/sesac/course/offline/courseDetail.do?crsSn=1157\">​</a>\n</div>\n<div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/887/webp/image.webp?1793776733\" alt=\"청년취업사관학교 [취업·인턴 연계] SeSAC 생성형 AI 데이터분석·AI Agent 교육생 모집\"><a href=\"https://sesac.seoul.kr/sesac/course/offline/courseDetail.do?crsSn=1318\">​</a>\n</div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/885/webp/image.webp?1793776722",
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/886/webp/image.webp?1793776727",
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/887/webp/image.webp?1793776733"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T01:28:55.954651+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-24T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "f3ee9a17bc8d44c4adf0c9b5e2c7eb1ee97c5fdc9c90603bbd2bdf1cf9d03d21",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 인턴 채용이 아닌 교육생 모집 과정이며, 교육 수료 후 인턴 연계가 이루어지는 형태입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107050": {
+      "notice": {
+        "id": "jasoseol-intern/107050",
+        "source_id": "jasoseol-intern",
+        "article_no": "107050",
+        "title": "[지엠테크니컬센터코리아] 2027 채용전환형 동계인턴사원모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107050",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-05T01:28:55.954651+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/765/webp/image.webp?1793693084\" alt=\"지엠테크니컬센터코리아 2027 채용전환형 동계인턴사원모집\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/765/webp/image.webp?1793693084"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T01:28:55.954651+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:00+09:00",
+        "model": "source"
       }
     },
     "linkareer-intern/362173": {
@@ -538,22 +838,29 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[지엠테크니컬센터코리아] 2027 GMTCK 동계인턴십\n접수 기간 2026-11-04 ~ 2026-11-15\n\n모집부문 및 상세내용\n모집 부문상세내용\nITPE (Interior/Seat&Safety/Thermal Propulsion/Energy Coversion system)\n(0명)담당업무\n1. Support engineering research to optimize system performance and robustness in accordance with vehicle regulatory, performance, and safety requirements and established development processes.\n\n2. Assist engineers in developing relevant components and systems to meet customer specifications and vehicle design and packaging requirements, including supporting reviews of part formability and assembly feasibility.\n\n3. Support global and regional vehicle development by assisting engineers with design concepts, component requirements documentation, and program-specific requests for relevant components and systems.\n\n4. Assist with engineering research to identify opportunities to improve the quality and cost competitiveness of relevant components and systems under engineers’ guidance.\n\n5. Assist engineers with design optimization and technology development activities for relevant components and systems used in environmentally friendly and technologically advanced vehicles, including electric and autonomous vehicles.\n\n채용형태\n- 인턴\n\n우대조건\nAbility to use UG-NX or similar 3D CAD tools\nExperience with automotive-related projects, coursework, or internships in automotive engineering\nAbility to collaborate with global teams and take initiative while working under guidance\nWillingness to learn from and contribute to global teams and supplier partnerships, with a positive and collaborative attitude\\\n\n\nVirtual Engineering\n(0명)담당업무\nVirtual Integration & Body, Exterior, Chassis Solution Division\n\nVirtual Vehicle, Interior & ECS Solution Division\n\n: As an AIO Engineer Intern, you’ll work with design engineers and CAE engineers to support vehicle development by integrating 3D design and CAE analysis across Body, Exterior, Chassis, and Interior. You’ll gain hands-on experience in creating and reviewing 3D designs and evaluating key performance areas such as strength, stiffness, and durability. You’ll also learn how CAE results are used to identify design improvements and develop solutions that meet performance requirements, gaining experience in both design and analysis throughout the vehicle development process.\n\n\nSafety Performance Integration Division\n\n: As a Safety Performance Engineering Intern, you’ll work with safety engineers to evaluate vehicle safety performance using CAE. You’ll gain hands-on experience in crash safety, occupant protection, Vulnerable Road User (VRU) protection, sensing, and electric vehicle safety. You’ll also support the development and evaluation of vehicle structures and safety systems to help protect occupants and vulnerable road users.\n\n\nADAS Division\n\n: As an ADAS Engineering Intern, you’ll partner with ADAS feature and virtualization engineers to develop a new evaluation strategy for GM’s ADAS systems, focused on improving the customer experience. You’ll help build a framework to evaluate ADAS software and calibrations against test cases associated with poor customer experiences so that opportunities for improvement can be identified. You’ll also have the opportunity to use AI to help bring this system to life while collaborating with GM’s global ADAS team to establish this new process.\n\n채용형태\n- 인턴\n\n우대조건\nCommon Preferred Qualifications\n\nUnderstanding of automotive component design, manufacturing processes, and assembly processes\nExperience with 3D CAD tools such as Siemens NX or CATIA\nKnowledge or experience in CAE analysis, including structural, durability, crash, or vehicle performance simulations\nExperience using AI to build software and solve problems\nADAS Preferred Qualifications\n\nUnderstanding of ADAS system design and sensor performance\nVehicle dynamics and/or sensor simulation experience\nHands on experience in automotive or robotics projects\nFamiliarity with serial data (CAN, Eth, LIN, etc.)\n\n\nPropulsion Controls, Vehicle Performance & Virtual Integration Engineer\n(0명)담당업무\nPropulsion Controls: Develop calibration and embedded-control software for propulsion control modules and drive-unit control modules.\n\nVirtual Vehicle Dynamics: Execute virtual control development and virtual validation for vehicle dynamics, connecting virtual analysis with physical testing.\n\nNoise and Vibration: Develop noise and vibration performance by supporting virtual N&V models and conducting physical measurements.\n\nEnergy: Develop and evaluate vehicle fuel economy in both model-based and physical environments.\n\nVirtual Thermal: Support the development and validation of virtual thermal design and management through modeling, analysis, and physical testing.\n\n채용형태\n- 인턴\n\n우대조건\nExperience in modeling and simulation using various Tools such as CAE, HIL, SIL, DIL\nWorking knowledge of Thermal, Controls, Vehicle Dynamics, Noise & Vibration and Energy\nProficiency in programming languages Python and C++\nWorking knowledge of vehicle communication protocols, such as CAN\n\n\nSupplier Quality Engineer / Product Specification Engineer\n(0명)담당업무\n1. Supplier Quality & Development\n\nAPQP & PPAP: Establishing quality processes and approving parts for new supplier.\nContinuous Improvement: Collaborating with suppliers to drive ongoing part quality enhancements.\nProblem Solving & Improvement: Resolving part quality issues and implementing corrective actions.\nProcess Simplification using AI & Automation tools and Software\nSQE Virtualization MR and VR adoption\n2. Specification Engineer\n\nServe as the primary analyst for the Master Part List, ensuring accuracy and up-to-date engineering specifications.\nAnalyze and interpret complex engineering data, such as Design Change Orders, Vehicle Description Summary (VDS), and Product Plan Content.\nUpdate and manage the Master Parts List in the system based on engineering instructions.\nCollaborate with cross-functional teams, including Engineering, Program Teams, and Manufacturing, to ensure data integrity and alignment with program requirements.\nIdentify and resolve discrepancies in engineering documentation and part specifications.\nWork closely with the Global Engineering Release Division.\n\n채용형태\n- 인턴\n\n우대조건\nIntermediate proficiency in Siemens NX (CAD/CAM)\nExperience in process simplification and automation using AI tools or software solutions\nStrong verbal and written communication skills in English\nKnowledge of quality standards (e.g., ISO 9001, IATF 16949)\nExperience with quality tools (e.g., APQP, PPAP, FMEA, SPC, MSA)\nParticipation in automotive industry-academia projects or technical symposiums\n\n\nAVD, SVI & CXAI\n(0명)담당업무\n1. Vehicle Architecture Integration & Propulsion VSE\n\nDefine vehicle architecture, balance key requirements, and lead cross-functional integration from concept through launch.\nDefine and integrate propulsion-system requirements while leading cross-functional issue resolution and validation across related vehicle systems.\n2. Compartment Integration Design Engineer (CIDE) & Studio Design Engineer (SDE)\n\nDevelop early vehicle concepts balancing design, safety, and program targets.\nCreate space and package solutions for compelling interior and exterior designs.\nTransform creative ideas into feasible, production-ready designs through close collaboration with Studio and Engineering.\nServe as a bridge between Design and Engineering, turning vision into reality\n3. Customer Experience (CX)\n\nCreate realistic virtual builds and 3D assets using NX/TcVIS inputs and tools such as Unreal Engine, VRED, and UG to reduce physical prototypes.\nConduct perceptual and design quality assessments using 3D assets and contribute to cross-functional design reviews with a customer-focused mindset.\nDevelop innovative virtual tools and workflows to improve engineering efficiency.\n4. AI/Machine Learning & Data science\n\nDevelop AI/ML models and applications using Engineering Data\nDevelop Algorithm/tools to automate engineering workflows\nCollaborate with engineers on practical AI solutions\n5. Innovation Solutions (AI & Prototyping)\n\nIdentify and define business and customer problems using structured problem-solving methods (e.g., Lean Six Sigma, DFSS, Design Thinking)\nSelect the right approach for each problem and rapidly build proof-of-concepts, from AI agents and automation to physical or virtual prototypes\nValidate solutions with data and user feedback, then scale successful ideas across the organization\n\n채용형태\n- 인턴\n\n우대조건\nHands-on experience with 3D modeling, CAD software, or VR tools.\nFamiliarity with UG/NX or 3D mathematical design software.\nEnthusiasm or experience in immersive technology (AR, VR, and MR).\nBasic understanding of automotive systems and vehicle engineering.\nStrong communication, teamwork, and collaborative problem-solving skills.\nProficiency in AI & productivity Tool\n\n\nSoftware and Electronics_Software Engineer\n(0명)담당업무\nWrite, test, and debug application software code\nCollaborate with the development team on new feature builds\nParticipate in code reviews and day-to-day agile team activities\nLearn GM's software development lifecycle, tools, and best practices\nValidate vehicle system behavior on benches and in vehicles through software and system testing.\nBuild and improve automated test scripts and tools for functional, integration, and regression testing.\nAnalyze test results and logs, document defects, and support issue resolution with experienced engineers.\n\n채용형태\n- 인턴\n\n우대조건\nPursuing or holding a bachelor's degree in Computer Science, Software Engineering, or related field\nWorking proficiency in at least one programming language (e.g., Java, Python, C++)\nGenuine enthusiasm for learning new tools and technologies\nStrong problem-solving mindset\nBasic understanding of software testing, verification, and validation.\nAbility to interpret test results and logs to identify potential issues.\nInterest in contributing to software quality alongside software development.\n\n\nEngineering Excellence\n(0명)담당업무\n1. System Safety and Validation Engineer:\n\na. Support and Lead vehicle development from requirements to testing, including test planning and review to verify that technical requirements are met.\n\nb. Work with engineering teams to integrate vehicle systems and solve technical issues.\n\nc. Use AI and Model-Based Systems Engineering to analyze requirements and support validation.\n\nd. Set and integrate vehicle mass targets throughout vehicle development, ensuring alignment with regulatory requirements and engineering goals.\n\n\n\n2. Vehicle Certification, Regulations and Safety Field Investigation Engineer:\n\na. Support vehicle certification and regulatory assessments for vehicle systems and engineering changes.\n\nb. Lead and execute certification testing and preparation of required reports and documents.\n\nc. Shape vehicle energy strategies that balance engineering goals and regulatory requirements.\n\nd. Use field data analysis and technical evidence to identify and investigate potential product risks and help determine appropriate Field Actions.\n\n채용형태\n- 인턴\n\n우대조건\nCurious, eager to learn and willing to take on leadership opportunities.\nExperience with mechatronic systems or automotive development projects.\nBasic knowledge of vehicle systems, CAN communication, safety analysis and system-level problem-solving.\nFamiliarity with MATLAB/Simulink, Python or data-logging tools.\nFamiliarity with AI tools and interest in applying them to engineering tasks.\nStrong communication, collaboration and teamwork skills.\n\n\nBody, Exterior, Chassis and After Service Engineering\n(0명)담당업무\nEngineer and integrate advanced Body, Exterior, and Chassis components\nLead collaboration across CAE, Manufacturing, Quality, and Validation teams\nApply the latest technologies to enhance performance and craftsmanship\n\n\n채용형태\n- 인턴\n\n우대조건\nAbility to use UG-NX and 3D math modeling tools\nAutomotive industry experience\nThose who have participated in automotive-related academic-industry projects or symposiums\nIndividuals with leadership experience\n\n\n\n생산기술연구소\n(0명)담당업무\nSupport manufacturing process and equipment planning for new vehicle programs\nReview equipment specifications and support installation, commissioning, and pre-production validation\nCollaborate with internal and external stakeholders to discuss and resolve technical issues\nUse data to support process stabilization and develop improvement proposals\nDocument and share project results and process improvements\n\n채용형태\n- 인턴\n\n우대조건\nExperience with automotive, mechanical, electrical, or manufacturing-related projects or internships\nExperience or knowledge in CAD, 3D modeling, PLCs, or automated equipment\nExperience or knowledge in Python, AI, data analytics, or smart manufacturing\nAbility to understand technical materials in English and communicate in English in a basic professional setting\n\n\nSoftware and Electronics_CyberSecurity Engineer\n(0명)담당업무\nUnderstand the vehicle and plan the work:\n\nReview how a connected vehicle communicates through areas such as telematics, infotainment, gateways, vehicle diagnostics, Bluetooth, Wi-Fi, cellular connections, mobile apps, and back-office services. Note which connections and features differ across vehicle programs.\nHelp draft a risk-based plan for choosing what to assess first. Document factors the team can use when considering in-house testing or an outside specialist; the responsible team will make the final decision.\nCreate reusable test materials:\n\nHelp connect proposed test checks to a security framework chosen by the team, so reviewers can see what the plan covers.\nDraft test plans, checklists, and sample checks for vehicle networks and diagnostics (CAN, LIN, UDS, Automotive Ethernet); Bluetooth, Wi-Fi, and cellular; debug access and secure boot; and firmware, over-the-air (OTA) software updates, and remote vehicle commands. Any hands-on firmware access or extraction must be specifically approved and included in the test scope.\nPrepare and run a supervised pilot:\n\nSet up and document the lab bench and approved tools, such as hardware tools and protocol analyzers, with guidance from the team.\nTry selected checks on one approved target in a controlled lab (a vehicle or bench) under team supervision. Record what worked, what needs adjustment, and what could be reused on future programs.\nReport findings and share recommendations:\nDraft a findings-report template that explains the issue, its potential impact, and possible fixes. Propose severity categories for review; the responsible engineers will confirm final ratings and remediation actions.\nWork with cybersecurity compliance partners to identify relevant standards and regulations. The responsible teams will determine how those requirements apply.\nDocument the proposed approach, pilot lessons, and recommendations; present the results and handoff materials to the team.\n\n채용형태\n- 인턴\n\n우대조건\nHands-on experience with CAN or other vehicle networks, or hardware interfaces such as UART, JTAG, or SPI; experience using a logic analyzer is a plus\nExperience inspecting firmware to understand how it works, or other firmware analysis experience\nExperience with security testing for Bluetooth/BLE, Wi-Fi, or cellular connections\nParticipation in vehicle-security projects, security research, or a cybersecurity club\nPrior internship or project experience in automotive, embedded systems, or security engineering\n\n\nSoftware and Electronics Engineering\n(0명)담당업무\n1. Electrical Components track:\n\nSupport design and specification of electronic modules, sensors, and components\nAssist with hardware design and documentation, and validate hardware designs against vehicle requirements\n2. Platform Software Product track:\n\nSupport software development activities for platform software modules\nAssist with configuring embedded control software and partner with testing teams to verify software behavior and help resolve issues to closure\n3. Platform Integration &Deployment track:\n\nSupport development of automated test scripts/tools for vehicle electrical systems\nAssist with feature/function integration across full vehicle-level benches, including Hardware-in-the-Loop and Software-in-the-Loop\n\n채용형태\n- 인턴\n\n우대조건\nPrior coursework, project, or internship experience in automotive electrical/software systems\nExposure to CAD, embedded software, or test automation tools\nBasic scripting ability (e.g., Python, C/C++)\nStrong curiosity about how electrical and software systems come together\nSolid analytical and problem-solving skills\nComfortable collaborating in a team environment and asking questions\n\n\n자격요건\n학력\n대학졸업(4년) 이상(졸업예정자 가능)\n\n\n\n\n\n\n\n\n\n\n\n\n\n근무조건\n급여\n회사 내규에 따름\n\n근무지역\n인천 부평구 청천동 199 지엠테크니컬센터코리아\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\nVideo Assessment\n\nStep 3\nPhone Screen\n\nStep 4\n인터뷰\n\nStep 4\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-04 ~ 2026-11-15\n\n접수방법\n홈페이지 지원\n\n문의\n이메일\nkorea.recruit@gm.com\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.\n지원방법\nGM Career Site 상단의 \"View Jobs in Korea\" 또는 하단의 \"Latest Jobs in South Korea\"에서 지원하고자 하는 인턴 포지션을 선택한 후 \"Apply\"를 클릭 후 지원서 작성합니다.\n온라인 지원서를 작성하고, 자유 양식의 이력서 또는 자기소개 포트폴리오를 첨부합니다.\n지원자의 개성과 역량이 잘 드러나는 창의적이고 시각적인 포트폴리오 작성을 권장합니다.\n온라인 지원서의 각 문항에는 별도의 글자 수 제한이 없으나, 문항별 답변은 500자 내외로 작성해 주시기를 권장합니다.\n포지션별 안내에 영문으로 지원서 작성이 명시된 경우를 제외하고, 온라인 지원서와 첨부 서류는 국문으로 제출할 수 있습니다. (** 표기 지원분야 영문지원서 작성 필수)\n첨부파일은 5MB 이하의 파일 1개만 만 업로드할 수 있습니다. PDF 형식을 권장하며, ZIP, Excel (.xls), 한글(hwp) 또는 HTML 파일은 첨부할 수 없습니다.\n온라인 지원서 작성과 개인정보 수집·이용 동의서 제출을 모두 완료해야 최종 지원이 접수됩니다. 개인정보 수집·이용 동의서를 제출하지 않은 경우, 서류 심사 대상에서 제외됩니다.\n지원서 제출 완료 후에는 내용을 수정할 수 없습니다. 수정을 위해 지원을 철회할 경우 동일 계정으로 재지원이 불가하므로, 제출 전 입력하신 내용을 신중히 확인해 주시기 바랍니다.\n기타사항\nGMTCK와 GMAP는 GM 한국사업장 내 별도 법인으로, 채용 절차와 인턴십 프로그램이 각각 구분되어 운영될 예정입니다.\n2027 GMTCK & GMAP 동계 인턴 프로그램 간 중복 지원은 불가합니다. 단, GM한국사업장 내의 다른 직무에는 중복 지원이 가능합니다.\n서류 접수 마감 후 직무별 채용 절차가 별도로 진행되므로, 직무에 따라 전형 일정이 다를 수 있습니다.\n직무별 지원자 현황에 따라 지원하신 분야와 다른 직무로 전형이 진행될 수 있습니다.\n회사 내규에 따라 실제 인턴십 근무일수를 기준으로 소정의 인턴십 수당이 지급됩니다.\n본 인턴십은 채용 연계형으로, 인턴십 수료 후 평가 결과에 따라 정규직 전환 여부가 결정됩니다. 단, 모든 인턴십 수료자의 정규직 채용을 보장하지는 않습니다.\n입사지원서에 허위 사실을 기재한 경우 합격이 취소될 수 있습니다.\n문의: 이메일(korea.recruit@gm.com) 또는 카카오톡 오픈채팅을 이용해 주세요.",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div><div><img src=\"https://linkareer.com/images/activity/banner/template_3_banner.webp\"><div><h2>[지엠테크니컬센터코리아] 2027 GMTCK 동계인턴십</h2><p>접수 기간 2026-11-04 ~ 2026-11-15</p></div><div><strong>모집부문 및 상세내용</strong></div><table><thead><tr><th>모집 부문</th><th>상세내용</th></tr></thead><tbody><tr><td>ITPE (Interior/Seat&amp;Safety/Thermal Propulsion/Energy Coversion system)<br> (0명)</td><td><div><div>담당업무</div><p>1. Support engineering research to optimize system performance and robustness in accordance with vehicle regulatory, performance, and safety requirements and established development processes.\n\n2. Assist engineers in developing relevant components and systems to meet customer specifications and vehicle design and packaging requirements, including supporting reviews of part formability and assembly feasibility.\n\n3. Support global and regional vehicle development by assisting engineers with design concepts, component requirements documentation, and program-specific requests for relevant components and systems.\n\n4. Assist with engineering research to identify opportunities to improve the quality and cost competitiveness of relevant components and systems under engineers’ guidance.\n\n5. Assist engineers with design optimization and technology development activities for relevant components and systems used in environmentally friendly and technologically advanced vehicles, including electric and autonomous vehicles.</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>우대조건</div><p>Ability to use UG-NX or similar 3D CAD tools\nExperience with automotive-related projects, coursework, or internships in automotive engineering\nAbility to collaborate with global teams and take initiative while working under guidance\nWillingness to learn from and contribute to global teams and supplier partnerships, with a positive and collaborative attitude\\</p></div></td></tr><tr><td>Virtual Engineering<br> (0명)</td><td><div><div>담당업무</div><p>Virtual Integration &amp; Body, Exterior, Chassis Solution Division\n\n Virtual Vehicle, Interior &amp; ECS Solution Division\n\n: As an AIO Engineer Intern, you’ll work with design engineers and CAE engineers to support vehicle development by integrating 3D design and CAE analysis across Body, Exterior, Chassis, and Interior. You’ll gain hands-on experience in creating and reviewing 3D designs and evaluating key performance areas such as strength, stiffness, and durability. You’ll also learn how CAE results are used to identify design improvements and develop solutions that meet performance requirements, gaining experience in both design and analysis throughout the vehicle development process. \n\n\nSafety Performance Integration Division \n\n: As a Safety Performance Engineering Intern, you’ll work with safety engineers to evaluate vehicle safety performance using CAE. You’ll gain hands-on experience in crash safety, occupant protection, Vulnerable Road User (VRU) protection, sensing, and electric vehicle safety. You’ll also support the development and evaluation of vehicle structures and safety systems to help protect occupants and vulnerable road users.\n\n\nADAS Division \n\n: As an ADAS Engineering Intern, you’ll partner with ADAS feature and virtualization engineers to develop a new evaluation strategy for GM’s ADAS systems, focused on improving the customer experience. You’ll help build a framework to evaluate ADAS software and calibrations against test cases associated with poor customer experiences so that opportunities for improvement can be identified. You’ll also have the opportunity to use AI to help bring this system to life while collaborating with GM’s global ADAS team to establish this new process.</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>우대조건</div><p>Common Preferred Qualifications\n\nUnderstanding of automotive component design, manufacturing processes, and assembly processes\nExperience with 3D CAD tools such as Siemens NX or CATIA\nKnowledge or experience in CAE analysis, including structural, durability, crash, or vehicle performance simulations\nExperience using AI to build software and solve problems\nADAS Preferred Qualifications\n\nUnderstanding of ADAS system design and sensor performance\nVehicle dynamics and/or sensor simulation experience\nHands on experience in automotive or robotics projects\nFamiliarity with serial data (CAN, Eth, LIN, etc.)</p></div></td></tr><tr><td>Propulsion Controls, Vehicle Performance &amp; Virtual Integration Engineer<br> (0명)</td><td><div><div>담당업무</div><p>Propulsion Controls: Develop calibration and embedded-control software for propulsion control modules and drive-unit control modules.\n\nVirtual Vehicle Dynamics: Execute virtual control development and virtual validation for vehicle dynamics, connecting virtual analysis with physical testing.\n\nNoise and Vibration: Develop noise and vibration performance by supporting virtual N&amp;V models and conducting physical measurements.\n\nEnergy: Develop and evaluate vehicle fuel economy in both model-based and physical environments.\n\nVirtual Thermal: Support the development and validation of virtual thermal design and management through modeling, analysis, and physical testing.</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>우대조건</div><p>Experience in modeling and simulation using various Tools such as CAE, HIL, SIL, DIL\nWorking knowledge of Thermal, Controls, Vehicle Dynamics, Noise &amp; Vibration and Energy\nProficiency in programming languages Python and C++\nWorking knowledge of vehicle communication protocols, such as CAN</p></div></td></tr><tr><td>Supplier Quality Engineer / Product Specification Engineer<br> (0명)</td><td><div><div>담당업무</div><p>1. Supplier Quality &amp; Development \n\nAPQP &amp; PPAP: Establishing quality processes and approving parts for new supplier.\nContinuous Improvement: Collaborating with suppliers to drive ongoing part quality enhancements.\nProblem Solving &amp; Improvement: Resolving part quality issues and implementing corrective actions.\nProcess Simplification using AI &amp; Automation tools and Software\nSQE Virtualization MR and VR adoption\n2. Specification Engineer\n\nServe as the primary analyst for the Master Part List, ensuring accuracy and up-to-date engineering specifications.\nAnalyze and interpret complex engineering data, such as Design Change Orders, Vehicle Description Summary (VDS), and Product Plan Content.\nUpdate and manage the Master Parts List in the system based on engineering instructions.\nCollaborate with cross-functional teams, including Engineering, Program Teams, and Manufacturing, to ensure data integrity and alignment with program requirements.\nIdentify and resolve discrepancies in engineering documentation and part specifications.\nWork closely with the Global Engineering Release Division.</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>우대조건</div><p>Intermediate proficiency in Siemens NX (CAD/CAM)\nExperience in process simplification and automation using AI tools or software solutions\nStrong verbal and written communication skills in English\nKnowledge of quality standards (e.g., ISO 9001, IATF 16949)\nExperience with quality tools (e.g., APQP, PPAP, FMEA, SPC, MSA)\nParticipation in automotive industry-academia projects or technical symposiums</p></div></td></tr><tr><td>AVD, SVI &amp; CXAI<br> (0명)</td><td><div><div>담당업무</div><p>1. Vehicle Architecture Integration &amp; Propulsion VSE\n\nDefine vehicle architecture, balance key requirements, and lead cross-functional integration from concept through launch.\nDefine and integrate propulsion-system requirements while leading cross-functional issue resolution and validation across related vehicle systems.\n2. Compartment Integration Design Engineer (CIDE) &amp; Studio Design Engineer (SDE)\n\nDevelop early vehicle concepts balancing design, safety, and program targets.\nCreate space and package solutions for compelling interior and exterior designs.\nTransform creative ideas into feasible, production-ready designs through close collaboration with Studio and Engineering.\nServe as a bridge between Design and Engineering, turning vision into reality\n3. Customer Experience (CX)\n\nCreate realistic virtual builds and 3D assets using NX/TcVIS inputs and tools such as Unreal Engine, VRED, and UG to reduce physical prototypes.\nConduct perceptual and design quality assessments using 3D assets and contribute to cross-functional design reviews with a customer-focused mindset.\nDevelop innovative virtual tools and workflows to improve engineering efficiency.\n4. AI/Machine Learning &amp; Data science  \n\nDevelop AI/ML models and applications using Engineering Data\nDevelop Algorithm/tools to automate engineering workflows\nCollaborate with engineers on practical AI solutions\n5. Innovation Solutions (AI &amp; Prototyping)\n\nIdentify and define business and customer problems using structured problem-solving methods (e.g., Lean Six Sigma, DFSS, Design Thinking)\nSelect the right approach for each problem and rapidly build proof-of-concepts, from AI agents and automation to physical or virtual prototypes\nValidate solutions with data and user feedback, then scale successful ideas across the organization</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>우대조건</div><p>Hands-on experience with 3D modeling, CAD software, or VR tools.\nFamiliarity with UG/NX or 3D mathematical design software.\nEnthusiasm or experience in immersive technology (AR, VR, and MR).\nBasic understanding of automotive systems and vehicle engineering.\nStrong communication, teamwork, and collaborative problem-solving skills.\nProficiency in AI &amp; productivity Tool</p></div></td></tr><tr><td>Software and Electronics_Software Engineer<br> (0명)</td><td><div><div>담당업무</div><p>Write, test, and debug application software code\nCollaborate with the development team on new feature builds\nParticipate in code reviews and day-to-day agile team activities\nLearn GM's software development lifecycle, tools, and best practices\nValidate vehicle system behavior on benches and in vehicles through software and system testing.\nBuild and improve automated test scripts and tools for functional, integration, and regression testing.\nAnalyze test results and logs, document defects, and support issue resolution with experienced engineers.</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>우대조건</div><p>Pursuing or holding a bachelor's degree in Computer Science, Software Engineering, or related field\nWorking proficiency in at least one programming language (e.g., Java, Python, C++)\nGenuine enthusiasm for learning new tools and technologies\nStrong problem-solving mindset\nBasic understanding of software testing, verification, and validation.\nAbility to interpret test results and logs to identify potential issues.\nInterest in contributing to software quality alongside software development.</p></div></td></tr><tr><td>Engineering Excellence<br> (0명)</td><td><div><div>담당업무</div><p>1. System Safety and Validation Engineer:\n\na. Support and Lead vehicle development from requirements to testing, including test planning and review to verify that technical requirements are met.\n\nb. Work with engineering teams to integrate vehicle systems and solve technical issues.\n\nc. Use AI and Model-Based Systems Engineering to analyze requirements and support validation.\n\nd. Set and integrate vehicle mass targets throughout vehicle development, ensuring alignment with regulatory requirements and engineering goals.\n\n \n\n2. Vehicle Certification, Regulations and Safety Field Investigation Engineer:\n\na. Support vehicle certification and regulatory assessments for vehicle systems and engineering changes.\n\nb. Lead and execute certification testing and preparation of required reports and documents.\n\nc. Shape vehicle energy strategies that balance engineering goals and regulatory requirements.\n\nd. Use field data analysis and technical evidence to identify and investigate potential product risks and help determine appropriate Field Actions.</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>우대조건</div><p>Curious, eager to learn and willing to take on leadership opportunities.\nExperience with mechatronic systems or automotive development projects.\nBasic knowledge of vehicle systems, CAN communication, safety analysis and system-level problem-solving.\nFamiliarity with MATLAB/Simulink, Python or data-logging tools.\nFamiliarity with AI tools and interest in applying them to engineering tasks.\nStrong communication, collaboration and teamwork skills.</p></div></td></tr><tr><td>Body, Exterior, Chassis and After Service Engineering<br> (0명)</td><td><div><div>담당업무</div><p>Engineer and integrate advanced Body, Exterior, and Chassis components\nLead collaboration across CAE, Manufacturing, Quality, and Validation teams\nApply the latest technologies to enhance performance and craftsmanship\n</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>우대조건</div><p>Ability to use UG-NX and 3D math modeling tools\nAutomotive industry experience\nThose who have participated in automotive-related academic-industry projects or symposiums\nIndividuals with leadership experience\n</p></div></td></tr><tr><td>생산기술연구소<br> (0명)</td><td><div><div>담당업무</div><p>Support manufacturing process and equipment planning for new vehicle programs\nReview equipment specifications and support installation, commissioning, and pre-production validation\nCollaborate with internal and external stakeholders to discuss and resolve technical issues\nUse data to support process stabilization and develop improvement proposals\nDocument and share project results and process improvements</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>우대조건</div><p>Experience with automotive, mechanical, electrical, or manufacturing-related projects or internships\nExperience or knowledge in CAD, 3D modeling, PLCs, or automated equipment\nExperience or knowledge in Python, AI, data analytics, or smart manufacturing\nAbility to understand technical materials in English and communicate in English in a basic professional setting</p></div></td></tr><tr><td>Software and Electronics_CyberSecurity Engineer<br> (0명)</td><td><div><div>담당업무</div><p>Understand the vehicle and plan the work:\n\nReview how a connected vehicle communicates through areas such as telematics, infotainment, gateways, vehicle diagnostics, Bluetooth, Wi-Fi, cellular connections, mobile apps, and back-office services. Note which connections and features differ across vehicle programs.\nHelp draft a risk-based plan for choosing what to assess first. Document factors the team can use when considering in-house testing or an outside specialist; the responsible team will make the final decision.\nCreate reusable test materials:\n\nHelp connect proposed test checks to a security framework chosen by the team, so reviewers can see what the plan covers.\nDraft test plans, checklists, and sample checks for vehicle networks and diagnostics (CAN, LIN, UDS, Automotive Ethernet); Bluetooth, Wi-Fi, and cellular; debug access and secure boot; and firmware, over-the-air (OTA) software updates, and remote vehicle commands. Any hands-on firmware access or extraction must be specifically approved and included in the test scope.\nPrepare and run a supervised pilot:\n\nSet up and document the lab bench and approved tools, such as hardware tools and protocol analyzers, with guidance from the team.\nTry selected checks on one approved target in a controlled lab (a vehicle or bench) under team supervision. Record what worked, what needs adjustment, and what could be reused on future programs.\nReport findings and share recommendations:\nDraft a findings-report template that explains the issue, its potential impact, and possible fixes. Propose severity categories for review; the responsible engineers will confirm final ratings and remediation actions.\nWork with cybersecurity compliance partners to identify relevant standards and regulations. The responsible teams will determine how those requirements apply.\nDocument the proposed approach, pilot lessons, and recommendations; present the results and handoff materials to the team.</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>우대조건</div><p>Hands-on experience with CAN or other vehicle networks, or hardware interfaces such as UART, JTAG, or SPI; experience using a logic analyzer is a plus\nExperience inspecting firmware to understand how it works, or other firmware analysis experience\nExperience with security testing for Bluetooth/BLE, Wi-Fi, or cellular connections\nParticipation in vehicle-security projects, security research, or a cybersecurity club\nPrior internship or project experience in automotive, embedded systems, or security engineering</p></div></td></tr><tr><td>Software and Electronics Engineering<br> (0명)</td><td><div><div>담당업무</div><p>1. Electrical Components track:\n\nSupport design and specification of electronic modules, sensors, and components\nAssist with hardware design and documentation, and validate hardware designs against vehicle requirements\n2. Platform Software Product track:\n\nSupport software development activities for platform software modules\nAssist with configuring embedded control software and partner with testing teams to verify software behavior and help resolve issues to closure\n3. Platform Integration &amp;Deployment track:\n\nSupport development of automated test scripts/tools for vehicle electrical systems\nAssist with feature/function integration across full vehicle-level benches, including Hardware-in-the-Loop and Software-in-the-Loop</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>우대조건</div><p>Prior coursework, project, or internship experience in automotive electrical/software systems\nExposure to CAD, embedded software, or test automation tools\nBasic scripting ability (e.g., Python, C/C++)\nStrong curiosity about how electrical and software systems come together\nSolid analytical and problem-solving skills\nComfortable collaborating in a team environment and asking questions</p></div></td></tr></tbody></table><div><strong>자격요건</strong></div><div><p>학력</p><p>대학졸업(4년) 이상(졸업예정자 가능)</p></div><div><strong>근무조건</strong></div><ul><li><p>급여</p><p>회사 내규에 따름</p></li><li><p>근무지역</p><div><p>인천 부평구 청천동 199 지엠테크니컬센터코리아 </p></div></li></ul><div><strong>전형 절차</strong></div><div><p>Step 1</p><p>서류전형</p></div><div><p>Step 2</p><p>Video Assessment</p></div><div><p>Step 3</p><p> Phone Screen</p></div><div><p>Step 4</p><p>인터뷰</p></div><div><p>Step 4</p><p>최종합격</p></div><div><strong>지원 기간 및 방법</strong></div><ul><li><p>접수기간</p><p>2026-11-04 ~ 2026-11-15</p></li><li><p>접수방법</p><p>홈페이지 지원</p></li></ul><div><strong>문의</strong></div><ul><li><p>이메일</p><p>korea.recruit@gm.com</p></li></ul><div><strong>유의사항</strong></div><ul><li>허위 사실이 발견될 경우 채용이 취소될 수 있습니다.</li><li><span><span><b>지원방법</b></span></span></li><li><span><span>GM Career Site 상단의 \"View Jobs in Korea\" 또는 하단의 \"Latest Jobs in South Korea\"에서 지원하고자 하는 인턴 포지션을 선택한 후 \"Apply\"를 클릭 후 지원서 작성합니다.</span></span></li><li><span><span>온라인 지원서를 작성하고, 자유 양식의 이력서 또는 자기소개 포트폴리오를 첨부합니다.</span></span></li><li><span><span>지원자의 개성과 역량이 잘 드러나는 창의적이고 시각적인 포트폴리오 작성을 권장합니다.</span></span></li><li><span><span>온라인 지원서의 각 문항에는 별도의 글자 수 제한이 없으나, 문항별 답변은 500자 내외로 작성해 주시기를 권장합니다.</span></span></li><li><span><span>포지션별 안내에 영문으로 지원서 작성이 명시된 경우를 제외하고, 온라인 지원서와 첨부 서류는 국문으로 제출할 수 있습니다. (** 표기 지원분야 영문지원서 작성 필수)</span></span></li><li><span><span>첨부파일은 5MB 이하의 파일 1개만 만 업로드할 수 있습니다. PDF 형식을 권장하며, ZIP, Excel (.xls), 한글(hwp) 또는 HTML 파일은 첨부할 수 없습니다.</span></span></li><li><span><span>온라인 지원서 작성과 개인정보 수집·이용 동의서 제출을 모두 완료해야 최종 지원이 접수됩니다. 개인정보 수집·이용 동의서를 제출하지 않은 경우, 서류 심사 대상에서 제외됩니다.</span></span></li><li><span><span>지원서 제출 완료 후에는 내용을 수정할 수 없습니다. 수정을 위해 지원을 철회할 경우 동일 계정으로 재지원이 불가하므로, 제출 전 입력하신 내용을 신중히 확인해 주시기 바랍니다.</span></span></li><li><span><span><b>기타사항</b></span></span></li><li><span><span>GMTCK와 GMAP는 GM 한국사업장 내 별도 법인으로, 채용 절차와 인턴십 프로그램이 각각 구분되어 운영될 예정입니다.</span></span></li><li><span><span>2027 GMTCK &amp; GMAP 동계 인턴 프로그램 간 중복 지원은 불가합니다. 단, GM한국사업장 내의 다른 직무에는 중복 지원이 가능합니다.</span></span></li><li><span><span>서류 접수 마감 후 직무별 채용 절차가 별도로 진행되므로, 직무에 따라 전형 일정이 다를 수 있습니다.</span></span></li><li><span><span>직무별 지원자 현황에 따라 지원하신 분야와 다른 직무로 전형이 진행될 수 있습니다.</span></span></li><li><span><span>회사 내규에 따라 실제 인턴십 근무일수를 기준으로 소정의 인턴십 수당이 지급됩니다.</span></span></li><li><span><span>본 인턴십은 채용 연계형으로, 인턴십 수료 후 평가 결과에 따라 정규직 전환 여부가 결정됩니다. 단, 모든 인턴십 수료자의 정규직 채용을 보장하지는 않습니다.</span></span></li><li><span><span>입사지원서에 허위 사실을 기재한 경우 합격이 취소될 수 있습니다.</span></span></li><li><span><span>문의: 이메일(korea.recruit@gm.com) 또는 카카오톡 오픈채팅을 이용해 주세요.</span></span></li></ul></div></div>",
+      "images": [
+        "https://linkareer.com/images/activity/banner/template_3_banner.webp"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T01:28:55.954651+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2026-11-15T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "translation": {
+        "title": "[지엠테크니컬센터코리아] 2027 GMTCK 동계인턴십",
+        "body": "[지엠테크니컬센터코리아] 2027 GMTCK 동계인턴십\n접수 기간 2026-11-04 ~ 2026-11-15\n\n모집부문 및 상세내용\n모집 부문상세내용\nITPE (Interior/Seat&Safety/Thermal Propulsion/Energy Coversion system)\n(0명)담당업무\n1. 차량 규제, 성능, 안전 요건 및 확립된 개발 프로세스에 따라 시스템 성능과 견고성을 최적화하기 위한 엔지니어링 연구 지원.\n\n2. 부품 성형성 및 조립 타당성 검토 지원을 포함하여, 고객 사양 및 차량 설계와 패키징 요건을 충족하는 관련 부품 및 시스템 개발을 엔지니어와 함께 수행.\n\n3. 설계 개념, 부품 요건 문서화 및 관련 부품과 시스템에 대한 프로그램별 요청 사항을 지원하여 글로벌 및 지역 차량 개발 보조.\n\n4. 엔지니어의 지도하에 관련 부품 및 시스템의 품질과 비용 경쟁력을 개선할 기회를 식별하기 위한 엔지니어링 연구 지원.\n\n5. 전기차 및 자율주행차를 포함한 친환경 및 첨단 기술 차량에 사용되는 관련 부품 및 시스템의 설계 최적화 및 기술 개발 활동을 엔지니어와 함께 수행.\n\n채용형태\n- 인턴\n\n우대조건\nUG-NX 또는 유사한 3D CAD 도구 사용 능력\n자동차 관련 프로젝트, 교과 과정 또는 자동차 공학 인턴십 경험\n글로벌 팀과 협업하고 지도하에 주도적으로 업무를 수행할 수 있는 능력\n긍정적이고 협력적인 태도로 글로벌 팀 및 공급업체 파트너십으로부터 배우고 기여하려는 의지\n\n\nVirtual Engineering\n(0명)담당업무\nVirtual Integration & Body, Exterior, Chassis Solution Division\n\nVirtual Vehicle, Interior & ECS Solution Division\n\n: AIO 엔지니어 인턴으로서 설계 엔지니어 및 CAE 엔지니어와 협력하여 차체, 외장, 섀시 및 내장 전반에 걸쳐 3D 설계와 CAE 해석을 통합함으로써 차량 개발을 지원합니다. 3D 설계를 생성 및 검토하고 강도, 강성, 내구성과 같은 주요 성능 영역을 평가하는 실무 경험을 쌓게 됩니다. 또한 CAE 결과가 설계 개선 사항을 식별하고 성능 요건을 충족하는 솔루션을 개발하는 데 어떻게 사용되는지 배우며, 차량 개발 과정 전반에 걸쳐 설계와 해석 경험을 모두 습득하게 됩니다.\n\n\nSafety Performance Integration Division\n\n: 안전 성능 엔지니어링 인턴으로서 안전 엔지니어와 협력하여 CAE를 활용한 차량 안전 성능을 평가합니다. 충돌 안전, 승객 보호, 교통약자(VRU) 보호, 센싱 및 전기차 안전 분야의 실무 경험을 쌓게 됩니다. 또한 승객과 교통약자를 보호하기 위해 차량 구조 및 안전 시스템의 개발과 평가를 지원합니다.\n\n\nADAS Division\n\n: ADAS 엔지니어링 인턴으로서 ADAS 기능 및 가상화 엔지니어와 협력하여 고객 경험 향상에 중점을 둔 GM ADAS 시스템의 새로운 평가 전략을 개발합니다. 고객 경험 저하와 관련된 테스트 케이스를 바탕으로 ADAS 소프트웨어 및 캘리브레이션을 평가하는 프레임워크 구축을 지원하여 개선 기회를 식별할 수 있도록 돕습니다. 또한 AI를 활용하여 이 시스템을 구현하고, GM의 글로벌 ADAS 팀과 협력하여 새로운 프로세스를 정립할 기회를 갖게 됩니다.\n\n채용형태\n- 인턴\n\n우대조건\n공통 우대 자격 요건\n\n자동차 부품 설계, 제조 공정 및 조립 공정에 대한 이해\nSiemens NX 또는 CATIA와 같은 3D CAD 도구 사용 경험\n구조, 내구성, 충돌 또는 차량 성능 시뮬레이션을 포함한 CAE 해석 지식 또는 경험\nAI를 활용한 소프트웨어 구축 및 문제 해결 경험\nADAS 우대 자격 요건\n\nADAS 시스템 설계 및 센서 성능에 대한 이해\n차량 동역학 및/또는 센서 시뮬레이션 경험\n자동차 또는 로봇 공학 프로젝트 실무 경험\n직렬 데이터(CAN, Eth, LIN 등)에 대한 친숙도\n\n\nPropulsion Controls, Vehicle Performance & Virtual Integration Engineer\n(0명)담당업무\nPropulsion Controls: 추진 제어 모듈 및 구동 장치 제어 모듈을 위한 캘리브레이션 및 임베디드 제어 소프트웨어 개발.\n\nVirtual Vehicle Dynamics: 가상 해석과 물리적 테스트를 연결하여 차량 동역학을 위한 가상 제어 개발 및 가상 검증 수행.\n\nNoise and Vibration: 가상 N&V 모델 지원 및 물리적 측정을 수행하여 소음 및 진동 성능 개발.\n\nEnergy: 모델 기반 및 물리적 환경 모두에서 차량 연비 개발 및 평가.\n\nVirtual Thermal: 모델링, 해석 및 물리적 테스트를 통해 가상 열 설계 및 관리 개발과 검증 지원.\n\n채용형태\n- 인턴\n\n우대조건\nCAE, HIL, SIL, DIL 등 다양한 도구를 사용한 모델링 및 시뮬레이션 경험\n열, 제어, 차량 동역학, 소음 및 진동, 에너지에 대한 실무 지식\nPython 및 C++ 프로그래밍 언어 숙련도\nCAN 등 차량 통신 프로토콜에 대한 실무 지식\n\n\nSupplier Quality Engineer / Product Specification Engineer\n(0명)담당업무\n1. Supplier Quality & Development\n\nAPQP & PPAP: 신규 공급업체를 위한 품질 프로세스 수립 및 부품 승인.\nContinuous Improvement: 공급업체와 협력하여 지속적인 부품 품질 향상 추진.\nProblem Solving & Improvement: 부품 품질 문제 해결 및 시정 조치 구현.\nAI 및 자동화 도구와 소프트웨어를 사용한 프로세스 단순화\nSQE 가상화 MR 및 VR 도입\n2. Specification Engineer\n\nMaster Part List의 주요 분석가로서 엔지니어링 사양의 정확성과 최신 상태 유지.\n설계 변경 주문(Design Change Orders), 차량 설명 요약(VDS), 제품 계획 내용과 같은 복잡한 엔지니어링 데이터를 분석 및 해석.\n엔지니어링 지침에 따라 시스템 내 Master Parts List 업데이트 및 관리.\n엔지니어링, 프로그램 팀, 제조 등 부서 간 협업을 통해 데이터 무결성 및 정렬 보장",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/362159": {
@@ -571,28 +878,41 @@
       },
       "match": {
         "rule_name": null,
-        "priority": null,
-        "interests": [],
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
-        "notified": false
+        "ai": {
+          "verdict": "relevant",
+          "reason": "컴퓨터공학 등 관련 분야 학습 경험이 있는 학부생이 지원 가능한 AI 리서치 엔지니어 인턴 공고입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
       },
-      "body_text": null,
+      "body_text": "함께할 스쿼드를 소개해요\nAI Product 팀은 AI 기술을 활용해 실제 유저들이 사용하는 제품 기능을 만들고 발전시키는 팀이에요.\nPO, AI Research Engineer, Full-stack Engineer가 함께 일하며, AI 기술을 실제 제품에 적용하고 유저에게 새로운 가치를 전달하는 데 집중해요.\n단순히 AI 기술을 연구하거나 실험하는 것을 넘어, 아이디어를 실제 서비스 기능으로 구현하고 유저가 경험할 수 있도록 제품화해요.\n빠르게 발전하는 AI 기술을 적극적으로 탐색하고, 이를 제품에 적용할 수 있는 방법을 고민하며 새로운 유저 경험을 만들어가고 있어요.\n\n\n\n\n앞으로 이런 일들을 하게 될 거예요\n팀과 함께 언니 AI의 정확성, 안전성, 근거의 적절성, 사용자 맥락 반영 등 평가 기준을 구체화해요.\n언니 AI의 실제 사용자 질문과 실패 사례를 바탕으로 평가 데이터셋을 만들고 관리해요.\n언니 AI 에이전트의 답변과 실행 기록(trace)을 분석해 검색, 도구 호출, 맥락 활용 등에서 발생하는 실패 유형을 분류해요.\nPython으로 평가 실행과 결과 분석을 자동화하고, 변경 전후의 성능을 비교해요.\nLLM-as-a-judge의 평가를 사람의 판단과 비교하고, 불일치 원인과 편향을 분석해 평가 방식을 개선해요.\n평가 결과와 대표 실패 사례를 정리해 개선 우선순위를 제안하고, 오프라인 평가와 실제 유저 행동 지표의 관계를 검증해요.\n\n\n\n\n이런 분을 모시고 싶어요\n컴퓨터공학, 인공지능, 통계 등 관련 분야를 공부했거나 이에 준하는 학습·프로젝트 경험이 있는 분\n모호한 AI 품질 문제를 구체적인 평가 기준으로 바꾸고, 판단이 어려운 사례를 팀과 논의할 수 있는 분\n집계 지표뿐 아니라 원본 대화와 개별 결과를 꼼꼼히 살펴보는 분\nLLM의 기본적인 동작과 한계를 이해하고, 답변의 오류를 근거와 함께 설명할 수 있는 분\nPython으로 데이터를 가공하고 API를 활용한 실험·평가 코드를 작성할 수 있는 분\n\n\n\n\n이런 점이 있다면 더욱 좋아요\nACL, EMNLP, NeurIPS 등 주요 학회에 벤치마크·평가 관련 논문을 저자로 게재하신 분\n벤치마크 또는 평가 데이터셋을 직접 구성해 본 경험이 있는 분\nLLM-as-a-judge를 사람의 평가와 비교하거나 평가 오류를 분석해 본 경험이 있는 분\nAI 라벨링 가이드를 만들거나 여러 평가자 간 판단 차이를 분석해 보신 분\n미용의료·헬스케어 서비스에 대한 관심이 있거나 관련 분야에 대한 이해가 있는 분\n\n\n\n\n이런 경험과 성장을 할 수 있어요\n실제 유저가 사용하는 AI 에이전트의 평가 체계를 초기부터 함께 만들 수 있어요.\n평가 기준 수립부터 데이터셋 구축, 자동 평가, 실패 분석, 개선 후 재평가까지 경험할 수 있어요.\n답변의 품질과 에이전트 실행 과정의 문제를 연결해 분석하는 역량을 키울 수 있어요.\n평가 결과가 제품의 개선 방향과 우선순위 결정에 어떻게 쓰이는지 경험할 수 있어요.\nAI 리서치 엔지니어·풀스택 엔지니어와 협업하며 평가 코드를 실제 개발 과정에 연결할 수 있어요.\n\n\n\n\n이런 과정으로 합류해요\n서류 지원 > 1차 인터뷰(오프라인) > 2차 인터뷰(오프라인) > 최종합격\n\n\n\n\n참고해 주세요\n체험형 인턴으로 근무 기간은 6개월이에요.\n\n\n\n\n힐링페이퍼 서포팅 패키지\n최신 고사양 업무 장비 지원\n동료들과의 점심/저녁 식사비용 지원\n커피 타임 지원\n사내 길드(동호회) 활동 지원",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
+      "body_html": "<div><h3><span>함께할 스쿼드를 ​소개해요</span></h3><ul><li>AI ​Product ​팀은 AI ​기술을 활용해 실제 유저들이 ​사용하는 ​제품 기능을 ​만들고 발전시키는 팀이에요.</li><li>PO, ​AI Research ​Engineer, ​Full-stack Engineer가 ​함께 ​일하며, ​AI 기술을 실제 ​제품에 ​적용하고 유저에게 새로운 ​가치를 ​전달하는 ​데 집중해요.</li><li>단순히 AI ​기술을 연구하거나 ​실험하는 ​것을 넘어, ​아이디어를 실제 ​서비스 ​기능으로 구현하고 유저가 ​경험할 수 ​있도록 제품화해요.</li><li>빠르게 발전하는 AI 기술을 적극적으로 탐색하고, 이를 제품에 적용할 수 있는 방법을 고민하며 새로운 유저 경험을 만들어가고 있어요.</li></ul><h3><span>앞으로 이런 일들을 하게 될 거예요</span></h3><ul><li>팀과 함께 언니 AI의 정확성, 안전성, 근거의 적절성, 사용자 맥락 반영 등 평가 기준을 구체화해요.</li><li>언니 AI의 실제 사용자 질문과 실패 사례를 바탕으로 평가 데이터셋을 만들고 관리해요.</li><li>언니 AI 에이전트의 답변과 실행 기록(trace)을 분석해 검색, 도구 호출, 맥락 활용 등에서 발생하는 실패 유형을 분류해요.</li><li>Python으로 평가 실행과 결과 분석을 자동화하고, 변경 전후의 성능을 비교해요.</li><li>LLM-as-a-judge의 평가를 사람의 판단과 비교하고, 불일치 원인과 편향을 분석해 평가 방식을 개선해요.</li><li>평가 결과와 대표 실패 사례를 정리해 개선 우선순위를 제안하고, 오프라인 평가와 실제 유저 행동 지표의 관계를 검증해요.</li></ul><h3><span>이런 분을 모시고 싶어요</span></h3><ul><li><span>컴퓨터공학, 인공지능, 통계 등 관련 분야를 공부했거나 이에 준하는 학습·프로젝트 경험이 있는 분</span></li><li><span>모호한 AI 품질 문제를 구체적인 평가 기준으로 바꾸고, 판단이 어려운 사례를 팀과 논의할 수 있는 분</span></li><li><span>집계 지표뿐 아니라 원본 대화와 개별 결과를 꼼꼼히 살펴보는 분</span></li><li><span>LLM의 기본적인 동작과 한계를 이해하고, 답변의 오류를 근거와 함께 설명할 수 있는 분</span></li><li><span>Python으로 데이터를 가공하고 API를 활용한 실험·평가 코드를 작성할 수 있는 분</span></li></ul><h3><span>이런 점이 있다면 더욱 좋아요</span></h3><ul><li>ACL, EMNLP, NeurIPS 등 주요 학회에 벤치마크·평가 관련 논문을 저자로 게재하신 분</li><li>벤치마크 또는 평가 데이터셋을 직접 구성해 본 경험이 있는 분</li><li>LLM-as-a-judge를 사람의 평가와 비교하거나 평가 오류를 분석해 본 경험이 있는 분</li><li>AI 라벨링 가이드를 만들거나 여러 평가자 간 판단 차이를 분석해 보신 분</li><li>미용의료·헬스케어 서비스에 대한 관심이 있거나 관련 분야에 대한 이해가 있는 분</li></ul><h3><span>이런 경험과 성장을 할 수 있어요</span></h3><ul><li>실제 유저가 사용하는 AI 에이전트의 평가 체계를 초기부터 함께 만들 수 있어요.</li><li>평가 기준 수립부터 데이터셋 구축, 자동 평가, 실패 분석, 개선 후 재평가까지 경험할 수 있어요.</li><li>답변의 품질과 에이전트 실행 과정의 문제를 연결해 분석하는 역량을 키울 수 있어요.</li><li>평가 결과가 제품의 개선 방향과 우선순위 결정에 어떻게 쓰이는지 경험할 수 있어요.</li><li>AI 리서치 엔지니어·풀스택 엔지니어와 협업하며 평가 코드를 실제 개발 과정에 연결할 수 있어요.</li></ul><h3><span>이런 과정으로 합류해요</span></h3><ul><li>서류 지원 &gt; 1차 인터뷰(오프라인) &gt; 2차 인터뷰(오프라인) &gt; 최종합격</li></ul><h3><span>참고해 주세요</span></h3><ul><li>체험형 인턴으로 근무 기간은 6개월이에요.</li></ul><h3><span>힐링페이퍼 서포팅 패키지</span></h3><ul><li>최신 고사양 업무 장비 지원</li><li>동료들과의 점심/저녁 식사비용 지원</li><li>커피 타임 지원</li><li>사내 길드(동호회) 활동 지원</li></ul></div>",
       "images": [],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T01:28:55.954651+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2027-02-02T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "0695920540ccf28380ff26a8df35ef8c233ef4a5a5e6e99b1456dcdfcde34929",
+        "verdict": "relevant",
+        "reason": "컴퓨터공학 등 관련 분야 학습 경험이 있는 학부생이 지원 가능한 AI 리서치 엔지니어 인턴 공고입니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/362144": {
@@ -2448,7 +2768,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "의료기기 측정 및 검증 업무로 기계, 전기, 전자 전공자를 우대하며 소프트웨어 직무와는 거리가 있습니다.",
+          "reason": "의료기기 수명시험 및 측정 업무를 수행하는 직무로, 소프트웨어 개발 직무와는 거리가 있습니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -2472,9 +2792,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "4f14d5767a921dca35db4396344a33f5bedce6f4374479006327742d57f1849c",
+        "fingerprint": "80b63cbdaf3103720fadd1adf9fe9f77de641f2b27e91719e2aebefc05a322e4",
         "verdict": "not_relevant",
-        "reason": "의료기기 측정 및 검증 업무로 기계, 전기, 전자 전공자를 우대하며 소프트웨어 직무와는 거리가 있습니다.",
+        "reason": "의료기기 수명시험 및 측정 업무를 수행하는 직무로, 소프트웨어 개발 직무와는 거리가 있습니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -8481,7 +8801,7 @@
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
-        "at": "2026-12-16T23:59:00+09:00",
+        "at": "2026-12-14T23:59:00+09:00",
         "model": "source"
       }
     },
@@ -8772,7 +9092,7 @@
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
-        "at": "2026-11-10T23:59:00+09:00",
+        "at": "2026-11-24T23:59:00+09:00",
         "model": "source"
       }
     },

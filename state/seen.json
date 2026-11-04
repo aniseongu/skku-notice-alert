@@ -761,7 +761,7 @@
         },
         "362144": {
           "first_seen": "2026-11-04T18:39:46.326182+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         }
       }

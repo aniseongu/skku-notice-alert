@@ -41,3 +41,12 @@ HANDOFF.md
 
 # 로컬 화면 확인 부산물
 .playwright-mcp/
+
+# 개인 AI 도구 설정과 작업 문서는 공개 저장소에서 제외한다.
+.codex/
+codex/
+GOAL.md
+goal.md
+docs/WORKFLOW.md
+docs/plans/
+docs/daily-log/

@@ -791,32 +791,32 @@
         },
         "362165": {
           "first_seen": "2026-11-04T22:22:39.698763+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         },
         "362164": {
           "first_seen": "2026-11-04T22:22:39.698763+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         },
         "362163": {
           "first_seen": "2026-11-04T22:22:39.698763+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         },
         "362162": {
           "first_seen": "2026-11-04T22:22:39.698763+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         },
         "362161": {
           "first_seen": "2026-11-04T22:22:39.698763+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         },
         "362160": {
           "first_seen": "2026-11-04T22:22:39.698763+09:00",
-          "status": "pending",
+          "status": "notified",
           "attempts": 0
         },
         "362159": {
@@ -1021,7 +1021,7 @@
         },
         "107072": {
           "first_seen": "2026-11-05T01:28:55.954651+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         }
       }

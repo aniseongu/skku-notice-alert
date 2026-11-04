@@ -101,3 +101,10 @@ def test_image_only_intern_waits_when_image_cannot_be_fetched(monkeypatch, tmp_p
                                     {"model": "m"}, "fake", budget, "test")
     assert budget == [1] and found["jobs/1"].verdict == "maybe"
     assert received == [{"jobs/1": [pixels]}]
+
+
+def test_policy_change_invalidates_cached_intern_judgments(monkeypatch):
+    before = intern_ai.intern_fingerprint("인턴", "전기 전자 우대", [], "m", {})
+    monkeypatch.setattr(intern_ai, "SYSTEM", intern_ai.SYSTEM + "새로운 판정 기준")
+    after = intern_ai.intern_fingerprint("인턴", "전기 전자 우대", [], "m", {})
+    assert before != after

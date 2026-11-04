@@ -82,7 +82,7 @@ export async function connectGoogleCalendar(repo: string, token: string, clientI
   if (!calendarId) {
     const created = await google('https://www.googleapis.com/calendar/v3/calendars', {
       method: 'POST', headers,
-      body: JSON.stringify({ summary: CALENDAR_NAME, timeZone: 'Asia/Seoul', description: '성대 공지와 저장한 인턴 공고의 마감을 넣는 캘린더예요' }),
+      body: JSON.stringify({ summary: CALENDAR_NAME, timeZone: 'Asia/Seoul', description: '저장한 공지의 마감을 넣는 캘린더예요' }),
     });
     calendarId = String(created.id ?? '');
   }

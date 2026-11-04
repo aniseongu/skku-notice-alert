@@ -39,6 +39,8 @@ def deadlines_ics(notices: list[dict], board_names: dict[str, str], now: datetim
         if not notice.get("deadline"):
             continue
         deadline = datetime.fromisoformat(notice["deadline"]).astimezone(KST)
+        if deadline <= now:
+            continue
         day = deadline.date()
         # 마감 시각이 적힌 글만 시각을 붙인다. 날짜만 있으면 23:59로 저장돼 있다(deadline.py).
         time = "" if (deadline.hour, deadline.minute) == (23, 59) else f" {deadline:%H:%M}"

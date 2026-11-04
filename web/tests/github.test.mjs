@@ -25,3 +25,18 @@ test('only absent variables are empty; authorization and server failures propaga
     }
   } finally { globalThis.fetch = original; }
 });
+
+test('manual collection dispatches the default branch using its existing workflow', async () => {
+  const { requestCollection } = await import('../src/github.ts');
+  const original = globalThis.fetch;
+  const requests = [];
+  try {
+    globalThis.fetch = async (url, init) => {
+      requests.push([url, init]);
+      return requests.length === 1 ? Response.json({ default_branch: 'main' }) : new Response(null, { status: 204 });
+    };
+    await requestCollection('owner/repo', 'fixture-token');
+    assert.match(requests[1][0], /notice-and-pages.yml\/dispatches$/);
+    assert.deepEqual(JSON.parse(requests[1][1].body), { ref: 'main' });
+  } finally { globalThis.fetch = original; }
+});

@@ -9,7 +9,7 @@ import {
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { cleanHtml, fileType } from './rich';
 import './settings-view';
-import { readVariable, saveVariable } from './github';
+import { readVariable, saveVariable, requestCollection } from './github';
 import { loadToken } from './settings-storage';
 import { SAVED_VARIABLE, type SavedNotice, loadSaved, parseSaved, storeSaved, toggleSaved } from './saved-notices';
 import { READ_VARIABLE, addRead, loadRead, mergeRead, parseRead, storeRead } from './read-notices';
@@ -97,7 +97,7 @@ const kbd = (...keys: string[]) => html`<span class="kbd-group" aria-hidden="tru
 const SHORTCUTS: { group: string; items: [string, string[]][] }[] = [
   { group: '목록', items: [['다음 공지', ['J']], ['이전 공지', ['K']], ['원문 열기', ['Enter']], ['저장하기', ['S']], ['상세 칸 닫기', ['Esc']]] },
   { group: '이동', items: [['성대 공지', ['1']], ['인턴 공고', ['2']], ['저장', ['3']], ['검색', ['/']]] },
-  { group: '그 밖', items: [['새로고침', ['R']], ['설정 닫기', ['Esc']], ['단축키 보기', ['?']]] },
+  { group: '그 밖', items: [['공지 다시 가져오기', ['R']], ['설정 닫기', ['Esc']], ['단축키 보기', ['?']]] },
 ];
 
 const icon = (name: IconName) => html`<svg class="i" aria-hidden="true"><use href="icons/sprite.svg#${name}"></use></svg>`;
@@ -214,6 +214,20 @@ export class NoticeApp extends LitElement {
     }
   }
 
+  private async collectNow() {
+    await this.refresh();
+    const repo = remember('github-repo');
+    const token = await loadToken();
+    if (!repo || !token) { this.showToast('기기 연결을 하면 공지를 직접 다시 가져올 수 있어요'); return; }
+    if (this.generatedAt && Date.now() - Date.parse(this.generatedAt) < 14 * 60_000) {
+      this.showToast('최근에 공지를 확인했어요. 잠시 뒤 다시 시도해 주세요'); return;
+    }
+    try {
+      await requestCollection(repo, token);
+      this.showToast('공지 확인을 요청했어요. 진행 중인 확인이 끝나면 반영돼요');
+    } catch { this.showToast('요청하지 못했어요. 기기 연결과 Actions 쓰기 권한을 확인해 주세요'); }
+  }
+
   // GitHub 값이 있으면 그것을 따른다(다른 기기에서 바꾼 것). 없으면 이 기기 것을 올린다.
   private async syncFromGitHub() {
     const repo = remember('github-repo');
@@ -323,7 +337,8 @@ export class NoticeApp extends LitElement {
     const external = tab === 'intern';
     // 출처: https://freshrss.github.io/FreshRSS/en/users/10_filter.html (읽음 상태 필터)
     // 읽고 있는 글은 상세를 닫거나 다른 글로 옮길 때까지 남긴다.
-    const scoped = list.filter((n) => this.isExternal(n) === external)
+    const scoped = list.filter((n) => !n.deadline || !deadlinePassed(n.deadline))
+      .filter((n) => this.isExternal(n) === external)
       .filter((n) => !this.unreadOnly || !this.isRead(n) || n.id === this.selectedId || n.id === this.openedId);
     return orderNotices(scoped, this.sortFor(tab));
   }
@@ -463,7 +478,7 @@ export class NoticeApp extends LitElement {
       '/': () => this.querySelector<HTMLInputElement>('.search input')?.focus(),
       j: () => move(1), ArrowDown: () => move(1), k: () => move(-1), ArrowUp: () => move(-1),
       Enter: () => { const notice = list[index]; if (notice) { this.markRead(notice); window.open(safeUrl(notice.url), '_blank', 'noopener'); } },
-      r: () => this.refresh(), 1: () => this.setView('all'), 2: () => this.setView('intern'), 3: () => this.setView('saved'),
+      r: () => this.collectNow(), 1: () => this.setView('all'), 2: () => this.setView('intern'), 3: () => this.setView('saved'),
       s: () => { const notice = list[index]; if (notice) this.toggleSave(notice); },
     };
     const action = actions[event.key];
@@ -568,8 +583,8 @@ export class NoticeApp extends LitElement {
                   @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; this.selectedId = null; }}>${this.query ? nothing : kbd('/')}</label>
               ${this.detailOpen ? nothing : html`<button type="button" class="icon-button wide-only" aria-label="상세 칸 열기" title="상세 칸 열기"
                 @click=${() => this.setDetail(true)}>${icon('panel')}</button>`}
-              <button type="button" class="icon-button" aria-label="새로고침" title="새로고침 (R)" aria-keyshortcuts="r"
-                ?disabled=${this.loading} @click=${this.refresh}>${icon('refresh')}</button>`}
+              <button type="button" class="icon-button" aria-label="공지 다시 가져오기" title="공지 다시 가져오기 (R)" aria-keyshortcuts="r"
+                ?disabled=${this.loading} @click=${this.collectNow}>${icon('refresh')}</button>`}
             ${settings ? nothing : html`<button type="button" class="icon-button narrow-only" aria-label="설정"
               @click=${() => this.setView('settings')}>${gearIcon}</button>`}
             ${settings ? html`<button type="button" class="icon-button wide-only" aria-label="설정 닫기" title="설정 닫기 (Esc)"

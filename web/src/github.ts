@@ -81,3 +81,20 @@ export async function checkGeminiKey(key: string): Promise<boolean> {
   });
   return response.ok;
 }
+
+// 수동 실행도 서버의 수집 간격 제한을 따른다. 기본 브랜치는 저장소에서 확인한다.
+export async function requestCollection(repo: string, token: string): Promise<void> {
+  if (!REPO_PATTERN.test(repo)) throw new GitHubError('저장소 이름을 확인해 주세요');
+  const info = await call(`/repos/${repo}`, token);
+  const { default_branch: branch } = await info.json() as { default_branch: string };
+  if (!branch) throw new GitHubError('저장소의 기본 브랜치를 확인하지 못했어요');
+  try {
+    await call(`/repos/${repo}/actions/workflows/notice-and-pages.yml/dispatches`, token, {
+      method: 'POST', body: JSON.stringify({ ref: branch }),
+    });
+  } catch (error) {
+    if (error instanceof GitHubError && (error.status === 403 || error.status === 404))
+      throw new GitHubError('Actions 쓰기 권한을 확인해 주세요', error.status);
+    throw error;
+  }
+}

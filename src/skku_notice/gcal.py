@@ -36,9 +36,9 @@ def _event_id(notice_id: str) -> str:
 def desired_events(notices: list[dict], saved: list[dict], now: datetime,
                    external: frozenset[str] = frozenset(),
                    judgments: dict | None = None) -> dict[str, dict]:
-    """Future school deadlines and saved external postings, using current data when available."""
+    """Future saved notices, using current data when available."""
     by_id = {n["id"]: n for n in notices}
-    chosen = {n["id"]: n for n in notices if n["source_id"] not in external}
+    chosen = {}
     for item in saved:
         if isinstance(item, dict) and isinstance(item.get("id"), str):
             chosen.setdefault(item["id"], by_id.get(item["id"], item))
@@ -55,7 +55,7 @@ def desired_events(notices: list[dict], saved: list[dict], now: datetime,
         kind = notice.get("deadline_kind") or "마감"
         # 마감은 30분 전부터 마감까지(알림이 마감 전에 울리게), 일정은 시작부터 한 시간.
         start, end = (at, at + timedelta(hours=1)) if kind == "일정" else (at - LEAD, at)
-        if end <= now:
+        if at <= now:
             continue
         events[_event_id(notice["id"])] = {
             "summary": f"[{kind}] {notice.get('title_ko') or notice['title']}"[:250],

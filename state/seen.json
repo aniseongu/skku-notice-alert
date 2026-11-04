@@ -556,12 +556,12 @@
         },
         "361933": {
           "first_seen": "2026-11-04T11:05:46.872052+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         },
         "361929": {
           "first_seen": "2026-11-04T11:05:46.872052+09:00",
-          "status": "pending",
+          "status": "notified",
           "attempts": 0
         }
       }

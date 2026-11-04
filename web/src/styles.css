@@ -238,7 +238,7 @@
     border-bottom: 1px solid var(--line);
     user-select: none; -webkit-user-select: none;
   }
-  .topbar > .brand-mark { width: 28px; height: 28px; flex: none; margin-right: 6px; color: var(--accent); }
+  .topbar h1 .brand-mark { width: 24px; height: 24px; margin-left: 8px; vertical-align: -4px; color: var(--accent); }
   .topbar-text { flex: 1; min-width: 0; }
   .topbar .back { margin-left: -12px; }
   h1 { font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -0.02em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

@@ -3184,8 +3184,8 @@
         "interests": [],
         "reasons": [],
         "ai": {
-          "verdict": "relevant",
-          "reason": "데이터 분석을 통한 세일즈 전략 수립 및 AI 도구 활용 능력을 우대하며, 기술적 역량을 비즈니스에 적용하는 직무이므로 지원 가능합니다.",
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 세일즈 및 비즈니스 운영 중심의 업무로 소프트웨어 개발 직무와 거리가 멉니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -3211,9 +3211,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "b77f016f7ae0bfcbdd7e05daa288213955bc2727864df56398801a068a2b2d83",
-        "verdict": "relevant",
-        "reason": "데이터 분석을 통한 세일즈 전략 수립 및 AI 도구 활용 능력을 우대하며, 기술적 역량을 비즈니스에 적용하는 직무이므로 지원 가능합니다.",
+        "fingerprint": "a32a51c155913485408f8ecae710de92f68dee1a56aca4e5bf15041746a545f3",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 세일즈 및 비즈니스 운영 중심의 업무로 소프트웨어 개발 직무와 거리가 멉니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -3237,7 +3237,7 @@
         "reasons": [],
         "ai": {
           "verdict": "relevant",
-          "reason": "소프트웨어 개발 및 엔지니어링 역량을 요구하며 학부생이 지원 가능한 채용전환형 인턴 공고입니다.",
+          "reason": "웹 서비스 개발 및 기능 개선을 담당하는 엔지니어링 직무로 소프트웨어학과 학부생이 지원하기에 적합합니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -3263,9 +3263,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "54849c5a4c9cfe449cc653092a0da5a9dc6782f8bbec24faf7c0f6f733db3c7b",
+        "fingerprint": "f1f0aaf07e4ba8ddf5b357cca79c085bee4d855366e0a8d15837fc5800c1bda7",
         "verdict": "relevant",
-        "reason": "소프트웨어 개발 및 엔지니어링 역량을 요구하며 학부생이 지원 가능한 채용전환형 인턴 공고입니다.",
+        "reason": "웹 서비스 개발 및 기능 개선을 담당하는 엔지니어링 직무로 소프트웨어학과 학부생이 지원하기에 적합합니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -3289,7 +3289,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "해당 직무는 제품 마케팅 및 비즈니스 운영 중심의 업무로 소프트웨어 개발 직무와는 거리가 있습니다.",
+          "reason": "해당 직무는 제품 마케팅 및 캠페인 운영 중심의 업무로 소프트웨어 개발 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -3315,9 +3315,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "6a62cd2a669c9d6b89ca829bb6a822736deef41bf8a0a197db1a1b5ad01aa4a0",
+        "fingerprint": "4c449830188bba52a3ac9822becf6e218d4a26275df44ac025e7b3b0a889287e",
         "verdict": "not_relevant",
-        "reason": "해당 직무는 제품 마케팅 및 비즈니스 운영 중심의 업무로 소프트웨어 개발 직무와는 거리가 있습니다.",
+        "reason": "해당 직무는 제품 마케팅 및 캠페인 운영 중심의 업무로 소프트웨어 개발 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -3341,7 +3341,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "해당 직무는 인플루언서 마케팅 및 파트너십 관리 업무로 소프트웨어 개발 직무와는 거리가 있습니다.",
+          "reason": "해당 직무는 인플루언서 마케팅 및 파트너십 관리 중심의 업무로 소프트웨어 개발 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -3367,9 +3367,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "e17d80c5351d83712b9f69c36cd2d1c9e47595bb0ab772c3d7e60204ebc96b59",
+        "fingerprint": "4ffcc1cadeb21c41cd438799ed86696394a031b2d946f16a47237229c960a488",
         "verdict": "not_relevant",
-        "reason": "해당 직무는 인플루언서 마케팅 및 파트너십 관리 업무로 소프트웨어 개발 직무와는 거리가 있습니다.",
+        "reason": "해당 직무는 인플루언서 마케팅 및 파트너십 관리 중심의 업무로 소프트웨어 개발 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -3393,7 +3393,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "해당 직무는 세일즈 오퍼레이션 및 마케팅 운영 업무로 소프트웨어 개발 직무와는 거리가 있습니다.",
+          "reason": "해당 직무는 세일즈 오퍼레이션 및 마케팅 지원 업무로 소프트웨어 개발 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -3419,9 +3419,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "4f68d0f3b452d76d3f8033c59fedafad9a99cf8e0810e1970b140da34dbfae92",
+        "fingerprint": "99956c6acdb45a65075b3d1806aa0aeab4184882f13dbc309f00b3d8a265c0d1",
         "verdict": "not_relevant",
-        "reason": "해당 직무는 세일즈 오퍼레이션 및 마케팅 운영 업무로 소프트웨어 개발 직무와는 거리가 있습니다.",
+        "reason": "해당 직무는 세일즈 오퍼레이션 및 마케팅 지원 업무로 소프트웨어 개발 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },

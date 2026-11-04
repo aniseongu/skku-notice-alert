@@ -433,7 +433,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "해당 공고는 해외법인 관리 및 결산 업무를 수행하는 경영지원 직무로, 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+          "reason": "해당 직무는 해외법인 관리 및 결산 업무를 수행하는 경영지원 직무로 소프트웨어 개발 관련 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -459,9 +459,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "33cdfa4d773cf7d71d366b90c8dc17596e05a59efc8a269d5f51af5d5963f590",
+        "fingerprint": "4049398a8a2604cd68fca9cce8066fc4471b045492351d3fe16f98f3798f48a3",
         "verdict": "not_relevant",
-        "reason": "해당 공고는 해외법인 관리 및 결산 업무를 수행하는 경영지원 직무로, 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+        "reason": "해당 직무는 해외법인 관리 및 결산 업무를 수행하는 경영지원 직무로 소프트웨어 개발 관련 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -487,7 +487,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "해당 공고는 콘텐츠 마케팅 직무로, 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+          "reason": "해당 직무는 콘텐츠 마케팅 직무로 소프트웨어 개발 관련 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -513,9 +513,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "4c1465d24de8ecb090300247049683853c2cb231ae33fb9298a1fde19ec11521",
+        "fingerprint": "a954761ab9fc3220646ba8a1e3957dfd8d67af0adb6ed7dced849a7949b33f92",
         "verdict": "not_relevant",
-        "reason": "해당 공고는 콘텐츠 마케팅 직무로, 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+        "reason": "해당 직무는 콘텐츠 마케팅 직무로 소프트웨어 개발 관련 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -682,7 +682,7 @@
         "reasons": [],
         "ai": {
           "verdict": "relevant",
-          "reason": "앱 데이터 분석 및 마케팅 자동화 관련 업무를 수행하며, 데이터 분석 역량을 활용할 수 있어 소프트웨어 관련 직무로 판단됩니다.",
+          "reason": "앱 데이터 분석 및 마케팅 성과 측정 업무를 수행하며, 소프트웨어학과 학부생이 지원 가능한 직무입니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -706,9 +706,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "a735d3dd69a34109c89e4c6205db4b8de7794868c33722af001c6689255d2b1c",
+        "fingerprint": "aaac4c7ecd05ec326e13a75bfc71b4c1fc1f7f87e6b16441fc4146b76d4553f4",
         "verdict": "relevant",
-        "reason": "앱 데이터 분석 및 마케팅 자동화 관련 업무를 수행하며, 데이터 분석 역량을 활용할 수 있어 소프트웨어 관련 직무로 판단됩니다.",
+        "reason": "앱 데이터 분석 및 마케팅 성과 측정 업무를 수행하며, 소프트웨어학과 학부생이 지원 가능한 직무입니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -1058,7 +1058,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "건축 설계 및 프로젝트 관리 직무로 소프트웨어 개발 직무와 관련이 없습니다.",
+          "reason": "건축 설계, 프로젝트 관리, 회계 직무를 모집하며 소프트웨어 개발 관련 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -1085,9 +1085,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "1a430a6e100d4f93962b91cc2b9c60f9bc29baccb1e8c82cb91d643580eec717",
+        "fingerprint": "afc066c45738c8146f1399276c9ecdc11d3532e34acd52eacb3847a335212cb3",
         "verdict": "not_relevant",
-        "reason": "건축 설계 및 프로젝트 관리 직무로 소프트웨어 개발 직무와 관련이 없습니다.",
+        "reason": "건축 설계, 프로젝트 관리, 회계 직무를 모집하며 소프트웨어 개발 관련 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -1113,7 +1113,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "브랜드 마케팅 직무로 소프트웨어 개발 직무와 관련이 없습니다.",
+          "reason": "해당 직무는 브랜드 마케팅 직무로 소프트웨어 개발 관련 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -1139,9 +1139,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "8ab829ea3797fbef9ff0734ebbb7bf3a694a4b219154016d8ed9de3728b62f81",
+        "fingerprint": "da177f7809683e245d9365d7c6ed41eb85249365e1534f5801f66485f1b62fd2",
         "verdict": "not_relevant",
-        "reason": "브랜드 마케팅 직무로 소프트웨어 개발 직무와 관련이 없습니다.",
+        "reason": "해당 직무는 브랜드 마케팅 직무로 소프트웨어 개발 관련 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -1541,7 +1541,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "컨설팅 및 리서치 직무로 소프트웨어 개발 직무와 관련이 없습니다.",
+          "reason": "해당 직무는 헬스케어 분야의 컨설팅 및 리서치 업무를 수행하는 직무로 소프트웨어 개발 관련 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -1565,9 +1565,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "c773cf4edc87c0c64dcd79b5f3a72efe68b36e5593916e1ff59a6cde15f22387",
+        "fingerprint": "a8b7fc221ba8cd403697260251022b02e4dd566798004e97e7fed761bc18971e",
         "verdict": "not_relevant",
-        "reason": "컨설팅 및 리서치 직무로 소프트웨어 개발 직무와 관련이 없습니다.",
+        "reason": "해당 직무는 헬스케어 분야의 컨설팅 및 리서치 업무를 수행하는 직무로 소프트웨어 개발 관련 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },

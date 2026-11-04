@@ -132,3 +132,25 @@ def test_notify_all_sends_unmatched_low_and_exports_notified(tmp_path: Path, mon
     matched = json.loads((tmp_path / "site/api/v1/matched.json").read_text())
     assert matched["items"]["cse-notice/2"]["rule_name"] is None
     assert matched["items"]["cse-notice/2"]["notified"] is True
+
+
+@pytest.mark.parametrize("skip_external,expected", [(True, []), (False, ["external"])])
+def test_skip_external_avoids_external_collector(tmp_path, monkeypatch, skip_external, expected):
+    sources = tmp_path / "sources.yaml"
+    sources.write_text("""user_agent: test
+request_gap_seconds: 1
+timeout_seconds: 10
+sources:
+  - id: external
+    kind: test-external
+    external: true
+    url: https://example.com/
+""")
+    monkeypatch.setattr(cli, "SOURCES_PATH", sources)
+    monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "state.json")
+    called = []
+    monkeypatch.setitem(cli.COLLECTORS, "test-external", lambda *args: called.append("external") or [])
+    args = argparse.Namespace(rules=Path("config/rules.example.yaml"), dry_run=True, all=False,
+                              from_fixtures=False, no_ai=True, skip_external=skip_external, no_canvas=True)
+    assert cli.run(args) == 0
+    assert called == expected

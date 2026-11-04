@@ -163,6 +163,31 @@
           "first_seen": "2026-11-04T16:29:42.247412+09:00",
           "status": "notified",
           "attempts": 0
+        },
+        "141563": {
+          "first_seen": "2026-11-04T16:45:18.638556+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141557": {
+          "first_seen": "2026-11-04T16:45:18.638556+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141558": {
+          "first_seen": "2026-11-04T16:45:18.638556+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "140495": {
+          "first_seen": "2026-11-04T16:45:18.638556+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141556": {
+          "first_seen": "2026-11-04T16:45:18.638556+09:00",
+          "status": "notified",
+          "attempts": 0
         }
       }
     },
@@ -661,7 +686,7 @@
         },
         "362078": {
           "first_seen": "2026-11-04T16:14:03.772529+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         },
         "362085": {

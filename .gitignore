@@ -50,3 +50,12 @@ goal.md
 docs/WORKFLOW.md
 docs/plans/
 docs/daily-log/
+
+# 설계, 조사, 검토와 AI 작업 산출물은 전부 로컬에서만 유지한다.
+docs/
+*.md
+*.mdx
+*.MD
+!/README.md
+!/PRIVACY.md
+!/SECURITY.md

@@ -125,9 +125,16 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 인플루언서 마케팅 관련 업무로 소프트웨어 개발 및 IT 기술 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -148,6 +155,12 @@
         "kind": "마감",
         "at": "2027-02-02T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "3158e6d2161135a007114aa185b72231c06af09e9aa4ac04b6fffed288ddc3d4",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 인플루언서 마케팅 관련 업무로 소프트웨어 개발 및 IT 기술 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361929": {
@@ -165,11 +178,18 @@
       },
       "match": {
         "rule_name": null,
-        "priority": null,
-        "interests": [],
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
-        "notified": false
+        "ai": {
+          "verdict": "relevant",
+          "reason": "의료기기 측정 및 검증 업무를 수행하며 기계, 전기, 전자 등 관련 전공자를 우대하므로 소프트웨어학과 학부생이 지원하기에 적합합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
       },
       "body_text": "사이노슈어 루트로닉을 소개합니다\n사이노슈어 루트로닉은 미국에 본사를 둔 글로벌 메디컬 에스테틱 기업으로, 병원 및 클리닉과의 긴밀한 협력을 통해 혁신적인 의료기기를 제공하고 있습니다. 본사는 피부과, 성형외과, 일반미용 전문병원 및 종합병원에 시술에 필요한 맞춤형 에너지 디바이스의 Full portfolio를 제안함으로써 의료진의 시술 극대화에 기여하고 환자를 더 아름답게 하는 사명감을 가지고 있습니다.\n\n\n담당 업무\n의료기기 수명시험 지원\n각종 측정 업무 지원\n\n\n자격 요건\n근무 기간(~12.31)까지 풀타임 출근이 가능하신 분\n전문학사 이상의 학위 소지자 (졸업 예정자, 휴학생 가능)\n꼼꼼함과 정확성을 바탕으로 검증 및 측정 업무 수행 가능하신 분\n\n\n우대 사항\n기계·전기·전자 등 관련 분야 전공자\n\n\n근무 조건\n근무 형태: 단기계약직 (근무 기간: 입사일로부터 12월 31일까지)\n시급 : 10,320원 (주휴수당이 지급되며, 식대는 없지만 사내 식당에서 조식, 중식, 석식이 제공돼요.)\n근무시간: 주 5일 (월~금) / 오전 9시~오후 6시\n근무지: 경기도 고양시 덕양구 소원로 219 루트로닉 본사\n경의중앙선 강매역 도보 5분 이내에 위치해 있어요.\n홍대입구역 출발 기준 20분 이내 도착 가능한 거리에요.\n\n\n제출 서류\n서류 전형 > 면접 전형 > 특수 검진 > 최종 합격 및 입사\n전형 절차는 포지션 및 진행 상황에 따라 일부 변경될 수 있습니다.\n지원 시 국문 이력서와 함께 영문 성함을 기입해 주시기 바랍니다.\n\n\n\n참고 사항\n입사지원서에 허위 사실이 발견될 경우, 채용 확정 이후에도 채용이 취소될 수 있습니다.\n해외 여행에 결격 사유가 있는 분은 합격이 취소되거나 전형 상 불이익을 받을 수 있습니다.\n지원 관련 문의 사항이 있을 경우 채용담당(recruiting@lutronic.com)으로 문의 부탁드립니다.\n\n\n\n※ 자사 제품(기기)에 대한 자세한 정보는 홈페이지의 PRODUCTS 카테고리를 참고 부탁드립니다.",
       "body_from_image": false,
@@ -187,6 +207,12 @@
         "kind": "마감",
         "at": "2027-02-02T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "4ea428472bf69946e5d102b43d3270ad323997a498f6541076e3b7e648f0acb4",
+        "verdict": "relevant",
+        "reason": "의료기기 측정 및 검증 업무를 수행하며 기계, 전기, 전자 등 관련 전공자를 우대하므로 소프트웨어학과 학부생이 지원하기에 적합합니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361922": {
@@ -4925,7 +4951,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "relevant",
+          "reason": "디지털/IT 분야의 체험형 인턴을 모집하며 학력 제한이 없어 소프트웨어학과 학부생이 지원 가능합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -4946,6 +4977,12 @@
         "kind": "마감",
         "at": "2026-11-16T10:00:00+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "552fab0c50f16f6152497ff1672e993fb45f5dca954ef61000a84183e13aad2f",
+        "verdict": "relevant",
+        "reason": "디지털/IT 분야의 체험형 인턴을 모집하며 학력 제한이 없어 소프트웨어학과 학부생이 지원 가능합니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "jasoseol-intern/106891": {
@@ -4966,7 +5003,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "relevant",
+          "reason": "IT기획/운영 분야의 채용형 인턴을 모집하며 졸업 예정자도 지원 가능하여 소프트웨어학과 학부생에게 적합합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -4987,6 +5029,12 @@
         "kind": "마감",
         "at": "2026-11-09T23:59:00+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "183e3241e7ac2ccd3a8eab5c5522be9d47977278669e2fa46d4fc3114b057223",
+        "verdict": "relevant",
+        "reason": "IT기획/운영 분야의 채용형 인턴을 모집하며 졸업 예정자도 지원 가능하여 소프트웨어학과 학부생에게 적합합니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "jasoseol-intern/106796": {
@@ -5007,7 +5055,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "maybe",
+          "reason": "공고 본문과 이미지만으로는 구체적인 모집 직무와 자격 요건을 확인할 수 없어 판단이 어렵습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -5028,6 +5081,12 @@
         "kind": "마감",
         "at": "2026-11-04T18:00:00+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "0a9d332e06b311dcc5e6318632630ee4d261e023ce3464a9b555b126e95ff4e7",
+        "verdict": "maybe",
+        "reason": "공고 본문과 이미지만으로는 구체적인 모집 직무와 자격 요건을 확인할 수 없어 판단이 어렵습니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "cse-notice/227380": {
@@ -5144,7 +5203,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "인사관리 직무를 모집하고 있으며 경영, 법학, 교육학 전공자를 요구하므로 소프트웨어학과 학부생에게는 적합하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -5165,6 +5229,12 @@
         "kind": "마감",
         "at": "2026-11-07T23:50:00+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "ae3f712dc61aa5985a70782a677656da211a9af9598f5e35fd8c408e7b53dd0f",
+        "verdict": "not_relevant",
+        "reason": "인사관리 직무를 모집하고 있으며 경영, 법학, 교육학 전공자를 요구하므로 소프트웨어학과 학부생에게는 적합하지 않습니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "jasoseol-intern/106901": {

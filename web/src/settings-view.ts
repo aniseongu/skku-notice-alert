@@ -81,7 +81,7 @@ export class SettingsView extends LitElement {
     keywords: { attribute: false }, theme: { attribute: false }, categories: { attribute: false }, muted: { state: true },
     repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
-    keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true },
+    keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true }, connectionState: { state: true },
     qr: { state: true }, handoff: { state: true }, canvasMode: { state: true }, scanningQr: { state: true },
   };
 
@@ -94,6 +94,7 @@ export class SettingsView extends LitElement {
   // 사용자 요청(2026-11-03)으로 연결 토큰은 이 기기에 암호화해 기억한다(D-017). 키 값은 남기지 않는다.
   token = '';
   linked = false;
+  connectionState: 'loading' | 'unlinked' | 'checking' | 'connected' | 'unverified' | 'invalid' = 'loading';
   // 다른 기기 연결 QR(SVG). 1분 뒤 지운다.
   qr = '';
   scanningQr = false;
@@ -124,7 +125,8 @@ export class SettingsView extends LitElement {
     const receivedHandoff = this.takeHandoff();
     if (!receivedHandoff) loadToken().then((token) => {
       if (token && !this.token) { this.token = token; if (this.connected()) this.connect(); }
-    });
+    }).finally(() => { if (this.connectionState === 'loading') this.connectionState = 'unlinked'; });
+    if (receivedHandoff) this.connectionState = 'unlinked';
     if (!this.repo && !receivedHandoff) pushConfiguration().then((config) => {
       if (!this.repo) { this.setRepo(config.repository); remember('github-repo', config.repository); }
     }).catch(() => {});
@@ -156,6 +158,7 @@ export class SettingsView extends LitElement {
     this.repo = repo;
     this.saved = readSavedSecrets(repo);
     this.linked = false;
+    this.connectionState = 'unlinked';
     this.canvasMode = null;
     this.editing = {};
     this.status = {};
@@ -200,20 +203,24 @@ export class SettingsView extends LitElement {
     }
   }
 
-  private async connect() {
+  private async connect(sync = true) {
     remember('github-repo', this.repo);
     if (!this.connected()) { this.setStatus('github', false, '저장소는 아이디/저장소 이름으로, 토큰은 github_pat_로 시작하는 값을 넣어 주세요'); return; }
     this.busy = 'github';
-    this.canvasMode = null;
+    this.connectionState = 'checking';
+    if (sync) this.canvasMode = null;
     const repo = this.repo;
     const token = this.token;
     try {
       const saved = await listSecrets(repo, token);
+      if (this.repo !== repo || this.token !== token) return;
       rememberSavedSecrets(repo, saved);
       await storeToken(token);
-      if (this.repo === repo) {
+      if (this.repo === repo && this.token === token) {
         this.saved = saved;
         this.linked = true;
+        this.connectionState = 'connected';
+        if (!sync) { this.setStatus('github', true, '연결을 확인했어요'); return; }
         await this.pullKeywords(repo, token);
         const muted = await readVariable(repo, token, 'MUTED_CATEGORIES');
         this.muted = (muted ?? '').split(/[,\n]/).map((w) => w.trim()).filter(Boolean);
@@ -230,7 +237,10 @@ export class SettingsView extends LitElement {
       }
     } catch (error) {
       // 만료되거나 지운 토큰은 기억하지 않는다. 인터넷 오류면 다음에 다시 시도한다.
-      if (error instanceof GitHubError) { await forgetToken(); this.token = ''; this.linked = false; }
+      if (this.repo !== repo || this.token !== token) return;
+      this.linked = false;
+      this.connectionState = error instanceof GitHubError && error.status === 401 ? 'invalid' : 'unverified';
+      if (error instanceof GitHubError && error.status === 401) { await forgetToken(); this.token = ''; }
       this.setStatus('github', false, error instanceof GitHubError ? error.message : '인터넷 연결을 확인해 주세요');
     } finally { this.busy = ''; }
   }
@@ -317,6 +327,7 @@ export class SettingsView extends LitElement {
     await forgetToken();
     this.token = '';
     this.linked = false;
+    this.connectionState = 'unlinked';
     this.syncedKeywords = null;
     this.setStatus('github', true, '연결을 끊었어요. 저장한 키는 GitHub에 그대로 있어요');
   }
@@ -532,7 +543,7 @@ export class SettingsView extends LitElement {
         <section aria-labelledby="s-connections">
           <h2 id="s-connections" class="settings-head">연결</h2>
           <div class="box">
-            ${this.settingsLink('기기 연결', this.linked ? '휴대폰을 QR로 연결하고 저장 상태를 확인해요' : '노트북 QR로 연결하거나 처음 연결해요', '?view=settings&section=connection')}
+            ${this.settingsLink('기기 연결', this.connectionLabel(), '?view=settings&section=connection')}
             ${this.settingsLink('연결 키', 'Gemini 키, 아이캠퍼스 토큰과 내 프로필', '?view=settings&keys=1')}
           </div>
         </section>
@@ -558,6 +569,17 @@ export class SettingsView extends LitElement {
     return html`<a class="settings-link" href=${href}><span><span class="setting-name">${label}</span><span class="setting-help">${help}</span></span><span class="settings-chevron" aria-hidden="true"></span></a>`;
   }
 
+  private connectionLabel() {
+    return {
+      loading: '이 기기의 연결 정보를 읽고 있어요',
+      unlinked: '이 기기에 GitHub를 연결해 주세요',
+      checking: 'GitHub 연결을 확인하고 있어요',
+      connected: '이 기기가 GitHub에 연결돼 있어요',
+      unverified: '연결 정보를 다시 확인해 주세요',
+      invalid: 'GitHub 토큰을 다시 연결해 주세요',
+    }[this.connectionState];
+  }
+
   private connectionSettings() { return html`
         <section aria-labelledby="s-github">
           <h2 id="s-github" class="settings-head">연결</h2>
@@ -575,14 +597,16 @@ export class SettingsView extends LitElement {
                   <button type="button" class="solid-button" @click=${this.acceptHandoff}>연결하기</button>
                   <button type="button" class="ghost-button" @click=${() => { this.handoff = null; }}>취소</button>
                 </div>` : nothing}
+              <div class="connection-summary" role="status" aria-label="GitHub 연결 상태">
+                <span class="setting-state">${{loading: '연결 정보 확인 중', unlinked: '연결 안 됨', checking: '연결 확인 중', connected: '연결됨', unverified: '연결 확인 필요', invalid: '다시 연결 필요'}[this.connectionState]}</span>
+                ${this.connected() ? html`<span class="field-note">${this.repo}</span>` : nothing}
+              </div>
+              ${this.connected() ? html`<button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${() => this.connect(false)}>연결 확인하기</button>` : nothing}
               ${this.linked ? html`
-                <div class="connection-summary"><span class="setting-state">연결됨</span><span class="field-note">${this.repo}</span></div>
                 <a class="ghost-button" href="?view=settings&section=notifications">이 기기 알림 설정하기</a>
                 <details class="connection-manual"><summary>연결 관리</summary>
                 <div class="inline">
-                  <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${this.connect}>
-                    ${this.busy === 'github' ? '확인 중' : '저장 상태 새로 보기'}</button>
-                  <button type="button" class="ghost-button" @click=${this.disconnect}>연결 끊기</button>
+                  <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${this.disconnect}>연결 끊기</button>
                 </div></details>
                 ${this.qr ? html`
                   <div class="qr" role="img" aria-label="다른 기기 연결 QR">${unsafeHTML(this.qr)}</div>
@@ -591,20 +615,22 @@ export class SettingsView extends LitElement {
                 ` : html`<button type="button" class="text-button" @click=${this.showHandoff}>휴대폰 연결 QR 띄우기</button>`}
               ` : html`
               ${!this.handoff ? html`
+                ${!this.connected() ? html`
                 <p class="field-note">노트북에서 이미 연결했다면 키를 다시 넣지 않아도 돼요. 노트북의 설정, 기기 연결에서 휴대폰 연결 QR을 띄워 주세요</p>
                 ${this.scanningQr ? html`
                   <video class="pairing-camera" autoplay playsinline muted aria-label="노트북 QR 카메라"></video>
                   <button type="button" class="ghost-button" @click=${this.stopScanning}>카메라 닫기</button>
                 ` : html`<button type="button" class="solid-button" @click=${this.scanNotebookQr}>노트북 QR로 연결하기</button>`}
                 ${this.note('qr-scan')}
+                ` : nothing}
                 <details class="connection-manual">
                   <summary>처음 연결하기</summary>
-              <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="저장소" placeholder="아이디/저장소 이름"
+              <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="저장소" placeholder="아이디/저장소 이름" ?disabled=${this.busy === 'github'}
                 .value=${this.repo} @input=${(e: Event) => this.setRepo((e.target as HTMLInputElement).value.trim())}>
               <div class="inline">
-                <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="GitHub 토큰" placeholder="github_pat_로 시작하는 토큰"
+                <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="GitHub 토큰" placeholder="github_pat_로 시작하는 토큰" ?disabled=${this.busy === 'github'}
                   .value=${this.token} @input=${(e: Event) => { this.token = (e.target as HTMLInputElement).value.trim(); }}>
-                <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${this.connect}>
+                <button type="button" class="ghost-button" ?disabled=${this.busy === 'github'} @click=${() => this.connect()}>
                   ${this.busy === 'github' ? '연결 중' : '연결하기'}</button>
               </div>
               ${this.guide('github', [

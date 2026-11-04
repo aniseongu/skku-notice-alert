@@ -578,6 +578,7 @@ export class NoticeApp extends LitElement {
           <header class="pane-head topbar glass">
             ${settings ? html`<button type="button" class="icon-button narrow-only back" aria-label="설정 닫기"
               @click=${this.leaveSettings}>${icon('back')}</button>` : nothing}
+            ${settings ? nothing : html`<svg class="brand-mark narrow-only" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>`}
             <div class="topbar-text">
               <h1>${this.view === 'all' && !this.keyword
                 ? html`<span class="narrow-only">${APP_NAME}</span><span class="wide-only">${title}</span>` : title}</h1>

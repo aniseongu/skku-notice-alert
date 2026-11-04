@@ -755,20 +755,22 @@ export class SettingsView extends LitElement {
               </div>
               <div class="setting-control">
                 <div class="time-control" role="group" aria-labelledby="summary-time-label">
-                  <div class="segmented" role="radiogroup" aria-label="오전 또는 오후">
+                  <div class="segmented" role="group" aria-label="오전 또는 오후">
                     ${[['am', '오전'], ['pm', '오후']].map(([period, label]) => html`
-                      <button type="button" role="radio" aria-checked=${String((Number(this.summaryTime.slice(0, 2)) >= 12) === (period === 'pm'))}
+                      <button type="button" aria-pressed=${String((Number(this.summaryTime.slice(0, 2)) >= 12) === (period === 'pm'))}
                         ?disabled=${!this.linked || !this.summaryTimeLoaded || this.busy !== ''}
                         @click=${() => this.changeSummaryPart('period', period)}>${label}</button>`)}
                   </div>
                   <div class="time-numbers">
                     <input id="summary-hour" class="input time-number" type="number" min="1" max="12" inputmode="numeric"
                       aria-label="시" .value=${String(Number(this.summaryTime.slice(0, 2)) % 12 || 12)}
-                      ?disabled=${!this.linked || !this.summaryTimeLoaded || this.busy !== ''}
+                      ?disabled=${!this.linked || !this.summaryTimeLoaded || (this.busy !== '' && this.busy !== 'summary-time')}
+                      ?readonly=${this.busy === 'summary-time'}
                       @change=${(e: Event) => this.changeSummaryPart('hour', (e.target as HTMLInputElement).value)}><span>시</span>
                     <input id="summary-minute" class="input time-number" type="number" min="0" max="59" inputmode="numeric"
                       aria-label="분" .value=${this.summaryTime.slice(3)}
-                      ?disabled=${!this.linked || !this.summaryTimeLoaded || this.busy !== ''}
+                      ?disabled=${!this.linked || !this.summaryTimeLoaded || (this.busy !== '' && this.busy !== 'summary-time')}
+                      ?readonly=${this.busy === 'summary-time'}
                       @change=${(e: Event) => this.changeSummaryPart('minute', (e.target as HTMLInputElement).value)}><span>분</span>
                   </div>
                 </div>

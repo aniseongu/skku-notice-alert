@@ -26,7 +26,7 @@ const TABS: { id: Tab; label: string; icon: IconName }[] = [
   { id: 'saved', label: '저장', icon: 'bookmark' },
 ];
 const STALE_MS = 2 * 3600_000;
-// 화면을 켜 둔 채로 있어도 30분 주기의 새 공지와 D-day가 바뀌도록 5분마다 다시 받는다.
+// 화면을 켜 둔 채로 있어도 1시간 주기의 새 공지와 D-day가 바뀌도록 5분마다 다시 받는다.
 const REFRESH_MS = 5 * 60_000;
 const SOON_DAYS = 3;
 const isTab = (value: string | null): value is Tab => TABS.some((t) => t.id === value);

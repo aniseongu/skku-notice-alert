@@ -446,6 +446,8 @@ def run(args: argparse.Namespace) -> int:
     intern_judgments: dict[str, Judgment] = {}
     for source in settings["sources"]:
         source_id = source["id"]
+        if getattr(args, "skip_external", False) and source.get("external"):
+            continue
         if source.get("kind") in COLLECTORS:
             # 외부 인턴 공고 목록: 사이트마다 한 번 요청한다. fixture 실행에서는 건너뛴다.
             if args.from_fixtures:
@@ -773,6 +775,7 @@ def main() -> int:
     parser.add_argument("--all", action="store_true")
     parser.add_argument("--from-fixtures", action="store_true")
     parser.add_argument("--no-ai", action="store_true")
+    parser.add_argument("--skip-external", action="store_true")
     parser.add_argument("--export", type=Path)
     parser.add_argument("--no-canvas", action="store_true")
     parser.add_argument("--canvas-fixtures", type=Path)

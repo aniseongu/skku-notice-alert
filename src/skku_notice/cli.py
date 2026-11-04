@@ -685,14 +685,28 @@ def run(args: argparse.Namespace) -> int:
             token = os.environ.get("CANVAS_TOKEN", "")
             if canvas_config.get("enabled") and (token or fixture_dir):
                 canvas_state = load_canvas_state(CANVAS_STATE_PATH)
-                minimum = max(30, int(canvas_config.get("min_refresh_minutes", 30)))
+                minimum = max(60, int(canvas_config.get("min_refresh_minutes", 60)))
                 recently_refreshed = (
                     not args.dry_run
                     and CANVAS_STATE_PATH.exists()
                     and time.time() - CANVAS_STATE_PATH.stat().st_mtime < minimum * 60
                 )
                 if not recently_refreshed:
-                    items = read_canvas(token, now, fixture_dir)
+                    def reserve_learningx() -> bool:
+                        nonlocal canvas_state
+                        reserved_at = datetime.now(KST)
+                        last = canvas_state.last_learningx_launch
+                        if last and (reserved_at - datetime.fromisoformat(last)).total_seconds() < 3600:
+                            return False
+                        canvas_state = replace(canvas_state, last_learningx_launch=reserved_at.isoformat())
+                        # Persist the attempt before launching; never store issued credentials.
+                        save_canvas_state(CANVAS_STATE_PATH, canvas_state)
+                        return True
+
+                    if args.dry_run or fixture_dir:
+                        items = read_canvas(token, now, fixture_dir)
+                    else:
+                        items = read_canvas(token, now, fixture_dir, reserve_learningx=reserve_learningx)
                     summary_time = datetime.strptime(canvas_config["summary_time"], "%H:%M").time()
                     alerts, next_state = plan_alerts(
                         items, canvas_state, now,

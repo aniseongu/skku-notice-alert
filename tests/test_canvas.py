@@ -133,7 +133,7 @@ def test_rejected_token_problem_is_sent_once(tmp_path: Path, monkeypatch) -> Non
     monkeypatch.setenv("NOTIFY_URLS", "ntfys://fake-topic")
     monkeypatch.setenv("CANVAS_TOKEN", "fake-token")
     monkeypatch.setattr(
-        cli, "read_canvas", lambda *args: (_ for _ in ()).throw(canvas.CanvasError("토큰 거절"))
+        cli, "read_canvas", lambda *args, **kwargs: (_ for _ in ()).throw(canvas.CanvasError("토큰 거절"))
     )
     sent = []
     monkeypatch.setattr(cli, "send_canvas", lambda *args, **kwargs: sent.append(args) or True)
@@ -192,7 +192,7 @@ def test_cli_forwards_summary_kind_to_canvas_delivery(tmp_path: Path, monkeypatc
     monkeypatch.setattr(cli, "CANVAS_STATE_PATH", tmp_path / "canvas.json")
     monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
     monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
-    monkeypatch.setattr(cli, "read_canvas", lambda *args: [])
+    monkeypatch.setattr(cli, "read_canvas", lambda *args, **kwargs: [])
     state = CanvasState(initialized=True)
     alert = CanvasAlert("알림", "본문", "https://canvas.skku.edu",
                         summary_day="2026-11-04" if summary else None)
@@ -262,3 +262,30 @@ def test_quiz_match_by_assignment_id_keeps_assignment_locks() -> None:
     quizzes = [{"id": 12, "assignment_id": 2, "published": True, "locked_for_user": False}]
     assert canvas._quiz_available(row, quizzes, NOW)
     assert canvas._assignment({"id": 101, "name": "과목"}, row, NOW) is None
+
+
+def test_learningx_reservation_survives_failed_scan_without_consuming_baseline(tmp_path, monkeypatch):
+    from skku_notice.canvas_alerts import load_canvas_state
+
+    monkeypatch.setenv("CANVAS_TOKEN", "fake-token")
+    monkeypatch.setattr(cli, "load_dotenv", lambda **kwargs: None)
+    monkeypatch.setattr(cli, "CANVAS_STATE_PATH", tmp_path / "canvas.json")
+    monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
+    monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
+    monkeypatch.setenv("NOTIFY_URLS", "ntfys://fake-topic")
+    attempts = []
+
+    def fail_scan(*args, reserve_learningx):
+        attempts.append(reserve_learningx())
+        raise canvas.CanvasError("확인용 연결 실패")
+
+    monkeypatch.setattr(cli, "read_canvas", fail_scan)
+    args = argparse.Namespace(rules=Path("config/rules.example.yaml"), dry_run=False,
+                              all=False, from_fixtures=True, no_ai=True, no_canvas=False, export=None)
+    assert cli.run(args) == 1
+    state = load_canvas_state(cli.CANVAS_STATE_PATH)
+    assert state.last_learningx_launch and not state.initialized
+    # Even a crash after reservation cannot trigger a second launch within the hour.
+    os.utime(cli.CANVAS_STATE_PATH, (0, 0))
+    assert cli.run(args) == 1
+    assert attempts == [True, False]

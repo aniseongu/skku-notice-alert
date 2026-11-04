@@ -109,6 +109,47 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/362144": {
+      "notice": {
+        "id": "linkareer-intern/362144",
+        "source_id": "linkareer-intern",
+        "article_no": "362144",
+        "title": "[주식회사 미스틱] [미스틱] 모바일쿠폰 B2B 영업 인턴 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/362144",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T18:39:46.326182+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "※ 입사지원 서류에 허위사실이 발견될 경우, 채용확정 이후라도 채용이 취소될 수 있습니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980491\" title=\"링커리어_(주)미스틱 B2B 영업 인턴 채용 포스터 - 텍스트 편집용 PDF.pdf.jpg\"><br><br></p><p><span><b>※ 입사지원 서류에 허위사실이 발견될 경우, 채용확정 이후라도 채용이 취소될 수 있습니다.</b></span></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/980491"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T18:39:46.326182+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-02T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "skku-notice01/141572": {
       "notice": {
         "id": "skku-notice01/141572",

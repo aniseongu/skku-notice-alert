@@ -47,7 +47,7 @@ SYSTEM = (
 
 # 다른 전공 우대가 개인 맞춤 근거로 오해되지 않게 보수적으로 표시한다.
 OTHER_MAJOR = re.compile(
-    r"(?:전기|전자(?!상거래)|기계|수학|통계)(?:공학|과|전공|학과|계열|학부|[ ,·/및과와])"
+    r"(?:전기|전자(?!상거래)|기계|수학|통계)(?:공학|과|전공|학과|계열|학부|[ ,·/및과와]|$)"
 )
 COMPUTER_MAJOR = re.compile(
     r"(?:컴퓨터(?:공학|과학)?|소프트웨어|전산|정보보안)(?:공학|과학|전공|학과|계열|학부|과)"
@@ -59,8 +59,10 @@ def preference_safe_reason(reason: str) -> str:
         return reason
     before_preference = reason.split("우대", 1)[0]
     computer = COMPUTER_MAJOR.search(before_preference)
-    if computer and "필수" not in before_preference[computer.end():]:
-        return reason
+    if computer:
+        between = before_preference[computer.end():]
+        if not re.search(r"필수|지식|경험|업무|직무|교육|과목", between):
+            return reason
     return "담당 업무와 지원 자격을 원문에서 확인해 주세요"
 
 

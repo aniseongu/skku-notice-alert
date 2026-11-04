@@ -471,7 +471,11 @@
     min-height: 44px; padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r-md);
     background: var(--surface); color: var(--text); font-size: 15px;
   }
-  .time-input { width: 176px; max-width: 100%; align-self: flex-start; font-variant-numeric: tabular-nums; }
+  .time-control { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; }
+  .time-numbers { display: flex; align-items: center; gap: 6px; }
+  .time-number { width: 56px; min-width: 0; padding: 10px 6px; text-align: center; font-variant-numeric: tabular-nums; appearance: textfield; }
+  .time-number::-webkit-inner-spin-button, .time-number::-webkit-outer-spin-button { appearance: none; margin: 0; }
+  .time-numbers span { font-size: 14px; color: var(--text-2); }
   textarea.input { resize: vertical; line-height: 1.5; font-size: 14px; }
   .input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
   .input::placeholder { color: var(--text-3); }

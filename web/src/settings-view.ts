@@ -435,20 +435,41 @@ export class SettingsView extends LitElement {
     } finally { this.busy = ''; }
   }
 
-  private async saveSummaryTime(value: string) {
-    if (!this.linked || this.busy || !/^([01]\d|2[0-3]):[0-5]\d$/.test(value)) {
-      const input = this.querySelector<HTMLInputElement>('#canvas-summary-time');
-      if (input) input.value = this.summaryTime;
+  private resetSummaryInputs() {
+    const [hour, minute] = this.summaryTime.split(':').map(Number);
+    const hourInput = this.querySelector<HTMLInputElement>('#summary-hour');
+    const minuteInput = this.querySelector<HTMLInputElement>('#summary-minute');
+    if (hourInput) hourInput.value = String(hour % 12 || 12);
+    if (minuteInput) minuteInput.value = String(minute).padStart(2, '0');
+  }
+
+  private changeSummaryPart(part: 'period' | 'hour' | 'minute', raw: string) {
+    const [storedHour, storedMinute] = this.summaryTime.split(':').map(Number);
+    const number = Number(raw);
+    if ((part === 'hour' && (!/^\d{1,2}$/.test(raw) || number < 1 || number > 12))
+        || (part === 'minute' && (!/^\d{1,2}$/.test(raw) || number > 59))) {
+      this.resetSummaryInputs();
+      this.setStatus('summary-time', false, '시는 1부터 12, 분은 0부터 59까지 입력해 주세요');
       return;
     }
+    let hour = storedHour;
+    let minute = storedMinute;
+    if (part === 'period') hour = storedHour % 12 + (raw === 'pm' ? 12 : 0);
+    if (part === 'hour') hour = number % 12 + (storedHour >= 12 ? 12 : 0);
+    if (part === 'minute') minute = number;
+    this.saveSummaryTime(`${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`);
+  }
+
+  private async saveSummaryTime(value: string) {
+    if (!this.linked || !this.summaryTimeLoaded || this.busy) { this.resetSummaryInputs(); return; }
+    if (value === this.summaryTime) { this.resetSummaryInputs(); return; }
     this.busy = 'summary-time';
     try {
       await saveVariable(this.repo, this.token, 'CANVAS_SUMMARY_TIME', value);
       this.summaryTime = value;
       this.setStatus('summary-time', true, '저장했어요. 모든 기기에 적용해요');
     } catch {
-      const input = this.querySelector<HTMLInputElement>('#canvas-summary-time');
-      if (input) input.value = this.summaryTime;
+      this.resetSummaryInputs();
       this.setStatus('summary-time', false, '시간을 저장하지 못했어요. 연결을 확인하고 다시 골라 주세요');
     } finally { this.busy = ''; }
   }
@@ -729,12 +750,28 @@ export class SettingsView extends LitElement {
             </div>
             <div class="setting">
               <div class="setting-text">
-                <label class="setting-name" for="canvas-summary-time">하루 요약 시간</label>
+                <p class="setting-name" id="summary-time-label">하루 요약 시간</p>
                 <p class="setting-help">모든 기기에 같은 시간을 적용해요. 할 일이 없어도 알려요</p>
               </div>
               <div class="setting-control">
-                <input id="canvas-summary-time" class="input time-input" type="time" lang="ko" .value=${this.summaryTime}
-                  ?disabled=${!this.linked || !this.summaryTimeLoaded || this.busy !== ''} @change=${(e: Event) => this.saveSummaryTime((e.target as HTMLInputElement).value)}>
+                <div class="time-control" role="group" aria-labelledby="summary-time-label">
+                  <div class="segmented" role="radiogroup" aria-label="오전 또는 오후">
+                    ${[['am', '오전'], ['pm', '오후']].map(([period, label]) => html`
+                      <button type="button" role="radio" aria-checked=${String((Number(this.summaryTime.slice(0, 2)) >= 12) === (period === 'pm'))}
+                        ?disabled=${!this.linked || !this.summaryTimeLoaded || this.busy !== ''}
+                        @click=${() => this.changeSummaryPart('period', period)}>${label}</button>`)}
+                  </div>
+                  <div class="time-numbers">
+                    <input id="summary-hour" class="input time-number" type="number" min="1" max="12" inputmode="numeric"
+                      aria-label="시" .value=${String(Number(this.summaryTime.slice(0, 2)) % 12 || 12)}
+                      ?disabled=${!this.linked || !this.summaryTimeLoaded || this.busy !== ''}
+                      @change=${(e: Event) => this.changeSummaryPart('hour', (e.target as HTMLInputElement).value)}><span>시</span>
+                    <input id="summary-minute" class="input time-number" type="number" min="0" max="59" inputmode="numeric"
+                      aria-label="분" .value=${this.summaryTime.slice(3)}
+                      ?disabled=${!this.linked || !this.summaryTimeLoaded || this.busy !== ''}
+                      @change=${(e: Event) => this.changeSummaryPart('minute', (e.target as HTMLInputElement).value)}><span>분</span>
+                  </div>
+                </div>
                 ${this.note('summary-time')}
                 <p class="field-note">확인이 늦어지면 알림도 늦어져요</p>
               </div>

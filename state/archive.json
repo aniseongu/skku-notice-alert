@@ -109,6 +109,60 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/361909": {
+      "notice": {
+        "id": "linkareer-intern/361909",
+        "source_id": "linkareer-intern",
+        "article_no": "361909",
+        "title": "[카카오게임즈] [체험형 인턴] 현지화 인턴 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361909",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T10:01:41.647258+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 게임 현지화 및 번역 업무로 소프트웨어 개발과는 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[카카오게임즈] [체험형 인턴] 현지화 인턴 채용\n\n\n\n\n◆ 업무내용\n- 게임 내 텍스트 및 각종 콘텐츠의 한국어 → 영어 번역 및 검수\n- 영어 현지화 빌드 테스트(LQA) 수행 및 이슈 리포트 작성\n- 게임 콘텐츠 및 용어 조사, 용어집과 스타일 가이드 관리 지원\n- 기타 게임 현지화 프로젝트 운영 및 실무 지원\n\n\n◆ 지원자격\n- 한국어와 영어에 능통하며, 원어민 수준의 언어 능력을 갖추신 분\n- PC, 모바일, 콘솔 등 다양한 플랫폼의 게임을 즐기며 게임에 대한 이해도가 높으신 분\n- 언어와 표현의 미묘한 차이를 이해하고 꼼꼼하게 검토할 수 있는 분\n- 복잡한 내용을 명확하게 정리하고 전달할 수 있는 커뮤니케이션 능력을 갖추신 분\n- 북미 및 서구권 시장과 문화에 대한 이해도가 높으신 분\n- 인턴십 기간 동안 주 5일 풀타임 근무가 가능한 분\n- 해외 출장에 결격 사유가 없는 분\n\n\n◆ 우대사항\n- 게임 번역, 검수 또는 LQA 관련 경험이 있으신 분\n- 통번역대학원 졸업 또는 통번역 등 관련 분야를 전공하신 분\n- 번역 및 현지화 관련 툴(CAT Tool 등) 사용 경험이 있으신 분\n- Excel, Power Point 등 문서 작성 툴 활용 역량을 갖추신 분\n- (영어 외) 제2외국어 구사가 가능하신 분\n- AI를 활용한 작업에 익숙하신 분",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[카카오게임즈] [체험형 인턴] 현지화 인턴 채용</b></span></p><p><span>◆ 업무내용&nbsp;</span></p><p><span>- ​게임 ​내 텍스트 ​및 각종 콘텐츠의 ​한국어 → ​영어 ​번역 및 ​검수</span></p><p><span>- ​영어 ​현지화 빌드 테스트(LQA) ​수행 ​및 이슈 리포트 ​작성</span></p><p><span>- ​게임 ​콘텐츠 및 용어 ​조사, 용어집과 ​스타일 ​가이드 관리 ​지원</span></p><p><span>- 기타 ​게임 ​현지화 프로젝트 운영 ​및 실무 ​지원</span></p><p><span>◆ 지원자격</span></p><p><span>- 한국어와 영어에 능통하며, 원어민 수준의 언어 능력을 갖추신 분</span></p><p><span>- PC, 모바일, 콘솔 등 다양한 플랫폼의 게임을 즐기며 게임에 대한 이해도가 높으신 분</span></p><p><span>- 언어와 표현의 미묘한 차이를 이해하고 꼼꼼하게 검토할 수 있는 분</span></p><p><span>- 복잡한 내용을 명확하게 정리하고 전달할 수 있는 커뮤니케이션 능력을 갖추신 분</span></p><p><span>- 북미 및 서구권 시장과 문화에 대한 이해도가 높으신 분</span></p><p><span>- 인턴십 기간 동안 주 5일 풀타임 근무가 가능한 분</span></p><p><span>- 해외 출장에 결격 사유가 없는 분</span></p><p><span>◆ 우대사항</span></p><p><span>- 게임 번역, 검수 또는 LQA 관련 경험이 있으신 분</span></p><p><span>- 통번역대학원 졸업 또는 통번역 등 관련 분야를 전공하신 분</span></p><p><span>- 번역 및 현지화 관련 툴(CAT Tool 등) 사용 경험이 있으신 분</span></p><p><span>- Excel, Power Point 등 문서 작성 툴 활용 역량을 갖추신 분</span></p><p><span>- (영어 외) 제2외국어 구사가 가능하신 분</span></p><p><span>- AI를 활용한 작업에 익숙하신 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/979717\" title=\"20261104_095209.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/979717"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T10:01:41.647258+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "8b873928f9695161b963f38d8ed50ff61cb3f5ce5d77705880991587de263c9f",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 게임 현지화 및 번역 업무로 소프트웨어 개발과는 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "linkareer-intern/361802": {
       "notice": {
         "id": "linkareer-intern/361802",
@@ -3092,7 +3146,12 @@
           "인턴"
         ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 마케팅 직군 채용으로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -3113,6 +3172,12 @@
         "kind": "마감",
         "at": "2026-11-22T23:59:00+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "c5487e119e26fde1f82ca146065cdb62337d5a4cd606998099082c7df2099b3c",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 마케팅 직군 채용으로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361866": {
@@ -3136,12 +3201,10 @@
         ],
         "reasons": [],
         "ai": {
-          "verdict": "maybe",
-          "reason": "소프트웨어 전공과 무관한 인사팀 행정 업무이나 학부생 지원 가능 여부를 확인해야 해요.",
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 인사팀 행정 업무로 소프트웨어 개발 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
-          "interests": [
-            "인턴"
-          ]
+          "interests": []
         },
         "notified": true
       },
@@ -3164,6 +3227,12 @@
         "kind": "마감",
         "at": "2026-11-16T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "00df3d052756ad1b7269e57f0f953b98025c7cbdbf443a5417277144244f322c",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 인사팀 행정 업무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361862": {
@@ -3187,12 +3256,10 @@
         ],
         "reasons": [],
         "ai": {
-          "verdict": "maybe",
-          "reason": "데이터 분석 및 AI 활용 직무는 관심사와 연결되지만 상세 자격 요건은 추가 확인이 필요해요.",
+          "verdict": "relevant",
+          "reason": "재무 데이터 분석 및 AI 기술을 활용한 프로세스 개선 업무를 포함하고 있어 소프트웨어 관련 역량을 활용할 수 있습니다.",
           "model": "gemini-3.1-flash-lite",
-          "interests": [
-            "인턴"
-          ]
+          "interests": []
         },
         "notified": true
       },
@@ -3214,6 +3281,12 @@
         "kind": "마감",
         "at": "2026-11-17T16:00:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "c407f25e31229cea0d7f219be602b5091982728da5aa12d0d08fba59e0e55a86",
+        "verdict": "relevant",
+        "reason": "재무 데이터 분석 및 AI 기술을 활용한 프로세스 개선 업무를 포함하고 있어 소프트웨어 관련 역량을 활용할 수 있습니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361732": {
@@ -3234,7 +3307,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "모집 분야가 행정 인턴으로 소프트웨어 개발 직무와는 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[한국과학기술연구원] KIST 2026-6차 행정인턴 공개채용\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 학연운영팀 (인턴)\n- 혁신기업협력센터 (인턴)\n- 행정팀(전북) (인턴)\n- 재무팀 (인턴)\n\n\n\n\n[업무내용]\n\n\n- 각 모집군 상세요강 참조\n\n\n\n\n[채용절차]\n\n\n- 서류전형 → 면접심사 → 최종합격\n\n\n\n\n[공고상세]",
@@ -3255,6 +3333,12 @@
         "kind": "마감",
         "at": "2026-11-16T18:00:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "3da5887b0130802ea6d9a15a7da2595ff39b1baaabc87344a0fb0da307787a99",
+        "verdict": "not_relevant",
+        "reason": "모집 분야가 행정 인턴으로 소프트웨어 개발 직무와는 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361622": {
@@ -3275,7 +3359,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "산업안전보건법상 안전관리자 업무로 소프트웨어 개발 직무가 아니며 관련 자격증이 필수입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[한국공항] [26년 11월] 제주사업(제동목장·생수공장 외) 안전관리자 신입사원 모집\n\n\n\n\n[수행업무]\n· 사업장 안전 점검·위험성 평가 등 산업안전보건법상 안전관리자 업무\n\n\n[필수자격]\n· 학사 학위 이상 (기졸업자)\n· 안전관리자 선임 자격 충족자\n· 산업안전산업기사 이상의 자격 보유자 등\n· 공인 영어 성적 보유자 (최근 2년)\n· TOEIC 600점 이상\n· 또는 TOEIC Speaking/OPIC IM1 이상\n· 운전면허 2종 보통 이상 소지자\n· 병역필 또는 면제자로 해외여행에 결격 사유가 없는자\n\n\n[우대자격]\n· 보건관리자 겸임 가능자 (관련 자격 보유)\n· 산업위생관리산업기사 또는 대기환경산업기사 이상의 자격 등\n· 제주지역 거주자 또는 연고자",
@@ -3296,6 +3385,12 @@
         "kind": "마감",
         "at": "2026-11-09T12:00:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "038cf63652ffc905237fe901dbfe1e4912456bbb0da2d84d4714c4a805f69399",
+        "verdict": "not_relevant",
+        "reason": "산업안전보건법상 안전관리자 업무로 소프트웨어 개발 직무가 아니며 관련 자격증이 필수입니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361605": {

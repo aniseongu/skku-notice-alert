@@ -14,6 +14,7 @@ from urllib.parse import quote
 import httpx
 
 from skku_notice.deadline import KST
+from skku_notice.notification_policy import is_internship
 
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 API = "https://www.googleapis.com/calendar/v3"
@@ -33,7 +34,8 @@ def _event_id(notice_id: str) -> str:
 
 
 def desired_events(notices: list[dict], saved: list[dict], now: datetime,
-                   external: frozenset[str] = frozenset()) -> dict[str, dict]:
+                   external: frozenset[str] = frozenset(),
+                   judgments: dict | None = None) -> dict[str, dict]:
     """Future school deadlines and saved external postings, using current data when available."""
     by_id = {n["id"]: n for n in notices}
     chosen = {n["id"]: n for n in notices if n["source_id"] not in external}
@@ -42,6 +44,11 @@ def desired_events(notices: list[dict], saved: list[dict], now: datetime,
             chosen.setdefault(item["id"], by_id.get(item["id"], item))
     events = {}
     for notice in chosen.values():
+        ai = ((judgments or {}).get(notice["id"]) or {}).get("ai") or {}
+        if (notice.get("source_id") in external or is_internship(notice.get("title", ""))) and (
+            ai.get("verdict") == "not_relevant"
+        ):
+            continue
         if not notice.get("deadline") or not notice.get("url", "").startswith("https://"):
             continue
         at = datetime.fromisoformat(notice["deadline"]).astimezone(KST)
@@ -130,13 +137,14 @@ def main(api_dir: Path = Path("site/api/v1")) -> int:
     try:
         listing = json.loads((api_dir / "notices.json").read_text(encoding="utf-8"))
         notices = listing["notices"]
+        judgments = json.loads((api_dir / "matched.json").read_text(encoding="utf-8"))["items"]
         external = frozenset(s["id"] for s in listing.get("sources", []) if s.get("external"))
         saved = json.loads(os.environ.get("SAVED_NOTICES") or "[]")
     except (OSError, ValueError, KeyError):
         print("구글 캘린더: 공지 파일을 읽지 못했어요", file=sys.stderr)
         return 1
     saved_list = saved if isinstance(saved, list) else []
-    desired = desired_events(notices, saved_list, datetime.now(KST), external)
+    desired = desired_events(notices, saved_list, datetime.now(KST), external, judgments)
     try:
         with httpx.Client(timeout=15) as client:
             token = access_token(client, values["GOOGLE_CLIENT_ID"], values["GOOGLE_CLIENT_SECRET"],

@@ -46,6 +46,13 @@ def test_external_notices_require_save_and_use_current_or_saved_snapshot():
     assert not gcal.desired_events([unsaved], [], NOW, frozenset({"jobs"}))
 
 
+def test_ineligible_internships_are_excluded_from_calendar():
+    school = {**_notice("1", "2026-11-20T10:00:00+09:00"), "title": "졸업예정자 인턴 모집"}
+    external = {**school, "id": "jobs:1", "source_id": "jobs", "title": "개발 모집"}
+    judgments = {n["id"]: {"ai": {"verdict": "not_relevant"}} for n in (school, external)}
+    assert not gcal.desired_events([school, external], [external], NOW, frozenset({"jobs"}), judgments)
+
+
 def test_sync_only_touches_events_this_app_made():
     keep = gcal.desired_events([_notice("1", "2026-11-16T10:00:00+09:00")],
                                [], NOW)

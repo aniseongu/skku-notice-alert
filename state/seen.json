@@ -538,6 +538,16 @@
           "first_seen": "2026-11-04T10:17:09.546050+09:00",
           "status": "skipped",
           "attempts": 0
+        },
+        "361924": {
+          "first_seen": "2026-11-04T10:34:30.801022+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "361922": {
+          "first_seen": "2026-11-04T10:34:30.801022+09:00",
+          "status": "skipped",
+          "attempts": 0
         }
       }
     },

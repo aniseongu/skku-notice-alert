@@ -45,11 +45,12 @@ def deadlines_ics(notices: list[dict], board_names: dict[str, str], now: datetim
         # 마감 시각이 적힌 글만 시각을 붙인다. 날짜만 있으면 23:59로 저장돼 있다(deadline.py).
         time = "" if (deadline.hour, deadline.minute) == (23, 59) else f" {deadline:%H:%M}"
         board = board_names.get(notice["source_id"], notice["source_id"])
+        description = f"{board}\n{notice.get('deadline_kind') or '마감'}{time}\n{notice['url']}"
         lines += [
             "BEGIN:VEVENT", f"UID:{notice['id']}@skku-notice-alert", f"DTSTAMP:{stamp}",
             f"DTSTART;VALUE=DATE:{day:%Y%m%d}", f"DTEND;VALUE=DATE:{day + timedelta(days=1):%Y%m%d}",
-            "SUMMARY:" + _ics_escape(f"[{notice.get('deadline_kind') or '마감'}{time}] {notice['title']}"),
-            "DESCRIPTION:" + _ics_escape(f"{board}\n{notice['url']}"),
+            "SUMMARY:" + _ics_escape(notice["title"]),
+            "DESCRIPTION:" + _ics_escape(description),
             "URL:" + notice["url"], "TRANSP:TRANSPARENT", "END:VEVENT",
         ]
     lines.append("END:VCALENDAR")

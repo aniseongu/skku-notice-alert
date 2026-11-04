@@ -26,8 +26,9 @@ def test_calendar_has_one_all_day_event_per_deadline_with_escaped_folded_lines()
     text = deadlines_ics(NOTICES, BOARDS, NOW)
     assert text.count("BEGIN:VEVENT") == 2
     assert "DTSTART;VALUE=DATE:20261116" in text and "DTEND;VALUE=DATE:20261117" in text
-    assert "[마감 10:00] 인턴 모집\; 마감\\, 서류 & 면접" in text
-    assert "[마감] 날짜만" in text
+    assert "SUMMARY:인턴 모집\\; 마감\\, 서류 & 면접" in text
+    assert "마감 10:00" in text
+    assert "SUMMARY:날짜만" in text
     assert all(len(line.encode()) <= 75 for line in text.split("\r\n"))
     assert text.endswith("END:VCALENDAR\r\n")
 

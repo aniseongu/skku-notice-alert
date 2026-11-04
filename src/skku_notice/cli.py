@@ -689,6 +689,7 @@ def run(args: argparse.Namespace) -> int:
                 recently_refreshed = (
                     not args.dry_run
                     and CANVAS_STATE_PATH.exists()
+                    and canvas_state.last_learningx_launch is not None
                     and time.time() - CANVAS_STATE_PATH.stat().st_mtime < minimum * 60
                 )
                 if not recently_refreshed:

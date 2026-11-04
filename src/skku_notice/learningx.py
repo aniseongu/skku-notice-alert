@@ -10,6 +10,8 @@ import httpx
 from selectolax.lexbor import LexborHTMLParser
 
 BASE = "https://canvas.skku.edu"
+MODULE_LABEL = re.compile(r"강의\s*콘텐츠|주차\s*학습|\b(?:lecture\s*contents?|modules?)\b", re.I)
+LEGACY_LABEL = re.compile(r"\(\s*(?:구|old)\s*\)", re.I)
 
 
 class LearningXError(Exception):
@@ -51,21 +53,27 @@ class LearningXSession:
         return unquote(values.pop()) if len(values) == 1 else None
 
     def authenticate(self, canvas_client: httpx.Client, courses: list[dict], gap: float = 1) -> bool:
-        """Try the first favorite's current course navigation tool exactly once per scan."""
+        """Find a current tool among favorites, then create one temporary launch."""
         self._token = None
         self.client.cookies.clear()
-        course = next((str(row.get("id")) for row in courses
-                       if isinstance(row, dict) and str(row.get("id", "")).isdigit()), None)
-        if not course:
+        course_ids = dict.fromkeys(str(row.get("id")) for row in courses
+                                   if isinstance(row, dict) and str(row.get("id", "")).isdigit())
+        if not course_ids:
             return False
         try:
-            tabs = _json(canvas_client.get(f"{BASE}/api/v1/courses/{course}/tabs"))
-            if not isinstance(tabs, list):
-                raise LearningXError("강의 도구 목록 형식 오류")
-            tool = next((row["id"].removeprefix("context_external_tool_") for row in tabs
-                         if isinstance(row, dict) and isinstance(row.get("label"), str)
-                         and "강의콘텐츠" in row["label"] and "(구)" not in row["label"]
-                         and re.fullmatch(r"context_external_tool_\d+", str(row.get("id", "")))), None)
+            tool = None
+            for index, course in enumerate(course_ids):
+                if index:
+                    time.sleep(gap)
+                tabs = _json(canvas_client.get(f"{BASE}/api/v1/courses/{course}/tabs?include[]=external"))
+                if not isinstance(tabs, list):
+                    raise LearningXError("강의 도구 목록 형식 오류")
+                tool = next((row["id"].removeprefix("context_external_tool_") for row in tabs
+                             if isinstance(row, dict) and isinstance(row.get("label"), str)
+                             and MODULE_LABEL.search(row["label"]) and not LEGACY_LABEL.search(row["label"])
+                             and re.fullmatch(r"context_external_tool_\d+", str(row.get("id", "")))), None)
+                if tool:
+                    break
             if not tool:
                 return False
             time.sleep(gap)

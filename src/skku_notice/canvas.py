@@ -1,4 +1,5 @@
-# 출처: WhaleExtentions/extensions/icampus-check/executescript.js
+# 출처: https://github.com/aniseongu/icampus-plus/blob/master/executescript.js
+# 출처: https://github.com/hjkim24/learningx-alert-web/blob/main/accounts/collection.py
 """Read actionable Canvas tasks and optional, temporarily authenticated LearningX lectures."""
 
 import json
@@ -147,15 +148,31 @@ def _assignment(course: dict, row: dict, now: datetime) -> CanvasItem | None:
     )
 
 
+def _lecture_completion(value: object) -> bool | None:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, int):
+        return {0: False, 1: True}.get(value)
+    if isinstance(value, str):
+        value = value.strip().casefold()
+        if value in {"true", "1", "complete", "completed"}:
+            return True
+        if value in {"false", "0", "incomplete", "not_completed"}:
+            return False
+    return None
+
+
 def _lecture(course: dict, row: dict, now: datetime) -> CanvasItem | None:
     info = row.get("content_data") or {}
     due = _dt(info.get("due_at"))
     if (
-        not info.get("use_attendance")
+        info.get("use_attendance") is not True
+        or row.get("published") is False
+        or info.get("published") is False
+        or _lecture_completion(row.get("completed")) is not False
         or not due
         or due <= now
         or row.get("attendance_status") == "attendance"
-        or row.get("completed")
         or (_dt(info.get("unlock_at")) and _dt(info["unlock_at"]) > now)
     ):
         return None

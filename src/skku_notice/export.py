@@ -8,7 +8,7 @@ from pathlib import Path
 from skku_notice.archive import Archive
 from skku_notice.deadline import KST
 from skku_notice.feeds import deadlines_ics, rss_feed
-from skku_notice.intern_ai import preference_safe_reason
+from skku_notice.intern_ai import preference_safe_decision
 from skku_notice.notification_policy import is_internship
 
 
@@ -60,7 +60,10 @@ def export_site(
             decision["ai"] = {**decision["ai"], "interests": decision["ai"].get("interests", [])}
             notice = item["notice"]
             if notice["source_id"] in external or is_internship(notice["title"]):
-                decision["ai"]["reason"] = preference_safe_reason(decision["ai"].get("reason", ""))
+                verdict, reason = preference_safe_decision(
+                    decision["ai"].get("verdict", ""), decision["ai"].get("reason", "")
+                )
+                decision["ai"].update(verdict=verdict, reason=reason)
         personal[item["notice"]["id"]] = decision
     matched = {
         "version": 1,

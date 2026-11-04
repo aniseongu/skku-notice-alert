@@ -109,6 +109,59 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141079": {
+      "notice": {
+        "id": "skku-notice01/141079",
+        "source_id": "skku-notice01",
+        "article_no": "141079",
+        "title": "2026 SKKU 동계 PharmXplore Scholars 선발 안내 (지원기간: 11.2~11.15)",
+        "category": "일반",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141079",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": "2026-11-15T23:59:00+09:00",
+        "first_seen": "2026-11-04T16:29:42.247412+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "high",
+        "interests": [
+          "인턴",
+          "장학"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "약학대학 주관이지만 타 학과생도 지원할 수 있는 연구 인턴십 프로그램입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "인턴",
+            "장학"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "미래 약학 인재로 성장하는 첫걸음, 제4기 SKKU PharmXplore Scholars를 아래와 같이 선발하오니, 열정 있는 재학생들의 적극적인 참여를 기대합니다.\n\n1. 선발 목적\n신약개발을 꿈꾸는 학부생들에게 최첨단 약학분야의 연구 참여 기회를 제공하여, 연구 적성을 파악하고 연구자로서의 기초 역량을 키울 수 있도록 지원\n\n2. 개요\n가. 프로그램명: SKKU PharmXplore Scholars\n나. 활동기간: 2026.12.21.(월)~2026.02.18.(목) (40일, 8주)\n다. 활동내용: 연구실 인턴 수행\n라. 연구실 상세 정보: 붙임1의 PharmXplore 연구실 목록 참조\n* 연구실 목록에 없는 교수님의 연구실은 지원 불가\n* 사전 온라인 안전교육 이수 필수\n\n3. 혜택\n가. 장학금 지급 (총 80만원)\n* 타 장학금과 중복 수혜 가능\n* 프로그램 종료 후 2주 이내 출석부 및 결과보고서 제출 필수 (붙임3의 파일 사용)\n* 프로그램 종료 후 2027-1학기 장학금으로 지급(3월 경)\n나. 수료증 제공\n\n4. 모집 일정\n가. 서류 접수: 2026.11.02.(월) ~ 2026.11.15.(일)\n나. 면접: 2026.11.16.(월) ~ 2026.11.27.(금) (서류 합격자 대상 연구실별 진행)\n다. 합격자 발표: 2026.12.01.(월), 약학대학 홈페이지 게시판에 공지 예정\n\n5. 모집 대상\n성균관대학교 약학과 1~3학년, 타학과 1~4학년 중 2027-1학기 등록예정자\n* 단, 직전학기(2027-1학기의 직전학기) 성적이 취득학점 12학점 이상, 평점평균 2.0 이상인 자\n* 휴학생의 경우, 위 조건을 충족하면 지원 가능\n* 모집 전공에 제한 없음\n* 제외대상: 대학원생, 동일 기간에 약학연구에 참여하는 약대생\n\n6. 모집 인원\n총 11개의 연구실, 각 연구실별 최대 2명\n\n7. 지원 방법\npharmskku@skku.edu로 지원 서류를 구비하여 이메일 제출\n* 메일 제목: 2026 동계 SKKU PharmXplore Scholars 프로그램_학과_학년_학번_성명\n* 파일 제목: 학과_학년_학번_성명\n예시) 메일제목: 2026 동계 SKKU PharmXplore Scholars 프로그램_약학과_1학년_2099123456_홍길동\n파일제목: 약학과_1학년_2099123456_홍길동\n\n8. 지원 서류\n가. 프로그램 신청서 (붙임2의 파일 사용, 본인 서명 필수)\n나. 성적증명서\n다. (선택사항) 공인영어성적 (유효기간 만료 시에도 제출 가능)\n\n9. 유의사항\n가. 이메일 및 파일 양식 미준수 시 불이익이 발생할 수 있습니다.\n나. 반드시 이메일로 제출해야 하며, 우편 및 오프라인 제출은 불인정합니다.\n다. SKKU PharmXplore Scholars 완료자에 한하여 2027학년도 1학기에 장학금 지급합니다.\n\n10. 문의처\n가. 유선 문의: 031-290-7720, 5874\n나. 이메일 문의: pharmskku@skku.edu",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "2026 동계 SKKU PharmXplore Scholars 프로그램 공고 붙임파일.zip",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141079&attachNo=118669",
+          "type": "ZIP",
+          "size": null
+        }
+      ],
+      "body_html": "<div><p>미래&nbsp;약학&nbsp;인재로&nbsp;성장하는&nbsp;첫걸음,&nbsp;제4기&nbsp;SKKU&nbsp;PharmXplore&nbsp;Scholars를&nbsp;아래와&nbsp;같이&nbsp;선발하오니,&nbsp;열정&nbsp;있는&nbsp;재학생들의&nbsp;적극적인&nbsp;참여를&nbsp;기대합니다.</p><p>1.&nbsp;선발&nbsp;목적</p><p>신약개발을&nbsp;꿈꾸는&nbsp;학부생들에게&nbsp;최첨단&nbsp;약학분야의&nbsp;연구&nbsp;참여&nbsp;기회를&nbsp;제공하여,&nbsp;연구&nbsp;적성을&nbsp;파악하고&nbsp;연구자로서의&nbsp;기초&nbsp;역량을&nbsp;키울&nbsp;수&nbsp;있도록&nbsp;지원</p><p>2.&nbsp;개요</p><p>가. 프로그램명: SKKU PharmXplore Scholars&nbsp;</p><p>나.&nbsp;활동기간:&nbsp;2026.12.21.(월)~2026.02.18.(목)&nbsp;(40일,&nbsp;8주)</p><p>다.&nbsp;활동내용:&nbsp;연구실&nbsp;인턴&nbsp;수행</p><p>라.&nbsp;연구실&nbsp;상세&nbsp;정보:&nbsp;붙임1의&nbsp;PharmXplore&nbsp;연구실&nbsp;목록&nbsp;참조</p><p>&nbsp;* 연구실 목록에 없는 교수님의 연구실은 지원 불가</p><p>&nbsp;* 사전 온라인 안전교육 이수 필수</p><p>3.&nbsp;혜택</p><p>가.&nbsp;장학금&nbsp;지급&nbsp;(총&nbsp;80만원)</p><p>&nbsp;* 타 장학금과 중복 수혜 가능</p><p>&nbsp;* 프로그램 종료 후 2주 이내 출석부 및 결과보고서 제출 필수 (붙임3의 파일 사용)</p><p>&nbsp;* 프로그램 종료 후 2027-1학기 장학금으로 지급(3월 경)&nbsp;</p><p>나.&nbsp;수료증&nbsp;제공</p><p>4.&nbsp;모집&nbsp;일정</p><p>가.&nbsp;서류&nbsp;접수:&nbsp;2026.11.02.(월)&nbsp;~&nbsp;2026.11.15.(일)</p><p>나.&nbsp;면접:&nbsp;2026.11.16.(월)&nbsp;~&nbsp;2026.11.27.(금)&nbsp;(서류&nbsp;합격자&nbsp;대상&nbsp;연구실별&nbsp;진행)</p><p>다.&nbsp;합격자&nbsp;발표:&nbsp;2026.12.01.(월),&nbsp;약학대학&nbsp;홈페이지&nbsp;게시판에&nbsp;공지&nbsp;예정</p><p>5.&nbsp;모집&nbsp;대상</p><p>성균관대학교&nbsp;약학과&nbsp;1~3학년,&nbsp;타학과&nbsp;1~4학년&nbsp;중&nbsp;2027-1학기&nbsp;등록예정자</p><p>&nbsp;* 단, 직전학기(2027-1학기의 직전학기) 성적이 취득학점 12학점 이상, 평점평균 2.0 이상인 자</p><p>&nbsp;* 휴학생의 경우, 위 조건을 충족하면 지원 가능</p><p>&nbsp;* 모집 전공에 제한 없음</p><p>&nbsp;* 제외대상: 대학원생, 동일 기간에 약학연구에 참여하는 약대생</p><p>6.&nbsp;모집&nbsp;인원</p><p>총&nbsp;11개의&nbsp;연구실,&nbsp;각&nbsp;연구실별&nbsp;최대&nbsp;2명</p><p>7.&nbsp;지원&nbsp;방법</p><p>pharmskku@skku.edu로&nbsp;지원&nbsp;서류를&nbsp;구비하여&nbsp;이메일&nbsp;제출</p><p>*&nbsp;메일&nbsp;제목:&nbsp;2026&nbsp;동계&nbsp;SKKU&nbsp;PharmXplore&nbsp;Scholars&nbsp;프로그램_학과_학년_학번_성명</p><p>*&nbsp;파일&nbsp;제목:&nbsp;학과_학년_학번_성명</p><p>예시)&nbsp;메일제목:&nbsp;2026&nbsp;동계&nbsp;SKKU&nbsp;PharmXplore&nbsp;Scholars&nbsp;프로그램_약학과_1학년_2099123456_홍길동</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;파일제목: 약학과_1학년_2099123456_홍길동</p><p>8.&nbsp;지원&nbsp;서류</p><p>가.&nbsp;프로그램&nbsp;신청서&nbsp;(붙임2의&nbsp;파일&nbsp;사용,&nbsp;본인&nbsp;서명&nbsp;필수)</p><p>나.&nbsp;성적증명서</p><p>다.&nbsp;(선택사항)&nbsp;공인영어성적&nbsp;(유효기간&nbsp;만료&nbsp;시에도&nbsp;제출&nbsp;가능)</p><p>9.&nbsp;유의사항</p><p>가.&nbsp;이메일&nbsp;및&nbsp;파일&nbsp;양식&nbsp;미준수&nbsp;시&nbsp;불이익이&nbsp;발생할&nbsp;수&nbsp;있습니다.</p><p>나.&nbsp;반드시&nbsp;이메일로&nbsp;제출해야&nbsp;하며,&nbsp;우편&nbsp;및&nbsp;오프라인&nbsp;제출은&nbsp;불인정합니다.</p><p>다.&nbsp;SKKU&nbsp;PharmXplore&nbsp;Scholars&nbsp;완료자에&nbsp;한하여&nbsp;2027학년도&nbsp;1학기에&nbsp;장학금&nbsp;지급합니다.</p><p>10.&nbsp;문의처</p><p>가.&nbsp;유선&nbsp;문의:&nbsp;031-290-7720,&nbsp;5874</p><p>나.&nbsp;이메일&nbsp;문의:&nbsp;pharmskku@skku.edu</p></div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"공고문\" src=\"https://www.skku.edu/_attach/image/2026/10/DwkMwuOpAjtiWCiJzJef.png\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/10/DwkMwuOpAjtiWCiJzJef.png"
+      ],
+      "summary": "11월 15일까지 이메일로 연구실 인턴 지원 신청서와 성적증명서를 제출하세요. 선발 시 겨울방학 동안 연구에 참여하고 수료 후 장학금을 받을 수 있습니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T16:29:42.247412+09:00"
+    },
     "linkareer-intern/362080": {
       "notice": {
         "id": "linkareer-intern/362080",
@@ -1247,7 +1300,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "글로벌 마케터 직무는 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
+          "reason": "해당 직무는 글로벌 마케터로 소프트웨어 개발 직무와 무관합니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -1273,9 +1326,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "eee213f6918c0bcf5865b76cde45015e71fc98f62d9fe16fced6907d00941690",
+        "fingerprint": "217d0945b921cb266a7efe110f151311d808541816199aeabb4a380438ad3ce7",
         "verdict": "not_relevant",
-        "reason": "글로벌 마케터 직무는 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
+        "reason": "해당 직무는 글로벌 마케터로 소프트웨어 개발 직무와 무관합니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -1301,7 +1354,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "해당 직무는 게임 현지화 및 번역 업무로 소프트웨어 개발과는 거리가 멉니다.",
+          "reason": "해당 직무는 게임 현지화 및 번역 업무로 소프트웨어 개발 직무와 무관합니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -1327,9 +1380,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "8b873928f9695161b963f38d8ed50ff61cb3f5ce5d77705880991587de263c9f",
+        "fingerprint": "0933290f6c98aef6f48901c90bc11e210a7ca80f545dae5ce569de56898da9fc",
         "verdict": "not_relevant",
-        "reason": "해당 직무는 게임 현지화 및 번역 업무로 소프트웨어 개발과는 거리가 멉니다.",
+        "reason": "해당 직무는 게임 현지화 및 번역 업무로 소프트웨어 개발 직무와 무관합니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -1349,9 +1402,16 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 안전관리자로 소프트웨어 개발 직무와 무관하며, 산업안전 관련 자격증 취득이 필수 지원 자격입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[현대백화점] 2026년 하반기 현대백화점 안전관리자 신입사원 채용\n\n\n\n\n[직무세부]\nㆍ위험성평가, 작업환경측정 등\nㆍ시설/공사 관리, 안전관리\n\n\n[지원 자격]\nㆍ4년제 학사 학위 소지하신 분\nㆍ아래 안전관리 자격 사항(1개 이상)에 해당하시는 분\n- 4년제 이상 대학 산업안전 관련 학위 취득자\n- 산업안전지도사, 산업안전(산업)기사,\n건설안전(산업)기사 중 1개 이상 취득자\n※ 우대사항 : 소방, 시설 관련 자격/전공/경험 보유자\nㆍ2026년 12월 부 인턴 실습 및 2027년 2월 부 근무 가능자\n(기졸업자 또는 2027년 2월 졸업 예정자)\n\n\n[전형 절차]\nㆍ서류전형(11월) → AI 역량면접(11월) → 실무면접(12월) → 인턴실습(5주, 12월~1월) → 임원면접(2월) → 최종입사(2월 4주차)",
@@ -1372,6 +1432,12 @@
         "kind": "마감",
         "at": "2026-11-18T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "fc1a800f181ace24be3f6f27a51bcbac3e70b53982c91a80bb99c9fa475c0889",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 안전관리자로 소프트웨어 개발 직무와 무관하며, 산업안전 관련 자격증 취득이 필수 지원 자격입니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/361924": {
@@ -1780,7 +1846,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "법무 행정 및 법리 검토를 수행하는 직무로, 소프트웨어 개발이나 IT 기술 직무와는 거리가 멉니다.",
+          "reason": "해당 직무는 법무 담당자로 소프트웨어 개발 직무와 무관합니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -1804,9 +1870,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "c0d094324a9f9e362631956d01dea1b7c8744c679ab1e9d5d629dc473c2fa194",
+        "fingerprint": "a1f47ac90137dae64f2c8571a74a90ce7d762a706dba4910fa7e018add734359",
         "verdict": "not_relevant",
-        "reason": "법무 행정 및 법리 검토를 수행하는 직무로, 소프트웨어 개발이나 IT 기술 직무와는 거리가 멉니다.",
+        "reason": "해당 직무는 법무 담당자로 소프트웨어 개발 직무와 무관합니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -1935,7 +2001,7 @@
         "reasons": [],
         "ai": {
           "verdict": "relevant",
-          "reason": "보안 로그 분석 및 이상 데이터 탐지 등 IT 보안 관련 직무를 수행하며, 관련 프로젝트 경험자를 우대하여 학부생이 지원하기에 적합합니다.",
+          "reason": "보안 로그 분석 및 이상 징후 탐지 업무를 수행하며, Python 등 프로그래밍 언어와 보안 관련 기술 역량을 요구하므로 소프트웨어 관련 직무로 판단됩니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -1959,9 +2025,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "00f0554459393784192a2b62c970f4ed55a308c6d64cf61e1d68a807265bf037",
+        "fingerprint": "9d831d38785b2068a18b5eb2ad6047427047a77d28ab80ccfb2ddd4aab7395d5",
         "verdict": "relevant",
-        "reason": "보안 로그 분석 및 이상 데이터 탐지 등 IT 보안 관련 직무를 수행하며, 관련 프로젝트 경험자를 우대하여 학부생이 지원하기에 적합합니다.",
+        "reason": "보안 로그 분석 및 이상 징후 탐지 업무를 수행하며, Python 등 프로그래밍 언어와 보안 관련 기술 역량을 요구하므로 소프트웨어 관련 직무로 판단됩니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -5051,6 +5117,64 @@
       "summary": null,
       "body_attempts": 1,
       "fetched_at": "2026-11-03T12:27:42.906254+09:00"
+    },
+    "linkareer-intern/362085": {
+      "notice": {
+        "id": "linkareer-intern/362085",
+        "source_id": "linkareer-intern",
+        "article_no": "362085",
+        "title": "[(주)텐핑거스] [데이트코스 1위 앱] 제휴마케터 (MD) (미래내일인턴십) (~11/8)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362085",
+        "posted_on": "2026-10-30",
+        "pinned": false,
+        "deadline": "2026-11-08T23:59:00+09:00",
+        "first_seen": "2026-11-04T16:29:42.247412+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 제휴마케터(MD)로 소프트웨어 개발 직무와 무관합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "모집 공고 링크\n\n(인턴) [데이트팝] 제휴마케터 (MD) | 텐핑거스",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980278\" title=\"제휴마케터 1.jpg\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980279\" title=\"제휴마케터2.jpg\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980280\" title=\"제휴마케터3.jpg\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980281\" title=\"제휴마케터4.jpg\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980282\" title=\"제휴마케터5.jpg\"></p><p>모집 공고 링크&nbsp;<br><br><a href=\"https://career.likelion.net/jobs/059a8c46-5547-49b9-a892-c7b0aafaa127?from=list\">(인턴) [데이트팝] 제휴마케터 (MD) | 텐핑거스</a><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/980278",
+        "https://media-cdn.linkareer.com/se2editor/image/980279",
+        "https://media-cdn.linkareer.com/se2editor/image/980280",
+        "https://media-cdn.linkareer.com/se2editor/image/980281",
+        "https://media-cdn.linkareer.com/se2editor/image/980282"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T16:29:42.247412+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-08T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "0b0bac931da4f76cb4d3e228b5364a460b114cf4b8f61765c1ca22492d9de5b2",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 제휴마케터(MD)로 소프트웨어 개발 직무와 무관합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "linkareer-intern/362078": {
       "notice": {

@@ -158,6 +158,11 @@
           "first_seen": "2026-11-03T17:38:58.630694+09:00",
           "status": "notified",
           "attempts": 0
+        },
+        "141079": {
+          "first_seen": "2026-11-04T16:29:42.247412+09:00",
+          "status": "notified",
+          "attempts": 0
         }
       }
     },
@@ -646,7 +651,7 @@
         },
         "362081": {
           "first_seen": "2026-11-04T16:14:03.772529+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         },
         "362080": {
@@ -657,6 +662,11 @@
         "362078": {
           "first_seen": "2026-11-04T16:14:03.772529+09:00",
           "status": "pending",
+          "attempts": 0
+        },
+        "362085": {
+          "first_seen": "2026-11-04T16:29:42.247412+09:00",
+          "status": "skipped",
           "attempts": 0
         }
       }

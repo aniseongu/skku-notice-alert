@@ -45,17 +45,23 @@ SYSTEM = (
 )
 
 
-# 다른 전공의 우대 문구가 개인 맞춤 근거처럼 표시되지 않도록 보수적으로 처리한다.
-OTHER_MAJOR = re.compile(r"(?:전기|전자|기계|수학|통계)[^.!?]{0,35}(?:전공|학과|계열)[^.!?]{0,20}우대")
+# 다른 전공 우대가 개인 맞춤 근거로 오해되지 않게 보수적으로 표시한다.
+OTHER_MAJOR = re.compile(
+    r"(?:전기|전자(?!상거래)|기계|수학|통계)(?:공학|과|전공|학과|계열|학부|[ ,·/및과와])"
+)
 COMPUTER_MAJOR = re.compile(
-    r"(?:컴퓨터|소프트웨어|전산|정보보안)[^.!?]{0,35}(?:전공|학과|계열)[^.!?]{0,20}우대"
+    r"(?:컴퓨터(?:공학|과학)?|소프트웨어|전산|정보보안)(?:공학|과학|전공|학과|계열|학부|과)"
 )
 
 
 def preference_safe_reason(reason: str) -> str:
-    if isinstance(reason, str) and OTHER_MAJOR.search(reason) and not COMPUTER_MAJOR.search(reason):
-        return "담당 업무와 지원 자격을 원문에서 확인해 주세요"
-    return reason
+    if not isinstance(reason, str) or "우대" not in reason or not OTHER_MAJOR.search(reason):
+        return reason
+    before_preference = reason.split("우대", 1)[0]
+    computer = COMPUTER_MAJOR.search(before_preference)
+    if computer and "필수" not in before_preference[computer.end():]:
+        return reason
+    return "담당 업무와 지원 자격을 원문에서 확인해 주세요"
 
 
 def intern_fingerprint(title: str, body: str, images: list[str], model: str, profile: dict) -> str:

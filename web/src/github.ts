@@ -98,3 +98,8 @@ export async function requestCollection(repo: string, token: string): Promise<vo
     throw error;
   }
 }
+
+// GitHub 로그인으로도 Actions 화면에서 수동 실행할 수 있다.
+export function collectionWorkflowUrl(repo: string): string | null {
+  return REPO_PATTERN.test(repo) ? `https://github.com/${repo}/actions/workflows/notice-and-pages.yml` : null;
+}

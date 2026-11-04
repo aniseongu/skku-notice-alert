@@ -47,3 +47,4 @@
 
 
 2026-11-04의 compact-keys와 compact-connection은 정식 코드에 모의 GitHub 저장 상태를 주어 캡처했으며 실제 키와 토큰을 쓰지 않았다. overview-whale은 실제 Windows 개발용 Whale의 공식 사이트다. 설치된 휴대폰 PWA 검사와 구분한다.
+| 24판 아캠 강의 안내 | `2026-11-04/canvas-lectures-mobile.jpg` | 8.3 (독립 평가) | 보조 설명이 다소 촘촘함. 새 범위 안내는 자연스러운 두 줄이며 시작선과 조작부 정렬 일관 | 412px 가로 넘침 없음. 설정과 QR 8개 동작 검사 통과. 필수 수정 없음 |

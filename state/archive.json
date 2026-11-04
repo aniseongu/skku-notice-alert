@@ -4433,7 +4433,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 글로벌 고객 서비스(CS) 운영 및 기획으로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -4454,6 +4459,12 @@
         "kind": "마감",
         "at": "2026-12-27T23:59:00+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "ebcd2f5479d71dc7947f41d315a8c0d03c4dafc89afbae2131b7678ef755c69f",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 글로벌 고객 서비스(CS) 운영 및 기획으로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "jasoseol-intern/106957": {
@@ -4474,7 +4485,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 이커머스 채널 운영 및 관리 업무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -4495,6 +4511,12 @@
         "kind": "마감",
         "at": "2026-12-27T23:59:00+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "8be6315bcf59ad50d0211fff8d4193b0cc73a9e0ec9cf1e7a5b74f16ae70befb",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 이커머스 채널 운영 및 관리 업무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "jasoseol-intern/106956": {
@@ -4515,7 +4537,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 인플루언서 마케팅 운영 업무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -4536,6 +4563,12 @@
         "kind": "마감",
         "at": "2026-11-08T23:59:00+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "de1abbd2716f51a95e42e8bd2138b362b7883c0117e18488556d6162701d367a",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 인플루언서 마케팅 운영 업무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "jasoseol-intern/106922": {
@@ -4556,7 +4589,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 사내 총무 및 자산 관리 업무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -4577,6 +4615,12 @@
         "kind": "마감",
         "at": "2026-11-08T23:59:00+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "d464041c1496c3e02df4858d99a3e48ad2deeb29f4d84a57b4c95426d21a123e",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 사내 총무 및 자산 관리 업무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "jasoseol-intern/106853": {
@@ -4597,7 +4641,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "maybe",
+          "reason": "공고 본문 내용이 제공되지 않아 구체적인 직무와 자격 요건을 확인할 수 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -4618,6 +4667,12 @@
         "kind": "마감",
         "at": "2026-11-05T18:00:00+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "21cbbe0af3dbad809f5aed63263e8c5daa0a96714f00a1462ea1971653dabb22",
+        "verdict": "maybe",
+        "reason": "공고 본문 내용이 제공되지 않아 구체적인 직무와 자격 요건을 확인할 수 없습니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "skku-notice01/141041": {
@@ -4936,6 +4991,60 @@
       "summary": "중·고·대학생 및 일반인을 대상으로 자율주행 자동차 피지컬 AI 미션 챌린지를 개최합니다. 2인 1팀으로 구성하여 10월 30일까지 포스터 QR을 통해 신청할 수 있습니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-03T13:53:22.645265+09:00"
+    },
+    "linkareer-intern/361931": {
+      "notice": {
+        "id": "linkareer-intern/361931",
+        "source_id": "linkareer-intern",
+        "article_no": "361931",
+        "title": "[네이버웹툰] HR Compensation Assistant (체험형 인턴)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361931",
+        "posted_on": "2026-10-26",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T10:50:03.921998+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 HR 보상 운영 지원으로 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[네이버웹툰] HR Compensation Assistant (체험형 인턴)\n\n\n\n\n[담당 업무]\n- 평가/보상 제도 개선 및 운영 지원\n- 구성원 커뮤니케이션 지원 (관련 안내문/설명 자료 작성 등)\n\n\n[필요 역량]\n- 국내외 대학교(원) 재학생 또는 휴학생 중 최소 3개월 동안 Full-Time으로 근무 가능하신 분\n(조직 상황에 따라 최대 6개월까지 연장될 수 있음)\n- HR 및 보상 업무에 관심이 많고, 새로운 업무와 제도를 빠르게 배우고 이해하는 학습력을 갖춘 분\n- 숫자와 데이터를 꼼꼼히 검증하고 정합성 있게 처리할 수 있는 분\n- Excel, Google Sheet 등 스프레드시트를 활용한 데이터 정리 및 문서 작성이 가능한 분\n- 맡은 업무를 책임감 있게 수행하고, 필요한 사항을 적극적으로 확인하고 커뮤니케이션할 수 있는 분\n\n\n[우대 사항]\n- HR, 경영, 세무, 회계 등 관련 전공 또는 관련 분야에 관심이 있는 분\n- HR, 그 중에서도 보상 관련 업무 경험이 있는 분\n- 통계/데이터 분석 및 AI Tool 역량 우수하신 분\n- 영어/일본어 커뮤니케이션이 가능하신 분",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[네이버웹툰] HR Compensation Assistant (체험형 인턴)</b></span></p><p><span>[담당 업무]</span></p><p><span>- 평가/보상 제도 개선 및 운영 지원</span></p><p><span>- 구성원 커뮤니케이션 지원 (관련 안내문/설명 자료 작성 등)</span></p><p><span>[필요 역량]</span></p><p><span>﻿- 국내외 대학교(원) 재학생 또는 휴학생 중 최소 3개월 동안 Full-Time으로 근무 가능하신 분</span></p><p><span>&nbsp;(조직 상황에 따라 최대 6개월까지 연장될 수 있음)</span></p><p><span>- HR 및 보상 업무에 관심이 많고, 새로운 업무와 제도를 빠르게 배우고 이해하는 학습력을 갖춘 분</span></p><p><span>- 숫자와 데이터를 꼼꼼히 검증하고 정합성 있게 처리할 수 있는 분</span></p><p><span>- Excel, Google Sheet 등 스프레드시트를 활용한 데이터 정리 및 문서 작성이 가능한 분</span></p><p><span>- 맡은 업무를 책임감 있게 수행하고, 필요한 사항을 적극적으로 확인하고 커뮤니케이션할 수 있는 분</span></p><p><span>[우대 사항]</span></p><p><span>- HR, 경영, 세무, 회계 등 관련 전공 또는 관련 분야에 관심이 있는 분</span></p><p><span>- HR, 그 중에서도 보상 관련 업무 경험이 있는 분</span></p><p><span>- 통계/데이터 분석 및 AI Tool 역량 우수하신 분</span></p><p><span>- 영어/일본어 커뮤니케이션이 가능하신 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/979794\" title=\"20261104_104402.png\"><br></p><div><br></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/979794"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T10:50:03.921998+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-08T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "04761436f73292d43fb2a058189b950bb40b5399ac167f7edf1ab6c02496346d",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 HR 보상 운영 지원으로 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "jasoseol-intern/106909": {
       "notice": {

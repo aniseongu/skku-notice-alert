@@ -48,7 +48,7 @@
 | 알림 | pywebpush, Apprise |
 | 실행과 배포 | uv, GitHub Actions, GitHub Pages |
 
-공개 게시판에서 받은 글을 파싱하고 중복을 걸러 기준을 적용한 뒤 알림과 정적 API를 만들어요. 화면은 이 API를 읽어요. 참고한 오픈소스와 재사용한 부분은 [조사 기록](docs/research/open-source.md)에 정리했어요.
+공개 게시판에서 받은 글을 파싱하고 중복을 걸러 기준을 적용한 뒤 알림과 정적 API를 만들어요. 화면은 이 API를 읽어요. Google Gen AI SDK, Lit, vite-plugin-pwa, Apprise 등을 사용하고 아캠 플러스와 [LearningX Alert Web](https://github.com/hjkim24/learningx-alert-web)의 공개 구현을 참고했어요.
 
 ## 내 저장소에서 실행하기
 
@@ -77,7 +77,7 @@ GitHub 연결 토큰은 이 저장소 하나에만 접근하는 Fine-grained tok
 
 공개 저장소에는 코드와 게시판 목록, 공지 보관본이 올라가요. GitHub Pages의 JSON API에는 공지 본문, 요약과 개인화된 판정 이유도 포함돼요. 프로필 원문을 공개하지 않아도 판정 이유에서 관심 분야나 일부 조건이 드러날 수 있어요. 개인 판단을 비공개로 써야 한다면 공개 정적 API 구조를 그대로 사용하면 안 돼요.
 
-키와 토큰, 알림 구독 주소는 GitHub Secrets에 넣고 커밋하지 마세요. `.env`, `config/profile.yaml`, `state/canvas.json`은 Git에서 제외해요. 아이캠퍼스 알림 상태는 토큰에서 파생한 키로 암호화해 캐시하고, 복호화한 상태는 실행 중인 러너에만 둬요. 토큰이 바뀌거나 캐시가 사라지면 기준선을 다시 만들어요. Actions 캐시 자체는 비밀 저장소가 아니므로 민감한 원문을 넣지 마세요. 공개 보안 점검 범위와 한계는 [점검 기록](docs/research/2026-11-04_public-security.md)에 있어요.
+키와 토큰, 알림 구독 주소는 GitHub Secrets에 넣고 커밋하지 마세요. `.env`, `config/profile.yaml`, `state/canvas.json`은 Git에서 제외해요. 아이캠퍼스 알림 상태는 토큰에서 파생한 키로 암호화해 캐시하고, 복호화한 상태는 실행 중인 러너에만 둬요. 토큰이 바뀌거나 캐시가 사라지면 기준선을 다시 만들어요. Actions 캐시 자체는 비밀 저장소가 아니므로 민감한 원문을 넣지 마세요.
 
 ## 로컬 개발
 

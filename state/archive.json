@@ -109,6 +109,682 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/362059": {
+      "notice": {
+        "id": "linkareer-intern/362059",
+        "source_id": "linkareer-intern",
+        "article_no": "362059",
+        "title": "[카카오페이] [카카오게임즈] [체험형 인턴] UA마케팅 인턴 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362059",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "데이터 분석, AI 기반 마케팅 R&D 수행 등 소프트웨어 관련 직무를 포함하고 있으며 학부생이 지원 가능한 체험형 인턴 공고입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[카카오게임즈] [체험형 인턴] UA마케팅 인턴 채용\n\n\n\n\n◆ 업무내용\n- 퍼포먼스/데이터 마케팅 업무 보조\n- 구글, 메타, 틱톡 등 디지털 마케팅 매체 기반 퍼포먼스 마케팅 운용\n- 마케팅 데이터 분석 및 인사이트 도출\n- 디지털 마케팅 소재 기획 및 제작\n- AI 기반 마케팅 R&D 수행\n\n\n◆ 지원자격\n- 데이터 및 AI 기반 마케팅에 관심이 있는 분\n- 인턴십 기간 동안 주 5일 풀타임 근무가 가능한 분\n- 해외 출장에 결격 사유가 없는 분\n\n\n◆ 우대사항\n- Slack, Notion, Google Docs, MS Office 등 다양한 도구를 잘 활용하는 분\n- 외국어 능통자\n- AI 기반으로 자신만의 서비스나 효율화 도구를 만들어본 경험이 있는 분",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[카카오게임즈] [체험형 인턴] UA마케팅 인턴 채용</b></span></p><p><span>◆ 업무내용&nbsp;</span></p><p><span>- ​퍼포먼스/데이터 ​마케팅 업무 ​보조</span></p><p><span>- 구글, 메타, ​틱톡 등 ​디지털 ​마케팅 매체 ​기반 ​퍼포먼스 ​마케팅 운용</span></p><p><span>- 마케팅 ​데이터 ​분석 및 인사이트 ​도출</span></p><p><span>- ​디지털 ​마케팅 소재 기획 ​및 제작 ​</span></p><p><span>- ​AI 기반 ​마케팅 R&amp;D ​수행</span></p><p><span>◆ 지원자격</span></p><p><span>- ​데이터 및 AI ​기반 마케팅에 ​관심이 있는 분</span></p><p><span>- 인턴십 기간 동안 주 5일 풀타임 근무가 가능한 분</span></p><p><span>- 해외 출장에 결격 사유가 없는 분</span></p><p><span>◆ 우대사항</span></p><p><span>- Slack, Notion, Google Docs, MS Office 등 다양한 도구를 잘 활용하는 분</span></p><p><span>- 외국어 능통자</span></p><p><span>- AI 기반으로 자신만의 서비스나 효율화 도구를 만들어본 경험이 있는 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980206\" title=\"20261104_152027.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/980206"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T15:41:11.032641+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "e5d961f8dd28f8d55ec325833e387c9cc9eb9c919311b2f81e2521e148dcfbec",
+        "verdict": "relevant",
+        "reason": "데이터 분석, AI 기반 마케팅 R&D 수행 등 소프트웨어 관련 직무를 포함하고 있으며 학부생이 지원 가능한 체험형 인턴 공고입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362054": {
+      "notice": {
+        "id": "linkareer-intern/362054",
+        "source_id": "linkareer-intern",
+        "article_no": "362054",
+        "title": "[카카오게임즈] [체험형 인턴] 게임 마케팅 인턴 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362054",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "게임 마케팅 및 콘텐츠 관리 업무로 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와는 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[카카오게임즈] [체험형 인턴] 게임 마케팅 인턴 채용\n\n\n\n\n◆ 업무내용\n- 카카오게임즈에서 서비스 중인 게임 마케팅 업무 보조\n- 게임 시장·트렌드 조사 및 마케팅 액션 기획 아이디어 제안 참여\n- 광고 소재 및 마케팅 콘텐츠 관리\n- 내부 유관 부서, 파트너사, 대행사, 인플루언서 등과의 마케팅 업무 관련 협업 지원\n\n\n◆ 지원자격\n- 기초 오피스 프로그램(MS Office, Google Workspace 등)을 활용해 기획서, 보고서 등의 문서 작업이 가능하신 분\n- 게임 시장(장르별 주요 타깃과 유저들의 이용 동기)에 대한 이해를 바탕으로 마케팅 방향을 제안할 수 있는 분\n- 주어진 역할에 대한 책임감이 강하신 분\n- 꼼꼼함과 추진력을 함께 갖추신 분\n- 원활한 커뮤니케이션 역량을 갖추신 분\n- 인턴십 기간 동안 주 5일 풀타임 근무가 가능한 분\n- 해외 출장에 결격 사유가 없는 분\n\n\n◆ 우대사항\n- 졸업자 또는 졸업 예정자\n- 평소 다양한 게임을 즐겨 플레이하고, 게임 관련 방송·콘텐츠를 즐겨 보시는 분\n- 캐릭터·스토리·셀럽 등 팬덤 기반 IP의 매력을 활용한 굿즈 기획 및 제작 경험이 있으신 분\n- 오프라인 행사 및 참여형 이벤트 기획·실행 경험이 있으신 분\n- 온라인 콘텐츠·영상 기획 및 제작, 채널(블로그, 유튜브, SNS 등) 운영 경험이 있으신 분\n\n\n◆ 전형절차\n- 서류 전형 > 면접 전형 > 영입 확정",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[카카오게임즈] [체험형 인턴] 게임 마케팅 인턴 채용</b></span></p><p><span>◆ 업무내용&nbsp;</span></p><p><span>- ​카카오게임즈에서 ​서비스 중인 ​게임 마케팅 업무 ​보조</span></p><p><span>- 게임 ​시장·트렌드 ​조사 및 ​마케팅 ​액션 ​기획 아이디어 제안 ​참여 ​</span></p><p><span>- 광고 소재 ​및 ​마케팅 ​콘텐츠 관리</span></p><p><span>- 내부 ​유관 부서, ​파트너사, ​대행사, 인플루언서 ​등과의 마케팅 ​업무 ​관련 협업 지원</span></p><p><span>◆ 지원자격</span></p><p><span>- ​기초 오피스 ​프로그램(MS Office, Google Workspace 등)을 활용해 기획서, 보고서 등의 문서 작업이 가능하신 분&nbsp;</span></p><p><span>- 게임 시장(장르별 주요 타깃과 유저들의 이용 동기)에 대한 이해를 바탕으로 마케팅 방향을 제안할 수 있는 분</span></p><p><span>- 주어진 역할에 대한 책임감이 강하신 분</span></p><p><span>- 꼼꼼함과 추진력을 함께 갖추신 분</span></p><p><span>- 원활한 커뮤니케이션 역량을 갖추신 분</span></p><p><span>- 인턴십 기간 동안 주 5일 풀타임 근무가 가능한 분</span></p><p><span>- 해외 출장에 결격 사유가 없는 분</span></p><p><span>◆ 우대사항</span></p><p><span>- 졸업자 또는 졸업 예정자</span></p><p><span>- 평소 다양한 게임을 즐겨 플레이하고, 게임 관련 방송·콘텐츠를 즐겨 보시는 분</span></p><p><span>- 캐릭터·스토리·셀럽 등 팬덤 기반 IP의 매력을 활용한 굿즈 기획 및 제작 경험이 있으신 분</span></p><p><span>- 오프라인 행사 및 참여형 이벤트 기획·실행 경험이 있으신 분</span></p><p><span>- 온라인 콘텐츠·영상 기획 및 제작, 채널(블로그, 유튜브, SNS 등) 운영 경험이 있으신 분</span></p><p><span>◆ 전형절차&nbsp;</span></p><p><span>- 서류 전형 &gt; 면접 전형 &gt; 영입 확정</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980201\" title=\"20261104_151520.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/980201"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T15:41:11.032641+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "840a2f448fd63f6eee72dfb07a4677787dfc5f9ad43e903225337f309d75e89a",
+        "verdict": "not_relevant",
+        "reason": "게임 마케팅 및 콘텐츠 관리 업무로 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와는 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362052": {
+      "notice": {
+        "id": "linkareer-intern/362052",
+        "source_id": "linkareer-intern",
+        "article_no": "362052",
+        "title": "[카카오게임즈] [체험형 인턴] 유료화 기획 인턴 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362052",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "maybe",
+          "reason": "게임 지표 분석 및 유료화 구조 분석 업무를 수행하나, 구체적인 기술적 요구사항이 명시되지 않아 소프트웨어 직무 여부가 불분명합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[카카오게임즈] [체험형 인턴] 유료화 기획 인턴 채용\n\n\n\n\n◆ 업무내용\n- 모바일게임 라이브 서비스 관리 및 이슈 대응 보조\n- 게임 지표 분석 및 관리 지원\n- 유료화 구조 분석 및 방향성 도출 (전략 수립) 지원\n- 유료화 기획 (상품, 이벤트) 지원\n- 개발사 및 유관부서 커뮤니케이션\n\n\n◆ 지원자격\n- 긍정적인 마인드와 맡은 업무에 대한 열정과 책임감이 강하신 분\n- 인턴십 기간 동안 주 5일 풀타임 근무가 가능한 분\n- 해외 출장에 결격 사유가 없는 분\n\n\n◆ 우대사항\n- 플랫폼, 장르 불문 다수의 게임에 대한 플레이 경험을 보유하고 이해도가 높으신 분\n- 모바일MMORPG 플레이 경험이 많으신 분\n\n\n◆ 전형절차\n- 서류 전형 > 면접 전형 > 영입 확정",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[카카오게임즈] [체험형 인턴] 유료화 기획 인턴 채용</b></span></p><p><span>◆ 업무내용&nbsp;</span></p><p><span>- ​모바일게임 ​라이브 서비스 ​관리 및 이슈 ​대응 보조</span></p><p><span>- ​게임 ​지표 분석 ​및 ​관리 ​지원</span></p><p><span>- 유료화 구조 ​분석 ​및 방향성 도출 ​(전략 ​수립) ​지원</span></p><p><span>- 유료화 기획 ​(상품, 이벤트) ​지원</span></p><p><span>- ​개발사 및 ​유관부서 커뮤니케이션</span></p><p><span>◆ 지원자격</span></p><p><span>- ​긍정적인 ​마인드와 맡은 업무에 ​대한 열정과 ​책임감이 강하신 분</span></p><p><span>- 인턴십 기간 동안 주 5일 풀타임 근무가 가능한 분</span></p><p><span>- 해외 출장에 결격 사유가 없는 분</span></p><p><span>◆ 우대사항</span></p><p><span>- 플랫폼, 장르 불문 다수의 게임에 대한 플레이 경험을 보유하고 이해도가 높으신 분</span></p><p><span>- 모바일MMORPG 플레이 경험이 많으신 분</span></p><p><span>◆ 전형절차&nbsp;</span></p><p><span>- 서류 전형 &gt; 면접 전형 &gt; 영입 확정</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980190\" title=\"20261104_151009.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/980190"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T15:41:11.032641+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "a412253c897e845ccc077553d4e76ef3b332588397a3cfc69c29bc14492a9df1",
+        "verdict": "maybe",
+        "reason": "게임 지표 분석 및 유료화 구조 분석 업무를 수행하나, 구체적인 기술적 요구사항이 명시되지 않아 소프트웨어 직무 여부가 불분명합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362049": {
+      "notice": {
+        "id": "linkareer-intern/362049",
+        "source_id": "linkareer-intern",
+        "article_no": "362049",
+        "title": "[카카오게임즈] [체험형 인턴] 전략기획 인턴 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362049",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "전략기획 및 M&A 검토 업무로 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[카카오게임즈] [체험형 인턴] 전략기획 인턴 채용\n\n\n\n\n◆ 업무내용\n- 게임사 M&A 및 지분투자 검토 지원 (투자 대상 발굴, 시장 및 재무 분석, 투자검토 자료 작성)\n- 국내외 게임 퍼블리싱 및 IP 계약 검토 지원 (신규 타이틀 소싱 리서치, 계약 조건 비교, 협상 자료 준비)\n- 해외 파트너사 미팅 준비 및 커뮤니케이션 지원 (외국어 자료 작성, 미팅 내용 정리)\n- 전사 중장기 전략 수립 및 주요 실행 과제 관리 지원\n- 국내외 게임 시장 및 경쟁사 동향 리서치, 경영진 보고 자료 작성\n\n\n◆ 지원자격\n- 게임 산업에 관심이 많고, 게임을 사업과 투자 관점에서 바라볼 수 있는 분\n- 숫자와 데이터를 근거로 생각하고, 이를 간결하게 정리해 전달할 수 있는 분\n- 인턴십 기간 동안 주 5일 풀타임 근무가 가능한 분\n- 해외 출장에 결격 사유가 없는 분\n\n\n◆ 우대사항\n- 영어, 중국어, 일본어 중 1개 이상 비즈니스 수준으로 구사 가능한 분\n- 다양한 장르의 게임을 즐겨 플레이하며, 좋아하는 게임이 왜 잘 되는지 설명할 수 있는 분\n- M&A, 투자, 컨설팅, 사업개발 관련 경험이 있는 분 (인턴, 학회, 공모전 포함 / 게임 업계 경험 시 더욱 우대)\n- 재무제표를 이해하고 엑셀로 기본적인 분석 및 모델링이 가능한 분\n- 업무 효율화를 위한 AI 툴 활용 능력이 우수한 분",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[카카오게임즈] [체험형 인턴] 전략기획 인턴 채용</b></span></p><p><span>◆ 업무내용&nbsp;</span></p><p><span>- ​게임사 ​M&amp;A 및 ​지분투자 검토 지원 ​(투자 대상 ​발굴, ​시장 및 ​재무 ​분석, ​투자검토 자료 작성)</span></p><p><span>- ​국내외 ​게임 퍼블리싱 및 ​IP ​계약 ​검토 지원 (신규 ​타이틀 소싱 ​리서치, ​계약 조건 ​비교, 협상 ​자료 ​준비)</span></p><p><span>- 해외 파트너사 ​미팅 준비 ​및 커뮤니케이션 지원 (외국어 자료 작성, 미팅 내용 정리)</span></p><p><span>- 전사 중장기 전략 수립 및 주요 실행 과제 관리 지원</span></p><p><span>- 국내외 게임 시장 및 경쟁사 동향 리서치, 경영진 보고 자료 작성</span></p><p><span>◆ 지원자격</span></p><p><span>- 게임 산업에 관심이 많고, 게임을 사업과 투자 관점에서 바라볼 수 있는 분</span></p><p><span>- 숫자와 데이터를 근거로 생각하고, 이를 간결하게 정리해 전달할 수 있는 분</span></p><p><span>- 인턴십 기간 동안 주 5일 풀타임 근무가 가능한 분</span></p><p><span>- 해외 출장에 결격 사유가 없는 분</span></p><p><span>◆ 우대사항</span></p><p><span>- 영어, 중국어, 일본어 중 1개 이상 비즈니스 수준으로 구사 가능한 분</span></p><p><span>- 다양한 장르의 게임을 즐겨 플레이하며, 좋아하는 게임이 왜 잘 되는지 설명할 수 있는 분</span></p><p><span>- M&amp;A, 투자, 컨설팅, 사업개발 관련 경험이 있는 분 (인턴, 학회, 공모전 포함 / 게임 업계 경험 시 더욱 우대)</span></p><p><span>- 재무제표를 이해하고 엑셀로 기본적인 분석 및 모델링이 가능한 분</span></p><p><span>- 업무 효율화를 위한 AI 툴 활용 능력이 우수한 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980178\" title=\"20261104_150428.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/980178"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T15:41:11.032641+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "0b63532e28bd5cf57f6ed31166ecd66ace2ffb29e3452c58b87665a0a05b0122",
+        "verdict": "not_relevant",
+        "reason": "전략기획 및 M&A 검토 업무로 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362042": {
+      "notice": {
+        "id": "linkareer-intern/362042",
+        "source_id": "linkareer-intern",
+        "article_no": "362042",
+        "title": "[기초과학연구원] 2026-5회 광과학연구클러스터 별정직(체험형 청년인턴) 채용 공고",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362042",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "연구행정 보조 업무로 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[기초과학연구원] 2026-5회 광과학연구클러스터 별정직(체험형 청년인턴) 채용 공고\n\n\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 광과학 연구클러스터 (양자변환 연구단, 상대론적 레이저과학 연구단, 마이크로바이옴-체-뇌 생리학 연구단)\n\n\n\n\n[업무내용]\n\n\n- 연구행정 보조\n\n\n\n\n[자격요건]\n\n\n- 임용예정일 기준 만 19세 이상 34세 이하인 자\n※ 단, 제대군인의 경우, 「제대군인지원에 관한 법률」에 따라 응시연령 상한 연장 가능\n\n\n\n\n[채용절차]\n\n\n- 서류전형 - 면접전형 - 임용\n\n\n\n\n[공고상세]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[기초과학연구원] 2026-5회 광과학연구클러스터 별정직(체험형 청년인턴) 채용 공고</b></span></p><p><span><b>[모집분야]</b></span></p><p>- 광과학 연구클러스터 (양자변환 연구단, 상대론적 레이저과학 연구단, 마이크로바이옴-체-뇌 생리학 연구단)</p><p><span><b>[업무내용]</b></span></p><p>- 연구행정 보조</p><p><span><b>[자격요건]</b></span></p><p>- 임용예정일 기준 만 19세 이상 34세 이하인 자</p><p>※ 단, 제대군인의 경우, 「제대군인지원에 관한 법률」에 따라 응시연령 상한 연장 가능</p><p><span><b>[채용절차]</b></span></p><p>- 서류전형 - 면접전형 - 임용</p><p><span><b>[공고상세]</b></span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980164\" title=\"스크린샷 2026-11-04 145337.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980160\" title=\"스크린샷 2026-11-04 145351.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980159\" title=\"스크린샷 2026-11-04 145403.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980161\" title=\"스크린샷 2026-11-04 145420.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980162\" title=\"스크린샷 2026-11-04 145448.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980165\" title=\"스크린샷 2026-11-04 145504.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980163\" title=\"스크린샷 2026-11-04 145515.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/980164",
+        "https://media-cdn.linkareer.com/se2editor/image/980160",
+        "https://media-cdn.linkareer.com/se2editor/image/980159",
+        "https://media-cdn.linkareer.com/se2editor/image/980161",
+        "https://media-cdn.linkareer.com/se2editor/image/980162",
+        "https://media-cdn.linkareer.com/se2editor/image/980165",
+        "https://media-cdn.linkareer.com/se2editor/image/980163"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T15:41:11.032641+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-19T18:00:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "7af0a3979c4f587d2e385e193d52da876dd3d5fcf79c85c7a74a350174dac48d",
+        "verdict": "not_relevant",
+        "reason": "연구행정 보조 업무로 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362033": {
+      "notice": {
+        "id": "linkareer-intern/362033",
+        "source_id": "linkareer-intern",
+        "article_no": "362033",
+        "title": "[KCC TRANSPORT SYSTEM] [미국인턴/캘리포니아] KCC Transport System HQ 관리/회계팀 부문 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362033",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-02T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/362021": {
+      "notice": {
+        "id": "linkareer-intern/362021",
+        "source_id": "linkareer-intern",
+        "article_no": "362021",
+        "title": "[KCC Transport System, Inc.] [미국] 글로벌 종합 물류 기업 미주 본사 회계 모집",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/362021",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-02T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/362019": {
+      "notice": {
+        "id": "linkareer-intern/362019",
+        "source_id": "linkareer-intern",
+        "article_no": "362019",
+        "title": "[마콜컨설팅그룹 주식회사] [RA Intern 채용] Healthcare Practice - PA & Communications Consulting Team (채용연계형)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/362019",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-12T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/362009": {
+      "notice": {
+        "id": "linkareer-intern/362009",
+        "source_id": "linkareer-intern",
+        "article_no": "362009",
+        "title": "[DSL USA, Inc. (Dae Shin Logistics)] [미국] 물류 전문기업 TX, GA 지점 물류 코디네이터 모집",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/362009",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-02T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361987": {
+      "notice": {
+        "id": "linkareer-intern/361987",
+        "source_id": "linkareer-intern",
+        "article_no": "361987",
+        "title": "[(주)피엑스디] Product Design Intern (프로덕트 디자인 인턴)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361987",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-02T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/361983": {
+      "notice": {
+        "id": "linkareer-intern/361983",
+        "source_id": "linkareer-intern",
+        "article_no": "361983",
+        "title": "[딥다이브] [베리시] 재무회계 인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/361983",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-04T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "futurecar-notice/67754": {
+      "notice": {
+        "id": "futurecar-notice/67754",
+        "source_id": "futurecar-notice",
+        "article_no": "67754",
+        "title": "한국자동차공학회 추계학술대회 사업단 논문집 PPT 수정 제출 안내 [접수]",
+        "category": null,
+        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=67754",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "미래차 부트캠프 신청자로서 사업단 관련 학술대회 자료 수정 안내는 직접적인 대상이 될 수 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "안녕하세요, 미래차부트캠프사업단입니다.\n\n한국자동차공학회 추계학술대회와 관련하여 사업단 논문집 제작을 위해 기존에 제출받은 발표자료(PPT)의 내용 변경이 필요한 팀은 수정본을 제출해 주시기 바랍니다.\n\n최근 발표자료 내용 수정과 관련한 문의가 있어, 수정이 필요한 팀에 한해 추가 수정 기간을 마련하였습니다.\n\n수정이 필요한 팀은 11월 9일(월) 오전 10시까지 수정된 PPT 파일을 본 메일로 회신해 주시기 바랍니다.\n\n기한 내 별도 회신이 없는 경우 기존에 제출한 자료로 논문집을 제작할 예정이오니 참고 부탁드립니다.\n감사합니다.\n\n제출: kh9286@skku.edu",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\t\t\t\t<div><p>안녕하세요, 미래차부트캠프사업단입니다.</p><p>한국자동차공학회 추계학술대회와 관련하여 사업단 논문집 제작을 위해 기존에 제출받은 발표자료(PPT)의 내용 변경이 필요한 팀은 수정본을 제출해 주시기 바랍니다.</p><p>최근 발표자료 내용 수정과 관련한 문의가 있어, 수정이 필요한 팀에 한해 추가 수정 기간을 마련하였습니다.</p><p><strong>수정이 필요한 팀은 11월 9일(월) 오전 10시까지 수정된 PPT 파일을 본 메일로 회신해 주시기 바랍니다.</strong></p><p>기한 내 별도 회신이 없는 경우 기존에 제출한 자료로 논문집을 제작할 예정이오니 참고 부탁드립니다.</p><p>감사합니다.</p><p>제출: kh9286@skku.edu</p></div>\n\t\t\t\n\t\t\t\n          </div>",
+      "images": [],
+      "summary": "한국자동차공학회 추계학술대회 사업단 논문집 제작을 위해 내용 수정이 필요한 팀은 11월 9일 오전 10시까지 수정된 PPT 파일을 이메일로 제출해야 합니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T15:41:11.032641+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-09T10:00:00+09:00"
+      }
+    },
+    "futurecar-notice/67753": {
+      "notice": {
+        "id": "futurecar-notice/67753",
+        "source_id": "futurecar-notice",
+        "article_no": "67753",
+        "title": "2026 한국자동차공학회 추계학술대회 포스터 제작 지원 안내 [접수]",
+        "category": null,
+        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=67753",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "미래차 부트캠프 참여자에게 필요한 학술대회 포스터 제작 지원 공고입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "안녕하세요, 미래차부트캠프사업단입니다.\n금일 2026 한국자동차공학회 추계학술대회 포스터 제작 지원 안내 메일로 공지 드렸습니다.\n추가 문의 사항은 아래 메일로 문의 주시기 바랍니다.\nkh9286@skku.edu\n\n감사합니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\t\t\t\t<div><p>안녕하세요, 미래차부트캠프사업단입니다.</p><p>금일 2026 한국자동차공학회 추계학술대회 포스터 제작 지원 안내 메일로 공지 드렸습니다.</p><p>추가 문의 사항은 아래 메일로 문의 주시기 바랍니다.</p><p>kh9286@skku.edu</p><p>감사합니다.</p></div>\n\t\t\t\n\t\t\t\n          </div>",
+      "images": [],
+      "summary": "2026 한국자동차공학회 추계학술대회와 관련하여 포스터 제작을 지원하오니 관련 안내 메일을 확인하시기 바랍니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T15:41:11.032641+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "cse-notice/228049": {
+      "notice": {
+        "id": "cse-notice/228049",
+        "source_id": "cse-notice",
+        "article_no": "228049",
+        "title": "[고영테크놀러지] 2026 하반기 신입사원 채용 (~11/18)",
+        "category": "채용/모집",
+        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=228049",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": "2026-11-18T23:59:00+09:00",
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "maybe",
+          "reason": "신입사원 채용 공고이나 2027년 1월 입사 예정으로 현재 학부 2학년인 학생이 지원하기에는 시기상 적절하지 않을 수 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "인턴"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "[고영테크놀러지] 2026 하반기 신입사원 채용 (~11/18)\n\n■ 접수기간\n2026.11.03(화) ~ 2026.11.18(수) 23:59\n\n■ 모집 부문\nIndustrial Solution Business / Medical Solution Business / SW 개발 / 제조혁신 / 전략기획(구매, AX·PI, 법무)\n석·박사: Computer & AI Vision Algorithm\n\n■ 지원 자격\n학력 및 전공 무관 (Computer & AI Vision Algorithm 모집 부문 제외)\n지원 직무에 대한 열정과 배움·성장에 적극적인 자\n해외여행(출장)에 결격 사유가 없는 자\n\n■ 근무지\n광교 / 여주(제조혁신)\n\n■ 전형 절차\n서류전형 → 역량검사 → 면접 → 최종합격 → 입사(2027년 1월 예정)\n\n■ 지원 방법\n고영테크놀러지 채용 홈페이지(https://career.kohyoung.com)\n\n■ 문의\n카카오톡 채널 \"고영테크놀러지 채용\" 추가 후 1:1 채팅\n※ 자세한 모집분야는 공고문과 링크를 통해 참고 부탁드립니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><span>[고영테크놀러지] 2026 하반기 신입사원 채용 (~11/18)</span><br><br></p><p>■ 접수기간<br>2026.11.03(화) ~ 2026.11.18(수) 23:59<br><br></p><p>■ 모집 부문</p><ul><li>Industrial Solution Business / Medical Solution Business / SW 개발 / 제조혁신 / 전략기획(구매, AX·PI, 법무)</li><li>석·박사: Computer &amp; AI Vision Algorithm<br><br></li></ul><p>■ 지원 자격</p><ul><li>학력 및 전공 무관 (Computer &amp; AI Vision Algorithm 모집 부문 제외)</li><li>지원 직무에 대한 열정과 배움·성장에 적극적인 자</li><li>해외여행(출장)에 결격 사유가 없는 자<br><br></li></ul><p>■ 근무지<br>광교 / 여주(제조혁신)<br><br></p><p>■ 전형 절차<br>서류전형 → 역량검사 → 면접 → 최종합격 → 입사(2027년 1월 예정)<br><br></p><p>■ 지원 방법<br>고영테크놀러지 채용 홈페이지(<a href=\"https://event.stibee.com/v2/click/NTExMTE2LzM2ODYzNTcvMzQ4Lw/aHR0cHM6Ly9jYXJlZXIua29oeW91bmcuY29t\"></a><a href=\"https://career.kohyoung.com\">https://career.kohyoung.com</a>)<br><br></p><p>■ 문의<br>카카오톡 채널 \"고영테크놀러지 채용\" 추가 후 1:1 채팅</p><p><span>※ 자세한 모집분야는 공고문과 링크를 통해 참고 부탁드립니다.</span></p><p><span><img src=\"https://cse.skku.edu/_res/editor_image/2026/11/kPrRmWWEerkeBOmFZbUJ0.jpg\"></span><br></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://cse.skku.edu/_res/editor_image/2026/11/kPrRmWWEerkeBOmFZbUJ0.jpg"
+      ],
+      "summary": "고영테크놀러지에서 11월 18일까지 신입사원을 모집합니다. 서류와 역량 검사 및 면접을 거쳐 2027년 1월에 입사하게 됩니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T15:41:11.032641+09:00"
+    },
+    "cse-notice/228046": {
+      "notice": {
+        "id": "cse-notice/228046",
+        "source_id": "cse-notice",
+        "article_no": "228046",
+        "title": "[졸업평가] 연구논문작품 최종자료 반려된 학생 \"재업로드\" 기간 안내 (11/9월~11/11수)",
+        "category": "학사",
+        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=228046",
+        "posted_on": "2026-11-04",
+        "pinned": true,
+        "deadline": "2026-11-11T23:59:00+09:00",
+        "first_seen": "2026-11-04T15:41:11.032641+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "졸업평가 관련 학사 행정 안내로 학부 재학생의 인턴이나 교육 기회와는 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "최종자료가 반려 처리된 학생들은 아래 기재된 재업로드 기간 내에 서류를 보완하여 시스템에 다시 업로드하고 지도교수님께 승인을 받으시기 바랍니다.\n\n지도교수님의 최종자료 승인/반려 기간이 11/6금까지이므로, 아직 최종자료가 미확인 상태인 학생들은 11/6금까지 기다려주시기 바랍니다.\n이후에도 승인/반려 처리가 되어 있지 않은 경우에는 교수님께 메일로 확인 요청하시기 바랍니다.\n학과사무실에서도 교수님들께 별도로 안내드릴 예정입니다.\n\n▶ 최종자료 반려된 학생 재업로드 기간: 11/9(월) ~ 11/11(수) 23:59 까지\n\n반려된 학생들은 서류를 보완하여 재업로드 기간에 서류를 다시 업로드하셔야 합니다.\n\n시스템 접속이 불가능한 학생은 이메일(sjy310@skku.edu)로 서류 제출하시면 학과에서 대신 업로드해드리겠습니다.\n(이메일 제출 시에도 기한 엄수 바랍니다)\n\n※ 문의: 소프트웨어학과사무실 (sjy310@skku.edu)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><span>최종자료가 반려 처리된 학생들은 아래 기재된 재업로드 기간 내에 서류를 보완하여 시스템에 다시 업로드하고 지도교수님께 승인을 받으시기 바랍니다.</span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>지도교수님의 최종자료 승인/반려 기간이 11/6금까지이므로, 아직 최종자료가 미확인 상태인 학생들은 11/6금까지 기다려주시기 바랍니다.</span></span></span></p><p><span><span><span>이후에도 승인/반려 처리가 되어 있지 않은 경우에는 교수님께 메일로 확인 요청하시기 바랍니다.<br>학과사무실에서도 교수님들께 별도로 안내드릴 예정입니다.</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span><strong>▶ 최종자료 반려된 학생 재업로드 기간: <span>11</span><span>/9(월) ~ 11/11(수) 23:59 까지</span></strong></span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span><span>반려된 학생들은 서류를 보완하여&nbsp;</span></span><span><span><strong>재업로드 기간에 서류를 다시 업로드</strong></span></span><span><span>하셔야 합니다.</span></span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span>시스템 접속이 불가능한 학생은 이메일(sjy310@skku.edu)로 서류 제출하시면 학과에서 대신 업로드해드리겠습니다.</span></span></span></p><p><span><span><span>(이메일 제출 시에도&nbsp;</span><span><strong>기한 엄수</strong></span><span>&nbsp;바랍니다)</span></span></span></p><p><span><span><span><br></span></span></span></p><p><span><span><span><br></span></span></span></p><p><span>※ 문의: 소프트웨어학과사무실 (sjy310@skku.edu)</span></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [],
+      "summary": "졸업평가 최종자료가 반려된 학생은 11월 11일까지 보완하여 재업로드해야 합니다. 기존에 미확인 상태인 학생은 11월 6일까지 기다린 후 승인 여부를 확인하시기 바랍니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T15:41:11.032641+09:00"
+    },
     "linkareer-intern/361933": {
       "notice": {
         "id": "linkareer-intern/361933",
@@ -343,7 +1019,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "게임 모니터링 및 CS 업무는 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
+          "reason": "게임 모니터링 및 CS 업무로 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -369,9 +1045,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "448b20734df437ec03f4e66a59391f544c9a96498bfead18a9035ec9da16dd91",
+        "fingerprint": "d4b2859971b3fa55df906d66c56f8dff9bb41d58d4d1666d31ce1858aaa18fe0",
         "verdict": "not_relevant",
-        "reason": "게임 모니터링 및 CS 업무는 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
+        "reason": "게임 모니터링 및 CS 업무로 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -2769,7 +3445,7 @@
         "checked": true,
         "model": "gemini-3.1-flash-lite"
       },
-      "rechecked_at": "2026-11-04T03:21:26.249890+09:00"
+      "rechecked_at": "2026-11-04T15:41:11.032641+09:00"
     },
     "skku-notice01/141152": {
       "notice": {

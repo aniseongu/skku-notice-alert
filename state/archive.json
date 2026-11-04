@@ -109,6 +109,60 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/362132": {
+      "notice": {
+        "id": "linkareer-intern/362132",
+        "source_id": "linkareer-intern",
+        "article_no": "362132",
+        "title": "[주식회사 더파운더즈] [ANUA 아누아] 대만 인플루언서 마케팅 전환 인턴",
+        "category": "인턴",
+        "url": "https://linkareer.com/activity/362132",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T17:50:56.426869+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 인플루언서 마케팅 및 콘텐츠 기획 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "#더파운더즈 #글로벌 #인플마채용 #경력채용 #아누아 #Anua #K뷰티 #글로벌브랜드 #중화권마케팅 #홍콩MD #대만MD #자사몰운영 #프로모션기획 #상세페이지기획 #데이터분석 #시장조사 #뷰티트렌드 #중국어능력자 #비즈니스중국어 #원어민수준 #해외유학 #중화권시장 #커리어성장 #수시채용 #직무역량 #성과지향 #글로벌커리어 #포트폴리오",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><div><div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/931439\" title=\"대만 인플마 전환인턴 260903.png\"><br><br><br></p><p><span>#더파운더즈 #글로벌 #인플마채용 #경력채용 #아누아 #Anua #K뷰티 #글로벌브랜드 #중화권마케팅 #홍콩MD #대만MD #자사몰운영 &nbsp;#프로모션기획 #상세페이지기획 #데이터분석 #시장조사 #뷰티트렌드 #중국어능력자 #비즈니스중국어 #원어민수준 #해외유학 #중화권시장 #커리어성장 #수시채용 #직무역량 #성과지향 #글로벌커리어 #포트폴리오</span></p></div></div></div></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/931439"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T17:50:56.426869+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-02T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "aeda5ef3b837c6ffb287c8a4fd877027f0de823eb3035ec1378cffa66abcf156",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 인플루언서 마케팅 및 콘텐츠 기획 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "skku-notice01/140964": {
       "notice": {
         "id": "skku-notice01/140964",
@@ -2569,7 +2623,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "데이터 기반의 마케팅 전략을 수립하고 퍼포먼스 마케팅을 수행하는 직무로, 소프트웨어 개발 직무가 아닌 마케팅 직무입니다.",
+          "reason": "해당 직무는 그로스 마케팅 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -2595,9 +2649,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "c4eeeb53af5ad121e994aad6b659e36358b5d32c4534bebc7fbf738f7902f2d1",
+        "fingerprint": "a78429fca61aff8b969cf5e3ba877000b18d457493b4395269f4db7710657c5e",
         "verdict": "not_relevant",
-        "reason": "데이터 기반의 마케팅 전략을 수립하고 퍼포먼스 마케팅을 수행하는 직무로, 소프트웨어 개발 직무가 아닌 마케팅 직무입니다.",
+        "reason": "해당 직무는 그로스 마케팅 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -2721,7 +2775,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "해당 직무는 이커머스 패션 AMD로, 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와 거리가 멉니다.",
+          "reason": "해당 직무는 이커머스 입점팀 패션 AMD 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -2747,9 +2801,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "324d29e362e5b8dbad92d70503bc4540422a1396475fc0acbae4d341604d9eb0",
+        "fingerprint": "eaaf823e47445c1931c18102740c3e18495880cb675565ca4fb0bc1cd195d0de",
         "verdict": "not_relevant",
-        "reason": "해당 직무는 이커머스 패션 AMD로, 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와 거리가 멉니다.",
+        "reason": "해당 직무는 이커머스 입점팀 패션 AMD 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -2773,7 +2827,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "해당 직무는 이커머스 패션 AMD로, 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와 거리가 멉니다.",
+          "reason": "해당 직무는 이커머스 입점팀 패션 AMD 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -2799,9 +2853,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "e7515460aeea4bbf997db54666d5e55c7d1226d1862adee9d6502efc108189e3",
+        "fingerprint": "3cb3553dac8a0ccb62cd77facfaf104eb3455ce947f4c798d9dd0f4da1891e13",
         "verdict": "not_relevant",
-        "reason": "해당 직무는 이커머스 패션 AMD로, 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와 거리가 멉니다.",
+        "reason": "해당 직무는 이커머스 입점팀 패션 AMD 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -2824,8 +2878,8 @@
         "interests": [],
         "reasons": [],
         "ai": {
-          "verdict": "relevant",
-          "reason": "AI 스타트업에서 데이터 분석 및 AI 도구를 활용한 콘텐츠 기획 업무를 수행하므로 소프트웨어학과 학생이 지원하기에 적합합니다.",
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 콘텐츠 마케팅 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -2851,9 +2905,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "5c697139757dcb314769f9591c4d272b885701dd0406669967195c1b2bdc5e63",
-        "verdict": "relevant",
-        "reason": "AI 스타트업에서 데이터 분석 및 AI 도구를 활용한 콘텐츠 기획 업무를 수행하므로 소프트웨어학과 학생이 지원하기에 적합합니다.",
+        "fingerprint": "8267d83d994a882d86e55bac361d3b807808ae254aee1e14406b605fc50b6990",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 콘텐츠 마케팅 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -3889,7 +3943,7 @@
       "summary": "참가 희망자는 11월 27일까지 구글폼을 통해 신청하세요. 12월 21일부터 23일까지 진행되는 숏폼 콘텐츠 캠프에 참여하게 됩니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-03T17:38:58.630694+09:00",
-      "rechecked_at": "2026-11-04T05:40:11.025430+09:00"
+      "rechecked_at": "2026-11-04T17:50:56.426869+09:00"
     },
     "skku-notice01/137181": {
       "notice": {
@@ -5021,6 +5075,60 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-11-18T10:30:00+09:00"
+      }
+    },
+    "linkareer-intern/362135": {
+      "notice": {
+        "id": "linkareer-intern/362135",
+        "source_id": "linkareer-intern",
+        "article_no": "362135",
+        "title": "[주식회사 당근마켓] Communication Manager (인턴) - 경영지원 (커뮤니케이션)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362135",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T17:50:56.426869+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 경영지원 커뮤니케이션 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980461\" title=\"Communication Manager (인턴) - 경영지원 (커뮤니케이션).png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/980461"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T17:50:56.426869+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "a43e05f75fa93668fba2c7169d450bdbedb2036097be84bba88c7d78889e0ceb",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 경영지원 커뮤니케이션 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "jasoseol-intern/107031": {

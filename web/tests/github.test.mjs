@@ -40,3 +40,10 @@ test('manual collection dispatches the default branch using its existing workflo
     assert.deepEqual(JSON.parse(requests[1][1].body), { ref: 'main' });
   } finally { globalThis.fetch = original; }
 });
+
+test('manual fallback only builds links to valid GitHub repositories', async () => {
+  const { collectionWorkflowUrl } = await import('../src/github.ts');
+  assert.equal(collectionWorkflowUrl('owner/repo'), 'https://github.com/owner/repo/actions/workflows/notice-and-pages.yml');
+  assert.equal(collectionWorkflowUrl('../evil'), null);
+  assert.equal(collectionWorkflowUrl('owner/repo?x=1'), null);
+});

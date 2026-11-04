@@ -445,7 +445,7 @@ export class SettingsView extends LitElement {
       this.values = { ...this.values, GOOGLE_CLIENT_ID: '', GOOGLE_CLIENT_SECRET: '' };
       this.saved = { ...this.saved, GOOGLE_REFRESH_TOKEN: new Date().toISOString() };
       rememberSavedSecrets(this.repo, this.saved);
-      this.setStatus('google', true, '연결했어요. 15분 안에 "성대 공지" 캘린더에 마감이 들어가요');
+      this.setStatus('google', true, '연결했어요. 다음 공지 확인 때 "성대 공지" 캘린더에 마감이 들어가요');
     } catch (error) {
       this.setStatus('google', false, error instanceof GoogleError || error instanceof GitHubError ? error.message : '연결하지 못했어요');
     } finally { this.busy = ''; }
@@ -466,7 +466,7 @@ export class SettingsView extends LitElement {
     } finally { this.busy = ''; }
   }
 
-  // 마감 캘린더(deadlines.ics)와 RSS(feed.xml)는 Actions가 15분마다 새로 쓴다(GOAL.md M3).
+  // 마감 캘린더(deadlines.ics)와 RSS(feed.xml)는 Actions가 수집할 때 새로 쓴다(GOAL.md M3).
   private feedUrl(name: string) { return new URL(name, document.baseURI).href; }
 
   private async copyFeed(key: string, name: string) {

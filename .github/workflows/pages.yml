@@ -63,12 +63,13 @@ jobs:
         if: github.event_name == 'workflow_dispatch' && inputs.classify_interns
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PROFILE_YAML: ${{ secrets.PROFILE_YAML }}
         run: |
           uv run python - <<'PY'
           from pathlib import Path
           import yaml
           from skku_notice.archive import load_archive
-          from skku_notice.cli import _intern_decisions
+          from skku_notice.cli import _intern_decisions, _profile
           from skku_notice.state import load_state
 
           settings = yaml.safe_load(Path("config/sources.yaml").read_text())
@@ -77,7 +78,7 @@ jobs:
           archive, decisions = _intern_decisions(
               load_archive(Path("state/archive.json")), load_state(Path("state/seen.json")),
               settings["sources"], ai, os.environ.get("GEMINI_API_KEY", ""),
-              [10], settings["user_agent"],
+              [10], settings["user_agent"], _profile(),
           )
           print(f"인턴 AI 캐시: {len(decisions)}건")
           PY

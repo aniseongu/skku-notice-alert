@@ -332,8 +332,10 @@ def _images_for_judgment(
 
 
 
-def _intern_decisions(archive: Archive, state, sources: list[dict], ai: dict, api_key: str,
-                      budget: list[int], user_agent: str) -> tuple[Archive, dict[str, Judgment]]:
+def _intern_decisions(
+    archive: Archive, state, sources: list[dict], ai: dict, api_key: str,
+    budget: list[int], user_agent: str, profile: dict | None = None,
+) -> tuple[Archive, dict[str, Judgment]]:
     """Judge up to six ready public internships; cached decisions never create an alert by themselves."""
     if not api_key:
         return archive, {}
@@ -341,8 +343,8 @@ def _intern_decisions(archive: Archive, state, sources: list[dict], ai: dict, ap
     ranked = []
     judgments = {}
     model = ai["model"]
-    # 사용자 프로필을 공개 판정 이유에 노출하지 않도록 학부생 기본 맥락만 쓴다.
-    profile: dict = {}
+    profile = {key: value for key, value in (profile or {}).items()
+               if key in {"year", "semester", "enrolled_semester", "enrollment_status", "military_service"}}
     for key, item in archive.items.items():
         notice = item["notice"]
         if notice["source_id"] not in external or item.get("body_text") is None:
@@ -503,7 +505,7 @@ def run(args: argparse.Namespace) -> int:
             # 알림 대상 판단을 번역, 마감 추출과 요약보다 먼저 실행한다.
             archive, intern_judgments = _intern_decisions(
                 archive, state, settings["sources"], ai, os.environ.get("GEMINI_API_KEY", ""),
-                image_budget, settings["user_agent"],
+                image_budget, settings["user_agent"], profile,
             )
             archive = _translate(archive, ai, os.environ.get("GEMINI_API_KEY", ""))
             archive = _ai_deadlines(archive, ai, os.environ.get("GEMINI_API_KEY", ""))

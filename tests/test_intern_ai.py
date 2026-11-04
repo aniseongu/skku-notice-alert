@@ -48,6 +48,21 @@ def item(number, *, body="모집분야: 개발자", images=None):
             "match": {"ai": None, "priority": None}}
 
 
+def test_intern_judgment_receives_eligibility_profile(monkeypatch, tmp_path):
+    received = []
+    monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
+    monkeypatch.setattr(
+        cli, "judge_internships", lambda *args, **kwargs: received.append(kwargs["profile"]) or {}
+    )
+    cli._intern_decisions(
+        Archive({"jobs/1": item(1)}), State({}), [{"id": "jobs", "external": True}],
+        {"model": "m"}, "fake", [10], "test",
+        {"year": 2, "semester": 2, "enrolled_semester": 4,
+         "military_service": "복무 완료", "name": "private"},
+    )
+    assert received == [{"year": 2, "semester": 2, "enrolled_semester": 4, "military_service": "복무 완료"}]
+
+
 def test_backfill_prioritizes_pending_limits_to_six_and_caches(monkeypatch, tmp_path):
     stamp = "2026-11-04T00:00:00+09:00"
     state = State({"jobs": SourceState(stamp, {str(i): SeenRecord(stamp, "baseline", 0) for i in range(8)} | {

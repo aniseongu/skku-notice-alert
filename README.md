@@ -1,14 +1,16 @@
+<div align="center">
+
+<img src="web/public/icon-192.png" width="96" height="96" alt="성공 아이콘">
+
 # 성공
 
-성균관대 공지와 인턴 공고를 모아 보고, 관심 있는 글의 마감을 챙기는 개인용 PWA예요.
+성균관대 공지와 인턴 공고를 모아 보고, 해야 할 일을 챙기는 설치형 웹 앱
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Lit](https://img.shields.io/badge/Lit-324FFF?style=flat-square&logo=lit&logoColor=white)](https://lit.dev/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev/)
-[![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
-[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/aniseongu/skku-notice-alert/actions)
-[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white)](https://aniseongu.github.io/skku-notice-alert/)
+![version](https://img.shields.io/badge/version-0.1.0-124532)
+![PWA](https://img.shields.io/badge/PWA-installable-124532)
+![hosting](https://img.shields.io/badge/GitHub%20Pages-222222?logo=githubpages&logoColor=white)
+
+</div>
 
 **[성공 열기](https://aniseongu.github.io/skku-notice-alert/)**
 
@@ -26,12 +28,20 @@
 - 성대 공지는 새 글 전체를 알리고, 인턴은 Gemini가 공개 본문과 공고 이미지를 읽고 IT 직무와 지원 가능성을 판단해 선별해요. 키나 본문이 준비되지 않으면 판정을 기다리고, 애매한 글은 목록에만 남겨요.
 - 아이캠퍼스 개인 액세스 토큰을 연결하면 과제와 퀴즈 마감도 알려줘요. 강의 영상 진도는 별도 LearningX 인증이 필요해 지원 범위에서 제외해요. 수신 범위는 기기별로 달라요. 새 기기를 연결할 때 휴대폰은 요약과 마감, PC는 꺼짐을 기본으로 제안해요. 원하는 범위로 바꿀 수 있어요. 토큰은 한 번만 넣어 함께 써요. 개인 강의 내용은 공개 목록에 내보내지 않아요.
 
-## 구성
+## 기술 구성
+
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Lit](https://img.shields.io/badge/Lit-324FFF?style=flat-square&logo=lit&logoColor=white)](https://lit.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vite.dev/)
+[![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=flat-square&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
+[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/aniseongu/skku-notice-alert/actions)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white)](https://aniseongu.github.io/skku-notice-alert/)
 
 | 영역 | 사용 기술 |
 |---|---|
 | 수집과 파싱 | Python, httpx, selectolax, nh3 |
-| 판정과 요약 | Google Gen AI SDK, Gemini, 키가 없으면 규칙 적용 |
+| 판정과 요약 | Google Gen AI SDK, Gemini 본문 및 이미지 판정. 키가 없으면 인턴 판정 대기 |
 | 이미지 글자 인식 | RapidOCR, ONNX Runtime |
 | 화면 | TypeScript, Lit, Vite, Pretendard |
 | 설치와 오프라인 | vite-plugin-pwa, Workbox |

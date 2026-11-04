@@ -143,3 +143,15 @@ def test_major_preference_distinguishes_required_and_other_majors():
     assert intern_ai.preference_safe_reason("우대 전공: 전기전자") == neutral
     assert intern_ai.preference_safe_reason("전자상거래 개발, IT 관련 전공 우대") != neutral
     assert intern_ai.preference_safe_reason("컴퓨터공학 전공과 전자공학 전공 우대") != neutral
+
+
+def test_noncomputer_preference_alone_does_not_establish_development_fit():
+    verdict, reason = intern_ai.preference_safe_decision(
+        "relevant", "수학, 통계 전공자를 우대하며 VBA를 활용해요"
+    )
+    assert verdict == "maybe"
+    assert reason == "담당 업무와 지원 자격을 원문에서 확인해 주세요"
+    verdict, _ = intern_ai.preference_safe_decision(
+        "relevant", "소프트웨어 개발 직무이며 전자 전공을 우대해요"
+    )
+    assert verdict == "relevant"

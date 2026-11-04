@@ -199,4 +199,4 @@ def test_public_intern_reason_does_not_promote_other_majors(tmp_path):
     items = json.loads((tmp_path / "api/v1/matched.json").read_text())["items"]
     decision = items[notice.source_id + "/" + notice.article_no]["ai"]
     assert decision["reason"] == "담당 업무와 지원 자격을 원문에서 확인해 주세요"
-    assert decision["verdict"] == "relevant"
+    assert decision["verdict"] == "maybe"

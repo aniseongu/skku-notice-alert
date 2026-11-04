@@ -66,8 +66,22 @@ def preference_safe_reason(reason: str) -> str:
     return "담당 업무와 지원 자격을 원문에서 확인해 주세요"
 
 
+# 우대 문구를 제외한 뒤에도 실제 개발이나 데이터 직무 근거가 없다면 확인 대상으로 둔다.
+DEVELOPMENT_WORK = re.compile(
+    r"개발|엔지니어|데이터\s*(?:분석|과학|엔지니어)|인공지능|"
+    r"소프트웨어\s*(?:직무|설계)|프로그래밍\s*(?:업무|직무)"
+)
+
+
+def preference_safe_decision(verdict: str, reason: str) -> tuple[str, str]:
+    safe = preference_safe_reason(reason)
+    if verdict == "relevant" and safe != reason and not DEVELOPMENT_WORK.search(reason):
+        return "maybe", safe
+    return verdict, safe
+
+
 def intern_fingerprint(title: str, body: str, images: list[str], model: str, profile: dict) -> str:
-    raw = json.dumps([SYSTEM, title, body, images, model, profile],
+    raw = json.dumps([SYSTEM, "preference-guard-v2", title, body, images, model, profile],
                      ensure_ascii=False, sort_keys=True, default=str)
     return hashlib.sha256(raw.encode()).hexdigest()
 
@@ -116,5 +130,6 @@ def judge_internships(
             continue
         clean = "".join(c for c in reason if unicodedata.category(c) not in {"Cc", "Cf"}).strip()[:120]
         if clean:
-            judgments[key] = Judgment(verdict, preference_safe_reason(clean), model)
+            safe_verdict, safe_reason = preference_safe_decision(verdict, clean)
+            judgments[key] = Judgment(safe_verdict, safe_reason, model)
     return judgments

@@ -274,8 +274,17 @@ def test_learningx_reservation_survives_failed_scan_without_consuming_baseline(t
     monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
     monkeypatch.setenv("NOTIFY_URLS", "ntfys://fake-topic")
     attempts = []
+    clock = [NOW]
+
+    class ScanClock(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return clock[0].astimezone(tz)
+
+    monkeypatch.setattr(cli, "datetime", ScanClock)
 
     def fail_scan(*args, reserve_learningx):
+        clock[0] += timedelta(minutes=20)  # School collection precedes the actual launch.
         attempts.append(reserve_learningx())
         raise canvas.CanvasError("확인용 연결 실패")
 
@@ -284,7 +293,8 @@ def test_learningx_reservation_survives_failed_scan_without_consuming_baseline(t
                               all=False, from_fixtures=True, no_ai=True, no_canvas=False, export=None)
     assert cli.run(args) == 1
     state = load_canvas_state(cli.CANVAS_STATE_PATH)
-    assert state.last_learningx_launch and not state.initialized
+    assert state.last_learningx_launch == (NOW + timedelta(minutes=20)).isoformat()
+    assert not state.initialized
     # Even a crash after reservation cannot trigger a second launch within the hour.
     os.utime(cli.CANVAS_STATE_PATH, (0, 0))
     assert cli.run(args) == 1

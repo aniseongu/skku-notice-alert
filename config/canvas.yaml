@@ -1,4 +1,4 @@
 enabled: true
 summary_time: '09:00'
 leads: [1440, 180]
-min_refresh_minutes: 30
+min_refresh_minutes: 60

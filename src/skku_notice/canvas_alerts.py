@@ -31,6 +31,7 @@ class CanvasState:
     problem: dict | None = None
     version: int = 1
     initialized: bool = False
+    last_learningx_launch: str | None = None
 
 
 @dataclass(frozen=True)
@@ -49,7 +50,9 @@ def load_canvas_state(path: Path) -> CanvasState:
     raw = json.loads(path.read_text(encoding="utf-8"))
     if raw.get("version") != 1 or not isinstance(raw.get("notified"), dict):
         raise ValueError("unsupported Canvas state format")
-    return CanvasState(raw["notified"], raw.get("summary_sent_on"), raw.get("problem"), initialized=True)
+    return CanvasState(raw["notified"], raw.get("summary_sent_on"), raw.get("problem"),
+                       initialized=raw.get("initialized", True),
+                       last_learningx_launch=raw.get("last_learningx_launch"))
 
 
 def save_canvas_state(path: Path, state: CanvasState) -> None:
@@ -58,6 +61,8 @@ def save_canvas_state(path: Path, state: CanvasState) -> None:
         "notified": state.notified,
         "summary_sent_on": state.summary_sent_on,
         "problem": state.problem,
+        "initialized": state.initialized,
+        "last_learningx_launch": state.last_learningx_launch,
     }
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = None
@@ -108,7 +113,7 @@ def _summary(items: list[CanvasItem], now: datetime, summary_time: time) -> Canv
         return None
     label = "내일까지" if summary_time.hour >= 18 else "오늘"
     return CanvasAlert(
-        f"남은 강의, 과제, 퀴즈 {len(items)}개",
+        f"지금 할 수 있는 할 일 {len(items)}개",
         f"{label} 마감 {today_count}개, 이번 주 {week_count}개 남았어요",
         CANVAS_URL,
         summary_day=today.isoformat(),

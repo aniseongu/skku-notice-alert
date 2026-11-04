@@ -1,7 +1,8 @@
 # 출처: WhaleExtentions/extensions/icampus-check/executescript.js
-"""Read Canvas assignments and quizzes; keep legacy lecture parsing fixture-only."""
+"""Read actionable Canvas tasks and optional, temporarily authenticated LearningX lectures."""
 
 import json
+import sys
 import time
 from datetime import datetime
 from pathlib import Path
@@ -10,6 +11,7 @@ from urllib.parse import urljoin, urlsplit
 import httpx
 
 from skku_notice.canvas_alerts import CanvasItem
+from skku_notice.learningx import LearningXError, LearningXSession
 
 BASE = "https://canvas.skku.edu"
 FAVORITES = "/api/v1/users/self/favorites/courses?per_page=100"
@@ -173,7 +175,8 @@ def _lecture(course: dict, row: dict, now: datetime) -> CanvasItem | None:
 
 
 def read_canvas(
-    token: str, now: datetime, fixture_dir: Path | None = None, gap: float = 1.0
+    token: str, now: datetime, fixture_dir: Path | None = None, gap: float = 1.0,
+    reserve_learningx=None,
 ) -> list[CanvasItem]:
     """Use fixture responses or sequential, bearer-authenticated API calls."""
     if fixture_dir:
@@ -191,15 +194,35 @@ def read_canvas(
             timeout=10.0,
             follow_redirects=False,
         )
+        lecture_session = None
         try:
             courses = _get_pages(client, FAVORITES, gap)
-            return _read_courses(courses, now, lambda path: _get_pages(client, path, gap), gap, True)
+            if reserve_learningx and courses and reserve_learningx():
+                lecture_session = LearningXSession()
+                try:
+                    if not lecture_session.authenticate(client, courses, gap):
+                        lecture_session.close()
+                        lecture_session = None
+                        print("강의 조회 대기: 강의콘텐츠 도구를 찾지 못했어요", file=sys.stderr)
+                except LearningXError as exc:
+                    print(f"강의 조회 대기: {exc}", file=sys.stderr)
+                    lecture_session.close()
+                    lecture_session = None
+            result = _read_courses(courses, now, lambda path: _get_pages(client, path, gap),
+                                   gap, True, lecture_session)
+            if reserve_learningx:
+                print(f"Canvas 조회: 과제와 퀴즈 {sum(i.kind != '강의' for i in result)}개, "
+                      f"강의 {sum(i.kind == '강의' for i in result)}개")
+            return result
         finally:
+            if lecture_session:
+                lecture_session.close()
             client.close()
     return _read_courses(courses, now, read, 0, False)
 
 
-def _read_courses(courses: list[dict], now: datetime, get, gap: float, network: bool) -> list[CanvasItem]:
+def _read_courses(courses: list[dict], now: datetime, get, gap: float, network: bool,
+                  lecture_session=None) -> list[CanvasItem]:
     found: dict[str, CanvasItem] = {}
     for course in courses:
         if not isinstance(course, dict) or not str(course.get("id", "")).isdigit() or not course.get("name"):
@@ -212,9 +235,13 @@ def _read_courses(courses: list[dict], now: datetime, get, gap: float, network: 
             if not network
             else f"/api/v1/courses/{course_id}/assignments?include%5B%5D=submission&per_page=100"
         )
-        # LearningX modules need a separate session-issued xn_api_token, not a Canvas PAT.
-        # Keep production requests within the authorized Canvas token API boundary.
         modules = [] if network else get(f"modules_{course_id}.json")
+        if network and lecture_session:
+            time.sleep(gap)
+            try:
+                modules = lecture_session.read_modules(course_id, gap)
+            except LearningXError as exc:
+                print(f"강의 조회 대기: {exc}", file=sys.stderr)
         quizzes = []
         if network and any(_quiz_assignment(row) for row in assignments):
             time.sleep(gap)

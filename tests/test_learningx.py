@@ -18,12 +18,13 @@ def setup_flow(*, launch_url=None, action=None, redirect=None):
                 {"id": "context_external_tool_9", "label": "강의콘텐츠"},
             ])
         return httpx.Response(200, json={
-            "url": launch_url or BASE + "/courses/101/external_tools/9?signed=secret",
+            "url": launch_url or BASE + "/courses/101/external_tools/sessionless_launch?verifier=secret",
         })
 
     def session_response(request):
         session_requests.append(request)
-        if request.url.path == "/courses/101/external_tools/9":
+        if request.url.path in {"/courses/101/external_tools/9",
+                                "/courses/101/external_tools/sessionless_launch"}:
             target = action or BASE + "/learningx/lti"
             return httpx.Response(200, text=f'<form method="POST" action="{target}">'
                                   '<input type="hidden" name="oauth_signature" value="secret-signature">'

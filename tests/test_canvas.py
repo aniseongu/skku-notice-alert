@@ -1,4 +1,5 @@
 import argparse
+import json
 import os
 from dataclasses import replace
 from datetime import datetime, time, timedelta
@@ -67,11 +68,11 @@ def test_baseline_missed_lead_and_ttl() -> None:
 def test_missing_larger_lead_sends_smallest_once() -> None:
     items = canvas.read_canvas("", NOW, FIXTURES)
     alerts, state = plan_alerts(items, CanvasState(initialized=True), NOW, [1440, 180], time(9))
-    lecture = next(alert for alert in alerts if "그래프 강의" in alert.body)
+    lecture = next(alert for alert in alerts if alert.keys and "그래프 강의" in alert.body)
     assert lecture.keys == ("101:lecture:301|m180", "101:lecture:301|m1440")
     state = mark_sent(state, lecture, NOW)
     alerts, _ = plan_alerts(items, state, NOW, [1440, 180], time(9))
-    assert not any("그래프 강의" in alert.body for alert in alerts)
+    assert not any(alert.keys and "그래프 강의" in alert.body for alert in alerts)
 
 
 def test_network_401_has_no_request_details(monkeypatch) -> None:
@@ -250,8 +251,8 @@ def test_quiz_resource_availability_controls_summary_count(monkeypatch, blocked)
     assert len(items) == count
     assert "아직 못 하는 퀴즈" not in [item.title for item in items]
     assert ("지금 할 수 있는 퀴즈" in [item.title for item in items]) == (count == 2)
-    alerts, _ = plan_alerts(items, CanvasState(initialized=True), NOW, [], time(9))
-    assert len(alerts) == 1 and alerts[0].title.endswith(f" {count}개")
+    alerts, _ = plan_alerts(items, CanvasState(initialized=True), NOW, [], time(18))
+    assert len(alerts) == 1 and alerts[0].title == f"내일까지 마감 {count}개가 있어요"
     assert len(requests) == 3
     assert all(request.method == "GET" and request.url.path.startswith("/api/v1/") for request in requests)
 
@@ -283,7 +284,7 @@ def test_learningx_reservation_survives_failed_scan_without_consuming_baseline(t
 
     monkeypatch.setattr(cli, "datetime", ScanClock)
 
-    def fail_scan(*args, reserve_learningx):
+    def fail_scan(*args, reserve_learningx, on_incomplete):
         clock[0] += timedelta(minutes=20)  # School collection precedes the actual launch.
         attempts.append(reserve_learningx())
         raise canvas.CanvasError("확인용 연결 실패")
@@ -312,3 +313,70 @@ def test_lecture_requires_explicit_incomplete_state(completed, expected):
     assert bool(canvas._lecture({"id": 101, "name": "과목"}, row, NOW)) == expected
     row["published"] = False
     assert canvas._lecture({"id": 101, "name": "과목"}, row, NOW) is None
+
+
+def test_daily_summary_is_sent_even_when_no_tasks():
+    now = NOW.replace(hour=18, minute=0)
+    alerts, _ = plan_alerts([], CanvasState(initialized=True), now, [], time(18))
+    assert len(alerts) == 1
+    assert alerts[0].title == "내일까지 마감이 없어요"
+    assert alerts[0].summary_day == now.date().isoformat()
+    state = mark_sent(CanvasState(initialized=True), alerts[0], now)
+    assert plan_alerts([], state, now + timedelta(minutes=1), [], time(18))[0] == []
+
+
+def test_summary_waits_until_the_selected_time():
+    now = NOW.replace(hour=17, minute=59)
+    assert plan_alerts([], CanvasState(initialized=True), now, [], time(18))[0] == []
+    assert plan_alerts([], CanvasState(initialized=True), now + timedelta(minutes=1), [], time(18))[0]
+
+
+def test_incomplete_empty_scan_retries_daily_summary(tmp_path, monkeypatch):
+    now = NOW.replace(hour=18)
+
+    class FixedClock(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return now.astimezone(tz)
+
+    monkeypatch.setattr(cli, "datetime", FixedClock)
+    monkeypatch.setattr(cli, "CANVAS_STATE_PATH", tmp_path / "canvas.json")
+    monkeypatch.setattr(cli, "STATE_PATH", tmp_path / "seen.json")
+    monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
+    monkeypatch.setattr(cli, "load_dotenv", lambda **kwargs: None)
+    monkeypatch.setenv("CANVAS_TOKEN", "fixture")
+    monkeypatch.setenv("NOTIFY_URLS", "ntfys://fake-topic")
+    monkeypatch.setenv("CANVAS_SUMMARY_TIME", "18:00")
+    cli.save_canvas_state(cli.CANVAS_STATE_PATH, CanvasState(initialized=True))
+    sent = []
+    incomplete = [True]
+
+    def incomplete_scan(*args, on_incomplete, **kwargs):
+        if incomplete[0]:
+            on_incomplete()
+        return []
+
+    monkeypatch.setattr(cli, "read_canvas", incomplete_scan)
+    monkeypatch.setattr(cli, "send_canvas",
+                        lambda title, body, *args, **kwargs: sent.append((title, body)) or True)
+    args = argparse.Namespace(rules=Path("config/rules.example.yaml"), dry_run=False, all=False,
+                              from_fixtures=True, no_ai=True, no_canvas=False, export=None)
+    assert cli.run(args) == 0
+    assert sent and "확인하지 못했어요" in sent[0][0]
+    state = json.loads(cli.CANVAS_STATE_PATH.read_text())
+    assert state["summary_sent_on"] is None
+    assert state["partial_summary_sent_on"] == now.date().isoformat()
+    assert cli.run(args) == 0
+    assert len(sent) == 1
+    incomplete[0] = False
+    assert cli.run(args) == 0
+    assert len(sent) == 2 and sent[1][0] == "내일까지 마감이 없어요"
+    assert json.loads(cli.CANVAS_STATE_PATH.read_text())["summary_sent_on"] == now.date().isoformat()
+
+
+def test_daily_summary_includes_upcoming_task_titles():
+    items = canvas.read_canvas("", NOW, FIXTURES)
+    alerts, _ = plan_alerts(items, CanvasState(initialized=True), NOW, [], time(18))
+    summary = next(alert for alert in alerts if alert.summary_day)
+    assert items[0].title in summary.body
+    assert items[1].title in summary.body

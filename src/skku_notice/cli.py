@@ -708,15 +708,29 @@ def run(args: argparse.Namespace) -> int:
                         save_canvas_state(CANVAS_STATE_PATH, canvas_state)
                         return True
 
+                    incomplete = [False]
                     if args.dry_run or fixture_dir:
                         items = read_canvas(token, now, fixture_dir)
                     else:
-                        items = read_canvas(token, now, fixture_dir, reserve_learningx=reserve_learningx)
-                    summary_time = datetime.strptime(canvas_config["summary_time"], "%H:%M").time()
+                        items = read_canvas(token, now, fixture_dir, reserve_learningx=reserve_learningx,
+                                            on_incomplete=lambda: incomplete.__setitem__(0, True))
+                    clock = os.environ.get("CANVAS_SUMMARY_TIME") or canvas_config["summary_time"]
+                    try:
+                        summary_time = datetime.strptime(clock, "%H:%M").time()
+                    except ValueError:
+                        summary_time = datetime.strptime(canvas_config["summary_time"], "%H:%M").time()
                     alerts, next_state = plan_alerts(
                         items, canvas_state, now,
                         canvas_config["leads"], summary_time
                     )
+                    if incomplete[0]:
+                        alerts = [
+                            replace(alert, title="아이캠퍼스 일정을 모두 확인하지 못했어요",
+                                    body="잠시 뒤 다시 확인할게요. 아이캠퍼스에서도 확인할 수 있어요")
+                            if alert.summary_day else alert for alert in alerts
+                            if not alert.summary_day
+                            or canvas_state.partial_summary_sent_on != alert.summary_day
+                        ]
                     if canvas_state.problem:
                         next_state = replace(next_state, problem=None)
                     if args.dry_run:
@@ -731,6 +745,11 @@ def run(args: argparse.Namespace) -> int:
                             if send_canvas(alert.title, alert.body, alert.url, alert.priority,
                                            summary=bool(alert.summary_day)):
                                 next_state = mark_sent(next_state, alert, now)
+                                if incomplete[0] and alert.summary_day:
+                                    next_state = replace(
+                                        next_state, summary_sent_on=canvas_state.summary_sent_on,
+                                        partial_summary_sent_on=alert.summary_day,
+                                    )
                                 save_canvas_state(CANVAS_STATE_PATH, next_state)
                             else:
                                 failed = True

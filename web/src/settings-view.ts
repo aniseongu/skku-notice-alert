@@ -82,7 +82,7 @@ export class SettingsView extends LitElement {
     repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
     keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true }, connectionState: { state: true },
-    qr: { state: true }, handoff: { state: true }, canvasMode: { state: true }, scanningQr: { state: true },
+    qr: { state: true }, handoff: { state: true }, canvasMode: { state: true }, scanningQr: { state: true }, summaryTime: { state: true }, summaryTimeLoaded: { state: true },
   };
 
   keywords: string[] = [];
@@ -115,6 +115,8 @@ export class SettingsView extends LitElement {
   keywordDraft = '';
   browserNotifications = false;
   canvasMode: CanvasMode | null = null;
+  summaryTime = '21:00';
+  summaryTimeLoaded = false;
 
   createRenderRoot() { return this; }
 
@@ -222,6 +224,17 @@ export class SettingsView extends LitElement {
         this.connectionState = 'connected';
         if (!sync) { this.setStatus('github', true, '연결을 확인했어요'); return; }
         await this.pullKeywords(repo, token);
+        this.summaryTimeLoaded = false;
+        try {
+          const clock = await readVariable(repo, token, 'CANVAS_SUMMARY_TIME');
+          if (this.repo !== repo || this.token !== token) return;
+          this.summaryTime = clock && /^([01]\d|2[0-3]):[0-5]\d$/.test(clock) ? clock : '21:00';
+          this.summaryTimeLoaded = true;
+          const { 'summary-time': _previous, ...otherStatus } = this.status;
+          this.status = otherStatus;
+        } catch {
+          this.setStatus('summary-time', false, '요약 시간을 불러오지 못했어요. 기기 연결을 다시 확인해 주세요');
+        }
         const muted = await readVariable(repo, token, 'MUTED_CATEGORIES');
         this.muted = (muted ?? '').split(/[,\n]/).map((w) => w.trim()).filter(Boolean);
         const enabled = await browserPushEnabled();
@@ -422,6 +435,24 @@ export class SettingsView extends LitElement {
     } finally { this.busy = ''; }
   }
 
+  private async saveSummaryTime(value: string) {
+    if (!this.linked || this.busy || !/^([01]\d|2[0-3]):[0-5]\d$/.test(value)) {
+      const input = this.querySelector<HTMLInputElement>('#canvas-summary-time');
+      if (input) input.value = this.summaryTime;
+      return;
+    }
+    this.busy = 'summary-time';
+    try {
+      await saveVariable(this.repo, this.token, 'CANVAS_SUMMARY_TIME', value);
+      this.summaryTime = value;
+      this.setStatus('summary-time', true, '저장했어요. 모든 기기에 적용해요');
+    } catch {
+      const input = this.querySelector<HTMLInputElement>('#canvas-summary-time');
+      if (input) input.value = this.summaryTime;
+      this.setStatus('summary-time', false, '시간을 저장하지 못했어요. 연결을 확인하고 다시 골라 주세요');
+    } finally { this.busy = ''; }
+  }
+
   private addKeyword() {
     const word = this.keywordDraft.trim().replace(/\s+/g, ' ');
     if (word && !this.keywords.includes(word)) this.emit('keywords-change', [...this.keywords, word]);
@@ -519,16 +550,12 @@ export class SettingsView extends LitElement {
           </div>
         </section>
 
-        <section id="google-calendar" aria-labelledby="s-google-keys">
-          <h2 id="s-google-keys" class="settings-head">구글 캘린더 연결</h2>
-          <div class="box">${this.googleKeyRow()}</div>
-        </section>
       </div>`;
     const section = new URLSearchParams(location.search).get('section');
-    if (section === 'connection' || section === 'notifications' || section === 'keywords') return html`
+    if (section === 'connection' || section === 'notifications' || section === 'keywords' || section === 'calendar') return html`
       <div class="settings ${this.linked ? '' : 'unlinked'}">
         <a class="settings-back" href="?view=settings">설정으로</a>
-        ${section === 'connection' ? this.connectionSettings() : section === 'notifications' ? this.notificationSettings() : this.keywordSettings()}
+        ${section === 'connection' ? this.connectionSettings() : section === 'notifications' ? this.notificationSettings() : section === 'calendar' ? html`<section id="google-calendar" aria-labelledby="s-google-keys"><h2 id="s-google-keys" class="settings-head">구글 캘린더 연결</h2><div class="box">${this.googleKeyRow()}</div></section>` : this.keywordSettings()}
       </div>`;
     return html`
       <div class="settings settings-overview">
@@ -537,7 +564,7 @@ export class SettingsView extends LitElement {
           <div class="box">
             ${this.settingsLink('알림', '받을 공지와 이 기기 알림, 아이캠퍼스', '?view=settings&section=notifications')}
             ${this.settingsLink('관심 키워드', this.keywords.length ? `${this.keywords.length}개 키워드를 쓰고 있어요` : '관심 있는 공지를 골라 봐요', '?view=settings&section=keywords')}
-            ${this.settingsLink('캘린더', this.saved.GOOGLE_REFRESH_TOKEN ? '구글 캘린더에 연결돼 있어요' : '저장한 공지의 마감을 모아요', '?view=settings&keys=1#google-calendar')}
+            ${this.settingsLink('캘린더', this.saved.GOOGLE_REFRESH_TOKEN ? '구글 캘린더에 연결돼 있어요' : '저장한 공지의 마감을 모아요', '?view=settings&section=calendar')}
           </div>
         </section>
         <section aria-labelledby="s-connections">
@@ -696,9 +723,22 @@ export class SettingsView extends LitElement {
                       ?disabled=${!this.linked || !this.browserNotifications || this.busy !== ''}
                       @click=${() => this.setCanvasMode(value)}>${label}</button>`)}
                 </div>
-                <p class="field-note">하루 요약은 오전 9시 이후 한 번, 요약과 마감은 하루 전과 3시간 전에도 알려요. 수집 시각에 따라 늦을 수 있어요</p>
-                <p class="field-note">기기마다 따로 적용해요. 먼저 위의 이 기기 알림을 켜 주세요. 아이캠퍼스 토큰은 연결 키에 한 번만 넣으면 돼요</p>
+                <p class="field-note">요약과 마감을 고르면 마감 하루 전과 3시간 전에도 알려요</p>
+                <p class="field-note">기기마다 따로 적용해요. 먼저 위의 이 기기 알림을 켜 주세요</p>
+                <p class="field-note">${this.linked ? this.saved.CANVAS_TOKEN ? '아이캠퍼스 토큰이 저장돼 있어요' : '연결 키에서 아이캠퍼스 토큰을 저장해 주세요' : '기기를 연결하면 토큰 저장 여부를 확인할 수 있어요'}</p>
                 ${this.status['canvas-mode'] && !this.status['canvas-mode'].ok ? this.note('canvas-mode') : nothing}
+              </div>
+            </div>
+            <div class="setting">
+              <div class="setting-text">
+                <label class="setting-name" for="canvas-summary-time">하루 요약 시간</label>
+                <p class="setting-help">모든 기기에 같은 시간을 적용해요. 할 일이 없어도 알려요</p>
+              </div>
+              <div class="setting-control">
+                <input id="canvas-summary-time" class="input" type="time" .value=${this.summaryTime}
+                  ?disabled=${!this.linked || !this.summaryTimeLoaded || this.busy !== ''} @change=${(e: Event) => this.saveSummaryTime((e.target as HTMLInputElement).value)}>
+                ${this.note('summary-time')}
+                <p class="field-note">확인이 늦어지면 알림도 늦어져요</p>
               </div>
             </div>
           </div>

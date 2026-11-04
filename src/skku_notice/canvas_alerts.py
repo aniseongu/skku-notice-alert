@@ -32,6 +32,7 @@ class CanvasState:
     version: int = 1
     initialized: bool = False
     last_learningx_launch: str | None = None
+    partial_summary_sent_on: str | None = None
 
 
 @dataclass(frozen=True)
@@ -52,7 +53,8 @@ def load_canvas_state(path: Path) -> CanvasState:
         raise ValueError("unsupported Canvas state format")
     return CanvasState(raw["notified"], raw.get("summary_sent_on"), raw.get("problem"),
                        initialized=raw.get("initialized", True),
-                       last_learningx_launch=raw.get("last_learningx_launch"))
+                       last_learningx_launch=raw.get("last_learningx_launch"),
+                       partial_summary_sent_on=raw.get("partial_summary_sent_on"))
 
 
 def save_canvas_state(path: Path, state: CanvasState) -> None:
@@ -60,6 +62,7 @@ def save_canvas_state(path: Path, state: CanvasState) -> None:
         "version": 1,
         "notified": state.notified,
         "summary_sent_on": state.summary_sent_on,
+        "partial_summary_sent_on": state.partial_summary_sent_on,
         "problem": state.problem,
         "initialized": state.initialized,
         "last_learningx_launch": state.last_learningx_launch,
@@ -102,22 +105,20 @@ def _summary(items: list[CanvasItem], now: datetime, summary_time: time) -> Canv
     local = now.astimezone(KST)
     today = local.date()
     end_day = today + timedelta(days=2 if summary_time.hour >= 18 else 1)
-    today_count = sum(
-        local < item.due.astimezone(KST) and item.due.astimezone(KST).date() < end_day for item in items
+    upcoming = sorted(
+        (item for item in items if local < item.due.astimezone(KST)
+         and item.due.astimezone(KST).date() < end_day),
+        key=lambda item: item.due,
     )
-    week_end = today + timedelta(days=7)
-    week_count = sum(
-        local < item.due.astimezone(KST) and item.due.astimezone(KST).date() <= week_end for item in items
-    )
-    if not items:
-        return None
     label = "내일까지" if summary_time.hour >= 18 else "오늘"
-    return CanvasAlert(
-        f"지금 할 수 있는 할 일 {len(items)}개",
-        f"{label} 마감 {today_count}개, 이번 주 {week_count}개 남았어요",
-        CANVAS_URL,
-        summary_day=today.isoformat(),
-    )
+    if upcoming:
+        title = f"{label} 마감 {len(upcoming)}개가 있어요"
+        body = ", ".join(item.title for item in upcoming[:2])
+    else:
+        title = f"{label} 마감이 없어요"
+        body = "편하게 쉬어도 돼요"
+    return CanvasAlert(title, body, CANVAS_URL, summary_day=today.isoformat())
+
 
 
 def plan_alerts(

@@ -27,7 +27,7 @@ def test_desired_events_include_only_saved_future_deadlines():
     ]
     events = gcal.desired_events(notices, [notices[0], notices[2], notices[3], {"bad": 1}], NOW)
     titles = sorted(event["summary"] for event in events.values())
-    assert titles == ["[마감] 공지 1", "[마감] 공지 4"]
+    assert titles == ["공지 1", "공지 4"]
     first = events[gcal._event_id("cse-notice:1")]
     assert first["start"]["dateTime"] == "2026-11-16T09:30:00+09:00"
     assert first["end"]["dateTime"] == "2026-11-16T10:00:00+09:00"
@@ -128,3 +128,21 @@ def test_main_reports_counts_without_secrets(monkeypatch, capsys, tmp_path):
 def test_started_event_is_removed_when_notice_is_marked_passed():
     started = {**_notice("started", "2026-11-03T11:45:00+09:00"), "deadline_kind": "일정"}
     assert not gcal.desired_events([started], [started], NOW)
+
+
+def test_sync_updates_previous_deadline_prefix():
+    notice = _notice("1", "2026-11-16T10:00:00+09:00")
+    desired = gcal.desired_events([notice], [notice], NOW)
+    event_id, event = next(iter(desired.items()))
+    calls = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        calls.append(request.method)
+        if request.method == "GET":
+            old = {"id": event_id, **event, "summary": "[마감] 공지 1"}
+            return httpx.Response(200, json={"items": [old]})
+        return httpx.Response(200, json={})
+
+    with httpx.Client(transport=httpx.MockTransport(handler)) as client:
+        assert gcal.sync(client, "calendar", desired) == (0, 1, 0)
+    assert calls == ["GET", "PUT"]

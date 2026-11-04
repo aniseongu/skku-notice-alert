@@ -23,7 +23,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "시설, 물류, 일반관리 직무를 모집하며 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+          "reason": "시설, 물류, 일반관리 직무로 소프트웨어 관련 직무가 아니며 전공 요건 또한 상경, 법학, 시설 관련 전공으로 제한되어 있습니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -49,9 +49,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "40992fb138c1cf309f8ff1c88e0dec51bd3e365fa6eee43c5d4bf24dc21bc924",
+        "fingerprint": "95e67908b3176e05e1c0638768b8a1042d91e97a8dfd571b1585681a72cd77e9",
         "verdict": "not_relevant",
-        "reason": "시설, 물류, 일반관리 직무를 모집하며 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+        "reason": "시설, 물류, 일반관리 직무로 소프트웨어 관련 직무가 아니며 전공 요건 또한 상경, 법학, 시설 관련 전공으로 제한되어 있습니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -77,7 +77,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "시설, 물류, 일반관리 직무를 모집하며 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+          "reason": "시설, 물류, 일반관리 직무로 소프트웨어 관련 직무가 아니며 전공 요건 또한 상경, 법학, 시설 관련 전공으로 제한되어 있습니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -103,9 +103,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "b8f65fbbd15075776b4bee37e4ba7b9e2349a2ca21e551fe4eb55a5cc50f432b",
+        "fingerprint": "68da607dd5e99e4a1a371377213e551163f66328651bafd44b68143b1a45795c",
         "verdict": "not_relevant",
-        "reason": "시설, 물류, 일반관리 직무를 모집하며 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+        "reason": "시설, 물류, 일반관리 직무로 소프트웨어 관련 직무가 아니며 전공 요건 또한 상경, 법학, 시설 관련 전공으로 제한되어 있습니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -131,7 +131,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "해당 직무는 인플루언서 마케팅 관련 업무로 소프트웨어 개발 및 IT 기술 직무와 거리가 멉니다.",
+          "reason": "러시아/CIS 인플루언서 마케팅 직무로 소프트웨어 개발 및 관련 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -157,9 +157,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "3158e6d2161135a007114aa185b72231c06af09e9aa4ac04b6fffed288ddc3d4",
+        "fingerprint": "1e6fca6796b68498db4340ff44ae276e1374f83917cc2efc02277c378d258ddb",
         "verdict": "not_relevant",
-        "reason": "해당 직무는 인플루언서 마케팅 관련 업무로 소프트웨어 개발 및 IT 기술 직무와 거리가 멉니다.",
+        "reason": "러시아/CIS 인플루언서 마케팅 직무로 소프트웨어 개발 및 관련 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -184,8 +184,8 @@
         ],
         "reasons": [],
         "ai": {
-          "verdict": "relevant",
-          "reason": "의료기기 측정 및 검증 업무를 수행하며 기계, 전기, 전자 등 관련 전공자를 우대하므로 소프트웨어학과 학부생이 지원하기에 적합합니다.",
+          "verdict": "not_relevant",
+          "reason": "의료기기 수명시험 및 측정 업무를 수행하는 직무로, 소프트웨어 관련 직무가 아니며 우대 전공 또한 기계, 전기, 전자 분야에 한정되어 있습니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -209,9 +209,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "4ea428472bf69946e5d102b43d3270ad323997a498f6541076e3b7e648f0acb4",
-        "verdict": "relevant",
-        "reason": "의료기기 측정 및 검증 업무를 수행하며 기계, 전기, 전자 등 관련 전공자를 우대하므로 소프트웨어학과 학부생이 지원하기에 적합합니다.",
+        "fingerprint": "028302d15223046b84e4a7241dd0a47c83f1c386911d762fedad8cb76081a00c",
+        "verdict": "not_relevant",
+        "reason": "의료기기 수명시험 및 측정 업무를 수행하는 직무로, 소프트웨어 관련 직무가 아니며 우대 전공 또한 기계, 전기, 전자 분야에 한정되어 있습니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -237,7 +237,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "온라인 MD 업무를 수행하는 직무로, 소프트웨어 개발 및 IT 기술 직무와 거리가 멉니다.",
+          "reason": "온라인 MD 업무 보조를 수행하는 직무로 소프트웨어 개발 및 관련 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -261,9 +261,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "c25aabfa092df6ccb0d17b0db2fd5605d86885ee603d59e8c0903dee27c77b5a",
+        "fingerprint": "c56d1bb9fa01647f201a6c5460df81502bc559c4e859d9e39b28ec023a9a60f5",
         "verdict": "not_relevant",
-        "reason": "온라인 MD 업무를 수행하는 직무로, 소프트웨어 개발 및 IT 기술 직무와 거리가 멉니다.",
+        "reason": "온라인 MD 업무 보조를 수행하는 직무로 소프트웨어 개발 및 관련 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -289,7 +289,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "게임 퍼블리싱 지원 직무는 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
+          "reason": "게임 퍼블리싱 지원 직무로 소프트웨어 개발 및 기술 관련 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -315,9 +315,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "7f21c6fdcbd9521b3fd71a841c5a8b3642b245263a3f0a811796359b9e930d44",
+        "fingerprint": "237889301f727a504a556fe4ee1109c833b76be8c285a91b03e950fcc434a7f1",
         "verdict": "not_relevant",
-        "reason": "게임 퍼블리싱 지원 직무는 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
+        "reason": "게임 퍼블리싱 지원 직무로 소프트웨어 개발 및 기술 관련 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },

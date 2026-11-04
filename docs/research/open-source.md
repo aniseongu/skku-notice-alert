@@ -66,5 +66,5 @@
 
 - 공개 안내 https://learningx-alert.com/guide/home-screen/ 에서 홈 화면 웹 앱의 브라우저 푸시, 기기별 등록, 시험 알림까지 이어지는 흐름을 확인했다. iPhone은 홈 화면에서 연 앱에 알림을 허용하는 안내를 제공하고 Android는 Chrome의 알림 등록을 안내한다.
 - https://learningx-alert.com/terms/ 와 https://learningx-alert.com/guide/canvas-token/ 에서 Canvas 개인 토큰으로 연결, 과목별 선택, 알림 시각 설정, 미완료 과제와 퀴즈 및 강의 마감 알림을 확인했다.
-- 공개 GitHub 저장소는 사이트 링크와 검색에서 확인하지 못했다. 내부 수집이나 LearningX 인증 방식은 공개 문구만으로 추정하지 않는다. 성공은 자체 아캠 플러스의 공개 구현과 공식 Canvas API를 재사용한다.
+- GitHub 저장소 검색에서 실제 운영 저장소 https://github.com/hjkim24/learningx-alert-web 를 찾았다. README의 운영 주소가 일치한다. learningx_alert/learningx.py의 sessionless_launch, LTI 양식과 xn_api_token 사용은 아캠 플러스와 같은 흐름이다. accounts/collection.py의 완료 상태 명시 판정과 비공개 강의 제외를 재사용하고 회귀 검사를 추가했다.
 - 성공에 적용: 기기별 수신을 유지하고 현재 할 수 없는 퀴즈는 요약에서 제외한다. 임시 LearningX 인증으로 강의 마감을 확인한다. 실제 휴대폰 수신은 설정의 시험 알림으로 기기에서 확인한다.

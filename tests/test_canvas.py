@@ -299,3 +299,16 @@ def test_learningx_reservation_survives_failed_scan_without_consuming_baseline(t
     os.utime(cli.CANVAS_STATE_PATH, (0, 0))
     assert cli.run(args) == 1
     assert attempts == [True, False]
+
+
+@pytest.mark.parametrize("completed, expected", [
+    (False, True), (0, True), ("false", True), ("incomplete", True),
+    (True, False), (1, False), ("completed", False),
+    (None, False), ("unknown", False), (2, False),
+])
+def test_lecture_requires_explicit_incomplete_state(completed, expected):
+    row = {"id": 1, "title": "강의", "completed": completed,
+           "content_data": {"use_attendance": True, "due_at": "2026-11-03T12:00:00Z"}}
+    assert bool(canvas._lecture({"id": 101, "name": "과목"}, row, NOW)) == expected
+    row["published"] = False
+    assert canvas._lecture({"id": 101, "name": "과목"}, row, NOW) is None

@@ -198,3 +198,46 @@ def test_launch_session_cookie_redirect_only_follows_same_selected_tool():
     finally:
         pat.close()
         session.close()
+
+
+@pytest.mark.parametrize("label", ["Lecture Contents", "Modules", "Module", "주차 학습", "강의 콘텐츠"])
+def test_selects_current_tool_from_next_favorite_with_only_one_launch(monkeypatch, label):
+    requests, sleeps, session_requests = [], [], []
+    monkeypatch.setattr("skku_notice.learningx.time.sleep", sleeps.append)
+
+    def canvas_response(request):
+        requests.append(request)
+        if request.url.path.endswith("/tabs"):
+            assert request.url.params["include[]"] == "external"
+            if "/101/" in request.url.path:
+                return httpx.Response(200, json=[
+                    {"id": "context_external_tool_9", "label": "(Old) Lecture Contents"},
+                    {"id": "context_external_tool_8", "label": "(구) 강의콘텐츠"},
+                ])
+            return httpx.Response(200, json=[{"id": "context_external_tool_10", "label": label}])
+        assert request.url.path == "/api/v1/courses/102/external_tools/sessionless_launch"
+        return httpx.Response(200, json={
+            "url": BASE + "/courses/102/external_tools/10?session_token=private",
+        })
+
+    def session_response(request):
+        session_requests.append(request)
+        if request.method == "GET":
+            return httpx.Response(200, text='<form method="post" action="/learningx/lti">'
+                                  '<input type="hidden" name="signature" value="secret"></form>')
+        return httpx.Response(200, headers={"Set-Cookie": "xn_api_token=temporary; Path=/; Secure"})
+
+    pat = httpx.Client(transport=httpx.MockTransport(canvas_response))
+    session = LearningXSession(httpx.Client(transport=httpx.MockTransport(session_response)))
+    try:
+        courses = [*COURSES, {"id": 102, "name": "second"}, {"id": 103, "name": "third"}]
+        assert session.authenticate(pat, courses, 1.5)
+        assert [request.url.path for request in requests] == [
+            "/api/v1/courses/101/tabs", "/api/v1/courses/102/tabs",
+            "/api/v1/courses/102/external_tools/sessionless_launch",
+        ]
+        assert sleeps == [1.5, 1.5]
+        assert len(session_requests) == 2
+    finally:
+        pat.close()
+        session.close()

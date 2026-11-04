@@ -702,7 +702,7 @@ export class SettingsView extends LitElement {
             </div>
           </div>
           <div class="setting">
-            <div class="setting-text"><p class="setting-name">받을 공지</p><p class="setting-help">목록에서는 모든 공고를 볼 수 있어요</p></div>
+            <div class="setting-text"><p class="setting-name">받을 공지</p><p class="setting-help">알림을 보내는 기준이에요</p></div>
             <div class="setting-control"><p class="field-note">성대 공지는 모두 알려요. 인턴은 Gemini가 본문을 읽고 지원할 만한 IT 직무로 판단한 공고만 알려요</p></div>
           </div>
           </div>
@@ -713,19 +713,17 @@ export class SettingsView extends LitElement {
             <div class="setting">
               <div class="setting-text">
                 <p class="setting-name">이 기기 아캠 알림</p>
-                <p class="setting-help">지금 할 수 있는 강의, 과제와 퀴즈 마감을 받아요. 노트북에서는 따로 끌 수 있어요</p>
+                <p class="setting-help">강의, 과제와 퀴즈 마감을 이 기기에서 받아요</p>
               </div>
               <div class="setting-control">
-                ${!this.linked ? html`<p class="field-note">기기 연결에서 노트북 QR로 연결하면 알림을 설정할 수 있어요</p>` : nothing}
                 <div class="segmented" role="radiogroup" aria-label="이 기기 아캠 알림">
                   ${CANVAS_MODES.map(({ value, label }) => html`
                     <button type="button" role="radio" aria-checked=${String(this.browserNotifications && this.canvasMode === value)}
                       ?disabled=${!this.linked || !this.browserNotifications || this.busy !== ''}
                       @click=${() => this.setCanvasMode(value)}>${label}</button>`)}
                 </div>
-                <p class="field-note">요약과 마감을 고르면 마감 하루 전과 3시간 전에도 알려요</p>
-                <p class="field-note">기기마다 따로 적용해요. 먼저 위의 이 기기 알림을 켜 주세요</p>
-                <p class="field-note">${this.linked ? this.saved.CANVAS_TOKEN ? '아이캠퍼스 토큰이 저장돼 있어요' : '연결 키에서 아이캠퍼스 토큰을 저장해 주세요' : '기기를 연결하면 토큰 저장 여부를 확인할 수 있어요'}</p>
+                <p class="field-note">${!this.linked ? '기기를 연결하면 알림을 설정할 수 있어요' : !this.browserNotifications ? '먼저 이 기기 알림을 켜 주세요' : '요약과 마감을 고르면 하루 전과 3시간 전에도 알려요'}</p>
+                ${this.linked && !this.saved.CANVAS_TOKEN ? html`<p class="field-note">연결 키에서 아이캠퍼스 토큰을 저장해 주세요</p>` : nothing}
                 ${this.status['canvas-mode'] && !this.status['canvas-mode'].ok ? this.note('canvas-mode') : nothing}
               </div>
             </div>
@@ -735,7 +733,7 @@ export class SettingsView extends LitElement {
                 <p class="setting-help">모든 기기에 같은 시간을 적용해요. 할 일이 없어도 알려요</p>
               </div>
               <div class="setting-control">
-                <input id="canvas-summary-time" class="input" type="time" .value=${this.summaryTime}
+                <input id="canvas-summary-time" class="input time-input" type="time" lang="ko" .value=${this.summaryTime}
                   ?disabled=${!this.linked || !this.summaryTimeLoaded || this.busy !== ''} @change=${(e: Event) => this.saveSummaryTime((e.target as HTMLInputElement).value)}>
                 ${this.note('summary-time')}
                 <p class="field-note">확인이 늦어지면 알림도 늦어져요</p>

@@ -578,10 +578,9 @@ export class NoticeApp extends LitElement {
           <header class="pane-head topbar glass">
             ${settings ? html`<button type="button" class="icon-button narrow-only back" aria-label="설정 닫기"
               @click=${this.leaveSettings}>${icon('back')}</button>` : nothing}
-            ${settings ? nothing : html`<svg class="brand-mark narrow-only" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>`}
             <div class="topbar-text">
               <h1>${this.view === 'all' && !this.keyword
-                ? html`<span class="narrow-only">${APP_NAME}</span><span class="wide-only">${title}</span>` : title}</h1>
+                ? html`<span class="narrow-only">${APP_NAME}</span><span class="wide-only">${title}</span>` : title}${settings ? nothing : html`<svg class="brand-mark narrow-only" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>`}</h1>
               ${settings ? html`<p class="updated">알림과 연결을 정해요</p>` : this.updatedLine(list.length)}
             </div>
             ${settings ? nothing : html`
@@ -746,7 +745,7 @@ export class NoticeApp extends LitElement {
     }).format(new Date(this.generatedAt));
     const total = count === undefined ? '' : `${count}건, `;
     // "확인 필요"(판정)와 겹치지 않게 수집 지연은 다른 말로 쓴다.
-    return html`<p class="updated ${stale ? 'stale' : ''}">${total}${stale ? `${time} 뒤로 새 글을 못 받았어요` : `${time} 기준`}</p>`;
+    return html`<p class="updated ${stale ? 'stale' : ''}">${stale ? `${time} 이후 확인이 늦어요` : `${total}${time} 기준`}</p>`;
   }
 
   private listBody(list: Notice[]): TemplateResult | TemplateResult[] {

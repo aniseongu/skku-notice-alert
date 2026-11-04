@@ -61,3 +61,10 @@
 ## 사용성 비교 추가 (2026-11-03)
 
 학교 공지 앱과 범용 수집기의 기능, 우리 화면의 UX 기준 검토 및 우선순위는 [공지 서비스 사용성 검토](2026-11-03_notice-service-ux-review.md)에 정리했다. KNUTICE, KW 알리미, SKKU 공지 모아보기, FreshRSS, Miniflux와 changedetection.io의 원본을 확인했다.
+
+## LearningX Alert 휴대폰 알림 참고 (2026-11-04, Codex)
+
+- 공개 안내 https://learningx-alert.com/guide/home-screen/ 에서 홈 화면 웹 앱의 브라우저 푸시, 기기별 등록, 시험 알림까지 이어지는 흐름을 확인했다. iPhone은 홈 화면에서 연 앱에 알림을 허용하는 안내를 제공하고 Android는 Chrome의 알림 등록을 안내한다.
+- https://learningx-alert.com/terms/ 와 https://learningx-alert.com/guide/canvas-token/ 에서 Canvas 개인 토큰으로 연결, 과목별 선택, 알림 시각 설정, 미완료 과제와 퀴즈 및 강의 마감 알림을 확인했다.
+- 공개 GitHub 저장소는 사이트 링크와 검색에서 확인하지 못했다. 내부 수집이나 LearningX 인증 방식은 공개 문구만으로 추정하지 않는다. 성공은 자체 아캠 플러스의 공개 구현과 공식 Canvas API를 재사용한다.
+- 성공에 적용: 기기별 수신을 유지하고 현재 할 수 없는 퀴즈는 요약에서 제외한다. 임시 LearningX 인증으로 강의 마감을 확인한다. 실제 휴대폰 수신은 설정의 시험 알림으로 기기에서 확인한다.

@@ -1,0 +1,91 @@
+name: Check iCampus connection
+
+on:
+  workflow_dispatch:
+
+# Share the collector lock because both jobs update the encrypted auth-attempt timestamp.
+concurrency:
+  group: notice-crawl
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: github-pages
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+      - run: uv sync --frozen
+      - name: Restore encrypted state
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
+        with:
+          path: state/canvas.enc
+          key: canvas-encrypted-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: canvas-encrypted-v1-
+      - name: Open encrypted state
+        env:
+          CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+        run: uv run python -m skku_notice.canvas_cache open
+      - name: Verify temporary lecture authentication without notifications
+        env:
+          CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+        run: |
+          uv run python - <<'PY'
+          import os
+          from dataclasses import replace
+          from datetime import datetime
+          from pathlib import Path
+          import httpx
+          from skku_notice.canvas import CanvasError, FAVORITES, _get_pages
+          from skku_notice.canvas_alerts import load_canvas_state, save_canvas_state
+          from skku_notice.deadline import KST
+          from skku_notice.learningx import LearningXError, LearningXSession
+
+          path = Path('state/canvas.json')
+          state = load_canvas_state(path)
+          now = datetime.now(KST)
+          if state.last_learningx_launch and (
+              now - datetime.fromisoformat(state.last_learningx_launch)
+          ).total_seconds() < 3600:
+              print('강의 인증 확인 대기: 한 시간에 한 번만 시도해요')
+              raise SystemExit(0)
+          token = os.environ.get('CANVAS_TOKEN', '')
+          if not token:
+              raise SystemExit('Canvas 토큰을 먼저 연결해 주세요')
+          session = LearningXSession()
+          try:
+              with httpx.Client(headers={'Authorization': f'Bearer {token}', 'Accept': 'application/json'},
+                                timeout=10, follow_redirects=False) as client:
+                  courses = _get_pages(client, FAVORITES)
+                  save_canvas_state(path, replace(state, last_learningx_launch=datetime.now(KST).isoformat()))
+                  if not session.authenticate(client, courses):
+                      raise LearningXError('현재 강의콘텐츠 도구를 찾지 못했어요')
+                  checked = 0
+                  for course in courses:
+                      if isinstance(course, dict) and str(course.get('id', '')).isdigit():
+                          session.read_modules(str(course['id']))
+                          checked += 1
+                  print(f'LearningX 임시 인증 성공, 즐겨찾기 과목 {checked}개 강의 목록 확인')
+          except (CanvasError, LearningXError) as exc:
+              raise SystemExit(str(exc)) from None
+          finally:
+              session.close()
+          PY
+      - name: Seal state
+        if: always() && hashFiles('state/canvas.json') != ''
+        env:
+          CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+        run: uv run python -m skku_notice.canvas_cache seal
+      - name: Save encrypted state
+        if: always() && hashFiles('state/canvas.enc') != ''
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
+        with:
+          path: state/canvas.enc
+          key: canvas-encrypted-v1-${{ github.run_id }}-${{ github.run_attempt }}

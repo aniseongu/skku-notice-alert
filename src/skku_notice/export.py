@@ -8,6 +8,8 @@ from pathlib import Path
 from skku_notice.archive import Archive
 from skku_notice.deadline import KST
 from skku_notice.feeds import deadlines_ics, rss_feed
+from skku_notice.intern_ai import preference_safe_reason
+from skku_notice.notification_policy import is_internship
 
 
 def _public_notice(item: dict) -> dict:
@@ -50,11 +52,15 @@ def export_site(
     }
     # D-010 API v1의 기존 이름을 유지하고 interests는 추가 필드로 넣는다.
     personal = {}
+    external = {source["id"] for source in sources if source.get("external")}
     for item in ordered:
         decision = item["match"].copy()
         decision.setdefault("interests", [])
         if decision.get("ai") is not None:
             decision["ai"] = {**decision["ai"], "interests": decision["ai"].get("interests", [])}
+            notice = item["notice"]
+            if notice["source_id"] in external or is_internship(notice["title"]):
+                decision["ai"]["reason"] = preference_safe_reason(decision["ai"].get("reason", ""))
         personal[item["notice"]["id"]] = decision
     matched = {
         "version": 1,

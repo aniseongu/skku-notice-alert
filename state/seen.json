@@ -198,6 +198,11 @@
           "first_seen": "2026-11-04T17:03:17.008934+09:00",
           "status": "notified",
           "attempts": 0
+        },
+        "140964": {
+          "first_seen": "2026-11-04T17:19:32.059715+09:00",
+          "status": "notified",
+          "attempts": 0
         }
       }
     },
@@ -717,6 +722,16 @@
         "362088": {
           "first_seen": "2026-11-04T17:03:17.008934+09:00",
           "status": "notified",
+          "attempts": 0
+        },
+        "362118": {
+          "first_seen": "2026-11-04T17:19:32.059715+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362116": {
+          "first_seen": "2026-11-04T17:19:32.059715+09:00",
+          "status": "pending",
           "attempts": 0
         }
       }

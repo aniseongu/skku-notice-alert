@@ -137,7 +137,9 @@ def test_other_major_preferences_are_not_shown_as_personal_advantage():
 def test_major_preference_distinguishes_required_and_other_majors():
     neutral = "담당 업무와 지원 자격을 원문에서 확인해 주세요"
     assert intern_ai.preference_safe_reason("컴퓨터공학 전공 필수, 전기전자 전공 우대") == neutral
+    assert intern_ai.preference_safe_reason("컴퓨터공학 지식과 전기전자 전공 우대") == neutral
     assert intern_ai.preference_safe_reason("전기전자공학 우대") == neutral
     assert intern_ai.preference_safe_reason("우대 전공: 전기, 전자") == neutral
+    assert intern_ai.preference_safe_reason("우대 전공: 전기전자") == neutral
     assert intern_ai.preference_safe_reason("전자상거래 개발, IT 관련 전공 우대") != neutral
     assert intern_ai.preference_safe_reason("컴퓨터공학 전공과 전자공학 전공 우대") != neutral

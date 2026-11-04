@@ -109,6 +109,482 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/362173": {
+      "notice": {
+        "id": "linkareer-intern/362173",
+        "source_id": "linkareer-intern",
+        "article_no": "362173",
+        "title": "[법무법인 세종] [직원] 기업지배구조연구소 인턴 채용 공고",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362173",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "기업지배구조 및 ESG 리서치 직무로 소프트웨어 개발 및 데이터 분석 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[법무법인 세종] [직원] 기업지배구조연구소 인턴 채용 공고\n\n\n[담당업무]\n• 기업지배구조, 주주권 및 자본시장 관련 리서치 수행\n• 국내외 주주행동주의 및 의결권 행사 동향 모니터링\n• 기업지배구조 관련 뉴스레터 및 보고서 작성 지원\n• 정기·임시 주주총회 관련 자료 조사 및 분석\n• 이사회·위원회 운영 및 임원보수정책 관련 벤치마킹 자료 작성\n• 고객사 자문 프로젝트 수행을 위한 자료 수집·분석 및 문서 작성 지원\n• ESG 및 기업지배구조 관련 법·제도 변화 모니터링\n\n\n[접수기간]\n11월 04일 ~ 11월 20일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[법무법인 세종] [직원] 기업지배구조연구소 인턴 채용 공고</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>•&nbsp; &nbsp; 기업지배구조, 주주권 및 자본시장 관련 리서치 수행</span></p><p><span>•&nbsp; &nbsp; 국내외 주주행동주의 및 의결권 행사 동향 모니터링</span></p><p><span>•&nbsp; &nbsp; 기업지배구조 관련 뉴스레터 및 보고서 작성 지원</span></p><p><span>•&nbsp; &nbsp; 정기·임시 주주총회 관련 자료 조사 및 분석</span></p><p><span>•&nbsp; &nbsp; 이사회·위원회 운영 및 임원보수정책 관련 벤치마킹 자료 작성</span></p><p><span>•&nbsp; &nbsp; 고객사 자문 프로젝트 수행을 위한 자료 수집·분석 및 문서 작성 지원</span></p><p><span>•&nbsp; &nbsp; ESG 및 기업지배구조 관련 법·제도 변화 모니터링</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 04일 ~ 11월 20일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980584\" title=\"스크린샷_4-11-2026_22722_www.shinkim.com.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/980584"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T22:22:39.698763+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-20T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "7a26569290d517ceacb2475abf91f929c962b67a1494ba6fad4a21e9b7981383",
+        "verdict": "not_relevant",
+        "reason": "기업지배구조 및 ESG 리서치 직무로 소프트웨어 개발 및 데이터 분석 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362168": {
+      "notice": {
+        "id": "linkareer-intern/362168",
+        "source_id": "linkareer-intern",
+        "article_no": "362168",
+        "title": "[에이치에스애드] 커머스AX미디어팀 퍼포먼스 광고 기획,운영",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362168",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "퍼포먼스 광고 기획 및 운영 직무로 소프트웨어 개발 직무가 아니며, 지원 자격으로 대학 졸업 이상을 요구합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[에이치에스애드] 커머스AX미디어팀 퍼포먼스 광고 기획,운영\n접수 기간 2026-11-04 ~ 2026-11-15\n\n모집부문 및 상세내용\n모집 부문상세내용\n퍼포먼스 광고 기획,운영\n(2명)담당업무\n커머스 퍼포먼스 광고 캠페인 운영 서포트\n(데이터 정리/리포트 작성, 광고 셋팅/운영, 배너 광고 소재 기획 외)\n\n채용형태\n- 인턴\n\n직무관련\n1) 디지털 미디어/퍼포먼스 광고 업무 경험자\n2) 엑셀 활용이 능통하신 분\n3) 6개월 이상 근무 가능하신 분 (협의 가능)\n\n우대사항\n- 광고 마케팅 관련 업무에 관심 많거나 향후 관련 업계 취업 희망자 우대\n- 디지털 퍼포먼스 광고 관련 업무 경험자\n- MS Office 숙련자 (Excel)\n- 광고 소재 기획/제작 경험자\n- 꼼꼼하신 분\n\n\n자격요건\n학력\n대학졸업(4년) 이상\n\n근무조건\n급여\n회사 내규에 따름\n\n근무지역\n서울 마포구 마포대로 155 LG마포빌딩\n\n\n지원 기간 및 방법\n접수기간\n2026-11-04 ~ 2026-11-15\n\n접수방법\n이메일 지원\n\n문의\n이메일\nsekim@hsad.co.kr\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.\n지원서 제출방법 : 지원서 및 포트폴리오를 sekim@hsad.co.kr 로 이메일 발송(포트폴리오 필수 제출)\n* 이메일 제목은 ‘[이력서] 커머스AX미디어팀_인턴_지원자성명’ 으로 할 것\n(예: [이력서] 커머스AX미디어팀_인턴_ 홍길동)\n* 이력서, 포트폴리오는 자유 양식, 파일 포맷은 PDF 권장\n* 면접 대상자 별도 안내",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><img src=\"https://linkareer.com/images/activity/banner/template_3_banner.webp\"><div><h2>[에이치에스애드] 커머스AX미디어팀 퍼포먼스 광고 기획,운영</h2><p>접수 기간 2026-11-04 ~ 2026-11-15</p></div><div><strong>모집부문 및 상세내용</strong></div><table><thead><tr><th>모집 부문</th><th>상세내용</th></tr></thead><tbody><tr><td>퍼포먼스 광고 기획,운영<br> (2명)</td><td><div><div>담당업무</div><p>커머스 퍼포먼스 광고 캠페인 운영 서포트\n(데이터 정리/리포트 작성, 광고 셋팅/운영, 배너 광고 소재 기획 외)</p></div><div><div>채용형태</div><p>- 인턴</p></div><div><p>직무관련\n1) 디지털 미디어/퍼포먼스 광고 업무 경험자\n2) 엑셀 활용이 능통하신 분\n3) 6개월 이상 근무 가능하신 분 (협의 가능)</p><p>\n우대사항\n- 광고 마케팅 관련 업무에 관심 많거나 향후 관련 업계 취업 희망자 우대\n- 디지털 퍼포먼스 광고 관련 업무 경험자\n- MS Office 숙련자 (Excel)\n- 광고 소재 기획/제작 경험자\n- 꼼꼼하신 분</p></div></td></tr></tbody></table><div><strong>자격요건</strong></div><div><p>학력</p><p>대학졸업(4년) 이상</p></div><div><strong>근무조건</strong></div><ul><li><p>급여</p><p>회사 내규에 따름</p></li><li><p>근무지역</p><div><p>서울 마포구 마포대로 155 LG마포빌딩   </p></div></li></ul><div><strong>지원 기간 및 방법</strong></div><ul><li><p>접수기간</p><p>2026-11-04 ~ 2026-11-15</p></li><li><p>접수방법</p><p>이메일 지원</p></li></ul><div><strong>문의</strong></div><ul><li><p>이메일</p><p>sekim@hsad.co.kr</p></li></ul><div><strong>유의사항</strong></div><ul><li>허위 사실이 발견될 경우 채용이 취소될 수 있습니다.</li><li><span><span>지원서 제출방법 : 지원서 및 포트폴리오를 sekim@hsad.co.kr 로 이메일 발송(포트폴리오 필수 제출)</span></span></li><li><span><span>* 이메일 제목은 ‘[이력서] 커머스AX미디어팀_인턴_지원자성명’ 으로 할 것</span></span></li><li><span><span>(예: [이력서] 커머스AX미디어팀_인턴_ 홍길동)</span></span></li><li><span><span>* 이력서, 포트폴리오는 자유 양식, 파일 포맷은 PDF 권장</span></span></li><li><span><span>* 면접 대상자 별도 안내</span></span></li><li><span><span><br></span></span></li></ul></div></div>",
+      "images": [
+        "https://linkareer.com/images/activity/banner/template_3_banner.webp"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T22:22:39.698763+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "457f8c120cc33c60b39d914d1451486421fe5e95683286144faa24860e7f633f",
+        "verdict": "not_relevant",
+        "reason": "퍼포먼스 광고 기획 및 운영 직무로 소프트웨어 개발 직무가 아니며, 지원 자격으로 대학 졸업 이상을 요구합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362167": {
+      "notice": {
+        "id": "linkareer-intern/362167",
+        "source_id": "linkareer-intern",
+        "article_no": "362167",
+        "title": "[주식회사 뷰티셀렉션] [바이오던스] 데이터 애널리스트 DA 인턴 (채용연계형)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362167",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "데이터 분석 및 AI 도구를 활용한 업무를 수행하며, SQL과 Python 활용 능력을 우대하여 소프트웨어학과 학부생이 지원하기에 적합합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[주식회사 뷰티셀렉션] [바이오던스] 데이터 애널리스트 DA 인턴 (채용연계형)\n\n\n[담당업무]\n글로벌 뷰티 트렌드·경쟁사 리서치: 주요 시장의 카테고리 트렌드, 성분·제형 트렌드, 경쟁 브랜드의 움직임을 추적하고, \"우리에게 어떤 의미인지\"까지 붙여 요약 자료로 만듭니다.\n내부 판매 데이터 정제·분석: 주요 채널별 매출·리뷰 등 흩어진 내부 데이터를 수집·정제하고, 추이·비교·분석을 수행합니다.\n트렌드와 판매 데이터의 교차 검증: \"지금 뜨는 트렌드가 실제 우리 판매에서도 보이는가\" 등 외부 신호와 내부 숫자를 맞대어 보고, 액션 후보를 도출합니다.\n사업계획·전략 수립 보조: 사업부 계획 수립 시 전제 검증을 위한 데이터 취합과 분석 자료를 작성합니다.\n리포트·대시보드 운영: 정기 BI 리포트 작성을 보조하고, Google 스프레드시트·BI 도구 기반 대시보드를 운영합니다.\nAI 도구 기반 분석 업무 효율화: 데이터 수집·정제·요약·시각화 워크플로우를 Claude 등 AI 도구로 자동화·개선합니다.\n\n\n[접수기간]\n11월 04일 ~ 상시모집\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[주식회사 뷰티셀렉션] [바이오던스] 데이터 애널리스트 DA 인턴 (채용연계형)</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>글로벌 뷰티 트렌드·경쟁사 리서치: 주요 시장의 카테고리 트렌드, 성분·제형 트렌드, 경쟁 브랜드의 움직임을 추적하고, \"우리에게 어떤 의미인지\"까지 붙여 요약 자료로 만듭니다.</span></p><p><span>내부 판매 데이터 정제·분석: 주요 채널별 매출·리뷰 등 흩어진 내부 데이터를 수집·정제하고, 추이·비교·분석을 수행합니다.</span></p><p><span>트렌드와 판매 데이터의 교차 검증: \"지금 뜨는 트렌드가 실제 우리 판매에서도 보이는가\" 등 외부 신호와 내부 숫자를 맞대어 보고, 액션 후보를 도출합니다.</span></p><p><span>사업계획·전략 수립 보조: 사업부 계획 수립 시 전제 검증을 위한 데이터 취합과 분석 자료를 작성합니다.</span></p><p><span>리포트·대시보드 운영: 정기 BI 리포트 작성을 보조하고, Google 스프레드시트·BI 도구 기반 대시보드를 운영합니다.</span></p><p><span>AI 도구 기반 분석 업무 효율화: 데이터 수집·정제·요약·시각화 워크플로우를 Claude 등 AI 도구로 자동화·개선합니다.</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 04일 ~ 상시모집</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980564\" title=\"CaptureX_2026-11-04_212906_www.beautyselection.co.kr.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/980564"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T22:22:39.698763+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-02T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "fb046bfd5c08fe43cda8407f6f5388f166ed02e08042fa3e584d8079ef10ec87",
+        "verdict": "relevant",
+        "reason": "데이터 분석 및 AI 도구를 활용한 업무를 수행하며, SQL과 Python 활용 능력을 우대하여 소프트웨어학과 학부생이 지원하기에 적합합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362166": {
+      "notice": {
+        "id": "linkareer-intern/362166",
+        "source_id": "linkareer-intern",
+        "article_no": "362166",
+        "title": "[Forvis Mazars 새빛회계법인] 회계아웃소싱팀 Payroll Intern 모집",
+        "category": "인턴",
+        "url": "https://linkareer.com/activity/362166",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<img src=\"https://www.dropbox.com/scl/fi/zihxks4kt5v9s1nkurl6q/Payroll-Intern_-_261104.png?rlkey=ecacb217qf9p2e339j8ogghb5&amp;st=h0i8mrf5&amp;raw=1\" alt=\"이미지 설명\">",
+      "images": [
+        "https://www.dropbox.com/scl/fi/zihxks4kt5v9s1nkurl6q/Payroll-Intern_-_261104.png?rlkey=ecacb217qf9p2e339j8ogghb5&st=h0i8mrf5&raw=1"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T22:22:39.698763+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/362165": {
+      "notice": {
+        "id": "linkareer-intern/362165",
+        "source_id": "linkareer-intern",
+        "article_no": "362165",
+        "title": "[PTKOREA] (인턴) 온라인 패션몰 콘텐츠 기획 및 운영 업무 보조",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362165",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-08T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/362164": {
+      "notice": {
+        "id": "linkareer-intern/362164",
+        "source_id": "linkareer-intern",
+        "article_no": "362164",
+        "title": "[원티드랩] 세일즈 인턴 [채용사업팀]",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362164",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-02T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/362163": {
+      "notice": {
+        "id": "linkareer-intern/362163",
+        "source_id": "linkareer-intern",
+        "article_no": "362163",
+        "title": "[삼일회계법인] Sustainability team RA(Research Assistant) 모집",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362163",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/362162": {
+      "notice": {
+        "id": "linkareer-intern/362162",
+        "source_id": "linkareer-intern",
+        "article_no": "362162",
+        "title": "[카카오스타일] [인턴] SNS 콘텐츠 마케터 (글로벌 뷰티)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362162",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-02T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/362161": {
+      "notice": {
+        "id": "linkareer-intern/362161",
+        "source_id": "linkareer-intern",
+        "article_no": "362161",
+        "title": "[지멘스] Intern for Sales Admin",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362161",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-02T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/362160": {
+      "notice": {
+        "id": "linkareer-intern/362160",
+        "source_id": "linkareer-intern",
+        "article_no": "362160",
+        "title": "[지엠테크니컬센터코리아] 2027 GMTCK 동계인턴십",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/362160",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/362159": {
+      "notice": {
+        "id": "linkareer-intern/362159",
+        "source_id": "linkareer-intern",
+        "article_no": "362159",
+        "title": "[(주)힐링페이퍼] [강남언니] AI Research Engineer 인턴 - Agent Evaluation (체험형)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362159",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-02T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "linkareer-intern/362144": {
       "notice": {
         "id": "linkareer-intern/362144",
@@ -1962,7 +2438,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "의료기기 수명시험 및 측정 업무를 수행하는 직무로, 소프트웨어 관련 직무가 아니며 우대 전공 또한 기계, 전기, 전자 분야에 한정되어 있습니다.",
+          "reason": "의료기기 측정 및 검증 업무로 기계, 전기, 전자 전공자를 우대하며 소프트웨어 직무와는 거리가 있습니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -1986,9 +2462,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "028302d15223046b84e4a7241dd0a47c83f1c386911d762fedad8cb76081a00c",
+        "fingerprint": "4f14d5767a921dca35db4396344a33f5bedce6f4374479006327742d57f1849c",
         "verdict": "not_relevant",
-        "reason": "의료기기 수명시험 및 측정 업무를 수행하는 직무로, 소프트웨어 관련 직무가 아니며 우대 전공 또한 기계, 전기, 전자 분야에 한정되어 있습니다.",
+        "reason": "의료기기 측정 및 검증 업무로 기계, 전기, 전자 전공자를 우대하며 소프트웨어 직무와는 거리가 있습니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -2014,7 +2490,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "온라인 MD 업무 보조를 수행하는 직무로 소프트웨어 개발 및 관련 직무가 아닙니다.",
+          "reason": "온라인 MD 업무 보조 직무로 소프트웨어 개발 및 데이터 분석 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -2038,9 +2514,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "c56d1bb9fa01647f201a6c5460df81502bc559c4e859d9e39b28ec023a9a60f5",
+        "fingerprint": "055b0faf82720bef12245c00c64f78150d98c7b65a9d3b3f06ec1c12ab2fb95a",
         "verdict": "not_relevant",
-        "reason": "온라인 MD 업무 보조를 수행하는 직무로 소프트웨어 개발 및 관련 직무가 아닙니다.",
+        "reason": "온라인 MD 업무 보조 직무로 소프트웨어 개발 및 데이터 분석 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -2257,6 +2733,60 @@
         "fingerprint": "0933290f6c98aef6f48901c90bc11e210a7ca80f545dae5ce569de56898da9fc",
         "verdict": "not_relevant",
         "reason": "해당 직무는 게임 현지화 및 번역 업무로 소프트웨어 개발 직무와 무관합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362177": {
+      "notice": {
+        "id": "linkareer-intern/362177",
+        "source_id": "linkareer-intern",
+        "article_no": "362177",
+        "title": "[팜한농] Global Business Internship 2027",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362177",
+        "posted_on": "2026-11-03",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-04T22:22:39.698763+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해외 사업 개발 및 마케팅 직무로 농업 및 생명과학 계열 전공자를 우대하며 소프트웨어 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[팜한농] Global Business Internship 2027\n\n\n[담당업무]\n(1) 글로벌 사업 개발\n- 주요 품목 개발 및 기술 지원\n: 자사 보유 제품(테라도 外 5개 글로벌 사업 제품)의 해외사업 개발\n: 해외 사업 개발 및 등록 업무 지원\n: 신규 제품 개발, 합제 후보 품목 선발 및 제형, 생물활성 평가 등 제품 정보 작성\n\n\n(2) 신규 시장 개척\n- 주요 시장 자료 분석 및 동향 분석을 통한 해외개발 반영\n- 신규 사업국가, 파트너사 발굴\n- 테라도 글로법 사업 성장을 위한 시장 개발 및 마케팅(미국,호주,브라질 등)\n\n\n(3) 해외영업 및 마케팅\n- 해외시장 및 사업 분석/포트폴리오 분석\n- 파트너사 발굴/관리 등 마케팅\n- 해외 거점 시장 개척(아시아,동남아,중남미,브라질 등)\n\n\n(4) 등록 지원\n- 등록 시험(Bio-efficacy trial) 지원 및 등록 심사 관청 공동 대응\n\n\n[접수기간]\n11월 03일 ~ 11월 12일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[팜한농] Global Business Internship 2027</b></span></p><p><span><b>[담당업무]</b></span></p><p><span>(1) 글로벌 사업 개발&nbsp;</span></p><p><span>- 주요 품목 개발 및 기술 지원</span></p><p><span>: 자사 보유 제품(테라도 外 5개 글로벌 사업 제품)의 해외사업 개발</span></p><p><span>: 해외 사업 개발 및 등록 업무 지원</span></p><p><span>: 신규 제품 개발, 합제 후보 품목 선발 및 제형, 생물활성 평가 등 제품 정보 작성</span></p><p><span>(2) 신규 시장 개척</span></p><p><span>- 주요 시장 자료 분석 및 동향 분석을 통한 해외개발 반영</span></p><p><span>- 신규 사업국가, 파트너사 발굴</span></p><p><span>- 테라도 글로법 사업 성장을 위한 시장 개발 및 마케팅(미국,호주,브라질 등)&nbsp;</span></p><p><span>(3) 해외영업 및 마케팅</span></p><p><span>- 해외시장 및 사업 분석/포트폴리오 분석</span></p><p><span>- 파트너사 발굴/관리 등 마케팅</span></p><p><span>- 해외 거점 시장 개척(아시아,동남아,중남미,브라질 등)</span></p><p><span>(4) 등록 지원&nbsp;</span></p><p><span>- 등록 시험(Bio-efficacy trial) 지원 및 등록 심사 관청 공동 대응</span></p><p><span><b>[접수기간]</b></span></p><p><span>11월 03일 ~ 11월 12일</span></p><p><span><b>[채용공고]</b></span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980594\" title=\"CaptureX_2026-11-04_221843_careers.lg.com.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/980594"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-04T22:22:39.698763+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-12T18:00:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "9b3e6ea4b2edb7a5ca694528bcb44c39ab02387d0cc238cacc2f76107dbae07e",
+        "verdict": "not_relevant",
+        "reason": "해외 사업 개발 및 마케팅 직무로 농업 및 생명과학 계열 전공자를 우대하며 소프트웨어 관련 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },

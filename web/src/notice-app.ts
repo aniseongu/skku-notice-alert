@@ -38,7 +38,7 @@ const browserTab = matchMedia('(display-mode: browser)');
 function settingsTitle(): string {
   const params = new URLSearchParams(location.search);
   if (params.get('keys') === '1') return '연결 키';
-  return ({ notifications: '알림', keywords: '관심 키워드', connection: '기기 연결' } as Record<string, string>)[params.get('section') ?? ''] ?? '설정';
+  return ({ notifications: '알림', keywords: '관심 키워드', connection: '기기 연결', calendar: '캘린더' } as Record<string, string>)[params.get('section') ?? ''] ?? '설정';
 }
 
 interface InstallPrompt extends Event { prompt(): Promise<void> }

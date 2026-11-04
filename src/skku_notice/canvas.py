@@ -193,7 +193,7 @@ def _lecture(course: dict, row: dict, now: datetime) -> CanvasItem | None:
 
 def read_canvas(
     token: str, now: datetime, fixture_dir: Path | None = None, gap: float = 1.0,
-    reserve_learningx=None,
+    reserve_learningx=None, on_incomplete=None,
 ) -> list[CanvasItem]:
     """Use fixture responses or sequential, bearer-authenticated API calls."""
     if fixture_dir:
@@ -225,8 +225,10 @@ def read_canvas(
                     print(f"강의 조회 대기: {exc}", file=sys.stderr)
                     lecture_session.close()
                     lecture_session = None
+            if courses and not lecture_session and on_incomplete:
+                on_incomplete()
             result = _read_courses(courses, now, lambda path: _get_pages(client, path, gap),
-                                   gap, True, lecture_session)
+                                   gap, True, lecture_session, on_incomplete)
             if reserve_learningx:
                 print(f"Canvas 조회: 과제와 퀴즈 {sum(i.kind != '강의' for i in result)}개, "
                       f"강의 {sum(i.kind == '강의' for i in result)}개")
@@ -239,7 +241,7 @@ def read_canvas(
 
 
 def _read_courses(courses: list[dict], now: datetime, get, gap: float, network: bool,
-                  lecture_session=None) -> list[CanvasItem]:
+                  lecture_session=None, on_incomplete=None) -> list[CanvasItem]:
     found: dict[str, CanvasItem] = {}
     for course in courses:
         if not isinstance(course, dict) or not str(course.get("id", "")).isdigit() or not course.get("name"):
@@ -259,6 +261,8 @@ def _read_courses(courses: list[dict], now: datetime, get, gap: float, network: 
                 modules = lecture_session.read_modules(course_id, gap)
             except LearningXError as exc:
                 print(f"강의 조회 대기: {exc}", file=sys.stderr)
+                if on_incomplete:
+                    on_incomplete()
         quizzes = []
         if network and any(_quiz_assignment(row) for row in assignments):
             time.sleep(gap)
@@ -267,6 +271,8 @@ def _read_courses(courses: list[dict], now: datetime, get, gap: float, network: 
             except CanvasError as exc:
                 if str(exc) == "토큰 거절":
                     raise
+                if on_incomplete:
+                    on_incomplete()
                 # Keep ordinary assignments usable; unverified quizzes are excluded for this scan.
         for row in assignments:
             if network and _quiz_assignment(row) and not _quiz_available(row, quizzes, now):

@@ -537,7 +537,7 @@ export class SettingsView extends LitElement {
           <div class="box">
             ${this.settingsLink('알림', '받을 공지와 이 기기 알림, 아이캠퍼스', '?view=settings&section=notifications')}
             ${this.settingsLink('관심 키워드', this.keywords.length ? `${this.keywords.length}개 키워드를 쓰고 있어요` : '관심 있는 공지를 골라 봐요', '?view=settings&section=keywords')}
-            ${this.settingsLink('캘린더', this.saved.GOOGLE_REFRESH_TOKEN ? '구글 캘린더에 연결돼 있어요' : '성대 공지와 저장한 인턴 마감을 모아요', '?view=settings&keys=1#google-calendar')}
+            ${this.settingsLink('캘린더', this.saved.GOOGLE_REFRESH_TOKEN ? '구글 캘린더에 연결돼 있어요' : '저장한 공지의 마감을 모아요', '?view=settings&keys=1#google-calendar')}
           </div>
         </section>
         <section aria-labelledby="s-connections">
@@ -636,7 +636,7 @@ export class SettingsView extends LitElement {
               ${this.guide('github', [
                 html`${link('https://github.com/settings/personal-access-tokens/new', 'GitHub 새 토큰 화면')}을 열어요(Fine-grained token)`,
                 '"Repository access"에서 "Only select repositories"를 고르고 이 저장소 하나만 골라요',
-                '"Permissions"에서 Secrets와 Variables를 "Read and write"로 바꿔요. 다른 권한은 주지 않아요',
+                '"Permissions"에서 Secrets, Variables와 Actions를 "Read and write"로 바꿔요. Actions는 공지를 직접 다시 가져올 때 써요',
                 '만료일을 정하고 만든 토큰을 복사해 위 칸에 넣어요',
                 '저장소가 아직 없으면 연결 키 화면의 ".env 양식 복사하기"로 컴퓨터에서 먼저 써요',
               ])}
@@ -753,7 +753,7 @@ export class SettingsView extends LitElement {
           <div class="setting">
             <div class="setting-text">
               <p class="setting-name">Google 캘린더</p>
-              <p class="setting-help">성대 공지와 저장한 인턴 공고의 마감을 자동으로 모아요</p>
+              <p class="setting-help">저장한 공지의 마감을 자동으로 모아요</p>
             </div>
             <div class="setting-control">
 

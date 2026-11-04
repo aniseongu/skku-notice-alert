@@ -16,7 +16,7 @@ def _notice(no: str, deadline: str | None, url: str = "https://cse.skku.edu/") -
             "deadline": deadline, "first_seen": None}
 
 
-def test_desired_events_include_all_school_notices_with_future_deadlines():
+def test_desired_events_include_only_saved_future_deadlines():
     notices = [
         _notice("1", "2026-11-16T10:00:00+09:00"),   # 기준에 맞음
         _notice("2", "2026-11-16T10:00:00+09:00"),   # 해당 없음
@@ -25,9 +25,9 @@ def test_desired_events_include_all_school_notices_with_future_deadlines():
         _notice("5", None),                           # 마감 없음
         _notice("6", "2026-11-16T10:00:00+09:00", url="javascript:alert"),
     ]
-    events = gcal.desired_events(notices, [notices[3], {"bad": 1}], NOW)
+    events = gcal.desired_events(notices, [notices[0], notices[2], notices[3], {"bad": 1}], NOW)
     titles = sorted(event["summary"] for event in events.values())
-    assert titles == ["[마감] 공지 1", "[마감] 공지 2", "[마감] 공지 4"]
+    assert titles == ["[마감] 공지 1", "[마감] 공지 4"]
     first = events[gcal._event_id("cse-notice:1")]
     assert first["start"]["dateTime"] == "2026-11-16T09:30:00+09:00"
     assert first["end"]["dateTime"] == "2026-11-16T10:00:00+09:00"
@@ -55,9 +55,9 @@ def test_ineligible_internships_are_excluded_from_calendar():
 
 def test_sync_only_touches_events_this_app_made():
     keep = gcal.desired_events([_notice("1", "2026-11-16T10:00:00+09:00")],
-                               [], NOW)
+                               [_notice("1", "2026-11-16T10:00:00+09:00")], NOW)
     new = gcal.desired_events([_notice("9", "2026-11-18T10:00:00+09:00")],
-                              [], NOW)
+                              [_notice("9", "2026-11-18T10:00:00+09:00")], NOW)
     keep_id = next(iter(keep))
     listing = {"items": [
         {"id": keep_id, **keep[keep_id]},
@@ -102,6 +102,7 @@ def test_main_reports_counts_without_secrets(monkeypatch, capsys, tmp_path):
     notices = {"notices": [_notice("1", "2026-12-16T10:00:00+09:00")]}
     (tmp_path / "notices.json").write_text(json.dumps(notices))
     (tmp_path / "matched.json").write_text(json.dumps({"items": {"cse-notice:1": {"rule_name": "채용"}}}))
+    monkeypatch.setenv("SAVED_NOTICES", json.dumps(notices["notices"]))
     settings = {
         "GOOGLE_CLIENT_ID": "client-id-value", "GOOGLE_CLIENT_SECRET": "client-secret-value",
         "GOOGLE_REFRESH_TOKEN": "refresh-token-value", "GOOGLE_CALENDAR_ID": "abc@group.calendar.google.com",
@@ -122,3 +123,8 @@ def test_main_reports_counts_without_secrets(monkeypatch, capsys, tmp_path):
     out = capsys.readouterr()
     assert "넣음 1" in out.out
     assert "token-value" not in out.out + out.err and "secret-value" not in out.out + out.err
+
+
+def test_started_event_is_removed_when_notice_is_marked_passed():
+    started = {**_notice("started", "2026-11-03T11:45:00+09:00"), "deadline_kind": "일정"}
+    assert not gcal.desired_events([started], [started], NOW)

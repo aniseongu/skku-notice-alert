@@ -39,3 +39,11 @@ def test_rss_is_valid_xml_with_board_prefix_and_links():
     assert items[0].findtext("title") == "[소프트웨어학과] 인턴 모집; 마감, 서류 & 면접"
     assert items[0].findtext("link") == NOTICES[0]["url"]
     assert items[1].findtext("pubDate").startswith("Sun, 01 Nov 2026")
+
+
+def test_calendar_excludes_passed_deadlines():
+    notices = [_notice("old", "지난 공지", "2026-11-03T11:59:00+09:00"),
+               _notice("new", "남은 공지", "2026-11-03T12:01:00+09:00")]
+    text = deadlines_ics(notices, BOARDS, NOW)
+    assert "지난 공지" not in text
+    assert "남은 공지" in text

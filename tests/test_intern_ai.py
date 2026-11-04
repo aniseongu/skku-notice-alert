@@ -123,3 +123,12 @@ def test_policy_change_invalidates_cached_intern_judgments(monkeypatch):
     monkeypatch.setattr(intern_ai, "SYSTEM", intern_ai.SYSTEM + "새로운 판정 기준")
     after = intern_ai.intern_fingerprint("인턴", "전기 전자 우대", [], "m", {})
     assert before != after
+
+
+def test_other_major_preferences_are_not_shown_as_personal_advantage():
+    neutral = "담당 업무와 지원 자격을 원문에서 확인해 주세요"
+    assert intern_ai.preference_safe_reason("전기, 전자 전공자를 우대해요") == neutral
+    assert intern_ai.preference_safe_reason("수학, 통계 전공자를 우대해요") == neutral
+    assert intern_ai.preference_safe_reason("컴퓨터공학 전공을 우대해요") == "컴퓨터공학 전공을 우대해요"
+    skills = "SQL과 Python 활용 능력을 우대해요"
+    assert intern_ai.preference_safe_reason(skills) == skills

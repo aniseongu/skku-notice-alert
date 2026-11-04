@@ -181,3 +181,22 @@ def test_external_api_malformed_json_is_a_recoverable_fetch_error(monkeypatch):
     with pytest.raises(fetch.FetchError) as caught:
         fetch.fetch_json_post(jobs.LK_API, {}, "ua", 1)
     assert "BROKEN_RESPONSE" not in str(caught.value)
+
+
+def test_public_intern_reason_does_not_promote_other_majors(tmp_path):
+    import json
+
+    from skku_notice.export import export_site
+    from skku_notice.judge import Judgment
+
+    notice = jobs.linkareer(lambda *a: {"data": {"activities": {"nodes": [{
+        "id": "361578", "title": "인턴", "recruitCloseAt": 1801493999999,
+    }]}}}, NOW, "linkareer-intern")[0][0]
+    archive = add_notice(Archive(), notice, NOW.isoformat(), judgment=Judgment(
+        "relevant", "수학, 통계 전공자를 우대하며 VBA를 활용해요", "test"))
+    source = {"id": "linkareer-intern", "name": "링커리어", "url": "https://linkareer.com", "external": True}
+    export_site(tmp_path, archive, [source], NOW, web_path=tmp_path / "missing")
+    items = json.loads((tmp_path / "api/v1/matched.json").read_text())["items"]
+    decision = items[notice.source_id + "/" + notice.article_no]["ai"]
+    assert decision["reason"] == "담당 업무와 지원 자격을 원문에서 확인해 주세요"
+    assert decision["verdict"] == "relevant"

@@ -45,7 +45,7 @@ from skku_notice.interests import (
     refresh_archive_interests,
 )
 from skku_notice.intern_ai import BATCH as INTERN_BATCH
-from skku_notice.intern_ai import intern_fingerprint, judge_internships
+from skku_notice.intern_ai import intern_fingerprint, judge_internships, preference_safe_reason
 from skku_notice.jobs import (
     COLLECTORS,
     LK_API,
@@ -359,7 +359,10 @@ def _intern_decisions(
             continue
         source = state.sources.get(notice["source_id"])
         seen = source.seen.get(notice["article_no"]) if source else None
-        rank = 0 if seen is None or seen.status == "pending" else 1
+        previous = (item.get("match") or {}).get("ai") or {}
+        old_reason = previous.get("reason") or ""
+        needs_preference_review = preference_safe_reason(old_reason) != old_reason
+        rank = 0 if seen is None or seen.status == "pending" else 1 if needs_preference_review else 2
         ranked.append((rank, key, item, body, urls, fingerprint))
     ranked.sort(key=lambda entry: entry[0])
     selected, images, fingerprints = [], {}, {}

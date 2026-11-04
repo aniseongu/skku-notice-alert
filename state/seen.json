@@ -218,6 +218,16 @@
           "first_seen": "2026-11-03T17:08:06.491881+09:00",
           "status": "notified",
           "attempts": 0
+        },
+        "228046": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "228049": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "notified",
+          "attempts": 0
         }
       }
     },
@@ -312,6 +322,16 @@
         "66559": {
           "first_seen": "2026-11-03T18:24:00.504814+09:00",
           "status": "baseline",
+          "attempts": 0
+        },
+        "67754": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "67753": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "notified",
           "attempts": 0
         }
       }
@@ -562,6 +582,61 @@
         "361929": {
           "first_seen": "2026-11-04T11:05:46.872052+09:00",
           "status": "notified",
+          "attempts": 0
+        },
+        "362059": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "362054": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "362052": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "362049": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "362042": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "362033": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362021": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362019": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362009": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "361987": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "361983": {
+          "first_seen": "2026-11-04T15:41:11.032641+09:00",
+          "status": "pending",
           "attempts": 0
         }
       }

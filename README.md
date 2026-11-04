@@ -90,7 +90,7 @@ uv run skku-notice --dry-run --all --no-canvas
 scripts/check.sh
 ```
 
-`--dry-run`은 알림과 상태 저장 없이 결과를 확인합니다. 개인 규칙을 담은 `config/rules.yaml`은 커밋하기 전에 공개 가능한 내용인지 확인하십시오.
+`--dry-run`은 알림을 보내거나 상태를 저장하지 않고 결과만 보여줍니다.
 
 ```sh
 cd web

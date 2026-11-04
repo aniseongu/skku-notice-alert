@@ -71,6 +71,36 @@ def _dt(value: object) -> datetime | None:
         return None
 
 
+def _quiz_assignment(row: dict) -> bool:
+    return bool(
+        "online_quiz" in (row.get("submission_types") or [])
+        or row.get("quiz_id")
+        or row.get("is_quiz_assignment")
+    )
+
+
+def _quiz_available(row: dict, quizzes: list[dict], now: datetime) -> bool:
+    # Assignment dates alone do not describe quiz availability. Never open a quiz to check it.
+    quiz_id = str(row.get("quiz_id") or "")
+    assignment_id = str(row.get("id") or "")
+    quiz = next((quiz for quiz in quizzes if isinstance(quiz, dict) and (
+        (quiz_id and str(quiz.get("id") or "") == quiz_id)
+        or (assignment_id and str(quiz.get("assignment_id") or "") == assignment_id)
+    )), None)
+    if quiz is None:
+        return False
+    unlock = _dt(quiz.get("unlock_at"))
+    lock = _dt(quiz.get("lock_at"))
+    permissions = quiz.get("permissions") or {}
+    return not (
+        quiz.get("published") is False
+        or quiz.get("locked_for_user")
+        or (unlock and unlock > now)
+        or (lock and lock <= now)
+        or permissions.get("submit") is False
+    )
+
+
 def _assignment(course: dict, row: dict, now: datetime) -> CanvasItem | None:
     if not row.get("id") or not row.get("name") or row.get("published") is False:
         return None
@@ -185,7 +215,18 @@ def _read_courses(courses: list[dict], now: datetime, get, gap: float, network: 
         # LearningX modules need a separate session-issued xn_api_token, not a Canvas PAT.
         # Keep production requests within the authorized Canvas token API boundary.
         modules = [] if network else get(f"modules_{course_id}.json")
+        quizzes = []
+        if network and any(_quiz_assignment(row) for row in assignments):
+            time.sleep(gap)
+            try:
+                quizzes = get(f"/api/v1/courses/{course_id}/quizzes?per_page=100")
+            except CanvasError as exc:
+                if str(exc) == "토큰 거절":
+                    raise
+                # Keep ordinary assignments usable; unverified quizzes are excluded for this scan.
         for row in assignments:
+            if network and _quiz_assignment(row) and not _quiz_available(row, quizzes, now):
+                continue
             item = _assignment(course, row, now)
             if item:
                 found[item.key] = item

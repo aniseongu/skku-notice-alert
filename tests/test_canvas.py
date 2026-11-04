@@ -204,3 +204,61 @@ def test_cli_forwards_summary_kind_to_canvas_delivery(tmp_path: Path, monkeypatc
                               all=False, from_fixtures=True, no_ai=True, no_canvas=False, export=None)
     assert cli.run(args) == 0
     assert sent == [{"summary": summary}]
+
+
+@pytest.mark.parametrize("blocked", [
+    {"unlock_at": "2026-11-03T12:00:00Z"},
+    {"lock_at": "2026-11-01T12:00:00Z"},
+    {"locked_for_user": True},
+    {"published": False},
+    {"permissions": {"submit": False}},
+    None,
+    "unavailable",
+])
+def test_quiz_resource_availability_controls_summary_count(monkeypatch, blocked) -> None:
+    requests = []
+
+    def respond(request):
+        requests.append(request)
+        path = request.url.path
+        if path.endswith("favorites/courses"):
+            return httpx.Response(200, json=[{"id": 101, "name": "테스트 과목"}])
+        if path.endswith("assignments"):
+            base = {"due_at": "2026-11-03T12:00:00Z", "submission": {}}
+            return httpx.Response(200, json=[
+                {**base, "id": 1, "name": "아직 못 하는 퀴즈", "quiz_id": 11,
+                 "submission_types": ["online_quiz"]},
+                {**base, "id": 2, "name": "지금 할 수 있는 퀴즈", "quiz_id": 12,
+                 "submission_types": ["online_quiz"]},
+                {**base, "id": 3, "name": "미제출 과제", "submission_types": ["online_upload"]},
+            ])
+        if path.endswith("quizzes"):
+            if blocked == "unavailable":
+                return httpx.Response(403)
+            quizzes = [{"id": 12, "published": True, "locked_for_user": False}]
+            if blocked is not None:
+                quizzes.append({"id": 11, "published": True, "locked_for_user": False, **blocked})
+            return httpx.Response(200, json=quizzes)
+        raise AssertionError("Only listing API resources may be read")
+
+    original = httpx.Client
+    monkeypatch.setattr(canvas.httpx, "Client", lambda **kwargs: original(
+        transport=httpx.MockTransport(respond), **kwargs,
+    ))
+    items = canvas.read_canvas("fixture-pat", NOW, gap=0)
+    count = 1 if blocked == "unavailable" else 2
+    assert len(items) == count
+    assert "아직 못 하는 퀴즈" not in [item.title for item in items]
+    assert ("지금 할 수 있는 퀴즈" in [item.title for item in items]) == (count == 2)
+    alerts, _ = plan_alerts(items, CanvasState(initialized=True), NOW, [], time(9))
+    assert len(alerts) == 1 and alerts[0].title.endswith(f" {count}개")
+    assert len(requests) == 3
+    assert all(request.method == "GET" and request.url.path.startswith("/api/v1/") for request in requests)
+
+
+def test_quiz_match_by_assignment_id_keeps_assignment_locks() -> None:
+    row = {"id": 2, "name": "퀴즈", "submission_types": ["online_quiz"],
+           "due_at": "2026-11-03T12:00:00Z", "locked_for_user": True}
+    quizzes = [{"id": 12, "assignment_id": 2, "published": True, "locked_for_user": False}]
+    assert canvas._quiz_available(row, quizzes, NOW)
+    assert canvas._assignment({"id": 101, "name": "과목"}, row, NOW) is None

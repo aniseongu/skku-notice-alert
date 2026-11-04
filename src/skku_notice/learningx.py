@@ -81,14 +81,15 @@ class LearningXSession:
                 f"{BASE}/api/v1/courses/{course}/external_tools/sessionless_launch?id={tool}"))
             if not isinstance(launch, dict) or not isinstance(launch.get("url"), str):
                 raise LearningXError("강의 도구 응답 형식 오류")
-            url = _safe_url(launch["url"], rf"/courses/{course}/external_tools/{tool}/?")
+            launch_path = rf"/courses/{course}/external_tools/(?:{tool}|sessionless_launch)/?"
+            url = _safe_url(launch["url"], launch_path)
             # A brand-new client carries neither browser cookies nor Canvas PAT headers.
             page = self.client.get(url)
             for _ in range(3):
                 if not page.is_redirect:
                     break
                 url = urljoin(str(page.url), page.headers.get("location", ""))
-                _safe_url(url, rf"/courses/{course}/external_tools/{tool}/?")
+                _safe_url(url, launch_path)
                 page = self.client.get(url)
             if not page.is_success:
                 raise LearningXError("강의 인증 양식을 받지 못했어요")

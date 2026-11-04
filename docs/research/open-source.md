@@ -68,3 +68,4 @@
 - https://learningx-alert.com/terms/ 와 https://learningx-alert.com/guide/canvas-token/ 에서 Canvas 개인 토큰으로 연결, 과목별 선택, 알림 시각 설정, 미완료 과제와 퀴즈 및 강의 마감 알림을 확인했다.
 - GitHub 저장소 검색에서 실제 운영 저장소 https://github.com/hjkim24/learningx-alert-web 를 찾았다. README의 운영 주소가 일치한다. learningx_alert/learningx.py의 sessionless_launch, LTI 양식과 xn_api_token 사용은 아캠 플러스와 같은 흐름이다. accounts/collection.py의 완료 상태 명시 판정과 비공개 강의 제외를 재사용하고 회귀 검사를 추가했다.
 - 성공에 적용: 기기별 수신을 유지하고 현재 할 수 없는 퀴즈는 요약에서 제외한다. 임시 LearningX 인증으로 강의 마감을 확인한다. 실제 휴대폰 수신은 설정의 시험 알림으로 기기에서 확인한다.
+- 운영 연결 검사에서 인증 경로 검증 실패를 확인했다. Canvas 원본 external_tools_controller.rb의 generate_common_sessionless_launch는 `/courses/{course}/external_tools/sessionless_launch?verifier=...` 주소도 발급한다. 선택한 도구 번호 주소만 허용하던 검증을 해당 과목의 공식 sessionless 경로까지 확장했고, 기본 모의 응답도 원본 경로로 바꿨다. 발급 시도 제한은 유지하므로 즉시 재발급하지 않는다. 공식 코드: https://github.com/instructure/canvas-lms/blob/master/app/controllers/external_tools_controller.rb

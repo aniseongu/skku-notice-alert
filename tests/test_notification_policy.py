@@ -5,7 +5,7 @@ from skku_notice import cli
 from skku_notice.archive import add_notice, update_detail
 from skku_notice.judge import Judgment
 from skku_notice.model import Notice
-from skku_notice.notification_policy import alert_priority
+from skku_notice.notification_policy import alert_priority, is_internship
 from skku_notice.state import SourceState, State, load_state, save_state
 
 
@@ -19,6 +19,16 @@ def test_school_always_alerts_and_internship_requires_relevant_ai():
     assert alert_priority(external=True, title="제목에 직무 없음", body="모집 분야: 개발",
                           match=None, judgment=Judgment("relevant", "개발 직무", "m"),
                           interests=()) == "default"
+
+
+def test_school_internship_with_ineligible_judgment_does_not_alert():
+    assert alert_priority(external=False, title="졸업예정자 인턴 모집", body="", match=None,
+                          judgment=Judgment("not_relevant", "지원 불가", "m"), interests=()) is None
+    assert not is_internship("International conference")
+    assert is_internship("Summer internship")
+    for verdict in ("relevant", "maybe"):
+        assert alert_priority(external=False, title="인턴 모집", body="", match=None,
+                              judgment=Judgment(verdict, "이유", "m"), interests=()) is not None
 
 
 def test_new_intern_waits_for_key_and_body_then_judges_and_alerts_once(tmp_path, monkeypatch):

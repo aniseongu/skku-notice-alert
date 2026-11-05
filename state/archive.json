@@ -3245,7 +3245,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 총무 업무를 수행하는 직무로 소프트웨어 개발 및 데이터 관련 직무가 아니며 국가보훈대상자만 지원 가능합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -3267,7 +3272,13 @@
         "at": "2026-11-15T23:59:00+09:00",
         "model": "source"
       },
-      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00"
+      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00",
+      "intern_judgment": {
+        "fingerprint": "3b5e91a0c7fc1775901e9116d3759fee7f775534e57a289c090b361139141f79",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 총무 업무를 수행하는 직무로 소프트웨어 개발 및 데이터 관련 직무가 아니며 국가보훈대상자만 지원 가능합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "jasoseol-intern/107074": {
       "notice": {

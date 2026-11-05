@@ -110,7 +110,7 @@ export class NoticeApp extends LitElement {
     notices: { state: true }, sources: { state: true }, matched: { state: true }, generatedAt: { state: true },
     view: { state: true }, board: { state: true }, keyword: { state: true }, keywords: { state: true }, query: { state: true },
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
-    installHidden: { state: true }, toast: { state: true }, toastLink: { state: true }, toastLinkLabel: { state: true }, isWide: { state: true }, theme: { state: true },
+    toast: { state: true }, toastLink: { state: true }, toastLinkLabel: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true }, sortMenuOpen: { state: true },
     saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true }, internSort: { state: true }, savedSort: { state: true },
     unreadOnly: { state: true }, selecting: { state: true }, selectedReads: { state: true },
@@ -147,7 +147,6 @@ export class NoticeApp extends LitElement {
   failed = false;
   selectedId: string | null = null;
   install: InstallPrompt | null = null;
-  installHidden = remember('install-hidden') === '1';
   toast = '';
   toastLink: string | null = null;
   toastLinkLabel = '';
@@ -506,8 +505,6 @@ export class NoticeApp extends LitElement {
     this.install = null;
   }
 
-  private hideInstall() { this.installHidden = true; remember('install-hidden', '1'); }
-
   private onKey(event: KeyboardEvent) {
     const target = event.target as Element | null;
     if (event.key === 'Escape' && this.sortMenuOpen) {
@@ -640,7 +637,6 @@ export class NoticeApp extends LitElement {
               ...this.tabSources().map((s) => ({ id: s.id, label: boardName(s, s.id) }))]
               .map((b) => this.sideItem(b.label, null, this.activeBoard() === b.id && !settings, () => { this.setBoard(b.id); if (settings) this.leaveSettings(); }))}`, this.tabSources().length)}
           <div class="side-foot">
-            ${this.install ? html`<button type="button" class="side-item" @click=${this.runInstall}>앱으로 설치하기</button>` : nothing}
             <button type="button" class="side-item kbd-only" aria-keyshortcuts="?" @click=${() => { this.shortcutsOpen = true; }}>
               <span>단축키</span>${kbd('?')}</button>
             ${this.sideItem('설정', null, settings, () => this.setView('settings'))}
@@ -673,10 +669,10 @@ export class NoticeApp extends LitElement {
           </header>
           </div>
 
-          ${settings ? html`<settings-view .keywords=${this.keywords} .theme=${this.theme}
+          ${settings ? html`<settings-view .keywords=${this.keywords} .theme=${this.theme} .canInstall=${Boolean(this.install && browserTab.matches)}
               .categories=${[...new Set(this.notices.map((n) => n.category).filter((c): c is string => Boolean(c)))].sort()}
               @keywords-change=${(e: CustomEvent<string[]>) => this.setKeywords(e.detail)}
-              @theme-change=${(e: CustomEvent<Theme>) => this.setTheme(e.detail)}></settings-view>` : html`
+              @theme-change=${(e: CustomEvent<Theme>) => this.setTheme(e.detail)} @install-request=${this.runInstall}></settings-view>` : html`
             <div class="tools narrow-only">
               <label class="search">${icon('search')}
                 <input type="search" placeholder="제목, 분류, 판정 이유로 찾기" autocomplete="off" aria-label="공지 검색" .value=${this.query}
@@ -705,13 +701,6 @@ export class NoticeApp extends LitElement {
           ${selected ? this.detail(selected) : html`<p class="detail-note detail-empty">공지를 고르면 여기에 보여요</p>`}
         </aside>
       </div>
-
-      ${this.install && !this.installHidden && browserTab.matches && !this.isWide && !settings ? html`
-        <div class="install-bar" role="region" aria-label="앱 설치 안내">
-          <p>홈 화면에 추가하면 앱처럼 바로 열 수 있어요</p>
-          <button type="button" class="solid-button" @click=${this.runInstall}>설치하기</button>
-          <button type="button" class="icon-button" aria-label="안내 닫기" @click=${this.hideInstall}>${icon('close')}</button>
-        </div>` : nothing}
 
       ${mobileNav}
       <div class="toast" role="status" ?hidden=${!this.toast}>${this.toast}${this.toastLink ? html`

@@ -78,7 +78,7 @@ const remember = (key: string, value?: string | null) => {
 
 export class SettingsView extends LitElement {
   static properties = {
-    keywords: { attribute: false }, theme: { attribute: false }, categories: { attribute: false }, muted: { state: true },
+    keywords: { attribute: false }, theme: { attribute: false }, categories: { attribute: false }, canInstall: { attribute: false }, muted: { state: true },
     repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
     keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true }, connectionState: { state: true },
@@ -90,6 +90,7 @@ export class SettingsView extends LitElement {
   categories: string[] = [];
   muted: string[] = [];
   theme: Theme = 'auto';
+  canInstall = false;
   repo = remember('github-repo') ?? '';
   // 사용자 요청(2026-11-03)으로 연결 토큰은 이 기기에 암호화해 기억한다(D-017). 키 값은 남기지 않는다.
   token = '';
@@ -608,6 +609,10 @@ export class SettingsView extends LitElement {
               </div>
             </div>
           </div>
+          ${this.canInstall ? html`<div class="setting">
+            <div class="setting-text"><p class="setting-name">앱 설치</p><p class="setting-help">바탕화면이나 홈 화면에서 바로 열어요</p></div>
+            <div class="setting-control"><button type="button" class="ghost-button" @click=${() => this.emit('install-request', null)}>앱으로 설치하기</button></div>
+          </div>` : nothing}
           </div>
         </section>
       </div>`;

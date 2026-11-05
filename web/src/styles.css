@@ -105,7 +105,8 @@
     gap: 2px 12px;
     color: inherit; text-decoration: none;
   }
-  .meta { grid-area: meta; display: flex; flex-wrap: wrap; gap: 6px; font-size: 13px; line-height: 18px; font-weight: 500; color: var(--text-3); }
+  .meta { grid-area: meta; display: flex; flex-wrap: wrap; min-width: 0; gap: 6px; font-size: 13px; line-height: 18px; font-weight: 500; color: var(--text-3); }
+  .meta span { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
   .dday { grid-area: dday; align-self: center; font-size: 13px; line-height: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
   .dday.urgent { color: var(--danger); }
   .dday.ended { font-weight: 500; color: var(--text-3); }
@@ -128,8 +129,7 @@
   .reason.maybe b, .verdict.maybe { color: var(--soon); }
   .reason.not_relevant { color: var(--text-3); }
   .reason.rule b { color: var(--text-2); }
-  /* 해당 없음: 투명도 대신 글자색을 직접 낮춰 대비(4.5:1)를 지킨다 */
-  .row.dim.unread .title { color: var(--text-2); font-weight: 600; }
+  /* 판정과 읽음은 별개다. 제목과 D-day는 읽음 상태에 맞춰 함께 바뀐다. */
   .row.dim .meta { color: var(--text-3); }
   .row.read .dday, .row.read .reason b, .row.read .interest { color: var(--text-2); font-weight: 500; }
   .row:active, .row[aria-current="true"] { background: var(--sunken); }

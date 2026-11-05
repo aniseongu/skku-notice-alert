@@ -11,7 +11,7 @@ import { cleanHtml, fileType } from './rich';
 import './settings-view';
 import { GitHubError, collectionWorkflowUrl, readVariable, saveVariable, requestCollection } from './github';
 import { loadToken } from './settings-storage';
-import { SAVED_VARIABLE, type SavedNotice, loadSaved, parseSaved, storeSaved, toggleSaved } from './saved-notices';
+import { SAVED_VARIABLE, type SavedNotice, loadSaved, orderSaved, parseSaved, storeSaved, toggleSaved } from './saved-notices';
 import { READ_STATE_VARIABLE, READ_VARIABLE, loadReadState, mergeReadStates, parseReadState, readIds, serializeReadState, setReadState, storeReadState } from './read-notices';
 import { keywordCounts } from './keyword-counts';
 import type { Theme } from './settings-view';
@@ -112,7 +112,7 @@ export class NoticeApp extends LitElement {
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
     installHidden: { state: true }, toast: { state: true }, toastLink: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true }, sortMenuOpen: { state: true },
-    saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true }, internSort: { state: true },
+    saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true }, internSort: { state: true }, savedSort: { state: true },
     unreadOnly: { state: true }, selecting: { state: true }, selectedReads: { state: true },
   };
 
@@ -124,6 +124,7 @@ export class NoticeApp extends LitElement {
     ? 'settings' : [normalizeTab(new URLSearchParams(location.search).get('tab')), normalizeTab(remember('tab'))].find(isTab) ?? 'all';
   sort: Sort = loadSort('all');
   internSort: Sort = loadSort('intern');
+  savedSort: Sort = remember('saved-sort') === 'deadline' ? 'deadline' : 'latest';
   unreadOnly = remember('view-unread') === '1';
   selecting = false;
   selectedReads: string[] = [];
@@ -350,8 +351,7 @@ export class NoticeApp extends LitElement {
 
   /** 저장한 글. 지금 목록에 있으면 최신 정보로, 밀려났으면 저장할 때 정보로 보여 준다. */
   private savedNotices(): Notice[] {
-    return this.saved.map((item) => this.notices.find((n) => n.id === item.id) ?? { ...item, first_seen: null })
-      .sort((a, b) => b.posted_on.localeCompare(a.posted_on));
+    return orderSaved(this.saved, this.notices, this.savedSort);
   }
 
   private judgement(notice: Notice): Judgement | undefined { return this.matched?.items[notice.id]; }
@@ -398,7 +398,7 @@ export class NoticeApp extends LitElement {
     return orderNotices(scoped, this.sortFor(tab));
   }
 
-  private sortFor(tab: Tab): Sort { return tab === 'intern' ? this.internSort : this.sort; }
+  private sortFor(tab: Tab): Sort { return tab === 'saved' ? this.savedSort : tab === 'intern' ? this.internSort : this.sort; }
 
   private tab(): Tab { return this.view === 'settings' ? 'all' : this.view; }
   private visible(): Notice[] {
@@ -839,9 +839,9 @@ export class NoticeApp extends LitElement {
     const today = todayKst();
     const groups = new Map<string, Notice[]>();
     for (const notice of list) {
-      const key = this.view !== 'saved' && this.sortFor(this.tab()) === 'deadline'
+      const key = this.sortFor(this.tab()) === 'deadline'
         ? !notice.deadline ? '마감일 미정' : deadlinePassed(notice.deadline) ? '마감 지난 글' : deadlineGroup(notice.deadline, today)
-        : postedGroup(notice.posted_on, today);
+        : this.view === 'saved' ? '저장한 공지' : postedGroup(notice.posted_on, today);
       groups.set(key, [...(groups.get(key) ?? []), notice]);
     }
     return [...groups].map(([title, items], index) => html`
@@ -878,7 +878,7 @@ export class NoticeApp extends LitElement {
         this.selecting = true; this.selectedReads = [];
         if (event.detail === 0) this.updateComplete.then(() => this.querySelector<HTMLInputElement>('.select-all input')?.focus({ preventScroll: true }));
       }}>${icon('select-list')}선택</button>`;
-    if (this.view === 'saved') return html`<div class="view-options saved-options">${select}</div>`;
+    if (this.view === 'saved') return html`<div class="view-options saved-options"><div class="view-actions">${select}${this.sortSelect()}</div></div>`;
     return html`<div class="view-options" role="group" aria-label="공지 보기 조건">
       <button type="button" class="view-toggle" aria-pressed=${String(this.unreadOnly)} @click=${() => {
         this.unreadOnly = !this.unreadOnly;
@@ -890,15 +890,15 @@ export class NoticeApp extends LitElement {
   }
 
   private sortSelect() {
-    if (this.view === 'saved') return nothing;
     const sort = this.sortFor(this.tab());
-    const options = [{ id: 'latest', label: '최신순' }, { id: 'deadline', label: '마감순' }] as const;
+    const options = [{ id: 'latest', label: this.view === 'saved' ? '저장한 순' : '최신순' }, { id: 'deadline', label: '마감순' }] as const;
+    const label = options.find((option) => option.id === sort)!.label;
     return html`<div class="sort-picker">
-      <button type="button" class="board-trigger sort-trigger" aria-label="정렬: ${sort === 'latest' ? '최신순' : '마감순'}"
+      <button type="button" class="board-trigger sort-trigger" aria-label="정렬: ${label}"
         aria-expanded=${String(this.sortMenuOpen)} aria-controls="sort-options" @click=${() => {
           this.sortMenuOpen = !this.sortMenuOpen;
           if (this.sortMenuOpen) this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.sort-option[aria-pressed="true"]')?.focus());
-        }}>${sort === 'latest' ? '최신순' : '마감순'}<span class="board-chevron" aria-hidden="true"></span></button>
+        }}>${label}<span class="board-chevron" aria-hidden="true"></span></button>
       ${this.sortMenuOpen ? html`<div id="sort-options" class="board-options sort-options" role="group" aria-label="정렬 선택"
         @keydown=${(event: KeyboardEvent) => {
           const buttons = [...this.querySelectorAll<HTMLButtonElement>('.sort-option')];
@@ -912,9 +912,10 @@ export class NoticeApp extends LitElement {
         }}>
         ${options.map((option) => html`<button type="button" class="board-option sort-option" aria-pressed=${String(sort === option.id)}
           @click=${() => {
-            if (this.view === 'intern') this.internSort = option.id;
+            if (this.view === 'saved') this.savedSort = option.id;
+            else if (this.view === 'intern') this.internSort = option.id;
             else this.sort = option.id;
-            remember(this.view === 'intern' ? 'intern-sort' : 'notice-sort', option.id);
+            remember(this.view === 'saved' ? 'saved-sort' : this.view === 'intern' ? 'intern-sort' : 'notice-sort', option.id);
             this.selectedId = null;
             this.sortMenuOpen = false;
             history.replaceState(null, '', `${location.pathname}?tab=${this.tab()}&sort=${option.id}`);

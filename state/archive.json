@@ -55,6 +55,171 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/362521": {
+      "notice": {
+        "id": "linkareer-intern/362521",
+        "source_id": "linkareer-intern",
+        "article_no": "362521",
+        "title": "[(주) 한국존슨앤드존슨] Strategic Sales Intern(Surgery) 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362521",
+        "posted_on": "2026-11-05",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-05T20:57:08.547859+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 영업 및 비즈니스 전략 업무로 소프트웨어 개발이나 데이터 분석 직무와 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[(주) 한국존슨앤드존슨] Strategic Sales Intern(Surgery) 채용\n\n\n[담당업무]\n- 비즈니스 전략에 따른 세일즈 목표 달성 및 시장점유율 성장 주도\n- 정기적인 거래처 방문을 통한 고객 정보 파악 및 관계 관리\n- 시장 데이터 분석을 통한 비즈니스 기회 발굴\n- 전문의료인 대상 제품 프로모션 및 교육 진행\n\n\n[접수기간]\n11월 05일 ~ 11월 17일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><p><b><span>[(주) 한국존슨앤드존슨] Strategic Sales Intern(Surgery) 채용</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>- 비즈니스 전략에 따른 세일즈 목표 달성 및 시장점유율 성장 주도</span></p><p><span>- 정기적인 거래처 방문을 통한 고객 정보 파악 및 관계 관리</span></p><p><span>- 시장 데이터 분석을 통한 비즈니스 기회 발굴</span></p><p><span>- 전문의료인 대상 제품 프로모션 및 교육 진행</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 05일 ~ 11월 17일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/981630\" title=\"CaptureX_2026-11-05_202621_www.careers.jnj.com.jpg\"><br><br></p></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/981630"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T20:57:08.547859+09:00",
+      "body_attempted_at": "2026-11-05T20:57:08.547859+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "1f8fa1b7f3c3a7e428baa1b7a4f7cbea88c96c7a00086f9562bca8c3cb1bac97",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 영업 및 비즈니스 전략 업무로 소프트웨어 개발이나 데이터 분석 직무와 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362516": {
+      "notice": {
+        "id": "linkareer-intern/362516",
+        "source_id": "linkareer-intern",
+        "article_no": "362516",
+        "title": "[(주) 한국존슨앤드존슨] Marketing Intern(Neurovascular) 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362516",
+        "posted_on": "2026-11-05",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-05T20:57:08.547859+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 마케팅 지원 및 현장 운영 업무로 소프트웨어 개발이나 데이터 분석 직무와 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[(주) 한국존슨앤드존슨] Marketing Intern(Neurovascular) 채용\n\n\n[담당업무]\n- 신규 제품 출시 프로젝트 지원\n- 마케팅 자료 제작 보조(브로셔, PPT, 문서 등)\n- 경쟁사 자료 취합 및 비교 분석\n- 시장 동향 및 트렌드 조사\n- 의료진 대상 트레이닝 세션 준비 지원(데모용 물품 준비, 세팅 보조, 현장 운영 지원 등)\n\n\n[접수기간]\n11월 05일 ~ 11월 17일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[(주) 한국존슨앤드존슨] Marketing Intern(Neurovascular) 채용</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>- 신규 제품 출시 프로젝트 지원</span></p><p><span>- 마케팅 자료 제작 보조(브로셔, PPT, 문서 등)</span></p><p><span>- 경쟁사 자료 취합 및 비교 분석</span></p><p><span>- 시장 동향 및 트렌드 조사</span></p><p><span>- 의료진 대상 트레이닝 세션 준비 지원(데모용 물품 준비, 세팅 보조, 현장 운영 지원 등)</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 05일 ~ 11월 17일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/981622\" title=\"CaptureX_2026-11-05_202040_www.careers.jnj.com.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/981622"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T20:57:08.547859+09:00",
+      "body_attempted_at": "2026-11-05T20:57:08.547859+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "4b4386ffd65946645e9f11a8d5aeb0808ef6c68efd6606d099a60535688c314b",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 마케팅 지원 및 현장 운영 업무로 소프트웨어 개발이나 데이터 분석 직무와 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362509": {
+      "notice": {
+        "id": "linkareer-intern/362509",
+        "source_id": "linkareer-intern",
+        "article_no": "362509",
+        "title": "[에이비티아시아] [파파레서피/잉가] 글로벌 MD 인턴 채용 (채용 전환형)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/362509",
+        "posted_on": "2026-11-05",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-05T20:57:08.547859+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 글로벌 온라인 채널 영업 및 광고 운영 업무로 소프트웨어 개발이나 데이터 분석 직무와 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[파파레서피/잉가] 글로벌 MD 인턴 채용 (채용 전환형)\n접수 기간2026-11-05 ~ 상시모집\n\n모집부문 및 상세내용\n[파파레서피/잉가] 글로벌 MD 인턴(1명)채용 형태\n- 인턴 6개월\n\n\n담당업무\n- 해외 온라인 채널 영업 (큐텐, 쇼피, 틱톡샵, 아마존 등)\n- 채널별 광고 운영 (마켓플레이스 내부광고, 외부광고)\n- 인플루언서 컨택\n\n[지원자격]\n- 외국어 커뮤니케이션이 수월하신 분\n- 뷰티 인사이트가 뛰어나신 분\n- 숫자 감각이 있으신 분\n\n우대조건\n- 해외 거주 경험자\n- 마켓플레이스 운영 성공경험이 있으신 분\n- 명확한 커뮤니케이션 스킬과 숫자를 지표화 할 수 있는 분\n- 해외여행에 결격사유가 없는 분\n\n\n자격요건\n학력\n학력무관\n\n근무조건\n급여\n회사 내규에 따름\n\n근무지역\n서울 강남구 언주로 537 에이비티타워\n\n\n지원 기간 및 방법\n접수기간\n2026-11-05 ~ 상시모집\n\n접수방법\n홈페이지 지원\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><img src=\"https://linkareer.com/images/activity/banner/template_1_banner.webp\"><div><h2>[파파레서피/잉가] 글로벌 MD 인턴 채용 (채용 전환형)</h2><p><span>접수 기간</span><span>2026-11-05 ~ 상시모집</span></p></div><div><strong>모집부문 및 상세내용</strong><hr></div><div><strong>[파파레서피/잉가] 글로벌 MD 인턴(1명)</strong><div><div>채용 형태</div><p>- 인턴 6개월<br></p></div><div><div>담당업무</div><p>- 해외 온라인 채널 영업 (큐텐, 쇼피, 틱톡샵, 아마존 등)\n- 채널별 광고 운영 (마켓플레이스 내부광고, 외부광고)\n- 인플루언서 컨택\n\n[지원자격]\n- 외국어 커뮤니케이션이 수월하신 분\n- 뷰티 인사이트가 뛰어나신 분\n- 숫자 감각이 있으신 분</p></div><div><div>우대조건</div><p>- 해외 거주 경험자\n- 마켓플레이스 운영 성공경험이 있으신 분\n- 명확한 커뮤니케이션 스킬과 숫자를 지표화 할 수 있는 분\n- 해외여행에 결격사유가 없는 분</p></div></div><div><strong>자격요건</strong><hr></div><div><p>학력</p><p>학력무관</p></div><div><strong>근무조건</strong><hr></div><ul><li><p>급여</p><p>회사 내규에 따름</p></li><li><p>근무지역</p><div><p>서울 강남구 언주로 537 에이비티타워 </p></div></li></ul><div><strong>지원 기간 및 방법</strong><hr></div><ul><li><p>접수기간</p><p>2026-11-05 ~ 상시모집</p></li><li><p>접수방법</p><p>홈페이지 지원</p></li></ul><div><strong>유의사항</strong><hr></div><ul><li>허위 사실이 발견될 경우 채용이 취소될 수 있습니다.</li></ul></div></div>",
+      "images": [
+        "https://linkareer.com/images/activity/banner/template_1_banner.webp"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T20:57:08.547859+09:00",
+      "body_attempted_at": "2026-11-05T20:57:08.547859+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-03T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "e0379e589f799160483f1fcb72fe46a9a7b9e02534c743a0c0f35427e66614b5",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 글로벌 온라인 채널 영업 및 광고 운영 업무로 소프트웨어 개발이나 데이터 분석 직무와 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "linkareer-intern/362497": {
       "notice": {
         "id": "linkareer-intern/362497",
@@ -1309,27 +1474,43 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 브랜드 마케팅 서포트 및 운영 업무로 소프트웨어 개발이나 데이터 분석 직무와 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[크림(KREAM)] 입점 브랜드 마케팅 체험형 인턴 모집\n\n\n\n\n[담당 업무]\n- KREAM 입점 브랜드 (폴리테루, 산산기어, 코이세이오 등) 마케팅 서포트\n- 대학생 서포터즈 KREAM HYPE CREW 모임 운영, 모니터링, 데이터 관리\n- KREAM 입점 브랜드 홍보를 위한 인플루언서 서칭, 발굴 및 협업 진행\n- KREAM 입점 브랜드 체험단 모집 기획안 작성 및 운영 서포트\n- IP 제휴 마케팅 제안서 및 결과 보고서 작성 보조\n\n\n[필요 역량]\n- 계약기간 (약 3개월) 동안 Full-Time 근무 가능하신 분\n- 채용 전형 절차 별 일정에 참여 가능하신 분 [입과 예정일 : 2026년 11월 30일]\n- 피그마 등 간단한 이미지 제작 툴을 다룰 수 있으신 분\n- PPT, Excel 등 오피스 프로그램을 능숙하게 다룰 수 있으신 분\n\n\n[우대 사항]\n- KREAM 입점 브랜드 (폴리테루, 산산기어, 코이세이오 등)에 관심 있으신 분\n- 제휴 제안서 또는 프로모션 기획안을 작성해본 경험이 있으신 분\n- 국내외 스니커즈 또는 럭셔리 마켓에 대한 관심이 높으신 분",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><span><b>[크림(KREAM)] 입점 브랜드 마케팅 체험형 인턴 모집</b></span></p><p><span>[담당 업무]</span></p><p><span>- KREAM 입점 브랜드 (폴리테루, 산산기어, 코이세이오 등) 마케팅 서포트&nbsp;</span></p><p><span>- 대학생 서포터즈 KREAM HYPE CREW 모임 운영, 모니터링, 데이터 관리&nbsp;</span></p><p><span>- KREAM 입점 브랜드 홍보를 위한 인플루언서 서칭, 발굴 및 협업 진행&nbsp;</span></p><p><span>- KREAM 입점 브랜드 체험단 모집 기획안 작성 및 운영 서포트&nbsp;</span></p><p><span>- IP 제휴 마케팅 제안서 및 결과 보고서 작성 보조&nbsp;</span></p><p><span>[필요 역량]</span></p><p><span>﻿- 계약기간 (약 3개월) 동안 Full-Time 근무 가능하신 분&nbsp;</span></p><p><span>- 채용 전형 절차 별 일정에 참여 가능하신 분 [입과 예정일 : 2026년 11월 30일]&nbsp;</span></p><p><span>- 피그마 등 간단한 이미지 제작 툴을 다룰 수 있으신 분&nbsp;</span></p><p><span>- PPT, Excel 등 오피스 프로그램을 능숙하게 다룰 수 있으신 분</span></p><p><span>[우대 사항]</span></p><p><span>- KREAM 입점 브랜드 (폴리테루, 산산기어, 코이세이오 등)에 관심 있으신 분</span></p><p><span>- 제휴 제안서 또는 프로모션 기획안을 작성해본 경험이 있으신 분</span></p><p><span>- 국내외 스니커즈 또는 럭셔리 마켓에 대한 관심이 높으신 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/981201\" title=\"20261105_142259.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/981201"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T20:57:08.547859+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2026-11-12T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "body_attempted_at": "2026-11-05T20:57:08.547859+09:00",
+      "intern_judgment": {
+        "fingerprint": "bb802cb0b1aed4f3698e57e86b951f4a327067f539b44de1c24ba49ac7431406",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 브랜드 마케팅 서포트 및 운영 업무로 소프트웨어 개발이나 데이터 분석 직무와 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/362389": {
@@ -2404,6 +2585,48 @@
         "verdict": "not_relevant",
         "reason": "시설, 물류, 일반관리 직무는 소프트웨어 개발 및 IT 관련 직무가 아니며, 지원 자격 또한 4년제 대학 졸업자 이상으로 제한되어 있습니다.",
         "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362507": {
+      "notice": {
+        "id": "linkareer-intern/362507",
+        "source_id": "linkareer-intern",
+        "article_no": "362507",
+        "title": "[비테스코테크놀로지스코리아] 이천사업장 11월 신입 및 경력직 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362507",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-05T20:57:08.547859+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[비테스코테크놀로지스코리아] 이천사업장 11월 신입 및 경력직 채용\n접수 기간2026-11-04 ~ 2026-11-16\n\n모집부문 및 상세내용\nIndustrial Engineer.(0명)채용 형태\n- 신입\n\n\n담당업무\n양산 테스트 요구사항을 충족하는 테스트 장비 설계 ㆍ 개발 및 시스템 통합\n제품 테스트 사양에 맞춘 장비 소프트웨어 설계 ㆍ 개발 ㆍ 디버깅\n테스트 공정 ㆍ 장비 개선 및 신규 모델 적용\n테스트 검출력 ㆍ 공정 수율 개선 및 불량 분석 지원\n\n지원자격 및 우대조건\n전기 ㆍ 전자 ㆍ 컴퓨터공학 또는 관련 학과 학사 이상(졸업예정자 지원 가능)\n영어 커뮤니케이션 가능자\n신입 ~ 경력 9년 이하\nNI TestStand 및 NI Test System 관련 경험 보유자 우대\n\n\nLean Engineer(0명)채용 형태\n- 경력\n\n\n담당업무\n라인 밸런싱 ㆍ 표준화 : 사이클 타임 분석을 통한 라인 밸런싱 및 병목 공정\n개선 지원, SWI/SOS 및 LSW 체크리스트 제 ㆍ 개정 관리\nLEAN ㆍ TPM 운영 : 현장 5S+2 준수 상태 점검 ㆍ 유지, TPM 분임조 활동\n및 사내 TPM Contest 운영\n현장 데이터 ㆍ KPI 관리 : Power BI 등 디지털 보드 기반 가동 데이터\n(OEE, 설비 고장 지표 등) 수집, 트렌드 분석 및 리포팅\n작업 환경 ㆍ 안전성 평가 : 공정별 작업 부하 분석 및 EAWS 등 인체공학\n평가 데이터 수집, 개선점 도출 지원\n사내 개선 제안(CIP) 운영 : 부서별 아이디어 접수 현황 트래킹, 건수 ㆍ\n성과 집계 및 사내 홍보 ㆍ 교육 지원\n\n지원자격 및 우대조건\n\n자동차 부품 또는 제조업 현장 실무 경력 3년 이상\n(생산기술, 공정개선, 생산관리, IE 등)\n산업공학, 기계공학 등 관련 공학 계열 학사 학위 소지자\n라인 사이클 타임 분석, 표준작업, VSM 등 LEAN 방법론에 대한 기본 이해\n현장 및 유관 부서와의 능동적이고 유연한 커뮤니케이션 역량\n비즈니스 영어(이메일 작성 및 영어 회의) 가능자\nPower BI, Mendix 등 디지털 도구 활용 경험자 우대\n\n\nElectric & Electronic Engineer(0명)채용 형태\n- 신입\n\n\n담당업무\n차량용 Power Electronics 하드웨어 제품 개발 (Inverter, On-board\nCharger, 고전압 DC/DC 컨버터, X-in-1, Power Module)\n회로 설계 및 프로토타입 개발\n요구사항 분석 및 Design FMEA/FMEDA 수행\n회로 해석, Worst Case Analysis 및 시뮬레이션\n하드웨어 검증 및 확인 (Verification & Validation)\n\n지원자격 및 우대조건\n\n전기 ㆍ 전자공학 학사 이상 (졸업예정자 지원 가능)\n신입 및 경력\nPower Electronics 및 전력 변환 시스템 지식 보유자 우대\n(고전압 Power Module(SiC/IGBT/GaN), Gate Driver)\n임베디드 시스템 지식 보유자 우대\n자동차 분야 경험자 우대\n\n\nProduct Integrity Profess.(0명)채용 형태\n- 신입\n\n\n담당업무\n프로젝트의 Cybersecurity 및 Privacy 관련 전반적인 업무 계획, 감독 및\n리딩\n소프트웨어, 하드웨어, 생산 등 엔지니어링 담당팀과 협업하여 프로젝트\nCybersecurity 및 Privacy 목표 달성 및 문제 해결\n엔지니어링 팀의 코어 멤버로서 Cybersecurity 및 Privacy 관련 의사결정\nCybersecurity 및 Privacy 내용에 대해 고객사 커뮤니케이션 채널 역할\n엔지니어링 결과물에 대한 리뷰 및 승인\n\n지원자격 및 우대조건\n\n공학 학사 이상\n(전기/전자 공학, 컴퓨터 공학, 기계 공학, 자동차 공학 또는 관련 전공)\n졸업예정자 지원 가능\n영어 커뮤니케이션 가능자\n원활한 소통 능력, 팀워크 능력 및 팀 리딩 능력\n정보보안 관련 자격증 소지자 우대 (정보보안기사, CISSP, CISA, CPPG)\n자동차 제어/ 보안 SW 관련 개발 경험 및 지식 보유자 우대\n관련 업무 경력 2~5년 보유자 우대\n\n\nElectronic Engineer Intern(0명)채용 형태\n- 인턴 6개월\n\n\n담당업무\n신제품 개발 샘플 제작 지원\n부품 개발 업무 지원 및 개발 담당자 협업\n개발 샘플 테스트 수행 및 결과 데이터 정리ㆍ관리\n\n지원자격 및 우대조건\n\n전기/전자공학 또는 관련 전공 재학 중이거나 졸업(예정)인 자\nMS Office(Excel, PowerPoint 등) 활용 가능자\n영어 커뮤니케이션 가능자 우대\n\n\n자격요건\n학력\n대학졸업(4년) 이상\n\n근무조건\n급여\n회사 내규에 따름\n\n근무지역\n경기 이천시 사음로 45-29 비테스코 테크놀로지스 코리아\n\n\n전형 절차\nStep1\n서류전형\n\nStep2\n1차 실무진 면접\n\nStep3\n2차 최종 면접\n\nStep3\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-04 ~ 2026-11-16\n\n접수방법\n홈페이지 지원\n\n문의\n전화번호\n0316454723\n\n이메일\nrecruiting-korea@vitesco.com\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><img src=\"https://linkareer.com/images/activity/banner/template_1_banner.webp\"><div><h2>[비테스코테크놀로지스코리아] 이천사업장 11월 신입 및 경력직 채용</h2><p><span>접수 기간</span><span>2026-11-04 ~ 2026-11-16</span></p></div><div><strong>모집부문 및 상세내용</strong><hr></div><div><strong>Industrial Engineer.(0명)</strong><div><div>채용 형태</div><p>- 신입 <br></p></div><div><div>담당업무</div><p>양산 테스트 요구사항을 충족하는 테스트 장비 설계 ㆍ 개발 및 시스템 통합\n제품 테스트 사양에 맞춘 장비 소프트웨어 설계 ㆍ 개발 ㆍ 디버깅\n테스트 공정 ㆍ 장비 개선 및 신규 모델 적용\n테스트 검출력 ㆍ 공정 수율 개선 및 불량 분석 지원</p></div><div><div>지원자격 및 우대조건</div><p>전기 ㆍ 전자 ㆍ 컴퓨터공학 또는 관련 학과 학사 이상(졸업예정자 지원 가능)\n영어 커뮤니케이션 가능자\n신입 ~ 경력 9년 이하\nNI TestStand 및 NI Test System 관련 경험 보유자 우대</p></div></div><div><strong>Lean Engineer(0명)</strong><div><div>채용 형태</div><p>- 경력 <br></p></div><div><div>담당업무</div><p>라인 밸런싱 ㆍ 표준화 : 사이클 타임 분석을 통한 라인 밸런싱 및 병목 공정\n개선 지원, SWI/SOS 및 LSW 체크리스트 제 ㆍ 개정 관리\nLEAN ㆍ TPM 운영 : 현장 5S+2 준수 상태 점검 ㆍ 유지, TPM 분임조 활동\n및 사내 TPM Contest 운영\n현장 데이터 ㆍ KPI 관리 : Power BI 등 디지털 보드 기반 가동 데이터\n(OEE, 설비 고장 지표 등) 수집, 트렌드 분석 및 리포팅\n작업 환경 ㆍ 안전성 평가 : 공정별 작업 부하 분석 및 EAWS 등 인체공학\n평가 데이터 수집, 개선점 도출 지원\n사내 개선 제안(CIP) 운영 : 부서별 아이디어 접수 현황 트래킹, 건수 ㆍ\n성과 집계 및 사내 홍보 ㆍ 교육 지원</p></div><div><div><div>지원자격 및 우대조건</div></div><p>자동차 부품 또는 제조업 현장 실무 경력 3년 이상\n(생산기술, 공정개선, 생산관리, IE 등)\n산업공학, 기계공학 등 관련 공학 계열 학사 학위 소지자\n라인 사이클 타임 분석, 표준작업, VSM 등 LEAN 방법론에 대한 기본 이해\n현장 및 유관 부서와의 능동적이고 유연한 커뮤니케이션 역량\n비즈니스 영어(이메일 작성 및 영어 회의) 가능자\nPower BI, Mendix 등 디지털 도구 활용 경험자 우대</p></div></div><div><strong>Electric &amp; Electronic Engineer(0명)</strong><div><div>채용 형태</div><p>- 신입 <br></p></div><div><div>담당업무</div><p>차량용 Power Electronics 하드웨어 제품 개발 (Inverter, On-board\nCharger, 고전압 DC/DC 컨버터, X-in-1, Power Module)\n회로 설계 및 프로토타입 개발\n요구사항 분석 및 Design FMEA/FMEDA 수행\n회로 해석, Worst Case Analysis 및 시뮬레이션\n하드웨어 검증 및 확인 (Verification &amp; Validation)</p></div><div><div><div>지원자격 및 우대조건</div></div><p>전기 ㆍ 전자공학 학사 이상 (졸업예정자 지원 가능)\n신입 및 경력\nPower Electronics 및 전력 변환 시스템 지식 보유자 우대\n(고전압 Power Module(SiC/IGBT/GaN), Gate Driver)\n임베디드 시스템 지식 보유자 우대\n자동차 분야 경험자 우대</p></div></div><div><strong>Product Integrity Profess.(0명)</strong><div><div>채용 형태</div><p>- 신입 <br></p></div><div><div>담당업무</div><p>프로젝트의 Cybersecurity 및 Privacy 관련 전반적인 업무 계획, 감독 및\n리딩\n소프트웨어, 하드웨어, 생산 등 엔지니어링 담당팀과 협업하여 프로젝트\nCybersecurity 및 Privacy 목표 달성 및 문제 해결\n엔지니어링 팀의 코어 멤버로서 Cybersecurity 및 Privacy 관련 의사결정\nCybersecurity 및 Privacy 내용에 대해 고객사 커뮤니케이션 채널 역할\n엔지니어링 결과물에 대한 리뷰 및 승인</p></div><div><div><div>지원자격 및 우대조건</div></div><p>공학 학사 이상\n(전기/전자 공학, 컴퓨터 공학, 기계 공학, 자동차 공학 또는 관련 전공)\n졸업예정자 지원 가능\n영어 커뮤니케이션 가능자\n원활한 소통 능력, 팀워크 능력 및 팀 리딩 능력\n정보보안 관련 자격증 소지자 우대 (정보보안기사, CISSP, CISA, CPPG)\n자동차 제어/ 보안 SW 관련 개발 경험 및 지식 보유자 우대\n관련 업무 경력 2~5년 보유자 우대</p></div></div><div><strong>Electronic Engineer Intern(0명)</strong><div><div>채용 형태</div><p>- 인턴 6개월<br></p></div><div><div>담당업무</div><p>신제품 개발 샘플 제작 지원\n부품 개발 업무 지원 및 개발 담당자 협업\n개발 샘플 테스트 수행 및 결과 데이터 정리ㆍ관리</p></div><div><div><div>지원자격 및 우대조건</div></div><p>전기/전자공학 또는 관련 전공 재학 중이거나 졸업(예정)인 자\nMS Office(Excel, PowerPoint 등) 활용 가능자\n영어 커뮤니케이션 가능자 우대</p></div></div><div><strong>자격요건</strong><hr></div><div><p>학력</p><p>대학졸업(4년) 이상</p></div><div><strong>근무조건</strong><hr></div><ul><li><p>급여</p><p>회사 내규에 따름</p></li><li><p>근무지역</p><div><p>경기 이천시 사음로 45-29 비테스코 테크놀로지스 코리아 </p></div></li></ul><div><strong>전형 절차</strong><hr></div><div><p>Step1</p><p>서류전형</p></div><i></i><div><p>Step2</p><p>1차 실무진 면접</p></div><i></i><div><p>Step3</p><p>2차 최종 면접</p></div><i></i><div><p>Step3</p><p>최종합격</p></div><div><strong>지원 기간 및 방법</strong><hr></div><ul><li><p>접수기간</p><p>2026-11-04 ~ 2026-11-16</p></li><li><p>접수방법</p><p>홈페이지 지원</p></li></ul><div><strong>문의</strong><hr></div><ul><li><p>전화번호</p><p>0316454723</p></li><li><p>이메일</p><p>recruiting-korea@vitesco.com</p></li></ul><div><strong>유의사항</strong><hr></div><ul><li>허위 사실이 발견될 경우 채용이 취소될 수 있습니다.</li></ul></div></div>",
+      "images": [
+        "https://linkareer.com/images/activity/banner/template_1_banner.webp"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T20:57:08.547859+09:00",
+      "body_attempted_at": "2026-11-05T20:57:08.547859+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T23:59:59.999000+09:00",
+        "model": "source"
       }
     },
     "linkareer-intern/362249": {

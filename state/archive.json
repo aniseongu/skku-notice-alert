@@ -1739,7 +1739,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 해외 B2B 영업 직무를 모집하고 있어 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -1761,7 +1766,13 @@
         "at": "2027-02-03T23:59:59.999000+09:00",
         "model": "source"
       },
-      "body_attempted_at": "2026-11-05T22:19:56.688468+09:00"
+      "body_attempted_at": "2026-11-05T22:19:56.688468+09:00",
+      "intern_judgment": {
+        "fingerprint": "42520be3f567db3dadcd7c43fff0daffa563737e08ec4373b62002b180cf6a45",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 해외 B2B 영업 직무를 모집하고 있어 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "linkareer-intern/362375": {
       "notice": {
@@ -2345,7 +2356,8 @@
       "ai_deadline": {
         "checked": true,
         "model": "gemini-3.1-flash-lite"
-      }
+      },
+      "rechecked_at": "2026-11-05T23:17:16.015568+09:00"
     },
     "linkareer-intern/362276": {
       "notice": {
@@ -4526,7 +4538,7 @@
         "kind": "마감",
         "at": "2026-11-13T13:00:00+09:00"
       },
-      "rechecked_at": "2026-11-05T11:07:36.574820+09:00"
+      "rechecked_at": "2026-11-05T23:17:16.015568+09:00"
     },
     "skku-notice01/141079": {
       "notice": {
@@ -4580,7 +4592,7 @@
       "summary": "11월 15일까지 이메일로 연구실 인턴 지원 신청서와 성적증명서를 제출하세요. 선발 시 겨울방학 동안 연구에 참여하고 수료 후 장학금을 받을 수 있습니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-04T16:29:42.247412+09:00",
-      "rechecked_at": "2026-11-05T11:07:36.574820+09:00"
+      "rechecked_at": "2026-11-05T23:17:16.015568+09:00"
     },
     "linkareer-intern/362080": {
       "notice": {

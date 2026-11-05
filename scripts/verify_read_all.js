@@ -1,0 +1,41 @@
+// Playwright browser_run_code_unsafe로 실행. 격리된 브라우저에서만 읽음 상태를 바꾼다.
+async (page) => {
+  const origin = page.url().startsWith('http://127.0.0.1:5173')
+    ? 'http://127.0.0.1:5173/?api=sample/api/v1' : 'https://aniseongu.github.io/skku-notice-alert/';
+  const results = [];
+  for (const width of [320, 412, 1280]) {
+    const context = await page.context().browser().newContext({ viewport: { width, height: 891 }, serviceWorkers: 'block' });
+    try {
+      const p = await context.newPage();
+      await p.goto(origin);
+      await p.locator('.row').first().waitFor();
+      await p.evaluate(async () => {
+        const a = document.querySelector('notice-app'), n = a.notices[0];
+        a.sources = [{ id: 'one', name: '학교', url: 'https://example.com' },
+          { id: 'two', name: '다른 학교', url: 'https://example.com' },
+          { id: 'jobs', name: '인턴', url: 'https://example.com', external: true }];
+        a.notices = [{ ...n, id: 'one/1', source_id: 'one', title: '인턴 A', deadline: null },
+          { ...n, id: 'one/2', source_id: 'one', title: '인턴 B', deadline: null },
+          { ...n, id: 'two/3', source_id: 'two', title: '인턴 C', deadline: null },
+          { ...n, id: 'jobs/4', source_id: 'jobs', title: '인턴 D', deadline: null }];
+        a.read = ['one/2']; a.keywords = ['인턴']; a.keyword = '인턴'; a.board = 'one';
+        a.view = 'all'; a.matched = null; a.unreadOnly = false; a.syncCalls = 0;
+        a.pushRead = () => { a.syncCalls++; };
+        await a.updateComplete;
+      });
+      const button = p.getByRole('button', { name: '현재 목록의 읽지 않은 공지 1개 모두 읽음으로 표시' });
+      if (await p.evaluate(() => document.documentElement.scrollWidth > innerWidth)) throw Error('가로 넘침');
+      await button.click();
+      const state = await p.evaluate(async () => {
+        const a = document.querySelector('notice-app'); await a.updateComplete;
+        return { read: a.read, sync: a.syncCalls, disabled: a.querySelector('.read-all').disabled };
+      });
+      if (!state.read.includes('one/1') || state.read.includes('two/3') || state.read.includes('jobs/4')) {
+        throw Error('현재 목록 밖 글의 읽음 상태가 바뀜');
+      }
+      if (state.sync !== 1 || !state.disabled) throw Error('일괄 동기화 또는 단추 상태 오류');
+      results.push({ width, passed: true });
+    } finally { await context.close(); }
+  }
+  return results;
+}

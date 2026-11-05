@@ -285,6 +285,15 @@ export class NoticeApp extends LitElement {
     this.pushRead();
   }
 
+  private markVisibleRead() {
+    const unread = this.visible().filter((notice) => !this.isRead(notice));
+    if (!unread.length) return;
+    this.read = mergeRead(this.read ?? [], unread.map((notice) => notice.id));
+    storeRead(this.read);
+    this.pushRead();
+    this.showToast(`${unread.length}개를 읽음으로 표시했어요`);
+  }
+
   private isRead(notice: Notice): boolean { return this.read === null || this.read.includes(notice.id); }
 
   private isSaved(notice: Notice): boolean { return this.saved.some((item) => item.id === notice.id); }
@@ -796,14 +805,19 @@ export class NoticeApp extends LitElement {
   }
 
   private viewFilters() {
-    if (this.view === 'saved') return nothing;
+    const unreadCount = this.visible().filter((notice) => !this.isRead(notice)).length;
+    const readAll = html`<button type="button" class="read-all" ?disabled=${!unreadCount}
+      aria-label=${`현재 목록의 읽지 않은 공지 ${unreadCount}개 모두 읽음으로 표시`}
+      title="현재 목록의 읽지 않은 공지만 읽음으로 표시해요"
+      @click=${() => this.markVisibleRead()}>모두 읽음</button>`;
+    if (this.view === 'saved') return html`<div class="view-options saved-options">${readAll}</div>`;
     return html`<div class="view-options" role="group" aria-label="공지 보기 조건">
       <button type="button" class="view-toggle" aria-pressed=${String(this.unreadOnly)} @click=${() => {
         this.unreadOnly = !this.unreadOnly;
         this.selectedId = null;
         remember('view-unread', this.unreadOnly ? '1' : '0');
       }}><span class="filter-check" aria-hidden="true"></span>읽지 않은 공지만</button>
-      ${this.sortSelect()}
+      <div class="view-actions">${readAll}${this.sortSelect()}</div>
     </div>`;
   }
 

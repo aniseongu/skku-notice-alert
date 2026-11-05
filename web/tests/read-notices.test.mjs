@@ -15,3 +15,11 @@ test('merging two devices never loses a read notice', () => {
   assert.deepEqual(parseRead('{broken'), []);
   assert.deepEqual(parseRead('["a", 1, "b"]'), ['a', 'b']);
 });
+
+test('batch reading preserves existing ids and bounds storage', () => {
+  const existing = Array.from({ length: READ_LIMIT }, (_, i) => `n${i}`);
+  const result = mergeRead(existing, ['n799', 'new1', 'new2', 'new1']);
+  assert.equal(result.length, READ_LIMIT);
+  assert.deepEqual(result.slice(-3), ['n799', 'new1', 'new2']);
+  assert.equal(result.filter(id => id === 'new1').length, 1);
+});

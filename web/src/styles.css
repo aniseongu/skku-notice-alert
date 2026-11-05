@@ -295,6 +295,10 @@
   .board-check { width: 7px; height: 12px; margin-right: 3px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); }
 
   .view-options { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 var(--gutter); }
+  .view-actions { display: flex; align-items: center; gap: 4px; }
+  .saved-options { justify-content: flex-end; }
+  .read-all { min-height: 44px; padding: 0 4px; border: 0; background: none; color: var(--text-2); font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .read-all:disabled { color: var(--text-3); }
   .view-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 8px 0 0; border: 0; background: none; color: var(--text-2); font-size: 14px; font-weight: 500; }
   .view-toggle[aria-pressed="true"] { color: var(--text); font-weight: 600; }
   .filter-check { position: relative; width: 16px; height: 16px; flex: none; border: 1px solid var(--text-3); border-radius: var(--r-sm); }

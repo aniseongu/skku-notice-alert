@@ -251,9 +251,9 @@
   .updated { font-size: 13px; line-height: 18px; color: var(--text-3); font-variant-numeric: tabular-nums; }
   .updated.stale { color: var(--danger); }
 
-  .tools { padding: 12px var(--gutter) 0; }
+  .tools { padding: 8px var(--gutter) 0; }
   .chips {
-    display: flex; gap: 8px; margin: 8px calc(-1 * var(--gutter)) 0; padding: 4px var(--gutter);
+    display: flex; gap: 8px; margin: 4px calc(-1 * var(--gutter)) 0; padding: 4px var(--gutter);
     overflow-x: auto; scrollbar-width: none; user-select: none; -webkit-user-select: none;
   }
   .chip {
@@ -303,6 +303,7 @@
   .select-trigger .i { width: 18px; height: 18px; }
   .view-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 8px 0 0; border: 0; background: none; color: var(--text-2); font-size: 14px; font-weight: 500; }
   .view-toggle[aria-pressed="true"] { color: var(--text); font-weight: 600; }
+  .select-options .read-all:not(:disabled) { color: var(--text); font-weight: 600; }
   .filter-check { position: relative; width: 16px; height: 16px; flex: none; border: 1px solid var(--text-3); border-radius: var(--r-sm); }
   .view-toggle[aria-pressed="true"] .filter-check { background: var(--text); border-color: var(--text); }
   .view-toggle[aria-pressed="true"] .filter-check::after { content: ""; position: absolute; left: 4px; top: 1px; width: 5px; height: 9px; border: solid var(--surface); border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); }
@@ -339,7 +340,7 @@
   }
   .tabbar button {
     display: flex; flex: 1; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
-    border: 0; background: none; color: var(--text-3); font-size: 12px; line-height: 16px; font-weight: 500;
+    border: 0; background: none; color: var(--text-2); font-size: 13px; line-height: 18px; font-weight: 500;
   }
   .tabbar button[aria-current="page"] { color: var(--accent); font-weight: 700; }
 

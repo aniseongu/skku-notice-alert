@@ -120,7 +120,8 @@
   .save-button { width: 44px; height: 44px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--surface); color: var(--text); }
   .save-button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); }
   /* 읽은 글은 면과 굵기를 함께 낮춘다. */
-  .row.read { background: color-mix(in oklch, var(--surface) 40%, var(--bg)); }
+  .row.read { background: light-dark(color-mix(in oklch, var(--surface) 25%, var(--sunken)),
+                                     color-mix(in oklch, var(--surface) 40%, var(--bg))); }
   .row.unread { background: var(--surface); }
   .row.read .title { font-weight: 400; color: var(--text-2); }
 

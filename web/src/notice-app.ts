@@ -13,7 +13,7 @@ import { GitHubError, collectionWorkflowUrl, readVariable, saveVariable, request
 import { loadToken } from './settings-storage';
 import { SAVED_VARIABLE, type SavedNotice, loadSaved, parseSaved, storeSaved, toggleSaved } from './saved-notices';
 import { READ_VARIABLE, addRead, loadRead, mergeRead, parseRead, storeRead } from './read-notices';
-import { keywordUnreadCounts } from './keyword-counts';
+import { keywordCounts } from './keyword-counts';
 import type { Theme } from './settings-view';
 import { APP_NAME } from './brand';
 import { orderNotices, type Sort } from './notice-order';
@@ -544,8 +544,8 @@ export class NoticeApp extends LitElement {
     const keywordScope = this.tab() === 'saved' ? this.savedNotices() : this.notices.filter((notice) =>
       this.isExternal(notice) === (this.tab() === 'intern') && (!notice.deadline || !deadlinePassed(notice.deadline)));
     const board = this.activeBoard();
-    const keywordCounts = keywordUnreadCounts(keywordScope.filter((notice) => board === 'all' || notice.source_id === board),
-      this.keywords, (notice) => this.isRead(notice), (notice) => this.interests(notice));
+    const keywordTotals = keywordCounts(keywordScope.filter((notice) => board === 'all' || notice.source_id === board),
+      this.keywords, (notice) => this.interests(notice));
     const title = settings ? settingsTitle()
       : this.keyword ? this.keyword : TABS.find((t) => t.id === this.view)!.label;
     const selected = settings ? undefined
@@ -564,10 +564,10 @@ export class NoticeApp extends LitElement {
               String(TABS.findIndex((x) => x.id === t.id) + 1)))}
           </nav>
           ${this.sideGroup('keywords', '관심 키워드', html`
-            ${this.keywords.map((word) => this.sideItem(word, keywordCounts.counts[word],
+            ${this.keywords.map((word) => this.sideItem(word, keywordTotals.counts[word],
               this.keyword === word && !settings, () => this.setKeyword(this.keyword === word ? null : word), undefined,
-              `${word}, 읽지 않은 공지 ${keywordCounts.counts[word]}개`))}
-            <button type="button" class="side-item add" @click=${() => this.setView('settings')}>${this.keywords.length ? '키워드 관리하기' : '키워드 추가하기'}</button>`, keywordCounts.total)}
+              `${word}, 공지 ${keywordTotals.counts[word]}개`))}
+            <button type="button" class="side-item add" @click=${() => this.setView('settings')}>${this.keywords.length ? '키워드 관리하기' : '키워드 추가하기'}</button>`, keywordTotals.total)}
           ${this.sideGroup('boards', this.tab() === 'intern' ? '인턴 공고 사이트' : '게시판', html`
             ${[{ id: 'all', label: this.tab() === 'intern' ? '모든 사이트' : '모든 게시판' },
               ...this.tabSources().map((s) => ({ id: s.id, label: boardName(s, s.id) }))]
@@ -616,8 +616,8 @@ export class NoticeApp extends LitElement {
               <div class="chips" role="group" aria-label="관심 키워드">
                 ${this.keywords.length ? html`<button type="button" class="chip" aria-pressed=${String(!this.keyword)} @click=${() => this.setKeyword(null)}>모두</button>` : nothing}
                 ${this.keywords.map((word) => html`<button type="button" class="chip" aria-pressed=${String(this.keyword === word)}
-                  aria-label=${`${word}, 읽지 않은 공지 ${keywordCounts.counts[word]}개`}
-                  @click=${() => this.setKeyword(this.keyword === word ? null : word)}>${word} ${keywordCounts.counts[word]}</button>`)}
+                  aria-label=${`${word}, 공지 ${keywordTotals.counts[word]}개`}
+                  @click=${() => this.setKeyword(this.keyword === word ? null : word)}>${word} ${keywordTotals.counts[word]}</button>`)}
                 <button type="button" class="chip-add" @click=${() => this.setView('settings')}>${icon('plus')}키워드 추가하기</button>
               </div>
             </div>

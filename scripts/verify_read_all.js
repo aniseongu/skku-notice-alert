@@ -56,8 +56,13 @@ async (page) => {
       if (await p.getByRole('checkbox', { name: '인턴 B 선택' }).isChecked()) throw Error('검색 뒤 선택이 남음');
       const count = await p.evaluate(() => document.querySelector('notice-app').selectedReads.length);
       if (count !== 0) throw Error('숨은 공지가 선택에 남음');
-      await p.getByRole('button', { name: '완료', exact: true }).click();
+      await p.getByRole('button', { name: '닫기', exact: true }).click();
       if (await p.locator('.selection-check').count()) throw Error('선택 모드 종료 오류');
+      await p.getByRole('button', { name: '선택', exact: true }).focus();
+      await p.keyboard.press('Enter');
+      if (!await p.getByRole('checkbox', { name: '전체 선택' }).evaluate(e => e === document.activeElement)) throw Error('선택 모드 포커스 오류');
+      await p.keyboard.press('Escape');
+      if (!await p.getByRole('button', { name: '선택', exact: true }).evaluate(e => e === document.activeElement)) throw Error('선택 종료 포커스 오류');
       results.push({ width, passed: true });
     } finally { await context.close(); }
   }

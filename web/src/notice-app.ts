@@ -618,6 +618,12 @@ export class NoticeApp extends LitElement {
     const reading = !this.isWide && !settings
       ? this.notices.find((n) => n.id === this.openedId) ?? list.find((n) => n.id === this.openedId) : undefined;
     const classes = [settings ? 'is-settings' : '', this.isWide && !this.detailOpen ? 'no-detail' : '', reading ? 'is-reading' : ''].join(' ');
+    const samsung = isSamsungInternet(navigator.userAgent);
+    const mobileNav = (top: boolean) => html`<nav class="tabbar glass ${top ? 'top-tabs' : ''}" aria-label="보기"
+      ?hidden=${settings || Boolean(reading)}>
+      ${tabs.map((t) => html`<button type="button" aria-current=${this.view === t.id ? 'page' : 'false'}
+        @click=${() => this.setView(t.id)}>${icon(t.icon)}<span>${t.label}</span></button>`)}
+    </nav>`;
     return html`
       <div class="wco-bar" aria-hidden="true"><svg class="brand-mark" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>${APP_NAME}</div>
       <div class="app ${classes}">
@@ -646,6 +652,7 @@ export class NoticeApp extends LitElement {
 
         <main class="list-pane">
           ${reading ? this.readingView(reading) : html`
+          <div class=${samsung && !settings ? 'samsung-navigation-head' : 'navigation-head'}>
           <header class="pane-head topbar glass">
             ${settings ? html`<button type="button" class="icon-button narrow-only back" aria-label="설정 닫기"
               @click=${this.leaveSettings}>${icon('back')}</button>` : nothing}
@@ -668,6 +675,8 @@ export class NoticeApp extends LitElement {
             ${settings ? html`<button type="button" class="icon-button wide-only" aria-label="설정 닫기" title="설정 닫기 (Esc)"
               aria-keyshortcuts="Escape" @click=${this.leaveSettings}>${icon('close')}</button>` : nothing}
           </header>
+          ${samsung && !settings ? mobileNav(true) : nothing}
+          </div>
 
           ${settings ? html`<settings-view .keywords=${this.keywords} .theme=${this.theme}
               .categories=${[...new Set(this.notices.map((n) => n.category).filter((c): c is string => Boolean(c)))].sort()}
@@ -709,10 +718,7 @@ export class NoticeApp extends LitElement {
           <button type="button" class="icon-button" aria-label="안내 닫기" @click=${this.hideInstall}>${icon('close')}</button>
         </div>` : nothing}
 
-      <nav class="tabbar glass ${isSamsungInternet(navigator.userAgent) ? 'samsung-internet' : ''}" aria-label="보기" ?hidden=${settings || Boolean(reading)}>
-        ${tabs.map((t) => html`<button type="button" aria-current=${this.view === t.id ? 'page' : 'false'}
-          @click=${() => this.setView(t.id)}>${icon(t.icon)}<span>${t.label}</span></button>`)}
-      </nav>
+      ${samsung ? nothing : mobileNav(false)}
       <div class="toast" role="status" ?hidden=${!this.toast}>${this.toast}${this.toastLink ? html`
         <div class="toast-actions"><a href=${this.toastLink} target=${this.toastLink.startsWith('?') ? '_self' : '_blank'} rel="noopener noreferrer">${this.toastLinkLabel}</a>
           <button type="button" @click=${() => { this.toast = ''; this.toastLink = null; }}>닫기</button></div>` : nothing}</div>

@@ -29,12 +29,19 @@ def test_collection_mode_for_schedule_and_dispatch(tmp_path):
         assert output.strip() == expected
 
 
-def test_relay_requests_one_automatic_run_only_when_no_other_run(tmp_path):
+def test_relay_requests_collection_or_rearms_when_collection_is_active(tmp_path):
     workflow = yaml.safe_load(Path('.github/workflows/notice-and-pages.yml').read_text())
+    relay = yaml.safe_load(Path('.github/workflows/notice-relay.yml').read_text())
+    assert workflow['concurrency']['group'] == 'notice-crawl'
+    assert workflow['concurrency']['queue'] == 'max'
+    assert relay['concurrency']['group'] == 'notice-relay'
+    assert workflow['jobs']['gate']['outputs']['go'] == '${{ steps.check.outputs.go }}'
     chain = workflow['jobs']['chain']
     assert chain['permissions'] == {'actions': 'write'}
     assert 'always()' in chain['if']
-    step = chain['steps'][0]
+    assert 'sleep' not in chain['steps'][0]['run']
+    assert relay['jobs']['relay']['permissions'] == {'actions': 'write'}
+    step = relay['jobs']['relay']['steps'][0]
     (tmp_path / 'sleep').write_text('#!/bin/sh\nexit 0\n')
     gh = tmp_path / 'gh'
     gh.write_text(
@@ -56,4 +63,24 @@ def test_relay_requests_one_automatic_run_only_when_no_other_run(tmp_path):
         )
     assert log.read_text().splitlines() == [
         'workflow run notice-and-pages.yml --ref main -f automatic=true',
+        'workflow run notice-relay.yml --ref main',
     ]
+
+
+
+def test_collection_always_arms_a_separate_relay(tmp_path):
+    workflow = yaml.safe_load(Path('.github/workflows/notice-and-pages.yml').read_text())
+    relay = yaml.safe_load(Path('.github/workflows/notice-relay.yml').read_text())
+    assert relay['concurrency']['cancel-in-progress'] is False
+    assert relay['concurrency'].get('queue', 'single') == 'single'
+    script = workflow['jobs']['chain']['steps'][0]['run']
+    gh = tmp_path / 'gh'
+    gh.write_text('#!/bin/sh\nprintf "%s\\n" "$*" >> "$RELAY_TEST_LOG"\n')
+    gh.chmod(0o755)
+    log = tmp_path / 'calls'
+    env = {
+        **os.environ, 'PATH': f'{tmp_path}:{os.environ["PATH"]}',
+        'GITHUB_REF_NAME': 'main', 'RELAY_TEST_LOG': str(log),
+    }
+    subprocess.run(['bash', '-e', '-c', script], env=env, check=True, capture_output=True, text=True)
+    assert log.read_text().splitlines() == ['workflow run notice-relay.yml --ref main']

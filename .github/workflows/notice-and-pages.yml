@@ -15,6 +15,7 @@ on:
 # 수집 실행끼리 겹치지 않도록 직렬화한다.
 concurrency:
   group: notice-crawl
+  queue: max
   cancel-in-progress: false
 
 # 권한은 job마다 필요한 것만 준다. 학교 HTML을 읽는 notice job은 다음 실행을 부를 수 없다.
@@ -211,27 +212,20 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
 
-  # 예약 누락에 대비해 실행 완료 뒤 다음 수집을 예약한다. 기본 cron도 복구 경로로 유지한다.
+  # 대기는 별도 워크플로에 맡겨 수동 수집이 notice-crawl 잠금에서 기다리지 않게 한다.
   chain:
     needs: [gate, notice]
     if: always() && !cancelled() && github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 2
     permissions:
       actions: write
     steps:
-      - name: Request next collection
+      - name: Start collection relay
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-          RUN_ID: ${{ github.run_id }}
         run: |
-          sleep 3300
-          others="$(gh run list --workflow notice-and-pages.yml --limit 50 --json databaseId,status \
-            --jq "[.[] | select(.databaseId != ${RUN_ID} and (.status == \"queued\" or .status == \"in_progress\" or .status == \"waiting\" or .status == \"pending\"))] | length")"
-          if [ "$others" = 0 ]; then
-            gh workflow run notice-and-pages.yml --ref "${GITHUB_REF_NAME}" -f automatic=true
-            echo "다음 자동 수집을 요청했어요"
-          else
-            echo "다른 수집이 대기하거나 실행 중이에요"
-          fi
+          # 기존 relay가 막 끝나는 중이어도 다음 대기를 빠뜨리지 않는다.
+          gh workflow run notice-relay.yml --ref "${GITHUB_REF_NAME}"
+          echo "다음 수집 대기를 요청했어요"

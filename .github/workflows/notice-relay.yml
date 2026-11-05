@@ -1,0 +1,36 @@
+name: Notice relay
+
+on:
+  workflow_dispatch:
+
+# 대기 작업은 하나만 유지하며 공지 수집 잠금과 별개다.
+concurrency:
+  group: notice-relay
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  relay:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      actions: write
+    steps:
+      - name: Request next collection
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          sleep 3300
+          active="$(gh run list --workflow notice-and-pages.yml --limit 50 --json status \
+            --jq '[.[] | select(.status == "queued" or .status == "in_progress" or .status == "waiting" or .status == "pending")] | length')"
+          if [ "$active" = 0 ]; then
+            gh workflow run notice-and-pages.yml --ref "${GITHUB_REF_NAME}" -f automatic=true
+            echo "다음 자동 수집을 요청했어요"
+          else
+            # 수집 완료 직전 relay가 겹쳐도 다음 이어 달리기를 놓치지 않는다.
+            gh workflow run notice-relay.yml --ref "${GITHUB_REF_NAME}"
+            echo "다른 수집이 진행 중이라 다음 확인을 예약했어요"
+          fi

@@ -2289,7 +2289,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 서비스 운영 및 기획 업무를 담당하며 소프트웨어 개발이나 데이터 분석 등 기술적 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[카카오페이] [어시스턴트] 송금 서비스 운영 지원\n\n\n\n\n[업무내용]\n- 송금 및 착오송금 중개 업무 전반을 담당합니다.\n- 머니 전체 서비스의 운영 기획 업무에 참여합니다.\n- 송금 서비스 관련 메시지(알림톡, 앱푸시) 또는 콘텐츠(공지사항, FAQ 등) 등을 기획하고 운영합니다.\n\n\n[필요 역량/경험]\n- 서비스 기획 및 개발에 대한 높은 관심과 성장 역량\n- 복잡한 내용을 명확하고 간결하게 정리하여 효율적으로 전달할 수 있는 문서화 능력\n- 높은 수준의 성실성과 꼼꼼함으로 작은 부분까지 놓치지 않는 세심한 태도\n\n\n[선호 역량/경험]\n- 서비스 운영 경험\n- 금융 및 핀테크 서비스에 대한 관심\n- 은행 착오송금 중개 실무 경험",
@@ -2311,7 +2316,13 @@
         "at": "2027-02-03T23:59:59.999000+09:00",
         "model": "source"
       },
-      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00"
+      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00",
+      "intern_judgment": {
+        "fingerprint": "698cfe61a178b639f8e29f3a0bb3d0a8a0dcbc5cdb07918f8441cba996334131",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 서비스 운영 및 기획 업무를 담당하며 소프트웨어 개발이나 데이터 분석 등 기술적 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "linkareer-intern/362365": {
       "notice": {
@@ -2331,7 +2342,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "마케팅 PD 직무는 소프트웨어 개발 및 IT 기술 직무에 해당하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -2353,7 +2369,13 @@
         "at": "2026-11-16T10:00:59.999000+09:00",
         "model": "source"
       },
-      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00"
+      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00",
+      "intern_judgment": {
+        "fingerprint": "8e66b237181d8247dc96dece350a27cecc16a96b65220642b99ef019c859e10b",
+        "verdict": "not_relevant",
+        "reason": "마케팅 PD 직무는 소프트웨어 개발 및 IT 기술 직무에 해당하지 않습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "linkareer-intern/362364": {
       "notice": {
@@ -2416,7 +2438,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "AI 애니메이션 크리에이터 직무는 콘텐츠 기획 및 제작 중심의 업무로 소프트웨어 개발 직무로 보기 어렵습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[111퍼센트] [하이페라] 채용 연계형 인턴십 : AI 애니메이션 크리에이터\n\n\n\n\n[모집분야]\n- AI 애니메이션 크리에이터\n\n\n[이런 사람 어디 없나요?]\n- 콘텐츠를 직접 기획하고 만들어보는 것을 좋아하며, 자신의 아이디어를 실제 결과물로 구현할 수 있는 분\n- 새로운 기술과 제작 방식을 적극적으로 시도하시는 분\n- 반복적인 시도와 개선을 통해 더 나은 결과물을 만들어내는 분\n- 팀원과 적극적으로 소통하며 하나의 프로젝트를 함께 완성할 수 있는 분\n\n\n[두 팔 벌려 환영해요!]\n- 애니메이션, 영상, 웹툰, 게임 등 콘텐츠 제작 경험이 있으신 분\n- 시나리오, 콘티, SB 등 영상 콘텐츠 기획 경험이 있으신 분\n- 생성형 AI를 활용한 이미지·영상 콘텐츠 제작 경험이 있으신 분\n- 여러 AI Tool을 조합하여 하나의 콘텐츠를 제작해본 경험이 있으신 분",
@@ -2438,7 +2465,13 @@
         "at": "2026-11-18T23:59:59.999000+09:00",
         "model": "source"
       },
-      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00"
+      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00",
+      "intern_judgment": {
+        "fingerprint": "a7ec5c6d9b366a4fa2b90ff064124510662a80074512993038ff9ed87fec131a",
+        "verdict": "not_relevant",
+        "reason": "AI 애니메이션 크리에이터 직무는 콘텐츠 기획 및 제작 중심의 업무로 소프트웨어 개발 직무로 보기 어렵습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "linkareer-intern/362322": {
       "notice": {

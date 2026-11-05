@@ -200,3 +200,14 @@ def test_public_intern_reason_does_not_promote_other_majors(tmp_path):
     decision = items[notice.source_id + "/" + notice.article_no]["ai"]
     assert decision["reason"] == "담당 업무와 지원 자격을 원문에서 확인해 주세요"
     assert decision["verdict"] == "maybe"
+
+
+@pytest.mark.parametrize('collector,response', [
+    (jobs.linkareer, {'errors': [{'message': 'temporary'}]}),
+    (jobs.linkareer, {'data': {'activities': {}}}),
+    (jobs.jasoseol, {}),
+    (jobs.jasoseol, {'employment': None}),
+])
+def test_external_invalid_response_is_not_success(collector, response):
+    with pytest.raises((KeyError, ValueError)):
+        collector(lambda *args: response, NOW)

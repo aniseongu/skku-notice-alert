@@ -41,8 +41,12 @@ def _from_ms(value: object) -> datetime | None:
 def linkareer(post: Post, now: datetime, source_id: str = "linkareer") -> list[Posting]:
     variables = {"f": {"activityTypeID": "5", "jobTypes": ["INTERN"], "status": "OPEN"},
                  "o": {"direction": "DESC", "field": "RECENT"}, "p": {"page": 1, "pageSize": LIMIT}}
-    nodes = (post(LK_API, {"query": LK_LIST, "variables": variables}, LK_HEADERS).get("data") or {}) \
-        .get("activities", {}).get("nodes", [])
+    response = post(LK_API, {"query": LK_LIST, "variables": variables}, LK_HEADERS)
+    if response.get("errors"):
+        raise ValueError("linkareer API error")
+    nodes = response["data"]["activities"]["nodes"]
+    if not isinstance(nodes, list):
+        raise ValueError("invalid linkareer list")
     postings = []
     for node in nodes:
         close, start = _from_ms(node.get("recruitCloseAt")), _from_ms(node.get("recruitStartAt"))
@@ -65,8 +69,11 @@ def jasoseol(post: Post, now: datetime, source_id: str = "jasoseol") -> list[Pos
 
     window = {"start_time": iso(now - timedelta(days=30)), "end_time": iso(now + timedelta(days=90))}
     data = post(JSS_CAL, window, {})
+    employment = data["employment"]
+    if not isinstance(employment, list):
+        raise ValueError("invalid jasoseol list")
     chosen = {}
-    for item in data.get("employment", []):
+    for item in employment:
         divisions = {part.get("division") for part in item.get("employments") or []}
         title = item.get("title") or ""
         end = datetime.fromisoformat(item["end_time"]).astimezone(KST) if item.get("end_time") else None

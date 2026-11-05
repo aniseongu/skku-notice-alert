@@ -154,3 +154,53 @@ sources:
                               from_fixtures=False, no_ai=True, skip_external=skip_external, no_canvas=True)
     assert cli.run(args) == 0
     assert called == expected
+
+
+def test_external_due_tracks_each_success_and_retries_failed_source(tmp_path, monkeypatch):
+    from datetime import datetime, timedelta
+
+    from skku_notice.deadline import KST
+    from skku_notice.fetch import FetchError
+    from skku_notice.state import load_state
+
+    sources = tmp_path / 'sources.yaml'
+    sources.write_text('''user_agent: test
+request_gap_seconds: 1
+timeout_seconds: 10
+sources:
+  - {id: first, name: First, kind: first, external: true, url: 'https://example.com'}
+  - {id: second, name: Second, kind: second, external: true, url: 'https://example.com'}
+''')
+    monkeypatch.setattr(cli, 'SOURCES_PATH', sources)
+    monkeypatch.setattr(cli, 'STATE_PATH', tmp_path / 'seen.json')
+    monkeypatch.setattr(cli, 'ARCHIVE_PATH', tmp_path / 'archive.json')
+    monkeypatch.setattr(cli, 'load_dotenv', lambda **kwargs: None)
+    monkeypatch.setattr(cli, 'has_notification_channel', lambda: True)
+    monkeypatch.setattr(cli.time, 'sleep', lambda _: None)
+    now = datetime(2026, 11, 5, 12, tzinfo=KST)
+    clock = [now]
+
+    class FakeDateTime(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            return clock[0]
+
+    monkeypatch.setattr(cli, 'datetime', FakeDateTime)
+    calls = []
+    monkeypatch.setitem(cli.COLLECTORS, 'first', lambda *a: calls.append('first') or [])
+    def second(*args):
+        calls.append('second')
+        if calls.count('second') == 1:
+            raise FetchError('temporary')
+        return []
+    monkeypatch.setitem(cli.COLLECTORS, 'second', second)
+    args = argparse.Namespace(rules=Path('config/rules.example.yaml'), dry_run=False, all=False,
+                              from_fixtures=False, no_ai=True, external_if_due=True, no_canvas=True)
+    assert cli.run(args) == 0
+    assert set(load_state(cli.STATE_PATH).external_checked_at) == {'first'}
+    clock[0] += timedelta(minutes=30)
+    assert cli.run(args) == 0
+    assert calls == ['first', 'second', 'second']
+    clock[0] += timedelta(minutes=30)
+    assert cli.run(args) == 0
+    assert calls == ['first', 'second', 'second', 'first']

@@ -26,12 +26,13 @@ def test_summary_batch_only_sends_bounded_public_text_and_validates_results():
     assert "따르지 말고" in calls[0]["config"].system_instruction
 
 
-def test_summary_failure_is_safe():
+def test_summary_failure_is_safe(capsys):
     def fail(**_kwargs):
         raise RuntimeError("secret-key-not-for-logs")
 
     client = SimpleNamespace(models=SimpleNamespace(generate_content=fail))
     assert summary_ai.summarize([{"id": "x", "title": "t", "body": "body"}], "m", "k", client) is None
+    assert capsys.readouterr().err.strip() == "공지 요약 대기: RuntimeError"
 
 
 def test_backfill_excludes_other_sources_new_empty_existing_and_limits_attempts(monkeypatch, tmp_path):

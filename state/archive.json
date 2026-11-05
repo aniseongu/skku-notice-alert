@@ -55,6 +55,336 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/362548": {
+      "notice": {
+        "id": "linkareer-intern/362548",
+        "source_id": "linkareer-intern",
+        "article_no": "362548",
+        "title": "[세방] 2026년 4분기 채용연계형 인턴 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/362548",
+        "posted_on": "2026-11-06",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T00:13:37.787736+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "물류운영, 경영지원, 안전관리 직무는 소프트웨어 개발 및 데이터 관련 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[세방] 2026년 4분기 채용연계형 인턴 채용\n\n\n[모집분야]\n물류운영\n경영지원\n안전관리\n\n\n[접수기간]\n11월 06일 ~ 11월 15일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[세방] 2026년 4분기 채용연계형 인턴 채용</span></b></p><p><b><span>[모집분야]</span></b></p><p><span>물류운영</span></p><p><span>경영지원</span></p><p><span>안전관리</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 06일 ~ 11월 15일</span></p><p><b><span>[채용공고</span><span>]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/981700\" title=\"f782433f-b68f-418e-9053-9265756621b5.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/981700"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T00:13:37.787736+09:00",
+      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "d7977db5952488429f9fb856adda4b60a25f6c281289255e86e42ed1b93706c4",
+        "verdict": "not_relevant",
+        "reason": "물류운영, 경영지원, 안전관리 직무는 소프트웨어 개발 및 데이터 관련 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107096": {
+      "notice": {
+        "id": "jasoseol-intern/107096",
+        "source_id": "jasoseol-intern",
+        "article_no": "107096",
+        "title": "[세방그룹] 2026년 4분기 정기채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107096",
+        "posted_on": "2026-11-06",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T00:13:37.787736+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "세방그룹의 채용연계형 인턴 공고는 물류운영, 경영지원, 안전관리 등 비개발 직무 위주로 구성되어 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/133385?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/133386?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/133316?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/133355?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/126302?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/126514?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/98895?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/133250?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/133247?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/133356?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/133357?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://sebang.recruiter.co.kr/career/jobs/133387?utm_source=jasoseol&amp;utm_medium=banner&amp;utm_campaign=2611sebang\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/005/webp/image.webp?1793859171\" alt=\"세방그룹 2026년 4분기 정기채용\"></div>\n</div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/005/webp/image.webp?1793859171"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T00:13:37.787736+09:00",
+      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "55122098228025f3ac5aec8330a4001f70c68295e985c77eb792e570359c2ad3",
+        "verdict": "not_relevant",
+        "reason": "세방그룹의 채용연계형 인턴 공고는 물류운영, 경영지원, 안전관리 등 비개발 직무 위주로 구성되어 있습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107090": {
+      "notice": {
+        "id": "jasoseol-intern/107090",
+        "source_id": "jasoseol-intern",
+        "article_no": "107090",
+        "title": "[존슨앤드존슨] [Johnson&Johnson MedTech] Strategic Sales/ Marketing Intern 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107090",
+        "posted_on": "2026-11-05",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T00:13:37.787736+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "모집 직무가 세일즈 및 마케팅으로 소프트웨어 개발 직무와 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[J&J MedTech] Strategic Sales/ Marketing Intern 채용\n\n\n\n[About Johnson & Johnson]\nAt Johnson & Johnson, we believe health is everything. Our strength in healthcare innovation empowers us to build a world where complex diseases are prevented, treated, and cured, where treatments are smarter and less invasive, and solutions are personal.\nThrough our expertise in Innovative Medicine and MedTech, we are uniquely positioned to innovate across the full spectrum of healthcare solutions today to deliver the breakthroughs of tomorrow, and profoundly impact health for humanity.\n\n\n\n\n\n[About MedTech]\nFueled by innovation at the intersection of biology and technology, we’re developing the next generation of smarter, less invasive, more personalized treatments. Your unique talents will help patients on their journey to wellness.\n\n\n[모집 포지션]\n\n1. Strategic Sales Intern | Surgery\n업무 내용\n• 비즈니스 전략에 따른 세일즈 목표 달성 및 시장점유율 성장 지원\n• 정기적인 거래처 방문을 통한 고객 정보 파악 및 관계 관리\n• 시장 데이터 분석을 통한 비즈니스 기회 발굴\n• 전문의료인 대상 제품 프로모션 및 교육 진행\n\n자격 요건 및 우대 사항\n• 2027년 2월 졸업예정자 또는 기졸업자\n• 고객 중심의 마인드셋을 갖춘 분\n• 긍정적인 태도와 도전정신을 갖춘 분\n• 팀 협업 및 원활한 의사소통이 가능한 분\n• 헬스케어 및 의료기기 산업에 관심이 높은 분\n\n근무 장소: 대구 / 부산 / 대전 중 최종 합격자와 협의\n\n근무 유형: Strategic Intern(인턴십 근무 우수자에게 정규직 전환 기회 제의)\n\n\n2. Marketing Intern | Neurovascular\n업무 내용\n• 신규 제품 출시 프로젝트 지원\n• 마케팅 자료 제작 지원 (브로셔, PPT, 문서 등)\n• 경쟁사 자료 취합 및 비교 분석\n• 시장 동향 및 트렌드 조사\n• 의료진 대상 트레이닝 세션 준비 및 현장 운영 지원\n\n자격 요건 및 우대 사항\n• 4년제 학위 이상 재학생 및 기졸업자\n• 팀 협업 및 원활한 의사소통이 가능한 분\n• 자료 조사 및 분석 능력을 갖춘 분\n• 문서 작성 및 시각화 능력을 갖춘 분\n• 자기주도적으로 업무를 수행할 수 있는 분\n• 현장 운영 및 준비 업무 수행이 가능한 분\n• 헬스케어 및 의료기기 산업에 관심이 높은 분\n\n근무 장소: 서울 용산\n\n근무 유형: Intern(인턴십 근무 우수자 대상 타 포지션(정규직/계약직) 지원 시 우대)\n\n\n[공통 근무 조건]\n• 계열사: Johnson & Johnson MedTech\n• 근무 기간: 2027년 1월 4일 ~ 2027년 2월 26일 (약 2개월)\n• 지원 기한: 2026년 11월 17일 23:59까지\n• 지원 서류: 국문 자유양식의 이력서 및 자기소개서\n• 지원 방법:\n- Sales Intern: Careers.jnj.com – Search jobs “R-108885” – Apply\n- Marketing Intern: Careers.jnj.com – Search jobs “R-108887” – Apply\n\n\nSpecial Event for 2026 Winter Internship Hiring 🎯\nJ&J 인턴십 지원을 고민하고 있다면, 메타버스부터 방문해 보세요! 🙌\n\n채용공고만으로는 알기 어려운 J&J의 이야기와 실제 채용에 도움이 되는 생생한 정보를 메타버스에서 만나볼 수 있습니다.\n\nDaily Task 미션 완료 후 고득점자에게는 채용 담당자와의 온라인 멘토링을 통해 실제 비즈니스 현장의 이야기와 채용 준비에 도움이 되는 팁을 직접 들을 수 있는 기회가 제공됩니다.\n\n참여 방법\ncampusmetaverse.jnj.com→ Explore the Metaverse by location→ South Korea→ Login→ Career Lounge→ Daily Tasks",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n<strong>[J&amp;J MedTech] Strategic Sales/ Marketing Intern 채용</strong>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/361/149/webp/JNJ_Logo_SingleLine_Red_RGB_%281%29.webp?1784782065\" alt=\"존슨앤드존슨 [Johnson&amp;Johnson MedTech] Strategic Sales/ Marketing Intern 채용\"></div>\n<div><p><span><strong>[About Johnson &amp; Johnson]</strong></span><br><span>At Johnson &amp; Johnson, we believe health is everything. Our strength in healthcare innovation empowers us to build a world where complex diseases are prevented, treated, and cured, where treatments are smarter and less invasive, and solutions are personal.</span><br><span>Through our expertise in Innovative Medicine and MedTech, we are uniquely positioned to innovate across the full spectrum of healthcare solutions today to deliver the breakthroughs of tomorrow, and profoundly impact health for humanity.&nbsp;</span></p></div>\n</div>\n<div><div>\n<p><strong>[About MedTech]</strong><br>Fueled by innovation at the intersection of biology and technology, we’re developing the next generation of smarter, less invasive, more personalized treatments. Your unique talents will help patients on their journey to wellness.</p>\n<p><br><strong>[모집 포지션]</strong></p>\n<p>1. Strategic Sales Intern | Surgery<br>업무 내용<br>• 비즈니스 전략에 따른 세일즈 목표 달성 및 시장점유율 성장 지원<br>• 정기적인 거래처 방문을 통한 고객 정보 파악 및 관계 관리<br>• 시장 데이터 분석을 통한 비즈니스 기회 발굴<br>• 전문의료인 대상 제품 프로모션 및 교육 진행</p>\n<p>자격 요건 및 우대 사항<br>• 2027년 2월 졸업예정자 또는 기졸업자<br>• 고객 중심의 마인드셋을 갖춘 분<br>• 긍정적인 태도와 도전정신을 갖춘 분<br>• 팀 협업 및 원활한 의사소통이 가능한 분<br>• 헬스케어 및 의료기기 산업에 관심이 높은 분</p>\n<p>근무 장소: 대구 / 부산 / 대전 중 최종 합격자와 협의</p>\n<p>근무 유형: Strategic Intern(인턴십 근무 우수자에게 정규직 전환 기회 제의)</p>\n<p><br>2. Marketing Intern | Neurovascular<br>업무 내용<br>• 신규 제품 출시 프로젝트 지원<br>• 마케팅 자료 제작 지원 (브로셔, PPT, 문서 등)<br>• 경쟁사 자료 취합 및 비교 분석<br>• 시장 동향 및 트렌드 조사<br>• 의료진 대상 트레이닝 세션 준비 및 현장 운영 지원</p>\n<p>자격 요건 및 우대 사항<br>• 4년제 학위 이상 재학생 및 기졸업자<br>• 팀 협업 및 원활한 의사소통이 가능한 분<br>• 자료 조사 및 분석 능력을 갖춘 분<br>• 문서 작성 및 시각화 능력을 갖춘 분<br>• 자기주도적으로 업무를 수행할 수 있는 분<br>• 현장 운영 및 준비 업무 수행이 가능한 분<br>• 헬스케어 및 의료기기 산업에 관심이 높은 분</p>\n<p>근무 장소: 서울 용산</p>\n<p>근무 유형: Intern(인턴십 근무 우수자 대상 타 포지션(정규직/계약직) 지원 시 우대)</p>\n<p><br><strong>[공통 근무 조건]</strong><br>• 계열사: Johnson &amp; Johnson MedTech<br>• 근무 기간: 2027년 1월 4일 ~ 2027년 2월 26일 (약 2개월)<br>• 지원 기한: 2026년 11월 17일 23:59까지&nbsp;<br>• 지원 서류: 국문 자유양식의 이력서 및 자기소개서<br>• 지원 방법:&nbsp;<br>- Sales Intern: Careers.jnj.com – Search jobs “R-108885” – Apply<br>- Marketing Intern: Careers.jnj.com – Search jobs “R-108887” – Apply</p>\n<p><br><strong>Special Event for 2026 Winter Internship Hiring 🎯</strong><br>J&amp;J 인턴십 지원을 고민하고 있다면, 메타버스부터 방문해 보세요! 🙌</p>\n<p>채용공고만으로는 알기 어려운 J&amp;J의 이야기와 실제 채용에 도움이 되는 생생한 정보를 메타버스에서 만나볼 수 있습니다.</p>\n<p>Daily Task 미션 완료 후 고득점자에게는 채용 담당자와의 온라인 멘토링을 통해 실제 비즈니스 현장의 이야기와 채용 준비에 도움이 되는 팁을 직접 들을 수 있는 기회가 제공됩니다.</p>\n<p>참여 방법<br>campusmetaverse.jnj.com→ Explore the Metaverse by location→ South Korea→ Login→ Career Lounge→ Daily Tasks&nbsp;</p>\n</div></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/361/149/webp/JNJ_Logo_SingleLine_Red_RGB_%281%29.webp?1784782065"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T00:13:37.787736+09:00",
+      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "adae023f14153d1b6a6539c1da911ab7059fe0aa3efcfb4507803ea6f38b4c06",
+        "verdict": "not_relevant",
+        "reason": "모집 직무가 세일즈 및 마케팅으로 소프트웨어 개발 직무와 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107082": {
+      "notice": {
+        "id": "jasoseol-intern/107082",
+        "source_id": "jasoseol-intern",
+        "article_no": "107082",
+        "title": "[에코마케팅] 마케팅 영상 크리에이터 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107082",
+        "posted_on": "2026-11-05",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T00:13:37.787736+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "마케팅 영상 크리에이터 직무는 영상 제작 및 콘텐츠 기획 업무로 소프트웨어 개발 직무와는 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/951/webp/%EB%A7%88%EC%BC%80%ED%8C%85_%EC%98%81%EC%83%81_%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0_%EC%B1%84%EC%9A%A9.webp?1793843839\" alt=\"에코마케팅 마케팅 영상 크리에이터 채용\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/951/webp/%EB%A7%88%EC%BC%80%ED%8C%85_%EC%98%81%EC%83%81_%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0_%EC%B1%84%EC%9A%A9.webp?1793843839"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T00:13:37.787736+09:00",
+      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "be8cf7d9a1405cc5f5b39af466a74f01044e53bb9e3ac047725c096617df1b31",
+        "verdict": "not_relevant",
+        "reason": "마케팅 영상 크리에이터 직무는 영상 제작 및 콘텐츠 기획 업무로 소프트웨어 개발 직무와는 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107054": {
+      "notice": {
+        "id": "jasoseol-intern/107054",
+        "source_id": "jasoseol-intern",
+        "article_no": "107054",
+        "title": "[NHR] 2026년 4분기 신입·경력·인턴 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107054",
+        "posted_on": "2026-11-05",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T00:13:37.787736+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "모집 직무가 HR마케팅, 채용대행, 플랫폼 운영 등으로 소프트웨어 개발 직무와는 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n</div>\n<div></div>\n\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/772/webp/image.webp?1793694279\" alt=\"NHR 2026년 4분기 신입·경력·인턴 채용\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/772/webp/image.webp?1793694279"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T00:13:37.787736+09:00",
+      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T15:00:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "be20b9b415f58ae4682e17743b0322280cdcfd06e5f719d65f7ed4578588842d",
+        "verdict": "not_relevant",
+        "reason": "모집 직무가 HR마케팅, 채용대행, 플랫폼 운영 등으로 소프트웨어 개발 직무와는 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107046": {
+      "notice": {
+        "id": "jasoseol-intern/107046",
+        "source_id": "jasoseol-intern",
+        "article_no": "107046",
+        "title": "[NHN AD] 2027년 상반기 인턴채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107046",
+        "posted_on": "2026-11-05",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T00:13:37.787736+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "광고 AE 직무는 디지털 마케팅 캠페인 관리 및 분석 업무로 소프트웨어 개발 직무와는 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/747/webp/image.webp?1793685672\" alt=\"NHN AD 2027년 상반기 인턴채용\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/747/webp/image.webp?1793685672"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T00:13:37.787736+09:00",
+      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "96943af054ba75d47a70e83910825a5d30aed9ef6528ec8b8dc2845cff4221ad",
+        "verdict": "not_relevant",
+        "reason": "광고 AE 직무는 디지털 마케팅 캠페인 관리 및 분석 업무로 소프트웨어 개발 직무와는 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "linkareer-intern/362536": {
       "notice": {
         "id": "linkareer-intern/362536",
@@ -1737,7 +2067,9 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
@@ -1795,23 +2127,26 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[카카오페이] [어시스턴트] 오프라인 가맹점 심사 업무 지원\n\n\n\n\n[업무내용]\n- 가맹점이 접수한 가맹점 기본 정보를 확인하고, 시스템 입력 및 검수하는 업무를 담당합니다.\n- 가맹점 정보의 정확성을 확보하여 서비스 운영의 효율성을 제고합니다.\n\n\n[필요 역량/경험]\n- 성실성 및 꼼꼼함\n\n\n[선호 역량/경험]\n- 서류 기반 정보 등록 및 검수 업무 경험",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><span><b>[카카오페이] [어시스턴트] 오프라인 가맹점 심사 업무 지원</b></span></p><p><span>[업무내용]</span></p><p><span>- 가맹점이 접수한 ​가맹점 ​기본 정보를 확인하고, ​시스템 입력 ​및 검수하는 업무를 담당합니다.</span></p><p><span>- 가맹점 정보의 정확성을 확보하여 서비스 운영의 효율성을 제고합니다.</span></p><p><span>[필요 역량/경험]</span></p><p><span>- 성실성 및 꼼꼼함</span></p><p><span>[선호 역량/경험]</span></p><p><span>- 서류 기반 정보 등록 및 검수 업무 경험</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/981144\" title=\"20261105_134315.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/981144"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T00:13:37.787736+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2027-02-03T23:59:59.999000+09:00",
         "model": "source"
-      }
+      },
+      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00"
     },
     "linkareer-intern/362372": {
       "notice": {
@@ -1834,23 +2169,26 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[카카오페이] [어시스턴트] 법인카드 및 회계업무 지원\n\n\n\n\n[업무내용]\n- 크루들의 법인카드를 발급/해지/한도증액/정보변경 등 법인카드 운영 관리 업무를 수행합니다.\n- 카드사와 운영 업무 관련하여 전화, 메일 등으로 수시로 커뮤니케이션 합니다.\n- 크루들이 법인카드를 사용하고 작성한 정산서가 지침에 맞게 작성 되었는지, 올바른 회계 계정처리를 하였는지 확인하는 업무를 수행합니다.\n- 크루들의 법인카드 사용 및 정산 관련 수시 문의에 대해 규정에 맞는 적절한 가이드를 안내하고 적시에 정산이 이루어질 수 있도록 수시로 안내합니다.\n- 크루들이 회사 시스템을 통해 등록/변경한 거래처정보가 관련 제반 서류와 일치하는지 확인합니다.\n- 회사의 내부회계규정에 맞게 업무를 수행하였는지 증적 작성하고 수검 받는 역할을 수행합니다.\n- 월 단위 회계결산 업무의 일부를 수행합니다.\n\n\n[필요 역량/경험]\n- 6개월 이상 근무 가능자\n- 상경계열 전공 졸업생 또는 휴학생(최소 4학기 이상 수강)\n- 꼼꼼한 스케줄 관리 및 업무 처리 역량\n- 크루 및 카드사와 명확하게 소통할 수 있는 커뮤니케이션 역량\n\n\n[선호 역량/경험]\n- 법인카드 발급 및 운영 관리 경험\n- 기업체에서 회계, 세무, 자금 관련 업무 경험\n- MS Office 활용 능력",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><span><b>[카카오페이] [어시스턴트] 법인카드 및 회계업무 지원</b></span></p><p><span>[업무내용]</span></p><p><span>- 크루들의 법인카드를 발급/해지/한도증액/정보변경 등 법인카드 운영 관리 업무를 수행합니다.</span></p><p><span>- 카드사와 운영 업무 관련하여 전화, 메일 등으로 수시로 커뮤니케이션 합니다.</span></p><p><span>- 크루들이 법인카드를 사용하고 작성한 정산서가 지침에 맞게 작성 되었는지, 올바른 회계 계정처리를 하였는지 확인하는 업무를 수행합니다.</span></p><p><span>- 크루들의 법인카드 사용 및 정산 관련 수시 문의에 대해 규정에 맞는 적절한 가이드를 안내하고 적시에 정산이 이루어질 수 있도록 수시로 안내합니다.&nbsp;</span></p><p><span>- 크루들이 회사 시스템을 통해 등록/변경한 거래처정보가 관련 제반 서류와 일치하는지 확인합니다.</span></p><p><span>- 회사의 내부회계규정에 맞게 업무를 수행하였는지 증적 작성하고 수검 받는 역할을 수행합니다.</span></p><p><span>- 월 단위 회계결산 업무의 일부를 수행합니다.</span></p><p><span>[필요 역량/경험]</span></p><p><span>- 6개월 이상 근무 가능자</span></p><p><span>- 상경계열 전공 졸업생 또는 휴학생(최소 4학기 이상 수강)</span></p><p><span>- 꼼꼼한 스케줄 관리 및 업무 처리 역량</span></p><p><span>- 크루 및 카드사와 명확하게 소통할 수 있는 커뮤니케이션 역량</span></p><p><span>[선호 역량/경험]</span></p><p><span>- 법인카드 발급 및 운영 관리 경험</span></p><p><span>- 기업체에서 회계, 세무, 자금 관련 업무 경험</span></p><p><span>- MS Office 활용 능력</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/981135\" title=\"20261105_133951.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/981135"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T00:13:37.787736+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2027-02-03T23:59:59.999000+09:00",
         "model": "source"
-      }
+      },
+      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00"
     },
     "linkareer-intern/362369": {
       "notice": {
@@ -1873,23 +2211,26 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[카카오페이] [어시스턴트] CS운영 업무 지원\n\n\n\n\n[업무내용]\n- 다양한 채널로 유입되는 CS데이터를 모니터링, 관리합니다.\n- 사용자 도움말(FAQ) 및 정책/지식(KMS) 운영 업무를 지원합니다.\n- 기타 고객 서비스 운영에 필요한 업무를 지원합니다.\n\n\n[필요 역량/경험]\n- 엑셀 등 MS Office 활용 능력\n- 책임감과 성실한 태도\n- 꼼꼼함과 원활한 커뮤니케이션 역량\n\n\n[선호 역량/경험]\n- CS에 대한 관심 및 이해\n- CS 혹은 서비스 운영지원 경험",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><span><b>[카카오페이] [어시스턴트] CS운영 업무 지원</b></span></p><p><span>[업무내용]</span></p><p><span>- 다양한 채널로 유입되는 CS데이터를 모니터링, 관리합니다.</span></p><p><span>- 사용자 도움말(FAQ) 및 정책/지식(KMS) 운영 업무를 지원합니다.</span></p><p><span>- 기타 고객 서비스 운영에 필요한 업무를 지원합니다.</span></p><p><span>[필요 역량/경험]</span></p><p><span>- 엑셀 등 MS Office 활용 능력</span></p><p><span>- 책임감과 성실한 태도</span></p><p><span>- 꼼꼼함과 원활한 커뮤니케이션 역량</span></p><p><span>[선호 역량/경험]</span></p><p><span>- CS에 대한 관심 및 이해</span></p><p><span>- CS 혹은 서비스 운영지원 경험</span></p><div><br></div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/981132\" title=\"20261105_133628.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/981132"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T00:13:37.787736+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2027-02-03T23:59:59.999000+09:00",
         "model": "source"
-      }
+      },
+      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00"
     },
     "linkareer-intern/362367": {
       "notice": {
@@ -1912,23 +2253,26 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[카카오페이] [어시스턴트] 송금 서비스 운영 지원\n\n\n\n\n[업무내용]\n- 송금 및 착오송금 중개 업무 전반을 담당합니다.\n- 머니 전체 서비스의 운영 기획 업무에 참여합니다.\n- 송금 서비스 관련 메시지(알림톡, 앱푸시) 또는 콘텐츠(공지사항, FAQ 등) 등을 기획하고 운영합니다.\n\n\n[필요 역량/경험]\n- 서비스 기획 및 개발에 대한 높은 관심과 성장 역량\n- 복잡한 내용을 명확하고 간결하게 정리하여 효율적으로 전달할 수 있는 문서화 능력\n- 높은 수준의 성실성과 꼼꼼함으로 작은 부분까지 놓치지 않는 세심한 태도\n\n\n[선호 역량/경험]\n- 서비스 운영 경험\n- 금융 및 핀테크 서비스에 대한 관심\n- 은행 착오송금 중개 실무 경험",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><span><b>[카카오페이] [어시스턴트] 송금 서비스 운영 지원</b></span></p><p><span>[업무내용]</span></p><p><span>- 송금 및 착오송금 중개 업무 전반을 담당합니다.</span></p><p><span>- 머니 전체 서비스의 운영 기획 업무에 참여합니다.</span></p><p><span>- 송금 서비스 관련 메시지(알림톡, 앱푸시) 또는 콘텐츠(공지사항, FAQ 등) 등을 기획하고 운영합니다.</span></p><p><span>[필요 역량/경험]</span></p><p><span>- 서비스 기획 및 개발에 대한 높은 관심과 성장 역량</span></p><p><span>- 복잡한 내용을 명확하고 간결하게 정리하여 효율적으로 전달할 수 있는 문서화 능력</span></p><p><span>- 높은 수준의 성실성과 꼼꼼함으로 작은 부분까지 놓치지 않는 세심한 태도</span></p><p><span>[선호 역량/경험]</span></p><p><span>- 서비스 운영 경험</span></p><p><span>- 금융 및 핀테크 서비스에 대한 관심</span></p><p><span>- 은행 착오송금 중개 실무 경험</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/981129\" title=\"20261105_120939.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/981129"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T00:13:37.787736+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2027-02-03T23:59:59.999000+09:00",
         "model": "source"
-      }
+      },
+      "body_attempted_at": "2026-11-06T00:13:37.787736+09:00"
     },
     "linkareer-intern/362365": {
       "notice": {
@@ -2614,7 +2958,7 @@
         "id": "jasoseol-intern/107070",
         "source_id": "jasoseol-intern",
         "article_no": "107070",
-        "title": "[비테스코테크놀로지스코리아] 이천사업장 11월 신입 및 경력직 채용",
+        "title": "[비테스코테크놀로지스코리아] 셰플러코리아 이천사업장 11월 신입 및 경력직 채용",
         "category": "인턴",
         "url": "https://jasoseol.com/recruit/107070",
         "posted_on": "2026-11-05",
@@ -2647,20 +2991,22 @@
       "images": [
         "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/895/webp/image.webp?1793777512"
       ],
-      "summary": null,
       "body_attempts": 1,
       "fetched_at": "2026-11-05T01:28:55.954651+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-16T23:59:00+09:00",
-        "model": "source"
-      },
       "intern_judgment": {
         "fingerprint": "05ac2af367e39a6ef34903adb7451942c119f62b131733de9ba24993ab8a2416",
         "verdict": "not_relevant",
         "reason": "Electronic Engineer Intern 직무는 학부생 지원이 가능할 수 있으나, 공고된 다른 직무들은 경력직 위주이거나 소프트웨어 개발 직무와 거리가 있습니다.",
         "model": "gemini-3.1-flash-lite"
+      },
+      "previous_title": "[비테스코테크놀로지스코리아] 이천사업장 11월 신입 및 경력직 채용",
+      "changed_at": "2026-11-06T00:13:37.787736+09:00",
+      "change_kind": "제목",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T23:59:00+09:00",
+        "model": "source"
       }
     },
     "jasoseol-intern/107019": {
@@ -2769,6 +3115,84 @@
         "verdict": "not_relevant",
         "reason": "시설, 물류, 일반관리 직무는 소프트웨어 개발 및 IT 관련 직무가 아니며, 지원 자격 또한 4년제 대학 졸업자 이상으로 제한되어 있습니다.",
         "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107076": {
+      "notice": {
+        "id": "jasoseol-intern/107076",
+        "source_id": "jasoseol-intern",
+        "article_no": "107076",
+        "title": "[토스뱅크] General Affairs Assistant (보훈특별채용)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107076",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T00:13:37.787736+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/107074": {
+      "notice": {
+        "id": "jasoseol-intern/107074",
+        "source_id": "jasoseol-intern",
+        "article_no": "107074",
+        "title": "2027 상반기 로레알코리아 채용 전제형 인턴십",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107074",
+        "posted_on": "2026-11-04",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T00:13:37.787736+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:00+09:00",
+        "model": "source"
       }
     },
     "linkareer-intern/362507": {
@@ -5321,7 +5745,7 @@
         "kind": "마감",
         "at": "2026-11-09T10:00:00+09:00"
       },
-      "rechecked_at": "2026-11-05T11:07:36.574820+09:00"
+      "rechecked_at": "2026-11-06T00:13:37.787736+09:00"
     },
     "futurecar-notice/67753": {
       "notice": {
@@ -5364,7 +5788,7 @@
         "checked": true,
         "model": "gemini-3.1-flash-lite"
       },
-      "rechecked_at": "2026-11-05T11:32:28.944523+09:00"
+      "rechecked_at": "2026-11-06T00:13:37.787736+09:00"
     },
     "cse-notice/228049": {
       "notice": {
@@ -5407,7 +5831,7 @@
       "summary": "고영테크놀러지에서 11월 18일까지 신입사원을 모집합니다. 서류와 역량 검사 및 면접을 거쳐 2027년 1월에 입사하게 됩니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-04T15:41:11.032641+09:00",
-      "rechecked_at": "2026-11-05T11:32:28.944523+09:00"
+      "rechecked_at": "2026-11-06T00:13:37.787736+09:00"
     },
     "cse-notice/228046": {
       "notice": {
@@ -8894,6 +9318,84 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-11-18T10:30:00+09:00"
+      }
+    },
+    "jasoseol-intern/107078": {
+      "notice": {
+        "id": "jasoseol-intern/107078",
+        "source_id": "jasoseol-intern",
+        "article_no": "107078",
+        "title": "[케이씨텍] [채용연계형 인턴] 총무 담당자 모집(안성)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107078",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T00:13:37.787736+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:55:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/107075": {
+      "notice": {
+        "id": "jasoseol-intern/107075",
+        "source_id": "jasoseol-intern",
+        "article_no": "107075",
+        "title": "[뷰티셀렉션] 글로벌 인플루언서 마케팅 채용연계형 인턴 대규모 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107075",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T00:13:37.787736+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:00+09:00",
+        "model": "source"
       }
     },
     "linkareer-intern/362135": {

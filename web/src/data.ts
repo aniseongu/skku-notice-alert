@@ -159,7 +159,7 @@ export function deadlineDetail(iso: string): string {
 }
 
 export type IconName = 'ginkgo' | 'coin' | 'briefcase' | 'calendar' | 'trophy' | 'book' | 'alarm'
-  | 'search' | 'refresh' | 'list' | 'user-check' | 'plus' | 'close' | 'back' | 'panel' | 'clip' | 'bookmark' | 'bookmark-on';
+  | 'search' | 'refresh' | 'list' | 'select-list' | 'user-check' | 'plus' | 'close' | 'back' | 'panel' | 'clip' | 'bookmark' | 'bookmark-on';
 
 // 분류 글자와 제목 단어로 아이콘을 고른다. 알림 아이콘(scripts/build_icons.py NOTIFY)과 같은 이름.
 const CATEGORY_ICONS: [IconName, RegExp][] = [

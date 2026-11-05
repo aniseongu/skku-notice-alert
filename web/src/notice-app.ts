@@ -324,9 +324,14 @@ export class NoticeApp extends LitElement {
     const changed = this.visible().filter((notice) => selected.has(notice.id) && this.isRead(notice) !== read);
     if (!changed.length) return;
     this.updateRead(changed.map((notice) => notice.id), read);
+    this.closeSelection();
+    this.showToast(`${changed.length}개를 ${read ? '읽음' : '읽지 않음'}으로 표시했어요`);
+  }
+
+  private closeSelection() {
     this.selecting = false;
     this.selectedReads = [];
-    this.showToast(`${changed.length}개를 ${read ? '읽음' : '읽지 않음'}으로 표시했어요`);
+    this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.select-trigger')?.focus({ preventScroll: true }));
   }
 
   private isRead(notice: Notice): boolean { return this.read === null || this.read.includes(notice.id); }
@@ -510,11 +515,11 @@ export class NoticeApp extends LitElement {
       this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.board-picker .board-trigger')?.focus());
       return;
     }
-    if (event.key === 'Escape' && target instanceof HTMLInputElement) { target.blur(); return; }
-    if (this.selecting) {
-      if (event.key === 'Escape') { this.selecting = false; this.selectedReads = []; }
-      return;
+    if (this.selecting && event.key === 'Escape' && !(target instanceof HTMLInputElement && target.type === 'search')) {
+      event.preventDefault(); this.closeSelection(); return;
     }
+    if (event.key === 'Escape' && target instanceof HTMLInputElement) { target.blur(); return; }
+    if (this.selecting) return;
     if (target?.closest('input, textarea, select, .board-picker, .sort-picker') || event.metaKey || event.ctrlKey || event.altKey) return;
     if (event.key === '?') { event.preventDefault(); this.shortcutsOpen = true; return; }
     if (this.view === 'settings' && event.key === 'Escape' && !this.shortcutsOpen) { event.preventDefault(); this.leaveSettings(); return; }
@@ -865,11 +870,14 @@ export class NoticeApp extends LitElement {
           <button type="button" class="read-all" ?disabled=${!selectedRead}
             aria-label=${`선택한 읽은 공지 ${selectedRead}개 읽지 않음으로 표시`}
             @click=${() => this.markSelectedRead(false)}>안 읽음 표시</button>
-          <button type="button" class="read-all" @click=${() => { this.selecting = false; this.selectedReads = []; }}>완료</button></div>
+          <button type="button" class="read-all" @click=${() => this.closeSelection()}>닫기</button></div>
       </div>`;
     }
     const select = html`<button type="button" class="read-all select-trigger" ?disabled=${!list.length}
-      @click=${() => { this.selecting = true; this.selectedReads = []; }}><span class="filter-check select-icon" aria-hidden="true"></span>선택</button>`;
+      @click=${(event: MouseEvent) => {
+        this.selecting = true; this.selectedReads = [];
+        if (event.detail === 0) this.updateComplete.then(() => this.querySelector<HTMLInputElement>('.select-all input')?.focus({ preventScroll: true }));
+      }}>${icon('select-list')}선택</button>`;
     if (this.view === 'saved') return html`<div class="view-options saved-options">${select}</div>`;
     return html`<div class="view-options" role="group" aria-label="공지 보기 조건">
       <button type="button" class="view-toggle" aria-pressed=${String(this.unreadOnly)} @click=${() => {

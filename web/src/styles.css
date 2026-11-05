@@ -107,13 +107,14 @@
   }
   .meta { grid-area: meta; display: flex; flex-wrap: wrap; min-width: 0; gap: 6px; font-size: 13px; line-height: 18px; font-weight: 500; color: var(--text-3); }
   .meta span { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
-  .dday { grid-area: dday; align-self: center; font-size: 13px; line-height: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .dday { grid-area: dday; align-self: center; font-size: 14px; line-height: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
   .dday.urgent { color: var(--danger); }
   .dday.ended { font-weight: 500; color: var(--text-3); }
   .title {
     grid-area: title; font-size: 16px; line-height: 23px; font-weight: 600;
     display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
   }
+  .row:has(> .dday) .title { margin-top: 4px; }
   .sub { grid-area: reason; margin-top: 2px; font-size: 14px; line-height: 20px; color: var(--text-2); }
   .sub:empty { display: none; }
   /* 저장: 옆 단추와 같은 테두리와 높이. 저장하면 옅은 진녹 바탕에 진녹 책갈피(DESIGN 2절 주 동작 "저장") */
@@ -133,6 +134,10 @@
   /* 판정과 읽음은 별개다. 제목과 D-day는 읽음 상태에 맞춰 함께 바뀐다. */
   .row.dim .meta { color: var(--text-3); }
   .row.read .dday, .row.read .reason b, .row.read .interest { color: var(--text-2); font-weight: 500; }
+  .row.read .dday { font-weight: 600; }
+  .row.read .dday.urgent { color: light-dark(var(--danger), var(--text-2)); }
+  .row.read .reason.relevant b, .row.read .interest { color: light-dark(var(--accent), var(--text-2)); }
+  .row.read .reason.maybe b { color: light-dark(var(--soon), var(--text-2)); }
   .row:active, .row[aria-current="true"] { background: var(--sunken); }
   .row:focus-visible { outline-offset: -2px; }
 
@@ -474,8 +479,9 @@
     .row {
       grid-template-columns: 120px minmax(0, 1fr) 48px;
       grid-template-areas: "meta title dday" "meta reason dday";
-      gap: 2px 16px; padding: 12px 24px;
+      gap: 2px 24px; padding: 12px 24px;
     }
+    .row:has(> .dday) .title { margin-top: 0; }
     /* 판정 줄이 없는 행은 그 줄 자리(18px)를 남기지 않는다. 그래서 행 높이가 제목 줄 수만 따른다. */
     .row:has(> .sub:empty) { grid-template-areas: "meta title dday"; }
     .row .meta { min-width: 0; flex-direction: column; flex-wrap: nowrap; gap: 0; padding-top: 2px; }

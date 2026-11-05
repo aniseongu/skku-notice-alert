@@ -34,6 +34,33 @@ async (page) => {
         throw Error('현재 목록 밖 글의 읽음 상태가 바뀜');
       }
       if (state.sync !== 1 || !state.disabled) throw Error('일괄 동기화 또는 단추 상태 오류');
+      await p.evaluate(async () => {
+        const a = document.querySelector('notice-app'); a.read = []; a.syncCalls = 0; await a.updateComplete;
+      });
+      await p.getByRole('button', { name: '선택', exact: true }).click();
+      await p.getByRole('checkbox', { name: '인턴 A 선택' }).check();
+      const partial = await p.getByRole('checkbox', { name: '전체 선택' }).evaluate(e => e.indeterminate);
+      if (!partial) throw Error('부분 선택 상태가 표시되지 않음');
+      await p.getByRole('button', { name: '선택한 읽지 않은 공지 1개 읽음으로 표시' }).click();
+      let read = await p.evaluate(() => document.querySelector('notice-app').read);
+      if (!read.includes('one/1') || read.includes('one/2') || read.includes('two/3')) {
+        throw Error('선택한 공지 외의 읽음 상태가 바뀜');
+      }
+      await p.getByRole('button', { name: '선택', exact: true }).click();
+      await p.getByRole('checkbox', { name: '전체 선택' }).check();
+      await p.getByRole('button', { name: '선택한 읽지 않은 공지 1개 읽음으로 표시' }).click();
+      read = await p.evaluate(() => document.querySelector('notice-app').read);
+      if (!read.includes('one/2') || read.includes('two/3') || read.includes('jobs/4')) {
+        throw Error('전체 선택 범위 오류');
+      }
+      await p.getByRole('button', { name: '선택', exact: true }).click();
+      await p.getByRole('checkbox', { name: '인턴 A 선택' }).check();
+      await p.locator('.search input:visible').fill('B');
+      if (await p.getByRole('checkbox', { name: '인턴 B 선택' }).isChecked()) throw Error('검색 뒤 선택이 남음');
+      const count = await p.evaluate(() => document.querySelector('notice-app').selectedReads.length);
+      if (count !== 0) throw Error('숨은 공지가 선택에 남음');
+      await p.getByRole('button', { name: '완료', exact: true }).click();
+      if (await p.locator('.selection-check').count()) throw Error('선택 모드 종료 오류');
       results.push({ width, passed: true });
     } finally { await context.close(); }
   }

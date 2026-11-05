@@ -113,7 +113,7 @@ export class NoticeApp extends LitElement {
     installHidden: { state: true }, toast: { state: true }, toastLink: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true }, sortMenuOpen: { state: true },
     saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true }, internSort: { state: true },
-    unreadOnly: { state: true },
+    unreadOnly: { state: true }, selecting: { state: true }, selectedReads: { state: true },
   };
 
   notices: Notice[] = [];
@@ -125,6 +125,8 @@ export class NoticeApp extends LitElement {
   sort: Sort = loadSort('all');
   internSort: Sort = loadSort('intern');
   unreadOnly = remember('view-unread') === '1';
+  selecting = false;
+  selectedReads: string[] = [];
   board = remember('board') ?? 'all';
   keyword: string | null = null;
   keywords = loadKeywords();
@@ -294,6 +296,23 @@ export class NoticeApp extends LitElement {
     this.showToast(`${unread.length}개를 읽음으로 표시했어요`);
   }
 
+  private toggleReadSelection(id: string) {
+    this.selectedReads = this.selectedReads.includes(id)
+      ? this.selectedReads.filter((selected) => selected !== id) : [...this.selectedReads, id];
+  }
+
+  private markSelectedRead() {
+    const selected = new Set(this.selectedReads);
+    const unread = this.visible().filter((notice) => selected.has(notice.id) && !this.isRead(notice));
+    if (!unread.length) return;
+    this.read = mergeRead(this.read ?? [], unread.map((notice) => notice.id));
+    storeRead(this.read);
+    this.pushRead();
+    this.selecting = false;
+    this.selectedReads = [];
+    this.showToast(`${unread.length}개를 읽음으로 표시했어요`);
+  }
+
   private isRead(notice: Notice): boolean { return this.read === null || this.read.includes(notice.id); }
 
   private isSaved(notice: Notice): boolean { return this.saved.some((item) => item.id === notice.id); }
@@ -367,6 +386,7 @@ export class NoticeApp extends LitElement {
 
   private setView(view: View) {
     const entering = view === 'settings' && this.view !== 'settings';
+    this.selecting = false; this.selectedReads = [];
     this.view = view;
     this.openedId = null;
     this.boardMenuOpen = false;
@@ -405,14 +425,15 @@ export class NoticeApp extends LitElement {
     }
     remember('notice-sort', this.sort);
     remember('intern-sort', this.internSort);
-    if (view !== this.view) { this.view = view; this.selectedId = null; }
+    if (view !== this.view) { this.view = view; this.selectedId = null; this.selecting = false; this.selectedReads = []; }
   };
 
   private setBoard(board: string) {
-    this.board = board; this.boardMenuOpen = false; this.selectedId = null; remember('board', board);
+    this.board = board; this.boardMenuOpen = false; this.selectedId = null; this.selectedReads = []; remember('board', board);
   }
   private setKeyword(word: string | null) {
     this.keyword = word;
+    this.selectedReads = [];
     this.selectedId = null;
     if (this.view === 'settings') this.setView('all');
   }
@@ -474,6 +495,10 @@ export class NoticeApp extends LitElement {
       return;
     }
     if (event.key === 'Escape' && target instanceof HTMLInputElement) { target.blur(); return; }
+    if (this.selecting) {
+      if (event.key === 'Escape') { this.selecting = false; this.selectedReads = []; }
+      return;
+    }
     if (target?.closest('input, textarea, select, .board-picker, .sort-picker') || event.metaKey || event.ctrlKey || event.altKey) return;
     if (event.key === '?') { event.preventDefault(); this.shortcutsOpen = true; return; }
     if (this.view === 'settings' && event.key === 'Escape' && !this.shortcutsOpen) { event.preventDefault(); this.leaveSettings(); return; }
@@ -502,6 +527,7 @@ export class NoticeApp extends LitElement {
   }
 
   private onRow(event: MouseEvent, notice: Notice) {
+    if (this.selecting) { event.preventDefault(); this.toggleReadSelection(notice.id); return; }
     // 행을 누르면 앱 안 상세를 먼저 보여 주고, 원문은 "원문 열기"로 연다(D-013, ux-rules 1절).
     // Ctrl이나 Cmd를 누르고 누르면 브라우저 기본대로 원문을 새 탭에 연다.
     this.markRead(notice);
@@ -603,7 +629,7 @@ export class NoticeApp extends LitElement {
             ${settings ? nothing : html`
               <label class="search wide-only">${icon('search')}
                 <input type="search" placeholder="공지 찾기" autocomplete="off" aria-label="공지 검색" aria-keyshortcuts="/" .value=${this.query}
-                  @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; this.selectedId = null; }}>${this.query ? nothing : kbd('/')}</label>
+                  @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; this.selectedId = null; this.selectedReads = []; }}>${this.query ? nothing : kbd('/')}</label>
               ${this.detailOpen ? nothing : html`<button type="button" class="icon-button wide-only" aria-label="상세 칸 열기" title="상세 칸 열기"
                 @click=${() => this.setDetail(true)}>${icon('panel')}</button>`}
               <button type="button" class="icon-button" aria-label="공지 다시 가져오기" title="공지 다시 가져오기 (R)" aria-keyshortcuts="r"
@@ -621,7 +647,7 @@ export class NoticeApp extends LitElement {
             <div class="tools narrow-only">
               <label class="search">${icon('search')}
                 <input type="search" placeholder="제목, 분류, 판정 이유로 찾기" autocomplete="off" aria-label="공지 검색" .value=${this.query}
-                  @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; this.selectedId = null; }}></label>
+                  @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; this.selectedId = null; this.selectedReads = []; }}></label>
               <div class="chips" role="group" aria-label="관심 키워드">
                 ${this.keywords.length ? html`<button type="button" class="chip" aria-pressed=${String(!this.keyword)} @click=${() => this.setKeyword(null)}>모두</button>` : nothing}
                 ${this.keywords.map((word) => html`<button type="button" class="chip" aria-pressed=${String(this.keyword === word)}
@@ -805,19 +831,38 @@ export class NoticeApp extends LitElement {
   }
 
   private viewFilters() {
-    const unreadCount = this.visible().filter((notice) => !this.isRead(notice)).length;
+    const list = this.visible();
+    const unreadCount = list.filter((notice) => !this.isRead(notice)).length;
+    if (this.selecting) {
+      const selected = new Set(this.selectedReads);
+      const selectedVisible = list.filter((notice) => selected.has(notice.id));
+      const selectedUnread = selectedVisible.filter((notice) => !this.isRead(notice)).length;
+      return html`<div class="view-options select-options" role="group" aria-label="공지 선택">
+        <label class="select-all"><input type="checkbox" .checked=${list.length > 0 && selectedVisible.length === list.length}
+          .indeterminate=${selectedVisible.length > 0 && selectedVisible.length < list.length}
+          ?disabled=${!list.length} @change=${(event: Event) => {
+            this.selectedReads = (event.target as HTMLInputElement).checked ? list.map((notice) => notice.id) : [];
+          }}>전체 선택</label>
+        <div class="view-actions"><button type="button" class="read-all" ?disabled=${!selectedUnread}
+          aria-label=${`선택한 읽지 않은 공지 ${selectedUnread}개 읽음으로 표시`}
+          @click=${() => this.markSelectedRead()}>읽음 표시${selectedUnread ? ` ${selectedUnread}` : ''}</button>
+          <button type="button" class="read-all" @click=${() => { this.selecting = false; this.selectedReads = []; }}>완료</button></div>
+      </div>`;
+    }
     const readAll = html`<button type="button" class="read-all" ?disabled=${!unreadCount}
       aria-label=${`현재 목록의 읽지 않은 공지 ${unreadCount}개 모두 읽음으로 표시`}
       title="현재 목록의 읽지 않은 공지만 읽음으로 표시해요"
       @click=${() => this.markVisibleRead()}>모두 읽음</button>`;
-    if (this.view === 'saved') return html`<div class="view-options saved-options">${readAll}</div>`;
+    const select = html`<button type="button" class="read-all" ?disabled=${!list.length}
+      @click=${() => { this.selecting = true; this.selectedReads = []; }}>선택</button>`;
+    if (this.view === 'saved') return html`<div class="view-options saved-options">${readAll}${select}</div>`;
     return html`<div class="view-options" role="group" aria-label="공지 보기 조건">
-      <button type="button" class="view-toggle" aria-pressed=${String(this.unreadOnly)} @click=${() => {
+      <div class="read-controls"><button type="button" class="view-toggle" aria-pressed=${String(this.unreadOnly)} @click=${() => {
         this.unreadOnly = !this.unreadOnly;
         this.selectedId = null;
         remember('view-unread', this.unreadOnly ? '1' : '0');
-      }}><span class="filter-check" aria-hidden="true"></span>읽지 않은 공지만</button>
-      <div class="view-actions">${readAll}${this.sortSelect()}</div>
+      }}><span class="filter-check" aria-hidden="true"></span>읽지 않은 공지만</button>${readAll}</div>
+      <div class="view-actions">${select}${this.sortSelect()}</div>
     </div>`;
   }
 
@@ -913,7 +958,10 @@ export class NoticeApp extends LitElement {
     const ai = this.judgement(notice)?.ai;
     const source = this.sources.find((s) => s.id === notice.source_id);
     const dim = ai?.verdict === 'not_relevant' && !this.interests(notice).length;
-    return html`<li>
+    return html`<li class=${this.selecting ? 'batch-row' : ''}>
+      ${this.selecting ? html`<label class="selection-check"><input type="checkbox"
+        aria-label=${`${cleanTitle(notice.title_ko || notice.title)} 선택`}
+        .checked=${this.selectedReads.includes(notice.id)} @change=${() => this.toggleReadSelection(notice.id)}></label>` : nothing}
       <a class="row ${dim ? 'dim' : ''} ${this.isRead(notice) ? 'read' : 'unread'}" href=${safeUrl(notice.url)} target="_blank" rel="noopener"
         data-id=${notice.id} aria-current=${this.isWide && this.shownId === notice.id ? 'true' : 'false'}
         @click=${(e: MouseEvent) => this.onRow(e, notice)}>

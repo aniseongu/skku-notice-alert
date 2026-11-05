@@ -236,7 +236,7 @@
   .dialog-foot { margin-top: 12px; font-size: 12px; color: var(--text-3); }
 }
 
-/* 휴대폰 (One UI, 720px 미만). 왼쪽 시작선은 16px(머리, 검색, 칩, 묶음)과 32px(행 글자) 둘뿐이다. */
+/* 휴대폰 (One UI, 720px 미만). 목록과 검색은 같은 시작선에 맞춘다. */
 @layer mobile {
   .sidebar, .detail-pane, .wide-only { display: none; }
   .list-pane { padding-bottom: calc(var(--tabbar-h) + 24px + env(safe-area-inset-bottom)); }
@@ -254,14 +254,20 @@
   .topbar .back { margin-left: -12px; }
   h1 { font-size: 22px; line-height: 30px; font-weight: 700; letter-spacing: -0.02em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .updated { font-size: 13px; line-height: 18px; color: var(--text-3); font-variant-numeric: tabular-nums; }
-  .updated.stale { color: var(--danger); }
+  .updated.stale { color: var(--text-2); }
 
   @media (max-width: 719px) {
-    .feed-topbar { gap: 0; padding: calc(4px + env(safe-area-inset-top)) 4px 4px var(--gutter); }
-    .feed-topbar h1 { font-size: 20px; line-height: 28px; }
+    .feed-topbar {
+      position: relative; top: auto; gap: 0;
+      padding: calc(8px + env(safe-area-inset-top)) 4px 8px var(--gutter);
+      border-bottom: 0; background: var(--bg);
+      -webkit-backdrop-filter: none; backdrop-filter: none;
+    }
+    .feed-topbar > .brand-mark { width: 36px; height: 36px; margin-right: 8px; }
+    .feed-topbar h1 { font-size: 21px; line-height: 28px; font-weight: 800; }
   }
 
-  .tools { padding: 8px var(--gutter) 0; }
+  .tools { padding: 4px var(--gutter) 0; }
   .chips {
     display: flex; gap: 8px; margin: 4px calc(-1 * var(--gutter)) 0; padding: 4px var(--gutter);
     overflow-x: auto; scrollbar-width: none; user-select: none; -webkit-user-select: none;
@@ -317,14 +323,14 @@
   .filter-check { position: relative; width: 16px; height: 16px; flex: none; border: 1px solid var(--text-3); border-radius: var(--r-sm); }
   .view-toggle[aria-pressed="true"] .filter-check { background: var(--text); border-color: var(--text); }
   .view-toggle[aria-pressed="true"] .filter-check::after { content: ""; position: absolute; left: 4px; top: 1px; width: 5px; height: 9px; border: solid var(--surface); border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); }
-  .list { padding: 0 var(--gutter); }
+  .list { padding: 0; }
   .group + .group { margin-top: 20px; }
   .sort-trigger { font-weight: 500; }
   .sort-options { min-width: 140px; }
-  .group-head { display: flex; align-items: center; justify-content: space-between; min-height: 44px; margin: 4px 0 0; }
+  .group-head { display: flex; align-items: center; justify-content: space-between; min-height: 44px; margin: 4px var(--gutter) 0; }
   .group-head h2 { font-size: 13px; line-height: 18px; font-weight: 600; color: var(--text-3); }
   .empty-head { justify-content: flex-end; }
-  .rows { border-radius: var(--r-lg); background: var(--surface); overflow: hidden; }
+  .rows { background: var(--surface); overflow: hidden; }
   .row { padding: 14px var(--gutter); }
   .rows li + li .row { border-top: 1px solid var(--line); }
   .batch-row { display: flex; align-items: stretch; background: var(--surface); }

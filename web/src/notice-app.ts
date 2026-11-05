@@ -531,7 +531,7 @@ export class NoticeApp extends LitElement {
     if (event.key === '?') { event.preventDefault(); this.shortcutsOpen = true; return; }
     if (this.view === 'settings' && event.key === 'Escape' && !this.shortcutsOpen) { event.preventDefault(); this.leaveSettings(); return; }
     if (this.view === 'settings' || this.shortcutsOpen) return;
-    if (event.key === 'Escape' && this.isWide && this.detailOpen) { this.setDetail(false); return; }
+    if (event.key === 'Escape' && this.isWide && this.detailOpen && this.shownId) { this.setDetail(false); return; }
     // 단추나 링크에 포커스가 있으면 Enter는 그 요소의 기본 동작에 맡긴다.
     if (event.key === 'Enter' && target?.closest(INTERACTIVE)) return;
     const list = this.visible();
@@ -616,7 +616,7 @@ export class NoticeApp extends LitElement {
     this.shownId = selected?.id ?? null;
     const reading = !this.isWide && !settings
       ? this.notices.find((n) => n.id === this.openedId) ?? list.find((n) => n.id === this.openedId) : undefined;
-    const classes = [settings ? 'is-settings' : '', this.isWide && !this.detailOpen ? 'no-detail' : '', reading ? 'is-reading' : ''].join(' ');
+    const classes = [settings ? 'is-settings' : '', this.isWide && (!this.detailOpen || !selected) ? 'no-detail' : '', reading ? 'is-reading' : ''].join(' ');
     const mobileNav = html`<nav class="tabbar glass" aria-label="보기" ?hidden=${settings || Boolean(reading)}>
       ${tabs.map((t) => html`<button type="button" aria-current=${this.view === t.id ? 'page' : 'false'}
         @click=${() => this.setView(t.id)}>${icon(t.icon)}<span>${t.label}</span></button>`)}
@@ -662,7 +662,7 @@ export class NoticeApp extends LitElement {
               <label class="search wide-only">${icon('search')}
                 <input type="search" placeholder="공지 찾기" autocomplete="off" aria-label="공지 검색" aria-keyshortcuts="/" .value=${this.query}
                   @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; this.selectedId = null; this.selectedReads = []; }}>${this.query ? nothing : kbd('/')}</label>
-              ${this.detailOpen ? nothing : html`<button type="button" class="icon-button wide-only" aria-label="상세 칸 열기" title="상세 칸 열기"
+              ${this.detailOpen || !selected ? nothing : html`<button type="button" class="icon-button wide-only" aria-label="상세 칸 열기" title="상세 칸 열기"
                 @click=${() => this.setDetail(true)}>${icon('panel')}</button>`}
               <button type="button" class="icon-button" aria-label="공지 다시 가져오기" title="공지 다시 가져오기 (R)" aria-keyshortcuts="r"
                 ?disabled=${this.loading} @click=${this.collectNow}>${icon('refresh')}</button>`}

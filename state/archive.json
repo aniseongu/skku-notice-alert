@@ -1655,7 +1655,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2027-01-05T23:59:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-06T06:04:45.804133+09:00"
     },
     "skku-notice01/141599": {
       "notice": {
@@ -1694,7 +1695,8 @@
       "summary": "WACE Global Challenge 참가자를 11월 30일까지 모집합니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-05T16:11:56.911421+09:00",
-      "body_attempted_at": "2026-11-05T16:11:56.911421+09:00"
+      "body_attempted_at": "2026-11-05T16:11:56.911421+09:00",
+      "rechecked_at": "2026-11-06T06:04:45.804133+09:00"
     },
     "linkareer-intern/362432": {
       "notice": {
@@ -2596,7 +2598,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-29T23:59:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-06T06:04:45.804133+09:00"
     },
     "skku-notice01/141580": {
       "notice": {

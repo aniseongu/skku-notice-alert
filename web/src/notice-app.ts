@@ -617,12 +617,11 @@ export class NoticeApp extends LitElement {
     this.shownId = selected?.id ?? null;
     const reading = !this.isWide && !settings
       ? this.notices.find((n) => n.id === this.openedId) ?? list.find((n) => n.id === this.openedId) : undefined;
-    const classes = [settings ? 'is-settings' : '', this.isWide && !this.detailOpen ? 'no-detail' : '', reading ? 'is-reading' : ''].join(' ');
-    const samsung = isSamsungInternet(navigator.userAgent);
-    const mobileNav = (top: boolean) => html`<nav class="tabbar glass ${top ? 'top-tabs' : ''}" aria-label="보기"
-      ?hidden=${settings || Boolean(reading)}>
+    const classes = [settings ? 'is-settings' : '', this.isWide && !this.detailOpen ? 'no-detail' : '',
+      reading ? 'is-reading' : '', isSamsungInternet(navigator.userAgent) ? 'is-samsung' : ''].join(' ');
+    const mobileNav = html`<nav class="mobile-sections narrow-only" aria-label="보기">
       ${tabs.map((t) => html`<button type="button" aria-current=${this.view === t.id ? 'page' : 'false'}
-        @click=${() => this.setView(t.id)}>${icon(t.icon)}<span>${t.label}</span></button>`)}
+        @click=${() => this.setView(t.id)}>${t.label}</button>`)}
     </nav>`;
     return html`
       <div class="wco-bar" aria-hidden="true"><svg class="brand-mark" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>${APP_NAME}</div>
@@ -652,14 +651,13 @@ export class NoticeApp extends LitElement {
 
         <main class="list-pane">
           ${reading ? this.readingView(reading) : html`
-          <div class=${samsung && !settings ? 'samsung-navigation-head' : 'navigation-head'}>
-          <header class="pane-head topbar glass">
+          <div class="navigation-head">
+          <header class="pane-head topbar glass ${settings ? '' : 'feed-topbar'}">
             ${settings ? html`<button type="button" class="icon-button narrow-only back" aria-label="설정 닫기"
               @click=${this.leaveSettings}>${icon('back')}</button>` : nothing}
-            ${settings ? nothing : html`<svg class="brand-mark narrow-only" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>`}
+            ${settings ? nothing : mobileNav}
             <div class="topbar-text">
-              <h1>${this.view === 'all' && !this.keyword
-                ? html`<span class="narrow-only">${APP_NAME}</span><span class="wide-only">${title}</span>` : title}</h1>
+              <h1>${title}</h1>
               ${settings ? html`<p class="updated">알림과 연결을 정해요</p>` : this.updatedLine(list.length)}
             </div>
             ${settings ? nothing : html`
@@ -675,7 +673,6 @@ export class NoticeApp extends LitElement {
             ${settings ? html`<button type="button" class="icon-button wide-only" aria-label="설정 닫기" title="설정 닫기 (Esc)"
               aria-keyshortcuts="Escape" @click=${this.leaveSettings}>${icon('close')}</button>` : nothing}
           </header>
-          ${samsung && !settings ? mobileNav(true) : nothing}
           </div>
 
           ${settings ? html`<settings-view .keywords=${this.keywords} .theme=${this.theme}
@@ -683,6 +680,7 @@ export class NoticeApp extends LitElement {
               @keywords-change=${(e: CustomEvent<string[]>) => this.setKeywords(e.detail)}
               @theme-change=${(e: CustomEvent<Theme>) => this.setTheme(e.detail)}></settings-view>` : html`
             <div class="tools narrow-only">
+              <div class="feed-updated" aria-hidden="true">${this.updatedLine(list.length)}</div>
               <label class="search">${icon('search')}
                 <input type="search" placeholder="제목, 분류, 판정 이유로 찾기" autocomplete="off" aria-label="공지 검색" .value=${this.query}
                   @input=${(e: Event) => { this.query = (e.target as HTMLInputElement).value; this.selectedId = null; this.selectedReads = []; }}></label>
@@ -718,7 +716,6 @@ export class NoticeApp extends LitElement {
           <button type="button" class="icon-button" aria-label="안내 닫기" @click=${this.hideInstall}>${icon('close')}</button>
         </div>` : nothing}
 
-      ${samsung ? nothing : mobileNav(false)}
       <div class="toast" role="status" ?hidden=${!this.toast}>${this.toast}${this.toastLink ? html`
         <div class="toast-actions"><a href=${this.toastLink} target=${this.toastLink.startsWith('?') ? '_self' : '_blank'} rel="noopener noreferrer">${this.toastLinkLabel}</a>
           <button type="button" @click=${() => { this.toast = ''; this.toastLink = null; }}>닫기</button></div>` : nothing}</div>

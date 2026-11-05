@@ -295,9 +295,10 @@
   .board-check { width: 7px; height: 12px; margin-right: 3px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); }
 
   .view-options { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 var(--gutter); }
+  .read-controls { display: flex; align-items: center; gap: 0; min-width: 0; }
   .view-actions { display: flex; align-items: center; gap: 4px; }
   .saved-options { justify-content: flex-end; }
-  .read-all { min-height: 44px; padding: 0 4px; border: 0; background: none; color: var(--text-2); font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .read-all { min-width: 44px; min-height: 44px; padding: 0 4px; border: 0; background: none; color: var(--text-2); font-size: 13px; font-weight: 600; white-space: nowrap; }
   .read-all:disabled { color: var(--text-3); }
   .view-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 8px 0 0; border: 0; background: none; color: var(--text-2); font-size: 14px; font-weight: 500; }
   .view-toggle[aria-pressed="true"] { color: var(--text); font-weight: 600; }
@@ -313,6 +314,13 @@
   .rows { border-radius: var(--r-lg); background: var(--surface); overflow: hidden; }
   .row { padding: 14px var(--gutter); }
   .rows li + li .row { border-top: 1px solid var(--line); }
+  .batch-row { display: flex; align-items: stretch; background: var(--surface); }
+  .batch-row .row { flex: 1; min-width: 0; }
+  .selection-check { display: grid; place-items: center; flex: none; width: 44px; min-height: 44px; cursor: pointer; }
+  .selection-check input, .select-all input { width: 18px; height: 18px; margin: 0; accent-color: var(--text); }
+  .rows li + li .selection-check { border-top: 1px solid var(--line); }
+  .select-all { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; color: var(--text-2); cursor: pointer; }
+  @media (max-width: 359px) { .view-toggle { font-size: 13px; gap: 5px; padding-right: 2px; } .view-actions { gap: 0; } }
 
   /* 하단 탭 바: 화면 바닥에 붙는 One UI 방식 */
   .tabbar {

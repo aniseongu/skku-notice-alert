@@ -13,6 +13,7 @@ import { GitHubError, collectionWorkflowUrl, readVariable, saveVariable, request
 import { loadToken } from './settings-storage';
 import { SAVED_VARIABLE, type SavedNotice, loadSaved, parseSaved, storeSaved, toggleSaved } from './saved-notices';
 import { READ_VARIABLE, addRead, loadRead, mergeRead, parseRead, storeRead } from './read-notices';
+import { keywordUnreadCounts } from './keyword-counts';
 import type { Theme } from './settings-view';
 import { APP_NAME } from './brand';
 import { orderNotices, type Sort } from './notice-order';
@@ -540,6 +541,11 @@ export class NoticeApp extends LitElement {
       ? this.filtered(this.savedNotices()).length : this.byTab(filtered, t.id).length]));
     const list = this.visible();
     const settings = this.view === 'settings';
+    const keywordScope = this.tab() === 'saved' ? this.savedNotices() : this.notices.filter((notice) =>
+      this.isExternal(notice) === (this.tab() === 'intern') && (!notice.deadline || !deadlinePassed(notice.deadline)));
+    const board = this.activeBoard();
+    const keywordCounts = keywordUnreadCounts(keywordScope.filter((notice) => board === 'all' || notice.source_id === board),
+      this.keywords, (notice) => this.isRead(notice), (notice) => this.interests(notice));
     const title = settings ? settingsTitle()
       : this.keyword ? this.keyword : TABS.find((t) => t.id === this.view)!.label;
     const selected = settings ? undefined
@@ -554,13 +560,14 @@ export class NoticeApp extends LitElement {
         <aside class="sidebar" aria-label="탐색">
           <div class="pane-head brand"><svg class="brand-mark" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>${APP_NAME}</div>
           <nav class="side-group" aria-label="보기">
-            ${tabs.map((t) => this.sideItem(t.label, counts[t.id], this.view === t.id && !this.keyword, () => { this.keyword = null; this.setView(t.id); },
+            ${tabs.map((t) => this.sideItem(t.label, counts[t.id], this.view === t.id, () => this.setView(t.id),
               String(TABS.findIndex((x) => x.id === t.id) + 1)))}
           </nav>
           ${this.sideGroup('keywords', '관심 키워드', html`
-            ${this.keywords.map((word) => this.sideItem(word, this.notices.filter((n) => this.interests(n).includes(word)).length,
-              this.keyword === word && !settings, () => this.setKeyword(this.keyword === word ? null : word)))}
-            <button type="button" class="side-item add" @click=${() => this.setView('settings')}>${this.keywords.length ? '키워드 관리하기' : '키워드 추가하기'}</button>`, this.keywords.length)}
+            ${this.keywords.map((word) => this.sideItem(word, keywordCounts.counts[word],
+              this.keyword === word && !settings, () => this.setKeyword(this.keyword === word ? null : word), undefined,
+              `${word}, 읽지 않은 공지 ${keywordCounts.counts[word]}개`))}
+            <button type="button" class="side-item add" @click=${() => this.setView('settings')}>${this.keywords.length ? '키워드 관리하기' : '키워드 추가하기'}</button>`, keywordCounts.total)}
           ${this.sideGroup('boards', this.tab() === 'intern' ? '인턴 공고 사이트' : '게시판', html`
             ${[{ id: 'all', label: this.tab() === 'intern' ? '모든 사이트' : '모든 게시판' },
               ...this.tabSources().map((s) => ({ id: s.id, label: boardName(s, s.id) }))]
@@ -609,7 +616,8 @@ export class NoticeApp extends LitElement {
               <div class="chips" role="group" aria-label="관심 키워드">
                 ${this.keywords.length ? html`<button type="button" class="chip" aria-pressed=${String(!this.keyword)} @click=${() => this.setKeyword(null)}>모두</button>` : nothing}
                 ${this.keywords.map((word) => html`<button type="button" class="chip" aria-pressed=${String(this.keyword === word)}
-                  @click=${() => this.setKeyword(this.keyword === word ? null : word)}>${word}</button>`)}
+                  aria-label=${`${word}, 읽지 않은 공지 ${keywordCounts.counts[word]}개`}
+                  @click=${() => this.setKeyword(this.keyword === word ? null : word)}>${word} ${keywordCounts.counts[word]}</button>`)}
                 <button type="button" class="chip-add" @click=${() => this.setView('settings')}>${icon('plus')}키워드 추가하기</button>
               </div>
             </div>
@@ -639,7 +647,7 @@ export class NoticeApp extends LitElement {
 
       <nav class="tabbar glass" aria-label="보기" ?hidden=${settings || Boolean(reading)}>
         ${tabs.map((t) => html`<button type="button" aria-current=${this.view === t.id ? 'page' : 'false'}
-          @click=${() => { this.keyword = null; this.setView(t.id); }}>${icon(t.icon)}<span>${t.label}</span></button>`)}
+          @click=${() => this.setView(t.id)}>${icon(t.icon)}<span>${t.label}</span></button>`)}
       </nav>
       <div class="toast" role="status" ?hidden=${!this.toast}>${this.toast}${this.toastLink ? html` <a href=${this.toastLink} target="_blank" rel="noopener noreferrer">GitHub에서 실행하기</a>` : nothing}</div>
       ${this.shortcutsOpen ? this.shortcutsDialog() : nothing}
@@ -731,8 +739,9 @@ export class NoticeApp extends LitElement {
       <div class="side-group" id="side-${id}" ?hidden=${!open}>${items}</div>`;
   }
 
-  private sideItem(label: string, count: number | null, active: boolean, onClick: () => void, shortcut?: string) {
+  private sideItem(label: string, count: number | null, active: boolean, onClick: () => void, shortcut?: string, ariaLabel?: string) {
     return html`<button type="button" class="side-item" aria-current=${active ? 'page' : 'false'} @click=${onClick}
+      aria-label=${ariaLabel ?? nothing}
       aria-keyshortcuts=${shortcut ?? nothing} title=${shortcut ? `${label} (${shortcut})` : nothing}>
       <span>${label}</span>${count === null ? nothing : html`<span class="count">${count}</span>`}</button>`;
   }
@@ -760,6 +769,8 @@ export class NoticeApp extends LitElement {
     if (!list.length) {
       const boardPicker = html`<div class="group-head empty-head"><span></span>${this.boardSelect()}</div>`;
       if (this.query) return html`${boardPicker}${this.empty(`'${this.query}'에 맞는 공지가 없어요`, '다른 단어로 찾아보세요', '검색어 지우기', () => { this.query = ''; })}`;
+      if (this.keyword && this.view !== 'saved' && this.unreadOnly) return html`${boardPicker}${this.empty(
+        `'${this.keyword}'에 맞는 읽지 않은 공지가 없어요`, '읽지 않은 공지만 보기를 끄면 모든 공지를 볼 수 있어요')}`;
       if (this.keyword) return html`${boardPicker}${this.empty(`'${this.keyword}'에 맞는 공지가 아직 없어요`, '새 글이 오면 여기에 모여요')}`;
       if (this.view !== 'saved' && this.unreadOnly) return html`${boardPicker}${this.empty('읽지 않은 공지가 없어요', '읽지 않은 공지만 보기를 끄면 모든 공지를 볼 수 있어요')}`;
       const empty = {

@@ -628,7 +628,7 @@ export class NoticeApp extends LitElement {
           <div class="pane-head brand"><svg class="brand-mark" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>${APP_NAME}</div>
           <nav class="side-group" aria-label="보기">
             ${tabs.map((t) => this.sideItem(t.label, counts[t.id], this.view === t.id, () => this.setView(t.id),
-              String(TABS.findIndex((x) => x.id === t.id) + 1)))}
+              String(TABS.findIndex((x) => x.id === t.id) + 1), undefined, t.icon))}
           </nav>
           ${this.sideGroup('keywords', '관심 키워드', html`
             ${this.keywords.map((word) => this.sideItem(word, keywordTotals.counts[word],
@@ -806,11 +806,11 @@ export class NoticeApp extends LitElement {
       <div class="side-group" id="side-${id}" ?hidden=${!open}>${items}</div>`;
   }
 
-  private sideItem(label: string, count: number | null, active: boolean, onClick: () => void, shortcut?: string, ariaLabel?: string) {
+  private sideItem(label: string, count: number | null, active: boolean, onClick: () => void, shortcut?: string, ariaLabel?: string, itemIcon?: IconName) {
     return html`<button type="button" class="side-item" aria-current=${active ? 'page' : 'false'} @click=${onClick}
       aria-label=${ariaLabel ?? nothing}
       aria-keyshortcuts=${shortcut ?? nothing} title=${shortcut ? `${label} (${shortcut})` : nothing}>
-      <span>${label}</span>${count === null ? nothing : html`<span class="count">${count}</span>`}</button>`;
+      <span class="side-label">${itemIcon ? icon(itemIcon) : nothing}<span>${label}</span></span>${count === null ? nothing : html`<span class="count">${count}</span>`}</button>`;
   }
 
   private updatedLine(count?: number) {

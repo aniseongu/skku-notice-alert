@@ -91,6 +91,16 @@ def _view_fixture(source_id: str, article_no: str) -> str | None:
     return candidates[-1].read_text(encoding="utf-8") if candidates else None
 
 
+def _retry_due(attempts: int, last: str | None, now: datetime, limit: int) -> bool:
+    if attempts < limit or not last:
+        return True
+    try:
+        checked = datetime.fromisoformat(last)
+        return checked.tzinfo is None or checked > now or now - checked >= timedelta(hours=24)
+    except (TypeError, ValueError):
+        return True
+
+
 def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], settings: dict,
                   from_fixtures: bool, now: datetime) -> Archive:
     gap = max(1.0, float(settings.get("request_gap_seconds", 1)))
@@ -114,7 +124,9 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
                        if notice["id"] not in new_ids]
         for key, url, article_no in candidates:
             item = archive.items[key]
-            if item.get("body_text") is not None or item.get("body_attempts", 0) >= 3:
+            if item.get("body_text") is not None or not _retry_due(
+                item.get("body_attempts", 0), item.get("body_attempted_at"), now, 3
+            ):
                 continue
             if count == 5:
                 break
@@ -139,7 +151,7 @@ def _fill_details(archive: Archive, state, boards: list[tuple[dict, list]], sett
             except (FetchError, ParseError) as exc:
                 if not isinstance(exc, UnsafeURL):
                     print(f"{key}: 본문 읽기 실패: {exc}", file=sys.stderr)
-                archive = update_detail(archive, key, None, (), None)
+                archive = update_detail(archive, key, None, (), None, attempted_at=now.isoformat())
             else:
                 archive = update_detail(archive, key, detail.body_text, detail.attachments,
                                         now.isoformat(), detail.images, detail.body_html)
@@ -267,18 +279,26 @@ def _fill_summaries(archive: Archive, ai: dict, api_key: str, school_sources: se
     # 이미 요약된 글은 건드리지 않고, 공개 학교 본문만 한 번에 최대 6건 보낸다.
     if not api_key:
         return archive
+    now = datetime.now(KST)
     waiting = [
         {"id": key, "title": item["notice"]["title"],
          "body": item.get("body_text") or item.get("ocr_text") or ""}
-        for key, item in archive.items.items()
+        for key, item in sorted(archive.items.items(),
+                                key=lambda entry: (entry[1]["notice"].get("posted_on") or "",
+                                                   entry[1]["notice"].get("first_seen") or ""), reverse=True)
         if key in seen_ids and item["notice"]["source_id"] in school_sources and not item.get("summary")
         and len((item.get("body_text") or item.get("ocr_text") or "").strip()) >= 50
-        and item.get("summary_attempts", 0) < 2
+        and _retry_due(item.get("summary_attempts", 0), item.get("summary_attempted_at"), now, 2)
     ][:SUMMARY_BATCH]
     if not waiting:
         return archive
     results = summarize(waiting, ai["model"], api_key)
     if results is None:
+        archive = Archive({**archive.items, **{
+            entry["id"]: {**archive.items[entry["id"]], "summary_last_failed_at": now.isoformat()}
+            for entry in waiting
+        }})
+        save_archive(ARCHIVE_PATH, archive)
         return archive
     items = dict(archive.items)
     for entry in waiting:
@@ -286,9 +306,10 @@ def _fill_summaries(archive: Archive, ai: dict, api_key: str, school_sources: se
         current = items[key]
         summary = results.get(key)
         if summary:
-            items[key] = {**current, "summary": summary}
+            items[key] = {**current, "summary": summary, "summary_last_failed_at": None}
         else:
-            items[key] = {**current, "summary_attempts": current.get("summary_attempts", 0) + 1}
+            items[key] = {**current, "summary_attempts": current.get("summary_attempts", 0) + 1,
+                          "summary_attempted_at": now.isoformat(), "summary_last_failed_at": now.isoformat()}
     archive = Archive(items)
     save_archive(ARCHIVE_PATH, archive)
     return archive

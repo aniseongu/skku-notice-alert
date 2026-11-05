@@ -660,7 +660,7 @@ export class NoticeApp extends LitElement {
     if (!translation?.body) return this.bodyView(loaded);
     return html`<section class="detail-section body-text" aria-label="한국어로 옮긴 본문">
         <h3>본문 (한국어로 옮긴 글)</h3>
-        <p class="detail-note first">Gemini가 영어 원문을 옮겼어요. 이름, 날짜, 장소는 원문 그대로예요. 정확한 내용은 아래 영어 원문을 봐 주세요</p>
+        <p class="detail-note first">Gemini 번역이에요. 정확한 내용은 아래 영어 원문을 확인해 주세요</p>
         ${translation.body.split(/\n+/).filter(Boolean).map((para) => html`<p>${para}</p>`)}
       </section>
       <div class="original-body" lang="en">${this.bodyView(loaded, '영어 원문')}</div>`;
@@ -673,7 +673,7 @@ export class NoticeApp extends LitElement {
       const message = {
         pending: '본문을 준비하고 있어요. 먼저 원문을 볼 수 있어요',
         retrying: '본문을 다시 가져올 예정이에요. 먼저 원문을 볼 수 있어요',
-        unavailable: '본문을 가져오지 못했어요. 원문에서 확인해 주세요',
+        unavailable: '본문을 가져오지 못했어요. 나중에 다시 확인할게요. 먼저 원문을 볼 수 있어요',
         ready: '본문에 내용이 없어요. 원문에서 확인해 주세요',
       }[status];
       return html`<p class="detail-note" role="status">${message}</p>`;
@@ -934,7 +934,11 @@ export class NoticeApp extends LitElement {
         ${notice.changed_at ? html`<p class="detail-change">${koreanDate(notice.changed_at.slice(0, 10))}에 원문 ${notice.change_kind === '제목' ? '제목이' : '본문이'} 바뀌었어요</p>` : nothing}
         ${loaded?.summary ? html`<section class="detail-section summary" aria-label="요약">
           <h3>요약</h3>${loaded.summary.split('\n').filter(Boolean).map((line) => html`<p>${line}</p>`)}</section>` : nothing}
+        ${!loaded?.summary && loaded?.summary_status === 'failed' ? html`<section class="detail-section" aria-label="요약">
+          <h3>요약</h3><p class="detail-note first" role="status">요약을 만들지 못했어요. 나중에 다시 시도해요</p></section>` : nothing}
         ${body === 'loading' ? html`<p class="detail-note">본문을 불러오는 중</p>`
+          : !loaded ? html`<p class="detail-note" role="status">본문을 불러오지 못했어요. 다시 불러오거나 원문을 확인해 주세요</p>
+              <button type="button" class="text-button" @click=${() => { this.bodies.delete(notice.id); this.requestUpdate(); }}>본문 다시 불러오기</button>`
           : this.translatedView(loaded)}
         ${loaded?.attachments?.length ? this.attachmentsView(loaded) : nothing}
         <dl class="facts" aria-label="글 정보">

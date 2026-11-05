@@ -2287,7 +2287,9 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
@@ -2395,7 +2397,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 전시 부스 디자인 및 설계와 관련된 CAD 업무를 수행하며, 소프트웨어 개발이나 데이터 분석 등 IT 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[미국/캘리포니아] 전시회 부스디자인·설계·제작 전문 기업 - CAD 디자인 / 전시 프로젝트 코디네이터 채용\n접수 기간 2026-11-05 ~ 채용 시 마감\n\n모집부문 및 상세내용\n모집 부문상세내용\nProject\nManager\n& CAD Drafter\n(0명)\n\n\nGRID Exhibition Services\nGRID Exhibition Services는 맞춤형 전시 부스의 디자인, 제작 및 설치를 전문으로 하는 종합 전시·박람회 전문기업으로, 자체 제작 역량과 풍부한 프로젝트 경험을 바탕으로 글로벌 주요 기업을 위한 고품질 브랜드 전시 공간을 구축하고 있습니다.\n\n\n\n\n\n\n\n\n📋 담당업무\n1. 전시회 부스 및 전시 프로젝트의 기획, 일정 조율, 실행 등 프로젝트 매니저(PM) 업무 지원\n2. 전시 부스 및 디스플레이 관련 CAD 도면, 평면도, 기술 설계도 작성 및 수정\n3. 맞춤형 전시 부스 설계 및 제작을 위한 2D 도면 작업과 3D 모델링 지원\n4. 디자인, 제작 및 설치팀 협업하여 프로젝트 일정 및 진행 현황 관리\n5. 프로젝트 관련 문서, 자재 사양서 및 제작 일정표 작성 지원\n6. 고객 요구사항 및 프로젝트 변경사항 반영한 기술 도면 검토 및 수정\n\n\n\n\n\n📋 채용형태\n- 인턴 12개월\n\n\n\n📋 자격조건\n- 신입 및 최근 졸업자 지원 가능\n- 건축학, 실내디자인, 기계설계, 공학 또는 관련 전공자\n- AutoCAD 등 CAD 설계 프로그램 기본 활용 능력\n- 기술 도면, 평면도 및 설계 도면 해석 능력\n- 미국 취업에 결격 사유 없는 지원자\n\n\n\n\n\n\n🏠 근무조건\n• 고용형태 : 인턴직 12개월 (정규직 전환 가능 가능), 해외취업\n• 연봉 : $20/hrs or up (한화 약 5,600만원 이상, 환율에 따라 상이)\n• 근무지 : 미국 캘리포니아주 San Dimas\n\n\n\n\n\n\n\n\n\n🎁 복지 및 혜택\n• 직무 교육 및 OJT를 제공합니다\n• 회사 내규에 따라 병가/연차 제공\n\n\n\n\n\n\n\n\n\n\n\n\n🚀 채용절차\n1. 지원/접수\n2. 채용대행 에이전시(ICN Korea) 통해 서류 검토, J-1 Visa 발급요건 부합여부 확인\n3. 기업 인터뷰 (화상 Zoom으로 통해 진행)\n4. 합격자, 미국 스폰서기관 인터뷰 (회사-지원자 간의 보증을 해주는 미국 국무성 지정 기관)\n5. 주한미국대사관 인터뷰\n6. 출국/출근\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n🏠 접수문의\n아이씨엔코리아(주)는 미국인턴 전문 에이전시입니다.\n※ 파견직이 아닌 해당기업 미국현지법인 직접고용으로 근무하게 됩니다.\n※ J-1비자로 입사하며 비자발급비용은 지원자 개인부담입니다.\nVisa 수속 비용 안내 - $4,950\n(DS-7002, DS-2019, Site Visit, SEVIS Fee, 1년 J1 보험 비용 등 포함 / 기업 채용 확정 시 납부)\n\n\n\n\n\n\n\n\n🏠 지원문의 :\n(유선) 02-3445-4278\n(메일) icngroup@icncareer.com\n(카카오톡) http://pf.kakao.com/_RBmwj/chat\n✏ (신청서 제출 : https://forms.gle/TVkc8knomHkrfrXq9\n\n\n\n\n\n\n\n\n\n자격요건\n학력\n대학졸업(4년) 이상(졸업예정자 가능)\n\n근무조건\n급여\n연봉 5600만원 ~ 5600만원\n\n근무시간\n주 5일(월~금) 09:00 ~ 18:00\n\n근무지역\n해외 (미국)\n\n\n지원 기간 및 방법\n접수기간\n2026-11-05 ~ 채용 시 마감\n\n접수방법\n링커리어 간편지원\n\n문의\n전화번호\n0234454278\n\n이메일\nicngroup@icncareer.com\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
@@ -2418,7 +2425,13 @@
         "at": "2027-02-03T23:59:59.999000+09:00",
         "model": "source"
       },
-      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00"
+      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00",
+      "intern_judgment": {
+        "fingerprint": "e2b06cf5eaf5ec57f9e995549f9319920b67a604ebb22cbc2ec2471efae2828a",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 전시 부스 디자인 및 설계와 관련된 CAD 업무를 수행하며, 소프트웨어 개발이나 데이터 분석 등 IT 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "linkareer-intern/362339": {
       "notice": {

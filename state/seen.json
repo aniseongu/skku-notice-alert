@@ -1,8 +1,8 @@
 {
   "version": 1,
   "external_checked_at": {
-    "linkareer-intern": "2026-11-06T00:35:17.798876+09:00",
-    "jasoseol-intern": "2026-11-06T00:35:17.798876+09:00"
+    "linkareer-intern": "2026-11-06T02:24:05.371084+09:00",
+    "jasoseol-intern": "2026-11-06T02:24:05.371084+09:00"
   },
   "sources": {
     "skku-notice01": {
@@ -990,7 +990,7 @@
         },
         "362367": {
           "first_seen": "2026-11-05T15:52:38.458392+09:00",
-          "status": "pending",
+          "status": "skipped",
           "attempts": 0
         },
         "362365": {

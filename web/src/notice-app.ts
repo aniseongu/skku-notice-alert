@@ -110,7 +110,7 @@ export class NoticeApp extends LitElement {
     notices: { state: true }, sources: { state: true }, matched: { state: true }, generatedAt: { state: true },
     view: { state: true }, board: { state: true }, keyword: { state: true }, keywords: { state: true }, query: { state: true },
     loading: { state: true }, failed: { state: true }, selectedId: { state: true }, install: { state: true },
-    installHidden: { state: true }, toast: { state: true }, toastLink: { state: true }, isWide: { state: true }, theme: { state: true },
+    installHidden: { state: true }, toast: { state: true }, toastLink: { state: true }, toastLinkLabel: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true }, sortMenuOpen: { state: true },
     saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true }, internSort: { state: true }, savedSort: { state: true },
     unreadOnly: { state: true }, selecting: { state: true }, selectedReads: { state: true },
@@ -150,6 +150,7 @@ export class NoticeApp extends LitElement {
   installHidden = remember('install-hidden') === '1';
   toast = '';
   toastLink: string | null = null;
+  toastLinkLabel = '';
   isWide = wide.matches;
   theme: Theme = (['light', 'dark'].includes(remember('theme') ?? '') ? remember('theme') : 'auto') as Theme;
   // 넓은 화면의 오른쪽 상세 칸을 열어 둘지(닫으면 목록이 넓어진다). 기억한다.
@@ -233,7 +234,7 @@ export class NoticeApp extends LitElement {
     await this.refresh();
     const repo = remember('github-repo');
     const token = await loadToken();
-    if (!repo || !token) { this.showToast('기기를 연결하거나 GitHub에서 직접 실행해 주세요', repo ? collectionWorkflowUrl(repo) : null); return; }
+    if (!repo || !token) { this.showToast('기기를 연결하면 공지를 직접 확인할 수 있어요', '?view=settings&section=connection', '기기 연결하기'); return; }
     if (this.generatedAt && Date.now() - Date.parse(this.generatedAt) < 14 * 60_000) {
       this.showToast('최근에 공지를 확인했어요. 잠시 뒤 다시 시도해 주세요'); return;
     }
@@ -241,9 +242,14 @@ export class NoticeApp extends LitElement {
       await requestCollection(repo, token);
       this.showToast('공지 확인을 요청했어요. 진행 중인 확인이 끝나면 반영돼요');
     } catch (error) {
-      const denied = error instanceof GitHubError && (error.status === 401 || error.status === 403 || error.status === 404);
-      this.showToast(denied ? 'Actions 쓰기 권한을 확인하거나 GitHub에서 직접 실행해 주세요' : '요청하지 못했어요. 잠시 뒤 다시 시도해 주세요',
-        denied ? collectionWorkflowUrl(repo) : null);
+      if (error instanceof GitHubError && error.status === 401) {
+        this.showToast('GitHub 연결을 확인하지 못했어요. 기기에서 다시 연결해 주세요', '?view=settings&section=connection', '기기 연결하기');
+      } else if (error instanceof GitHubError && (error.status === 403 || error.status === 404)) {
+        this.showToast('GitHub 토큰의 저장소 접근과 Actions 권한을 확인해 주세요',
+          'https://github.com/settings/personal-access-tokens', '토큰 권한 확인하기');
+      } else {
+        this.showToast('요청하지 못했어요. 잠시 뒤 다시 시도해 주세요', collectionWorkflowUrl(repo), 'GitHub에서 실행하기');
+      }
     }
   }
 
@@ -486,11 +492,12 @@ export class NoticeApp extends LitElement {
     try { await navigator.share({ title: cleanTitle(notice.title_ko || notice.title), url: safeUrl(notice.url) }); } catch { /* 닫으면 그대로 둔다 */ }
   }
 
-  private showToast(text: string, link: string | null = null) {
+  private showToast(text: string, link: string | null = null, linkLabel = '') {
     this.toast = text;
     this.toastLink = link;
+    this.toastLinkLabel = linkLabel;
     clearTimeout(this.toastTimer);
-    this.toastTimer = window.setTimeout(() => { this.toast = ''; this.toastLink = null; }, link ? 12000 : 3500);
+    if (!link) this.toastTimer = window.setTimeout(() => { this.toast = ''; }, 3500);
   }
 
   private async runInstall() {
@@ -705,7 +712,9 @@ export class NoticeApp extends LitElement {
         ${tabs.map((t) => html`<button type="button" aria-current=${this.view === t.id ? 'page' : 'false'}
           @click=${() => this.setView(t.id)}>${icon(t.icon)}<span>${t.label}</span></button>`)}
       </nav>
-      <div class="toast" role="status" ?hidden=${!this.toast}>${this.toast}${this.toastLink ? html` <a href=${this.toastLink} target="_blank" rel="noopener noreferrer">GitHub에서 실행하기</a>` : nothing}</div>
+      <div class="toast" role="status" ?hidden=${!this.toast}>${this.toast}${this.toastLink ? html`
+        <div class="toast-actions"><a href=${this.toastLink} target=${this.toastLink.startsWith('?') ? '_self' : '_blank'} rel="noopener noreferrer">${this.toastLinkLabel}</a>
+          <button type="button" @click=${() => { this.toast = ''; this.toastLink = null; }}>닫기</button></div>` : nothing}</div>
       ${this.shortcutsOpen ? this.shortcutsDialog() : nothing}
     `;
   }

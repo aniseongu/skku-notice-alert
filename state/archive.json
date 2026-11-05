@@ -2605,7 +2605,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "모집 중인 인턴 직무인 Electronic Engineer Intern은 전기/전자공학 전공을 요구하며 소프트웨어 개발 직무와는 거리가 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[비테스코테크놀로지스코리아] 이천사업장 11월 신입 및 경력직 채용\n접수 기간2026-11-04 ~ 2026-11-16\n\n모집부문 및 상세내용\nIndustrial Engineer.(0명)채용 형태\n- 신입\n\n\n담당업무\n양산 테스트 요구사항을 충족하는 테스트 장비 설계 ㆍ 개발 및 시스템 통합\n제품 테스트 사양에 맞춘 장비 소프트웨어 설계 ㆍ 개발 ㆍ 디버깅\n테스트 공정 ㆍ 장비 개선 및 신규 모델 적용\n테스트 검출력 ㆍ 공정 수율 개선 및 불량 분석 지원\n\n지원자격 및 우대조건\n전기 ㆍ 전자 ㆍ 컴퓨터공학 또는 관련 학과 학사 이상(졸업예정자 지원 가능)\n영어 커뮤니케이션 가능자\n신입 ~ 경력 9년 이하\nNI TestStand 및 NI Test System 관련 경험 보유자 우대\n\n\nLean Engineer(0명)채용 형태\n- 경력\n\n\n담당업무\n라인 밸런싱 ㆍ 표준화 : 사이클 타임 분석을 통한 라인 밸런싱 및 병목 공정\n개선 지원, SWI/SOS 및 LSW 체크리스트 제 ㆍ 개정 관리\nLEAN ㆍ TPM 운영 : 현장 5S+2 준수 상태 점검 ㆍ 유지, TPM 분임조 활동\n및 사내 TPM Contest 운영\n현장 데이터 ㆍ KPI 관리 : Power BI 등 디지털 보드 기반 가동 데이터\n(OEE, 설비 고장 지표 등) 수집, 트렌드 분석 및 리포팅\n작업 환경 ㆍ 안전성 평가 : 공정별 작업 부하 분석 및 EAWS 등 인체공학\n평가 데이터 수집, 개선점 도출 지원\n사내 개선 제안(CIP) 운영 : 부서별 아이디어 접수 현황 트래킹, 건수 ㆍ\n성과 집계 및 사내 홍보 ㆍ 교육 지원\n\n지원자격 및 우대조건\n\n자동차 부품 또는 제조업 현장 실무 경력 3년 이상\n(생산기술, 공정개선, 생산관리, IE 등)\n산업공학, 기계공학 등 관련 공학 계열 학사 학위 소지자\n라인 사이클 타임 분석, 표준작업, VSM 등 LEAN 방법론에 대한 기본 이해\n현장 및 유관 부서와의 능동적이고 유연한 커뮤니케이션 역량\n비즈니스 영어(이메일 작성 및 영어 회의) 가능자\nPower BI, Mendix 등 디지털 도구 활용 경험자 우대\n\n\nElectric & Electronic Engineer(0명)채용 형태\n- 신입\n\n\n담당업무\n차량용 Power Electronics 하드웨어 제품 개발 (Inverter, On-board\nCharger, 고전압 DC/DC 컨버터, X-in-1, Power Module)\n회로 설계 및 프로토타입 개발\n요구사항 분석 및 Design FMEA/FMEDA 수행\n회로 해석, Worst Case Analysis 및 시뮬레이션\n하드웨어 검증 및 확인 (Verification & Validation)\n\n지원자격 및 우대조건\n\n전기 ㆍ 전자공학 학사 이상 (졸업예정자 지원 가능)\n신입 및 경력\nPower Electronics 및 전력 변환 시스템 지식 보유자 우대\n(고전압 Power Module(SiC/IGBT/GaN), Gate Driver)\n임베디드 시스템 지식 보유자 우대\n자동차 분야 경험자 우대\n\n\nProduct Integrity Profess.(0명)채용 형태\n- 신입\n\n\n담당업무\n프로젝트의 Cybersecurity 및 Privacy 관련 전반적인 업무 계획, 감독 및\n리딩\n소프트웨어, 하드웨어, 생산 등 엔지니어링 담당팀과 협업하여 프로젝트\nCybersecurity 및 Privacy 목표 달성 및 문제 해결\n엔지니어링 팀의 코어 멤버로서 Cybersecurity 및 Privacy 관련 의사결정\nCybersecurity 및 Privacy 내용에 대해 고객사 커뮤니케이션 채널 역할\n엔지니어링 결과물에 대한 리뷰 및 승인\n\n지원자격 및 우대조건\n\n공학 학사 이상\n(전기/전자 공학, 컴퓨터 공학, 기계 공학, 자동차 공학 또는 관련 전공)\n졸업예정자 지원 가능\n영어 커뮤니케이션 가능자\n원활한 소통 능력, 팀워크 능력 및 팀 리딩 능력\n정보보안 관련 자격증 소지자 우대 (정보보안기사, CISSP, CISA, CPPG)\n자동차 제어/ 보안 SW 관련 개발 경험 및 지식 보유자 우대\n관련 업무 경력 2~5년 보유자 우대\n\n\nElectronic Engineer Intern(0명)채용 형태\n- 인턴 6개월\n\n\n담당업무\n신제품 개발 샘플 제작 지원\n부품 개발 업무 지원 및 개발 담당자 협업\n개발 샘플 테스트 수행 및 결과 데이터 정리ㆍ관리\n\n지원자격 및 우대조건\n\n전기/전자공학 또는 관련 전공 재학 중이거나 졸업(예정)인 자\nMS Office(Excel, PowerPoint 등) 활용 가능자\n영어 커뮤니케이션 가능자 우대\n\n\n자격요건\n학력\n대학졸업(4년) 이상\n\n근무조건\n급여\n회사 내규에 따름\n\n근무지역\n경기 이천시 사음로 45-29 비테스코 테크놀로지스 코리아\n\n\n전형 절차\nStep1\n서류전형\n\nStep2\n1차 실무진 면접\n\nStep3\n2차 최종 면접\n\nStep3\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-04 ~ 2026-11-16\n\n접수방법\n홈페이지 지원\n\n문의\n전화번호\n0316454723\n\n이메일\nrecruiting-korea@vitesco.com\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
@@ -2627,6 +2632,12 @@
         "kind": "마감",
         "at": "2026-11-16T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "bd45cbbf9c981f347c164b52dd958f82ebeb5071ba0c8edad58d55f482a84402",
+        "verdict": "not_relevant",
+        "reason": "모집 중인 인턴 직무인 Electronic Engineer Intern은 전기/전자공학 전공을 요구하며 소프트웨어 개발 직무와는 거리가 있습니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/362249": {

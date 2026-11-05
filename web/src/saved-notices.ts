@@ -2,8 +2,16 @@
 // 출처: https://github.com/kw-service/kw-notice-v1/blob/main/kw-notice-android/app/src/main/java/dev/yjyoon/kwnotice/repository/favorite/FavRepository.kt
 // 이 기기에 먼저 저장하고, GitHub에 연결돼 있으면 Actions 변수 SAVED_NOTICES로 모든 기기와 맞춘다.
 import type { Notice } from './data';
+import { orderNotices, type Sort } from './notice-order.ts';
 
 export type SavedNotice = Omit<Notice, 'first_seen'> & { saved_at: string };
+
+export function orderSaved(items: readonly SavedNotice[], current: readonly Notice[], sort: Sort): Notice[] {
+  const byId = new Map(current.map((notice) => [notice.id, notice]));
+  const ordered = [...items].sort((a, b) => b.saved_at.localeCompare(a.saved_at))
+    .map((item) => byId.get(item.id) ?? { ...item, first_seen: null });
+  return sort === 'deadline' ? orderNotices(ordered, 'deadline') : ordered;
+}
 
 const KEY = 'saved-notices';
 export const SAVED_VARIABLE = 'SAVED_NOTICES';

@@ -1,6 +1,15 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { SAVED_LIMIT_BYTES, parseSaved, toggleSaved } from '../src/saved-notices.ts';
+import { SAVED_LIMIT_BYTES, orderSaved, parseSaved, toggleSaved } from '../src/saved-notices.ts';
+
+test('saved order uses saved time and deadline order uses current notice data without dropping older items', () => {
+  const old = { ...notice('1'), posted_on: '2026-11-01', deadline: null, saved_at: '2026-11-05T01:00:00.000Z' };
+  const recent = { ...notice('2'), posted_on: '2026-11-04', deadline: '2999-12-01T00:00:00Z', saved_at: '2026-11-04T01:00:00.000Z' };
+  const current = [{ ...notice('1'), deadline: '2999-01-01T00:00:00Z' }];
+  assert.deepEqual(orderSaved([recent, old], current, 'latest').map((n) => n.id), ['1', '2']);
+  assert.deepEqual(orderSaved([recent, old], current, 'deadline').map((n) => n.id), ['1', '2']);
+  assert.deepEqual(orderSaved([recent, old], [], 'deadline').map((n) => n.id), ['2', '1']);
+});
 
 const notice = (id) => ({
   id, source_id: 'cse-notice', article_no: id, title: `공지 ${id}`, category: '채용', url: `https://cse.skku.edu/${id}`,

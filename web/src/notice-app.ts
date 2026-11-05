@@ -653,6 +653,7 @@ export class NoticeApp extends LitElement {
           <header class="pane-head topbar glass ${settings ? '' : 'feed-topbar'}">
             ${settings ? html`<button type="button" class="icon-button narrow-only back" aria-label="설정 닫기"
               @click=${this.leaveSettings}>${icon('back')}</button>` : nothing}
+            ${settings ? nothing : html`<svg class="brand-mark narrow-only" aria-hidden="true"><use href="icons/sprite.svg#brand"></use></svg>`}
             <div class="topbar-text">
               <h1>${title}</h1>
               ${settings ? html`<p class="updated">알림과 연결을 정해요</p>` : this.updatedLine(list.length)}
@@ -817,11 +818,11 @@ export class NoticeApp extends LitElement {
     if (!this.generatedAt) return html`<p class="updated">받은 시각을 알 수 없어요</p>`;
     const stale = Date.now() - Date.parse(this.generatedAt) > STALE_MS;
     const time = new Intl.DateTimeFormat('ko-KR', {
-      timeZone: 'Asia/Seoul', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false,
+      timeZone: 'Asia/Seoul', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false,
     }).format(new Date(this.generatedAt));
     const total = count === undefined ? '' : `${count}건, `;
     // "확인 필요"(판정)와 겹치지 않게 수집 지연은 다른 말로 쓴다.
-    return html`<p class="updated ${stale ? 'stale' : ''}">${stale ? `${time} 이후 확인이 늦어요` : `${total}${time} 기준`}</p>`;
+    return html`<p class="updated ${stale ? 'stale' : ''}">${stale ? `${time} 수집 지연` : `${total}${time} 기준`}</p>`;
   }
 
   private listBody(list: Notice[]): TemplateResult | TemplateResult[] {

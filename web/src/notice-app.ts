@@ -637,8 +637,6 @@ export class NoticeApp extends LitElement {
               ...this.tabSources().map((s) => ({ id: s.id, label: boardName(s, s.id) }))]
               .map((b) => this.sideItem(b.label, null, this.activeBoard() === b.id && !settings, () => { this.setBoard(b.id); if (settings) this.leaveSettings(); }))}`, this.tabSources().length)}
           <div class="side-foot">
-            <button type="button" class="side-item kbd-only" aria-keyshortcuts="?" @click=${() => { this.shortcutsOpen = true; }}>
-              <span>단축키</span>${kbd('?')}</button>
             ${this.sideItem('설정', null, settings, () => this.setView('settings'))}
           </div>
         </aside>
@@ -672,7 +670,8 @@ export class NoticeApp extends LitElement {
           ${settings ? html`<settings-view .keywords=${this.keywords} .theme=${this.theme} .canInstall=${Boolean(this.install && browserTab.matches)}
               .categories=${[...new Set(this.notices.map((n) => n.category).filter((c): c is string => Boolean(c)))].sort()}
               @keywords-change=${(e: CustomEvent<string[]>) => this.setKeywords(e.detail)}
-              @theme-change=${(e: CustomEvent<Theme>) => this.setTheme(e.detail)} @install-request=${this.runInstall}></settings-view>` : html`
+              @theme-change=${(e: CustomEvent<Theme>) => this.setTheme(e.detail)} @install-request=${this.runInstall}
+              @shortcuts-request=${() => { this.shortcutsOpen = true; }}></settings-view>` : html`
             <div class="tools narrow-only">
               <label class="search">${icon('search')}
                 <input type="search" placeholder="제목, 분류, 판정 이유로 찾기" autocomplete="off" aria-label="공지 검색" .value=${this.query}

@@ -613,6 +613,10 @@ export class SettingsView extends LitElement {
             <div class="setting-text"><p class="setting-name">앱 설치</p><p class="setting-help">바탕화면이나 홈 화면에서 바로 열어요</p></div>
             <div class="setting-control"><button type="button" class="ghost-button" @click=${() => this.emit('install-request', null)}>앱으로 설치하기</button></div>
           </div>` : nothing}
+          <div class="setting kbd-only">
+            <div class="setting-text"><p class="setting-name">단축키</p><p class="setting-help">키보드로 빠르게 이동해요</p></div>
+            <div class="setting-control"><button type="button" class="ghost-button" aria-keyshortcuts="?" @click=${() => this.emit('shortcuts-request', null)}>단축키 보기</button></div>
+          </div>
           </div>
         </section>
       </div>`;

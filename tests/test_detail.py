@@ -158,6 +158,7 @@ def test_detail_export_and_gemini_schema(tmp_path: Path) -> None:
     export_site(tmp_path, archive, [], datetime.now(ZoneInfo("Asia/Seoul")), web_path=tmp_path / "missing")
     output = json.loads((tmp_path / "api/v1/notices/cse-notice/123.json").read_text())
     assert output == {"version": 1, "id": "cse-notice/123", "summary": "지원자는 신청해요.",
+                      "summary_status": "ready",
                       "body": "본문", "body_html": "<p>본문</p>", "body_status": "ready",
                       "attachments": [{"name": "파일.pdf", "url": "https://example.com/a", "type": "PDF",
                                        "size": "123KB"}],
@@ -190,3 +191,41 @@ def test_export_distinguishes_body_waiting_retry_failure_and_image_only(tmp_path
     statuses = [json.loads((tmp_path / f"api/v1/notices/cse-notice/{i}.json").read_text())["body_status"]
                 for i in range(1, 5)]
     assert statuses == ["pending", "retrying", "unavailable", "ready"]
+
+
+def test_old_failed_body_retries_once_then_waits_a_day(tmp_path: Path, monkeypatch) -> None:
+    from datetime import timedelta
+
+    monkeypatch.setattr(cli, 'ARCHIVE_PATH', tmp_path / 'archive.json')
+    monkeypatch.setattr(cli.time, 'sleep', lambda _: None)
+    notice = make_notice(1)
+    now = datetime(2026, 11, 5, tzinfo=ZoneInfo('Asia/Seoul'))
+    archive = add_notice(Archive(), notice, now.isoformat())
+    archive.items['cse-notice/1']['body_attempts'] = 3
+    state = SimpleNamespace(sources={'cse-notice': SimpleNamespace(seen={'1': object()})})
+    calls = []
+
+    def fail(*args):
+        calls.append(1)
+        raise FetchError('offline')
+
+    monkeypatch.setattr(cli, 'fetch_detail', fail)
+    boards = [({'id': 'cse-notice'}, [notice])]
+    settings = {'user_agent': 'test', 'timeout_seconds': 10}
+    archive = cli._fill_details(archive, state, boards, settings, False, now)
+    assert len(calls) == 1
+    assert archive.items['cse-notice/1']['body_attempted_at'] == now.isoformat()
+    archive = cli._fill_details(archive, state, boards, settings, False, now + timedelta(hours=23))
+    assert len(calls) == 1
+    cli._fill_details(archive, state, boards, settings, False, now + timedelta(hours=24))
+    assert len(calls) == 2
+
+
+def test_export_exposes_summary_failure_without_error_details(tmp_path: Path) -> None:
+    notice = make_notice(1)
+    archive = add_notice(Archive(), notice, '2026-11-05T00:00:00+09:00')
+    archive.items['cse-notice/1']['summary_last_failed_at'] = '2026-11-05T01:00:00+09:00'
+    export_site(tmp_path, archive, [], datetime.now(ZoneInfo('Asia/Seoul')), web_path=tmp_path / 'missing')
+    detail = json.loads((tmp_path / 'api/v1/notices/cse-notice/1.json').read_text())
+    assert detail['summary_status'] == 'failed'
+    assert 'summary_last_failed_at' not in detail

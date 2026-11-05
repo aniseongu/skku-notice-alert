@@ -39,7 +39,8 @@ def summarize(
     batch = items[:BATCH]
     articles = [{"id": item["id"], "title": item["title"], "body": item["body"][:2500]} for item in batch]
     try:
-        client = client or genai.Client(api_key=api_key)
+        client = client or genai.Client(api_key=api_key, http_options=types.HttpOptions(
+            retry_options=types.HttpRetryOptions(attempts=3, initial_delay=2, max_delay=8)))
         response = client.models.generate_content(
             model=model, contents=json.dumps({"notices": articles}, ensure_ascii=False),
             config=types.GenerateContentConfig(system_instruction=SYSTEM, temperature=0,

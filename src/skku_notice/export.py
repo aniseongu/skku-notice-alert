@@ -81,6 +81,8 @@ def export_site(
                        "unavailable" if attempts >= 3 else "retrying" if attempts else "pending")
         detail = {
             "version": 1, "id": notice["id"], "summary": item.get("summary"),
+            "summary_status": "ready" if item.get("summary") else
+                              "failed" if item.get("summary_last_failed_at") else "pending",
             "body": item.get("body_text"), "body_html": item.get("body_html"),
             "body_status": body_status,
             "attachments": [{field: attachment.get(field) for field in ("name", "url", "type", "size")}

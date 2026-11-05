@@ -107,13 +107,14 @@ def add_notice(
 def update_detail(
     archive: Archive, key: str, body: str | None, attachments: tuple[tuple[str, str, str, str | None], ...],
     fetched_at: str | None, images: tuple[str, ...] = (), body_html: str | None = None,
+    attempted_at: str | None = None,
 ) -> Archive:
     item = archive.items[key]
     updated = {**item, "body_text": body, "body_html": body_html,
                "attachments": [
         {"name": name, "url": url, "type": kind, "size": size}
         for name, url, kind, size in attachments
-    ], "images": list(images), "fetched_at": fetched_at,
+    ], "images": list(images), "fetched_at": fetched_at, "body_attempted_at": attempted_at or fetched_at,
         "body_attempts": item.get("body_attempts", 0) + 1}
     return Archive({**archive.items, key: updated})
 
@@ -161,7 +162,8 @@ def save_archive(path: Path, archive: Archive) -> None:
 
 
 # 글이 바뀌면 옮긴 글과 본문 마감은 다시 만든다.
-REDO_ON_CHANGE = ("translation", "translation_attempts", "ai_deadline", "summary", "summary_attempts")
+REDO_ON_CHANGE = ("translation", "translation_attempts", "ai_deadline", "summary", "summary_attempts",
+                  "summary_attempted_at", "summary_last_failed_at")
 
 
 def note_list_changes(archive: Archive, notices: list, now: str) -> tuple[Archive, list[str]]:

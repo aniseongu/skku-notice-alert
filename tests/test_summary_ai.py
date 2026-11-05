@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from types import SimpleNamespace
 
 from skku_notice import cli, summary_ai
@@ -41,7 +42,8 @@ def test_backfill_excludes_other_sources_new_empty_existing_and_limits_attempts(
 
     archive = Archive({
         "school/1": item("school"), "school/2": item("school", summary="기존 요약"),
-        "school/3": item("school", text="짧음"), "school/4": item("school", summary_attempts=2),
+        "school/3": item("school", text="짧음"), "school/4": item(
+            "school", summary_attempts=2, summary_attempted_at=datetime.now(cli.KST).isoformat()),
         "school/5": item("school"), "jobs/1": item("jobs"), "canvas/1": item("canvas"),
     })
     seen = {"school/1", "school/2", "school/3", "school/4", "jobs/1", "canvas/1"}
@@ -95,7 +97,12 @@ def test_api_failure_does_not_count_attempt(monkeypatch, tmp_path):
     archive = Archive({"school/1": {"notice": {"source_id": "school", "title": "제목"},
                                     "body_text": "본문" * 30}})
     result = cli._fill_summaries(archive, {"model": "m"}, "key", {"school"}, {"school/1"})
-    assert result is archive and "summary_attempts" not in result.items["school/1"]
+    assert "summary_attempts" not in result.items["school/1"]
+    assert result.items["school/1"]["summary_last_failed_at"]
+    monkeypatch.setattr(cli, "summarize", lambda *args: {"school/1": "요약해요"})
+    recovered = cli._fill_summaries(result, {"model": "m"}, "key", {"school"}, {"school/1"})
+    assert recovered.items["school/1"]["summary"] == "요약해요"
+    assert recovered.items["school/1"]["summary_last_failed_at"] is None
 
 
 def test_invalid_json_and_wrong_shape_count_as_bad_reply():
@@ -104,3 +111,28 @@ def test_invalid_json_and_wrong_shape_count_as_bad_reply():
         client = SimpleNamespace(models=SimpleNamespace(
             generate_content=lambda reply=reply, **kwargs: SimpleNamespace(text=reply)))
         assert summary_ai.summarize(items, "m", "k", client) == {}
+
+
+def test_summary_prioritizes_newest_and_retries_legacy_failures(monkeypatch, tmp_path):
+    monkeypatch.setattr(cli, 'ARCHIVE_PATH', tmp_path / 'archive.json')
+    entries = {}
+    for i in range(7):
+        entries[f'school/{i}'] = {
+            'notice': {'source_id': 'school', 'title': str(i), 'posted_on': f'2026-11-0{i + 1}'},
+            'body_text': '본문' * 30,
+        }
+    entries['school/6']['summary_attempts'] = 2
+    called = []
+    monkeypatch.setattr(cli, 'summarize', lambda items, model, key: called.extend(items) or {})
+    cli._fill_summaries(Archive(entries), {'model': 'm'}, 'key', {'school'}, set(entries))
+    assert [x['id'] for x in called] == [f'school/{i}' for i in range(6, 0, -1)]
+
+
+def test_retry_cooldown_avoids_repeated_failed_requests():
+    from datetime import timedelta
+
+    now = datetime(2026, 11, 5, tzinfo=cli.KST)
+    assert cli._retry_due(3, None, now, 3)
+    assert not cli._retry_due(3, now.isoformat(), now + timedelta(hours=23), 3)
+    assert cli._retry_due(3, now.isoformat(), now + timedelta(hours=24), 3)
+    assert cli._retry_due(2, now.isoformat(), now, 3)

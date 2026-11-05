@@ -41,6 +41,7 @@ export interface NoticeBody {
   version: number;
   id: string;
   summary: string | null;
+  summary_status?: 'ready' | 'failed' | 'pending';
   body: string | null;
   body_status?: 'pending' | 'retrying' | 'unavailable' | 'ready';
   // type, size는 D-016에 추가된 필드(형식, 크기 글자). 없을 수 있다. 첨부는 학교 다운로드 주소로 바로 받는다.
@@ -59,7 +60,14 @@ export interface NoticeBody {
 export async function fetchBody(notice: Notice): Promise<NoticeBody | null> {
   // 주소에 들어가는 값은 형식을 확인한 뒤에만 쓴다.
   if (!/^[\w-]+$/.test(notice.source_id) || !/^\d+$/.test(notice.article_no)) return null;
-  return fetchJson<NoticeBody>(`notices/${notice.source_id}/${notice.article_no}.json`, true);
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const body = await fetchJson<NoticeBody>(`notices/${notice.source_id}/${notice.article_no}.json`, true);
+      if (body) return body;
+    } catch { /* 일시적인 네트워크 오류는 한 번 더 확인한다. */ }
+    if (attempt === 0) await new Promise((resolve) => window.setTimeout(resolve, 800));
+  }
+  return null;
 }
 
 export interface NoticesFile { version: number; generated_at: string; sources: Source[]; notices: Notice[] }

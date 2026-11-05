@@ -5,7 +5,7 @@ import json
 import os
 import tempfile
 from dataclasses import dataclass, field, replace
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from skku_notice.model import Notice
@@ -31,6 +31,7 @@ class SourceState:
 class State:
     sources: dict[str, SourceState] = field(default_factory=dict)
     version: int = 1
+    external_checked_at: dict[str, str] = field(default_factory=dict)
 
 
 def load_state(path: Path) -> State:
@@ -48,7 +49,21 @@ def load_state(path: Path) -> State:
                 raise ValueError(f"invalid state record: {source_id}/{article_no}")
             seen[article_no] = item
         sources[source_id] = SourceState(source["initialized_at"], seen)
-    return State(sources)
+    checked = raw.get("external_checked_at", {})
+    if not isinstance(checked, dict) or not all(isinstance(k, str) and isinstance(v, str)
+                                                for k, v in checked.items()):
+        raise ValueError("invalid external check timestamps")
+    return State(sources, external_checked_at=checked)
+
+
+def external_due(state: State, source_id: str, now: datetime) -> bool:
+    try:
+        last = datetime.fromisoformat(state.external_checked_at[source_id])
+        if last.tzinfo is None or last > now:
+            return True
+        return now - last >= timedelta(hours=1)
+    except (KeyError, TypeError, ValueError):
+        return True
 
 
 def is_new(state: State, notice: Notice) -> bool:
@@ -94,6 +109,7 @@ def record_result(state: State, notice: Notice, status: str, now: datetime) -> S
 def save_state(path: Path, state: State) -> None:
     data = {
         "version": state.version,
+        "external_checked_at": state.external_checked_at,
         "sources": {
             source_id: {
                 "initialized_at": source.initialized_at,

@@ -61,7 +61,7 @@ from skku_notice.notify import has_notification_channel, send_canvas, send_notic
 from skku_notice.ocr import read_images
 from skku_notice.parse import ParseError, parse_detail, parse_list
 from skku_notice.rules import load_rules, match_notice
-from skku_notice.state import baseline, is_new, load_state, record_result, save_state
+from skku_notice.state import baseline, external_due, is_new, load_state, record_result, save_state
 from skku_notice.summary_ai import BATCH as SUMMARY_BATCH
 from skku_notice.summary_ai import summarize
 from skku_notice.translate import needs_translation, translate_notice
@@ -445,11 +445,15 @@ def run(args: argparse.Namespace) -> int:
     failed = False
     boards: list[tuple[dict, list]] = []
     external_deadlines: dict[str, str] = {}
+    external_success: set[str] = set()
     image_budget = [10]
     intern_judgments: dict[str, Judgment] = {}
     for source in settings["sources"]:
         source_id = source["id"]
         if getattr(args, "skip_external", False) and source.get("external"):
+            continue
+        if (getattr(args, "external_if_due", False) and source.get("external")
+                and not external_due(state, source_id, now)):
             continue
         if source.get("kind") in COLLECTORS:
             # 외부 인턴 공고 목록: 사이트마다 한 번 요청한다. fixture 실행에서는 건너뛴다.
@@ -467,6 +471,7 @@ def run(args: argparse.Namespace) -> int:
                 print(f"{source_id}: 외부 공고 읽기 실패: {type(exc).__name__}", file=sys.stderr)
                 continue
             external_deadlines.update({f"{source_id}/{n.article_no}": d for n, d in postings if d})
+            external_success.add(source_id)
             if postings:
                 boards.append((source, [notice for notice, _ in postings]))
             continue
@@ -683,6 +688,10 @@ def run(args: argparse.Namespace) -> int:
             if not sent:
                 failed = True
                 print(f"{source['id']}/{notice.article_no}: 알림 실패", file=sys.stderr)
+    if not args.dry_run and external_success:
+        state = replace(state, external_checked_at={**state.external_checked_at,
+                        **dict.fromkeys(external_success, now.isoformat())})
+        save_state(STATE_PATH, state)
     if not args.dry_run:
         archive = _notify_changes(archive, {s["id"]: s["name"] for s in settings["sources"]})
     if not getattr(args, "no_canvas", False):
@@ -798,6 +807,7 @@ def main() -> int:
     parser.add_argument("--from-fixtures", action="store_true")
     parser.add_argument("--no-ai", action="store_true")
     parser.add_argument("--skip-external", action="store_true")
+    parser.add_argument("--external-if-due", action="store_true")
     parser.add_argument("--export", type=Path)
     parser.add_argument("--no-canvas", action="store_true")
     parser.add_argument("--canvas-fixtures", type=Path)

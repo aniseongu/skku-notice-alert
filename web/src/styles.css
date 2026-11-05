@@ -347,6 +347,9 @@
     border: 0; background: none; color: var(--text-2); font-size: 13px; line-height: 18px; font-weight: 500;
   }
   .tabbar button[aria-current="page"] { color: var(--accent); font-weight: 700; }
+  /* 삼성 인터넷 자체의 맨 위와 맨 아래 버튼이 기본적으로 하단 중앙에 겹친다. */
+  .tabbar.samsung-internet { display: grid; grid-template-columns: minmax(0, 1fr) 64px minmax(0, .5fr) minmax(0, .5fr); }
+  .tabbar.samsung-internet button:nth-child(2) { grid-column: 3; }
 
   .install-bar {
     position: fixed; left: var(--gutter); right: var(--gutter); bottom: calc(var(--tabbar-h) + 12px + env(safe-area-inset-bottom)); z-index: 3;

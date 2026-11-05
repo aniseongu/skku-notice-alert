@@ -17,6 +17,7 @@ import { keywordCounts } from './keyword-counts';
 import type { Theme } from './settings-view';
 import { APP_NAME } from './brand';
 import { orderNotices, type Sort } from './notice-order';
+import { isSamsungInternet } from './platform';
 
 type Tab = 'all' | 'intern' | 'saved';
 type View = Tab | 'settings';
@@ -708,7 +709,7 @@ export class NoticeApp extends LitElement {
           <button type="button" class="icon-button" aria-label="안내 닫기" @click=${this.hideInstall}>${icon('close')}</button>
         </div>` : nothing}
 
-      <nav class="tabbar glass" aria-label="보기" ?hidden=${settings || Boolean(reading)}>
+      <nav class="tabbar glass ${isSamsungInternet(navigator.userAgent) ? 'samsung-internet' : ''}" aria-label="보기" ?hidden=${settings || Boolean(reading)}>
         ${tabs.map((t) => html`<button type="button" aria-current=${this.view === t.id ? 'page' : 'false'}
           @click=${() => this.setView(t.id)}>${icon(t.icon)}<span>${t.label}</span></button>`)}
       </nav>

@@ -18,7 +18,7 @@ async (page) => {
           { ...n, id: 'one/2', source_id: 'one', title: '인턴 B', deadline: null },
           { ...n, id: 'two/3', source_id: 'two', title: '인턴 C', deadline: null },
           { ...n, id: 'jobs/4', source_id: 'jobs', title: '인턴 D', deadline: null }];
-        a.read = ['one/2']; a.keywords = ['인턴']; a.keyword = '인턴'; a.board = 'one';
+        a.readState = { v: 2, entries: { 'one/2': 0 } }; a.read = ['one/2']; a.keywords = ['인턴']; a.keyword = '인턴'; a.board = 'one';
         a.view = 'all'; a.matched = null; a.unreadOnly = false; a.syncCalls = 0;
         a.pushRead = () => { a.syncCalls++; };
         await a.updateComplete;
@@ -26,7 +26,7 @@ async (page) => {
       if (await p.evaluate(() => document.documentElement.scrollWidth > innerWidth)) throw Error('가로 넘침');
       if (await p.getByRole('button', { name: '모두 읽음', exact: true }).count()) throw Error('중복 읽음 버튼');
       await p.evaluate(async () => {
-        const a = document.querySelector('notice-app'); a.read = []; a.syncCalls = 0; await a.updateComplete;
+        const a = document.querySelector('notice-app'); a.readState = { v: 2, entries: {} }; a.read = []; a.syncCalls = 0; await a.updateComplete;
       });
       await p.getByRole('button', { name: '선택', exact: true }).click();
       await p.getByRole('checkbox', { name: '인턴 A 선택' }).check();
@@ -45,6 +45,11 @@ async (page) => {
       if (!read.includes('one/2') || read.includes('two/3') || read.includes('jobs/4')) {
         throw Error('전체 선택 범위 오류');
       }
+      await p.getByRole('button', { name: '선택', exact: true }).click();
+      await p.getByRole('checkbox', { name: '인턴 A 선택' }).check();
+      await p.getByRole('button', { name: '선택한 읽은 공지 1개 읽지 않음으로 표시' }).click();
+      read = await p.evaluate(() => document.querySelector('notice-app').read);
+      if (read.includes('one/1') || !read.includes('one/2')) throw Error('선택한 공지 읽지 않음 오류');
       await p.getByRole('button', { name: '선택', exact: true }).click();
       await p.getByRole('checkbox', { name: '인턴 A 선택' }).check();
       await p.locator('.search input:visible').fill('B');

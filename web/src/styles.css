@@ -434,8 +434,8 @@
     }
     /* 판정 줄이 없는 행은 그 줄 자리(18px)를 남기지 않는다. 그래서 행 높이가 제목 줄 수만 따른다. */
     .row:has(> .sub:empty) { grid-template-areas: "meta title dday"; }
-    .row .meta { flex-direction: column; gap: 0; padding-top: 2px; }
-    .row .meta span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .row .meta { min-width: 0; flex-direction: column; flex-wrap: nowrap; gap: 0; padding-top: 2px; }
+    .row .meta span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .row .meta .board { color: var(--text-2); font-weight: 600; }
     .row.read .meta .board { color: var(--text-3); font-weight: 500; }
     .row .title { font-size: 15px; line-height: 22px; }

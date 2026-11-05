@@ -896,7 +896,7 @@ export class NoticeApp extends LitElement {
         <span class="meta"><span class="board">${boardName(source, notice.source_id)}</span>${(() => {
           const tags = [notice.category, notice.pinned ? '고정' : '', notice.changed_at ? '수정됨' : '',
             this.view !== 'saved' && this.isSaved(notice) ? '저장함' : ''].filter(Boolean);
-          return tags.length ? html`<span class="cat">${tags.join(', ')}</span>` : nothing;
+          return tags.length ? html`<span class="cat" title=${tags.join(', ')}>${tags.join(', ')}</span>` : nothing;
         })()}</span>
         <span class="title">${cleanTitle(notice.title_ko || notice.title)}</span>
         <span class="sub">${this.reasonLine(notice)}</span>

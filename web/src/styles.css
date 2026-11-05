@@ -240,6 +240,7 @@
 @layer mobile {
   .sidebar, .detail-pane, .wide-only { display: none; }
   .list-pane { padding-bottom: calc(var(--tabbar-h) + 24px + env(safe-area-inset-bottom)); }
+  .navigation-head, .samsung-navigation-head { display: contents; }
 
   .topbar {
     position: sticky; top: var(--wco-h); z-index: 2;
@@ -347,9 +348,14 @@
     border: 0; background: none; color: var(--text-2); font-size: 13px; line-height: 18px; font-weight: 500;
   }
   .tabbar button[aria-current="page"] { color: var(--accent); font-weight: 700; }
-  /* 삼성 인터넷 자체의 맨 위와 맨 아래 버튼이 기본적으로 하단 중앙에 겹친다. */
-  .tabbar.samsung-internet { display: grid; grid-template-columns: minmax(0, 1fr) 64px minmax(0, .5fr) minmax(0, .5fr); }
-  .tabbar.samsung-internet button:nth-child(2) { grid-column: 3; }
+  /* 삼성 인터넷의 하단 스크롤 버튼과 겹치지 않게 탭을 화면 위에 유지한다. */
+  @media (max-width: 719px) {
+    .samsung-navigation-head { display: block; position: sticky; top: var(--wco-h); z-index: 3; }
+    .samsung-navigation-head .topbar { position: static; }
+    .samsung-navigation-head .top-tabs { position: static; height: 45px; padding: 0; border-top: 0; border-bottom: 1px solid var(--line); }
+    .top-tabs button { flex-direction: row; gap: 6px; }
+    .top-tabs .i { width: 18px; height: 18px; }
+  }
 
   .install-bar {
     position: fixed; left: var(--gutter); right: var(--gutter); bottom: calc(var(--tabbar-h) + 12px + env(safe-area-inset-bottom)); z-index: 3;

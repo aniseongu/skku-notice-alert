@@ -892,6 +892,7 @@ export class NoticeApp extends LitElement {
       <a class="row ${dim ? 'dim' : ''} ${this.isRead(notice) ? 'read' : 'unread'}" href=${safeUrl(notice.url)} target="_blank" rel="noopener"
         data-id=${notice.id} aria-current=${this.isWide && this.shownId === notice.id ? 'true' : 'false'}
         @click=${(e: MouseEvent) => this.onRow(e, notice)}>
+        <span class="visually-hidden">${this.isRead(notice) ? '읽은 공지' : '읽지 않은 공지'}</span>
         <span class="meta"><span class="board">${boardName(source, notice.source_id)}</span>${(() => {
           const tags = [notice.category, notice.pinned ? '고정' : '', notice.changed_at ? '수정됨' : '',
             this.view !== 'saved' && this.isSaved(notice) ? '저장함' : ''].filter(Boolean);

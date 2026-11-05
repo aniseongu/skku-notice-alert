@@ -62,7 +62,7 @@ export default defineConfig({
             // 공지 목록은 네트워크 우선: 오래된 목록을 최신처럼 보이지 않게 한다.
             urlPattern: ({ url }) => url.pathname.endsWith('.json'),
             handler: 'NetworkFirst',
-            options: { cacheName: 'api', networkTimeoutSeconds: 5, expiration: { maxEntries: 10 } },
+            options: { cacheName: 'api', expiration: { maxEntries: 10 } },
           },
           {
             // Pretendard 글꼴 조각은 파일 이름이 바뀌지 않으므로 캐시 우선.

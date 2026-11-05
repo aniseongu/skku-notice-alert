@@ -239,7 +239,7 @@
 /* 휴대폰 (One UI, 720px 미만). 왼쪽 시작선은 16px(머리, 검색, 칩, 묶음)과 32px(행 글자) 둘뿐이다. */
 @layer mobile {
   .sidebar, .detail-pane, .wide-only { display: none; }
-  .list-pane { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
+  .list-pane { padding-bottom: calc(var(--tabbar-h) + 24px + env(safe-area-inset-bottom)); }
   .navigation-head { display: contents; }
 
   .topbar {
@@ -257,18 +257,11 @@
   .updated.stale { color: var(--danger); }
 
   @media (max-width: 719px) {
-    /* 삼성 인터넷의 위아래 버튼이 마지막 공지를 가리지 않도록 목록 끝에 공간을 둔다. */
-    .app.is-samsung .list-pane { padding-bottom: calc(120px + env(safe-area-inset-bottom)); }
-    .feed-topbar { gap: 0; padding: calc(4px + env(safe-area-inset-top)) 4px 4px 12px; }
-    .feed-topbar .topbar-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-    .mobile-sections { display: flex; flex: 1; min-width: 0; align-self: stretch; }
-    .mobile-sections button { position: relative; flex: 1; min-width: 0; min-height: 44px; padding: 0 2px; border: 0; background: none; color: var(--text-2); font-size: 14px; font-weight: 500; white-space: nowrap; }
-    .mobile-sections button[aria-current="page"] { color: var(--text); font-weight: 700; }
-    .mobile-sections button[aria-current="page"]::after { content: ""; position: absolute; bottom: 0; left: 20%; right: 20%; height: 2px; background: var(--text); border-radius: 2px; }
+    .feed-topbar { gap: 0; padding: calc(4px + env(safe-area-inset-top)) 4px 4px var(--gutter); }
+    .feed-topbar h1 { font-size: 20px; line-height: 28px; }
   }
 
   .tools { padding: 8px var(--gutter) 0; }
-  .feed-updated { margin-bottom: 6px; }
   .chips {
     display: flex; gap: 8px; margin: 4px calc(-1 * var(--gutter)) 0; padding: 4px var(--gutter);
     overflow-x: auto; scrollbar-width: none; user-select: none; -webkit-user-select: none;
@@ -348,6 +341,19 @@
   .rows li + li .selection-check { border-top: 1px solid var(--line); }
   .select-all { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; font-weight: 500; color: var(--text-2); cursor: pointer; }
   @media (max-width: 359px) { .view-actions { gap: 0; } }
+
+  /* 출처: https://seed-design.io/components/bottom-navigation */
+  .tabbar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 3;
+    display: flex; height: calc(var(--tabbar-h) + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom);
+    border-top: 1px solid var(--line); user-select: none; -webkit-user-select: none;
+  }
+  .tabbar button {
+    display: flex; flex: 1; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+    min-width: 44px; min-height: 44px; border: 0; background: none; color: var(--text-2);
+    font-size: 13px; line-height: 18px; font-weight: 500;
+  }
+  .tabbar button[aria-current="page"] { color: var(--accent); font-weight: 700; }
 
   .install-bar {
     position: fixed; left: var(--gutter); right: var(--gutter); bottom: calc(var(--tabbar-h) + 12px + env(safe-area-inset-bottom)); z-index: 3;

@@ -12,7 +12,7 @@ import './settings-view';
 import { GitHubError, collectionWorkflowUrl, readVariable, saveVariable, requestCollection } from './github';
 import { loadToken } from './settings-storage';
 import { SAVED_VARIABLE, type SavedNotice, loadSaved, parseSaved, storeSaved, toggleSaved } from './saved-notices';
-import { READ_VARIABLE, addRead, loadRead, mergeRead, parseRead, storeRead } from './read-notices';
+import { READ_STATE_VARIABLE, READ_VARIABLE, loadReadState, mergeReadStates, parseReadState, readIds, serializeReadState, setReadState, storeReadState } from './read-notices';
 import { keywordCounts } from './keyword-counts';
 import type { Theme } from './settings-view';
 import { APP_NAME } from './brand';
@@ -133,8 +133,11 @@ export class NoticeApp extends LitElement {
   saved: SavedNotice[] = loadSaved();
   collapsed: string[] = (() => { try { const v = JSON.parse(remember('side-collapsed') ?? '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; } })();
   // 읽은 글 id(최근 것만). null이면 이 기기에서 처음 연 것이라 지금 글을 모두 읽은 것으로 둔다.
-  read: string[] | null = loadRead();
+  private readState = loadReadState();
+  private needsReadBaseline = this.readState === null;
+  read: string[] | null = this.readState ? readIds(this.readState) : null;
   private readTimer = 0;
+  private readWrite: Promise<void> = Promise.resolve();
   // GitHub 연결(설정에서 한 번 넣은 토큰). 있으면 저장 목록과 키워드를 모든 기기와 맞춘다.
   private github: { repo: string; token: string } | null = null;
   private savedWrite: Promise<void> = Promise.resolve();
@@ -207,7 +210,14 @@ export class NoticeApp extends LitElement {
       this.matched = matched;
       this.failed = false;
       // 처음 열면 이미 있던 글이 모두 굵게 보이지 않게, 그때 있던 글은 읽은 것으로 시작한다.
-      if (this.read === null) { this.read = this.notices.map((n) => n.id); storeRead(this.read); }
+      if (this.needsReadBaseline) {
+        const baseline = parseReadState(JSON.stringify(this.notices.map((n) => n.id)));
+        this.readState = mergeReadStates(baseline, this.readState ?? parseReadState(null));
+        this.read = readIds(this.readState);
+        storeReadState(this.readState);
+        this.needsReadBaseline = false;
+        this.pushRead();
+      }
       if (this.board !== 'all' && !this.sources.some((s) => s.id === this.board)) this.board = 'all';
     } catch (error) {
       console.error(error);
@@ -243,16 +253,18 @@ export class NoticeApp extends LitElement {
     if (!repo || !token) return;
     this.github = { repo, token };
     try {
-      const [saved, keywords, read] = await Promise.all([
+      const [saved, keywords, read, readState] = await Promise.all([
         readVariable(repo, token, SAVED_VARIABLE), readVariable(repo, token, 'INTEREST_KEYWORDS'),
-        readVariable(repo, token, READ_VARIABLE),
+        readVariable(repo, token, READ_VARIABLE), readVariable(repo, token, READ_STATE_VARIABLE),
       ]);
-      // 읽음은 줄지 않으니 양쪽을 합친다. 합친 결과가 GitHub와 다르면 올린다.
-      if (read !== null || this.read?.length) {
-        const merged = mergeRead(parseRead(read), this.read ?? []);
-        this.read = merged;
-        storeRead(merged);
-        if (JSON.stringify(merged) !== read) this.pushRead();
+      // 명시적으로 읽지 않음으로 바꾼 시각도 함께 병합한다.
+      if (read !== null || readState !== null || this.readState) {
+        const remote = mergeReadStates(parseReadState(read), parseReadState(readState));
+        const merged = mergeReadStates(remote, this.readState ?? parseReadState(null));
+        this.readState = merged;
+        this.read = readIds(merged);
+        storeReadState(merged);
+        if (serializeReadState(merged) !== readState || JSON.stringify(readIds(merged)) !== read) this.pushRead();
       }
       if (saved !== null) { this.saved = parseSaved(saved); storeSaved(this.saved); }
       else if (this.saved.length) this.pushSaved();
@@ -273,18 +285,33 @@ export class NoticeApp extends LitElement {
   private pushRead() {
     const github = this.github;
     if (!github) return;
-    // 글을 넘겨 가며 읽을 때마다 보내지 않도록 잠깐 모았다가 한 번에 보낸다.
     clearTimeout(this.readTimer);
     this.readTimer = window.setTimeout(() => {
-      saveVariable(github.repo, github.token, READ_VARIABLE, JSON.stringify(this.read ?? [])).catch(() => {});
+      this.readWrite = this.readWrite.then(async () => {
+        const [legacy, versioned] = await Promise.all([
+          readVariable(github.repo, github.token, READ_VARIABLE), readVariable(github.repo, github.token, READ_STATE_VARIABLE),
+        ]);
+        const remote = mergeReadStates(parseReadState(legacy), parseReadState(versioned));
+        const merged = mergeReadStates(remote, this.readState ?? parseReadState(null));
+        this.readState = merged;
+        this.read = readIds(merged);
+        storeReadState(merged);
+        await saveVariable(github.repo, github.token, READ_STATE_VARIABLE, serializeReadState(merged));
+        await saveVariable(github.repo, github.token, READ_VARIABLE, JSON.stringify(readIds(merged)));
+      }).catch(() => this.showToast('이 기기에만 저장했어요. 다른 기기에는 다음에 열 때 맞춰요'));
     }, 3000);
+  }
+
+  private updateRead(ids: string[], read: boolean) {
+    this.readState = setReadState(this.readState ?? parseReadState(null), ids, read);
+    this.read = readIds(this.readState);
+    storeReadState(this.readState);
+    this.pushRead();
   }
 
   private markRead(notice: Notice) {
     if (this.read?.includes(notice.id)) return;
-    this.read = addRead(this.read ?? [], notice.id);
-    storeRead(this.read);
-    this.pushRead();
+    this.updateRead([notice.id], true);
   }
 
   private toggleReadSelection(id: string) {
@@ -292,16 +319,14 @@ export class NoticeApp extends LitElement {
       ? this.selectedReads.filter((selected) => selected !== id) : [...this.selectedReads, id];
   }
 
-  private markSelectedRead() {
+  private markSelectedRead(read: boolean) {
     const selected = new Set(this.selectedReads);
-    const unread = this.visible().filter((notice) => selected.has(notice.id) && !this.isRead(notice));
-    if (!unread.length) return;
-    this.read = mergeRead(this.read ?? [], unread.map((notice) => notice.id));
-    storeRead(this.read);
-    this.pushRead();
+    const changed = this.visible().filter((notice) => selected.has(notice.id) && this.isRead(notice) !== read);
+    if (!changed.length) return;
+    this.updateRead(changed.map((notice) => notice.id), read);
     this.selecting = false;
     this.selectedReads = [];
-    this.showToast(`${unread.length}개를 읽음으로 표시했어요`);
+    this.showToast(`${changed.length}개를 ${read ? '읽음' : '읽지 않음'}으로 표시했어요`);
   }
 
   private isRead(notice: Notice): boolean { return this.read === null || this.read.includes(notice.id); }
@@ -827,6 +852,7 @@ export class NoticeApp extends LitElement {
       const selected = new Set(this.selectedReads);
       const selectedVisible = list.filter((notice) => selected.has(notice.id));
       const selectedUnread = selectedVisible.filter((notice) => !this.isRead(notice)).length;
+      const selectedRead = selectedVisible.length - selectedUnread;
       return html`<div class="view-options select-options" role="group" aria-label="공지 선택">
         <label class="select-all"><input type="checkbox" .checked=${list.length > 0 && selectedVisible.length === list.length}
           .indeterminate=${selectedVisible.length > 0 && selectedVisible.length < list.length}
@@ -835,12 +861,15 @@ export class NoticeApp extends LitElement {
           }}>전체 선택</label>
         <div class="view-actions"><button type="button" class="read-all" ?disabled=${!selectedUnread}
           aria-label=${`선택한 읽지 않은 공지 ${selectedUnread}개 읽음으로 표시`}
-          @click=${() => this.markSelectedRead()}>읽음 표시${selectedUnread ? ` ${selectedUnread}` : ''}</button>
+          @click=${() => this.markSelectedRead(true)}>읽음 표시</button>
+          <button type="button" class="read-all" ?disabled=${!selectedRead}
+            aria-label=${`선택한 읽은 공지 ${selectedRead}개 읽지 않음으로 표시`}
+            @click=${() => this.markSelectedRead(false)}>안 읽음 표시</button>
           <button type="button" class="read-all" @click=${() => { this.selecting = false; this.selectedReads = []; }}>완료</button></div>
       </div>`;
     }
-    const select = html`<button type="button" class="read-all" ?disabled=${!list.length}
-      @click=${() => { this.selecting = true; this.selectedReads = []; }}>선택</button>`;
+    const select = html`<button type="button" class="read-all select-trigger" ?disabled=${!list.length}
+      @click=${() => { this.selecting = true; this.selectedReads = []; }}><span class="filter-check select-icon" aria-hidden="true"></span>선택</button>`;
     if (this.view === 'saved') return html`<div class="view-options saved-options">${select}</div>`;
     return html`<div class="view-options" role="group" aria-label="공지 보기 조건">
       <button type="button" class="view-toggle" aria-pressed=${String(this.unreadOnly)} @click=${() => {

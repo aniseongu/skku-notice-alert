@@ -93,7 +93,8 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-05T11:07:36.574820+09:00"
+      "fetched_at": "2026-11-05T11:07:36.574820+09:00",
+      "summary_last_failed_at": "2026-11-05T11:33:51.616336+09:00"
     },
     "skku-notice01/141578": {
       "notice": {
@@ -128,7 +129,8 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-05T11:07:36.574820+09:00"
+      "fetched_at": "2026-11-05T11:07:36.574820+09:00",
+      "summary_last_failed_at": "2026-11-05T11:33:51.616336+09:00"
     },
     "skku-notice01/141576": {
       "notice": {
@@ -168,7 +170,8 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-05T11:07:36.574820+09:00"
+      "fetched_at": "2026-11-05T11:07:36.574820+09:00",
+      "summary_last_failed_at": "2026-11-05T11:33:51.616336+09:00"
     },
     "skku-notice01/140807": {
       "notice": {
@@ -203,7 +206,8 @@
       ],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-05T11:07:36.574820+09:00"
+      "fetched_at": "2026-11-05T11:07:36.574820+09:00",
+      "summary_last_failed_at": "2026-11-05T11:33:51.616336+09:00"
     },
     "skku-notice01/139991": {
       "notice": {
@@ -240,7 +244,8 @@
       "images": [],
       "summary": null,
       "body_attempts": 1,
-      "fetched_at": "2026-11-05T11:07:36.574820+09:00"
+      "fetched_at": "2026-11-05T11:07:36.574820+09:00",
+      "summary_last_failed_at": "2026-11-05T11:33:51.616336+09:00"
     },
     "linkareer-intern/362276": {
       "notice": {
@@ -298,11 +303,18 @@
       },
       "match": {
         "rule_name": null,
-        "priority": null,
-        "interests": [],
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
-        "notified": false
+        "ai": {
+          "verdict": "relevant",
+          "reason": "디지털 감사 및 AI 툴 개발 등 소프트웨어 관련 직무를 수행하며 컴퓨터 관련 전공자를 우대하고 있어 학부생이 지원하기에 적합합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
       },
       "body_text": "[EY한영] 감사부문 디지털 감사 & AI 리스크 분석 인턴\n\n\n\n\n[담당업무]\n- 금융회사에 대한 Digital Audit 수행 및 Ai Tool 개발\n- 금융회사의 Risk Component 및 대손충당금 감사 수행\n- 금융회사의 Risk Component, 대손충당금, 결산지원, 추정모형 개발 등 컨설팅 프로젝트 수행\n\n\n[지원자격]\n- 국내외 4년제 대학 졸업(예정)자, 예정자의 경우 학점 수료자(27년 2월 이내 졸업 예정자)\n\n\n[우대사항]\n- 컨설팅 경험자 우대\n- 석, 박사 우대\n- KICPA/AICPA 우대\n- 금융공학/수학/컴퓨터/통계/보험계리/Ai 관련 전공자 우대\n- 프로그래밍 언어 (SAS, R, Python, Matlab, VBA 등) 가능자 우대\n- 쿼리 (SQL 등) 가능자 우대\n- BI Tool (Spotfire, Power BI 등), Ai개발 가능자 우대\n\n\n[근무기간]\n- 6개월 (업무 평가에 따라 정규전환 검토 대상)",
       "body_from_image": false,
@@ -322,6 +334,12 @@
         "kind": "마감",
         "at": "2026-11-10T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "255fff22f71ce4e01bff9cc837dc18628dea42dd5c70e202f98a6e484ad62b61",
+        "verdict": "relevant",
+        "reason": "디지털 감사 및 AI 툴 개발 등 소프트웨어 관련 직무를 수행하며 컴퓨터 관련 전공자를 우대하고 있어 학부생이 지원하기에 적합합니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/362262": {
@@ -340,9 +358,16 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "이커머스 입점 관리 및 온라인 프로모션 운영 보조 업무로 소프트웨어 개발 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[하루7H근무/중식제공/본사]\n신세계인터내셔날\n이커머스 입점팀 AMD 채용(패션 분야)\n접수 기간 2026-11-05 ~ 2026-11-11\n\n모집부문 및 상세내용\n모집 부문상세내용\n이커머스\n온라인 AMD\n(0명)\n담당업무\n이커머스 입점팀 패션 담당AMD\n- 신세계 V 입점 패션 브랜드 AMD\n- 온라인 프로모션 및 기획전 업무 보조 (세팅, 배너, 제작 등)\n- 상품 및 재고, 브랜드, CS 관리\n\n채용형태\n- 인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)\n- 파트너\n\n\n우대조건\n-장기근무가능자\n- 온라인몰 경력자(개인 쇼핑몰 운영 경험자 등)\n- 포토샵/피그마 숙련자\n- 엑셀 등 문서작업 능숙자\n- 성실하고 책임감 있는 성격 보유자\n\n\n복리후생\n▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)\n\n\n\n\n자격요건\n학력\n학력무관\n\n근무조건\n급여\n회사 내규에 따름\n(연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)\n근무지역\n서울 강남구 도산대로 449 SI 청담 본사\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n실무진 면접\n\nStep 2\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-05 ~ 2026-11-11 (ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)\n\n접수방법\n이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.\n채용 절차\n1. 서류전형 (서류전형 합격자분들 한하여 연락 드리는 점 유의 부탁 드립니다.)\n※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.\n\n\n2. 실무진 면접\n\n\n3. 최종 합격",
@@ -363,6 +388,12 @@
         "kind": "마감",
         "at": "2026-11-11T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "4e901eca36f0ef262ef083b3b4c6001095d3ea0d8a7db3112a90dc243850dddb",
+        "verdict": "not_relevant",
+        "reason": "이커머스 입점 관리 및 온라인 프로모션 운영 보조 업무로 소프트웨어 개발 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/362261": {
@@ -381,9 +412,16 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "사업장 시설 관리 및 총무 행정 업무를 담당하는 직무로 소프트웨어 개발과 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[케이씨텍] [채용연계형 인턴] 총무 담당자 모집(안성)\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 총무 담당자 (인턴)\n\n\n\n\n[업무내용]\n\n\n- 사업장 시설 및 자산 관리\n- 계약·구매 및 예산·비용 관리\n- 임직원 복리후생 및 사내 운영 지원\n\n\n\n\n[자격요건]\n\n\n- 대학교 졸업 이상\n- Excel 및 문서 작성 등 기본적인 Office 활용 능력을 갖추신 분\n- 꼼꼼하고 정확하게 업무를 처리하는 태도를 갖추신 분\n- 다양한 부서 및 협력업체와 원활하게 소통하고 업무를 조율할 수 있으신 분\n- 돌발 상황에서 우선순위를 판단하고 침착하게 대응할 수 있으신 분\n\n\n\n\n[우대사항]\n\n\n- 글로벌 커뮤니케이션 역량(OPIC IM3 이상) 보유하신 분\n- 총무·구매·행정 관련 인턴 경험을 보유하신 분\n- 컴퓨터활용능력 자격증을 보유하신 분\n- 비즈니스 이메일 작성이 가능하신 분\n- 운전면허를 소지하신 분\n\n\n\n\n[채용절차]\n\n\n- 서류전형 > 온라인 인적성 검사 > 면접 > 최종합격\n\n\n\n\n[공고상세]",
@@ -410,6 +448,12 @@
         "kind": "마감",
         "at": "2026-11-15T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "29ed5437abdc612cb1f8f5f49d2e1e87018451d46b1b919202a871d6fefdadcf",
+        "verdict": "not_relevant",
+        "reason": "사업장 시설 관리 및 총무 행정 업무를 담당하는 직무로 소프트웨어 개발과 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/362253": {
@@ -636,23 +680,26 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[코오롱인더스트리] 김천1공장 설비지원 인턴 채용\n\n\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 원동(utility)설비 운용· 유지관리\n- 수배전 설비 담당\n\n\n\n\n[업무내용]\n\n\n원동(utility)설비 운용· 유지관리\n- utility 설비운전 및 유지관리\n- 현장 설비 개선 및 노후설비 개선\n- PSM 및 ISO 관련업무\n\n\n수배전 설비 담당\n- 수배전 설비 운전 및 유지관리\n- 현장 설비 개선 및 노후설비 개선\n- PSM 및 ISO 관련업무\n\n\n\n\n[자격요건]\n\n\n- 초대졸/고졸 또는 이와 동등한 수준의 역량 보유자로서 '26년12월초' 입사 가능자\n- 병역을 필하였거나 면제된 자\n\n\n\n\n[우대사항]\n\n\n※ 원동(utility)설비 담당\nutility 설비 운전 및 유지관리 업무 유경험자\n관련 자격증 소지자 우대\n(공조냉동 관련 자격증,에너지관리산업기사 등)\n\n\n※ 수배전 설비 담당자\n수배전 설지운전 및 유지관리 업무 유경험자\n관련 자격증 소지자 우대\n(전기산업기사,전기공사산업기사 등)\n\n\n\n\n[채용절차]\n\n\n- 서류전형 > 인적성 검사 > 1차면접 > 건강검진 > 최종합격\n\n\n\n\n[공고상세]",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><span><b>[코오롱인더스트리] 김천1공장 설비지원 인턴 채용</b></span></p><p><span><b>[모집분야]</b></span></p><p>- 원동(utility)설비 운용· 유지관리</p><p>- 수배전 설비 담당</p><p><span><b>[업무내용]</b></span></p><p>원동(utility)설비 운용· 유지관리</p><p>- utility 설비운전 및 유지관리</p><p>- 현장 설비 개선 및 노후설비 개선</p><p>- PSM 및 ISO 관련업무</p><p>수배전 설비 담당</p><p>- 수배전 설비 운전 및 유지관리</p><p>- 현장 설비 개선 및 노후설비 개선</p><p>- PSM 및 ISO 관련업무</p><p><span><b>[자격요건]</b></span></p><p>- 초대졸/고졸 또는 이와 동등한 수준의 역량 보유자로서 '26년12월초' 입사 가능자</p><p>- 병역을 필하였거나 면제된 자</p><p><span><b>[우대사항]</b></span></p><p>※ 원동(utility)설비 담당</p><p>utility 설비 운전 및 유지관리 업무 유경험자</p><p>관련 자격증 소지자 우대</p><p>(공조냉동 관련 자격증,에너지관리산업기사 등)</p><p>※ 수배전 설비 담당자</p><p>수배전 설지운전 및 유지관리 업무 유경험자</p><p>관련 자격증 소지자 우대</p><p>(전기산업기사,전기공사산업기사 등)</p><p><span><b>[채용절차]</b></span></p><p>- 서류전형 &gt; 인적성 검사 &gt; 1차면접 &gt; 건강검진 &gt; 최종합격</p><p><span><b>[공고상세]</b></span></p><p><img src=\"https://imgorg.catch.co.kr/job/recruit/attach/F03302/image/1793779806312_4mmtwt2uo.webp\" alt=\"[코오롱인더스트리] 김천1공장 설비지원 인턴 채용\"></p>",
+      "images": [
+        "https://imgorg.catch.co.kr/job/recruit/attach/F03302/image/1793779806312_4mmtwt2uo.webp"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-05T11:32:28.944523+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2026-11-17T23:59:59.999000+09:00",
         "model": "source"
-      }
+      },
+      "body_attempted_at": "2026-11-05T11:32:28.944523+09:00"
     },
     "jasoseol-intern/107072": {
       "notice": {
@@ -3149,7 +3196,8 @@
       "ai_deadline": {
         "checked": true,
         "model": "gemini-3.1-flash-lite"
-      }
+      },
+      "rechecked_at": "2026-11-05T11:32:28.944523+09:00"
     },
     "cse-notice/228049": {
       "notice": {
@@ -3191,7 +3239,8 @@
       ],
       "summary": "고영테크놀러지에서 11월 18일까지 신입사원을 모집합니다. 서류와 역량 검사 및 면접을 거쳐 2027년 1월에 입사하게 됩니다.",
       "body_attempts": 1,
-      "fetched_at": "2026-11-04T15:41:11.032641+09:00"
+      "fetched_at": "2026-11-04T15:41:11.032641+09:00",
+      "rechecked_at": "2026-11-05T11:32:28.944523+09:00"
     },
     "cse-notice/228046": {
       "notice": {
@@ -3359,7 +3408,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "온라인 MD 업무 보조 직무로 소프트웨어 개발 및 데이터 분석 직무가 아닙니다.",
+          "reason": "온라인 MD 업무 보조 및 채널 운영 지원 직무로 소프트웨어 개발 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -3383,9 +3432,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "055b0faf82720bef12245c00c64f78150d98c7b65a9d3b3f06ec1c12ab2fb95a",
+        "fingerprint": "eb17aa041bc1fb3c92e9967be4420736addb0adeec78e06dbc51e61b158aec0f",
         "verdict": "not_relevant",
-        "reason": "온라인 MD 업무 보조 직무로 소프트웨어 개발 및 데이터 분석 직무가 아닙니다.",
+        "reason": "온라인 MD 업무 보조 및 채널 운영 지원 직무로 소프트웨어 개발 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -4119,7 +4168,7 @@
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
-          "reason": "해당 직무는 법무 담당자로 소프트웨어 개발 직무와 무관합니다.",
+          "reason": "법무 검토 및 계약 관리 업무를 수행하는 법무 담당자로 소프트웨어 개발 직무가 아닙니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -4143,9 +4192,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "a1f47ac90137dae64f2c8571a74a90ce7d762a706dba4910fa7e018add734359",
+        "fingerprint": "e638c5352e647dc680aac64ed918dd52037b55aef48f934c6afae4e21b5de9a9",
         "verdict": "not_relevant",
-        "reason": "해당 직무는 법무 담당자로 소프트웨어 개발 직무와 무관합니다.",
+        "reason": "법무 검토 및 계약 관리 업무를 수행하는 법무 담당자로 소프트웨어 개발 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -4274,7 +4323,7 @@
         "reasons": [],
         "ai": {
           "verdict": "relevant",
-          "reason": "보안 로그 분석 및 이상 징후 탐지 업무를 수행하며, Python 등 프로그래밍 언어와 보안 관련 기술 역량을 요구하므로 소프트웨어 관련 직무로 판단됩니다.",
+          "reason": "보안 로그 분석 및 이상 데이터 탐지 등 소프트웨어 보안 관련 직무를 수행하며 관련 도구 경험자를 우대하므로 지원 가능합니다.",
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
@@ -4298,9 +4347,9 @@
         "model": "source"
       },
       "intern_judgment": {
-        "fingerprint": "9d831d38785b2068a18b5eb2ad6047427047a77d28ab80ccfb2ddd4aab7395d5",
+        "fingerprint": "dae6a116a3470057c347842e9776ebdc49ba922c35e52ef278aaad65d4b015df",
         "verdict": "relevant",
-        "reason": "보안 로그 분석 및 이상 징후 탐지 업무를 수행하며, Python 등 프로그래밍 언어와 보안 관련 기술 역량을 요구하므로 소프트웨어 관련 직무로 판단됩니다.",
+        "reason": "보안 로그 분석 및 이상 데이터 탐지 등 소프트웨어 보안 관련 직무를 수행하며 관련 도구 경험자를 우대하므로 지원 가능합니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -5542,7 +5591,7 @@
       "summary": "참가 희망자는 11월 27일까지 구글폼을 통해 신청하세요. 12월 21일부터 23일까지 진행되는 숏폼 콘텐츠 캠프에 참여하게 됩니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-03T17:38:58.630694+09:00",
-      "rechecked_at": "2026-11-04T17:50:56.426869+09:00"
+      "rechecked_at": "2026-11-05T11:32:28.944523+09:00"
     },
     "skku-notice01/137181": {
       "notice": {

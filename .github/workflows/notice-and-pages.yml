@@ -2,9 +2,10 @@ name: Notice and Pages
 
 on:
   schedule:
-    # 학교 공지는 매시간, 외부 인턴은 세 시간마다 확인한다.
+    # 학교 공지는 30분마다, 외부 인턴은 세 시간마다 확인한다.
     - cron: '7 0,3,6,9,12,15,18,21 * * *'
     - cron: '7 1,2,4,5,7,8,10,11,13,14,16,17,19,20,22,23 * * *'
+    - cron: '37 * * * *'
   workflow_dispatch:
 
 # 수집 실행끼리 겹치지 않도록 직렬화한다.
@@ -123,7 +124,7 @@ jobs:
           WEB_PUSH_SUB_8: ${{ secrets.WEB_PUSH_SUB_8 }}
           WEB_PUSH_PRIVATE_KEY: ${{ secrets.WEB_PUSH_PRIVATE_KEY }}
         run: |
-          if [ "$GITHUB_EVENT_NAME" = schedule ] && [ "$SCHEDULE" = '7 1,2,4,5,7,8,10,11,13,14,16,17,19,20,22,23 * * *' ]; then
+          if [ "$GITHUB_EVENT_NAME" = schedule ] && [ "$SCHEDULE" != '7 0,3,6,9,12,15,18,21 * * *' ]; then
             uv run skku-notice --export site --skip-external
           else
             uv run skku-notice --export site

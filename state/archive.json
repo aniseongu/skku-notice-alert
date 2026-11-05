@@ -1287,7 +1287,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-25T23:59:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-06T04:14:23.063289+09:00"
     },
     "sw-notice/228121": {
       "notice": {
@@ -1334,7 +1335,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-11-21T13:00:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-06T04:14:23.063289+09:00"
     },
     "skku-notice01/141610": {
       "notice": {
@@ -1390,7 +1392,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-12-03T23:59:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-06T04:14:23.063289+09:00"
     },
     "skku-notice01/141609": {
       "notice": {
@@ -3243,7 +3246,9 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
@@ -3296,9 +3301,16 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "모집 직무가 마케팅, 영업, 재무, 공급망 관리 등 비개발 직무 위주로 구성되어 있어 소프트웨어학과 학부생이 지원하기에 적합하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -3320,7 +3332,13 @@
         "at": "2026-11-15T23:59:00+09:00",
         "model": "source"
       },
-      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00"
+      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00",
+      "intern_judgment": {
+        "fingerprint": "a8fa2d217dcfa738df95d91d919eb646fb461bf4a88767677cadca2eeb7ec009",
+        "verdict": "not_relevant",
+        "reason": "모집 직무가 마케팅, 영업, 재무, 공급망 관리 등 비개발 직무 위주로 구성되어 있어 소프트웨어학과 학부생이 지원하기에 적합하지 않습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "linkareer-intern/362507": {
       "notice": {

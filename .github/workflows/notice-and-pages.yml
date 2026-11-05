@@ -5,6 +5,12 @@ on:
     # 학교 공지는 30분마다, 외부 인턴은 마지막 성공 확인 뒤 한 시간부터 확인한다.
     - cron: '7,37 * * * *'
   workflow_dispatch:
+    inputs:
+      automatic:
+        description: 'Run scheduled collection from the automatic relay'
+        type: boolean
+        default: false
+        required: false
 
 # 수집 실행끼리 겹치지 않도록 직렬화한다.
 concurrency:
@@ -100,6 +106,7 @@ jobs:
         id: run_notice
         continue-on-error: true
         env:
+          AUTOMATIC_RUN: ${{ inputs.automatic }}
           CANVAS_SUMMARY_TIME: ${{ vars.CANVAS_SUMMARY_TIME }}
           NOTIFY_URLS: ${{ secrets.NOTIFY_URLS }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -121,7 +128,7 @@ jobs:
           WEB_PUSH_SUB_8: ${{ secrets.WEB_PUSH_SUB_8 }}
           WEB_PUSH_PRIVATE_KEY: ${{ secrets.WEB_PUSH_PRIVATE_KEY }}
         run: |
-          if [ "$GITHUB_EVENT_NAME" = schedule ]; then
+          if [ "$GITHUB_EVENT_NAME" = schedule ] || [ "$AUTOMATIC_RUN" = true ]; then
             uv run skku-notice --export site --external-if-due
           else
             uv run skku-notice --export site
@@ -203,3 +210,28 @@ jobs:
       - name: Deploy Pages
         id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5
+
+  # 예약 누락에 대비해 실행 완료 뒤 다음 수집을 예약한다. 기본 cron도 복구 경로로 유지한다.
+  chain:
+    needs: [gate, notice]
+    if: always() && !cancelled() && github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      actions: write
+    steps:
+      - name: Request next collection
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          sleep 3300
+          others="$(gh run list --workflow notice-and-pages.yml --limit 50 --json databaseId,status \
+            --jq "[.[] | select(.databaseId != ${RUN_ID} and (.status == \"queued\" or .status == \"in_progress\" or .status == \"waiting\" or .status == \"pending\"))] | length")"
+          if [ "$others" = 0 ]; then
+            gh workflow run notice-and-pages.yml --ref "${GITHUB_REF_NAME}" -f automatic=true
+            echo "다음 자동 수집을 요청했어요"
+          else
+            echo "다른 수집이 대기하거나 실행 중이에요"
+          fi

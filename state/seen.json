@@ -1,5 +1,9 @@
 {
   "version": 1,
+  "external_checked_at": {
+    "linkareer-intern": "2026-11-05T11:07:36.574820+09:00",
+    "jasoseol-intern": "2026-11-05T11:07:36.574820+09:00"
+  },
   "sources": {
     "skku-notice01": {
       "initialized_at": "2026-11-03T12:27:42.906254+09:00",
@@ -206,6 +210,31 @@
         },
         "141572": {
           "first_seen": "2026-11-04T18:07:00.206954+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141580": {
+          "first_seen": "2026-11-05T11:07:36.574820+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141578": {
+          "first_seen": "2026-11-05T11:07:36.574820+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "139991": {
+          "first_seen": "2026-11-05T11:07:36.574820+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "140807": {
+          "first_seen": "2026-11-05T11:07:36.574820+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141576": {
+          "first_seen": "2026-11-05T11:07:36.574820+09:00",
           "status": "notified",
           "attempts": 0
         }
@@ -822,6 +851,36 @@
         "362159": {
           "first_seen": "2026-11-04T22:22:39.698763+09:00",
           "status": "notified",
+          "attempts": 0
+        },
+        "362276": {
+          "first_seen": "2026-11-05T11:07:36.574820+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362268": {
+          "first_seen": "2026-11-05T11:07:36.574820+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362262": {
+          "first_seen": "2026-11-05T11:07:36.574820+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362261": {
+          "first_seen": "2026-11-05T11:07:36.574820+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362253": {
+          "first_seen": "2026-11-05T11:07:36.574820+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362249": {
+          "first_seen": "2026-11-05T11:07:36.574820+09:00",
+          "status": "pending",
           "attempts": 0
         }
       }

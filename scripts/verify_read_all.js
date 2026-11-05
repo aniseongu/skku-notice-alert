@@ -23,17 +23,8 @@ async (page) => {
         a.pushRead = () => { a.syncCalls++; };
         await a.updateComplete;
       });
-      const button = p.getByRole('button', { name: '현재 목록의 읽지 않은 공지 1개 모두 읽음으로 표시' });
       if (await p.evaluate(() => document.documentElement.scrollWidth > innerWidth)) throw Error('가로 넘침');
-      await button.click();
-      const state = await p.evaluate(async () => {
-        const a = document.querySelector('notice-app'); await a.updateComplete;
-        return { read: a.read, sync: a.syncCalls, disabled: a.querySelector('.read-all').disabled };
-      });
-      if (!state.read.includes('one/1') || state.read.includes('two/3') || state.read.includes('jobs/4')) {
-        throw Error('현재 목록 밖 글의 읽음 상태가 바뀜');
-      }
-      if (state.sync !== 1 || !state.disabled) throw Error('일괄 동기화 또는 단추 상태 오류');
+      if (await p.getByRole('button', { name: '모두 읽음', exact: true }).count()) throw Error('중복 읽음 버튼');
       await p.evaluate(async () => {
         const a = document.querySelector('notice-app'); a.read = []; a.syncCalls = 0; await a.updateComplete;
       });
@@ -43,6 +34,7 @@ async (page) => {
       if (!partial) throw Error('부분 선택 상태가 표시되지 않음');
       await p.getByRole('button', { name: '선택한 읽지 않은 공지 1개 읽음으로 표시' }).click();
       let read = await p.evaluate(() => document.querySelector('notice-app').read);
+      if (await p.evaluate(() => document.querySelector('notice-app').syncCalls) !== 1) throw Error('동기화 횟수 오류');
       if (!read.includes('one/1') || read.includes('one/2') || read.includes('two/3')) {
         throw Error('선택한 공지 외의 읽음 상태가 바뀜');
       }

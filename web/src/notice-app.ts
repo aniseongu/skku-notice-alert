@@ -287,15 +287,6 @@ export class NoticeApp extends LitElement {
     this.pushRead();
   }
 
-  private markVisibleRead() {
-    const unread = this.visible().filter((notice) => !this.isRead(notice));
-    if (!unread.length) return;
-    this.read = mergeRead(this.read ?? [], unread.map((notice) => notice.id));
-    storeRead(this.read);
-    this.pushRead();
-    this.showToast(`${unread.length}개를 읽음으로 표시했어요`);
-  }
-
   private toggleReadSelection(id: string) {
     this.selectedReads = this.selectedReads.includes(id)
       ? this.selectedReads.filter((selected) => selected !== id) : [...this.selectedReads, id];
@@ -832,7 +823,6 @@ export class NoticeApp extends LitElement {
 
   private viewFilters() {
     const list = this.visible();
-    const unreadCount = list.filter((notice) => !this.isRead(notice)).length;
     if (this.selecting) {
       const selected = new Set(this.selectedReads);
       const selectedVisible = list.filter((notice) => selected.has(notice.id));
@@ -849,19 +839,15 @@ export class NoticeApp extends LitElement {
           <button type="button" class="read-all" @click=${() => { this.selecting = false; this.selectedReads = []; }}>완료</button></div>
       </div>`;
     }
-    const readAll = html`<button type="button" class="read-all" ?disabled=${!unreadCount}
-      aria-label=${`현재 목록의 읽지 않은 공지 ${unreadCount}개 모두 읽음으로 표시`}
-      title="현재 목록의 읽지 않은 공지만 읽음으로 표시해요"
-      @click=${() => this.markVisibleRead()}>모두 읽음</button>`;
     const select = html`<button type="button" class="read-all" ?disabled=${!list.length}
       @click=${() => { this.selecting = true; this.selectedReads = []; }}>선택</button>`;
-    if (this.view === 'saved') return html`<div class="view-options saved-options">${readAll}${select}</div>`;
+    if (this.view === 'saved') return html`<div class="view-options saved-options">${select}</div>`;
     return html`<div class="view-options" role="group" aria-label="공지 보기 조건">
-      <div class="read-controls"><button type="button" class="view-toggle" aria-pressed=${String(this.unreadOnly)} @click=${() => {
+      <button type="button" class="view-toggle" aria-pressed=${String(this.unreadOnly)} @click=${() => {
         this.unreadOnly = !this.unreadOnly;
         this.selectedId = null;
         remember('view-unread', this.unreadOnly ? '1' : '0');
-      }}><span class="filter-check" aria-hidden="true"></span>읽지 않은 공지만</button>${readAll}</div>
+      }}><span class="filter-check" aria-hidden="true"></span>읽지 않은 공지만</button>
       <div class="view-actions">${select}${this.sortSelect()}</div>
     </div>`;
   }

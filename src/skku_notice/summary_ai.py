@@ -2,6 +2,7 @@
 """Fill missing public-notice summaries with one bounded Gemini batch."""
 
 import json
+import sys
 import unicodedata
 
 from google import genai
@@ -44,7 +45,10 @@ def summarize(
             config=types.GenerateContentConfig(system_instruction=SYSTEM, temperature=0,
                                                response_mime_type="application/json", response_schema=SCHEMA),
         )
-    except Exception:
+    except Exception as exc:
+        code = getattr(exc, "code", None)
+        label = f"HTTP {code}" if isinstance(code, int) else type(exc).__name__
+        print(f"공지 요약 대기: {label}", file=sys.stderr)
         return None
     try:
         replies = json.loads(response.text)["items"]

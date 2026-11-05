@@ -366,13 +366,6 @@
   }
   .tabbar button[aria-current="page"] { color: var(--accent); font-weight: 700; }
 
-  .install-bar {
-    position: fixed; left: var(--gutter); right: var(--gutter); bottom: calc(var(--tabbar-h) + 12px + env(safe-area-inset-bottom)); z-index: 3;
-    display: flex; align-items: center; gap: 8px; padding: 8px 4px 8px 16px;
-    border: 1px solid var(--line); border-radius: var(--r-lg); background: var(--surface); box-shadow: var(--shadow-pop);
-  }
-  .install-bar p { flex: 1; font-size: 14px; line-height: 20px; }
-
   /* 휴대폰 앱 안 상세 화면 */
   .reading { padding: 16px var(--gutter) calc(96px + env(safe-area-inset-bottom)); }
   .read-actions {
@@ -388,7 +381,7 @@
 @layer desktop {
   @media (min-width: 720px) {
     body { overflow: hidden; }
-    .narrow-only, .tabbar, .install-bar { display: none !important; }
+    .narrow-only, .tabbar { display: none !important; }
     .wide-only { display: flex; }
     .app {
       display: grid; grid-template-columns: 248px minmax(0, 1fr);

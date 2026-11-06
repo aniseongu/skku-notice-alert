@@ -197,10 +197,12 @@ export class SettingsView extends LitElement {
     this.busy = 'browser-push';
     try {
       if (this.browserNotifications) {
-        await disconnectBrowserPush(this.repo, this.token);
+        const result = await disconnectBrowserPush(this.repo, this.token);
         this.browserNotifications = false;
         this.canvasMode = null;
-        this.setStatus('browser-push', true, '이 기기 알림을 껐어요. 다른 기기는 그대로 받아요');
+        this.setStatus('browser-push', true, result.remoteRetained
+          ? '이 기기 알림을 껐어요. 기기 목록에 남은 등록은 다른 기기의 것일 수도 있어요'
+          : '이 기기의 알림을 껐어요');
       } else {
         await connectBrowserPush(this.repo, this.token);
         this.browserNotifications = true;
@@ -257,13 +259,20 @@ export class SettingsView extends LitElement {
   private async removeDevice(slot: string) {
     if (![...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].includes(slot) || !this.linked) return;
     const label = this.deviceNames[slot] || (slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`);
-    if (!window.confirm(`${label} 등록 정보를 삭제할까요? 이 기기는 알림을 다시 연결할 때까지 받을 수 없어요.`)) return;
+    const uncertain = currentDeviceSlot() === slot && !matchesCurrentDevice(slot, this.saved[slot]);
+    const detail = uncertain ? '이 기기에서 사용한 기록이 있지만 지금은 다른 기기의 등록일 수도 있어요.'
+      : '이 등록을 쓰는 기기는 알림을 다시 연결할 때까지 받을 수 없어요.';
+    if (!window.confirm(`${label} 등록 정보를 삭제할까요? ${detail}`)) return;
     this.busy = 'device-list';
     try {
       if (this.browserNotifications && matchesCurrentDevice(slot, this.saved[slot])) {
-        await disconnectBrowserPush(this.repo, this.token);
+        const result = await disconnectBrowserPush(this.repo, this.token);
         this.browserNotifications = false;
         this.canvasMode = null;
+        if (result.remoteRetained) {
+          this.setStatus('device-list', true, '이 기기 알림을 껐어요. 남은 등록은 기기 목록에서 확인해 주세요');
+          return;
+        }
       } else {
         const local = this.browserNotifications && currentDeviceSlot() === slot;
         const saved = await listSecrets(this.repo, this.token);
@@ -272,9 +281,9 @@ export class SettingsView extends LitElement {
           await deleteSecret(this.repo, this.token, slot);
         }
         if (local) {
+          await clearLocalBrowserPush();
           this.browserNotifications = false;
           this.canvasMode = null;
-          await clearLocalBrowserPush();
         }
         if (saved[slot]) {
           await saveVariable(this.repo, this.token, deviceNameVariable(slot), '');
@@ -821,16 +830,18 @@ export class SettingsView extends LitElement {
               ${[...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].filter((slot) => this.saved[slot]).length === 0
                 ? html`<div class="setting"><p class="field-note">등록된 알림 기기가 없어요</p></div>`
                 : [...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].filter((slot) => this.saved[slot]).sort((a, b) =>
-                  Number(this.browserNotifications && matchesCurrentDevice(b, this.saved[b])) - Number(this.browserNotifications && matchesCurrentDevice(a, this.saved[a]))).map((slot) => {
-                  const local = this.browserNotifications && currentDeviceSlot() === slot;
+                  Number(currentDeviceSlot() === b) - Number(currentDeviceSlot() === a)).map((slot) => {
+                  const recorded = currentDeviceSlot() === slot;
+                  const local = this.browserNotifications && recorded;
                   const current = local && matchesCurrentDevice(slot, this.saved[slot]);
                   const label = this.deviceNames[slot] || (current && this.deviceSuggestion) || (slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`);
                   const date = new Date(this.saved[slot]);
                   const updated = Number.isNaN(date.getTime()) ? '' : new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium' }).format(date);
-                  return html`<div class="setting"><div class="setting-text"><p class="setting-name">${label}${current ? ' (이 기기)' : ''}</p>
+                  return html`<div class="setting"><div class="setting-text"><p class="setting-name">${label}${current ? ' (이 기기)' : recorded ? ' (이 기기의 연결 기록)' : ''}</p>
                     ${updated ? html`<p class="setting-help">등록 정보 갱신: ${updated}</p>` : nothing}
-                    ${current && !this.deviceNames[slot] && this.deviceSuggestion ? html`<p class="setting-help">이 브라우저에서 제안한 이름이에요. 저장하면 다른 기기에서도 보여요</p>` : nothing}</div>
-                    <div class="setting-control"><span class="setting-state">${current ? '브라우저 구독 확인' : local ? '이 브라우저의 이전 기록, 등록 확인 필요' : '수신 상태 미확인'}</span>
+                    ${current && !this.deviceNames[slot] && this.deviceSuggestion ? html`<p class="setting-help">이 기기에서 제안한 이름이에요. 저장하면 다른 기기에서도 보여요</p>` : nothing}
+                    ${current ? html`<p class="setting-help">이 기기의 알림이 연결돼 있어요</p>` : recorded ? html`<p class="setting-help">지금은 다른 기기의 등록일 수도 있어요</p>` : nothing}</div>
+                    <div class="setting-control">
                     ${this.deviceNameEditing === slot ? html`<div class="inline"><input class="input" aria-label="${label} 이름" maxlength="40" .value=${this.deviceNameDraft} @input=${(e: Event) => { this.deviceNameDraft = (e.target as HTMLInputElement).value; }}>
                       <button type="button" class="ghost-button" ?disabled=${!!this.busy} @click=${() => this.changeDeviceName(slot)}>저장하기</button>
                       <button type="button" class="text-button device-name-action" ?disabled=${!!this.busy} @click=${() => { this.deviceNameEditing = ''; }}>닫기</button></div>` : html`<div class="inline">
@@ -838,8 +849,8 @@ export class SettingsView extends LitElement {
                       <button type="button" class="text-button device-name-action" aria-label="${label} 등록 정보 삭제하기" ?disabled=${!!this.busy} @click=${() => this.removeDevice(slot)}>등록 정보 삭제하기</button></div>`}
                     </div></div>`;
                 })}
-              <div class="setting"><p class="field-note">기기 이름은 연결된 저장소에서 함께 써요. 모델을 알 수 없으면 직접 이름을 바꿔 주세요</p>
-                <p class="field-note">다른 기기의 알림 설정은 해당 기기에서 확인해 주세요. 만료 여부는 알림을 보낼 때만 확인해요</p>
+              <div class="setting"><p class="field-note">기기 이름은 다른 기기에서도 보여요</p>
+                <p class="field-note">알림이 도착하는지는 각 기기에서 확인해 주세요. 등록 목록만으로는 알 수 없어요</p>
                 <a class="ghost-button" href="?view=settings&section=notifications">이 기기 알림 확인하기</a>${this.note('device-list')}</div>`}
           </div>
         </section>
@@ -864,7 +875,7 @@ export class SettingsView extends LitElement {
                 ${this.browserNotifications ? html`<button type="button" class="ghost-button" @click=${this.testBrowserNotifications}>테스트 알림 띄우기</button>` : nothing}
               </div>
               ${!supportsBrowserPush() ? html`<p class="field-note">최신 브라우저에서 알림을 연결해 주세요</p>` : nothing}
-              ${this.status['browser-push'] && !this.status['browser-push'].ok ? this.note('browser-push') : nothing}
+              ${this.note('browser-push')}
               <p class="field-note">알림 수신은 이 기기에만 적용해요</p>
             </div>
           </div>

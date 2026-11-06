@@ -32,6 +32,7 @@ def _get_pages(client: httpx.Client, path: str, gap: float = 1.0) -> list[dict]:
         if parts.scheme != "https" or parts.netloc != "canvas.skku.edu" or url in visited:
             raise CanvasError("잘못된 페이지 링크")
         visited.add(url)
+        unauthorized_seen = False
         for attempt in range(3):
             try:
                 response = client.get(url)
@@ -41,7 +42,13 @@ def _get_pages(client: httpx.Client, path: str, gap: float = 1.0) -> list[dict]:
                 time.sleep(2**attempt)
                 continue
             if response.status_code == 401:
-                raise CanvasError("토큰 거절")
+                if unauthorized_seen:
+                    raise CanvasError("토큰 거절")
+                if attempt == 2:
+                    raise CanvasError("Canvas 인증 응답 확인 실패")
+                unauthorized_seen = True
+                time.sleep(1)
+                continue
             if response.status_code >= 500 and attempt < 2:
                 time.sleep(2**attempt)
                 continue

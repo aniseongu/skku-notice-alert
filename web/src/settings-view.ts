@@ -6,6 +6,7 @@ import {
 } from './github';
 import { forgetToken, loadToken, readSavedSecrets, rememberSavedSecrets, storeToken } from './settings-storage';
 import { GoogleError, connectGoogleCalendar, validClientId } from './google-calendar';
+import { keyConnection, KeyConnectionError } from './key-connection';
 import { deviceNameVariable, loadDeviceNames, saveDeviceName, suggestDeviceName } from './device-names';
 import { browserPushEnabled, canvasPushMode, clearLocalBrowserPush, currentDeviceSlot, matchesCurrentDevice, DEVICE_SLOTS, defaultCanvasPushMode, connectBrowserPush, disconnectBrowserPush, pushConfiguration, setCanvasPushMode, supportsBrowserPush, testBrowserNotification } from './browser-push';
 
@@ -121,6 +122,7 @@ export class SettingsView extends LitElement {
   summaryTimeLoaded = false;
   private googleChain: { run(): Promise<void> } | null = null;
   private googleEditing = false;
+  private keyChains: Record<string, { repo: string; token: string; value: string; run(): Promise<void> }> = {};
   private deviceNames: Record<string, string> = {};
   private deviceNameEditing = '';
   private deviceNameDraft = '';
@@ -149,6 +151,7 @@ export class SettingsView extends LitElement {
     window.removeEventListener('beforeunload', this.warnUnsaved);
     this.stopScanning();
     this.hideHandoff();
+    this.keyChains = {};
     super.disconnectedCallback();
   }
 
@@ -173,11 +176,13 @@ export class SettingsView extends LitElement {
     this.deviceNames = {};
     this.deviceNameEditing = '';
     this.googleChain = null;
+    this.keyChains = {};
     this.editing = {};
     this.status = {};
   }
 
   private closeEdit(name: string) {
+    delete this.keyChains[name];
     this.editing = { ...this.editing, [name]: false };
     this.values = { ...this.values, [name]: '' };
     this.reveal = { ...this.reveal, [name]: false };
@@ -421,6 +426,7 @@ export class SettingsView extends LitElement {
     await forgetToken();
     this.token = '';
     this.googleChain = null;
+    this.keyChains = {};
     this.linked = false;
     this.connectionState = 'unlinked';
     this.syncedKeywords = null;
@@ -428,27 +434,39 @@ export class SettingsView extends LitElement {
   }
 
   private async save(name: string, value: string) {
+    if (this.busy) return;
     if (!value.trim()) { this.setStatus(name, false, '키를 먼저 붙여 넣어 주세요'); return; }
+    const status = { ...this.status }; delete status[name]; this.status = status;
     this.busy = name;
     const repo = this.repo;
     const token = this.token;
     try {
-      await saveSecret(repo, token, name, value.trim());
+      const trimmed = value.trim();
+      if (name === 'CANVAS_TOKEN' || name === 'GEMINI_API_KEY') {
+        let chain = this.keyChains[name];
+        if (!chain || chain.repo !== repo || chain.token !== token || chain.value !== trimmed) {
+          chain = { repo, token, value: trimmed, ...keyConnection(repo, token, name, trimmed) };
+          this.keyChains[name] = chain;
+        }
+        await chain.run();
+      } else await saveSecret(repo, token, name, trimmed);
       const saved = { ...readSavedSecrets(repo), [name]: new Date().toISOString() };
       rememberSavedSecrets(repo, saved);
       if (this.repo === repo) {
         this.saved = saved;
         this.closeEdit(name);
-        this.setStatus(name, true, '저장했어요. 다음 실행부터 써요');
+        this.setStatus(name, true, name === 'CANVAS_TOKEN' ? '토큰을 저장했어요. 연결은 다음 수집 때 확인해요' : '저장했어요. 다음 실행부터 써요');
       }
     } catch (error) {
-      this.setStatus(name, false, error instanceof GitHubError || error instanceof SecretWriteUncertainError ? error.message : '저장하지 못했어요');
+      this.setStatus(name, false, error instanceof GitHubError || error instanceof SecretWriteUncertainError || error instanceof KeyConnectionError ? error.message : '연결을 마치지 못했어요. 다시 시도해 주세요');
     } finally { this.busy = ''; }
   }
 
   private async check(name: string) {
+    if (this.busy) return;
     const value = this.values[name]?.trim() ?? '';
     if (!value) { this.setStatus(name, false, '키를 먼저 붙여 넣어 주세요'); return; }
+    const status = { ...this.status }; delete status[name]; this.status = status;
     this.busy = name;
     try {
       const ok = await checkGeminiKey(value);
@@ -568,6 +586,7 @@ export class SettingsView extends LitElement {
   }
 
   private async connectGoogle() {
+    if (this.busy) return;
     const clientId = (this.values.GOOGLE_CLIENT_ID ?? '').trim();
     const secret = (this.values.GOOGLE_CLIENT_SECRET ?? '').trim();
     if (!this.linked) { this.setStatus('google', false, '위 연결에서 GitHub에 먼저 연결해 주세요'); return; }
@@ -589,6 +608,7 @@ export class SettingsView extends LitElement {
   }
 
   private async disconnectGoogle() {
+    if (this.busy) return;
     this.busy = 'google';
     try {
       // 갱신 토큰과 비밀번호만 지운다. 이미 넣은 일정과 캘린더는 구글에 남는다.
@@ -961,8 +981,8 @@ export class SettingsView extends LitElement {
               ${(this.saved.GOOGLE_CONNECTION || this.saved.GOOGLE_REFRESH_TOKEN || this.saved.GOOGLE_CLIENT_SECRET) && !this.googleChain && !this.googleEditing ? html`
                 <span class="setting-state">${this.saved.GOOGLE_CONNECTION || (this.saved.GOOGLE_REFRESH_TOKEN && this.saved.GOOGLE_CLIENT_SECRET) ? '연결 정보 저장됨' : '연결 정보 확인 필요'}</span>
                 <details class="connection-manual"><summary>연결 관리</summary>
-                <button type="button" class="ghost-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${() => { this.googleEditing = true; }}>다시 연결하기</button>
-                <button type="button" class="ghost-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.disconnectGoogle}>연결 끊기</button></details>
+                <button type="button" class="ghost-button" ?disabled=${!!this.busy || !this.linked} @click=${() => { this.googleEditing = true; }}>다시 연결하기</button>
+                <button type="button" class="ghost-button" ?disabled=${!!this.busy || !this.linked} @click=${this.disconnectGoogle}>연결 끊기</button></details>
               ` : html`
                 <span class="setting-state">${this.linked ? '미연결' : '확인 필요'}</span>
                 <details class="connection-manual" ?open=${!!this.googleChain || this.googleEditing}><summary>연결하기</summary>
@@ -970,7 +990,7 @@ export class SettingsView extends LitElement {
                   ?disabled=${!!this.googleChain} .value=${this.values.GOOGLE_CLIENT_ID ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_ID: (e.target as HTMLInputElement).value }; }}>
                 <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="구글 클라이언트 보안 비밀번호" placeholder="클라이언트 보안 비밀번호"
                   ?disabled=${!!this.googleChain} .value=${this.values.GOOGLE_CLIENT_SECRET ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_SECRET: (e.target as HTMLInputElement).value }; }}>
-                <button type="button" class="solid-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.connectGoogle}>
+                <button type="button" class="solid-button" ?disabled=${!!this.busy || !this.linked} @click=${this.connectGoogle}>
                   ${this.busy === 'google' ? '연결 중' : this.googleChain ? '다시 시도하기' : '구글 캘린더 연결하기'}</button>
                 ${this.googleChain ? html`<button type="button" class="text-button" ?disabled=${this.busy === 'google'} @click=${() => { this.googleChain = null; this.setStatus('google', false, '다시 연결하려면 구글 승인을 받아 주세요'); }}>처음부터 다시 연결하기</button>` : nothing}
                 ${this.googleEditing ? html`<button type="button" class="text-button" ?disabled=${this.busy === 'google'} @click=${() => { this.googleEditing = false; this.googleChain = null; this.values = { ...this.values, GOOGLE_CLIENT_ID: '', GOOGLE_CLIENT_SECRET: '' }; }}>닫기</button>` : nothing}
@@ -1001,7 +1021,14 @@ export class SettingsView extends LitElement {
     const value = this.values[name] ?? '';
     const editing = Boolean(this.editing[name]);
     const state = this.saved[name] ? '저장됨' : this.linked ? '미설정' : '확인 필요';
-    const onInput = (e: Event) => { this.values = { ...this.values, [name]: (e.target as HTMLInputElement).value }; };
+    const onInput = (e: Event) => {
+      const next = (e.target as HTMLInputElement).value;
+      if (this.values[name] !== next) {
+        delete this.keyChains[name];
+        const status = { ...this.status }; delete status[name]; this.status = status;
+      }
+      this.values = { ...this.values, [name]: next };
+    };
     return html`
       <div class="setting" data-key=${name}>
         <div class="setting-text">
@@ -1012,29 +1039,30 @@ export class SettingsView extends LitElement {
           ${editing ? html`
             ${field.multiline
               ? html`<textarea class="input" rows="5" autocomplete="off" spellcheck="false" aria-label=${field.label}
-                  placeholder=${field.placeholder} .value=${value} @input=${onInput}></textarea>`
+                  placeholder=${field.placeholder} ?disabled=${!!this.busy} .value=${value} @input=${onInput}></textarea>`
               : html`<div class="inline">
                   <input class="input" type=${shown ? 'text' : 'password'} autocomplete="off" spellcheck="false" aria-label=${field.label}
-                    placeholder=${field.placeholder} .value=${value} @input=${onInput}>
-                  <button type="button" class="ghost-button" aria-pressed=${String(shown)}
+                    placeholder=${field.placeholder} ?disabled=${!!this.busy} .value=${value} @input=${onInput}>
+                  <button type="button" class="ghost-button" aria-pressed=${String(shown)} ?disabled=${!!this.busy}
                     @click=${() => { this.reveal = { ...this.reveal, [name]: !shown }; }}>${shown ? '숨기기' : '보기'}</button>
                 </div>`}
             <div class="inline">
-              ${name === 'GEMINI_API_KEY' ? html`<button type="button" class="ghost-button" ?disabled=${this.busy === name} @click=${() => this.check(name)}>키 확인하기</button>` : nothing}
-              <button type="button" class="solid-button" ?disabled=${!this.connected() || this.busy === name} @click=${() => this.save(name, value)}>
-                ${this.busy === name ? '저장 중' : '저장하기'}</button>
-              <button type="button" class="ghost-button" ?disabled=${this.busy === name} @click=${() => this.closeEdit(name)}>닫기</button>
+              ${name === 'GEMINI_API_KEY' ? html`<button type="button" class="ghost-button" ?disabled=${!!this.busy} @click=${() => this.check(name)}>키 확인하기</button>` : nothing}
+              <button type="button" class="solid-button" ?disabled=${!this.connected() || !!this.busy} @click=${() => this.save(name, value)}>
+                ${this.busy === name ? '연결 중' : this.keyChains[name] && this.status[name] && !this.status[name].ok ? '다시 시도하기' : '저장하기'}</button>
+              <button type="button" class="ghost-button" ?disabled=${!!this.busy} @click=${() => this.closeEdit(name)}>닫기</button>
             </div>
-            ${this.connected() && value.trim() ? html`<p class="field-note">아직 저장하지 않았어요</p>` : nothing}
+            ${this.connected() && value.trim() && !this.status[name] && !this.busy ? html`<p class="field-note">아직 저장하지 않았어요</p>` : nothing}
+            ${name === 'CANVAS_TOKEN' ? html`<p class="field-note">토큰 연결은 저장한 뒤 다음 수집에서 확인해요</p>` : nothing}
             ${this.note(name)}
             ${this.guide(name, field.steps, field.multiline ? '쓰는 방법' : '받는 방법')}
           ` : html`
             <div class="connection-summary">
               <span class="setting-state">${state}</span>
               <button type="button" class="text-button key-action" aria-label=${`${field.label} ${this.saved[name] ? '수정하기' : '입력하기'}`}
-                @click=${() => { this.editing = { ...this.editing, [name]: true }; }}>${this.saved[name] ? '수정하기' : '입력하기'}</button>
+                @click=${() => { const status = { ...this.status }; delete status[name]; this.status = status; this.editing = { ...this.editing, [name]: true }; }}>${this.saved[name] ? '수정하기' : '입력하기'}</button>
             </div>
-            ${this.status[name] && !this.status[name].ok ? this.note(name) : nothing}
+            ${this.note(name)}
           `}
         </div>
       </div>`;

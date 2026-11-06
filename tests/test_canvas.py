@@ -76,6 +76,7 @@ def test_missing_larger_lead_sends_smallest_once() -> None:
 
 
 def test_network_401_has_no_request_details(monkeypatch) -> None:
+    monkeypatch.setattr(canvas.time, 'sleep', lambda _: None)
     request = httpx.Request("GET", "https://canvas.skku.edu/api/v1/users/self/favorites/courses?secret=x")
     client = httpx.Client(transport=httpx.MockTransport(lambda _: httpx.Response(401, request=request)))
     try:
@@ -87,6 +88,32 @@ def test_network_401_has_no_request_details(monkeypatch) -> None:
             assert "secret" not in str(exc)
     finally:
         client.close()
+
+
+@pytest.mark.parametrize('statuses,expected,calls', [
+    ([401, 200], 'ok', 2),
+    ([401, 401], '토큰 거절', 2),
+    ([503, 401, 401], '토큰 거절', 3),
+    ([503, 503, 401], 'Canvas 인증 응답 확인 실패', 3),
+])
+def test_canvas_token_rejection_is_confirmed_once_within_request_limit(
+    monkeypatch, statuses, expected, calls
+):
+    monkeypatch.setattr(canvas.time, 'sleep', lambda _: None)
+    attempted = []
+
+    def respond(request):
+        status = statuses[len(attempted)]
+        attempted.append(status)
+        return httpx.Response(status, json=[] if status == 200 else {})
+
+    with httpx.Client(transport=httpx.MockTransport(respond)) as client:
+        if expected == 'ok':
+            assert canvas._get_pages(client, canvas.FAVORITES, 0) == []
+        else:
+            with pytest.raises(canvas.CanvasError, match=expected):
+                canvas._get_pages(client, canvas.FAVORITES, 0)
+    assert len(attempted) == calls
 
 
 def test_export_contains_no_canvas_data(tmp_path: Path) -> None:

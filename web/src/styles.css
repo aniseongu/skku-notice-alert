@@ -31,8 +31,6 @@
     --wco-h: 0px;
     /* Windows 탐색 칸 면(Mica처럼 바탕에 강조색을 아주 약하게 섞는다). 내용 칸은 --surface. */
     --mica: color-mix(in oklch, var(--bg) 94%, var(--accent));
-    --side-selected: light-dark(oklch(0.36 0.012 var(--h)), oklch(0.31 0.008 var(--h)));
-    --side-selected-text: light-dark(oklch(0.98 0.004 var(--h)), var(--text));
   }
   /* 설정 화면의 테마 선택(기기 설정, 밝게, 어둡게). light-dark()가 이 값을 따른다. */
   :root[data-theme="light"] { color-scheme: light; }
@@ -430,11 +428,9 @@
     .side-label { display: flex; align-items: center; gap: 10px; min-width: 0; }
     .side-label > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .side-label .i { width: 20px; height: 20px; }
-    .side-trailing { display: flex; align-items: center; gap: 12px; flex: none; }
     .side-item .count { font-size: 14px; color: var(--text-3); font-variant-numeric: tabular-nums; }
-    .side-item[aria-current="page"] { background: var(--side-selected); color: var(--side-selected-text); font-weight: 700; }
-    .side-item[aria-current="page"] .i { color: light-dark(var(--side-selected-text), var(--accent)); }
-    .side-item[aria-current="page"] .count { color: light-dark(var(--side-selected-text), var(--text-2)); }
+    .side-item[aria-current="page"] { background: var(--sunken); color: var(--text); font-weight: 600; }
+    .side-item[aria-current="page"] .i { color: var(--accent); }
     .side-item.add { color: var(--text-3); }
     .side-foot { display: flex; flex-direction: column; gap: 1px; margin-top: auto; padding-top: 12px; }
 

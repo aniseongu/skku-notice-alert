@@ -503,6 +503,7 @@
   .setting-help { margin-top: 2px; font-size: 13px; line-height: 19px; color: var(--text-2); }
   .setting-saved { margin-top: 4px; font-size: 13px; color: var(--accent); font-weight: 600; }
   .setting-control { display: flex; flex-direction: column; align-items: stretch; gap: 8px; min-width: 0; }
+  .device-name-action { min-height: 44px; }
   .inline { display: flex; flex-wrap: wrap; gap: 8px; }
   /* 입력칸의 기본 최소 폭(약 300px) 때문에 옆 단추가 아래 줄로 떨어지지 않게 한다. */
   .inline .input { flex: 1 1 200px; min-width: 0; }

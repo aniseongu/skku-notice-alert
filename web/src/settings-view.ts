@@ -2,11 +2,12 @@
 import { LitElement, html, nothing, type TemplateResult } from 'lit';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import {
-  GitHubError, REPO_PATTERN, checkGeminiKey, deleteSecret, listSecrets, readVariable, saveSecret, saveVariable,
+  GitHubError, SecretWriteUncertainError, REPO_PATTERN, checkGeminiKey, deleteSecret, listSecrets, readVariable, saveSecret, saveVariable,
 } from './github';
 import { forgetToken, loadToken, readSavedSecrets, rememberSavedSecrets, storeToken } from './settings-storage';
 import { GoogleError, connectGoogleCalendar, validClientId } from './google-calendar';
-import { browserPushEnabled, canvasPushMode, currentDeviceSlot, DEVICE_SLOTS, defaultCanvasPushMode, connectBrowserPush, disconnectBrowserPush, pushConfiguration, setCanvasPushMode, supportsBrowserPush, testBrowserNotification } from './browser-push';
+import { deviceNameVariable, loadDeviceNames, saveDeviceName, suggestDeviceName } from './device-names';
+import { browserPushEnabled, canvasPushMode, clearLocalBrowserPush, currentDeviceSlot, matchesCurrentDevice, DEVICE_SLOTS, defaultCanvasPushMode, connectBrowserPush, disconnectBrowserPush, pushConfiguration, setCanvasPushMode, supportsBrowserPush, testBrowserNotification } from './browser-push';
 
 export type Theme = 'auto' | 'light' | 'dark';
 type CanvasMode = 'off' | 'summary' | 'reminders';
@@ -82,7 +83,7 @@ export class SettingsView extends LitElement {
     repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
     keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true }, connectionState: { state: true },
-    qr: { state: true }, handoff: { state: true }, canvasMode: { state: true }, scanningQr: { state: true }, summaryTime: { state: true }, summaryTimeLoaded: { state: true }, googleChain: { state: true }, googleEditing: { state: true },
+    qr: { state: true }, handoff: { state: true }, canvasMode: { state: true }, scanningQr: { state: true }, summaryTime: { state: true }, summaryTimeLoaded: { state: true }, googleChain: { state: true }, googleEditing: { state: true }, deviceNames: { state: true }, deviceNameEditing: { state: true }, deviceNameDraft: { state: true }, deviceSuggestion: { state: true },
   };
 
   keywords: string[] = [];
@@ -120,6 +121,10 @@ export class SettingsView extends LitElement {
   summaryTimeLoaded = false;
   private googleChain: { run(): Promise<void> } | null = null;
   private googleEditing = false;
+  private deviceNames: Record<string, string> = {};
+  private deviceNameEditing = '';
+  private deviceNameDraft = '';
+  private deviceSuggestion = '';
 
   createRenderRoot() { return this; }
 
@@ -165,6 +170,8 @@ export class SettingsView extends LitElement {
     this.linked = false;
     this.connectionState = 'unlinked';
     this.canvasMode = null;
+    this.deviceNames = {};
+    this.deviceNameEditing = '';
     this.googleChain = null;
     this.editing = {};
     this.status = {};
@@ -195,7 +202,7 @@ export class SettingsView extends LitElement {
         this.canvasMode = canvasPushMode();
         this.setStatus('browser-push', true, '연결했어요. 앱을 닫아도 브라우저가 켜져 있으면 알림을 받아요');
       }
-      try { this.saved = await listSecrets(this.repo, this.token); }
+      try { this.saved = await listSecrets(this.repo, this.token); await this.refreshDeviceNames(this.saved, this.browserNotifications); }
       catch { this.setStatus('browser-push', false, '알림 설정은 바꿨어요. 기기 목록은 다시 연결해 확인해 주세요'); }
     } catch (error) {
       this.setStatus('browser-push', false, error instanceof Error ? error.message : '알림을 연결하지 못했어요');
@@ -211,23 +218,68 @@ export class SettingsView extends LitElement {
     }
   }
 
+  private async refreshDeviceNames(saved: Record<string, string>, enabled: boolean) {
+    const repo = this.repo, token = this.token;
+    const slots = [...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].filter((slot) => saved[slot]);
+    try {
+      const names = await loadDeviceNames(repo, token, slots);
+      const slot = enabled ? currentDeviceSlot() : null;
+      const suggestion = slot && matchesCurrentDevice(slot, saved[slot]) && !names[slot] ? await suggestDeviceName() : '';
+      if (this.repo === repo && this.token === token) { this.deviceNames = names; this.deviceSuggestion = suggestion; }
+    } catch {
+      if (this.repo === repo && this.token === token) {
+        this.deviceNames = {};
+        this.setStatus('device-list', false, '기기 이름을 불러오지 못했어요. 연결을 다시 확인해 주세요');
+      }
+    }
+  }
+
+  private async changeDeviceName(slot: string) {
+    if (!this.linked || this.busy) return;
+    this.busy = 'device-name';
+    try {
+      const saved = await listSecrets(this.repo, this.token);
+      if (!saved[slot] || saved[slot] !== this.saved[slot]) throw new Error('기기 등록이 바뀌었어요. 다시 불러와 주세요');
+      await saveDeviceName(this.repo, this.token, slot, this.deviceNameDraft);
+      this.deviceNames = { ...this.deviceNames, [slot]: this.deviceNameDraft.trim() };
+      this.deviceNameEditing = '';
+      this.setStatus('device-list', true, '기기 이름을 저장했어요');
+    } catch (error) {
+      this.setStatus('device-list', false, error instanceof Error ? error.message : '기기 이름을 저장하지 못했어요');
+    } finally { this.busy = ''; }
+  }
+
   private async removeDevice(slot: string) {
     if (![...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].includes(slot) || !this.linked) return;
-    const label = slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`;
+    const label = this.deviceNames[slot] || (slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`);
     if (!window.confirm(`${label} 등록 정보를 삭제할까요? 이 기기는 알림을 다시 연결할 때까지 받을 수 없어요.`)) return;
     this.busy = 'device-list';
     try {
-      if (this.browserNotifications && currentDeviceSlot() === slot) {
+      if (this.browserNotifications && matchesCurrentDevice(slot, this.saved[slot])) {
         await disconnectBrowserPush(this.repo, this.token);
         this.browserNotifications = false;
         this.canvasMode = null;
       } else {
+        const local = this.browserNotifications && currentDeviceSlot() === slot;
         const saved = await listSecrets(this.repo, this.token);
-        if (saved[slot]) await deleteSecret(this.repo, this.token, slot);
+        if (saved[slot] && saved[slot] !== this.saved[slot]) throw new Error('기기 등록이 바뀌었어요');
+        if (saved[slot]) {
+          await deleteSecret(this.repo, this.token, slot);
+        }
+        if (local) {
+          this.browserNotifications = false;
+          this.canvasMode = null;
+          await clearLocalBrowserPush();
+        }
+        if (saved[slot]) {
+          await saveVariable(this.repo, this.token, deviceNameVariable(slot), '');
+        }
       }
       this.saved = await listSecrets(this.repo, this.token);
+      const names = { ...this.deviceNames }; delete names[slot]; this.deviceNames = names;
       this.setStatus('device-list', true, '등록 정보를 삭제했어요');
     } catch {
+      try { this.saved = await listSecrets(this.repo, this.token); } catch { /* 확인할 수 없으면 이전 표시를 유지한다 */ }
       this.setStatus('device-list', false, '삭제를 마치지 못했어요. 다시 시도해 주세요');
     } finally { this.busy = ''; }
   }
@@ -249,7 +301,7 @@ export class SettingsView extends LitElement {
         this.saved = saved;
         this.linked = true;
         this.connectionState = 'connected';
-        if (!sync) { this.setStatus('github', true, '연결을 확인했어요'); return; }
+        if (!sync) { await this.refreshDeviceNames(saved, await browserPushEnabled()); this.setStatus('github', true, '연결을 확인했어요'); return; }
         await this.pullKeywords(repo, token);
         this.summaryTimeLoaded = false;
         try {
@@ -272,6 +324,8 @@ export class SettingsView extends LitElement {
             catch { this.setStatus('canvas-mode', false, '아캠 알림 범위를 저장하지 못했어요. 알림 설정에서 다시 골라 주세요'); }
           }
           this.canvasMode = enabled ? canvasPushMode() : null;
+          if (enabled) this.saved = await listSecrets(repo, token);
+          await this.refreshDeviceNames(this.saved, enabled);
         }
         this.setStatus('github', true, '연결했어요. 다음에 열 때도 연결돼 있어요');
       }
@@ -388,7 +442,7 @@ export class SettingsView extends LitElement {
         this.setStatus(name, true, '저장했어요. 다음 실행부터 써요');
       }
     } catch (error) {
-      this.setStatus(name, false, error instanceof GitHubError ? error.message : '저장하지 못했어요');
+      this.setStatus(name, false, error instanceof GitHubError || error instanceof SecretWriteUncertainError ? error.message : '저장하지 못했어요');
     } finally { this.busy = ''; }
   }
 
@@ -746,16 +800,24 @@ export class SettingsView extends LitElement {
               ${[...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].filter((slot) => this.saved[slot]).length === 0
                 ? html`<div class="setting"><p class="field-note">등록된 알림 기기가 없어요</p></div>`
                 : [...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].filter((slot) => this.saved[slot]).map((slot) => {
-                  const current = this.browserNotifications && currentDeviceSlot() === slot;
-                  const label = slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`;
+                  const local = this.browserNotifications && currentDeviceSlot() === slot;
+                  const current = local && matchesCurrentDevice(slot, this.saved[slot]);
+                  const label = this.deviceNames[slot] || (current && this.deviceSuggestion) || (slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`);
                   const date = new Date(this.saved[slot]);
                   const updated = Number.isNaN(date.getTime()) ? '' : new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium' }).format(date);
                   return html`<div class="setting"><div class="setting-text"><p class="setting-name">${label}${current ? ' (이 기기)' : ''}</p>
-                    ${updated ? html`<p class="setting-help">등록 정보 갱신: ${updated}</p>` : nothing}</div>
-                    <div class="setting-control"><span class="setting-state">${current ? '브라우저 구독 확인' : '수신 상태 미확인'}</span>
-                    <button type="button" class="text-button" ?disabled=${this.busy !== ''} @click=${() => this.removeDevice(slot)}>등록 정보 삭제하기</button></div></div>`;
+                    ${updated ? html`<p class="setting-help">등록 정보 갱신: ${updated}</p>` : nothing}
+                    ${current && !this.deviceNames[slot] && this.deviceSuggestion ? html`<p class="setting-help">이 브라우저에서 제안한 이름이에요. 저장하면 다른 기기에서도 보여요</p>` : nothing}</div>
+                    <div class="setting-control"><span class="setting-state">${current ? '브라우저 구독 확인' : local ? '이 브라우저의 이전 기록, 등록 확인 필요' : '수신 상태 미확인'}</span>
+                    ${this.deviceNameEditing === slot ? html`<div class="inline"><input class="input" aria-label="${label} 이름" maxlength="40" .value=${this.deviceNameDraft} @input=${(e: Event) => { this.deviceNameDraft = (e.target as HTMLInputElement).value; }}>
+                      <button type="button" class="ghost-button" ?disabled=${!!this.busy} @click=${() => this.changeDeviceName(slot)}>저장하기</button>
+                      <button type="button" class="text-button device-name-action" ?disabled=${!!this.busy} @click=${() => { this.deviceNameEditing = ''; }}>닫기</button></div>` : html`<div class="inline">
+                      <button type="button" class="text-button device-name-action" aria-label="${label} 이름 바꾸기" ?disabled=${!!this.busy} @click=${() => { this.deviceNameDraft = this.deviceNames[slot] || (current ? this.deviceSuggestion : '') || ''; this.deviceNameEditing = slot; }}>이름 바꾸기</button>
+                      <button type="button" class="text-button device-name-action" aria-label="${label} 등록 정보 삭제하기" ?disabled=${!!this.busy} @click=${() => this.removeDevice(slot)}>등록 정보 삭제하기</button></div>`}
+                    </div></div>`;
                 })}
-              <div class="setting"><p class="field-note">다른 기기의 이름과 알림 설정은 해당 기기에서 확인해 주세요. 만료 여부는 알림을 보낼 때만 확인해요</p>
+              <div class="setting"><p class="field-note">기기 이름은 연결된 저장소에서 함께 써요. 모델을 알 수 없으면 직접 이름을 바꿔 주세요</p>
+                <p class="field-note">다른 기기의 알림 설정은 해당 기기에서 확인해 주세요. 만료 여부는 알림을 보낼 때만 확인해요</p>
                 <a class="ghost-button" href="?view=settings&section=notifications">이 기기 알림 확인하기</a>${this.note('device-list')}</div>`}
           </div>
         </section>

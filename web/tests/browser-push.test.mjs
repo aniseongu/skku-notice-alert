@@ -9,11 +9,13 @@ const source = readFileSync(new URL('../src/browser-push.ts', import.meta.url), 
 const js = stripTypeScriptTypes(source.replace(/^import .*;$/gm, '').replace(/\bexport\s+/g, ''), { mode: 'strip' })
   + '\nObject.assign(exports, { defaultCanvasPushMode, canvasPushMode, connectBrowserPush, disconnectBrowserPush, setCanvasPushMode });';
 
-function makeEnvironment({ mobile = false, subscription = true, used = {}, saveFails = false, deleteFails = false } = {}) {
+function makeEnvironment({ mobile = false, subscription = true, used = {}, saveFails = false, uncertain = false, deleteFails = false, nameClearFails = false, readbackFails = false } = {}) {
   const storage = new Map();
   const writes = [];
   const secretNames = { ...used };
   let permissionRequests = 0;
+  const actions = [];
+  let failNextList = false;
   const current = { endpoint: 'https://push.example/subscription', toJSON: () => ({
     endpoint: 'https://push.example/subscription', keys: { p256dh: 'public-key', auth: 'auth-key' },
   }) };
@@ -23,13 +25,19 @@ function makeEnvironment({ mobile = false, subscription = true, used = {}, saveF
   const registration = { pushManager: manager };
   const notification = { permission: 'granted', requestPermission: async () => { permissionRequests++; return 'granted'; } };
   class GitHubError extends Error {}
+  class SecretWriteUncertainError extends Error {}
   const github = {
-    GitHubError,
-    listSecrets: async () => secretNames,
+    GitHubError, SecretWriteUncertainError,
+    deviceNameVariable: (slot) => `NAME_${slot}`,
+    saveVariable: async (_repo, _token, name, value) => { actions.push(['name', name, value]); if (nameClearFails) throw new GitHubError('이름 삭제 실패'); },
+    listSecrets: async () => { if (failNextList) { failNextList = false; throw new GitHubError('조회 실패'); } return secretNames; },
     saveSecret: async (_repo, _token, slot, value) => {
       if (saveFails) throw new GitHubError("GitHub 저장 실패");
+      if (uncertain) throw new SecretWriteUncertainError('unknown');
+      actions.push(['secret', slot]);
       writes.push({ slot, value: JSON.parse(value) });
       secretNames[slot] = 'date';
+      if (readbackFails) failNextList = true;
     },
     deleteSecret: async (_repo, _token, slot) => { if (deleteFails) throw new GitHubError('실패'); delete secretNames[slot]; },
   };
@@ -45,7 +53,7 @@ function makeEnvironment({ mobile = false, subscription = true, used = {}, saveF
     crypto: webcrypto, TextEncoder, Uint8Array, URL,
   };
   vm.runInNewContext(js, sandbox);
-  return { api: sandbox.exports, storage, writes, permissionRequests: () => permissionRequests, unsubscribed: () => unsubscribed };
+  return { api: sandbox.exports, storage, writes, actions, secretNames, permissionRequests: () => permissionRequests, unsubscribed: () => unsubscribed };
 }
 
 test('mobile defaults to reminders and desktop to off without storing a selection', () => {
@@ -112,4 +120,50 @@ test('failed remote disconnect keeps the subscription and can be retried', async
   await assert.rejects(() => env.api.disconnectBrowserPush('owner/repo', 'token'), /실패/);
   assert.equal(env.unsubscribed(), false);
   assert.notEqual(env.storage.get('browser-push-device'), undefined);
+});
+
+test('a free slot clears an orphaned name before saving a new subscription', async () => {
+  const env = makeEnvironment();
+  await env.api.connectBrowserPush('owner/repo', 'token');
+  assert.equal(env.actions[0][0], 'name');
+  assert.equal(env.actions[1][0], 'secret');
+  const failing = makeEnvironment({ nameClearFails: true });
+  await assert.rejects(failing.api.connectBrowserPush('owner/repo', 'token'), /이름 삭제 실패/);
+  assert.equal(failing.writes.length, 0);
+});
+
+test('a slot changed by another device is never overwritten or disconnected', async () => {
+  const env = makeEnvironment();
+  await env.api.connectBrowserPush('owner/repo', 'token');
+  env.secretNames.WEB_PUSH_SUB_1 = 'changed-by-another-device';
+  await assert.rejects(env.api.disconnectBrowserPush('owner/repo', 'token'), /등록이 바뀌었어요/);
+  assert.equal(env.unsubscribed(), false);
+  await assert.rejects(env.api.connectBrowserPush('owner/repo', 'token'), /기존 등록을 확인할 수 없어요/);
+  assert.equal(env.writes.length, 1);
+  assert.equal(env.secretNames.WEB_PUSH_SUB_1, 'changed-by-another-device');
+});
+
+test('a failed readback after saving does not create another slot on retry', async () => {
+  const env = makeEnvironment({ readbackFails: true });
+  await assert.rejects(env.api.connectBrowserPush('owner/repo', 'token'), /조회 실패/);
+  await assert.rejects(env.api.connectBrowserPush('owner/repo', 'token'), /기존 등록을 확인할 수 없어요/);
+  assert.equal(env.writes.length, 1);
+});
+
+test('an uncertain secret write leaves a pending local slot, but a rejected write does not', async () => {
+  const rejected = makeEnvironment({ saveFails: true });
+  await assert.rejects(rejected.api.connectBrowserPush('owner/repo', 'token'));
+  assert.equal(rejected.storage.has('browser-push-device'), false);
+  const ambiguous = makeEnvironment({ uncertain: true });
+  await assert.rejects(ambiguous.api.connectBrowserPush('owner/repo', 'token'), /저장 결과를 확인하지 못했어요/);
+  assert.equal(JSON.parse(ambiguous.storage.get('browser-push-device')).updatedAt, null);
+});
+
+test('legacy duplicate is checked before deleting a newer slot', async () => {
+  const env = makeEnvironment({ used: { WEB_PUSH_SUBSCRIPTION: 'date' } });
+  await env.api.connectBrowserPush('owner/repo', 'token');
+  env.storage.set('browser-push-registered', JSON.parse(env.storage.get('browser-push-device')).fingerprint);
+  await assert.rejects(env.api.disconnectBrowserPush('owner/repo', 'token'), /이전 알림 등록/);
+  assert.equal(env.secretNames.WEB_PUSH_SUB_1, 'date');
+  assert.equal(env.unsubscribed(), false);
 });

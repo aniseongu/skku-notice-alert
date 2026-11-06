@@ -9,8 +9,9 @@ final translation comes back.
 import json
 import unicodedata
 
-from google import genai
 from google.genai import types
+
+from skku_notice.gemini_client import gemini_client
 
 MAX_BODY = 6000
 SCHEMA = {
@@ -62,7 +63,7 @@ def translate_notice(
     title: str, body: str | None, model: str, api_key: str, client: object | None = None,
 ) -> tuple[str, str] | None:
     """Return (Korean title, Korean body) or None when Gemini fails; the next run retries."""
-    client = client or genai.Client(api_key=api_key)
+    client = client or gemini_client(api_key)
     source = (body or "")[:MAX_BODY]
     contents = json.dumps({"glossary": GLOSSARY, "title": title, "body": source}, ensure_ascii=False)
     try:

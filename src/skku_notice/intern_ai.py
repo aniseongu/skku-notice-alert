@@ -7,10 +7,10 @@ import re
 import sys
 import unicodedata
 
-from google import genai
 from google.genai import types
 
 from skku_notice.fetch import ImageData
+from skku_notice.gemini_client import gemini_client
 from skku_notice.judge import Judgment
 
 BATCH = 6
@@ -103,7 +103,7 @@ def judge_internships(
             contents.append(types.Part.from_text(text=marker))
             contents.append(types.Part.from_bytes(data=image.data, mime_type=image.mime_type))
     try:
-        client = client or genai.Client(api_key=api_key)
+        client = client or gemini_client(api_key)
         response = client.models.generate_content(
             model=model, contents=contents,
             config=types.GenerateContentConfig(system_instruction=SYSTEM, temperature=0,

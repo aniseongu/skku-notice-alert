@@ -449,8 +449,9 @@ export class SettingsView extends LitElement {
           this.keyChains[name] = chain;
         }
         await chain.run();
+        delete this.keyChains[name];
       } else await saveSecret(repo, token, name, trimmed);
-      const saved = { ...readSavedSecrets(repo), [name]: new Date().toISOString() };
+      const saved = { ...readSavedSecrets(repo), ...(this.repo === repo ? this.saved : {}), [name]: new Date().toISOString() };
       rememberSavedSecrets(repo, saved);
       if (this.repo === repo) {
         this.saved = saved;
@@ -819,7 +820,8 @@ export class SettingsView extends LitElement {
             ${!this.linked ? html`<div class="setting"><p class="field-note">GitHub에 연결하면 등록된 알림 기기를 볼 수 있어요</p></div>` : html`
               ${[...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].filter((slot) => this.saved[slot]).length === 0
                 ? html`<div class="setting"><p class="field-note">등록된 알림 기기가 없어요</p></div>`
-                : [...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].filter((slot) => this.saved[slot]).map((slot) => {
+                : [...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].filter((slot) => this.saved[slot]).sort((a, b) =>
+                  Number(this.browserNotifications && matchesCurrentDevice(b, this.saved[b])) - Number(this.browserNotifications && matchesCurrentDevice(a, this.saved[a]))).map((slot) => {
                   const local = this.browserNotifications && currentDeviceSlot() === slot;
                   const current = local && matchesCurrentDevice(slot, this.saved[slot]);
                   const label = this.deviceNames[slot] || (current && this.deviceSuggestion) || (slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`);

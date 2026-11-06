@@ -6,10 +6,10 @@ from dataclasses import dataclass
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from google import genai
 from google.genai import types
 
 from skku_notice.fetch import ImageData
+from skku_notice.gemini_client import gemini_client
 from skku_notice.model import Notice
 
 VERDICTS = {"relevant", "maybe", "not_relevant"}
@@ -76,7 +76,7 @@ def judge_notices(
 ) -> dict[str, Judgment]:
     if not notices:
         return {}
-    client = client or genai.Client(api_key=api_key)
+    client = client or gemini_client(api_key)
     articles = [
         {
             "id": f"{notice.source_id}/{notice.article_no}",

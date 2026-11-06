@@ -3,10 +3,10 @@
 import json
 from datetime import date, datetime, timedelta
 
-from google import genai
 from google.genai import types
 
 from skku_notice.deadline import KST
+from skku_notice.gemini_client import gemini_client
 
 BATCH = 8
 SCHEMA = {
@@ -57,7 +57,7 @@ def read_deadlines(
     """items: {id, title, posted_on, body}. Returns id -> (kind, iso) or None; None overall on failure."""
     if not items:
         return {}
-    client = client or genai.Client(api_key=api_key)
+    client = client or gemini_client(api_key)
     articles = [{"id": item["id"], "title": item["title"], "posted_on": item["posted_on"],
                  "body": (item.get("body") or "")[:2500]} for item in items]
     try:

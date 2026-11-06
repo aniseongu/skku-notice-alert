@@ -5,8 +5,9 @@ import json
 import sys
 import unicodedata
 
-from google import genai
 from google.genai import types
+
+from skku_notice.gemini_client import gemini_client
 
 BATCH = 6
 SCHEMA = {
@@ -39,8 +40,7 @@ def summarize(
     batch = items[:BATCH]
     articles = [{"id": item["id"], "title": item["title"], "body": item["body"][:2500]} for item in batch]
     try:
-        client = client or genai.Client(api_key=api_key, http_options=types.HttpOptions(
-            retry_options=types.HttpRetryOptions(attempts=3, initial_delay=2, max_delay=8)))
+        client = client or gemini_client(api_key)
         response = client.models.generate_content(
             model=model, contents=json.dumps({"notices": articles}, ensure_ascii=False),
             config=types.GenerateContentConfig(system_instruction=SYSTEM, temperature=0,

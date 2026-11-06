@@ -1,8 +1,9 @@
 {
   "version": 1,
   "external_checked_at": {
-    "linkareer-intern": "2026-11-06T13:26:12.824678+09:00",
-    "jasoseol-intern": "2026-11-06T13:26:12.824678+09:00"
+    "linkareer-intern": "2026-11-06T13:51:16.923783+09:00",
+    "jasoseol-intern": "2026-11-06T13:51:16.923783+09:00",
+    "skku-career-intern": "2026-11-06T13:51:16.923783+09:00"
   },
   "sources": {
     "skku-notice01": {
@@ -310,6 +311,16 @@
         },
         "141635": {
           "first_seen": "2026-11-06T13:26:12.824678+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141647": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141646": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
           "status": "notified",
           "attempts": 0
         }
@@ -1172,6 +1183,11 @@
           "first_seen": "2026-11-06T13:26:12.824678+09:00",
           "status": "skipped",
           "attempts": 0
+        },
+        "362671": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "skipped",
+          "attempts": 0
         }
       }
     },
@@ -1416,6 +1432,111 @@
         "107078": {
           "first_seen": "2026-11-06T00:13:37.787736+09:00",
           "status": "pending",
+          "attempts": 0
+        }
+      }
+    },
+    "skku-career-intern": {
+      "initialized_at": "2026-11-06T13:51:16.923783+09:00",
+      "seen": {
+        "165070": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165068": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165067": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165065": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165064": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165062": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165059": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165058": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165057": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165055": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165053": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165051": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165037": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165036": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165034": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165030": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165021": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165027": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165024": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
+          "attempts": 0
+        },
+        "165022": {
+          "first_seen": "2026-11-06T13:51:16.923783+09:00",
+          "status": "baseline",
           "attempts": 0
         }
       }

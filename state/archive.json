@@ -55,6 +55,95 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141621": {
+      "notice": {
+        "id": "skku-notice01/141621",
+        "source_id": "skku-notice01",
+        "article_no": "141621",
+        "title": "[학생성공센터 대학원] 양적 연구 실무 워크숍(t-검정) 안내",
+        "category": "행사/세미나",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141621",
+        "posted_on": "2026-11-06",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T09:45:30.098286+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "대학원생을 대상으로 하는 프로그램이라 학부생인 본인의 지원 자격과 맞지 않아요.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "안녕하세요. 학생성공센터에서 양적 연구(t-검정) 실무 워크숍을 개최합니다.\n온라인 ZOOM으로 진행되오니 많은 참여 부탁드립니다.\n\n✅일정: 2026. 11. 18.(수) 14:00~17:00\n✅온라인 ZOOM 접속 정보\n회의 채팅 링크\nhttps://skku-edu.zoom.us/launch/jc/86362285796\n회의 ID: 822 865 0447\n암호: 1111\n✅대상: 대학원생(학번+이름으로 로그인)\n✅강사: 김계수(Senlab)\n✅주제: 단일표본 t-검정, 독립표본 t-검정, 쌍체표본 t-검정, 결과표와 결과 문장 등\n✅신청 방법: 킹고 로그인 → 챌린지스퀘어 → 비교과 프로그램 → 수강신청 → 검색 “양적연구”",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>안녕하세요. 학생성공센터에서 양적 연구(t-검정) 실무 워크숍을 개최합니다.</p><p>온라인 ZOOM으로 진행되오니 많은 참여 부탁드립니다.</p><p>✅일정: 2026. 11. 18.(수) 14:00~17:00</p><p>✅온라인 ZOOM 접속 정보</p><p>회의 채팅 링크</p><p><a href=\"https://skku-edu.zoom.us/launch/jc/86362285796\">https://skku-edu.zoom.us/launch/jc/86362285796</a></p><p>회의 ID: 822 865 0447</p><p>암호: 1111</p><p>✅대상: 대학원생(학번+이름으로 로그인)</p><p>✅강사: 김계수(Senlab)</p><p>✅주제: 단일표본 t-검정, 독립표본 t-검정, 쌍체표본 t-검정, 결과표와 결과 문장 등</p><p>✅신청 방법: 킹고 로그인 → 챌린지스퀘어 → 비교과 프로그램 → 수강신청 → 검색 “양적연구”</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/11/cPOTAryGfFeWNjrUMrJX.png\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/cPOTAryGfFeWNjrUMrJX.png"
+      ],
+      "summary": "학생성공센터에서 대학원생을 대상으로 양적 연구 실무 워크숍을 진행해요. 11월 18일 오후 2시부터 줌을 통해 참여할 수 있습니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T09:45:30.098286+09:00",
+      "body_attempted_at": "2026-11-06T09:45:30.098286+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-18T14:00:00+09:00"
+      }
+    },
+    "linkareer-intern/362596": {
+      "notice": {
+        "id": "linkareer-intern/362596",
+        "source_id": "linkareer-intern",
+        "article_no": "362596",
+        "title": "[세방전지] 2026년 4분기 세방전지(주) 채용연계형 인턴 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/362596",
+        "posted_on": "2026-11-06",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-06T09:45:30.098286+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[세방전지] 2026년 4분기 세방전지(주) 채용연계형 인턴 채용\n\n\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 품질관리\n\n\n\n\n[업무내용]\n\n\n- 비전검사기 조건 최적화\n- 로그 기반 검사 신뢰성 검증 및 데이터 분석\n- 비전 검사 관련 외부 엔지니어 대응\n\n\n\n\n[자격요건]\n\n\n- 공학계열 전공자\n- 제조업 품질 관리 실무 유경험자\n- 비전 검사기 장비 운용 유경험자\n\n\n\n\n[우대사항]\n\n\n- 품질 관련 자격증 보유자\n- 비즈니스 영어 능통자\n- 비전 검사 시스템 관련 소프트웨어/툴 유경험자\n\n\n\n\n[채용절차]\n\n\n- 서류전형 - AI역량검사 - 1차면접 - 채용검진 - 인턴근무 - 2차면접 - 최종 합격\n\n\n\n\n[공고상세]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[세방전지] 2026년 4분기 세방전지(주) 채용연계형 인턴 채용</b></span></p><p><span><b>[모집분야]</b></span></p><p>- 품질관리</p><p><span><b>[업무내용]</b></span></p><p>- 비전검사기 조건 최적화</p><p>- 로그 기반 검사 신뢰성 검증 및 데이터 분석</p><p>- 비전 검사 관련 외부 엔지니어 대응</p><p><span><b>[자격요건]</b></span></p><p>- 공학계열 전공자</p><p>- 제조업 품질 관리 실무 유경험자</p><p>- 비전 검사기 장비 운용 유경험자</p><p><span><b>[우대사항]</b></span></p><p>- 품질 관련 자격증 보유자</p><p>- 비즈니스 영어 능통자</p><p>- 비전 검사 시스템 관련 소프트웨어/툴 유경험자</p><p><span><b>[채용절차]</b></span></p><p>- 서류전형 - AI역량검사 - 1차면접 - 채용검진 - 인턴근무 - 2차면접 - 최종 합격</p><p><span><b>[공고상세]</b></span></p><p><img src=\"https://sebang.recruiter.co.kr/upload/58813/image/202611/0e6d8cb7-d169-4f59-a765-f3a057b231ca.png\"></p>",
+      "images": [
+        "https://sebang.recruiter.co.kr/upload/58813/image/202611/0e6d8cb7-d169-4f59-a765-f3a057b231ca.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T09:45:30.098286+09:00",
+      "body_attempted_at": "2026-11-06T09:45:30.098286+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "skku-notice01/140957": {
       "notice": {
         "id": "skku-notice01/140957",
@@ -2765,7 +2854,7 @@
         "id": "skku-notice01/141578",
         "source_id": "skku-notice01",
         "article_no": "141578",
-        "title": "[학생성공센터] 우수사례 e-포트폴리오 특강: 전문가 특강(노슈니) 안내 (11/19)",
+        "title": "[학생성공센터] e-포트폴리오 특강: 전문가 & PL 선배 특강 안내 (11/19 & 11/24)",
         "category": "행사/세미나",
         "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141578",
         "posted_on": "2026-11-05",
@@ -2791,16 +2880,19 @@
       "images": [
         "https://www.skku.edu/_attach/image/2026/11/jtQUZZusAnBEbUiGiYfc.jpg"
       ],
-      "summary": "학생성공센터에서 취업 경쟁력을 높이는 e-포트폴리오 작성 전략 특강을 진행합니다. 11월 18일 오전 9시까지 킹고 홈페이지를 통해 선착순으로 신청할 수 있습니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-05T11:07:36.574820+09:00",
-      "summary_last_failed_at": null,
+      "previous_title": "[학생성공센터] 우수사례 e-포트폴리오 특강: 전문가 특강(노슈니) 안내 (11/19)",
+      "changed_at": "2026-11-06T09:45:30.098286+09:00",
+      "change_kind": "제목",
       "ai_deadline": {
         "checked": true,
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-18T09:00:00+09:00"
-      }
+      },
+      "summary": "학생성공센터에서 취업 경쟁력을 높이는 e-포트폴리오 작성 전략 특강을 진행합니다. 2026년 11월 18일 오전 9시까지 킹고 챌린지스퀘어에서 선착순으로 신청할 수 있습니다. 특강은 11월 19일 오후 3시부터 경영관 LVS 및 Zoom에서 열립니다.",
+      "summary_last_failed_at": null
     },
     "skku-notice01/141576": {
       "notice": {

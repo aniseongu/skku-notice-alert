@@ -6,7 +6,7 @@ import {
 } from './github';
 import { forgetToken, loadToken, readSavedSecrets, rememberSavedSecrets, storeToken } from './settings-storage';
 import { GoogleError, connectGoogleCalendar, validClientId } from './google-calendar';
-import { browserPushEnabled, canvasPushMode, defaultCanvasPushMode, connectBrowserPush, disconnectBrowserPush, pushConfiguration, setCanvasPushMode, supportsBrowserPush, testBrowserNotification } from './browser-push';
+import { browserPushEnabled, canvasPushMode, currentDeviceSlot, DEVICE_SLOTS, defaultCanvasPushMode, connectBrowserPush, disconnectBrowserPush, pushConfiguration, setCanvasPushMode, supportsBrowserPush, testBrowserNotification } from './browser-push';
 
 export type Theme = 'auto' | 'light' | 'dark';
 type CanvasMode = 'off' | 'summary' | 'reminders';
@@ -82,7 +82,7 @@ export class SettingsView extends LitElement {
     repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
     keywordDraft: { state: true }, editing: { state: true }, browserNotifications: { state: true }, linked: { state: true }, connectionState: { state: true },
-    qr: { state: true }, handoff: { state: true }, canvasMode: { state: true }, scanningQr: { state: true }, summaryTime: { state: true }, summaryTimeLoaded: { state: true },
+    qr: { state: true }, handoff: { state: true }, canvasMode: { state: true }, scanningQr: { state: true }, summaryTime: { state: true }, summaryTimeLoaded: { state: true }, googleChain: { state: true }, googleEditing: { state: true },
   };
 
   keywords: string[] = [];
@@ -118,6 +118,8 @@ export class SettingsView extends LitElement {
   canvasMode: CanvasMode | null = null;
   summaryTime = '21:00';
   summaryTimeLoaded = false;
+  private googleChain: { run(): Promise<void> } | null = null;
+  private googleEditing = false;
 
   createRenderRoot() { return this; }
 
@@ -163,6 +165,7 @@ export class SettingsView extends LitElement {
     this.linked = false;
     this.connectionState = 'unlinked';
     this.canvasMode = null;
+    this.googleChain = null;
     this.editing = {};
     this.status = {};
   }
@@ -192,6 +195,8 @@ export class SettingsView extends LitElement {
         this.canvasMode = canvasPushMode();
         this.setStatus('browser-push', true, '연결했어요. 앱을 닫아도 브라우저가 켜져 있으면 알림을 받아요');
       }
+      try { this.saved = await listSecrets(this.repo, this.token); }
+      catch { this.setStatus('browser-push', false, '알림 설정은 바꿨어요. 기기 목록은 다시 연결해 확인해 주세요'); }
     } catch (error) {
       this.setStatus('browser-push', false, error instanceof Error ? error.message : '알림을 연결하지 못했어요');
     } finally { this.busy = ''; }
@@ -204,6 +209,27 @@ export class SettingsView extends LitElement {
     } catch (error) {
       this.setStatus('browser-push', false, error instanceof Error ? error.message : '테스트 알림을 띄우지 못했어요');
     }
+  }
+
+  private async removeDevice(slot: string) {
+    if (![...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].includes(slot) || !this.linked) return;
+    const label = slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`;
+    if (!window.confirm(`${label} 등록 정보를 삭제할까요? 이 기기는 알림을 다시 연결할 때까지 받을 수 없어요.`)) return;
+    this.busy = 'device-list';
+    try {
+      if (this.browserNotifications && currentDeviceSlot() === slot) {
+        await disconnectBrowserPush(this.repo, this.token);
+        this.browserNotifications = false;
+        this.canvasMode = null;
+      } else {
+        const saved = await listSecrets(this.repo, this.token);
+        if (saved[slot]) await deleteSecret(this.repo, this.token, slot);
+      }
+      this.saved = await listSecrets(this.repo, this.token);
+      this.setStatus('device-list', true, '등록 정보를 삭제했어요');
+    } catch {
+      this.setStatus('device-list', false, '삭제를 마치지 못했어요. 다시 시도해 주세요');
+    } finally { this.busy = ''; }
   }
 
   private async connect(sync = true) {
@@ -340,6 +366,7 @@ export class SettingsView extends LitElement {
     this.hideHandoff();
     await forgetToken();
     this.token = '';
+    this.googleChain = null;
     this.linked = false;
     this.connectionState = 'unlinked';
     this.syncedKeywords = null;
@@ -373,7 +400,7 @@ export class SettingsView extends LitElement {
       const ok = await checkGeminiKey(value);
       this.setStatus(name, ok, ok ? '키가 맞아요' : '키를 다시 복사해 붙여 넣어 주세요');
     } catch {
-      this.setStatus(name, false, '확인하지 못했어요. 인터넷 연결을 봐 주세요');
+      this.setStatus(name, false, '키를 확인하지 못했어요. 잠시 뒤 다시 확인해 주세요');
     } finally { this.busy = ''; }
   }
 
@@ -494,13 +521,16 @@ export class SettingsView extends LitElement {
     if (secret.length < 10) { this.setStatus('google', false, '클라이언트 보안 비밀번호를 붙여 넣어 주세요'); return; }
     this.busy = 'google';
     try {
-      await connectGoogleCalendar(this.repo, this.token, clientId, secret);
+      if (!this.googleChain) this.googleChain = await connectGoogleCalendar(this.repo, this.token, clientId, secret);
+      await this.googleChain.run();
+      this.googleChain = null;
+      this.googleEditing = false;
       this.values = { ...this.values, GOOGLE_CLIENT_ID: '', GOOGLE_CLIENT_SECRET: '' };
-      this.saved = { ...this.saved, GOOGLE_REFRESH_TOKEN: new Date().toISOString() };
+      this.saved = { ...this.saved, GOOGLE_CONNECTION: new Date().toISOString() };
       rememberSavedSecrets(this.repo, this.saved);
       this.setStatus('google', true, '연결했어요. 다음 공지 확인 때 "성대 공지" 캘린더에 마감이 들어가요');
     } catch (error) {
-      this.setStatus('google', false, error instanceof GoogleError || error instanceof GitHubError ? error.message : '연결하지 못했어요');
+      this.setStatus('google', false, error instanceof GoogleError || error instanceof GitHubError ? error.message : '연결을 마치지 못했어요. 다시 시도해 주세요');
     } finally { this.busy = ''; }
   }
 
@@ -508,14 +538,16 @@ export class SettingsView extends LitElement {
     this.busy = 'google';
     try {
       // 갱신 토큰과 비밀번호만 지운다. 이미 넣은 일정과 캘린더는 구글에 남는다.
-      await deleteSecret(this.repo, this.token, 'GOOGLE_REFRESH_TOKEN').catch(() => {});
-      await deleteSecret(this.repo, this.token, 'GOOGLE_CLIENT_SECRET').catch(() => {});
-      const saved = { ...this.saved };
-      delete saved.GOOGLE_REFRESH_TOKEN;
-      delete saved.GOOGLE_CLIENT_SECRET;
-      this.saved = saved;
-      rememberSavedSecrets(this.repo, saved);
+      const saved = await listSecrets(this.repo, this.token);
+      for (const name of ['GOOGLE_CLIENT_SECRET', 'GOOGLE_REFRESH_TOKEN', 'GOOGLE_CONNECTION']) {
+        if (saved[name]) await deleteSecret(this.repo, this.token, name);
+        delete saved[name];
+        this.saved = { ...saved };
+        rememberSavedSecrets(this.repo, saved);
+      }
       this.setStatus('google', true, '연결을 끊었어요. 넣어 둔 일정은 구글 캘린더에 남아요');
+    } catch {
+      this.setStatus('google', false, '연결을 모두 끊지 못했어요. 다시 연결 끊기를 눌러 주세요');
     } finally { this.busy = ''; }
   }
 
@@ -586,7 +618,7 @@ export class SettingsView extends LitElement {
           <div class="box">
             ${this.settingsLink('알림', '받을 공지와 이 기기 알림, 아이캠퍼스', '?view=settings&section=notifications')}
             ${this.settingsLink('관심 키워드', this.keywords.length ? `${this.keywords.length}개 키워드를 쓰고 있어요` : '관심 있는 공지를 골라 봐요', '?view=settings&section=keywords')}
-            ${this.settingsLink('캘린더', this.saved.GOOGLE_REFRESH_TOKEN ? '구글 캘린더에 연결돼 있어요' : '저장한 공지의 마감을 모아요', '?view=settings&section=calendar')}
+            ${this.settingsLink('캘린더', this.saved.GOOGLE_CONNECTION || this.saved.GOOGLE_REFRESH_TOKEN ? '구글 연결 정보가 있어요' : '저장한 공지의 마감을 모아요', '?view=settings&section=calendar')}
           </div>
         </section>
         <section aria-labelledby="s-connections">
@@ -707,6 +739,26 @@ export class SettingsView extends LitElement {
 
           </div>
         </section>
+        <section aria-labelledby="s-devices">
+          <h2 id="s-devices" class="settings-head">알림 기기</h2>
+          <div class="box">
+            ${!this.linked ? html`<div class="setting"><p class="field-note">GitHub에 연결하면 등록된 알림 기기를 볼 수 있어요</p></div>` : html`
+              ${[...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].filter((slot) => this.saved[slot]).length === 0
+                ? html`<div class="setting"><p class="field-note">등록된 알림 기기가 없어요</p></div>`
+                : [...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].filter((slot) => this.saved[slot]).map((slot) => {
+                  const current = this.browserNotifications && currentDeviceSlot() === slot;
+                  const label = slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`;
+                  const date = new Date(this.saved[slot]);
+                  const updated = Number.isNaN(date.getTime()) ? '' : new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium' }).format(date);
+                  return html`<div class="setting"><div class="setting-text"><p class="setting-name">${label}${current ? ' (이 기기)' : ''}</p>
+                    ${updated ? html`<p class="setting-help">등록 정보 갱신: ${updated}</p>` : nothing}</div>
+                    <div class="setting-control"><span class="setting-state">${current ? '브라우저 구독 확인' : '수신 상태 미확인'}</span>
+                    <button type="button" class="text-button" ?disabled=${this.busy !== ''} @click=${() => this.removeDevice(slot)}>등록 정보 삭제하기</button></div></div>`;
+                })}
+              <div class="setting"><p class="field-note">다른 기기의 이름과 알림 설정은 해당 기기에서 확인해 주세요. 만료 여부는 알림을 보낼 때만 확인해요</p>
+                <a class="ghost-button" href="?view=settings&section=notifications">이 기기 알림 확인하기</a>${this.note('device-list')}</div>`}
+          </div>
+        </section>
   `; }
 
   private notificationSettings() { return html`
@@ -721,6 +773,7 @@ export class SettingsView extends LitElement {
             <div class="setting-control" data-needs-link>
               <p class="field-note link-note">기기 연결에서 노트북 QR로 연결하면 쓸 수 있어요</p>
               ${this.browserNotifications ? html`<span class="setting-state">켜짐</span>` : html`<span class="setting-state">꺼짐</span>`}
+              <p class="field-note">브라우저 알림 권한: ${!supportsBrowserPush() ? '지원하지 않음' : Notification.permission === 'granted' ? '허용' : Notification.permission === 'denied' ? '차단' : '아직 선택하지 않음'}</p>
               <div class="inline">
                 <button type="button" class="ghost-button" ?disabled=${this.busy === 'browser-push' || !supportsBrowserPush()}
                   @click=${this.toggleBrowserNotifications}>${this.busy === 'browser-push' ? '연결 중' : this.browserNotifications ? '알림 끄기' : '알림 받기'}</button>
@@ -843,19 +896,22 @@ export class SettingsView extends LitElement {
             </div>
             <div class="setting-control">
 
-              ${this.saved.GOOGLE_REFRESH_TOKEN ? html`
-                <span class="setting-state">연결됨</span>
+              ${(this.saved.GOOGLE_CONNECTION || this.saved.GOOGLE_REFRESH_TOKEN || this.saved.GOOGLE_CLIENT_SECRET) && !this.googleChain && !this.googleEditing ? html`
+                <span class="setting-state">${this.saved.GOOGLE_CONNECTION || (this.saved.GOOGLE_REFRESH_TOKEN && this.saved.GOOGLE_CLIENT_SECRET) ? '연결 정보 저장됨' : '연결 정보 확인 필요'}</span>
                 <details class="connection-manual"><summary>연결 관리</summary>
+                <button type="button" class="ghost-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${() => { this.googleEditing = true; }}>다시 연결하기</button>
                 <button type="button" class="ghost-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.disconnectGoogle}>연결 끊기</button></details>
               ` : html`
                 <span class="setting-state">${this.linked ? '미연결' : '확인 필요'}</span>
-                <details class="connection-manual"><summary>연결하기</summary>
+                <details class="connection-manual" ?open=${!!this.googleChain || this.googleEditing}><summary>연결하기</summary>
                 <input class="input" type="text" autocomplete="off" spellcheck="false" aria-label="구글 클라이언트 ID" placeholder="클라이언트 ID (apps.googleusercontent.com으로 끝나요)"
-                  .value=${this.values.GOOGLE_CLIENT_ID ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_ID: (e.target as HTMLInputElement).value }; }}>
+                  ?disabled=${!!this.googleChain} .value=${this.values.GOOGLE_CLIENT_ID ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_ID: (e.target as HTMLInputElement).value }; }}>
                 <input class="input" type="password" autocomplete="off" spellcheck="false" aria-label="구글 클라이언트 보안 비밀번호" placeholder="클라이언트 보안 비밀번호"
-                  .value=${this.values.GOOGLE_CLIENT_SECRET ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_SECRET: (e.target as HTMLInputElement).value }; }}>
+                  ?disabled=${!!this.googleChain} .value=${this.values.GOOGLE_CLIENT_SECRET ?? ''} @input=${(e: Event) => { this.values = { ...this.values, GOOGLE_CLIENT_SECRET: (e.target as HTMLInputElement).value }; }}>
                 <button type="button" class="solid-button" ?disabled=${this.busy === 'google' || !this.linked} @click=${this.connectGoogle}>
-                  ${this.busy === 'google' ? '연결 중' : '구글 캘린더 연결하기'}</button>
+                  ${this.busy === 'google' ? '연결 중' : this.googleChain ? '다시 시도하기' : '구글 캘린더 연결하기'}</button>
+                ${this.googleChain ? html`<button type="button" class="text-button" ?disabled=${this.busy === 'google'} @click=${() => { this.googleChain = null; this.setStatus('google', false, '다시 연결하려면 구글 승인을 받아 주세요'); }}>처음부터 다시 연결하기</button>` : nothing}
+                ${this.googleEditing ? html`<button type="button" class="text-button" ?disabled=${this.busy === 'google'} @click=${() => { this.googleEditing = false; this.googleChain = null; this.values = { ...this.values, GOOGLE_CLIENT_ID: '', GOOGLE_CLIENT_SECRET: '' }; }}>닫기</button>` : nothing}
                 ${this.linked ? nothing : html`<p class="field-note">GitHub에 연결하면 쓸 수 있어요</p>`}
               ${this.guide('google', [
                 html`${link('https://console.cloud.google.com/apis/credentials', 'Google Cloud 사용자 인증 정보')}를 열어요. 아캠 플러스 때 만든 프로젝트를 그대로 써도 돼요`,

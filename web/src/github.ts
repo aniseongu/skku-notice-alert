@@ -54,8 +54,11 @@ export async function readVariable(repo: string, token: string, name: string): P
     const response = await call(`/repos/${repo}/actions/variables/${name}`, token);
     return ((await response.json()) as { value: string }).value;
   } catch (error) {
-    // 없는 변수(404)만 빈 값으로 본다. 인터넷 오류에 이 기기 키워드로 덮어쓰지 않게 한다.
-    if (error instanceof GitHubError && error.status === 404) return null;
+    // GitHub의 404는 권한 부족일 수도 있다. 변수 목록에 접근할 수 있을 때만 부재로 본다.
+    if (error instanceof GitHubError && error.status === 404) {
+      await call(`/repos/${repo}/actions/variables?per_page=1`, token);
+      return null;
+    }
     throw error;
   }
 }
@@ -79,7 +82,9 @@ export async function checkGeminiKey(key: string): Promise<boolean> {
   const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=1', {
     headers: { 'x-goog-api-key': key },
   });
-  return response.ok;
+  if (response.ok) return true;
+  if ([400, 401, 403].includes(response.status)) return false;
+  throw new Error('키를 확인하지 못했어요. 잠시 뒤 다시 확인해 주세요');
 }
 
 // 수동 실행도 서버의 수집 간격 제한을 따른다. 기본 브랜치는 저장소에서 확인한다.

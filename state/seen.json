@@ -331,7 +331,7 @@
         },
         "141656": {
           "first_seen": "2026-11-06T15:16:30.773732+09:00",
-          "status": "pending",
+          "status": "notified",
           "attempts": 1
         }
       }

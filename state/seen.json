@@ -1,8 +1,8 @@
 {
   "version": 1,
   "external_checked_at": {
-    "linkareer-intern": "2026-11-06T11:36:01.222869+09:00",
-    "jasoseol-intern": "2026-11-06T11:36:01.222869+09:00"
+    "linkareer-intern": "2026-11-06T13:26:12.824678+09:00",
+    "jasoseol-intern": "2026-11-06T13:26:12.824678+09:00"
   },
   "sources": {
     "skku-notice01": {
@@ -295,6 +295,21 @@
         },
         "141627": {
           "first_seen": "2026-11-06T10:40:30.994838+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141643": {
+          "first_seen": "2026-11-06T13:26:12.824678+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "140948": {
+          "first_seen": "2026-11-06T13:26:12.824678+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141635": {
+          "first_seen": "2026-11-06T13:26:12.824678+09:00",
           "status": "notified",
           "attempts": 0
         }
@@ -1145,6 +1160,16 @@
         },
         "362393": {
           "first_seen": "2026-11-06T11:36:01.222869+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "362666": {
+          "first_seen": "2026-11-06T13:26:12.824678+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362660": {
+          "first_seen": "2026-11-06T13:26:12.824678+09:00",
           "status": "skipped",
           "attempts": 0
         }

@@ -15,6 +15,17 @@ test('secret listing includes later pages and fails closed on an incomplete resp
   } finally { globalThis.fetch = original; }
 });
 
+test('secret metadata bypasses browser cache after a write', async () => {
+  const original = globalThis.fetch;
+  try {
+    globalThis.fetch = async (_url, init) => {
+      assert.equal(init.cache, 'no-store');
+      return Response.json({ total_count: 1, secrets: [{ name: 'WEB_PUSH_SUB_1', updated_at: 'new' }] });
+    };
+    assert.equal((await listSecrets('owner/repo', 'token')).WEB_PUSH_SUB_1, 'new');
+  } finally { globalThis.fetch = original; }
+});
+
 test('secret write distinguishes rejected requests from uncertain responses', async () => {
   const original = globalThis.fetch;
   const sodium = (await import('libsodium-wrappers')).default;

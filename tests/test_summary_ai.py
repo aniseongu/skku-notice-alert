@@ -75,7 +75,7 @@ def test_bad_response_twice_advances_to_next_batch(monkeypatch, tmp_path):
         return SimpleNamespace(text=None)
 
     client = SimpleNamespace(models=SimpleNamespace(generate_content=generate_content))
-    monkeypatch.setattr(summary_ai.genai, "Client", lambda **kwargs: client)
+    monkeypatch.setattr(summary_ai, "gemini_client", lambda api_key: client)
     monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
     items = {f"school/{i}": {"notice": {"source_id": "school", "title": "제목"}, "body_text": "본문" * 30}
              for i in range(7)}
@@ -92,7 +92,7 @@ def test_api_failure_does_not_count_attempt(monkeypatch, tmp_path):
         raise RuntimeError("temporary API failure")
 
     client = SimpleNamespace(models=SimpleNamespace(generate_content=fail))
-    monkeypatch.setattr(summary_ai.genai, "Client", lambda **kwargs: client)
+    monkeypatch.setattr(summary_ai, "gemini_client", lambda api_key: client)
     monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
     archive = Archive({"school/1": {"notice": {"source_id": "school", "title": "제목"},
                                     "body_text": "본문" * 30}})

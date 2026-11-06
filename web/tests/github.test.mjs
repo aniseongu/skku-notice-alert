@@ -2,6 +2,19 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { GitHubError, SecretWriteUncertainError, checkGeminiKey, listSecrets, readVariable, saveSecret, saveVariable } from '../src/github.ts';
 
+test('secret listing includes later pages and fails closed on an incomplete response', async () => {
+  const original = globalThis.fetch;
+  try {
+    const first = Array.from({ length: 100 }, (_, index) => ({ name: `SECRET_${index}`, updated_at: 'date' }));
+    globalThis.fetch = async (url) => Response.json(String(url).includes('page=2')
+      ? { total_count: 101, secrets: [{ name: 'WEB_PUSH_SUB_1', updated_at: 'date' }] }
+      : { total_count: 101, secrets: first });
+    assert.equal((await listSecrets('owner/repo', 'token')).WEB_PUSH_SUB_1, 'date');
+    globalThis.fetch = async () => Response.json({ total_count: 101, secrets: [] });
+    await assert.rejects(listSecrets('owner/repo', 'token'), /모두 불러오지/);
+  } finally { globalThis.fetch = original; }
+});
+
 test('secret write distinguishes rejected requests from uncertain responses', async () => {
   const original = globalThis.fetch;
   const sodium = (await import('libsodium-wrappers')).default;

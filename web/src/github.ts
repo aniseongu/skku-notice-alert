@@ -30,9 +30,14 @@ async function call(path: string, token: string, init: RequestInit = {}, allowCo
 }
 
 export async function listSecrets(repo: string, token: string): Promise<Record<string, string>> {
-  const response = await call(`/repos/${repo}/actions/secrets?per_page=100`, token);
-  const body = (await response.json()) as { secrets: { name: string; updated_at: string }[] };
-  return Object.fromEntries(body.secrets.map((s) => [s.name, s.updated_at]));
+  const result: Record<string, string> = {};
+  for (let page = 1; ; page++) {
+    const response = await call(`/repos/${repo}/actions/secrets?per_page=100&page=${page}`, token);
+    const body = (await response.json()) as { total_count: number; secrets: { name: string; updated_at: string }[] };
+    for (const secret of body.secrets) result[secret.name] = secret.updated_at;
+    if (page * 100 >= body.total_count) return result;
+    if (body.secrets.length === 0) throw new GitHubError('기기 목록을 모두 불러오지 못했어요. 다시 시도해 주세요');
+  }
 }
 
 export async function saveSecret(repo: string, token: string, name: string, value: string): Promise<void> {

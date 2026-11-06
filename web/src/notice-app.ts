@@ -17,6 +17,7 @@ import { keywordCounts } from './keyword-counts';
 import type { Theme } from './settings-view';
 import { APP_NAME } from './brand';
 import { orderNotices, type Sort } from './notice-order';
+import { syncCurrentDeviceName } from './device-name-sync';
 
 type Tab = 'all' | 'intern' | 'saved';
 type View = Tab | 'settings';
@@ -258,6 +259,7 @@ export class NoticeApp extends LitElement {
     const token = await loadToken();
     if (!repo || !token) return;
     this.github = { repo, token };
+    void syncCurrentDeviceName(repo, token).catch(() => { /* 설정 화면에서 다시 시도한다 */ });
     try {
       const [saved, keywords, read, readState] = await Promise.all([
         readVariable(repo, token, SAVED_VARIABLE), readVariable(repo, token, 'INTEREST_KEYWORDS'),

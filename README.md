@@ -28,6 +28,12 @@ PC에서는 목록과 공지 상세를 함께 봅니다. 상세가 열린 공지
 |---|---|---|
 | ![모바일 웹의 인턴 공고 목록](assets/readme/mobile-interns.jpg) | ![모바일 웹의 공지 상세](assets/readme/mobile-detail.jpg) | ![독립 앱 모드에서 모바일 크기로 본 인턴 공고](assets/readme/app-mobile.jpg) |
 
+설정에서는 이 브라우저의 알림 권한과 아캠 알림 범위를 고르고, 등록된 알림 기기를 확인할 수 있습니다. 두 화면은 연결 상태와 기기 목록을 예시 데이터로 캡처했습니다.
+
+| 알림 설정 | 알림 기기 예시 |
+|---|---|
+| ![모바일 알림 설정](assets/readme/settings-notifications.png) | ![예시 데이터로 표시한 모바일 알림 기기 목록](assets/readme/settings-devices.png) |
+
 ## 주요 기능
 
 - 성균관대 공지와 인턴 공고를 게시판별로 살펴보고, 관심 있는 글을 저장할 수 있습니다.
@@ -87,6 +93,7 @@ PC에서는 목록과 공지 상세를 함께 봅니다. 상세가 열린 공지
 | Secret, 선택 | `PROFILE_YAML` | 개인 프로필. 파일 대신 Secret에 넣습니다. |
 | Secret, 선택 | `CANVAS_TOKEN` | 아이캠퍼스 개인 액세스 토큰 |
 | Secret, 선택 | `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN` | 구글 캘린더 연결 |
+| Secret, 앱이 저장 | `GOOGLE_CONNECTION` | 구글 캘린더 연결 정보. 기존 개별 Secret보다 우선하며 하나로 저장합니다. |
 | Secret, 선택 | `NOTIFY_URLS` | Apprise 추가 알림 경로 |
 | Variable, 앱이 저장 | `INTEREST_KEYWORDS`, `MUTED_CATEGORIES` | 관심 키워드와 끈 분류 |
 | Variable, 앱이 저장 | `SAVED_NOTICES`, `READ_NOTICES` | 저장한 글과 읽음 상태 |

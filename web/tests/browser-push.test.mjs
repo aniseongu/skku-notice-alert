@@ -7,9 +7,9 @@ import { stripTypeScriptTypes } from 'node:module';
 
 const source = readFileSync(new URL('../src/browser-push.ts', import.meta.url), 'utf8');
 const js = stripTypeScriptTypes(source.replace(/^import .*;$/gm, '').replace(/\bexport\s+/g, ''), { mode: 'strip' })
-  + '\nObject.assign(exports, { defaultCanvasPushMode, canvasPushMode, connectBrowserPush, setCanvasPushMode });';
+  + '\nObject.assign(exports, { defaultCanvasPushMode, canvasPushMode, connectBrowserPush, disconnectBrowserPush, setCanvasPushMode });';
 
-function makeEnvironment({ mobile = false, subscription = true, used = {}, saveFails = false } = {}) {
+function makeEnvironment({ mobile = false, subscription = true, used = {}, saveFails = false, deleteFails = false } = {}) {
   const storage = new Map();
   const writes = [];
   const secretNames = { ...used };
@@ -17,6 +17,8 @@ function makeEnvironment({ mobile = false, subscription = true, used = {}, saveF
   const current = { endpoint: 'https://push.example/subscription', toJSON: () => ({
     endpoint: 'https://push.example/subscription', keys: { p256dh: 'public-key', auth: 'auth-key' },
   }) };
+  let unsubscribed = false;
+  current.unsubscribe = async () => { unsubscribed = true; return true; };
   const manager = { getSubscription: async () => subscription ? current : null, subscribe: async () => current };
   const registration = { pushManager: manager };
   const notification = { permission: 'granted', requestPermission: async () => { permissionRequests++; return 'granted'; } };
@@ -27,8 +29,9 @@ function makeEnvironment({ mobile = false, subscription = true, used = {}, saveF
     saveSecret: async (_repo, _token, slot, value) => {
       if (saveFails) throw new GitHubError("GitHub 저장 실패");
       writes.push({ slot, value: JSON.parse(value) });
+      secretNames[slot] = 'date';
     },
-    deleteSecret: async () => {},
+    deleteSecret: async (_repo, _token, slot) => { if (deleteFails) throw new GitHubError('실패'); delete secretNames[slot]; },
   };
   const sandbox = {
     exports: {}, APP_NAME: '앱', ...github,
@@ -42,7 +45,7 @@ function makeEnvironment({ mobile = false, subscription = true, used = {}, saveF
     crypto: webcrypto, TextEncoder, Uint8Array, URL,
   };
   vm.runInNewContext(js, sandbox);
-  return { api: sandbox.exports, storage, writes, permissionRequests: () => permissionRequests };
+  return { api: sandbox.exports, storage, writes, permissionRequests: () => permissionRequests, unsubscribed: () => unsubscribed };
 }
 
 test('mobile defaults to reminders and desktop to off without storing a selection', () => {
@@ -101,4 +104,12 @@ test('failed secret save does not change the remembered preference', async () =>
   await assert.rejects(() => env.api.setCanvasPushMode('owner/repo', 'token', 'summary'), /GitHub 저장 실패/);
   assert.equal(env.api.canvasPushMode(), 'off');
   assert.equal(env.writes.length, 0);
+});
+
+test('failed remote disconnect keeps the subscription and can be retried', async () => {
+  const env = makeEnvironment({ deleteFails: true });
+  await env.api.connectBrowserPush('owner/repo', 'token');
+  await assert.rejects(() => env.api.disconnectBrowserPush('owner/repo', 'token'), /실패/);
+  assert.equal(env.unsubscribed(), false);
+  assert.notEqual(env.storage.get('browser-push-device'), undefined);
 });

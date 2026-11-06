@@ -98,6 +98,15 @@ def test_main_skips_until_connected(monkeypatch, capsys, tmp_path):
     assert "연결 전" in capsys.readouterr().out
 
 
+def test_invalid_bundle_never_falls_back_to_legacy(monkeypatch, capsys, tmp_path):
+    monkeypatch.setenv("GOOGLE_CONNECTION", '{"client_secret": "private"}')
+    monkeypatch.setenv("GOOGLE_REFRESH_TOKEN", "old-refresh")
+    assert gcal.main(tmp_path) == 1
+    output = capsys.readouterr()
+    assert "다시 저장" in output.err
+    assert "private" not in output.err
+
+
 def test_main_reports_counts_without_secrets(monkeypatch, capsys, tmp_path):
     notices = {"notices": [_notice("1", "2026-12-16T10:00:00+09:00")]}
     (tmp_path / "notices.json").write_text(json.dumps(notices))
@@ -123,6 +132,21 @@ def test_main_reports_counts_without_secrets(monkeypatch, capsys, tmp_path):
     out = capsys.readouterr()
     assert "넣음 1" in out.out
     assert "token-value" not in out.out + out.err and "secret-value" not in out.out + out.err
+
+
+def test_bundle_credentials_override_legacy(monkeypatch, capsys, tmp_path):
+    (tmp_path / "notices.json").write_text(json.dumps({"notices": []}))
+    (tmp_path / "matched.json").write_text(json.dumps({"items": {}}))
+    monkeypatch.setenv("GOOGLE_CLIENT_ID", "old")
+    monkeypatch.setenv("GOOGLE_CONNECTION", json.dumps({
+        "client_id": "new-id", "client_secret": "new-secret", "refresh_token": "new-refresh",
+        "calendar_id": "new@group.calendar.google.com",
+    }))
+    captured = []
+    monkeypatch.setattr(gcal, "access_token", lambda client, *args: captured.append(args) or "access")
+    monkeypatch.setattr(gcal, "sync", lambda client, calendar_id, desired: (0, 0, 0))
+    assert gcal.main(tmp_path) == 0
+    assert captured == [("new-id", "new-secret", "new-refresh")]
 
 
 def test_started_event_is_removed_when_notice_is_marked_passed():

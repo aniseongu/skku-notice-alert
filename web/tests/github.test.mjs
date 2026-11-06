@@ -1,6 +1,16 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { GitHubError, listSecrets, readVariable } from '../src/github.ts';
+import { GitHubError, checkGeminiKey, listSecrets, readVariable } from '../src/github.ts';
+
+test('Gemini transient failure is not reported as a rejected key', async () => {
+  const original = globalThis.fetch;
+  try {
+    globalThis.fetch = async () => new Response('{}', { status: 503 });
+    await assert.rejects(checkGeminiKey('fixture-key'), /다시 확인/);
+    globalThis.fetch = async () => new Response('{}', { status: 401 });
+    assert.equal(await checkGeminiKey('fixture-key'), false);
+  } finally { globalThis.fetch = original; }
+});
 
 test('authentication and temporary server failures retain distinct HTTP status', async () => {
   const original = globalThis.fetch;
@@ -16,8 +26,10 @@ test('authentication and temporary server failures retain distinct HTTP status',
 test('only absent variables are empty; authorization and server failures propagate', async () => {
   const original = globalThis.fetch;
   try {
-    globalThis.fetch = async () => new Response('{}', { status: 404 });
+    globalThis.fetch = async (url) => new Response('{}', { status: String(url).includes('?per_page=1') ? 200 : 404 });
     assert.equal(await readVariable('owner/repo', 'fixture-token', 'INTEREST_KEYWORDS'), null);
+    globalThis.fetch = async () => new Response('{}', { status: 404 });
+    await assert.rejects(readVariable('owner/repo', 'fixture-token', 'INTEREST_KEYWORDS'), error => error.status === 404);
     for (const status of [401, 403, 503]) {
       globalThis.fetch = async () => new Response('{}', { status });
       await assert.rejects(readVariable('owner/repo', 'fixture-token', 'INTEREST_KEYWORDS'),

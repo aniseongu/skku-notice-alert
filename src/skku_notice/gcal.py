@@ -128,6 +128,19 @@ def sync(client: httpx.Client, calendar_id: str, desired: dict[str, dict]) -> tu
 def main(api_dir: Path = Path("site/api/v1")) -> int:
     names = ("GOOGLE_CLIENT_ID", "GOOGLE_CLIENT_SECRET", "GOOGLE_REFRESH_TOKEN", "GOOGLE_CALENDAR_ID")
     values = {name: os.environ.get(name, "").strip() for name in names}
+    bundle = os.environ.get("GOOGLE_CONNECTION", "").strip()
+    if bundle:
+        try:
+            data = json.loads(bundle)
+            keys = ("client_id", "client_secret", "refresh_token", "calendar_id")
+            if not isinstance(data, dict) or not all(
+                isinstance(data.get(key), str) and data[key].strip() for key in keys
+            ):
+                raise ValueError
+            values = {name: data[key].strip() for name, key in zip(names, keys, strict=True)}
+        except (ValueError, TypeError):
+            print("구글 캘린더: 연결 정보를 다시 저장해 주세요", file=sys.stderr)
+            return 1
     if not all(values.values()):
         print("구글 캘린더: 연결 전이라 건너뛰어요")
         return 0

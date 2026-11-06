@@ -22,6 +22,11 @@ function myDevice(): { fingerprint: string; slot: string } | null {
   return null;
 }
 
+/** 로컬 구독 확인 후에만 이 값을 현재 기기라고 표시한다. */
+export function currentDeviceSlot(): string | null {
+  return myDevice()?.slot ?? null;
+}
+
 export function defaultCanvasPushMode(): CanvasPushMode {
   return typeof matchMedia === 'function'
     && matchMedia('(pointer: coarse)').matches && matchMedia('(hover: none)').matches ? 'reminders' : 'off';
@@ -117,12 +122,15 @@ export async function disconnectBrowserPush(repo: string, token: string): Promis
   if (subscription) {
     const mine = await fingerprint(subscription);
     const device = myDevice();
-    if (device) await deleteSecret(repo, token, device.slot).catch(() => {});
+    const used = await listSecrets(repo, token);
+    if (device?.fingerprint === mine && used[device.slot]) await deleteSecret(repo, token, device.slot);
     // 이 기기가 예전 한 대 저장의 주인일 때만 그 Secret도 지운다(다른 기기 것은 건드리지 않는다).
     let legacy = false;
     try { legacy = localStorage.getItem(LEGACY) === mine; } catch { /* 모르면 지우지 않는다 */ }
-    if (legacy) await deleteSecret(repo, token, 'WEB_PUSH_SUBSCRIPTION').catch(() => {});
+    if (legacy && used.WEB_PUSH_SUBSCRIPTION) await deleteSecret(repo, token, 'WEB_PUSH_SUBSCRIPTION');
     await subscription.unsubscribe();
+  } else if (myDevice()) {
+    throw new Error('기존 알림 구독을 확인할 수 없어요. 기기 목록에서 등록 정보를 확인해 주세요');
   }
   try { localStorage.removeItem(DEVICE); localStorage.removeItem(LEGACY); } catch { /* 로컬 기록을 지우지 못해도 서버 발송은 멈춘다 */ }
 }

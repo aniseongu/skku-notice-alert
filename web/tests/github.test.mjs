@@ -1,6 +1,30 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { GitHubError, checkGeminiKey, listSecrets, readVariable } from '../src/github.ts';
+import { GitHubError, SecretWriteUncertainError, checkGeminiKey, listSecrets, readVariable, saveSecret, saveVariable } from '../src/github.ts';
+
+test('secret write distinguishes rejected requests from uncertain responses', async () => {
+  const original = globalThis.fetch;
+  const sodium = (await import('libsodium-wrappers')).default;
+  await sodium.ready;
+  const key = sodium.to_base64(sodium.crypto_box_keypair().publicKey, sodium.base64_variants.ORIGINAL);
+  try {
+    for (const status of [403, 503]) {
+      globalThis.fetch = async (_url, init) => init.method === 'PUT'
+        ? new Response('{}', { status }) : Response.json({ key, key_id: 'id' });
+      await assert.rejects(saveSecret('owner/repo', 'token', 'EXAMPLE', 'value'), (error) =>
+        status === 403 ? error instanceof GitHubError && error.status === 403 : error instanceof SecretWriteUncertainError);
+    }
+  } finally { globalThis.fetch = original; }
+});
+
+test('a failed delete is not mistaken for an absent variable', async () => {
+  const original = globalThis.fetch;
+  try {
+    globalThis.fetch = async (_url, init) => init.method === 'DELETE'
+      ? new Response('{}', { status: 404 }) : Response.json({ value: 'existing' });
+    await assert.rejects(saveVariable('owner/repo', 'token', 'PUSH_DEVICE_NAME_1', ''), /오류 404/);
+  } finally { globalThis.fetch = original; }
+});
 
 test('Gemini transient failure is not reported as a rejected key', async () => {
   const original = globalThis.fetch;

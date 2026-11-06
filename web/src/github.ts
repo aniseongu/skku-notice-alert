@@ -11,6 +11,10 @@ export class GitHubError extends Error {
   constructor(message: string, status?: number) { super(message); this.status = status; }
 }
 
+export class SecretWriteUncertainError extends Error {
+  constructor() { super('저장 결과를 확인하지 못했어요. 연결 상태를 확인해 주세요'); }
+}
+
 function headers(token: string): HeadersInit {
   return { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
 }
@@ -38,10 +42,15 @@ export async function saveSecret(repo: string, token: string, name: string, valu
   const sodium = (await import('libsodium-wrappers')).default;
   await sodium.ready;
   const sealed = sodium.crypto_box_seal(sodium.from_string(value), sodium.from_base64(key, sodium.base64_variants.ORIGINAL));
-  await call(`/repos/${repo}/actions/secrets/${name}`, token, {
-    method: 'PUT',
-    body: JSON.stringify({ encrypted_value: sodium.to_base64(sealed, sodium.base64_variants.ORIGINAL), key_id: keyId }),
-  });
+  try {
+    await call(`/repos/${repo}/actions/secrets/${name}`, token, {
+      method: 'PUT',
+      body: JSON.stringify({ encrypted_value: sodium.to_base64(sealed, sodium.base64_variants.ORIGINAL), key_id: keyId }),
+    });
+  } catch (error) {
+    if (error instanceof GitHubError && error.status && error.status < 500) throw error;
+    throw new SecretWriteUncertainError();
+  }
 }
 
 export async function deleteSecret(repo: string, token: string, name: string): Promise<void> {
@@ -67,7 +76,8 @@ export async function saveVariable(repo: string, token: string, name: string, va
   // GitHub 변수는 빈 값을 받지 않는다(422). 비우면 변수를 지운다. 이미 없으면(404) 그대로 둔다.
   if (!value.trim()) {
     const response = await fetch(`${API}/repos/${repo}/actions/variables/${name}`, { method: 'DELETE', headers: headers(token) });
-    if (response.ok || response.status === 404) return;
+    if (response.ok) return;
+    if (response.status === 404 && await readVariable(repo, token, name) === null) return;
     if (response.status === 401) throw new GitHubError('GitHub 토큰이 맞지 않아요. 새 토큰을 넣어 주세요', response.status);
     throw new GitHubError(`GitHub가 요청을 받지 않았어요(오류 ${response.status}). 잠시 뒤 다시 해 주세요`, response.status);
   }

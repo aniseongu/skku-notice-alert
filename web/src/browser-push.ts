@@ -1,5 +1,6 @@
 import { APP_NAME } from './brand';
-import { GitHubError, deleteSecret, listSecrets, saveSecret } from './github';
+import { GitHubError, SecretWriteUncertainError, deleteSecret, listSecrets, saveSecret, saveVariable } from './github';
+import { deviceNameVariable } from './device-names';
 
 interface PushConfiguration { publicKey: string; repository: string }
 // 예전에는 기기 한 대만 WEB_PUSH_SUBSCRIPTION에 저장했다. 이 기기가 그 한 대였는지 기억하는 열쇠다.
@@ -11,12 +12,12 @@ const CANVAS_MODE = 'browser-push-canvas-mode';
 export type CanvasPushMode = 'off' | 'summary' | 'reminders';
 export const DEVICE_SLOTS = Array.from({ length: 8 }, (_, index) => `WEB_PUSH_SUB_${index + 1}`);
 
-function myDevice(): { fingerprint: string; slot: string } | null {
+function myDevice(): { fingerprint: string; slot: string; updatedAt: string | null } | null {
   try {
     const parsed: unknown = JSON.parse(localStorage.getItem(DEVICE) ?? 'null');
     if (parsed && typeof parsed === 'object' && 'fingerprint' in parsed && 'slot' in parsed
       && typeof parsed.fingerprint === 'string' && DEVICE_SLOTS.includes(String(parsed.slot))) {
-      return { fingerprint: parsed.fingerprint, slot: String(parsed.slot) };
+      return { fingerprint: parsed.fingerprint, slot: String(parsed.slot), updatedAt: 'updatedAt' in parsed && typeof parsed.updatedAt === 'string' ? parsed.updatedAt : null };
     }
   } catch { /* 모르면 새 칸을 고른다 */ }
   return null;
@@ -25,6 +26,11 @@ function myDevice(): { fingerprint: string; slot: string } | null {
 /** 로컬 구독 확인 후에만 이 값을 현재 기기라고 표시한다. */
 export function currentDeviceSlot(): string | null {
   return myDevice()?.slot ?? null;
+}
+
+export function matchesCurrentDevice(slot: string, updatedAt: string | undefined): boolean {
+  const device = myDevice();
+  return Boolean(device && device.slot === slot && device.updatedAt && device.updatedAt === updatedAt);
 }
 
 export function defaultCanvasPushMode(): CanvasPushMode {
@@ -92,11 +98,26 @@ async function saveDeviceSubscription(
   const device = myDevice();
   // 현재 구독과 지문이 다르면 기존 칸을 덮지 않는다. 예전 구독은 빈 기기 칸에 복사한다.
   const used = await listSecrets(repo, token);
-  const slot = (device?.fingerprint === mine ? device.slot : undefined)
+  if (device?.fingerprint === mine && used[device.slot] && !matchesCurrentDevice(device.slot, used[device.slot])) {
+    throw new Error('기존 등록을 확인할 수 없어요. 기기 목록에서 기존 등록을 확인하고 다시 연결해 주세요');
+  }
+  const slot = (device?.fingerprint === mine && matchesCurrentDevice(device.slot, used[device.slot]) ? device.slot : undefined)
     ?? DEVICE_SLOTS.find((name) => !used[name]);
   if (!slot) throw new GitHubError('알림은 기기 8대까지 받을 수 있어요. 안 쓰는 기기에서 알림을 먼저 꺼 주세요');
-  await saveSecret(repo, token, slot, JSON.stringify({ ...subscription.toJSON(), preferences: { canvas: mode } }));
-  try { localStorage.setItem(DEVICE, JSON.stringify({ fingerprint: mine, slot })); } catch { /* 저장 실패 시 서버 구독은 유지한다 */ }
+  // 빈 슬롯의 오래된 이름이 새 기기에 붙지 않도록 구독을 저장하기 전에 지운다.
+  if (!used[slot]) await saveVariable(repo, token, deviceNameVariable(slot), '');
+  try {
+    await saveSecret(repo, token, slot, JSON.stringify({ ...subscription.toJSON(), preferences: { canvas: mode } }));
+  } catch (error) {
+    if (!(error instanceof SecretWriteUncertainError)) throw error;
+    // 요청은 성공했지만 응답만 유실됐을 수 있으므로, 같은 구독을 다른 칸에 다시 쓰지 않는다.
+    try { localStorage.setItem(DEVICE, JSON.stringify({ fingerprint: mine, slot, updatedAt: null })); } catch { /* 로컬 기록 불가 */ }
+    throw new Error('알림 저장 결과를 확인하지 못했어요. 기기 목록을 확인해 주세요');
+  }
+  try { localStorage.setItem(DEVICE, JSON.stringify({ fingerprint: mine, slot, updatedAt: null })); } catch { /* 로컬 기록 불가 */ }
+  const updatedAt = (await listSecrets(repo, token))[slot];
+  if (!updatedAt) throw new Error('알림은 저장했지만 등록 정보를 확인하지 못했어요. 기기 목록을 확인해 주세요');
+  try { localStorage.setItem(DEVICE, JSON.stringify({ fingerprint: mine, slot, updatedAt })); } catch { /* 저장 실패 시 서버 구독은 유지한다 */ }
 }
 
 export async function connectBrowserPush(repo: string, token: string): Promise<void> {
@@ -123,16 +144,30 @@ export async function disconnectBrowserPush(repo: string, token: string): Promis
     const mine = await fingerprint(subscription);
     const device = myDevice();
     const used = await listSecrets(repo, token);
-    if (device?.fingerprint === mine && used[device.slot]) await deleteSecret(repo, token, device.slot);
-    // 이 기기가 예전 한 대 저장의 주인일 때만 그 Secret도 지운다(다른 기기 것은 건드리지 않는다).
+    // 레거시 구독 소유권을 확인할 수 없다면 다른 슬롯도 바꾸지 않는다.
     let legacy = false;
     try { legacy = localStorage.getItem(LEGACY) === mine; } catch { /* 모르면 지우지 않는다 */ }
-    if (legacy && used.WEB_PUSH_SUBSCRIPTION) await deleteSecret(repo, token, 'WEB_PUSH_SUBSCRIPTION');
+    if (legacy && used.WEB_PUSH_SUBSCRIPTION) throw new Error('이전 알림 등록은 기기 목록에서 확인한 뒤 삭제해 주세요');
+    if (device?.fingerprint === mine && used[device.slot] && matchesCurrentDevice(device.slot, used[device.slot])) {
+      await deleteSecret(repo, token, device.slot);
+      await saveVariable(repo, token, deviceNameVariable(device.slot), '');
+    } else if (device && used[device.slot]) {
+      throw new Error('기기 등록이 바뀌었어요. 기기 목록에서 확인해 주세요');
+    }
+    // 이 기기가 예전 한 대 저장의 주인일 때만 그 Secret도 지운다(다른 기기 것은 건드리지 않는다).
     await subscription.unsubscribe();
   } else if (myDevice()) {
     throw new Error('기존 알림 구독을 확인할 수 없어요. 기기 목록에서 등록 정보를 확인해 주세요');
   }
   try { localStorage.removeItem(DEVICE); localStorage.removeItem(LEGACY); } catch { /* 로컬 기록을 지우지 못해도 서버 발송은 멈춘다 */ }
+}
+
+/** 사용자가 목록에서 이 브라우저의 이전 등록을 직접 지운 뒤 로컬 구독을 정리한다. */
+export async function clearLocalBrowserPush(): Promise<void> {
+  const registration = await navigator.serviceWorker.getRegistration();
+  const subscription = await registration?.pushManager.getSubscription();
+  if (subscription) await subscription.unsubscribe();
+  try { localStorage.removeItem(DEVICE); localStorage.removeItem(LEGACY); } catch { /* 로컬 저장소를 사용할 수 없음 */ }
 }
 
 export async function testBrowserNotification(): Promise<void> {

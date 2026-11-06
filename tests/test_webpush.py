@@ -213,6 +213,20 @@ def test_expired_device_is_skipped_but_other_failures_retry(monkeypatch, browser
     assert not notify.send_notice(notice, "학과", "default", None, None)
 
 
+def test_canvas_delivery_fails_when_all_selected_devices_expired(monkeypatch, browser_config):
+    subscription = {**browser_config, "preferences": {"canvas": "reminders"}}
+    monkeypatch.setenv("WEB_PUSH_SUBSCRIPTION", json.dumps(subscription))
+
+    class Gone:
+        status_code = 410
+
+    def expired(**kwargs):
+        raise WebPushException("gone", response=Gone())
+
+    monkeypatch.setattr(webpush_notify, "webpush", expired)
+    assert not notify.send_canvas("제목", "내용", "https://canvas.skku.edu/", "default", summary=True)
+
+
 def test_private_key_without_devices_is_not_a_channel(monkeypatch, browser_config):
     monkeypatch.delenv("WEB_PUSH_SUBSCRIPTION")
     assert not notify.has_notification_channel()

@@ -2,6 +2,12 @@ name: Test browser notification
 
 on:
   workflow_dispatch:
+    inputs:
+      kind:
+        description: '시험할 알림'
+        type: choice
+        options: [notice, canvas]
+        default: notice
 
 permissions:
   contents: read
@@ -31,22 +37,32 @@ jobs:
           WEB_PUSH_SUB_7: ${{ secrets.WEB_PUSH_SUB_7 }}
           WEB_PUSH_SUB_8: ${{ secrets.WEB_PUSH_SUB_8 }}
           WEB_PUSH_PRIVATE_KEY: ${{ secrets.WEB_PUSH_PRIVATE_KEY }}
+          TEST_PUSH_KIND: ${{ inputs.kind }}
         run: |
           uv run python <<'PY'
           import base64, json, os
           from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
           from py_vapid import Vapid
-          from skku_notice.webpush_notify import send_web_push
+          from skku_notice.webpush_notify import _accepts_canvas, send_web_push, web_push_config
           # 비밀 값은 찍지 않고 사이트 공개키와 짝이 맞는지만 알린다.
           public = Vapid.from_string(os.environ["WEB_PUSH_PRIVATE_KEY"]).public_key.public_bytes(
               Encoding.X962, PublicFormat.UncompressedPoint)
           expected = json.load(open("web/public/web-push.json"))["publicKey"]
           print("발송 키와 사이트 공개키 일치:", base64.urlsafe_b64encode(public).decode().rstrip("=") == expected)
+          canvas = os.environ.get("TEST_PUSH_KIND") == "canvas"
+          if canvas:
+              config = web_push_config()
+              eligible = sum(_accepts_canvas(device, True) for device in config.subscriptions) if config else 0
+              print(f"아캠 요약 수신 설정 기기: {eligible}개")
+              if not eligible:
+                  raise SystemExit("아캠 요약을 받는 기기가 없어요. 기기에서 아캠 알림을 켜 주세요")
           ok = send_web_push(
-              "성대 공지 테스트 알림",
+              "아이캠퍼스 테스트 알림" if canvas else "성대 공지 테스트 알림",
+              "아캠 알림 연결을 확인하고 있어요. 누르면 아이캠퍼스가 열려요." if canvas else
               "앱과 탭을 닫아도 브라우저가 켜져 있으면 알림을 받아요. 누르면 학교 공지가 열려요.",
+              "https://canvas.skku.edu/" if canvas else
               "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=227471",
-              "skku-notice-connection-test", "default",
+              "skku-notice-connection-test", "default", canvas_summary=True if canvas else None,
           )
           if not ok:
               raise SystemExit("브라우저 알림을 보내지 못했어요. 알림 연결을 다시 확인해 주세요")

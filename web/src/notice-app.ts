@@ -806,7 +806,8 @@ export class NoticeApp extends LitElement {
     return html`<button type="button" class="side-item" aria-current=${active ? 'page' : 'false'} @click=${onClick}
       aria-label=${ariaLabel ?? nothing}
       aria-keyshortcuts=${shortcut ?? nothing} title=${shortcut ? `${label} (${shortcut})` : nothing}>
-      <span class="side-label">${itemIcon ? icon(itemIcon) : nothing}<span>${label}</span></span>${count === null ? nothing : html`<span class="count">${count}</span>`}</button>`;
+      <span class="side-label">${itemIcon ? icon(itemIcon) : nothing}<span>${label}</span></span>
+      <span class="side-trailing">${count === null ? nothing : html`<span class="count">${count}</span>`}${active ? html`<span class="board-check" aria-hidden="true"></span>` : nothing}</span></button>`;
   }
 
   private updatedLine(count?: number) {

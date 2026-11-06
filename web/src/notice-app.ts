@@ -558,7 +558,10 @@ export class NoticeApp extends LitElement {
     this.markRead(notice);
     if (event.ctrlKey || event.metaKey || event.shiftKey) return;
     event.preventDefault();
-    if (this.isWide) { this.selectedId = notice.id; this.setDetail(true); return; }
+    if (this.isWide) {
+      if (this.detailOpen && this.shownId === notice.id) { this.setDetail(false); return; }
+      this.selectedId = notice.id; this.setDetail(true); return;
+    }
     this.openedId = notice.id;
     history.pushState({ notice: notice.id }, '');
     window.scrollTo({ top: 0 });
@@ -986,7 +989,7 @@ export class NoticeApp extends LitElement {
         aria-label=${`${cleanTitle(notice.title_ko || notice.title)} 선택`}
         .checked=${this.selectedReads.includes(notice.id)} @change=${() => this.toggleReadSelection(notice.id)}></label>` : nothing}
       <a class="row ${dim ? 'dim' : ''} ${this.isRead(notice) ? 'read' : 'unread'}" href=${safeUrl(notice.url)} target="_blank" rel="noopener"
-        data-id=${notice.id} aria-current=${this.isWide && this.shownId === notice.id ? 'true' : 'false'}
+        data-id=${notice.id} aria-current=${this.isWide && this.detailOpen && this.shownId === notice.id ? 'true' : 'false'}
         @click=${(e: MouseEvent) => this.onRow(e, notice)}>
         <span class="visually-hidden">${this.isRead(notice) ? '읽은 공지' : '읽지 않은 공지'}</span>
         <span class="meta"><span class="board">${boardName(source, notice.source_id)}</span>${(() => {

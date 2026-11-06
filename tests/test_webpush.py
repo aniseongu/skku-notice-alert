@@ -7,6 +7,7 @@ from pathlib import Path
 import pytest
 from py_vapid import Vapid
 from pywebpush import WebPushException
+from requests.exceptions import ReadTimeout
 
 from skku_notice import cli, notify, webpush_notify
 from skku_notice.model import Notice
@@ -278,3 +279,51 @@ def test_selected_canvas_device_retries_temporary_failure(monkeypatch, browser_c
 
     monkeypatch.setattr(webpush_notify, "webpush", fail)
     assert not notify.send_canvas("마감", "본문", "https://canvas.skku.edu", "default")
+
+
+def test_timeout_retries_only_failed_device(monkeypatch, browser_config):
+    other = _device(b"zz")
+    monkeypatch.setenv("WEB_PUSH_SUB_2", json.dumps(other))
+    calls = []
+
+    def push(**kwargs):
+        endpoint = kwargs["subscription_info"]["endpoint"]
+        calls.append(endpoint)
+        if endpoint == other["endpoint"] and calls.count(endpoint) == 1:
+            raise ReadTimeout("SECRET_ENDPOINT")
+
+    monkeypatch.setattr(webpush_notify, "webpush", push)
+    monkeypatch.setattr(webpush_notify.time, "sleep", lambda _: None)
+    assert webpush_notify.send_web_push("제목", "본문", "https://www.skku.edu", "test", "default")
+    assert calls == [browser_config["endpoint"], other["endpoint"], other["endpoint"]]
+
+
+def test_timeout_exhaustion_is_failure_and_hides_exception(monkeypatch, browser_config, capsys):
+    calls = []
+
+    def push(**kwargs):
+        calls.append(1)
+        raise ReadTimeout("SECRET_ENDPOINT")
+
+    monkeypatch.setattr(webpush_notify, "webpush", push)
+    monkeypatch.setattr(webpush_notify.time, "sleep", lambda _: None)
+    assert not webpush_notify.send_web_push("제목", "본문", "https://www.skku.edu", "test", "default")
+    assert len(calls) == 3
+    assert "SECRET_ENDPOINT" not in capsys.readouterr().err
+
+
+@pytest.mark.parametrize("status,expected_calls", [(403, 1), (410, 1), (429, 1), (503, 3)])
+def test_http_push_failures_retry_only_transient(monkeypatch, browser_config, status, expected_calls):
+    calls = []
+
+    class Response:
+        status_code = status
+
+    def push(**kwargs):
+        calls.append(1)
+        raise WebPushException("private", response=Response())
+
+    monkeypatch.setattr(webpush_notify, "webpush", push)
+    monkeypatch.setattr(webpush_notify.time, "sleep", lambda _: None)
+    assert not webpush_notify.send_web_push("제목", "본문", "https://www.skku.edu", "test", "default")
+    assert len(calls) == expected_calls

@@ -6,11 +6,13 @@ import ipaddress
 import json
 import os
 import sys
+import time
 from dataclasses import dataclass, field
 from urllib.parse import urlsplit
 
 from py_vapid import Vapid
 from pywebpush import WebPushException, webpush
+from requests.exceptions import ConnectionError, Timeout
 
 # 기기마다 Secret 칸 하나(WEB_PUSH_SUB_1..8). 브라우저는 Secret을 읽을 수 없어 한 목록에 덧붙이지 못하므로
 # 비어 있는 칸에 저장한다. Actions는 칸 이름을 하나씩 넘긴다(D-019).
@@ -135,28 +137,42 @@ def send_web_push(
                           "silent": priority == "low"}, ensure_ascii=False)
     delivered = failed = gone = 0
     for subscription in subscriptions:
-        try:
-            webpush(
-                subscription_info=_standard_subscription(subscription),
-                data=payload,
-                vapid_private_key=config.private_key,
-                vapid_claims={"sub": config.subject},
-                timeout=10,
-                ttl=86400,
-            )
-            delivered += 1
-        except WebPushException as exc:
-            # 상태 코드만 남긴다. 구독 주소와 응답 본문은 비밀이다(410은 구독 만료, 403은 발송 키 불일치).
-            status = getattr(getattr(exc, "response", None), "status_code", None)
-            if status in (404, 410):
-                gone += 1
-            else:
+        for attempt in range(3):
+            try:
+                webpush(
+                    subscription_info=_standard_subscription(subscription),
+                    data=payload,
+                    vapid_private_key=config.private_key,
+                    vapid_claims={"sub": config.subject},
+                    timeout=10,
+                    ttl=86400,
+                )
+                delivered += 1
+                break
+            except WebPushException as exc:
+                # 구독 주소와 응답 본문은 비밀이다.
+                status = getattr(getattr(exc, "response", None), "status_code", None)
+                if status in (404, 410):
+                    gone += 1
+                    break
+                if status in (500, 502, 503, 504) and attempt < 2:
+                    time.sleep(2 ** attempt)
+                    continue
                 failed += 1
                 print(f"웹 푸시 실패: HTTP {status or '응답 없음'}", file=sys.stderr)
-        except Exception as exc:
-            # Retain pending state for the next run; never log private endpoints or responses.
-            failed += 1
-            print(f"웹 푸시 실패: {type(exc).__name__}", file=sys.stderr)
+                break
+            except (Timeout, ConnectionError) as exc:
+                if attempt < 2:
+                    time.sleep(2 ** attempt)
+                    continue
+                failed += 1
+                print(f"웹 푸시 실패: {type(exc).__name__}", file=sys.stderr)
+                break
+            except Exception as exc:
+                # Retain pending state for the next run without logging private endpoints.
+                failed += 1
+                print(f"웹 푸시 실패: {type(exc).__name__}", file=sys.stderr)
+                break
     if gone:
         print(f"웹 푸시: 만료된 기기 {gone}개는 설정에서 알림을 다시 켜 주세요", file=sys.stderr)
     # 한 기기라도 일시 실패면 다음 실행에 다시 보낸다(D-005, 드문 중복은 감수).

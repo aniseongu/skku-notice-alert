@@ -1806,6 +1806,7 @@ dependencies = [
     { name = "pywebpush" },
     { name = "pyyaml" },
     { name = "rapidocr" },
+    { name = "requests" },
     { name = "selectolax" },
 ]
 
@@ -1827,6 +1828,7 @@ requires-dist = [
     { name = "pywebpush", specifier = ">=2.5.0" },
     { name = "pyyaml", specifier = ">=6.0.3" },
     { name = "rapidocr", specifier = "==3.10.0" },
+    { name = "requests", specifier = ">=2.34.2" },
     { name = "selectolax", specifier = ">=1.0.2" },
 ]
 

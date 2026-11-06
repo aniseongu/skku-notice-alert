@@ -1669,7 +1669,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-11T17:00:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-06T20:47:19.880610+09:00"
     },
     "skku-notice01/140823": {
       "notice": {
@@ -1721,7 +1722,8 @@
       "summary": "11월 26일부터 12월 10일까지 GLS를 통해 국제동계학기 수강 신청을 진행하면 됩니다. 과목당 수강료는 450,000원이며 12월 10일까지 납부를 완료해야 합니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-06T07:55:06.332804+09:00",
-      "body_attempted_at": "2026-11-06T07:55:06.332804+09:00"
+      "body_attempted_at": "2026-11-06T07:55:06.332804+09:00",
+      "rechecked_at": "2026-11-06T20:47:19.880610+09:00"
     },
     "linkareer-intern/362548": {
       "notice": {
@@ -5708,25 +5710,37 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 회계법인의 지속가능성 팀 RA를 모집하는 것으로 소프트웨어 개발이나 데이터 분석 등 IT 직무와 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
-      "body_text": null,
+      "body_text": "삼일은 국내 최고의 회계법인으로서 4,100여 명의 전문가들이 글로벌 경영을 펼치는 고객 기업의 산업적 특성에 맞는 다양한 전문 서비스를 제공하고 있습니다.\n또한 PwC에 속한 전 세계 152개국 32만 4천여 명의 전문가들과 지식과 경험을 공유하여 고객 기업의 신뢰 확보와 가치 극대화를 위해 노력하고 있습니다.\n\n\n입사지원 및 공고 상세 안내 링크:\nSustainability team RA(Research Assistant) 모집 | Careers | 삼일PwC\n\n서류접수: ~ 2026년 11월 15일 (일) 까지\n\nContacts :Sustainability Team (yoonhyoung.choi@pwc.com)",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
+      "body_html": "<span><div><div><div>삼일은 국내 최고의 회계법인으로서 4,100여 명의 전문가들이 글로벌 경영을 펼치는 고객 기업의 산업적 특성에 맞는 다양한 전문 서비스를 제공하고 있습니다.</div><div>또한 PwC에 속한 전 세계 152개국 32만 4천여 명의 전문가들과 지식과 경험을 공유하여 고객 기업의 신뢰 확보와 가치 극대화를 위해 노력하고 있습니다.</div><div><br></div><ul><li><div>입사지원 및 공고 상세 안내 링크:&nbsp;</div><div><a href=\"https://www.pwc.com/kr/ko/career/experienced/r261103-2.html\">Sustainability team RA(Research Assistant) 모집 | Careers | 삼일PwC</a></div></li><li><div>서류접수: <b>~ 2026년 11월 15일 (일) 까지</b></div></li><li><div>Contacts :Sustainability Team (yoonhyoung.choi@pwc.com)</div></li></ul></div></div></span>",
       "images": [],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-06T20:47:19.880610+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2026-11-15T23:59:00+09:00",
         "model": "source"
+      },
+      "body_attempted_at": "2026-11-06T20:47:19.880610+09:00",
+      "intern_judgment": {
+        "fingerprint": "7c2ec3552f0dd4fc68d7e31d093b2d04d78068ca4d4704a15addc8200b72cc37",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 회계법인의 지속가능성 팀 RA를 모집하는 것으로 소프트웨어 개발이나 데이터 분석 등 IT 직무와 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "jasoseol-intern/107076": {
@@ -7425,7 +7439,7 @@
       "summary": "11월 9일부터 30일까지 제1공학관에서 탄소중립과 ESG 관련 세미나가 진행됩니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-04T16:45:18.638556+09:00",
-      "rechecked_at": "2026-11-06T07:55:06.332804+09:00"
+      "rechecked_at": "2026-11-06T20:47:19.880610+09:00"
     },
     "skku-notice01/141557": {
       "notice": {

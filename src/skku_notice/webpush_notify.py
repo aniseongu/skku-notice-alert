@@ -176,4 +176,4 @@ def send_web_push(
     if gone:
         print(f"웹 푸시: 만료된 기기 {gone}개는 설정에서 알림을 다시 켜 주세요", file=sys.stderr)
     # 한 기기라도 일시 실패면 다음 실행에 다시 보낸다(D-005, 드문 중복은 감수).
-    return failed == 0 and (delivered > 0 or canvas_summary is not None)
+    return failed == 0 and delivered > 0

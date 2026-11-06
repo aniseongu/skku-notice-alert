@@ -16,6 +16,22 @@
 
 휴대폰과 노트북 브라우저에서 열고 앱으로 설치할 수 있습니다. 수집과 알림은 GitHub Actions에서 실행하므로 내 PC를 켜 둘 필요가 없습니다. 성균관대학교의 공식 서비스는 아닙니다.
 
+## 사용 화면
+
+PC에서는 목록과 공지 상세를 함께 봅니다. 상세가 열린 공지를 다시 누르면 오른쪽 상세 칸을 닫을 수 있습니다.
+
+| PC 웹 브라우저 | PC 앱 창 |
+|---|---|
+| ![PC 브라우저의 공지 목록과 상세](assets/readme/desktop-notices.jpg) | ![독립 앱 창의 공지 목록과 상세](assets/readme/app-desktop.jpg) |
+
+휴대폰에서는 인턴 공고를 살펴보고 공지를 눌러 상세와 원문을 확인합니다.
+
+| 모바일 웹: 인턴 공고 | 모바일 웹: 공지 상세 | 모바일 크기 앱 화면 |
+|---|---|---|
+| ![모바일 웹의 인턴 공고 목록](assets/readme/mobile-interns.jpg) | ![모바일 웹의 공지 상세](assets/readme/mobile-detail.jpg) | ![독립 앱 모드에서 모바일 크기로 본 인턴 공고](assets/readme/app-mobile.jpg) |
+
+2026년 11월 6일 운영 화면을 Playwright로 캡처했습니다. 앱 화면은 Chrome 독립 앱 창 모드에서 촬영했으며, 모바일 앱 화면은 휴대폰 크기로 설정한 캡처입니다.
+
 ## 주요 기능
 
 - 성균관대 공지와 인턴 공고를 게시판별로 살펴보고, 관심 있는 글을 저장할 수 있습니다.
@@ -26,6 +42,15 @@
 - 앱 설치, 라이트와 다크 모드, 키보드 탐색, 오프라인 목록을 지원합니다.
 
 학교 공지는 30분마다 확인을 시도하고, 인턴 공고는 마지막 성공 확인 후 1시간이 지나면 다음 실행에서 확인합니다. 인턴 공고는 Gemini로 직무와 지원 가능성을 판단하며, 판정에 필요한 정보가 없으면 확인을 기다립니다. 수집 결과는 GitHub Actions 실행 상황에 따라 늦어질 수 있습니다.
+
+## 수집 출처
+
+| 화면 | 출처 |
+|---|---|
+| 성대 공지 | [성균관대 공지](https://www.skku.edu/skku/campus/skk_comm/notice01.do), [소프트웨어학과](https://cse.skku.edu/cse/notice.do), [소프트웨어융합대학](https://sw.skku.edu/sw/notice.do), [미래차 부트캠프](https://swb.skku.edu/futurecar/notice.do) |
+| 인턴 공고 | [성대 학생인재개발팀](https://job.skku.edu/Recruit/RecruitInternList.aspx?rp=1), [링커리어](https://linkareer.com/list/intern), [자소설닷컴](https://jasoseol.com/recruit) |
+
+인턴 공고는 Gemini가 지원할 만한 IT 직무라고 판정한 경우 알림을 보냅니다. 학생인재개발팀의 첨부 문서는 링크를 제공하며 문서 내용 자체는 자동으로 읽지 않습니다. 목록에 마감 날짜만 있는 경우 해당 날짜의 23:59로 표시하므로 정확한 시각은 원문에서 확인해 주세요.
 
 ## 기술 구성
 

@@ -584,6 +584,30 @@ def run(args: argparse.Namespace) -> int:
         archive = _apply_ocr(archive, image_parts)
         if image_parts:
             save_archive(ARCHIVE_PATH, archive)
+    if (not args.dry_run and ai.get("enabled") and not getattr(args, "no_ai", False)
+            and (profile or interests)):
+        items = dict(archive.items)
+        for notice in candidates:
+            key = f"{notice.source_id}/{notice.article_no}"
+            if key not in items:
+                archive = add_notice(Archive(items), notice, now.isoformat())
+                items = dict(archive.items)
+            items[key] = {**items[key], "ai_judgment_pending": True}
+        archive = Archive(items)
+        save_archive(ARCHIVE_PATH, archive)
+        current_ids = {f"{notice.source_id}/{notice.article_no}" for notice in candidates}
+        school_ids = {source["id"] for source in settings["sources"] if not source.get("external")}
+        for key, item in archive.items.items():
+            data = item["notice"]
+            if (key in current_ids or not item.get("ai_judgment_pending")
+                    or data["source_id"] not in school_ids):
+                continue
+            try:
+                candidates.append(Notice(data["source_id"], data["article_no"], data["title"],
+                                         data.get("category"), data["url"],
+                                         date.fromisoformat(data["posted_on"]), data.get("pinned", False)))
+            except (KeyError, TypeError, ValueError):
+                continue
     if candidates and ai.get("enabled") and not getattr(args, "no_ai", False):
         key = os.environ.get("GEMINI_API_KEY")
         if not key:
@@ -604,6 +628,23 @@ def run(args: argparse.Namespace) -> int:
                 ))) for key, item in archive.items.items()},
                 images=image_parts,
             )
+            if not args.dry_run and judgments:
+                items = dict(archive.items)
+                for key, result in judgments.items():
+                    if key not in items:
+                        continue
+                    item = items[key]
+                    match = {**(item.get("match") or {}), "ai": {
+                        "verdict": result.verdict, "reason": result.reason, "model": result.model,
+                        "interests": list(result.interests),
+                    }}
+                    updated = {**item, "match": match}
+                    updated.pop("ai_judgment_pending", None)
+                    if result.summary:
+                        updated["summary"] = result.summary
+                    items[key] = updated
+                archive = Archive(items)
+                save_archive(ARCHIVE_PATH, archive)
     for source, notices in boards:
         if args.dry_run and source["id"] not in state.sources:
             print(f"{source['id']}: state 없음: 실제 첫 실행이면 알림 없이 기준선만 저장")

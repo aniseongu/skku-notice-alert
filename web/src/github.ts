@@ -32,7 +32,7 @@ async function call(path: string, token: string, init: RequestInit = {}, allowCo
 export async function listSecrets(repo: string, token: string): Promise<Record<string, string>> {
   const result: Record<string, string> = {};
   for (let page = 1; ; page++) {
-    const response = await call(`/repos/${repo}/actions/secrets?per_page=100&page=${page}`, token);
+    const response = await call(`/repos/${repo}/actions/secrets?per_page=100&page=${page}`, token, { cache: 'no-store' });
     const body = (await response.json()) as { total_count: number; secrets: { name: string; updated_at: string }[] };
     for (const secret of body.secrets) result[secret.name] = secret.updated_at;
     if (page * 100 >= body.total_count) return result;

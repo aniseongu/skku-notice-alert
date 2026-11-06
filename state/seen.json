@@ -1,9 +1,9 @@
 {
   "version": 1,
   "external_checked_at": {
-    "linkareer-intern": "2026-11-06T17:06:47.981027+09:00",
-    "jasoseol-intern": "2026-11-06T17:06:47.981027+09:00",
-    "skku-career-intern": "2026-11-06T17:06:47.981027+09:00"
+    "linkareer-intern": "2026-11-06T18:57:05.648463+09:00",
+    "jasoseol-intern": "2026-11-06T18:57:05.648463+09:00",
+    "skku-career-intern": "2026-11-06T18:57:05.648463+09:00"
   },
   "sources": {
     "skku-notice01": {
@@ -1227,6 +1227,21 @@
         "362724": {
           "first_seen": "2026-11-06T17:06:47.981027+09:00",
           "status": "skipped",
+          "attempts": 0
+        },
+        "362790": {
+          "first_seen": "2026-11-06T18:57:05.648463+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362783": {
+          "first_seen": "2026-11-06T18:57:05.648463+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "362770": {
+          "first_seen": "2026-11-06T18:57:05.648463+09:00",
+          "status": "pending",
           "attempts": 0
         }
       }

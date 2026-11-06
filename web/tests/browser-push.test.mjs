@@ -9,7 +9,7 @@ const source = readFileSync(new URL('../src/browser-push.ts', import.meta.url), 
 const js = stripTypeScriptTypes(source.replace(/^import .*;$/gm, '').replace(/\bexport\s+/g, ''), { mode: 'strip' })
   + '\nObject.assign(exports, { defaultCanvasPushMode, canvasPushMode, connectBrowserPush, disconnectBrowserPush, setCanvasPushMode });';
 
-function makeEnvironment({ mobile = false, subscription = true, used = {}, saveFails = false, uncertain = false, deleteFails = false, nameClearFails = false, readbackFails = false } = {}) {
+function makeEnvironment({ mobile = false, subscription = true, used = {}, saveFails = false, uncertain = false, deleteFails = false, nameClearFails = false, readbackFails = false, unsubscribeFails = false } = {}) {
   const storage = new Map();
   const writes = [];
   const secretNames = { ...used };
@@ -20,8 +20,8 @@ function makeEnvironment({ mobile = false, subscription = true, used = {}, saveF
     endpoint: 'https://push.example/subscription', keys: { p256dh: 'public-key', auth: 'auth-key' },
   }) };
   let unsubscribed = false;
-  current.unsubscribe = async () => { unsubscribed = true; return true; };
-  const manager = { getSubscription: async () => subscription ? current : null, subscribe: async () => current };
+  current.unsubscribe = async () => { if (unsubscribeFails) return false; unsubscribed = true; return true; };
+  const manager = { getSubscription: async () => subscription && !unsubscribed ? current : null, subscribe: async () => current };
   const registration = { pushManager: manager };
   const notification = { permission: 'granted', requestPermission: async () => { permissionRequests++; return 'granted'; } };
   class GitHubError extends Error {}
@@ -53,7 +53,8 @@ function makeEnvironment({ mobile = false, subscription = true, used = {}, saveF
     crypto: webcrypto, TextEncoder, Uint8Array, URL,
   };
   vm.runInNewContext(js, sandbox);
-  return { api: sandbox.exports, storage, writes, actions, secretNames, permissionRequests: () => permissionRequests, unsubscribed: () => unsubscribed };
+  return { api: sandbox.exports, storage, writes, actions, secretNames, permissionRequests: () => permissionRequests,
+    failList: () => { failNextList = true; }, unsubscribed: () => unsubscribed };
 }
 
 test('mobile defaults to reminders and desktop to off without storing a selection', () => {
@@ -122,6 +123,45 @@ test('failed remote disconnect keeps the subscription and can be retried', async
   assert.notEqual(env.storage.get('browser-push-device'), undefined);
 });
 
+test('disconnect can stop this browser without deleting a slot whose owner is uncertain', async () => {
+  const env = makeEnvironment();
+  await env.api.connectBrowserPush('owner/repo', 'token');
+  env.secretNames.WEB_PUSH_SUB_1 = 'changed-by-another-device';
+  const result = await env.api.disconnectBrowserPush('owner/repo', 'token');
+  assert.equal(result.remoteRetained, true);
+  assert.equal(env.unsubscribed(), true);
+  assert.equal(env.secretNames.WEB_PUSH_SUB_1, 'changed-by-another-device');
+  assert.notEqual(env.storage.get('browser-push-device'), undefined);
+});
+
+test('a saved subscription with an unconfirmed timestamp can be turned off without deleting the slot', async () => {
+  const env = makeEnvironment({ readbackFails: true });
+  await assert.rejects(env.api.connectBrowserPush('owner/repo', 'token'), /조회 실패/);
+  assert.equal((await env.api.disconnectBrowserPush('owner/repo', 'token')).remoteRetained, true);
+  assert.equal(env.unsubscribed(), true);
+  assert.equal(env.secretNames.WEB_PUSH_SUB_1, 'date');
+});
+
+test('a refused browser unsubscribe does not claim that notifications are off', async () => {
+  const env = makeEnvironment({ unsubscribeFails: true });
+  await env.api.connectBrowserPush('owner/repo', 'token');
+  env.secretNames.WEB_PUSH_SUB_1 = 'other-device';
+  await assert.rejects(env.api.disconnectBrowserPush('owner/repo', 'token'), /끄지 못했어요/);
+  assert.equal(env.secretNames.WEB_PUSH_SUB_1, 'other-device');
+  assert.equal(env.unsubscribed(), false);
+  assert.notEqual(env.storage.get('browser-push-device'), undefined);
+});
+
+test('a temporary failure to read GitHub still permits local unsubscribe', async () => {
+  const env = makeEnvironment();
+  await env.api.connectBrowserPush('owner/repo', 'token');
+  env.failList();
+  const result = await env.api.disconnectBrowserPush('owner/repo', 'token');
+  assert.equal(result.remoteRetained, true);
+  assert.equal(env.unsubscribed(), true);
+  assert.equal(env.secretNames.WEB_PUSH_SUB_1, 'date');
+});
+
 test('a free slot clears an orphaned name before saving a new subscription', async () => {
   const env = makeEnvironment();
   await env.api.connectBrowserPush('owner/repo', 'token');
@@ -132,12 +172,10 @@ test('a free slot clears an orphaned name before saving a new subscription', asy
   assert.equal(failing.writes.length, 0);
 });
 
-test('a slot changed by another device is never overwritten or disconnected', async () => {
+test('a slot changed by another device is never overwritten', async () => {
   const env = makeEnvironment();
   await env.api.connectBrowserPush('owner/repo', 'token');
   env.secretNames.WEB_PUSH_SUB_1 = 'changed-by-another-device';
-  await assert.rejects(env.api.disconnectBrowserPush('owner/repo', 'token'), /등록이 바뀌었어요/);
-  assert.equal(env.unsubscribed(), false);
   await assert.rejects(env.api.connectBrowserPush('owner/repo', 'token'), /기존 등록을 확인할 수 없어요/);
   assert.equal(env.writes.length, 1);
   assert.equal(env.secretNames.WEB_PUSH_SUB_1, 'changed-by-another-device');
@@ -163,7 +201,8 @@ test('legacy duplicate is checked before deleting a newer slot', async () => {
   const env = makeEnvironment({ used: { WEB_PUSH_SUBSCRIPTION: 'date' } });
   await env.api.connectBrowserPush('owner/repo', 'token');
   env.storage.set('browser-push-registered', JSON.parse(env.storage.get('browser-push-device')).fingerprint);
-  await assert.rejects(env.api.disconnectBrowserPush('owner/repo', 'token'), /이전 알림 등록/);
+  const result = await env.api.disconnectBrowserPush('owner/repo', 'token');
+  assert.equal(result.remoteRetained, true);
   assert.equal(env.secretNames.WEB_PUSH_SUB_1, 'date');
-  assert.equal(env.unsubscribed(), false);
+  assert.equal(env.unsubscribed(), true);
 });

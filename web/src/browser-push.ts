@@ -137,36 +137,40 @@ export async function setCanvasPushMode(repo: string, token: string, mode: Canva
   try { localStorage.setItem(CANVAS_MODE, mode); } catch { /* 설정은 서버 구독에 저장했다 */ }
 }
 
-export async function disconnectBrowserPush(repo: string, token: string): Promise<void> {
+export async function disconnectBrowserPush(repo: string, token: string): Promise<{ remoteRetained: boolean }> {
   const registration = await navigator.serviceWorker.getRegistration();
   const subscription = await registration?.pushManager.getSubscription();
+  let remoteRetained = false;
   if (subscription) {
     const mine = await fingerprint(subscription);
     const device = myDevice();
-    const used = await listSecrets(repo, token);
+    let used: Record<string, string> | null = null;
+    try { used = await listSecrets(repo, token); } catch { remoteRetained = true; }
     // 레거시 구독 소유권을 확인할 수 없다면 다른 슬롯도 바꾸지 않는다.
     let legacy = false;
     try { legacy = localStorage.getItem(LEGACY) === mine; } catch { /* 모르면 지우지 않는다 */ }
-    if (legacy && used.WEB_PUSH_SUBSCRIPTION) throw new Error('이전 알림 등록은 기기 목록에서 확인한 뒤 삭제해 주세요');
-    if (device?.fingerprint === mine && used[device.slot] && matchesCurrentDevice(device.slot, used[device.slot])) {
+    if (legacy && used?.WEB_PUSH_SUBSCRIPTION) remoteRetained = true;
+    if (!remoteRetained && used && device?.fingerprint === mine && used[device.slot] && matchesCurrentDevice(device.slot, used[device.slot])) {
       await deleteSecret(repo, token, device.slot);
       await saveVariable(repo, token, deviceNameVariable(device.slot), '');
-    } else if (device && used[device.slot]) {
-      throw new Error('기기 등록이 바뀌었어요. 기기 목록에서 확인해 주세요');
+    } else if (device) {
+      remoteRetained = true;
     }
-    // 이 기기가 예전 한 대 저장의 주인일 때만 그 Secret도 지운다(다른 기기 것은 건드리지 않는다).
-    await subscription.unsubscribe();
+    if (!await subscription.unsubscribe()) throw new Error('이 기기에서 알림을 끄지 못했어요. 다시 시도해 주세요');
   } else if (myDevice()) {
-    throw new Error('기존 알림 구독을 확인할 수 없어요. 기기 목록에서 등록 정보를 확인해 주세요');
+    remoteRetained = true;
   }
-  try { localStorage.removeItem(DEVICE); localStorage.removeItem(LEGACY); } catch { /* 로컬 기록을 지우지 못해도 서버 발송은 멈춘다 */ }
+  if (!remoteRetained) {
+    try { localStorage.removeItem(DEVICE); localStorage.removeItem(LEGACY); } catch { /* 로컬 저장소를 사용할 수 없음 */ }
+  }
+  return { remoteRetained };
 }
 
 /** 사용자가 목록에서 이 브라우저의 이전 등록을 직접 지운 뒤 로컬 구독을 정리한다. */
 export async function clearLocalBrowserPush(): Promise<void> {
   const registration = await navigator.serviceWorker.getRegistration();
   const subscription = await registration?.pushManager.getSubscription();
-  if (subscription) await subscription.unsubscribe();
+  if (subscription && !await subscription.unsubscribe()) throw new Error('이 기기에서 알림을 끄지 못했어요. 다시 시도해 주세요');
   try { localStorage.removeItem(DEVICE); localStorage.removeItem(LEGACY); } catch { /* 로컬 저장소를 사용할 수 없음 */ }
 }
 

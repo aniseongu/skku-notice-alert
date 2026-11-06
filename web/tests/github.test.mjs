@@ -1,6 +1,16 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { GitHubError, SecretWriteUncertainError, checkGeminiKey, listSecrets, readVariable, saveSecret, saveVariable } from '../src/github.ts';
+import { GitHubError, SecretWriteUncertainError, checkGeminiKey, createVariableIfAbsent, listSecrets, readVariable, saveSecret, saveVariable } from '../src/github.ts';
+
+test('creating a default name never overwrites an existing variable', async () => {
+  const original = globalThis.fetch;
+  const calls = [];
+  try {
+    globalThis.fetch = async (_url, init) => { calls.push(init.method); return new Response(null, { status: 409 }); };
+    assert.equal(await createVariableIfAbsent('owner/repo', 'token', 'PUSH_DEVICE_NAME_1', 'PC'), false);
+    assert.deepEqual(calls, ['POST']);
+  } finally { globalThis.fetch = original; }
+});
 
 test('secret listing includes later pages and fails closed on an incomplete response', async () => {
   const original = globalThis.fetch;

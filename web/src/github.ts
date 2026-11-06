@@ -92,6 +92,13 @@ export async function saveVariable(repo: string, token: string, name: string, va
   }
 }
 
+/** Create only: never replace a name saved by another device. */
+export async function createVariableIfAbsent(repo: string, token: string, name: string, value: string): Promise<boolean> {
+  const response = await call(`/repos/${repo}/actions/variables`, token,
+    { method: 'POST', body: JSON.stringify({ name, value }) }, true);
+  return response.status !== 409;
+}
+
 // Gemini 키가 맞는지 모델 목록을 하나만 불러 본다. 키는 Google로만 간다.
 export async function checkGeminiKey(key: string): Promise<boolean> {
   const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=1', {

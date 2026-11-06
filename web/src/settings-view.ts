@@ -8,6 +8,7 @@ import { forgetToken, loadToken, readSavedSecrets, rememberSavedSecrets, storeTo
 import { GoogleError, connectGoogleCalendar, validClientId } from './google-calendar';
 import { keyConnection, KeyConnectionError } from './key-connection';
 import { deviceNameVariable, loadDeviceNames, saveDeviceName, suggestDeviceName } from './device-names';
+import { syncCurrentDeviceName } from './device-name-sync';
 import { browserPushEnabled, canvasPushMode, clearLocalBrowserPush, currentDeviceSlot, matchesCurrentDevice, DEVICE_SLOTS, defaultCanvasPushMode, connectBrowserPush, disconnectBrowserPush, pushConfiguration, setCanvasPushMode, supportsBrowserPush, testBrowserNotification } from './browser-push';
 
 export type Theme = 'auto' | 'light' | 'dark';
@@ -231,7 +232,16 @@ export class SettingsView extends LitElement {
     try {
       const names = await loadDeviceNames(repo, token, slots);
       const slot = enabled ? currentDeviceSlot() : null;
-      const suggestion = slot && matchesCurrentDevice(slot, saved[slot]) && !names[slot] ? await suggestDeviceName() : '';
+      let suggestion = '';
+      if (slot && matchesCurrentDevice(slot, saved[slot]) && !names[slot]) {
+        try {
+          const synced = await syncCurrentDeviceName(repo, token);
+          if (synced && currentDeviceSlot() === slot && matchesCurrentDevice(slot, saved[slot])) names[slot] = synced;
+        } catch {
+          suggestion = await suggestDeviceName();
+          if (this.repo === repo && this.token === token) this.setStatus('device-list', false, '기기 이름을 자동으로 저장하지 못했어요. 잠시 뒤 다시 열어 주세요');
+        }
+      }
       if (this.repo === repo && this.token === token) { this.deviceNames = names; this.deviceSuggestion = suggestion; }
     } catch {
       if (this.repo === repo && this.token === token) {
@@ -839,7 +849,7 @@ export class SettingsView extends LitElement {
                   const updated = Number.isNaN(date.getTime()) ? '' : new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium' }).format(date);
                   return html`<div class="setting"><div class="setting-text"><p class="setting-name">${label}${current ? ' (이 기기)' : recorded ? ' (이 기기의 연결 기록)' : ''}</p>
                     ${updated ? html`<p class="setting-help">등록 정보 갱신: ${updated}</p>` : nothing}
-                    ${current && !this.deviceNames[slot] && this.deviceSuggestion ? html`<p class="setting-help">이 기기에서 제안한 이름이에요. 저장하면 다른 기기에서도 보여요</p>` : nothing}
+                    ${current && !this.deviceNames[slot] && this.deviceSuggestion ? html`<p class="setting-help">이 기기에서 제안한 이름이에요</p>` : nothing}
                     ${current ? html`<p class="setting-help">이 기기의 알림이 연결돼 있어요</p>` : recorded ? html`<p class="setting-help">지금은 다른 기기의 등록일 수도 있어요</p>` : nothing}</div>
                     <div class="setting-control">
                     ${this.deviceNameEditing === slot ? html`<div class="inline"><input class="input" aria-label="${label} 이름" maxlength="40" .value=${this.deviceNameDraft} @input=${(e: Event) => { this.deviceNameDraft = (e.target as HTMLInputElement).value; }}>

@@ -10,7 +10,7 @@
 ![PWA](https://img.shields.io/badge/PWA-installable-124532)
 ![hosting](https://img.shields.io/badge/GitHub%20Pages-222222?logo=githubpages&logoColor=white)
 
-[![성공 웹사이트 열기](https://img.shields.io/badge/Open%20Website-124532?style=for-the-badge&logo=pwa&logoColor=white)](https://aniseongu.github.io/skku-notice-alert/)
+[![성공 웹사이트 열기](https://img.shields.io/badge/Open%20Website-124532?style=for-the-badge&logo=googlechrome&logoColor=white)](https://aniseongu.github.io/skku-notice-alert/)
 
 </div>
 

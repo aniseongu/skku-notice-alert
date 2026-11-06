@@ -10,11 +10,9 @@
 ![PWA](https://img.shields.io/badge/PWA-installable-124532)
 ![hosting](https://img.shields.io/badge/GitHub%20Pages-222222?logo=githubpages&logoColor=white)
 
+[![성공 앱 열기](https://img.shields.io/badge/Open%20App-124532?style=for-the-badge&logo=googlechrome&logoColor=white)](https://aniseongu.github.io/skku-notice-alert/)
+
 </div>
-
-**[성공 열기](https://aniseongu.github.io/skku-notice-alert/)**
-
-휴대폰과 노트북 브라우저에서 열고 앱으로 설치할 수 있습니다. 수집과 알림은 GitHub Actions에서 실행하므로 내 PC를 켜 둘 필요가 없습니다.
 
 ## 사용 화면
 

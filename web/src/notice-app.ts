@@ -1002,7 +1002,7 @@ export class NoticeApp extends LitElement {
           const tags = [notice.category, notice.pinned ? '고정' : '', notice.changed_at ? '수정됨' : '',
             this.view !== 'saved' && this.isSaved(notice) ? '저장함' : ''].filter(Boolean);
           return tags.length ? html`<span class="cat" title=${tags.join(', ')}>${tags.join(', ')}</span>` : nothing;
-        })()}${this.isWide && this.detailOpen && this.shownId === notice.id ? html`<span class="row-current">보고 있는 글</span>` : nothing}</span>
+        })()}</span>
         <span class="title">${cleanTitle(notice.title_ko || notice.title)}</span>
         <span class="sub">${this.reasonLine(notice)}</span>
         ${this.dday(notice, today)}

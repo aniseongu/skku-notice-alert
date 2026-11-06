@@ -33,7 +33,6 @@
     --mica: color-mix(in oklch, var(--bg) 94%, var(--accent));
     --side-selected: light-dark(oklch(0.36 0.012 var(--h)), oklch(0.31 0.008 var(--h)));
     --side-selected-text: light-dark(oklch(0.98 0.004 var(--h)), var(--text));
-    --row-selected: light-dark(oklch(0.70 0.006 var(--h)), oklch(0.35 0.008 var(--h)));
   }
   /* 설정 화면의 테마 선택(기기 설정, 밝게, 어둡게). light-dark()가 이 값을 따른다. */
   :root[data-theme="light"] { color-scheme: light; }
@@ -141,15 +140,7 @@
   .row.read .dday.urgent { color: light-dark(var(--danger), var(--text-2)); }
   .row.read .reason.relevant b, .row.read .interest { color: light-dark(var(--accent), var(--text-2)); }
   .row.read .reason.maybe b { color: light-dark(var(--soon), var(--text-2)); }
-  .row:active { background: var(--sunken); }
-  .row[aria-current="true"] {
-    background: var(--row-selected);
-    --text-2: light-dark(oklch(0.24 0.012 var(--h)), oklch(0.84 0.01 var(--h)));
-    --text-3: var(--text-2);
-    --accent: light-dark(oklch(0.3 0.075 var(--h)), oklch(0.8 0.1 var(--h)));
-    --danger: light-dark(oklch(0.32 0.14 25), oklch(0.74 0.15 25));
-    --soon: light-dark(oklch(0.32 0.08 65), oklch(0.8 0.12 75));
-  }
+  .row:active, .row[aria-current="true"] { background: var(--sunken); }
   .row:focus-visible { outline-offset: -2px; }
 
   .skeleton { gap: 8px; }
@@ -353,8 +344,7 @@
   .batch-row .row { flex: 1; min-width: 0; }
   .batch-row:has(.row.read) .selection-check { background: light-dark(color-mix(in oklch, var(--surface) 25%, var(--sunken)),
                                                                     color-mix(in oklch, var(--surface) 40%, var(--bg))); }
-  .batch-row:has(.row:active) .selection-check { background: var(--sunken); }
-  .batch-row:has(.row[aria-current="true"]) .selection-check { background: var(--row-selected); }
+  .batch-row:has(.row[aria-current="true"]) .selection-check, .batch-row:has(.row:active) .selection-check { background: var(--sunken); }
   .selection-check { display: grid; place-items: center; flex: none; width: 44px; min-height: 44px; cursor: pointer; }
   .selection-check input, .select-all input { appearance: none; position: relative; width: 16px; height: 16px; margin: 0; flex: none; border: 1px solid var(--text-3); border-radius: var(--r-sm); background: transparent; cursor: pointer; }
   .selection-check input:checked, .select-all input:checked, .select-all input:indeterminate { background: var(--text); border-color: var(--text); }
@@ -501,7 +491,6 @@
     .row .meta span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .row .meta .board { color: var(--text-2); font-weight: 600; }
     .row.read .meta .board { color: var(--text-3); font-weight: 500; }
-    .row .meta .row-current { color: var(--text); font-weight: 700; }
     .row .title { font-size: 15px; line-height: 22px; }
     .row .dday { align-self: start; padding-top: 2px; text-align: right; }
     /* 판정은 한 줄(ux-rules 2절). 넘치면 줄여서 행 높이가 제목 줄 수만 따르게 한다. */

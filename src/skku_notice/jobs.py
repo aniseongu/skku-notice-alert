@@ -5,6 +5,7 @@ import json
 import re
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
+from urllib.parse import unquote, urljoin, urlsplit
 
 from selectolax.lexbor import LexborHTMLParser
 
@@ -138,7 +139,21 @@ def parse_job_detail(html: str, kind: str, article_no: str, url: str) -> Detail:
         body = LexborHTMLParser(html).css_first('#ALLTEXT')
         if body is None:
             raise ParseError('career internship body missing')
-        return parse_external_fragment(body.html, url)
+        attachments = []
+        for link in body.css('a[href]'):
+            target = urljoin(url, link.attributes['href'])
+            parsed = urlsplit(target)
+            name = link.text(separator=' ', strip=True)
+            if (parsed.scheme == 'https' and parsed.hostname == 'job.skku.edu'
+                    and unquote(parsed.path).startswith('/upload/Recruit/') and name):
+                suffix = unquote(parsed.path).rsplit('.', 1)[-1].upper()
+                attachments.append((name, target, suffix, None))
+        for icon in body.css('img[src]'):
+            path = urlsplit(urljoin(url, icon.attributes['src'])).path.lower()
+            if path.startswith('/app/system/editor/filetype/'):
+                icon.decompose()
+        detail = parse_external_fragment(body.html, url)
+        return Detail(detail.body_text, tuple(attachments), detail.images, detail.body_html)
     node = LexborHTMLParser(html).css_first("script#__NEXT_DATA__")
     try:
         page = json.loads(node.text())["props"]["pageProps"] if node else {}

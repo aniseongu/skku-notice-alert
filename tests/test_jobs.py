@@ -227,5 +227,49 @@ def test_skku_career_public_list_and_detail():
     detail_html = (fixtures / 'skku_career_intern_view_165070_2026-11-06.html').read_text()
     detail = jobs.parse_job_detail(detail_html, 'skku-career-intern', first.article_no, first.url)
     assert '인턴 채용' in detail.body_text
+    assert not detail.images
+    assert len(detail.attachments) == 2
+    assert detail.attachments[0][1].startswith('https://job.skku.edu/upload/Recruit/')
+    assert detail.attachments[0][2] == 'DOCX'
     with pytest.raises(jobs.ParseError):
         jobs.skku_career_list('<html></html>', NOW, 'skku-career-intern')
+
+
+def test_skku_career_details_flow_to_intern_judgment_and_export(tmp_path, monkeypatch):
+    import json
+    from types import SimpleNamespace
+
+    from skku_notice import cli
+    from skku_notice.export import export_site
+    from skku_notice.judge import Judgment
+    from skku_notice.notification_policy import alert_priority
+
+    fixtures = Path(__file__).parent / 'fixtures'
+    notice = jobs.skku_career_list(
+        (fixtures / 'skku_career_intern_list_2026-11-06.html').read_text(), NOW, 'skku-career-intern'
+    )[0][0]
+    source = {'id': notice.source_id, 'name': '성대 학생인재개발팀', 'kind': 'skku-career-intern',
+              'external': True, 'url': 'https://job.skku.edu/Recruit/RecruitInternList.aspx?rp=1'}
+    state = SimpleNamespace(sources={source['id']: SimpleNamespace(seen={})})
+    monkeypatch.setattr(cli, 'ARCHIVE_PATH', tmp_path / 'archive.json')
+    monkeypatch.setattr(cli.time, 'sleep', lambda _: None)
+    html = (fixtures / 'skku_career_intern_view_165070_2026-11-06.html').read_text()
+    monkeypatch.setattr(cli, 'fetch_detail', lambda *args: html)
+    received = []
+    def judge(items, *args, **kwargs):
+        received.extend(items)
+        return {items[0]['id']: Judgment('relevant', '개발 직무예요', 'model')}
+    monkeypatch.setattr(cli, 'judge_internships', judge)
+    archive = cli._fill_details(Archive(), state, [(source, [notice])],
+                                {'user_agent': 'test', 'timeout_seconds': 10}, False, NOW)
+    archive, judgments = cli._intern_decisions(
+        archive, state, [source], {'model': 'model'}, 'fake', [10], 'test')
+    key = f'{source["id"]}/{notice.article_no}'
+    assert received[0]['id'] == key and '인턴 채용' in received[0]['body']
+    assert alert_priority(external=True, title=notice.title, body=received[0]['body'], match=None,
+                          judgment=judgments[key], interests=()) == 'default'
+    export_site(tmp_path / 'site', archive, [source], NOW, web_path=tmp_path / 'missing')
+    listing = json.loads((tmp_path / 'site/api/v1/notices.json').read_text())
+    detail = json.loads((tmp_path / f'site/api/v1/notices/{key}.json').read_text())
+    assert listing['sources'][0]['external'] is True and listing['notices'][0]['url'] == notice.url
+    assert len(detail['attachments']) == 2 and not detail['images']

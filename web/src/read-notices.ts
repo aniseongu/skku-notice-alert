@@ -32,6 +32,14 @@ export function readIds(state: ReadState): string[] {
   return Object.entries(state.entries).filter(([, stamp]) => stamp >= 0).map(([id]) => id);
 }
 
+/** A later source edit makes a previously read notice unread until it is read again. */
+export function isNoticeRead(state: ReadState, id: string, changedAt?: string | null): boolean {
+  const stamp = state.entries[id];
+  if (stamp === undefined || stamp < 0) return false;
+  const changed = changedAt ? Date.parse(changedAt) : NaN;
+  return !Number.isFinite(changed) || stamp >= changed;
+}
+
 export function mergeReadStates(remote: ReadState, local: ReadState): ReadState {
   const merged = emptyState();
   for (const state of [remote, local]) {

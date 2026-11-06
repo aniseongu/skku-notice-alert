@@ -1,7 +1,22 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { READ_LIMIT, addRead, mergeRead, parseRead, parseReadState, readIds,
+import { READ_LIMIT, addRead, isNoticeRead, mergeRead, parseRead, parseReadState, readIds,
   mergeReadStates, serializeReadState, setReadState } from '../src/read-notices.ts';
+
+test('editing a read notice makes it unread until a device reads the edit', () => {
+  const edit = '2026-11-06T12:00:00+09:00';
+  const at = Date.parse(edit);
+  const old = setReadState(parseReadState(null), ['school/1'], true, at - 1000);
+  assert.equal(isNoticeRead(old, 'school/1', null), true);
+  assert.equal(isNoticeRead(old, 'school/1', edit), false);
+  const updated = setReadState(old, ['school/1'], true, at + 1000);
+  assert.equal(isNoticeRead(mergeReadStates(old, updated), 'school/1', edit), true);
+  assert.equal(isNoticeRead(mergeReadStates(updated, old), 'school/1', edit), true);
+  assert.equal(isNoticeRead(updated, 'school/1', '2026-11-06T12:01:00+09:00'), false);
+  assert.equal(isNoticeRead(setReadState(updated, ['school/1'], false, at + 2000), 'school/1', edit), false);
+  assert.equal(isNoticeRead(parseReadState('["school/1"]'), 'school/1', edit), false);
+  assert.equal(isNoticeRead(updated, 'school/1', 'invalid'), true);
+});
 
 test('reading keeps the latest ids only and moves a re-read id to the end', () => {
   let ids = [];

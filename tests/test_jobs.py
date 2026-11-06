@@ -1,4 +1,5 @@
 from datetime import datetime
+from pathlib import Path
 
 import pytest
 
@@ -211,3 +212,20 @@ def test_public_intern_reason_does_not_promote_other_majors(tmp_path):
 def test_external_invalid_response_is_not_success(collector, response):
     with pytest.raises((KeyError, ValueError)):
         collector(lambda *args: response, NOW)
+
+
+def test_skku_career_public_list_and_detail():
+    fixtures = Path(__file__).parent / 'fixtures'
+    html = (fixtures / 'skku_career_intern_list_2026-11-06.html').read_text()
+    postings = jobs.skku_career_list(html, NOW, 'skku-career-intern')
+    assert len(postings) == 20
+    first, deadline = postings[0]
+    assert first.article_no == '165070' and '딜로이트' in first.title
+    assert first.url.startswith('https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=')
+    assert deadline == '2026-11-19T23:59:00+09:00'
+    assert postings[2][1] is None
+    detail_html = (fixtures / 'skku_career_intern_view_165070_2026-11-06.html').read_text()
+    detail = jobs.parse_job_detail(detail_html, 'skku-career-intern', first.article_no, first.url)
+    assert '인턴 채용' in detail.body_text
+    with pytest.raises(jobs.ParseError):
+        jobs.skku_career_list('<html></html>', NOW, 'skku-career-intern')

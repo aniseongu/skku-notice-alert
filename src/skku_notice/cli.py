@@ -53,6 +53,7 @@ from skku_notice.jobs import (
     LK_HEADERS,
     parse_job_detail,
     parse_linkareer_detail,
+    skku_career_list,
 )
 from skku_notice.judge import Judgment, judge_notices
 from skku_notice.model import Match, Notice
@@ -203,6 +204,7 @@ def _saved_ids() -> set[str]:
 
 def _recheck_details(archive, settings: dict, now: datetime):
     saved = _saved_ids()
+    external = {source['id'] for source in settings['sources'] if source.get('external')}
     done = 0
     for key, item in list(archive.items.items()):
         if done == RECHECK_PER_RUN:
@@ -210,6 +212,7 @@ def _recheck_details(archive, settings: dict, now: datetime):
         deadline = item["notice"].get("deadline") or (item.get("ai_deadline") or {}).get("at")
         last = item.get("rechecked_at") or item.get("fetched_at")
         if (not _important(item, saved) or item.get("body_text") is None
+                or item['notice']['source_id'] in external
                 or ".skku.edu/" not in item["notice"]["url"]
                 or (deadline and datetime.fromisoformat(deadline) < now)
                 or (last and now - datetime.fromisoformat(last) < timedelta(hours=RECHECK_HOURS))):
@@ -233,11 +236,13 @@ def _recheck_details(archive, settings: dict, now: datetime):
     return archive
 
 
-def _notify_changes(archive, names: dict[str, str]):
+def _notify_changes(archive, names: dict[str, str], external: frozenset[str] = frozenset()):
     """학교가 고친 중요한 글을 한 번 알린다. 실패하면 다음 실행에 다시 보낸다."""
     saved = _saved_ids()
     for key, item in archive.items.items():
         changed = item.get("changed_at")
+        if item['notice']['source_id'] in external:
+            continue
         if not changed or item.get("change_notified") == changed or not _important(item, saved):
             continue
         public = item["notice"]
@@ -504,7 +509,13 @@ def run(args: argparse.Namespace) -> int:
                     time.sleep(gap)
                 previous_network = True
                 html = fetch_list(source["url"], settings["user_agent"], float(settings["timeout_seconds"]))
-            notices = parse_list(html, source_id, source["url"])
+            if source.get("kind") == "skku-career-intern":
+                postings = skku_career_list(html, now, source_id)
+                notices = [notice for notice, _ in postings]
+                external_deadlines.update({f"{source_id}/{n.article_no}": d for n, d in postings if d})
+                external_success.add(source_id)
+            else:
+                notices = parse_list(html, source_id, source["url"])
         except (FileNotFoundError, FetchError, ParseError) as exc:
             print(f"{source_id}: {exc}", file=sys.stderr)
             failed = True
@@ -714,7 +725,9 @@ def run(args: argparse.Namespace) -> int:
                         **dict.fromkeys(external_success, now.isoformat())})
         save_state(STATE_PATH, state)
     if not args.dry_run:
-        archive = _notify_changes(archive, {s["id"]: s["name"] for s in settings["sources"]})
+        archive = _notify_changes(
+            archive, {s["id"]: s["name"] for s in settings["sources"]},
+            frozenset(s["id"] for s in settings["sources"] if s.get("external")))
     if not getattr(args, "no_canvas", False):
         try:
             canvas_config = yaml.safe_load(CANVAS_CONFIG_PATH.read_text(encoding="utf-8"))

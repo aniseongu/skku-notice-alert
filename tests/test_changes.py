@@ -60,3 +60,15 @@ def test_changed_important_notice_is_announced_once(monkeypatch, tmp_path):
     cli._notify_changes(other, {})
     assert sent == ["[수정] 인턴 모집"]
     assert _public_notice(after.items[key]).get("changed_at") == "t"
+
+
+def test_external_title_change_does_not_send_school_change_alert(monkeypatch):
+    monkeypatch.delenv('SAVED_NOTICES', raising=False)
+    sent = []
+    monkeypatch.setattr(cli, 'send_notice', lambda *args: sent.append(args) or True)
+    base = add_notice(Archive(), notice('인턴 모집'), '2026-11-02T00:00:00+09:00')
+    item = base.items['cse-notice/1']
+    archive = Archive({'cse-notice/1': {**item, 'changed_at': 't',
+                       'match': {**item['match'], 'rule_name': '인턴'}}})
+    cli._notify_changes(archive, {}, frozenset({'cse-notice'}))
+    assert not sent

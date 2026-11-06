@@ -2,6 +2,7 @@
 """External internship postings and public details (D-028)."""
 
 import json
+import re
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
 
@@ -97,10 +98,47 @@ def jasoseol(post: Post, now: datetime, source_id: str = "jasoseol") -> list[Pos
 COLLECTORS = {"linkareer": linkareer, "jasoseol": jasoseol}
 
 
+def skku_career_list(html: str, now: datetime, source_id: str) -> list[Posting]:
+    rows = LexborHTMLParser(html).css('tr[id^="hcTr"]')
+    postings = []
+    for row in rows:
+        link = row.css_first('a[href^="javascript:detailView("]')
+        if not link:
+            continue
+        match = re.fullmatch(r"javascript:detailView\('([A-Za-z0-9]+)',\s*'(\d+)'\);?",
+                             link.attributes['href'])
+        cells = row.css('td')
+        if not match or len(cells) < 4 or not link.text(strip=True):
+            raise ParseError("invalid career internship row")
+        posted_text = cells[0].text(strip=True)
+        try:
+            posted = (now.date() if posted_text == 'TODAY'
+                      else datetime.strptime(posted_text, '%Y-%m-%d').date())
+            deadline_text = cells[3].text(strip=True)
+            deadline = None
+            if re.fullmatch(r'\d{2}-\d{2}-\d{2}', deadline_text):
+                deadline = datetime.strptime(deadline_text, '%y-%m-%d').replace(
+                    hour=23, minute=59, tzinfo=KST).isoformat()
+        except ValueError as exc:
+            raise ParseError("invalid career internship date") from exc
+        token, number = match.groups()
+        url = f'https://job.skku.edu/Recruit/RecruitView.aspx?rcdx={token}&modalChk=Y'
+        notice = Notice(source_id, number, link.text(strip=True), '인턴', url, posted, False)
+        postings.append((notice, deadline))
+    if not postings:
+        raise ParseError('career internship list empty')
+    return postings
+
+
 def parse_job_detail(html: str, kind: str, article_no: str, url: str) -> Detail:
     """Read the matching public posting from Next.js data, then sanitize its HTML."""
     if _number(article_no) != article_no:
         raise ParseError("invalid external article number")
+    if kind == 'skku-career-intern':
+        body = LexborHTMLParser(html).css_first('#ALLTEXT')
+        if body is None:
+            raise ParseError('career internship body missing')
+        return parse_external_fragment(body.html, url)
     node = LexborHTMLParser(html).css_first("script#__NEXT_DATA__")
     try:
         page = json.loads(node.text())["props"]["pageProps"] if node else {}

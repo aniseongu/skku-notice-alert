@@ -12,7 +12,7 @@ import './settings-view';
 import { GitHubError, collectionWorkflowUrl, readVariable, saveVariable, requestCollection } from './github';
 import { loadToken } from './settings-storage';
 import { SAVED_VARIABLE, type SavedNotice, loadSaved, orderSaved, parseSaved, storeSaved, toggleSaved } from './saved-notices';
-import { READ_STATE_VARIABLE, READ_VARIABLE, loadReadState, mergeReadStates, parseReadState, readIds, serializeReadState, setReadState, storeReadState } from './read-notices';
+import { READ_STATE_VARIABLE, READ_VARIABLE, isNoticeRead, loadReadState, mergeReadStates, parseReadState, readIds, serializeReadState, setReadState, storeReadState } from './read-notices';
 import { keywordCounts } from './keyword-counts';
 import type { Theme } from './settings-view';
 import { APP_NAME } from './brand';
@@ -309,14 +309,17 @@ export class NoticeApp extends LitElement {
   }
 
   private updateRead(ids: string[], read: boolean) {
-    this.readState = setReadState(this.readState ?? parseReadState(null), ids, read);
+    const selected = new Set(ids);
+    const latestChange = read ? Math.max(0, ...this.notices.filter((notice) => selected.has(notice.id))
+      .map((notice) => Date.parse(notice.changed_at ?? '') || 0)) : 0;
+    this.readState = setReadState(this.readState ?? parseReadState(null), ids, read, Math.max(Date.now(), latestChange));
     this.read = readIds(this.readState);
     storeReadState(this.readState);
     this.pushRead();
   }
 
   private markRead(notice: Notice) {
-    if (this.read?.includes(notice.id)) return;
+    if (this.isRead(notice)) return;
     this.updateRead([notice.id], true);
   }
 
@@ -340,7 +343,7 @@ export class NoticeApp extends LitElement {
     this.updateComplete.then(() => this.querySelector<HTMLButtonElement>('.select-trigger')?.focus({ preventScroll: true }));
   }
 
-  private isRead(notice: Notice): boolean { return this.read === null || this.read.includes(notice.id); }
+  private isRead(notice: Notice): boolean { return this.readState === null || isNoticeRead(this.readState, notice.id, notice.changed_at); }
 
   private isSaved(notice: Notice): boolean { return this.saved.some((item) => item.id === notice.id); }
 

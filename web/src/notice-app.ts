@@ -853,7 +853,7 @@ export class NoticeApp extends LitElement {
     }
     return [...groups].map(([title, items], index) => html`
       <section class="group" aria-label=${title}>
-        <div class="group-head"><span class="group-title"><h2>${title}</h2><span class="group-count">${items.length}건</span></span>${index === 0 ? this.boardSelect() : nothing}</div>
+        <div class="group-head"><h2>${title}</h2>${index === 0 ? this.boardSelect() : nothing}</div>
         <ol class="rows">${items.map((n) => this.row(n, today))}</ol>
       </section>`);
   }

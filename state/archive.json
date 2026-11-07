@@ -11481,7 +11481,7 @@
       "images": [],
       "body_attempts": 2,
       "fetched_at": "2026-11-04T04:38:27.712072+09:00",
-      "rechecked_at": "2026-11-07T11:30:01.389543+09:00",
+      "rechecked_at": "2026-11-08T00:22:19.091372+09:00",
       "changed_at": "2026-11-04T04:38:27.712072+09:00",
       "change_kind": "본문",
       "ai_deadline": {
@@ -11726,7 +11726,7 @@
         "checked": true,
         "model": "gemini-3.1-flash-lite"
       },
-      "rechecked_at": "2026-11-07T11:30:01.389543+09:00"
+      "rechecked_at": "2026-11-08T00:22:19.091372+09:00"
     },
     "skku-notice01/141152": {
       "notice": {

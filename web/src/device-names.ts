@@ -40,3 +40,13 @@ export async function suggestDeviceName(): Promise<string> {
   if (os === 'macOS') return 'Mac';
   return device.type === 'mobile' ? '휴대폰' : device.type === 'tablet' ? '태블릿' : 'PC';
 }
+
+/** 자동으로 알아낸 기기 이름. 다른 칸에 같은 이름이 있으면 "이름 (2)"처럼 번호를 붙인다. */
+export async function chooseDeviceName(repo: string, token: string, slot: string, usedSlots: string[]): Promise<string> {
+  const base = (await suggestDeviceName()).trim();
+  const others = usedSlots.filter((name) => name !== slot);
+  const taken = new Set(Object.values(await loadDeviceNames(repo, token, others)));
+  let name = base;
+  for (let n = 2; taken.has(name); n += 1) name = `${base} (${n})`;
+  return name;
+}

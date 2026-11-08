@@ -1,6 +1,6 @@
 import { APP_NAME } from './brand';
-import { GitHubError, SecretWriteUncertainError, deleteSecret, listSecrets, saveSecret, saveVariable } from './github';
-import { deviceNameVariable } from './device-names';
+import { GitHubError, SecretWriteUncertainError, deleteSecret, listSecrets, readVariable, saveSecret, saveVariable } from './github';
+import { chooseDeviceName, deviceNameVariable, validDeviceName } from './device-names';
 
 interface PushConfiguration { publicKey: string; repository: string }
 // 예전에는 기기 한 대만 WEB_PUSH_SUBSCRIPTION에 저장했다. 이 기기가 그 한 대였는지 기억하는 열쇠다.
@@ -115,7 +115,15 @@ async function saveDeviceSubscription(
     throw new Error('알림 저장 결과를 확인하지 못했어요. 기기 목록을 확인해 주세요');
   }
   try { localStorage.setItem(DEVICE, JSON.stringify({ fingerprint: mine, slot, updatedAt: null })); } catch { /* 로컬 기록 불가 */ }
-  const updatedAt = (await listSecrets(repo, token))[slot];
+  const latest = await listSecrets(repo, token);
+  // 등록하는 순간 이름도 저장한다. 나중에 설정 화면을 열어야 채워지면 "알림 기기 3"으로 남는다.
+  try {
+    const current = await readVariable(repo, token, deviceNameVariable(slot));
+    if (!current || !validDeviceName(current)) {
+      await saveVariable(repo, token, deviceNameVariable(slot), await chooseDeviceName(repo, token, slot, Object.keys(latest)));
+    }
+  } catch { /* 설정 화면을 열 때 다시 시도한다 */ }
+  const updatedAt = latest[slot];
   if (!updatedAt) throw new Error('알림은 저장했지만 등록 정보를 확인하지 못했어요. 기기 목록을 확인해 주세요');
   try { localStorage.setItem(DEVICE, JSON.stringify({ fingerprint: mine, slot, updatedAt })); } catch { /* 저장 실패 시 서버 구독은 유지한다 */ }
 }

@@ -1,0 +1,63 @@
+name: Diagnose iCampus alerts (temporary)
+
+on:
+  workflow_dispatch:
+
+# Share the collector lock because both jobs update the encrypted auth-attempt timestamp.
+concurrency:
+  group: notice-crawl
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: github-pages
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+      - run: uv sync --frozen
+      - name: Restore encrypted state
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
+        with:
+          path: state/canvas.enc
+          key: canvas-encrypted-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: canvas-encrypted-v1-
+      - name: Open encrypted state
+        env:
+          CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+        run: uv run python -m skku_notice.canvas_cache open
+      - name: Diagnose without notifications
+        env:
+          CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+        run: |
+          uv run python - <<'PY'
+          import os
+          from datetime import datetime
+          from pathlib import Path
+          import yaml
+          from skku_notice.canvas import read_canvas
+          from skku_notice.canvas_alerts import load_canvas_state, plan_alerts
+          from skku_notice.deadline import KST
+          now = datetime.now(KST)
+          cfg = yaml.safe_load(Path('config/canvas.yaml').read_text(encoding='utf-8'))
+          path = Path('state/canvas.json')
+          print('상태 파일 있음:', path.exists())
+          st = load_canvas_state(path)
+          print('initialized', st.initialized, '| summary_sent_on', st.summary_sent_on,
+                '| partial', st.partial_summary_sent_on, '| problem', bool(st.problem),
+                '| 알림 기록', len(st.notified), '| 지금', now.isoformat(timespec='minutes'))
+          items = read_canvas(os.environ['CANVAS_TOKEN'], now)
+          for i in items:
+              print('항목', i.kind, '남은 시간(시간)', round((i.due - now).total_seconds() / 3600, 1),
+                    '| 기록된 단계', sorted(k.rsplit('|', 1)[1] for k in st.notified if k.startswith(i.key + '|')))
+          h, m = map(int, cfg['summary_time'].split(':'))
+          alerts, _ = plan_alerts(items, st, now, cfg['leads'], now.replace(hour=h, minute=m).time())
+          print('지금 보낼 알림:', [(a.title.split(' ')[0], a.summary_day is not None) for a in alerts])
+          PY

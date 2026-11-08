@@ -1,6 +1,6 @@
 import { APP_NAME } from './brand';
 import { GitHubError, SecretWriteUncertainError, deleteSecret, listSecrets, saveSecret, saveVariable } from './github';
-import { deviceNameVariable } from './device-names';
+import { deviceNameVariable, loadDeviceNames, suggestDeviceName } from './device-names';
 
 interface PushConfiguration { publicKey: string; repository: string }
 // 예전에는 기기 한 대만 WEB_PUSH_SUBSCRIPTION에 저장했다. 이 기기가 그 한 대였는지 기억하는 열쇠다.
@@ -101,7 +101,16 @@ async function saveDeviceSubscription(
   if (device?.fingerprint === mine && used[device.slot] && !matchesCurrentDevice(device.slot, used[device.slot])) {
     throw new Error('기존 등록을 확인할 수 없어요. 기기 목록에서 기존 등록을 확인하고 다시 연결해 주세요');
   }
+  // 이 기기의 기록이 사라졌어도 같은 이름으로 등록된 칸이 있으면 그 칸을 다시 쓴다(만료된 옛 구독이 남지 않게).
+  const sameName = async (): Promise<string | undefined> => {
+    const usedSlots = DEVICE_SLOTS.filter((name) => used[name]);
+    if (!usedSlots.length) return undefined;
+    const mineName = (await suggestDeviceName()).trim();
+    const names = await loadDeviceNames(repo, token, usedSlots);
+    return usedSlots.find((name) => names[name] === mineName);
+  };
   const slot = (device?.fingerprint === mine && matchesCurrentDevice(device.slot, used[device.slot]) ? device.slot : undefined)
+    ?? await sameName().catch(() => undefined)
     ?? DEVICE_SLOTS.find((name) => !used[name]);
   if (!slot) throw new GitHubError('알림은 기기 8대까지 받을 수 있어요. 안 쓰는 기기에서 알림을 먼저 꺼 주세요');
   // 빈 슬롯의 오래된 이름이 새 기기에 붙지 않도록 구독을 저장하기 전에 지운다.

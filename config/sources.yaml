@@ -3,7 +3,7 @@
 
 user_agent: "skku-notice-alert/0.1 (+personal notice alert)"   # 저장소 URL이 생기면 넣는다
 request_gap_seconds: 1.5    # 게시판 사이 쉬는 시간
-timeout_seconds: 10
+timeout_seconds: 20
 
 sources:
   - id: skku-notice01

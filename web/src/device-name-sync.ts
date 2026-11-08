@@ -1,5 +1,5 @@
 import { browserPushEnabled, currentDeviceSlot } from './browser-push';
-import { deviceNameVariable, suggestDeviceName, validDeviceName } from './device-names';
+import { chooseDeviceName, deviceNameVariable, validDeviceName } from './device-names';
 import { createVariableIfAbsent, listSecrets, readVariable, saveVariable } from './github';
 
 /** Only the device whose current subscription is verified may suggest a shared name. */
@@ -13,7 +13,7 @@ export async function syncCurrentDeviceName(repo: string, token: string): Promis
   const variable = deviceNameVariable(slot);
   const existing = await readVariable(repo, token, variable);
   if (existing !== null && validDeviceName(existing)) return existing.trim();
-  const suggestion = (await suggestDeviceName()).trim();
+  const suggestion = await chooseDeviceName();
   const latest = await listSecrets(repo, token);
   if (!await browserPushEnabled() || currentDeviceSlot() !== slot || !latest[slot]) return null;
   // 새 칸은 이름 변수를 빈 값으로 비워 두므로, 빈 값이면 덮어쓴다.

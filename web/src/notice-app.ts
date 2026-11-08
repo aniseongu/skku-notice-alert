@@ -139,6 +139,7 @@ export class NoticeApp extends LitElement {
   private needsReadBaseline = this.readState === null;
   read: string[] | null = this.readState ? readIds(this.readState) : null;
   private lastSyncAt = 0;
+  private syncing = false;
   private readTimer = 0;
   private readWrite: Promise<void> = Promise.resolve();
   // GitHub 연결(설정에서 한 번 넣은 토큰). 있으면 저장 목록과 키워드를 모든 기기와 맞춘다.
@@ -183,7 +184,7 @@ export class NoticeApp extends LitElement {
       if (document.visibilityState !== 'visible') return;
       this.refresh();
       // 켜 둔 앱에서도 다른 기기의 읽음, 저장, 키워드를 받아 온다. 요청이 잦지 않게 30초에 한 번만.
-      if (Date.now() - this.lastSyncAt > 30_000) { this.lastSyncAt = Date.now(); void this.syncFromGitHub(); }
+      if (Date.now() - this.lastSyncAt > 30_000) void this.syncFromGitHub();
     });
     window.setInterval(() => { if (document.visibilityState === 'visible') this.refresh(); }, REFRESH_MS);
     window.addEventListener('keydown', (event) => this.onKey(event));
@@ -261,6 +262,14 @@ export class NoticeApp extends LitElement {
 
   // GitHub 값이 있으면 그것을 따른다(다른 기기에서 바꾼 것). 없으면 이 기기 것을 올린다.
   private async syncFromGitHub() {
+    // 시작할 때와 화면에 돌아올 때의 동기화가 겹치면 오래된 응답이 방금 한 읽음 표시를 덮을 수 있어 하나만 돌린다.
+    if (this.syncing) return;
+    this.syncing = true;
+    this.lastSyncAt = Date.now();
+    try { await this.syncFromGitHubOnce(); } finally { this.syncing = false; this.lastSyncAt = Date.now(); }
+  }
+
+  private async syncFromGitHubOnce() {
     const repo = remember('github-repo');
     const token = await loadToken();
     if (!repo || !token) return;

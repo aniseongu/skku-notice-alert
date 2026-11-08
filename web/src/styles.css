@@ -597,8 +597,11 @@
 /* 스크롤바: 내용이 넘칠 때만 생기고 얇게 그린다. 평소에는 투명하고 마우스를 올린 칸에서만 보인다(skku-notice-platform과 같은 규칙).
    포커스로는 나타나지 않는다. 표준 속성만 쓴다. 크롬은 ::-webkit-scrollbar-thumb의 :hover를 마우스가 떠난 뒤 다시 그리지 않아 막대가 남는다. */
 @layer platform {
-  .sidebar, .list-pane, .detail-pane { scrollbar-width: thin; scrollbar-color: transparent transparent; }
-  .sidebar:hover, .list-pane:hover, .detail-pane:hover {
-    scrollbar-color: color-mix(in srgb, var(--text-3) 55%, transparent) transparent;
+  /* 마우스를 올릴 수 없는 터치 기기는 막대를 숨기면 스크롤되는 칸인지 알 수 없어 기본 모양을 둔다. */
+  @media (hover: hover) {
+    .sidebar, .list-pane, .detail-pane { scrollbar-width: thin; scrollbar-color: transparent transparent; }
+    .sidebar:hover, .list-pane:hover, .detail-pane:hover {
+      scrollbar-color: color-mix(in srgb, var(--text-3) 55%, transparent) transparent;
+    }
   }
 }

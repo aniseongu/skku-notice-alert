@@ -14,6 +14,8 @@
 
 </div>
 
+여러 사용자가 로그인해 각자 쓰는 버전은 [skku-notice-platform](https://github.com/aniseongu/skku-notice-platform)입니다.
+
 ## 사용 화면
 
 PC에서는 목록과 공지 상세를 함께 봅니다. 상세가 열린 공지를 다시 누르면 오른쪽 상세 칸을 닫을 수 있습니다.

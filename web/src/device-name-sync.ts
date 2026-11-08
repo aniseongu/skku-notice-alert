@@ -1,4 +1,4 @@
-import { DEVICE_SLOTS, browserPushEnabled, currentDeviceSlot, matchesCurrentDevice } from './browser-push';
+import { DEVICE_SLOTS, browserPushEnabled, currentDeviceSlot } from './browser-push';
 import { deviceNameVariable, loadDeviceNames, suggestDeviceName, validDeviceName } from './device-names';
 import { createVariableIfAbsent, listSecrets, readVariable, saveVariable } from './github';
 
@@ -8,13 +8,14 @@ export async function syncCurrentDeviceName(repo: string, token: string): Promis
   const slot = currentDeviceSlot();
   if (!slot) return null;
   const secrets = await listSecrets(repo, token);
-  if (!matchesCurrentDevice(slot, secrets[slot])) return null;
+  // 구독 지문은 browserPushEnabled가 이미 확인했다. 등록 시각까지 같아야 한다는 조건은 이름 채우기에는 너무 엄격하다.
+  if (!secrets[slot]) return null;
   const variable = deviceNameVariable(slot);
   const existing = await readVariable(repo, token, variable);
   if (existing !== null && validDeviceName(existing)) return existing.trim();
   const base = (await suggestDeviceName()).trim();
   const latest = await listSecrets(repo, token);
-  if (!await browserPushEnabled() || currentDeviceSlot() !== slot || !matchesCurrentDevice(slot, latest[slot])) return null;
+  if (!await browserPushEnabled() || currentDeviceSlot() !== slot || !latest[slot]) return null;
   // 같은 이름이 이미 있으면 "이름 (2)"처럼 번호를 붙여 기기를 구분한다.
   const others = [...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].filter((name) => name !== slot && latest[name]);
   const taken = new Set(Object.values(await loadDeviceNames(repo, token, others)));

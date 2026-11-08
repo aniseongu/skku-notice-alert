@@ -233,10 +233,10 @@ export class SettingsView extends LitElement {
       const names = await loadDeviceNames(repo, token, slots);
       const slot = enabled ? currentDeviceSlot() : null;
       let suggestion = '';
-      if (slot && matchesCurrentDevice(slot, saved[slot]) && !names[slot]) {
+      if (slot && saved[slot] && !names[slot]) {
         try {
           const synced = await syncCurrentDeviceName(repo, token);
-          if (synced && currentDeviceSlot() === slot && matchesCurrentDevice(slot, saved[slot])) names[slot] = synced;
+          if (synced && currentDeviceSlot() === slot) names[slot] = synced;
         } catch {
           suggestion = await suggestDeviceName();
           if (this.repo === repo && this.token === token) this.setStatus('device-list', false, '기기 이름을 자동으로 저장하지 못했어요. 잠시 뒤 다시 열어 주세요');

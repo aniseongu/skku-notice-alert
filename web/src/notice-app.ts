@@ -138,6 +138,7 @@ export class NoticeApp extends LitElement {
   private readState = loadReadState();
   private needsReadBaseline = this.readState === null;
   read: string[] | null = this.readState ? readIds(this.readState) : null;
+  private lastSyncAt = 0;
   private readTimer = 0;
   private readWrite: Promise<void> = Promise.resolve();
   // GitHub 연결(설정에서 한 번 넣은 토큰). 있으면 저장 목록과 키워드를 모든 기기와 맞춘다.
@@ -178,7 +179,12 @@ export class NoticeApp extends LitElement {
     this.refresh();
     this.syncFromGitHub();
     wide.addEventListener('change', () => { this.isWide = wide.matches; });
-    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') this.refresh(); });
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState !== 'visible') return;
+      this.refresh();
+      // 켜 둔 앱에서도 다른 기기의 읽음, 저장, 키워드를 받아 온다. 요청이 잦지 않게 30초에 한 번만.
+      if (Date.now() - this.lastSyncAt > 30_000) { this.lastSyncAt = Date.now(); void this.syncFromGitHub(); }
+    });
     window.setInterval(() => { if (document.visibilityState === 'visible') this.refresh(); }, REFRESH_MS);
     window.addEventListener('keydown', (event) => this.onKey(event));
     document.addEventListener('pointerdown', this.closeBoardMenuOutside);

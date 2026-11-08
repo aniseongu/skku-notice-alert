@@ -120,7 +120,7 @@ async function saveDeviceSubscription(
   try {
     const current = await readVariable(repo, token, deviceNameVariable(slot));
     if (!current || !validDeviceName(current)) {
-      await saveVariable(repo, token, deviceNameVariable(slot), await chooseDeviceName(repo, token, slot, Object.keys(latest)));
+      await saveVariable(repo, token, deviceNameVariable(slot), await chooseDeviceName());
     }
   } catch { /* 설정 화면을 열 때 다시 시도한다 */ }
   const updatedAt = latest[slot];

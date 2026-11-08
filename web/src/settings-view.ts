@@ -7,7 +7,7 @@ import {
 import { forgetToken, loadToken, readSavedSecrets, rememberSavedSecrets, storeToken } from './settings-storage';
 import { GoogleError, connectGoogleCalendar, validClientId } from './google-calendar';
 import { keyConnection, KeyConnectionError } from './key-connection';
-import { deviceNameVariable, loadDeviceNames, saveDeviceName, suggestDeviceName } from './device-names';
+import { deviceNameVariable, displayDeviceName, loadDeviceNames, saveDeviceName, suggestDeviceName } from './device-names';
 import { syncCurrentDeviceName } from './device-name-sync';
 import { browserPushEnabled, canvasPushMode, clearLocalBrowserPush, currentDeviceSlot, matchesCurrentDevice, DEVICE_SLOTS, defaultCanvasPushMode, connectBrowserPush, disconnectBrowserPush, pushConfiguration, setCanvasPushMode, supportsBrowserPush, testBrowserNotification } from './browser-push';
 
@@ -268,7 +268,7 @@ export class SettingsView extends LitElement {
 
   private async removeDevice(slot: string) {
     if (![...DEVICE_SLOTS, 'WEB_PUSH_SUBSCRIPTION'].includes(slot) || !this.linked) return;
-    const label = this.deviceNames[slot] || (slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`);
+    const label = displayDeviceName(slot, this.deviceNames) || (slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`);
     const uncertain = currentDeviceSlot() === slot && !matchesCurrentDevice(slot, this.saved[slot]);
     const detail = uncertain ? '이 기기에서 사용한 기록이 있지만 지금은 다른 기기의 등록일 수도 있어요.'
       : '이 등록을 쓰는 기기는 알림을 다시 연결할 때까지 받을 수 없어요.';
@@ -844,7 +844,7 @@ export class SettingsView extends LitElement {
                   const recorded = currentDeviceSlot() === slot;
                   const local = this.browserNotifications && recorded;
                   const current = local && matchesCurrentDevice(slot, this.saved[slot]);
-                  const label = this.deviceNames[slot] || (current && this.deviceSuggestion) || (slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`);
+                  const label = displayDeviceName(slot, this.deviceNames) || (current && this.deviceSuggestion) || (slot === 'WEB_PUSH_SUBSCRIPTION' ? '이전 알림 등록' : `알림 기기 ${slot.slice(-1)}`);
                   const date = new Date(this.saved[slot]);
                   const updated = Number.isNaN(date.getTime()) ? '' : new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium' }).format(date);
                   return html`<div class="setting"><div class="setting-text"><p class="setting-name">${label}${current ? ' (이 기기)' : recorded ? ' (이 기기의 연결 기록)' : ''}</p>

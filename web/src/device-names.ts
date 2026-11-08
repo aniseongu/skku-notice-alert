@@ -41,12 +41,16 @@ export async function suggestDeviceName(): Promise<string> {
   return device.type === 'mobile' ? '휴대폰' : device.type === 'tablet' ? '태블릿' : 'PC';
 }
 
-/** 자동으로 알아낸 기기 이름. 다른 칸에 같은 이름이 있으면 "이름 (2)"처럼 번호를 붙인다. */
-export async function chooseDeviceName(repo: string, token: string, slot: string, usedSlots: string[]): Promise<string> {
-  const base = (await suggestDeviceName()).trim();
-  const others = usedSlots.filter((name) => name !== slot);
-  const taken = new Set(Object.values(await loadDeviceNames(repo, token, others)));
-  let name = base;
-  for (let n = 2; taken.has(name); n += 1) name = `${base} (${n})`;
-  return name;
+/** 같은 이름이 둘 이상이면 칸 순서대로 "이름 (1)", "이름 (2)"로 보여 준다. 저장된 이름은 그대로 둔다. */
+export function displayDeviceName(slot: string, names: Record<string, string>): string {
+  const name = names[slot];
+  if (!name) return '';
+  const rank = (key: string) => (key === 'WEB_PUSH_SUBSCRIPTION' ? 99 : Number(key.slice(-1)));
+  const same = Object.keys(names).filter((key) => names[key] === name).sort((a, b) => rank(a) - rank(b));
+  return same.length > 1 ? `${name} (${same.indexOf(slot) + 1})` : name;
+}
+
+/** 자동으로 알아낸 기기 이름. */
+export async function chooseDeviceName(): Promise<string> {
+  return (await suggestDeviceName()).trim();
 }

@@ -53,6 +53,16 @@ function remember(key: string, value?: string): string | null {
   return value ?? null;
 }
 
+// 고른 공지는 이 탭에만 기억한다. 새로고침하면 보던 공지로 돌아오고, 새 탭은 맨 위에서 시작한다.
+function rememberSelected(id?: string | null): string | null {
+  try {
+    if (id === undefined) return sessionStorage.getItem('selected');
+    if (id) sessionStorage.setItem('selected', id);
+    else sessionStorage.removeItem('selected');
+  } catch { /* 저장소를 못 쓰면 기억하지 않는다 */ }
+  return id ?? null;
+}
+
 function loadSort(tab: 'all' | 'intern'): Sort {
   const params = new URLSearchParams(location.search);
   if (tab === 'all' && params.get('tab') === 'deadline') return 'deadline';
@@ -148,7 +158,9 @@ export class NoticeApp extends LitElement {
   query = '';
   loading = true;
   failed = false;
-  selectedId: string | null = null;
+  selectedId: string | null = rememberSelected();
+  // 새로고침으로 되살린 공지 줄을 목록에서 한 번만 보이게 내린다.
+  private restoreScroll = Boolean(this.selectedId);
   install: InstallPrompt | null = null;
   toast = '';
   toastLink: string | null = null;
@@ -606,7 +618,16 @@ export class NoticeApp extends LitElement {
     return 'loading';
   }
 
-  updated() {
+  updated(changed: Map<PropertyKey, unknown>) {
+    if (changed.has('selectedId')) {
+      rememberSelected(this.selectedId);
+      // 사용자가 다른 공지를 고르면 되살리기 스크롤은 하지 않는다.
+      if (changed.get('selectedId') !== undefined) this.restoreScroll = false;
+    }
+    if (this.restoreScroll && this.selectedId) {
+      const row = this.querySelector(`[data-id="${CSS.escape(this.selectedId)}"]`);
+      if (row) { this.restoreScroll = false; row.scrollIntoView({ block: 'center' }); }
+    }
     // 단축키 창은 네이티브 dialog로 연다(포커스 가두기와 Esc 닫기를 브라우저가 맡는다).
     const dialog = this.querySelector<HTMLDialogElement>('dialog.shortcuts');
     if (dialog && this.shortcutsOpen && !dialog.open) dialog.showModal();

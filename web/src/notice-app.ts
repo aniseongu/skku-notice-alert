@@ -159,8 +159,6 @@ export class NoticeApp extends LitElement {
   loading = true;
   failed = false;
   selectedId: string | null = rememberSelected();
-  // 새로고침으로 되살린 공지 줄을 목록에서 한 번만 보이게 내린다.
-  private restoreScroll = Boolean(this.selectedId);
   install: InstallPrompt | null = null;
   toast = '';
   toastLink: string | null = null;
@@ -619,15 +617,7 @@ export class NoticeApp extends LitElement {
   }
 
   updated(changed: Map<PropertyKey, unknown>) {
-    if (changed.has('selectedId')) {
-      rememberSelected(this.selectedId);
-      // 사용자가 다른 공지를 고르면 되살리기 스크롤은 하지 않는다.
-      if (changed.get('selectedId') !== undefined) this.restoreScroll = false;
-    }
-    if (this.restoreScroll && this.selectedId) {
-      const row = this.querySelector(`[data-id="${CSS.escape(this.selectedId)}"]`);
-      if (row) { this.restoreScroll = false; row.scrollIntoView({ block: 'center' }); }
-    }
+    if (changed.has('selectedId')) rememberSelected(this.selectedId);
     // 단축키 창은 네이티브 dialog로 연다(포커스 가두기와 Esc 닫기를 브라우저가 맡는다).
     const dialog = this.querySelector<HTMLDialogElement>('dialog.shortcuts');
     if (dialog && this.shortcutsOpen && !dialog.open) dialog.showModal();

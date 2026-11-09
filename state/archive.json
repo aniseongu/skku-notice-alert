@@ -55,6 +55,340 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141703": {
+      "notice": {
+        "id": "skku-notice01/141703",
+        "source_id": "skku-notice01",
+        "article_no": "141703",
+        "title": "2026학년도 한국교육재단 한국사무소 장학생 모집 안내",
+        "category": "장학",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141703",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T14:58:49.441484+09:00"
+      },
+      "match": {
+        "rule_name": "장학",
+        "priority": "high",
+        "interests": [
+          "장학"
+        ],
+        "reasons": [
+          "category:장학"
+        ],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "대학원생 대상 장학금으로 학부생은 지원할 수 없는 공지입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "장학"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "공익재단법인 한국교육재단 한국사무소는 한국 내 대학원에서 학업에 정진하고 있는 재일한국인 대학원생의 생활 안정과 꿈을 응원하기 위해 2026학년도 장학생을 모집합니다. 아래 내역을 참고하시어 관심있는 학생들의 많은 지원 부탁드립니다.\n\n1. 지원 자격 (해당 조건을 모두 해당하는 자)\n\n- 한국 국적을 보유하고, 일본에서 영주 또는 특별영주자격을 소지한 자\n※ 이중국적자의 경우 양국 국적을 증명할 수 있는 서류를 제출\n※ 일본으로 귀화한 경우 국적 상실을 증명할 수 있는 서류를 제출\n\n- 한국의 대학원(석사·박사) 정규과정에 재학 중이거나, 2027학년도 1학기 입학 또는 편입이 확정된 자\n※ 전문대학 및 학부 과정, 어학당 및 1년 미만 단기 유학은 응모 불가\n\n- 공고일 기준 석사 과정은 만 35세 미만, 박사 과정은 만 40세 미만인 자\n\n- 한국어 능력시험(TOPIK) 5급 이상인 자\n\n2. 지급 금액 및 지급방법\n\n- 지급 금액: 1인당 300만원\n\n- 지급 방법: 본인 명의의 한국 계좌로 일괄 송금\n\n3. 서류 제출 기간 : ~ 2026. 11. 20. (금)\n\n4. 서류 제출 방법 : 홈페이지(https://www.kref.or.jp/ko) 에서 양식을 다운로드 받아 작성한 후 신청 폼에 업로드\n\n※ 모집 요강 및 서류 제출에 대한 자세한 사항은 재단 홈페이지를 참조\n\n5. 심사 방법 : 서류 심사, 면접 심사, 최종 심사(이사회)\n\n6. 문의 : 한국교육재단 한국사무소(edukofoun1963@kref.or.jp)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>공익재단법인 한국교육재단 한국사무소는 한국 내 대학원에서 학업에 정진하고 있는 재일한국인 대학원생의 생활 안정과 꿈을 응원하기 위해 2026학년도 장학생을 모집합니다. 아래 내역을 참고하시어 관심있는 학생들의 많은 지원 부탁드립니다.</p><p>1. 지원 자격 (해당 조건을 모두 해당하는 자)</p><ul><li>한국 국적을 보유하고, 일본에서 영주 또는 특별영주자격을 소지한 자</li></ul><p>※ 이중국적자의 경우 양국 국적을 증명할 수 있는 서류를 제출</p><p>※ 일본으로 귀화한 경우 국적 상실을 증명할 수 있는 서류를 제출</p><ul><li>한국의 대학원(석사·박사) 정규과정에 재학 중이거나, 2027학년도 1학기 입학 또는 편입이 확정된 자</li></ul><p>※ 전문대학 및 학부 과정, 어학당 및 1년 미만 단기 유학은 응모 불가</p><ul><li>공고일 기준 석사 과정은 만 35세 미만, 박사 과정은 만 40세 미만인 자</li></ul><ul><li>한국어 능력시험(TOPIK) 5급 이상인 자</li></ul><p>2. 지급 금액 및 지급방법</p><ul><li>지급 금액: 1인당 300만원</li></ul><ul><li>지급 방법: 본인 명의의 한국 계좌로 일괄 송금</li></ul><p>3.  서류 제출 기간 :  ~ 2026. 11. 20. (금)</p><p>4.  서류 제출 방법 : 홈페이지(<a href=\"https://www.kref.or.jp/ko)\">https://www.kref.or.jp/ko)</a> 에서 양식을 다운로드 받아 작성한 후 신청 폼에 업로드</p><p>※ 모집 요강 및 서류 제출에 대한 자세한 사항은 재단 홈페이지를 참조</p><p>5. 심사 방법 : 서류 심사, 면접 심사, 최종 심사(이사회)</p><p>6. 문의 : 한국교육재단 한국사무소(edukofoun1963@kref.or.jp)</p>",
+      "images": [],
+      "summary": "한국교육재단에서 대학원생 장학생을 모집합니다. 11월 20일까지 재단 홈페이지에서 양식을 다운로드하여 신청 폼에 업로드하세요.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T14:58:49.441484+09:00",
+      "page_text": "공익재단법인 한국교육재단 한국사무소는 한국 내 대학원에서 학업에 정진하고 있는 재일한국인 대학원생의 생활 안정과 꿈을 응원하기 위해 2026학년도 장학생을 모집합니다. 아래 내역을 참고하시어 관심있는 학생들의 많은 지원 부탁드립니다.\n\n1. 지원 자격 (해당 조건을 모두 해당하는 자)\n\n- 한국 국적을 보유하고, 일본에서 영주 또는 특별영주자격을 소지한 자\n※ 이중국적자의 경우 양국 국적을 증명할 수 있는 서류를 제출\n※ 일본으로 귀화한 경우 국적 상실을 증명할 수 있는 서류를 제출\n\n- 한국의 대학원(석사·박사) 정규과정에 재학 중이거나, 2027학년도 1학기 입학 또는 편입이 확정된 자\n※ 전문대학 및 학부 과정, 어학당 및 1년 미만 단기 유학은 응모 불가\n\n- 공고일 기준 석사 과정은 만 35세 미만, 박사 과정은 만 40세 미만인 자\n\n- 한국어 능력시험(TOPIK) 5급 이상인 자\n\n2. 지급 금액 및 지급방법\n\n- 지급 금액: 1인당 300만원\n\n- 지급 방법: 본인 명의의 한국 계좌로 일괄 송금\n\n3. 서류 제출 기간 : ~ 2026. 11. 20. (금)\n\n4. 서류 제출 방법 : 홈페이지(https://www.kref.or.jp/ko) 에서 양식을 다운로드 받아 작성한 후 신청 폼에 업로드\n\n※ 모집 요강 및 서류 제출에 대한 자세한 사항은 재단 홈페이지를 참조\n\n5. 심사 방법 : 서류 심사, 면접 심사, 최종 심사(이사회)\n\n6. 문의 : 한국교육재단 한국사무소(edukofoun1963@kref.or.jp)",
+      "body_attempted_at": "2026-11-09T14:58:49.441484+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-20T23:59:00+09:00"
+      }
+    },
+    "skku-notice01/141702": {
+      "notice": {
+        "id": "skku-notice01/141702",
+        "source_id": "skku-notice01",
+        "article_no": "141702",
+        "title": "2027학년도 외국인 특별전형 학사과정 입시 업무 보조 단기근로(아르바이트) 모집_러시아어 가능자",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141702",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T14:58:49.441484+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "maybe",
+          "reason": "본교 재학생이 지원할 수 있으나 러시아어 능통자 우대 사항에 대한 확인이 필요합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "인턴"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "[2027학년도 외국인 특별전형 학사과정 입시 업무 보조 단기근로(아르바이트) 모집_러시아어 가능자]\n\n1. 모집인원: 0명\n\n2. 지원 자격: 본교 재학생 또는 휴학생\n- 한국인일 경우, 러시아어 능통자(해외 유학 경력자 우대)\n- 외국인일 경우, 한국어 능통자(유효기간 내 TOPIK 6급 보유자 우대)\n*수료생 지원 가능, 졸업생 지원 불가\n\n3. 근무 기간 및 시간\n- 근무 기간: ~ 12. 04.(금)\n- 근무 시간: 09:00 ~ 17:30\n* 파트타임 근무 가능(근무 가능한 일정을 지원서에 기재)\n* 근무 일정은 내부 업무량에 따라 수시로 변동될 수 있음\n\n4. 근무 장소 및 업무 내용\n- 근무 장소: 국제관 9B104\n- 근무 내용: 외국인 특별전형 입시서류 검토 및 통보(전화, 이메일 응대)\n\n5. 근무 조건\n- 시급: 10,320원\n- 점심 식사 제공\n\n6. 지원 방법\n- 지원서 양식(첨부파일 참고) 작성 후, 아래 이메일로 접수\n- 이메일: sarah0807@skku.edu\n- 이메일 제목 양식: 외유팀 입시근로 지원자_OOO\n- 파일 제목: 외유팀 입시근로 지원자_OOO\n\n7. 지원 마감일: 11. 13.(금) 17:00\n* 지원자가 많을 시 조기 마감될 수 있음.\n\n8. 합격자 통보: 합격자에 한하여 개별 통보\n\n기타 문의 사항은 이메일 (sarah0807@skku.edu)로 연락 바랍니다.\n\n감사합니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "(KO)_OISS_Internship_Application_Form.docx",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141702&attachNo=118929",
+          "type": "DOCX",
+          "size": null
+        }
+      ],
+      "body_html": "<p>[2027학년도 외국인 특별전형 학사과정 입시 업무 보조 단기근로(아르바이트) 모집_러시아어 가능자]</p><p>1. 모집인원: 0명</p><p>2. 지원 자격: 본교 재학생 또는 휴학생</p><ul><li>한국인일 경우, 러시아어 능통자(해외 유학 경력자 우대)</li><li>외국인일 경우, 한국어 능통자(유효기간 내 TOPIK 6급 보유자 우대)</li></ul><p>*수료생 지원 가능, 졸업생 지원 불가</p><p>3. 근무 기간 및 시간</p><ul><li>근무 기간: ~ 12. 04.(금)</li><li>근무 시간: 09:00 ~ 17:30</li></ul><p>* 파트타임 근무 가능(근무 가능한 일정을 지원서에 기재)</p><p>* 근무 일정은 내부 업무량에 따라 수시로 변동될 수 있음</p><p>4. 근무 장소 및 업무 내용</p><ul><li>근무 장소: 국제관 9B104</li><li>근무 내용: 외국인 특별전형 입시서류 검토 및 통보(전화, 이메일 응대)</li></ul><p>5. 근무 조건</p><ul><li>시급: 10,320원</li><li>점심 식사 제공</li></ul><p>6. 지원 방법</p><ul><li>지원서 양식(첨부파일 참고) 작성 후, 아래 이메일로 접수</li><li>이메일: sarah0807@skku.edu</li><li>이메일 제목 양식: 외유팀 입시근로 지원자_OOO</li><li>파일 제목: 외유팀 입시근로 지원자_OOO</li></ul><p>7. 지원 마감일: 11. 13.(금) 17:00</p><p>* 지원자가 많을 시 조기 마감될 수 있음.</p><p>8. 합격자 통보: 합격자에 한하여 개별 통보</p><p>기타 문의 사항은 이메일 (sarah0807@skku.edu)로 연락 바랍니다.</p><p>감사합니다.</p>",
+      "images": [],
+      "summary": "외국인 특별전형 입시 업무를 보조할 단기 근로자를 모집합니다. 11월 13일까지 지원서 양식을 작성하여 이메일로 접수하세요.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T14:58:49.441484+09:00",
+      "page_text": "[2027학년도 외국인 특별전형 학사과정 입시 업무 보조 단기근로(아르바이트) 모집_러시아어 가능자]\n\n1. 모집인원: 0명\n\n2. 지원 자격: 본교 재학생 또는 휴학생\n- 한국인일 경우, 러시아어 능통자(해외 유학 경력자 우대)\n- 외국인일 경우, 한국어 능통자(유효기간 내 TOPIK 6급 보유자 우대)\n*수료생 지원 가능, 졸업생 지원 불가\n\n3. 근무 기간 및 시간\n- 근무 기간: ~ 12. 04.(금)\n- 근무 시간: 09:00 ~ 17:30\n* 파트타임 근무 가능(근무 가능한 일정을 지원서에 기재)\n* 근무 일정은 내부 업무량에 따라 수시로 변동될 수 있음\n\n4. 근무 장소 및 업무 내용\n- 근무 장소: 국제관 9B104\n- 근무 내용: 외국인 특별전형 입시서류 검토 및 통보(전화, 이메일 응대)\n\n5. 근무 조건\n- 시급: 10,320원\n- 점심 식사 제공\n\n6. 지원 방법\n- 지원서 양식(첨부파일 참고) 작성 후, 아래 이메일로 접수\n- 이메일: sarah0807@skku.edu\n- 이메일 제목 양식: 외유팀 입시근로 지원자_OOO\n- 파일 제목: 외유팀 입시근로 지원자_OOO\n\n7. 지원 마감일: 11. 13.(금) 17:00\n* 지원자가 많을 시 조기 마감될 수 있음.\n\n8. 합격자 통보: 합격자에 한하여 개별 통보\n\n기타 문의 사항은 이메일 (sarah0807@skku.edu)로 연락 바랍니다.\n\n감사합니다.",
+      "body_attempted_at": "2026-11-09T14:58:49.441484+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-13T17:00:00+09:00"
+      }
+    },
+    "skku-notice01/141701": {
+      "notice": {
+        "id": "skku-notice01/141701",
+        "source_id": "skku-notice01",
+        "article_no": "141701",
+        "title": "문과대학 사학과 행정조교 모집",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141701",
+        "posted_on": "2026-11-09",
+        "pinned": true,
+        "deadline": null,
+        "first_seen": "2026-11-09T14:58:49.441484+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "학사 학위 이상 소지자만 지원 가능하며 학부 재학생은 자격에 해당하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "성균관대학교 문과대학 사학과에서 행정업무를 담당할 행정조교를 다음과 같이 모집합니다.\n\n1. 모집분야: 성균관대학교 문과대학 사학과 행정조교 1명\n\n2. 근무지: 성균관대학교 인문사과학캠퍼스(서울)\n\n3. 담당업무: 학과사무실 행정지원 업무\n\n4. 근로조건\n□ 근로시간: 09:00~18:00(월~금, 주5일 풀타임 근무)\n□ 근무기간: 2026.12.9.~2027.2.28.(학년도 종료일 기준 일자 우선 계약 후 재계약 검토)\n□ 임기만료 후 상호 협의 하에 재계약 가능, 최대 근무가능기간 2년(교내 교육조교, 행정조교 근무 기간 포함)\n\n5. 급여 및 처우\n□ 본교 행정조교 급여 기준 적용(세전 月 2,156,900원)\n□ 4대 보험 가입\n□ 1년 이상 근무 시 퇴직금 지급\n\n6. 지원자격\n\n□ 학사 학위 이상 소지자(전문학사 불가, 임용일 기준 졸업예정자 불가)\n\n□ 본교 대학원 재학,휴학,수료생 지원 불가\n\n□ 2026년 12월 9일 이후 근무 가능한 자\n\n7. 전형방법\n\n□ 서류전형 및 면접전형\n□ 면접일자: 서류전형 합격자에 한해 개별 통보\n\n8. 서류전형 제출기한 및 방법\n\n□ 제출기한: ~ 2026년 11월 19일(목) 23:00까지\n\n□ 제출서류:\n- 행정조교 지원서(첨부파일) 1부\n- 개인정보 수집 ‧ 이용 동의서(첨부파일) 1부\n□ 지원 방법: E-mail 접수 (psj980@skku.edu)\n\n※ 이메일 제목: 문과대학 사학과 행정조교 지원_[본인 성명]\n\n※ 개인정보는 행정조교 채용 목적으로만 수집/이용되며, 수집한 정보는 모집 종료 후 일괄 폐기합니다\n\n9. 기타\n□ 본교 인사규정 상 결격사유가 없어야 함\n□ 기재사항 및 제출서류가 허위인 경우 채용이 취소됨\n□ 채용서류의 전자적 접수로 인하여 서류는 반환되지 않음\n\n10. 문의 : 02-760-0912",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "개인정보_수집및이용에_관한_동의.pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141701&attachNo=118927",
+          "type": "PDF",
+          "size": null
+        },
+        {
+          "name": "지원서(문과대학_행정조교).hwp",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141701&attachNo=118928",
+          "type": "HWP",
+          "size": null
+        }
+      ],
+      "body_html": "<p>성균관대학교 문과대학 사학과에서 행정업무를 담당할 행정조교를 다음과 같이 모집합니다.</p><p>1. 모집분야: 성균관대학교 문과대학 사학과 행정조교 1명</p><p>2. 근무지: 성균관대학교 인문사과학캠퍼스(서울)</p><p>3. 담당업무: 학과사무실 행정지원 업무</p><p>4. 근로조건</p><p>□ 근로시간: 09:00~18:00(월~금, 주5일 풀타임 근무)</p><p>□ 근무기간: 2026.12.9.~2027.2.28.(학년도 종료일 기준 일자 우선 계약 후 재계약 검토)</p><p>□ 임기만료 후 상호 협의 하에 재계약 가능, 최대 근무가능기간 2년(교내 교육조교, 행정조교 근무 기간 포함)</p><p>5. 급여 및 처우</p><p>□ 본교 행정조교 급여 기준 적용(세전 月 2,156,900원)</p><p>□ 4대 보험 가입</p><p>□ 1년 이상 근무 시 퇴직금 지급</p><p>6. 지원자격</p><p>□ 학사 학위 이상 소지자(전문학사 불가, 임용일 기준 졸업예정자 불가)</p><p>□ 본교 대학원 재학,휴학,수료생 지원 불가</p><p>□ 2026년 12월 9일 이후 근무 가능한 자</p><p>7. 전형방법</p><p>□ 서류전형 및 면접전형</p><p>□ 면접일자: 서류전형 합격자에 한해 개별 통보</p><p>8. 서류전형 제출기한 및 방법</p><p>□ 제출기한: ~ 2026년 11월 19일(목) 23:00까지</p><p>□ 제출서류:</p><ul><li>행정조교 지원서(첨부파일) 1부</li><li>개인정보 수집 ‧ 이용 동의서(첨부파일) 1부</li></ul><p>□ 지원 방법: E-mail 접수 (psj980@skku.edu)</p><p>※ 이메일 제목: 문과대학 사학과 행정조교 지원_[본인 성명]</p><p>※ 개인정보는 행정조교 채용 목적으로만 수집/이용되며, 수집한 정보는 모집 종료 후 일괄 폐기합니다</p><p>9. 기타</p><p>□ 본교 인사규정 상 결격사유가 없어야 함</p><p>□ 기재사항 및 제출서류가 허위인 경우 채용이 취소됨</p><p>□ 채용서류의 전자적 접수로 인하여 서류는 반환되지 않음</p><p>10. 문의 : 02-760-0912</p>",
+      "images": [],
+      "summary": "문과대학 사학과에서 행정조교 1명을 모집합니다. 11월 19일까지 지원서와 동의서를 작성하여 이메일로 제출하면 됩니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T14:58:49.441484+09:00",
+      "page_text": "성균관대학교 문과대학 사학과에서 행정업무를 담당할 행정조교를 다음과 같이 모집합니다.\n\n1. 모집분야: 성균관대학교 문과대학 사학과 행정조교 1명\n\n2. 근무지: 성균관대학교 인문사과학캠퍼스(서울)\n\n3. 담당업무: 학과사무실 행정지원 업무\n\n4. 근로조건\n□ 근로시간: 09:00~18:00(월~금, 주5일 풀타임 근무)\n□ 근무기간: 2026.12.9.~2027.2.28.(학년도 종료일 기준 일자 우선 계약 후 재계약 검토)\n□ 임기만료 후 상호 협의 하에 재계약 가능, 최대 근무가능기간 2년(교내 교육조교, 행정조교 근무 기간 포함)\n\n5. 급여 및 처우\n□ 본교 행정조교 급여 기준 적용(세전 月 2,156,900원)\n□ 4대 보험 가입\n□ 1년 이상 근무 시 퇴직금 지급\n\n6. 지원자격\n\n□ 학사 학위 이상 소지자(전문학사 불가, 임용일 기준 졸업예정자 불가)\n\n□ 본교 대학원 재학,휴학,수료생 지원 불가\n\n□ 2026년 12월 9일 이후 근무 가능한 자\n\n7. 전형방법\n\n□ 서류전형 및 면접전형\n□ 면접일자: 서류전형 합격자에 한해 개별 통보\n\n8. 서류전형 제출기한 및 방법\n\n□ 제출기한: ~ 2026년 11월 19일(목) 23:00까지\n\n□ 제출서류:\n- 행정조교 지원서(첨부파일) 1부\n- 개인정보 수집 ‧ 이용 동의서(첨부파일) 1부\n□ 지원 방법: E-mail 접수 (psj980@skku.edu)\n\n※ 이메일 제목: 문과대학 사학과 행정조교 지원_[본인 성명]\n\n※ 개인정보는 행정조교 채용 목적으로만 수집/이용되며, 수집한 정보는 모집 종료 후 일괄 폐기합니다\n\n9. 기타\n□ 본교 인사규정 상 결격사유가 없어야 함\n□ 기재사항 및 제출서류가 허위인 경우 채용이 취소됨\n□ 채용서류의 전자적 접수로 인하여 서류는 반환되지 않음\n\n10. 문의 : 02-760-0912",
+      "body_attempted_at": "2026-11-09T14:58:49.441484+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-19T23:00:00+09:00"
+      }
+    },
+    "skku-career-intern/165106": {
+      "notice": {
+        "id": "skku-career-intern/165106",
+        "source_id": "skku-career-intern",
+        "article_no": "165106",
+        "title": "[카카오뱅크] DevOps 엔지니어링팀 정규직 전환형 인턴 채용",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=M8yY7r838rUTZpew7x4zFggDJGMFdXHEl2KRIlU8gQO&modalChk=Y",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T14:58:49.441484+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "졸업자 또는 졸업예정자만 지원 가능하며 현재 학부생은 지원 자격을 충족하지 못합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "접수 방법 : 채용사이트 접수 (https://recruit.kakaobank.com/jobs/271437)\n접수 기간 : 2026년 11월 9일 13:36 ~ 2026년 11월 25일 23:59",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><div><span>접수 방법 : 채용사이트 접수 (</span><a href=\"https://recruit.kakaobank.com/jobs/271437\">https://recruit.kakaobank.com/jobs/271437</a><span>)</span></div><div>접수 기간 <span>: 2026년 11월 9일 13:36 ~ 2026년 11월 25일 23:59</span></div><div><br></div><div><img src=\"https://job.skku.edu/upload/Recruit/20261109_16011855/카카오뱅크_DevOps 엔지니어링팀 정규직 전환형 인턴 채용_공고문.png\"></div><br></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261109_16011855/카카오뱅크_DevOps 엔지니어링팀 정규직 전환형 인턴 채용_공고문.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T14:58:49.441484+09:00",
+      "page_text": "접수 방법 : 채용사이트 접수 (https://recruit.kakaobank.com/jobs/271437)\n접수 기간 : 2026년 11월 9일 13:36 ~ 2026년 11월 25일 23:59",
+      "body_attempted_at": "2026-11-09T14:58:49.441484+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-25T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "683860fea67335726bdcea6473f6413e15bdfaaf5f4ed77ecf5649c2bf858d5e",
+        "verdict": "not_relevant",
+        "reason": "졸업자 또는 졸업예정자만 지원 가능하며 현재 학부생은 지원 자격을 충족하지 못합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362994": {
+      "notice": {
+        "id": "linkareer-intern/362994",
+        "source_id": "linkareer-intern",
+        "article_no": "362994",
+        "title": "[펄어비스] 2027 채용연계형 겨울 인턴십",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/362994",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T14:58:49.441484+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "졸업자 및 졸업예정자만 지원할 수 있어 현재 학부생은 지원 자격에 부합하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[펄어비스] 2027 채용연계형 겨울 인턴십\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 엔지니어링\n- 게임디자인\n- 콘텐츠\n- 사업/서비스\n\n\n\n\n[자격요건]\n\n\n- 졸업자 및 졸업예정자\n- 최근 3개월 내 펄어비스 채용에 지원한 이력이 없는분\n- 모집군별 자격요건은 각 분야 채용공고 참조\n\n\n\n\n[채용절차]\n\n\n- 서류합격 > 필기전형 > 면접전형 > 최종발표 > 인턴십(8주)\n\n\n\n\n[공고상세]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[펄어비스] 2027 채용연계형 겨울 인턴십</b></span></p><p><span><b>[모집분야]</b></span></p><p>- 엔지니어링</p><p>- 게임디자인</p><p>- 콘텐츠</p><p>- 사업/서비스</p><p><span><b>[자격요건]</b></span></p><p>- 졸업자 및 졸업예정자</p><p>- 최근 3개월 내 펄어비스 채용에 지원한 이력이 없는분</p><p>- 모집군별 자격요건은 각 분야 채용공고 참조</p><p><span><b>[채용절차]</b></span></p><p>- 서류합격 &gt; 필기전형 &gt; 면접전형 &gt; 최종발표 &gt; 인턴십(8주)&nbsp;</p><p><span><b>[공고상세]</b></span></p><p><img src=\"https://i0.wp.com/inthiswork.com/wp-content/uploads/2026/11/12345-screencapture-85.jpg?resize=980%2C4910&amp;ssl=1\"></p>",
+      "images": [
+        "https://i0.wp.com/inthiswork.com/wp-content/uploads/2026/11/12345-screencapture-85.jpg?resize=980%2C4910&ssl=1"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T14:58:49.441484+09:00",
+      "page_text": "[펄어비스] 2027 채용연계형 겨울 인턴십\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 엔지니어링\n- 게임디자인\n- 콘텐츠\n- 사업/서비스\n\n\n\n\n[자격요건]\n\n\n- 졸업자 및 졸업예정자\n- 최근 3개월 내 펄어비스 채용에 지원한 이력이 없는분\n- 모집군별 자격요건은 각 분야 채용공고 참조\n\n\n\n\n[채용절차]\n\n\n- 서류합격 > 필기전형 > 면접전형 > 최종발표 > 인턴십(8주)\n\n\n\n\n[공고상세]",
+      "body_attempted_at": "2026-11-09T14:58:49.441484+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "47079bc1365823c9c5d7284deffea74dea3cc04b6ae1c9bdf71e7b050e99e62f",
+        "verdict": "not_relevant",
+        "reason": "졸업자 및 졸업예정자만 지원할 수 있어 현재 학부생은 지원 자격에 부합하지 않습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362982": {
+      "notice": {
+        "id": "linkareer-intern/362982",
+        "source_id": "linkareer-intern",
+        "article_no": "362982",
+        "title": "[주식회사 이오스튜디오] [EO] 액셀러레이팅 매니저",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/362982",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T14:58:49.441484+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 개발 직무가 아닌 액셀러레이팅 매니저 업무로 소프트웨어 관련 직무에 해당하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/983379\" title=\"[EO] 액셀러레이팅 매니저 - EO STUDIO 채용-2026-11-09.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/983379"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T14:58:49.441484+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-09T14:58:49.441484+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-07T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "7d54ffbd56df1cd2e2455141a61e1fa54ce07a3ea9fba5c52e791db32e98c40b",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 개발 직무가 아닌 액셀러레이팅 매니저 업무로 소프트웨어 관련 직무에 해당하지 않습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "skku-notice01/141699": {
       "notice": {
         "id": "skku-notice01/141699",
@@ -721,7 +1055,9 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-12-04T14:00:00+09:00"
-      }
+      },
+      "page_text": "장애학생지원센터에서 '2026년도 사회적 장애인식개선교육'을 진행하오니 학생분들의 많은 참여 부탁드립니다.\n\n◎일시 : 2026.12.4(금) 14:00~15:00\n◎대상 : 학부 및 대학원생\n◎장소 : 성균관대학교 인문과학캠퍼스 국제관 9B218\n◎강사 : 신홍윤(보건복지부 장애청년 정책위원회 위원)\n◎참여 방법 : 현장접수\n◎참여혜택 : 교내 인성품 봉사 2시간 부여(학부생 한정)\n\n◎문의 : 장애학생지원센터\nTel. 02-760-1090 / 031-299-4425\nE-mail. supporter@skku.edu\n\n*상기 일정 및 내용은 변동 될 수 있습니다.",
+      "rechecked_at": "2026-11-09T14:58:49.441484+09:00"
     },
     "cse-notice/228224": {
       "notice": {
@@ -771,7 +1107,9 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-11-25T15:00:00+09:00"
-      }
+      },
+      "page_text": "Title: Variational Diffusion Model: Line-by-line derivations\n\nSpeaker: Prof. Jooyeon Kim @ UNIST\n\nTime : 15:00 - 16:00, Nov 25, 2026\n\nLocation:\nOnline: https://zoom.us/j/83139609156\nMeeting ID: 831 3960 9156\nPasscode: 91818154\n\nLanguage: English speech & English slides\n\nAbstract:\nDiffusion models are making real-world impacts across multiple data modalities and applications. In this lecture, I aim to mathematically derive the variational diffusion models from scratch using variational approaches. I start by constructing and expanding the evidence lower bound (ELBO). Once we derive the final results, which are the neural network parameter update rules, they can be used directly at the code level.\n\nBio:\nJooyeon Kim is an assistant professor at UNIST. He obtained his BS degree at the University of Tokyo, and his MS and Ph.D. degrees at KAIST. He worked as a researcher at Microsoft Research Cambridge (MSRC) for a year and a half and as a postdoctoral researcher at RIKEN for another year and a half. He is currently interested in (in no particular order): world models, model scaling, generalization, generative models (transformers, diffusions). He is also the founder and CEO of a startup company, ARI.AI, that aims to develop AI foundation models that operate on predictive individual, health-related, measurable biological indicators.",
+      "rechecked_at": "2026-11-09T14:58:49.441484+09:00"
     },
     "skku-career-intern/165093": {
       "notice": {
@@ -12897,7 +13235,8 @@
         "checked": true,
         "model": "gemini-3.1-flash-lite"
       },
-      "rechecked_at": "2026-11-09T02:06:36.689880+09:00"
+      "rechecked_at": "2026-11-09T14:58:49.441484+09:00",
+      "page_text": "장학금 신청을 위한 추천서 내 총장 직인 날인이 필요한 경우, 다음 사항을 참고하시어 신청 바랍니다.\n\n※ 학생지원팀에서는 \"장학금 신청\"이 아닌 목적으로 신청하는 직인 날인은 접수받고 있지 않습니다.\n\n※ 학생지원팀에서는 총장 직인 날인 업무만 진행합니다.\n\n장학금 지원과 관련하여 총장 외 지도교수 혹은 학과장 직인 날인이 필요한 경우\n관련 부서(ex.소속 대학 행정실)에 문의하시기 바랍니다.\n\n※ 서류 신청 전 기재한 인적사항 및 확인사항이 올바른지 확인하시기 바랍니다.\n\n→ 해당 사유가 정확하지 않아 취소처리 하는 경우 다수 발생\n\n※ 해당 과정은 일주일에 2번 정기적으로 운영하고 있으므로 본인이 지원하시는 장학재단의 마감 일정을 고려하여 여유있게 신청하시기 바랍니다.\n\n※ 모든 내용 기재\n\n※ 하단 성균관대학교 총장 기재\n\n※ 파일명 [재단명/성함/수령방법] 기재\n\n※ 총장 직인이 필요한 페이지를 하나의 파일로 합쳐서 신청할 것\n\n※ 한글파일로 제출\n\n▶ 직인 날인 신청 방법\nGLS-[장학영역]-[장학금신청]-[직인날인신청(학생용)]에 직인 날인이 필요한 파일(내용 입력 必)을 첨부 및 저장\n\n▶ 직인 날인 시점: 신청 요일 및 시간 별로 상이\n- 매주 화요일 09시 ~ 목요일 17시 신청 건: 금요일 접수 후 당일 오후 14시 이후 스캔본 업로드 및 원본 보관\n- 매주 금요일 09시 ~ 월요일 17시 신청 건: 화요일 접수 후 당일 오후 14시 이후 스캔본 업로드 및 원본 보관\n※ 상기 스케줄대로 진행하나 내부 진행 상황에 따라 날인 시점이 지연될 수 있음\n※ 직인 완료 후 GLS PUSH 메세지 발송 → 수령 방법에 따라 원본 수령 혹은 GLS 확인\n\n▶ 직인 날인 신청 서류 원본 수령처\n(수령 가능 시간: 평일 오전 9시 ~ 오후 5시 30분 - 점심시간 오후 12시 ~ 13시 제외)\n\n- 인문사회과학캠퍼스: 성균관대학교 인문사회과학캠퍼스 600주년기념관 1층 학생지원팀 방문\n- 자연과학캠퍼스: 성균관대학교 자연과학캠퍼스 학생회관 1층 통합행정실 학생지원팀\n\n※ 자연과학캠퍼스 원본 수령의 경우, 날인완료일로부터 1~2일 더 소요 될 수 있습니다.\n\nex) 2026년 3월 13일(금) 오전 10시 신청 건의 경우,\n자연과학캠퍼스 원본 수령 가능 예상일: 2026년 3월 18일(수) ~ 19일(목)경\n\n※ 원본 수령 원하실 경우 파일명에 [인사캠수령/자과캠수령] 기재 바라며, PDF 파일은 별도로 제공하지 않습니다.\n\n▶ 문의: 02-760-1167(학생지원팀) / 오전 9시 ~ 오후 5시 30분 [점심시간 12시 ~ 13시]"
     },
     "skku-notice01/141152": {
       "notice": {

@@ -594,7 +594,7 @@ export class SettingsView extends LitElement {
                   <button type="button" class="board-handle" data-id=${b.id} aria-label="${b.name} 순서 옮기기"
                     @keydown=${(e: KeyboardEvent) => this.onHandleKey(e, index)}>${chevron('M5 8h14M5 12h14M5 16h14')}</button>
                 </span>` : nothing}</li>`)}</ul>
-            ${this.reordering ? html`<p class="field-note board-order-help">끌거나 위아래 단추로 옮기면 게시판 목록에 바로 바뀌어요</p>` : nothing}
+            ${this.reordering ? html`<p class="field-note board-order-help">손잡이를 끌거나 위아래 단추로 옮기면 목록에 바로 바뀌어요</p>` : nothing}
             ${this.boardOrderStatus ? html`<p class="field-note ${this.boardOrderStatus.ok ? 'ok' : 'error'}" role="status">${this.boardOrderStatus.text}</p>` : nothing}
             <p class="visually-hidden" aria-live="polite">${this.boardAnnouncement}</p>
           </div>

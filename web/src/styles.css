@@ -555,10 +555,10 @@
   .keyword-list.board-order-list li { min-height: 52px; }
   .board-order-list li:last-child { border-bottom: 0; }
   .order-controls { display: flex; align-items: center; margin-right: -10px; }
-  .order-move, .board-handle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0; background: none; color: var(--text-2); }
+  .order-move, .board-handle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0; background: none; color: var(--text); }
   .order-move:disabled { color: var(--text-3); opacity: 0.6; cursor: default; }
   /* 손잡이는 끌기 전용이라 위아래 단추보다 한 단계 연하게, 앞에 간격을 둔다. */
-  .board-handle { margin-left: 4px; color: var(--text-3); touch-action: none; cursor: grab; }
+  .board-handle { margin-left: 4px; color: var(--text-2); touch-action: none; cursor: grab; }
   .board-order-help { padding: 10px 0; border-top: 1px solid var(--line); color: var(--text-2); }
   .keyword-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
   .keyword-list li { display: flex; align-items: center; justify-content: space-between; min-height: 44px; border-bottom: 1px solid var(--line); font-size: 15px; }

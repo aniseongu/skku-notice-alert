@@ -1094,7 +1094,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-11-12T14:00:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-10T05:41:34.000923+09:00"
     },
     "skku-notice01/141708": {
       "notice": {
@@ -2987,7 +2988,7 @@
         "at": "2026-11-25T15:00:00+09:00"
       },
       "page_text": "Title: Variational Diffusion Model: Line-by-line derivations\n\nSpeaker: Prof. Jooyeon Kim @ UNIST\n\nTime : 15:00 - 16:00, Nov 25, 2026\n\nLocation:\nOnline: https://zoom.us/j/83139609156\nMeeting ID: 831 3960 9156\nPasscode: 91818154\n\nLanguage: English speech & English slides\n\nAbstract:\nDiffusion models are making real-world impacts across multiple data modalities and applications. In this lecture, I aim to mathematically derive the variational diffusion models from scratch using variational approaches. I start by constructing and expanding the evidence lower bound (ELBO). Once we derive the final results, which are the neural network parameter update rules, they can be used directly at the code level.\n\nBio:\nJooyeon Kim is an assistant professor at UNIST. He obtained his BS degree at the University of Tokyo, and his MS and Ph.D. degrees at KAIST. He worked as a researcher at Microsoft Research Cambridge (MSRC) for a year and a half and as a postdoctoral researcher at RIKEN for another year and a half. He is currently interested in (in no particular order): world models, model scaling, generalization, generative models (transformers, diffusions). He is also the founder and CEO of a startup company, ARI.AI, that aims to develop AI foundation models that operate on predictive individual, health-related, measurable biological indicators.",
-      "rechecked_at": "2026-11-09T14:58:49.441484+09:00"
+      "rechecked_at": "2026-11-10T05:41:34.000923+09:00"
     },
     "skku-career-intern/165093": {
       "notice": {
@@ -4425,7 +4426,7 @@
       "body_attempts": 2,
       "fetched_at": "2026-11-07T02:18:21.718635+09:00",
       "body_attempted_at": "2026-11-07T02:18:21.718635+09:00",
-      "rechecked_at": "2026-11-09T16:49:09.958586+09:00",
+      "rechecked_at": "2026-11-10T05:41:34.000923+09:00",
       "changed_at": "2026-11-07T02:18:21.718635+09:00",
       "change_kind": "본문",
       "ai_deadline": {

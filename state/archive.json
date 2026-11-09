@@ -55,6 +55,230 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/363146": {
+      "notice": {
+        "id": "linkareer-intern/363146",
+        "source_id": "linkareer-intern",
+        "article_no": "363146",
+        "title": "[EY한영] 금융컨설팅본부 IT컨설팅 (AXIS팀) 인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363146",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T22:20:03.698805+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "금융권 IT 컨설팅 및 전략 수립 업무를 수행하며 디지털/IT 관련 경험자를 우대하므로 소프트웨어 관련 직무로 판단됩니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[EY한영] 금융컨설팅본부 IT컨설팅 (AXIS팀) 인턴\n\n\n[담당업무]\n- 국내외 주요 금융기업 디지털 / IT컨설팅\n- 국내외 신규 금융기관 설립 자문\n- IT진단, 최신기술 트랜드 기반의 금융권 디지털/IT 전략 수립\n- 금융권 프로세스개선(PI) 및 요건정의\n- 금융권 IT진단 및 운영효율화\n\n\n[접수기간]\n11월 09일 ~ 11월 11일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[EY한영] 금융컨설팅본부 IT컨설팅 (AXIS팀) 인턴</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>- 국내외 주요 금융기업 디지털 / IT컨설팅</span></p><p><span>- 국내외 신규 금융기관 설립 자문</span></p><p><span>- IT진단, 최신기술 트랜드 기반의 금융권 디지털/IT 전략 수립</span></p><p><span>- 금융권 프로세스개선(PI) 및 요건정의</span></p><p><span>- 금융권 IT진단 및 운영효율화</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 09일 ~ 11월 11일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/983987\" title=\"스크린샷_9-11-2026_221210_eycareers-kr.recruiter.co.kr.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/983987"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T22:20:03.698805+09:00",
+      "page_text": "[EY한영] 금융컨설팅본부 IT컨설팅 (AXIS팀) 인턴\n\n\n[담당업무]\n- 국내외 주요 금융기업 디지털 / IT컨설팅\n- 국내외 신규 금융기관 설립 자문\n- IT진단, 최신기술 트랜드 기반의 금융권 디지털/IT 전략 수립\n- 금융권 프로세스개선(PI) 및 요건정의\n- 금융권 IT진단 및 운영효율화\n\n\n[접수기간]\n11월 09일 ~ 11월 11일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-09T22:20:03.698805+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-11T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "3d88e7417b50563402114428f12693e62bfad1ab12ed93c53ade70afecf41e5f",
+        "verdict": "relevant",
+        "reason": "금융권 IT 컨설팅 및 전략 수립 업무를 수행하며 디지털/IT 관련 경험자를 우대하므로 소프트웨어 관련 직무로 판단됩니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363145": {
+      "notice": {
+        "id": "linkareer-intern/363145",
+        "source_id": "linkareer-intern",
+        "article_no": "363145",
+        "title": "[EY한영] 감사부문 Data Analytics – IT Specialist 동계인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363145",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T22:20:03.698805+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "데이터 분석, 감사지원 프로그램 개발 및 웹 애플리케이션 구축 업무를 수행하며 컴퓨터공학 전공자를 우대하므로 소프트웨어 관련 직무로 판단됩니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[EY한영] 감사부문 Data Analytics – IT Specialist 동계인턴\n\n\n[담당업무]\n- 재무제표 데이터 분석 및 오류 검증\n- 기업 회계 및 재무 데이터 분석을 위한 데이터의 수집 및 정제\n- 감사지원 프로그램 개발\n- XBRL 포맷 작성 및 공시자료 관리\n\n\n[접수기간]\n11월 09일 ~ 11월 15일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[EY한영] 감사부문 Data Analytics – IT Specialist 동계인턴</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>- 재무제표 데이터 분석 및 오류 검증</span></p><p><span>- 기업 회계 및 재무 데이터 분석을 위한 데이터의 수집 및 정제</span></p><p><span>- 감사지원 프로그램 개발</span></p><p><span>- XBRL 포맷 작성 및 공시자료 관리</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 09일 ~ 11월 15일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/983982\" title=\"스크린샷_9-11-2026_22538_eycareers-kr.recruiter.co.kr.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/983982"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T22:20:03.698805+09:00",
+      "page_text": "[EY한영] 감사부문 Data Analytics – IT Specialist 동계인턴\n\n\n[담당업무]\n- 재무제표 데이터 분석 및 오류 검증\n- 기업 회계 및 재무 데이터 분석을 위한 데이터의 수집 및 정제\n- 감사지원 프로그램 개발\n- XBRL 포맷 작성 및 공시자료 관리\n\n\n[접수기간]\n11월 09일 ~ 11월 15일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-09T22:20:03.698805+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "61c195c6d4cd0b21ccc7b62f74b430a0ccb0d0936e123626e74135577b1dad38",
+        "verdict": "relevant",
+        "reason": "데이터 분석, 감사지원 프로그램 개발 및 웹 애플리케이션 구축 업무를 수행하며 컴퓨터공학 전공자를 우대하므로 소프트웨어 관련 직무로 판단됩니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363142": {
+      "notice": {
+        "id": "linkareer-intern/363142",
+        "source_id": "linkareer-intern",
+        "article_no": "363142",
+        "title": "[스피어코퍼레이션] Administrative Associate (행정지원 담당자) - 채용연계형 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363142",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T22:20:03.698805+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "글로벌 출장 예약, 경비 정산 등 행정 지원 업무를 담당하는 비개발 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[스피어코퍼레이션] Administrative Associate (행정지원 담당자) - 채용연계형 인턴\n\n\n[담당업무]\n1. 글로벌 출장 및 일정 지원\n원활한 글로벌 비즈니스 출장을 위한 항공권, 호텔, 교통편 등 예약 및 일정 관리\n\n\n2. 경비 정산 및 비용 처리 지원\n비즈니스 활동에 수반되는 예산 집행 내역(법인카드 등) 증빙 관리 및 정산\n내부 프로세스에 따른 신속하고 정확한 비용 지급 처리 및 데이터 관리\n\n\n3. 팀 내 업무 및 커뮤니케이션 지원\n글로벌 비즈니스 수행에 필요한 팀 내 제반 업무 지원\n글로벌 팀 및 유관 부서와의 원활한 소통을 위한 커뮤니케이션 지원\n팀 생산성 향상을 위한 운영 전반 지원\n\n\n[접수기간]\n11월 09일 ~ 채용시 마감\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[스피어코퍼레이션] Administrative Associate (행정지원 담당자) - 채용연계형 인턴</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>1. 글로벌 출장 및 일정 지원</span></p><p><span>원활한 글로벌 비즈니스 출장을 위한 항공권, 호텔, 교통편 등 예약 및 일정 관리</span></p><p><span>2. 경비 정산 및 비용 처리 지원</span></p><p><span>비즈니스 활동에 수반되는 예산 집행 내역(법인카드 등) 증빙 관리 및 정산</span></p><p><span>내부 프로세스에 따른 신속하고 정확한 비용 지급 처리 및 데이터 관리</span></p><p><span>3. 팀 내 업무 및 커뮤니케이션 지원</span></p><p><span>글로벌 비즈니스 수행에 필요한 팀 내 제반 업무 지원</span></p><p><span>글로벌 팀 및 유관 부서와의 원활한 소통을 위한 커뮤니케이션 지원</span></p><p><span>팀 생산성 향상을 위한 운영 전반 지원</span></p><div><br></div><div><b><span>[접수기간]</span></b></div><div><span>11월 09일 ~ 채용시 마감</span></div><div><br></div><div><b><span>[채용공고]</span></b></div><div><img src=\"https://media-cdn.linkareer.com/se2editor/image/983975\" title=\"스크린샷_9-11-2026_214815_spherecorp.career.greetinghr.com.jpeg\"><br><br></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/983975"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T22:20:03.698805+09:00",
+      "page_text": "[스피어코퍼레이션] Administrative Associate (행정지원 담당자) - 채용연계형 인턴\n\n\n[담당업무]\n1. 글로벌 출장 및 일정 지원\n원활한 글로벌 비즈니스 출장을 위한 항공권, 호텔, 교통편 등 예약 및 일정 관리\n\n\n2. 경비 정산 및 비용 처리 지원\n비즈니스 활동에 수반되는 예산 집행 내역(법인카드 등) 증빙 관리 및 정산\n내부 프로세스에 따른 신속하고 정확한 비용 지급 처리 및 데이터 관리\n\n\n3. 팀 내 업무 및 커뮤니케이션 지원\n글로벌 비즈니스 수행에 필요한 팀 내 제반 업무 지원\n글로벌 팀 및 유관 부서와의 원활한 소통을 위한 커뮤니케이션 지원\n팀 생산성 향상을 위한 운영 전반 지원\n\n\n[접수기간]\n11월 09일 ~ 채용시 마감\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-09T22:20:03.698805+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-07T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "1e892671a53c45b8bb4430282f677b19bb823aaa3d20bf1bfc7e8bb05214a346",
+        "verdict": "not_relevant",
+        "reason": "글로벌 출장 예약, 경비 정산 등 행정 지원 업무를 담당하는 비개발 직무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363139": {
+      "notice": {
+        "id": "linkareer-intern/363139",
+        "source_id": "linkareer-intern",
+        "article_no": "363139",
+        "title": "[(주)이삼오구] MARKETER INTERNSHIP RUN-UP",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363139",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T22:20:03.698805+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "커머스 마케팅 업무를 수행하는 마케팅 직무로 소프트웨어 개발 및 데이터 분석 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[(주)이삼오구] MARKETER INTERNSHIP RUN-UP\n\n\n[지원자격 및 우대사항]\n지원 자격\n2027년 2월 졸업예정자 또는 기졸업자 (전공 무관)\n2027년 1월 18일 입사 및 3개월간 주 5일 근무가 가능한 분\n커머스 마케터에 도전하고 싶은 분\n\n\n우대 사항\n커머스·뷰티 브랜드와 광고에 관심이 많은 분\nSNS를 즐겨 쓰고 트렌드에 민감한 분, SNS·커뮤니티를 직접 운영해 본 분\n떠오른 아이디어를 콘텐츠나 프로젝트로 직접 실현해 본 분\n\n\n[접수기간]\n11월 09일 ~ 12월 04일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[(주)이삼오구] MARKETER INTERNSHIP RUN-UP</span></b></p><p><b><span>[지원자격 및 우대사항]</span></b></p><p><span>지원 자격</span></p><p><span>2027년 2월 졸업예정자 또는 기졸업자 (전공 무관)</span></p><p><span>2027년 1월 18일 입사 및 3개월간 주 5일 근무가 가능한 분</span></p><p><span>커머스 마케터에 도전하고 싶은 분</span></p><p><span>우대 사항</span></p><p><span>커머스·뷰티 브랜드와 광고에 관심이 많은 분</span></p><p><span>SNS를 즐겨 쓰고 트렌드에 민감한 분, SNS·커뮤니티를 직접 운영해 본 분</span></p><p><span>떠오른 아이디어를 콘텐츠나 프로젝트로 직접 실현해 본 분</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 09일 ~ 12월 04일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/983957\" title=\"CaptureX_2026-11-09_210149_runup.2359.kr.jpg\"><br><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/983957"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T22:20:03.698805+09:00",
+      "page_text": "[(주)이삼오구] MARKETER INTERNSHIP RUN-UP\n\n\n[지원자격 및 우대사항]\n지원 자격\n2027년 2월 졸업예정자 또는 기졸업자 (전공 무관)\n2027년 1월 18일 입사 및 3개월간 주 5일 근무가 가능한 분\n커머스 마케터에 도전하고 싶은 분\n\n\n우대 사항\n커머스·뷰티 브랜드와 광고에 관심이 많은 분\nSNS를 즐겨 쓰고 트렌드에 민감한 분, SNS·커뮤니티를 직접 운영해 본 분\n떠오른 아이디어를 콘텐츠나 프로젝트로 직접 실현해 본 분\n\n\n[접수기간]\n11월 09일 ~ 12월 04일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-09T22:20:03.698805+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-04T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "0485cb7f3789f71c430209623d0786f3e0965a80c283158ae6784727424acad0",
+        "verdict": "not_relevant",
+        "reason": "커머스 마케팅 업무를 수행하는 마케팅 직무로 소프트웨어 개발 및 데이터 분석 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "linkareer-intern/363127": {
       "notice": {
         "id": "linkareer-intern/363127",
@@ -3437,7 +3661,8 @@
         "kind": "일정",
         "at": "2026-12-01T18:30:00+09:00"
       },
-      "rechecked_at": "2026-11-09T09:27:51.504802+09:00"
+      "rechecked_at": "2026-11-09T22:20:03.698805+09:00",
+      "page_text": "삼성바이오로직스 현직 동문께서 후배 여러분들을 위해 특강을 진행할 예정입니다.\n취업준비생분들과 본인의 진로 및 직무를 고민하고 계시는 모든 학생 여러분들의 많은 참여 바랍니다.\n\n[삼성바이오로직스 현직 동문 특강]\n1. 강연자 소개\n- 성균관대학교 화학공학부 학사 졸업(13학번)\n- 2019년 7월 삼성바이오로직스 하계인턴\n- 2019년 11월 유한양행 품질보증팀 입사\n- 2020년 12월 동아ST 밸리데이션팀 입사\n- 2024년 10월 삼성바이오로직스 품질보증팀 재직 중\n- 주요 경력: 동아ST - 인천 송도 신공장 추진, 삼성바이오로직스 - 글로벌 빅파마 기술이전(화이자 등)\n\n2. 특강 내용\n- 제약 vs 바이오 산업 차이 알아보기, 기초 배경지식, 현대 트렌드 이해\n- 제약바이오 산업 취업을 위해 준비해야 할 스펙\n- 좋은 회사를 고르는 기준, 국내 유명 제약회사 리뷰\n- 품질보증(QA), 품질관리(QC)팀 직무 설명 및 장단점 소개\n- Q&A\n\n3. 특강 일시 및 장소: 12/1(화) 18:30~20:30 (자과캠) 제2과학관 32255 강의실\n\n★ 사전 신청을 받고 있으니 참여 희망하는 학생분들은 아래 링크를 통하여 신청해 주시기 바랍니다(로그인 필요).\n링크: https://job.skku.edu/community/Program/programView.aspx?pgdx=uDUi6nZDleIzs28YttgR5W3zLn8SnDphgXAkTtytRZ4\n★ 출석 확인 시, 강의 시간만큼 창의품 인증이 가능한 비교과 프로그램 이수시간을 부여해 드릴 예정입니다."
     },
     "linkareer-intern/362738": {
       "notice": {
@@ -7026,7 +7251,7 @@
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": "<p>2026 랜선으로 만나는 릴레이 글로벌 취·창업 톡톡톡(talk)</p><p>글로벌 취업·창업· 인턴십을 꿈꾸는 재학생을 위한『 2026 랜선으로 만나는 릴레이 글로벌 취·창업 톡톡톡』을 진행합니다.</p><p>미국, 프랑스 등 해외에서 실제로 활동하고 있는 글로벌 기업 및 연구기관의 연사들이 전하는 생생한 경험과 이야기를 통해 해외 취·창업에 대한 정보와 글로벌 진로에 대한 다양한 인사이트를 얻어보세요!</p><p>또한 강의 후 진행되는 Q&amp;A 시간을 통해 평소 접하기 어려웠던 해외 기업 및 현지 취업·창업에 대한 궁금증을 직접 질문하고 다양한 정보를 얻을 수 있습니다.</p><p>많은 관심과 참여 부탁드립니다.</p><p>■ 교육기간: 2026. 11. 3.(화) ~ 11. 26.(목) / 총 8회(매주 화, 목)</p><p>■ 교육시간: 19:00~20:30 (한국시간 기준)</p><p>■ 교육방법 : 줌 실시간 온라인 강의</p><p>■ 신청기한: 희망 교육 차수 기준 1일전까지 신청(각 회차당 선착순 300명)</p><p>■ 참여혜택: 3회 이상 참여 시 아주대학교 앵커사업단장 명의 수료증 발급(45분 이상 수강 기준)</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"홍보 포스터\" src=\"https://www.skku.edu/_attach/image/2026/09/WSADbTFwZbGxqwULDXos.jpg\">",
+      "body_html": "<div><p>2026&nbsp;랜선으로&nbsp;만나는&nbsp;릴레이&nbsp;글로벌&nbsp;취·창업&nbsp;톡톡톡(talk)</p><p>글로벌&nbsp;취업·창업·&nbsp;인턴십을&nbsp;꿈꾸는&nbsp;재학생을&nbsp;위한『&nbsp;2026&nbsp;랜선으로&nbsp;만나는&nbsp;릴레이&nbsp;글로벌&nbsp;취·창업&nbsp;톡톡톡』을&nbsp;진행합니다.</p><p>미국,&nbsp;프랑스&nbsp;등&nbsp;해외에서&nbsp;실제로&nbsp;활동하고&nbsp;있는&nbsp;글로벌&nbsp;기업&nbsp;및&nbsp;연구기관의&nbsp;연사들이&nbsp;전하는&nbsp;생생한&nbsp;경험과&nbsp;이야기를&nbsp;통해&nbsp;해외&nbsp;취·창업에&nbsp;대한&nbsp;정보와&nbsp;글로벌&nbsp;진로에&nbsp;대한&nbsp;다양한&nbsp;인사이트를&nbsp;얻어보세요!</p><p>또한&nbsp;강의&nbsp;후&nbsp;진행되는&nbsp;Q&amp;A&nbsp;시간을&nbsp;통해&nbsp;평소&nbsp;접하기&nbsp;어려웠던&nbsp;해외&nbsp;기업&nbsp;및&nbsp;현지&nbsp;취업·창업에&nbsp;대한&nbsp;궁금증을&nbsp;직접&nbsp;질문하고&nbsp;다양한&nbsp;정보를&nbsp;얻을&nbsp;수&nbsp;있습니다.</p><p>많은&nbsp;관심과&nbsp;참여&nbsp;부탁드립니다.</p><p>■&nbsp;교육기간:&nbsp;2026.&nbsp;11.&nbsp;3.(화)&nbsp;~&nbsp;11.&nbsp;26.(목)&nbsp;/&nbsp;총&nbsp;8회(매주&nbsp;화,&nbsp;목)</p><p>■&nbsp;교육시간:&nbsp;19:00~20:30&nbsp;(한국시간&nbsp;기준)</p><p>■&nbsp;교육방법&nbsp;:&nbsp;줌&nbsp;실시간&nbsp;온라인&nbsp;강의</p><p>■&nbsp;신청기한:&nbsp;희망&nbsp;교육&nbsp;차수&nbsp;기준&nbsp;1일전까지&nbsp;신청(각&nbsp;회차당&nbsp;선착순&nbsp;300명)</p><p>■&nbsp;참여혜택:&nbsp;3회&nbsp;이상&nbsp;참여&nbsp;시&nbsp;아주대학교&nbsp;앵커사업단장&nbsp;명의&nbsp;수료증&nbsp;발급(45분&nbsp;이상&nbsp;수강&nbsp;기준)</p></div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"홍보 포스터\" src=\"https://www.skku.edu/_attach/image/2026/09/WSADbTFwZbGxqwULDXos.jpg\">",
       "images": [
         "https://www.skku.edu/_attach/image/2026/09/WSADbTFwZbGxqwULDXos.jpg"
       ],
@@ -7040,7 +7265,8 @@
         "kind": "마감",
         "at": "2026-11-25T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-09T09:27:51.504802+09:00"
+      "rechecked_at": "2026-11-09T22:20:03.698805+09:00",
+      "page_text": "2026 랜선으로 만나는 릴레이 글로벌 취·창업 톡톡톡(talk)\n\n글로벌 취업·창업· 인턴십을 꿈꾸는 재학생을 위한『 2026 랜선으로 만나는 릴레이 글로벌 취·창업 톡톡톡』을 진행합니다.\n\n미국, 프랑스 등 해외에서 실제로 활동하고 있는 글로벌 기업 및 연구기관의 연사들이 전하는 생생한 경험과 이야기를 통해 해외 취·창업에 대한 정보와 글로벌 진로에 대한 다양한 인사이트를 얻어보세요!\n\n또한 강의 후 진행되는 Q&A 시간을 통해 평소 접하기 어려웠던 해외 기업 및 현지 취업·창업에 대한 궁금증을 직접 질문하고 다양한 정보를 얻을 수 있습니다.\n\n많은 관심과 참여 부탁드립니다.\n\n■ 교육기간: 2026. 11. 3.(화) ~ 11. 26.(목) / 총 8회(매주 화, 목)\n\n■ 교육시간: 19:00~20:30 (한국시간 기준)\n\n■ 교육방법 : 줌 실시간 온라인 강의\n\n■ 신청기한: 희망 교육 차수 기준 1일전까지 신청(각 회차당 선착순 300명)\n\n■ 참여혜택: 3회 이상 참여 시 아주대학교 앵커사업단장 명의 수료증 발급(45분 이상 수강 기준)"
     },
     "sw-notice/228121": {
       "notice": {
@@ -7088,7 +7314,8 @@
         "kind": "일정",
         "at": "2026-11-21T13:00:00+09:00"
       },
-      "rechecked_at": "2026-11-09T09:27:51.504802+09:00"
+      "rechecked_at": "2026-11-09T22:20:03.698805+09:00",
+      "page_text": "행사 개요\n일시: 2026년 11월 21일(토) 오후 1시~5시 30분\n장소: 서울특별시 강남구 테헤란로 138 성홍타워 3층 (드리움) Forest Hall\n참석 대상: 온디바이스 AI 유관 분야 학생, 연구자 및 산업 종사자\n행사 개요: 카카오, 연세대, 에너자이 등 산학 연사들이 공유하는 온디바이스 AI 연구 및 상용화 경험\n참가비: 무료\n신청 링크: https://event-us.kr/m/138890/63964\n\n세부 일정\n12:30 - 13:00 행사 등록 및 안내\n13:00 - 13:20 인사말 및 후원사 소개 (에너자이 | 장한힘 대표)\n13:20 - 13:50 Optimizing Tiny Speech Models for Hearding Aids (Flysounds | 김경민 연구원)\n13:50 - 14:00 쉬는 시간\n14:00 - 14:20 Personal 에이전트 시대가 부르는 온디바이스 AI (에너자이 | 장한힘 대표)\n14:20 - 14:50 Systems for Efficient On-Device AI (연세대학교 | 이제호 연구원)\n14:50 - 15:00 쉬는 시간\n15:00 - 15:30 Building an Open-Source NPU Compiler: Synaptics Torq (에너자이 | 김재호 Compiler Engineer Team Lead)\n15:30 - 16:00 Kanana 온디바이스 AI 에이전트 개발기 (카카오 | 민규식 AI 엔지니어)\n16:00 - 17:30 네트워킹 및 마무리\n\n기타 안내\n주차공간은 별도로 제공되지 않습니다.\n공간 제한으로 인해 모집이 조기 마감될 수 있습니다.\n발표자, 발표 순서, 발표 주제, 발표 구성 등이 향후 변경될 수 있습니다.\n기타 문의는 sungmin.woo@enerzai.com 로 부탁드립니다."
     },
     "skku-notice01/141610": {
       "notice": {

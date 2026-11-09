@@ -55,6 +55,161 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-career-intern/165098": {
+      "notice": {
+        "id": "skku-career-intern/165098",
+        "source_id": "skku-career-intern",
+        "article_no": "165098",
+        "title": "[롯데그룹] 2027 롯데그룹 외국인 유학생 채용연계형 Winter Internship (~11/17)",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=9jeW2a7xZWhIjY4776DzLwcGRcpXGZOeu0nHrT49zM0&modalChk=Y",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": "2026-11-17T23:59:00+09:00",
+        "first_seen": "2026-11-09T11:18:13.058572+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 외국인 유학생만을 대상으로 하는 채용으로, 일반적인 소프트웨어학과 학부생이 지원할 수 있는 공고가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[롯데그룹] 2027 롯데그룹 외국인 유학생 채용연계형 Winter Internship (~11/17)\n\n\n롯데그룹에서 외국인 유학생 여러분을 위한 특별한 채용 기회를 준비했습니다.\n\n\n다양한 계열사와 직무가 참여하는 그룹 차원의 대규모 채용 연계형 인턴십으로, 유통·식품·화학·IT·기계 등 폭넓은 산업 분야에서 여러분의 커리어를 시작할 수 있습니다.\n\n\n그룹 차원에서 다양한 채용 기회를 한꺼번에 만나볼 수 있는 이번 기회!\n글로벌 인재 여러분의 많은 관심과 지원 바랍니다.\n\n\n\n▶ 접수기간 - 11월 6일(금) 17:00 ~ 11월 17일(화) 23:00\n\n\n▶ 모집 직무 - 객실 서비스, 회계, HR, 마케팅, 델리MD, 영업관리, 영업점운영, 생산관리, 영업, 생산기술, 글로벌 마케팅, 경영기획/관리, 글로벌 영업, 글로벌 물류, 오프쇼어 PL\n※ 직무별 계열사, 담당업무 및 필수/우대사항 등 자세한 사항은 공고문을 확인해주세요!\n\n\n▶ 접수방법 - 롯데그룹 채용 홈페이지 온라인 접수\n\n\n▶ 자세히 보기 - https://recruit.lotte.co.kr/apply/announcement/detail/22001699\n\n\n여러분들의 많은 관심 부탁드립니다! :)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><p><span>[롯데그룹] 2027 롯데그룹 외국인 유학생 채용연계형 Winter Internship (~11/17)</span></p><div><div><span>롯데그룹에서 외국인 유학생 여러분을 위한 특별한 채용 기회를 준비했습니다.</span></div><div><br></div><div><span>다양한 계열사와 직무가 참여하는 그룹 차원의 대규모 채용 연계형 인턴십으로, 유통·식품·화학·IT·기계 등 폭넓은 산업 분야에서 여러분의 커리어를 시작할 수 있습니다.</span></div><div><br></div><div><span>그룹 차원에서 다양한 채용 기회를 한꺼번에 만나볼 수 있는 이번 기회!</span></div><div><span>글로벌 인재 여러분의 많은 관심과 지원 바랍니다.&nbsp;</span></div></div><div><br></div><div><span>▶ 접수기간 - 11월 6일(금) 17:00 ~ 11월 17일(화) 23:00</span></div><div><br></div><div><span>▶ 모집 직무 - 객실 서비스, 회계, HR, 마케팅, 델리MD, 영업관리, 영업점운영, 생산관리, 영업, 생산기술, 글로벌 마케팅, 경영기획/관리, 글로벌 영업, 글로벌 물류, 오프쇼어 PL</span></div><div><span>※ 직무별 계열사, 담당업무 및 필수/우대사항 등 자세한 사항은 공고문을 확인해주세요!</span></div><div><br></div><div><span>▶ 접수방법 - 롯데그룹 채용 홈페이지 온라인 접수</span></div><div><br></div><div><span>▶ 자세히 보기 - <a href=\"https://event.stibee.com/v2/click/NTI4ODk2LzM2OTMwMTYvMjAyLw/aHR0cHM6Ly9yZWNydWl0LmxvdHRlLmNvLmtyL2FwcGx5L2Fubm91bmNlbWVudC9kZXRhaWwvMjIwMDE2OTk\">https://recruit.lotte.co.kr/apply/announcement/detail/22001699</a></span></div><div><br></div><div><span>여러분들의 많은 관심 부탁드립니다! :)</span></div><div><span><br></span></div><div><span><div><img src=\"https://job.skku.edu/upload/Recruit/20261109_52000442/26392_3693016_1794184743220701630.png\"></div><br></span></div></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261109_52000442/26392_3693016_1794184743220701630.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T11:18:13.058572+09:00",
+      "page_text": "[롯데그룹] 2027 롯데그룹 외국인 유학생 채용연계형 Winter Internship (~11/17)\n\n\n롯데그룹에서 외국인 유학생 여러분을 위한 특별한 채용 기회를 준비했습니다.\n\n\n다양한 계열사와 직무가 참여하는 그룹 차원의 대규모 채용 연계형 인턴십으로, 유통·식품·화학·IT·기계 등 폭넓은 산업 분야에서 여러분의 커리어를 시작할 수 있습니다.\n\n\n그룹 차원에서 다양한 채용 기회를 한꺼번에 만나볼 수 있는 이번 기회!\n글로벌 인재 여러분의 많은 관심과 지원 바랍니다.\n\n\n\n▶ 접수기간 - 11월 6일(금) 17:00 ~ 11월 17일(화) 23:00\n\n\n▶ 모집 직무 - 객실 서비스, 회계, HR, 마케팅, 델리MD, 영업관리, 영업점운영, 생산관리, 영업, 생산기술, 글로벌 마케팅, 경영기획/관리, 글로벌 영업, 글로벌 물류, 오프쇼어 PL\n※ 직무별 계열사, 담당업무 및 필수/우대사항 등 자세한 사항은 공고문을 확인해주세요!\n\n\n▶ 접수방법 - 롯데그룹 채용 홈페이지 온라인 접수\n\n\n▶ 자세히 보기 - https://recruit.lotte.co.kr/apply/announcement/detail/22001699\n\n\n여러분들의 많은 관심 부탁드립니다! :)",
+      "body_attempted_at": "2026-11-09T11:18:13.058572+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "433309ae7ad3624452671c2309a3cc2399e90740cd22d06fd41c7c8cd98fd7b8",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 외국인 유학생만을 대상으로 하는 채용으로, 일반적인 소프트웨어학과 학부생이 지원할 수 있는 공고가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165095": {
+      "notice": {
+        "id": "skku-career-intern/165095",
+        "source_id": "skku-career-intern",
+        "article_no": "165095",
+        "title": "[(주)엔에이치알] 2026년 4분기 채용 | NHR MEET-UP DAY(사옥 초청 상담회) 신청 안내",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=9jeW2a7xZWhIjY4776DzLt4TkdP2ZpFPOkp2DmzM7tb&modalChk=Y",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T11:18:13.058572+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "정보보호 직무는 경력직을 채용하며, 나머지 직무는 소프트웨어 개발과 직접적인 연관성이 낮아 학부생이 지원하기에 적합하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[(주)엔에이치알] 2026년 4분기 신입·경력·인턴 채용\nNHR MEET-UP DAY(사옥 초청 상담회) 신청 안내 (신청 바로가기)\n\n\nNHR 채용에 지원해보고 싶은데, 어떻게 해야할지 모르겠다면? NHR MEET-UP DAY에 참여해보세요!🔥\n현직자와 채용담당자가 직접 답해드릴게요! 궁금한 것들을 싹- 해소할 수 있는 기회✨\n\n\n★NHR MEET-UP DAY 신청 바로가기★\n\n신청 방법 : ~11/11(수) 14:00까지 커리어톡 사전 신청(상세 내용 확인 필수)\n\n운영 일시 : 11/13(금) 10:00~17:00 NHR타워\n\n참여 방법 : 채용 공고 확인 > 커리어톡 사전 신청 > 운영 시간 내 자율 방문 > 자율 상담\n※ 별도 선발 과정은 없으며 사전 신청자 모두 당일 참석 가능합니다.\n\n\n\n[기업 소개]\n\nNHR은 대학내일ES의 구성법인으로 HR마케팅, HR컨설팅, HR Tech에 이르기까지 HR 전 과정을 관통하는 통합 HR 솔루션을 제공하는 에이전시입니다.\n\n[채용 안내]\n■ 서류 접수 : ~11. 16.(월) 15:00 마감\n■ 채용 구분 : 신입 / 경력 / 인턴 (*채용 직무에 따라 상이)\n■ 채용 직무 : HR마케팅(AE), 채용대행, 정보보호, Platform Operations(플랫폼 운영)\n\n■ 채용 공고 확인하기 : https://bit.ly/4dv9AFe",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><div><p><span>[(주)엔에이치알] 2026년 4분기 </span><span>신입·경력</span><span>·인턴 채용</span></p><p><span>NHR MEET-UP DAY(사옥 초청 상담회) 신청 안내</span><span><a href=\"https://www.careertalk.kr/event-pin/4551482\"> (신청 바로가기)</a></span></p><p><span>NHR </span><span>채용에 지원해보고 싶은데, 어떻게 해야할지 모르겠다면? </span><span>NHR MEET-UP DAY</span><span>에</span><span> </span><span>참여해보세요</span><span>!</span><span>🔥</span></p><p><span>현직자와 채용담당자가 직접 답해드릴게요! 궁금한 것들을 싹- 해소할 수 있는 기회✨</span></p><p><a href=\"https://www.careertalk.kr/event-pin/4551482\"><span>★NHR MEET-UP DAY 신청 바로가기★</span></a><span><br></span></p><span></span><ul><li><p><span>신청</span><span> </span><span>방법</span><span> :</span><span> ~11/11(</span><span>수</span><span>) 14:00</span><span>까지</span><span> </span><span>커리어톡</span><span> </span><span>사전</span><span> </span><span>신청</span><span>(</span><span>상세</span><span> </span><span>내용</span><span> </span><span>확인</span><span> </span><span>필수</span><span>)</span></p></li><li><p><span>운영 일시</span><span> : 11/13(</span><span>금</span><span>) 10:00~17:00 NHR</span><span>타워</span></p></li><li><p><span>참여 방법</span><span> : 채용 공고 확인 &gt; 커리어톡 사전 신청 &gt; 운영 시간 내 자율 방문 &gt; 자율 상담<br>※ 별도 선발 과정은 없으며 사전 신청자 모두 당일 참석 가능합니다.</span></p></li></ul><p><span>[</span><span>기업 소개</span><span>]</span></p></div><p><span>NHR</span><span>은</span><span> </span><span>대학내일</span><span>ES</span><span>의</span><span> </span><span>구성법인으로</span><span> HR</span><span>마케팅</span><span>, HR</span><span>컨설팅</span><span>, HR Tech</span><span>에</span><span> </span><span>이르기까지</span><span> HR </span><span>전</span><span> </span><span>과정을</span><span> </span><span>관통하는</span><span> </span><span>통합</span><span> HR </span><span>솔루션을</span><span> </span><span>제공하는</span><span> </span><span>에이전시입니다</span><span>.</span></p><div><p><span>&nbsp;</span></p><p><span>[채용 안내]</span></p><p><span>■ 서류 접수 : ~11. 16.(월) 15:00 마감</span></p><p><span>■ 채용 구분 : 신입 / 경력 / 인턴 (*</span><span>채용 직무에 따라 상이)</span></p><p><span>■ 채용 직무 : HR마케팅(AE), 채용대행, 정보보호, Platform Operations(플랫폼 운영)</span><span><br></span></p><p><span>■ 채용 공고 확인하기 : </span><a href=\"https://bit.ly/4dv9AFe\"><span>https://bit.ly/4dv9AFe</span></a><span><br></span></p><div><div><img src=\"https://job.skku.edu/upload/Recruit/20261109_70002154/26_NHR_recruit 4Q_webflyer_F.png\"></div><br></div></div></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261109_70002154/26_NHR_recruit 4Q_webflyer_F.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T11:18:13.058572+09:00",
+      "page_text": "[(주)엔에이치알] 2026년 4분기 신입·경력·인턴 채용\nNHR MEET-UP DAY(사옥 초청 상담회) 신청 안내 (신청 바로가기)\n\n\nNHR 채용에 지원해보고 싶은데, 어떻게 해야할지 모르겠다면? NHR MEET-UP DAY에 참여해보세요!🔥\n현직자와 채용담당자가 직접 답해드릴게요! 궁금한 것들을 싹- 해소할 수 있는 기회✨\n\n\n★NHR MEET-UP DAY 신청 바로가기★\n\n신청 방법 : ~11/11(수) 14:00까지 커리어톡 사전 신청(상세 내용 확인 필수)\n\n운영 일시 : 11/13(금) 10:00~17:00 NHR타워\n\n참여 방법 : 채용 공고 확인 > 커리어톡 사전 신청 > 운영 시간 내 자율 방문 > 자율 상담\n※ 별도 선발 과정은 없으며 사전 신청자 모두 당일 참석 가능합니다.\n\n\n\n[기업 소개]\n\nNHR은 대학내일ES의 구성법인으로 HR마케팅, HR컨설팅, HR Tech에 이르기까지 HR 전 과정을 관통하는 통합 HR 솔루션을 제공하는 에이전시입니다.\n\n[채용 안내]\n■ 서류 접수 : ~11. 16.(월) 15:00 마감\n■ 채용 구분 : 신입 / 경력 / 인턴 (*채용 직무에 따라 상이)\n■ 채용 직무 : HR마케팅(AE), 채용대행, 정보보호, Platform Operations(플랫폼 운영)\n\n■ 채용 공고 확인하기 : https://bit.ly/4dv9AFe",
+      "body_attempted_at": "2026-11-09T11:18:13.058572+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "5f8b088cfe9041c44f193aa39f7b4ee4ecf4ed9503528e58e0f31632ddda2287",
+        "verdict": "not_relevant",
+        "reason": "정보보호 직무는 경력직을 채용하며, 나머지 직무는 소프트웨어 개발과 직접적인 연관성이 낮아 학부생이 지원하기에 적합하지 않습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362927": {
+      "notice": {
+        "id": "linkareer-intern/362927",
+        "source_id": "linkareer-intern",
+        "article_no": "362927",
+        "title": "[위마케팅] [팀모먼트(비나우 자회사)] 글로벌 B2B 영업 지원 (체험형 인턴)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362927",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T11:18:13.058572+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "| 팀모먼트 소개\n팀모먼트(TEAM MOMENT)는 글로벌 No.1 뷰티 기업 비나우의 자회사로,\n주도적인 조직 문화를 바탕으로 지속적이고 견고한 성장을 추구하는 뷰티 기업입니다.\n고객의 모든 순간에 함께하는 브랜드를 통해\n일상 속에 자연스럽게 스며드는 경험을 만들어가고자 합니다.\n\n\n| 팀모먼트의 선케어 브랜드 'Tage'\nTage는 피부에 꼭 필요한 기준만을 남긴 Skin-First 선케어 브랜드입니다.\n한국의 피부 환경과 매일 반복되는 햇빛 노출에 주목하여,\n일상에서 확실하게 작동하는 자외선 보호에 집중합니다.\n이러한 기준은 기획부터 개발, 생산까지 전 과정을 한국에서 완성하는 브랜드 철학으로 이어집니다.\nTage는 매일의 피부가 안심하고 선택할 수 있는, 선케어의 새로운 기준을 제안합니다.\n• Tage 공식몰\n\n\n성장하는 브랜드의 모든 것을 가장 가까이에서 경험하며,\n우리만의 성공 방정식을 함께 만들어 나갈 팀모먼트의 초기 멤버를 기다립니다.\n\n\n\n\n| 주요 업무\n• 글로벌 B2B 신규 거래처 발굴 및 커뮤니케이션\n• 글로벌 해외 영업 전략 수립 및 매출 관리 보조\n• 제품 주문, 입·출고 관련 제반 운영 지원\n• CI, PL 등 수출입 관련 서류 작성 및 통관 대응\n\n\n| 자격 요건\n• 4년제 대학 학사 학위 이상 (기졸업자 및 졸업 예정자)\n• 글로벌 뷰티 시장에 대한 이해도 및 관심도가 높으신 분\n\n\n| 우대 사항\n• 적극적인 성향으로 해외 영업 직무로 커리어 시작 혹은 성장하고 싶으신 분\n• 소통하는 것에 주저하지 않으며, 상황에 맞는 톤앤 매너로 커뮤니케이션이 원활하신 분\n• 목표 중심적으로 업무를 추진하며 결과 도출에 집중하시는 분\n\n\n\n\n| 필수 제출 서류\n• 이력서 (국문/필수)\n• 포트폴리오 (선택)\n* [지원하기] 화면 내 학력사항 입력 시, 최종학력에 맞춰 기재해 주세요.\n\n\n📍필수 자기소개서 문항\n① 자신이 어떤 사람인지 소개하고, 팀모먼트에 지원한 동기를 기술해 주세요.\n(* Guide : 본인의 가치관, 성향 등을 소개하고, 회사 선택 시 중요하게 고려하는 점을 구체적으로 기술해 주세요.)\n② 지원한 직무와 관련된 자신의 강점과 해당 직무를 잘 수행하기 위해 쌓아온 경험을 기술해 주세요.\n(* Guide : 지원 직무에 관련된 경험 혹은 직무를 잘 수행하기 위해 학업 또는 학업 외적으로 어떤 준비를 했는지 구체적으로 기술해 주세요.)\n\n\n| 합류 여정\n서류 전형 > 역량 검사 > 면접 전형 > 입사일 조율 및 입사\n• 채용 프로세스는 상황에 따라 일부 전형이 추가 혹은 생략될 수 있습니다.\n• 인턴/신입의 경우 합격일로부터 2주 이내로 입사를 요청 드리고 있습니다.\n\n\n| 근무 조건\n• 근무시간: 오전 9시~오후 6시\n• 근무장소: 서울시 강남구 강남대로 382, 메리츠타워 17층\n• 계약기간: 6개월 (3개월 기준 평가 후 3개월 연장)\n※ 팀모먼트는 비나우와 별도 법인으로 운영되며, 연봉 등 보상 체계 또한 상이한 점 참고 부탁드립니다.\n\n\n| 복리후생\n• 점심 식대 및 넉넉한 점심 시간 : 하루 13,000원의 점심 식대를 제공하며, 여유 있게 70분간 식사 시간을 보장합니다.\n• 조식/간식 제공 : 바쁜 하루를 든든하게 시작할 수 있도록 다양한 조식과 간식을 제공합니다.\n• 사내 라운지 운영 : 사내 라운지에서 편하게 쉴 수 있는 환경을 제공합니다.\n• 팀 운영비 지원 : 인당 매월 10만 원의 팀 운영비를 지원합니다.\n• 야근 지원 : 야근 시엔 택시비와 야근 식대를 지원합니다.\n• 자사 제품 할인 : 자사 제품을 50% 할인해 드립니다.\n• 생일 반차 및 선물 제공 : 생일 당일 반차와 함께 소정의 선물을 드립니다.\n• 기념일 선물 : 명절 등 다양한 기념일에 맞춰 선물을 제공합니다.\n• 경조사 지원 : 경조사 발생 시 경조 휴가와 경조금을 지원합니다.\n• 건강검진 지원 : 2년에 한 번 정기 건강검진을 지원합니다.\n• 근속 기념 선물 제공 : 3년 이상 재직 시 100만원 상당의 감사 선물을 드립니다.\n• 장기 근속 휴가 지원 : 오랜 기간 함께한 분들께 재충전의 기회를 드리고자 휴가를 제공합니다.\n\n\n| 참고사항\n• 서류 전형의 결과는 합/불 여부와 관계없이 2주 이내 기재해 주신 이메일로 개별 안내 드립니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<h3><img src=\"https://opening-attachments.greetinghr.com/2026-03-26/1d211629-547e-4e29-83cf-59f824fdcd70/tage+%EC%86%8C%EA%B0%9C.jpg\"></h3><h3><span>| 팀모먼트 ​소개</span></h3><p><span>팀모먼트(TEAM ​MOMENT)는 ​글로벌 No.1 ​뷰티 기업 비나우의 자회사로,</span></p><p><span>주도적인 ​조직 ​문화를 바탕으로 ​지속적이고 견고한 성장을 ​추구하는 뷰티 ​기업입니다.</span></p><p><span>고객의 ​모든 순간에 ​함께하는 ​브랜드를 ​통해</span></p><p><span>일상 속에 자연스럽게 ​스며드는 ​경험을 만들어가고자 합니다.</span></p><h3><span>| ​팀모먼트의 ​선케어 ​브랜드 'Tage'</span></h3><p><span>Tage는 피부에 ​꼭 필요한 ​기준만을 ​남긴 Skin-First ​선케어 브랜드입니다.</span></p><p><span>한국의 ​피부 ​환경과 매일 반복되는 ​햇빛 노출에 ​주목하여,</span></p><p><span>일상에서 확실하게 작동하는 자외선 보호에 집중합니다.</span></p><p><span>이러한 기준은 기획부터 개발, 생산까지 전 과정을 한국에서 완성하는 브랜드 철학으로 이어집니다.</span></p><p><span>Tage는 매일의 피부가 안심하고 선택할 수 있는, 선케어의 새로운 기준을 제안합니다.</span></p><ul><li>•  <a href=\"https://tageskin.com/\">Tage 공식몰</a></li></ul><p><span>성장하는 브랜드의 모든 것을 가장 가까이에서 경험하며, </span></p><p><span>우리만의 성공 방정식을 함께 만들어 나갈 팀모먼트의 초기 멤버를 기다립니다.</span></p><h3><span>| 주요 업무</span></h3><p>• 글로벌 B2B 신규 거래처 발굴 및 커뮤니케이션</p><p>• 글로벌 해외 영업 전략 수립 및 매출 관리 보조</p><p>• 제품 주문, 입·출고 관련 제반 운영 지원</p><p>• CI, PL 등 수출입 관련 서류 작성 및 통관 대응</p><h3><span>| 자격 요건</span></h3><p>• 4년제 대학 학사 학위 이상 (기졸업자 및 졸업 예정자)</p><p>• 글로벌 뷰티 시장에 대한 이해도 및 관심도가 높으신 분</p><h3><span>| 우대 사항</span></h3><p>• 적극적인 성향으로 해외 영업 직무로 커리어 시작 혹은 성장하고 싶으신 분</p><p>• 소통하는 것에 주저하지 않으며, 상황에 맞는 톤앤 매너로 커뮤니케이션이 원활하신 분</p><p>• 목표 중심적으로 업무를 추진하며 결과 도출에 집중하시는 분</p><h3><span>| 필수 제출 서류</span></h3><p>• 이력서 (국문/필수)</p><p>• 포트폴리오 (선택)</p><p><span>* [지원하기] 화면 내 학력사항 입력 시, 최종학력에 맞춰 기재해 주세요.</span></p><p><span>📍필수 자기소개서 문항 </span></p><p><span>① 자신이 어떤 사람인지 소개하고, 팀모먼트에 지원한 동기를 기술해 주세요. </span></p><p><span>  (* Guide : 본인의 가치관, 성향 등을 소개하고, 회사 선택 시 중요하게 고려하는 점을 구체적으로 기술해 주세요.)</span></p><p><span>② 지원한 직무와 관련된 자신의 강점과 해당 직무를 잘 수행하기 위해 쌓아온 경험을 기술해 주세요.</span></p><p><span> </span><span> (* Guide : 지원 직무에 관련된 경험 혹은 직무를 잘 수행하기 위해 학업 또는 학업 외적으로 어떤 준비를 했는지 구체적으로 기술해 주세요.)</span></p><h3><span>| 합류 여정</span></h3><p>서류 전형 &gt; 역량 검사 &gt; 면접 전형 &gt; 입사일 조율 및 입사</p><p>• 채용 프로세스는 상황에 따라 일부 전형이 추가 혹은 생략될 수 있습니다.</p><p>• 인턴/신입의 경우 합격일로부터 2주 이내로 입사를 요청 드리고 있습니다.</p><h3><span>| 근무 조건</span></h3><p>• 근무시간: 오전 9시~오후 6시</p><p>• 근무장소: 서울시 강남구 강남대로 382, 메리츠타워 17층</p><p>• 계약기간: 6개월 (<span>3개월 기준 평가 후 3개월 연장</span>)</p><p>※ 팀모먼트는 비나우와 별도 법인으로 운영되며, 연봉 등 보상 체계 또한 상이한 점 참고 부탁드립니다.</p><h3><span>| 복리후생</span></h3><p>• 점심 식대 및 넉넉한 점심 시간 : 하루 13,000원의 점심 식대를 제공하며, 여유 있게 70분간 식사 시간을 보장합니다.</p><p>• 조식/간식 제공 : 바쁜 하루를 든든하게 시작할 수 있도록 다양한 조식과 간식을 제공합니다.</p><p>• 사내 라운지 운영 : 사내 라운지에서 편하게 쉴 수 있는 환경을 제공합니다.</p><p>• 팀 운영비 지원 : 인당 매월 10만 원의 팀 운영비를 지원합니다.</p><p>• 야근 지원 : 야근 시엔 택시비와 야근 식대를 지원합니다.</p><p>• 자사 제품 할인 : 자사 제품을 50% 할인해 드립니다.</p><p>• 생일 반차 및 선물 제공 : 생일 당일 반차와 함께 소정의 선물을 드립니다.</p><p>• 기념일 선물 : 명절 등 다양한 기념일에 맞춰 선물을 제공합니다.</p><p>• 경조사 지원 : 경조사 발생 시 경조 휴가와 경조금을 지원합니다.</p><p>• 건강검진 지원 : 2년에 한 번 정기 건강검진을 지원합니다.</p><p>• 근속 기념 선물 제공<span> : </span>3년 이상 재직 시 100만원 상당의 감사 선물을 드립니다.</p><p>• 장기 근속 휴가 지원<span> : </span>오랜 기간 함께한 분들께 재충전의 기회를 드리고자 휴가를 제공합니다.</p><h3><span>| 참고사항</span></h3><p>• 서류 전형의 결과는 합/불 여부와 관계없이 2주 이내 기재해 주신 이메일로 개별 안내 드립니다.</p>",
+      "images": [
+        "https://opening-attachments.greetinghr.com/2026-03-26/1d211629-547e-4e29-83cf-59f824fdcd70/tage+%EC%86%8C%EA%B0%9C.jpg"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T11:18:13.058572+09:00",
+      "page_text": "| 팀모먼트 소개\n팀모먼트(TEAM MOMENT)는 글로벌 No.1 뷰티 기업 비나우의 자회사로,\n주도적인 조직 문화를 바탕으로 지속적이고 견고한 성장을 추구하는 뷰티 기업입니다.\n고객의 모든 순간에 함께하는 브랜드를 통해\n일상 속에 자연스럽게 스며드는 경험을 만들어가고자 합니다.\n\n\n| 팀모먼트의 선케어 브랜드 'Tage'\nTage는 피부에 꼭 필요한 기준만을 남긴 Skin-First 선케어 브랜드입니다.\n한국의 피부 환경과 매일 반복되는 햇빛 노출에 주목하여,\n일상에서 확실하게 작동하는 자외선 보호에 집중합니다.\n이러한 기준은 기획부터 개발, 생산까지 전 과정을 한국에서 완성하는 브랜드 철학으로 이어집니다.\nTage는 매일의 피부가 안심하고 선택할 수 있는, 선케어의 새로운 기준을 제안합니다.\n• Tage 공식몰\n\n\n성장하는 브랜드의 모든 것을 가장 가까이에서 경험하며,\n우리만의 성공 방정식을 함께 만들어 나갈 팀모먼트의 초기 멤버를 기다립니다.\n\n\n\n\n| 주요 업무\n• 글로벌 B2B 신규 거래처 발굴 및 커뮤니케이션\n• 글로벌 해외 영업 전략 수립 및 매출 관리 보조\n• 제품 주문, 입·출고 관련 제반 운영 지원\n• CI, PL 등 수출입 관련 서류 작성 및 통관 대응\n\n\n| 자격 요건\n• 4년제 대학 학사 학위 이상 (기졸업자 및 졸업 예정자)\n• 글로벌 뷰티 시장에 대한 이해도 및 관심도가 높으신 분\n\n\n| 우대 사항\n• 적극적인 성향으로 해외 영업 직무로 커리어 시작 혹은 성장하고 싶으신 분\n• 소통하는 것에 주저하지 않으며, 상황에 맞는 톤앤 매너로 커뮤니케이션이 원활하신 분\n• 목표 중심적으로 업무를 추진하며 결과 도출에 집중하시는 분\n\n\n\n\n| 필수 제출 서류\n• 이력서 (국문/필수)\n• 포트폴리오 (선택)\n* [지원하기] 화면 내 학력사항 입력 시, 최종학력에 맞춰 기재해 주세요.\n\n\n📍필수 자기소개서 문항\n① 자신이 어떤 사람인지 소개하고, 팀모먼트에 지원한 동기를 기술해 주세요.\n(* Guide : 본인의 가치관, 성향 등을 소개하고, 회사 선택 시 중요하게 고려하는 점을 구체적으로 기술해 주세요.)\n② 지원한 직무와 관련된 자신의 강점과 해당 직무를 잘 수행하기 위해 쌓아온 경험을 기술해 주세요.\n(* Guide : 지원 직무에 관련된 경험 혹은 직무를 잘 수행하기 위해 학업 또는 학업 외적으로 어떤 준비를 했는지 구체적으로 기술해 주세요.)\n\n\n| 합류 여정\n서류 전형 > 역량 검사 > 면접 전형 > 입사일 조율 및 입사\n• 채용 프로세스는 상황에 따라 일부 전형이 추가 혹은 생략될 수 있습니다.\n• 인턴/신입의 경우 합격일로부터 2주 이내로 입사를 요청 드리고 있습니다.\n\n\n| 근무 조건\n• 근무시간: 오전 9시~오후 6시\n• 근무장소: 서울시 강남구 강남대로 382, 메리츠타워 17층\n• 계약기간: 6개월 (3개월 기준 평가 후 3개월 연장)\n※ 팀모먼트는 비나우와 별도 법인으로 운영되며, 연봉 등 보상 체계 또한 상이한 점 참고 부탁드립니다.\n\n\n| 복리후생\n• 점심 식대 및 넉넉한 점심 시간 : 하루 13,000원의 점심 식대를 제공하며, 여유 있게 70분간 식사 시간을 보장합니다.\n• 조식/간식 제공 : 바쁜 하루를 든든하게 시작할 수 있도록 다양한 조식과 간식을 제공합니다.\n• 사내 라운지 운영 : 사내 라운지에서 편하게 쉴 수 있는 환경을 제공합니다.\n• 팀 운영비 지원 : 인당 매월 10만 원의 팀 운영비를 지원합니다.\n• 야근 지원 : 야근 시엔 택시비와 야근 식대를 지원합니다.\n• 자사 제품 할인 : 자사 제품을 50% 할인해 드립니다.\n• 생일 반차 및 선물 제공 : 생일 당일 반차와 함께 소정의 선물을 드립니다.\n• 기념일 선물 : 명절 등 다양한 기념일에 맞춰 선물을 제공합니다.\n• 경조사 지원 : 경조사 발생 시 경조 휴가와 경조금을 지원합니다.\n• 건강검진 지원 : 2년에 한 번 정기 건강검진을 지원합니다.\n• 근속 기념 선물 제공 : 3년 이상 재직 시 100만원 상당의 감사 선물을 드립니다.\n• 장기 근속 휴가 지원 : 오랜 기간 함께한 분들께 재충전의 기회를 드리고자 휴가를 제공합니다.\n\n\n| 참고사항\n• 서류 전형의 결과는 합/불 여부와 관계없이 2주 이내 기재해 주신 이메일로 개별 안내 드립니다.",
+      "body_attempted_at": "2026-11-09T11:18:13.058572+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "skku-notice01/141690": {
       "notice": {
         "id": "skku-notice01/141690",
@@ -1084,12 +1239,13 @@
       "body_attempts": 2,
       "fetched_at": "2026-11-07T08:44:43.984042+09:00",
       "body_attempted_at": "2026-11-07T08:44:43.984042+09:00",
-      "rechecked_at": "2026-11-08T22:25:58.486178+09:00",
+      "rechecked_at": "2026-11-09T11:18:13.058572+09:00",
       "changed_at": "2026-11-07T08:44:43.984042+09:00",
       "change_kind": "본문",
       "summary": "의료인공지능융합인재양성사업단 참여 학생을 대상으로 2026년 대한의료정보학회 추계 학술대회 참가자를 모집합니다. 11월 9일까지 네이버폼을 통해 신청할 수 있으며 학회등록비와 교통비, 숙박비가 지원됩니다.",
       "summary_last_failed_at": null,
-      "change_notified": "2026-11-07T08:44:43.984042+09:00"
+      "change_notified": "2026-11-07T08:44:43.984042+09:00",
+      "page_text": "안녕하세요.\n성균관대학교 의료인공지능융합인재양성사업단에서 사업 참여 학부생/대학원생을 대상으로 2026년 대한의료정보학회 추계 학술대회에 참가할 학생을 아래와 같이 모집하오니 관심있는 학생들의 많은 신청 바랍니다.\n\n[2026년 대한의료정보학회 추계학술대회]\n\n1. 일시 : 2026년 11월 25일(수) ~ 27일(금)\n(온라인 11/25, 오프라인 11/26~27)\n\n2. 장소 : 경주화백컨벤션센터(HICO)\n\n3. 신청대상 : 아래 각 호의 교육과정에 참여 및 이수 중인 학생(2026-2학기 기준 정규학기 등록 재학생, 연구등록학기 대학원생)\n- 학부생 : 의료인공지능 마이크로디그리, 교육과정이수제(Track B)\n- 대학원생 : 의학과 의료인공지능학, 디지털헬스학과 의료인공지능트랙, 메타바이오헬스학과 의료인공지능트랙\n★단, 기존에 사업단 참여학생 등록 이력이 있어야 함.\n(등록 이력 : 장학금, 비교과활동지원금, 학회등록비 지원, 해외탐방, 인턴십 등)\n(등록 이력 여부를 모르는 경우 사업단에 문의하여 확인)\n\n4. 신청기간 : 2026년 11월 6일(금) ~ 9일(월)\n\n5. 신청방법 : 네이버폼 작성 및 제출(https://naver.me/FKG6WfX6)\n\n6. 지원사항 : 학회등록비, 교통비, 숙박비 지원\n\n7. 문의 : medicalai@skku.edu\n\n8. 학술대회 안내 홈페이지 : https://www.kosmiconference.org/2026_fall/main.html\n\n9. 필수사항 : 본 지원프로그램을 통해 학술대회에 참가하여 사업단으로부터 지원을 받은 학생은 졸업 전까지 반드시 사업단 교육과정을 이수해야 함.\n\n*지원기관 및 예산 등에 의해 지원사항은 변동될 수 있습니다."
     },
     "linkareer-intern/362790": {
       "notice": {
@@ -2693,7 +2849,8 @@
         "kind": "마감",
         "at": "2026-11-11T17:00:00+09:00"
       },
-      "rechecked_at": "2026-11-08T22:25:58.486178+09:00"
+      "rechecked_at": "2026-11-09T11:18:13.058572+09:00",
+      "page_text": "1. 모집 분야 및 상세 업무\n※ 공통 유의사항: 각 직무 간 중복 지원이 가능하며, 세부 업무 및 일정은 추후 변경될 수 있습니다.\n① TA (Teaching Assistant)\n• 모집 인원: 과목당 1~2명\n• 주요 업무: WISE 교수 강의 지원, 문화체험 활동 참여 및 인솔 지원\n• 활동 혜택: 해당 과목 수업료 면제, 문화체험비 면제, 수료증 발급, 교환학생 가산점\n• 유의 사항:\n- 1개 수업에 한하여 신청 가능 (지원 가능 과목은 첨부 엑셀 파일 참고)\n- 문화행사 필수 참석\n- 수업 폐강 시 TA 배정은 취소되며, 가능한 경우 타 과목 재배치 또는 다른 업무로 조정 가능\n② OA (Office Assistant)\n• 모집 인원: 3명 (인사캠)\n• 주요 업무: WISE Office 운영 및 행정 지원, 프로그램 제반 업무 전반 관리\n• 활동 혜택: 수료증 발급, 교환학생 가산점\n• 시급: 2026년 10,320원, 2027년 10,700원 (세전)\n• 유의 사항:\n- 재학생 및 휴학생 모두 지원 가능\n- WISE 수업 수강 불가\n- 문화행사 일부 참석 가능\n③ HA (Housing Assistant)\n• 모집 인원: 각 기숙사(G하우스 및 E하우스) 당 3명 예정 (주간 1명, 야간 2명)\n• 주요 업무: WISE 참가자 대상 기숙사(G하우스) 운영 및 생활 지원\n• 활동 혜택: 수료증 발급, 교환학생 가산점\n• 시급: 2026년 10,320원, 2027년 10,700원 (세전)\n• 유의 사항:\n- 재학생 및 휴학생 모두 지원 가능\n- 문화행사 일부 참석 가능\n- 수강신청을 이미 완료한 경우, 합격 시 환불 관련 별도 안내 예정\n\n2. 직무별 근무 기간 및 시간\n• TA: 2026. 12. 21.(월)~2027. 1. 8.(금)\n• OA: 2026. 12. 17.(목)~2027. 1. 8.(금) (공휴일 및 주말 휴무)\n- 08:00~17:30\n• HA: 2026. 12. 20.(일)~2027. 1. 10.(일)\n- 07:00~12:00\n- 17:00~22:00\n- 22:00~익일 05:00\n※ 체크인 및 체크아웃일은 본인 근무시간에 상관없이 추가근로 필수\n※ 공휴일 및 주말 포함하여 기간 내 모든 날짜 근무 가능할 경우만 지원할 것\n\n3. 지원 방법\n• 제출 기한: 2026. 11. 11.(수) 17:00까지\n• 제출 서류: 첨부된 공고 및 지원서 양식 확인 후 작성 (한국어/영어 중 자유롭게 작성)\n• 제출 방법: 구글 폼 제출 (https://forms.gle/Tov2dDbKMJnZTLzN7)\n- 필수 사항: 반드시 성균관대 킹고메일(@g.skku.edu) 계정으로 접속 (개인 Gmail 사용 불가)\n• 파일명 양식: 지원분야_이름.pdf (예: TA_김명륜.pdf / OA_김율전.pdf / HA_홍길동.pdf)\n• 면접 안내: 면접은 한국어와 영어로 모두 진행되며, 질문받은 언어로 답변\n\n4. 선발 일정\n• 서류 심사 결과: 추후 공지 (면접 결과는 이메일로 개별 연락 예정)\n• 면접 일정: 11. 17.(화)~11. 20.(목) 중 진행 (대면 면접)\n• 조교 오리엔테이션: 12. 17.(목) 15:00, 국제관 (예정)\n- 최종 선발된 TA 및 OA는 프로그램 원활한 운영을 위해 필수 참석\n- HA 오리엔테이션은 별도 진행 예정\n\n5. 문의처: 국제교류팀 WISE Office\n• Tel: 02-760-0184\n• Email: skkuwinter@skku.edu\n• 홈페이지: https://winter.skku.edu"
     },
     "skku-notice01/140823": {
       "notice": {
@@ -2746,7 +2903,8 @@
       "body_attempts": 1,
       "fetched_at": "2026-11-06T07:55:06.332804+09:00",
       "body_attempted_at": "2026-11-06T07:55:06.332804+09:00",
-      "rechecked_at": "2026-11-08T22:25:58.486178+09:00"
+      "rechecked_at": "2026-11-09T11:18:13.058572+09:00",
+      "page_text": "안녕하세요, 성균관대학교 학우 여러분.\n\n해외 학생들과 함께 수업을 들으며 글로벌 역량을 키우고 계절학기 학점도 취득할 수 있는 2026학년도 국제동계학기 WISE 프로그램에 대해 안내드리니 학우 여러분의 많은 관심과 참여 바랍니다.\n\n○ 프로그램 기간: 2026. 12. 22.(화)~2027. 1. 7.(목)\n\n○ 수업 시간: 매주 월요일~금요일 / 오전 (09:00~12:30), 오후 (13:30~17:00)\n※ 주말 및 공휴일 휴강 (단, 1/1(금) 강의는 사전 녹화된 온라인 강의로 대체)\n\n○ 수강 대상: 본교 학부 재학생 및 휴학생\n※ 휴학생 유의사항: WISE 수강을 통해 졸업학점을 충족하더라도, 반드시 이후에 정규학기를 등록해야 졸업 가능. (휴학생의 계절수업 신청은 재적기간 중 2회에 한함)\n\n○ 장소: 성균관대학교 인문사회과학캠퍼스\n\n○ 수강신청 일정: 2026. 11. 26.(목) 10:00~12. 10.(목) 17:00\n※ 1차, 2차 구분 없음\n\n○ 수강료 납부 기한: 2026. 12. 10.(목) 17:00\n※ 납부 기한 내에 반드시 등록금 납부까지 완료하여야 하며, 등록금을 미납한 경우 수강신청 내역은 자동 삭제됩니다.\n\n○ 수강료: 과목별 450,000원\n\n○ 신청 방법: GLS > 수업영역 > 학부수강신청 > ISS/WISE\n\n○ 수강 혜택 및 학점 규정:\n- 학점 인정: 최대 6학점 인정 (WISE와 일반 계절수업을 합쳐서 최대 6학점 이내, 학년도 당 9학점 이내)\n- 유의사항: 전공으로 인정되지 않는 과목은 '일반선택'(전공X, 교양X)으로 취득됨\n- 추가 혜택: 신(新)글로벌품 시간 부여(학점당 15시간 / 22학번부터), 교환학생 지원 시 가산점 부여\n\n○ 참고사항:\n- 강의계획서 확인: https://winter.skku.edu/winter/intro/Course.do\n- 전공 인정 학과: 첨부파일 참고\n- 문화체험 프로그램: 본교생에게도 부분적으로 오픈될 예정이며, 해외 학생들과 함께 참여가능\n※ 단, 일부 활동은 참가비가 있을 수 있으며, 자세한 내용 추후 안내 예정.\n\n○ 문의처: 국제교류팀 WISE Office (02-760-0184 / skkuwinter@skku.edu)\n\n--------------------\n\nHello, Sungkyunkwan University students.\n\nWe are pleased to announce the 2026 Winter International Student Experience (WISE) programme. We look forward to your interest and participation.\n\n○ Programme Period: December 22, 2026 (Tue) ~ January 7, 2027 (Thu)\n\n○ Class Hours: Every Monday to Friday / Morning (09:00~12:30), Afternoon (13:30~17:00)\n- Note: No classes at weekends and public holidays (However, the January 1 (Fri) class will be replaced by a pre-recorded online lecture).\n\n○ Eligibility: Current undergraduate students and students on a leave of absence (LOA) at SKKU.\n- Note for students on LOA: Even if you meet graduation credit requirements through WISE, you must register for a regular semester afterward in order to graduate. (Students on LOA can apply for seasonal semesters up to 2 times during their enrollment period).\n\n○ Location: Humanities and Social Sciences Campus, Sungkyunkwan University\n\n○ Course Registration Period: November 26, 2026 (Thu) 10:00 ~ December 10, 2026 (Thu) 17:00\n\n○ Tuition Payment Deadline: December 10, 2026 (Thu) 17:00\n- Note: Tuition payment must be completed within the deadline. If unpaid, the course registration will be automatically canceled.\n\n○ Tuition Fee: 450,000 KRW per course\n\n○ How to Apply: GLS > Course Area > Undergraduate Course Registration > ISS/WISE\n\n○ Benefits & Credit Regulations:\n- Credit Recognition: Up to 6 credits (Maximum of 6 credits combined between WISE and regular winter sessions, and up to 9 credits per academic year).\n- Note: Courses not recognised as major credits will be classified as 'General Elective'.\n- Additional Benefits: 5 points given when applying for exchange student programs.\n\n○ Additional Information:\n- Course Syllabus: https://winter.skku.edu/winter/intro/Course.do\n- Departments Recognizing Major Credits: Please refer to the attached file.\n- Cultural Experience Programs: Will be partially open to SKKU students, allowing you to participate alongside international students. (Note: Some activities may require a participation fee. Details will be announced at a later date.)\n\n○ Inquiries: WISE Office (02-760-0184 / skkuwinter@skku.edu)"
     },
     "linkareer-intern/362548": {
       "notice": {

@@ -9,6 +9,7 @@ import {
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { brokenImageListener, cleanHtml, fileType } from './rich';
 import './settings-view';
+import { BOARD_ORDER_VARIABLE, orderBoards, parseBoardOrder } from './board-order';
 import { GitHubError, collectionWorkflowUrl, readVariable, saveVariable, requestCollection } from './github';
 import { loadToken } from './settings-storage';
 import { SAVED_VARIABLE, type SavedNotice, loadSaved, orderSaved, parseSaved, storeSaved, toggleSaved } from './saved-notices';
@@ -124,6 +125,7 @@ export class NoticeApp extends LitElement {
     toast: { state: true }, toastLink: { state: true }, toastLinkLabel: { state: true }, isWide: { state: true }, theme: { state: true },
     detailOpen: { state: true }, openedId: { state: true }, shortcutsOpen: { state: true }, boardMenuOpen: { state: true }, sortMenuOpen: { state: true },
     saved: { state: true }, read: { state: true }, collapsed: { state: true }, sort: { state: true }, internSort: { state: true }, savedSort: { state: true },
+    boardOrder: { state: true }, boardOrderStatus: { state: true },
     unreadOnly: { state: true }, selecting: { state: true }, selectedReads: { state: true },
   };
 
@@ -142,6 +144,9 @@ export class NoticeApp extends LitElement {
   board = remember('board') ?? 'all';
   keyword: string | null = null;
   keywords = loadKeywords();
+  boardOrder: string[] = parseBoardOrder(remember('board-order'));
+  boardOrderStatus: { ok: boolean; text: string } | null = null;
+  private boardOrderWrite: Promise<void> = Promise.resolve();
   saved: SavedNotice[] = loadSaved();
   collapsed: string[] = (() => { try { const v = JSON.parse(remember('side-collapsed') ?? '[]'); return Array.isArray(v) ? v.filter((x) => typeof x === 'string') : []; } catch { return []; } })();
   // 읽은 글 id(최근 것만). null이면 이 기기에서 처음 연 것이라 지금 글을 모두 읽은 것으로 둔다.
@@ -286,9 +291,10 @@ export class NoticeApp extends LitElement {
     this.github = { repo, token };
     void syncCurrentDeviceName(repo, token).catch(() => { /* 설정 화면에서 다시 시도한다 */ });
     try {
-      const [saved, keywords, read, readState] = await Promise.all([
+      const [saved, keywords, read, readState, order] = await Promise.all([
         readVariable(repo, token, SAVED_VARIABLE), readVariable(repo, token, 'INTEREST_KEYWORDS'),
         readVariable(repo, token, READ_VARIABLE), readVariable(repo, token, READ_STATE_VARIABLE),
+        readVariable(repo, token, BOARD_ORDER_VARIABLE),
       ]);
       // 명시적으로 읽지 않음으로 바꾼 시각도 함께 병합한다.
       if (read !== null || readState !== null || this.readState) {
@@ -303,7 +309,33 @@ export class NoticeApp extends LitElement {
       else if (this.saved.length) this.pushSaved();
       const words = (keywords ?? '').split(/[,\n]/).map((w) => w.trim()).filter(Boolean);
       if (words.length) this.setKeywords(words);
+      // 게시판 순서는 GitHub 값이 있으면 그것을 따른다. 없으면 이 기기 순서를 올린다.
+      const remoteOrder = parseBoardOrder(order);
+      if (remoteOrder.length) {
+        if (remoteOrder.join('\n') !== this.boardOrder.join('\n')) { this.boardOrder = remoteOrder; remember('board-order', JSON.stringify(remoteOrder)); }
+      } else if (this.boardOrder.length) this.pushBoardOrder();
     } catch { /* 인터넷 오류면 이 기기 것을 그대로 보여 준다 */ }
+  }
+
+  private pushBoardOrder() {
+    const github = this.github;
+    if (!github) return;
+    const value = JSON.stringify(this.boardOrder);
+    this.boardOrderWrite = this.boardOrderWrite.then(async () => {
+      try {
+        await saveVariable(github.repo, github.token, BOARD_ORDER_VARIABLE, value);
+        if (JSON.stringify(this.boardOrder) === value) this.boardOrderStatus = { ok: true, text: '모든 기기에 저장했어요' };
+      } catch (error) {
+        this.boardOrderStatus = { ok: false, text: error instanceof GitHubError ? `${error.message}. 다시 바꾸면 또 저장해요` : '인터넷 연결을 확인해 주세요' };
+      }
+    });
+  }
+
+  private setBoardOrder(ids: string[]) {
+    this.boardOrder = ids;
+    remember('board-order', JSON.stringify(ids));
+    this.boardOrderStatus = null;
+    this.pushBoardOrder();
   }
 
   private pushSaved() {
@@ -415,7 +447,7 @@ export class NoticeApp extends LitElement {
   }
 
   // 지금 탭에 맞는 게시판들. 인턴 공고 탭은 외부 게시판, 그 밖은 학교 게시판.
-  private tabSources(): Source[] { return this.sources.filter((s) => Boolean(s.external) === (this.tab() === 'intern')); }
+  private tabSources(): Source[] { return orderBoards(this.sources.filter((s) => Boolean(s.external) === (this.tab() === 'intern')), this.boardOrder); }
 
   // 고른 게시판이 지금 탭에 없으면 모든 게시판으로 본다(탭을 오가도 빈 목록이 되지 않게).
   private activeBoard(): string { return this.tabSources().some((s) => s.id === this.board) ? this.board : 'all'; }
@@ -701,7 +733,10 @@ export class NoticeApp extends LitElement {
           </header>
           </div>
 
-          ${settings ? html`<settings-view .keywords=${this.keywords} .theme=${this.theme} .canInstall=${Boolean(this.install && browserTab.matches)}
+          ${settings ? html`<settings-view .keywords=${this.keywords}
+              .boards=${orderBoards(this.sources.filter((s) => !s.external), this.boardOrder).map((s) => ({ id: s.id, name: boardName(s, s.id) }))}
+              .boardOrderStatus=${this.boardOrderStatus}
+              @board-order-change=${(e: CustomEvent<string[]>) => this.setBoardOrder(e.detail)} .theme=${this.theme} .canInstall=${Boolean(this.install && browserTab.matches)}
               .categories=${[...new Set(this.notices.map((n) => n.category).filter((c): c is string => Boolean(c)))].sort()}
               @keywords-change=${(e: CustomEvent<string[]>) => this.setKeywords(e.detail)}
               @theme-change=${(e: CustomEvent<Theme>) => this.setTheme(e.detail)} @install-request=${this.runInstall}

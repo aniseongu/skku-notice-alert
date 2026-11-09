@@ -1,6 +1,9 @@
 // 설정 화면. 규칙은 docs/design/ux-rules.md 2-2절: 한 열, 왼쪽 이름과 도움말, 오른쪽 입력, 1px 구분선, 카드 없음.
 import { LitElement, html, nothing, type TemplateResult } from 'lit';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
+import { repeat } from 'lit/directives/repeat.js';
+import Sortable from 'sortablejs';
+import { moveBoard } from './board-order';
 import {
   GitHubError, SecretWriteUncertainError, REPO_PATTERN, checkGeminiKey, deleteSecret, listSecrets, readVariable, saveSecret, saveVariable,
 } from './github';
@@ -81,6 +84,7 @@ const remember = (key: string, value?: string | null) => {
 
 export class SettingsView extends LitElement {
   static properties = {
+    boards: { attribute: false }, boardOrderStatus: { attribute: false }, reordering: { state: true }, boardAnnouncement: { state: true },
     keywords: { attribute: false }, theme: { attribute: false }, categories: { attribute: false }, canInstall: { attribute: false }, muted: { state: true },
     repo: { state: true }, token: { state: true }, values: { state: true },
     saved: { state: true }, status: { state: true }, open: { state: true }, reveal: { state: true }, busy: { state: true },
@@ -89,6 +93,12 @@ export class SettingsView extends LitElement {
   };
 
   keywords: string[] = [];
+  // 학교 게시판(지금 순서대로)과 순서 저장 결과. 순서는 notice-app이 들고 있다.
+  boards: { id: string; name: string }[] = [];
+  boardOrderStatus: { ok: boolean; text: string } | null = null;
+  reordering = false;
+  boardAnnouncement = '';
+  private sortable: Sortable | null = null;
   // 지금 목록에 있는 분류(notice-app이 넘긴다)와 알림을 끈 분류(Actions 변수 MUTED_CATEGORIES, D-018).
   categories: string[] = [];
   muted: string[] = [];
@@ -153,6 +163,7 @@ export class SettingsView extends LitElement {
     this.stopScanning();
     this.hideHandoff();
     this.keyChains = {};
+    this.destroySortable();
     super.disconnectedCallback();
   }
 
@@ -511,8 +522,70 @@ export class SettingsView extends LitElement {
   }
 
   updated(changed: Map<string, unknown>) {
+    this.syncSortable();
     if (changed.has('keywords') && this.linked && this.syncedKeywords !== null
       && this.keywords.join('\n') !== this.syncedKeywords) this.saveKeywords();
+  }
+
+  // SortableJS는 DOM 노드를 직접 옮긴다. 끝나면 노드를 제자리로 되돌리고 상태만 바꿔 Lit이 DOM을 계속 맡게 한다.
+  private syncSortable() {
+    const list = this.reordering ? this.querySelector<HTMLElement>('.board-order-list') : null;
+    if (!list) { this.destroySortable(); return; }
+    if (this.sortable?.el === list) return;
+    this.destroySortable();
+    // Lit은 줄 사이에 보이지 않는 표시(주석 노드)를 둔다. 끌기 전 바로 다음 노드를 기억해 정확히 그 앞으로 되돌린다.
+    let anchor: Node | null = null;
+    this.sortable = Sortable.create(list, {
+      handle: '.board-handle', animation: 0, draggable: 'li',
+      onStart: (event) => { anchor = event.item.nextSibling; },
+      onEnd: (event) => {
+        const { item, from, oldIndex, newIndex } = event;
+        if (oldIndex === undefined || newIndex === undefined || oldIndex === newIndex) return;
+        from.insertBefore(item, anchor);
+        this.moveBoardTo(oldIndex, newIndex, false);
+      },
+    });
+  }
+
+  private destroySortable() { this.sortable?.destroy(); this.sortable = null; }
+
+  private moveBoardTo(from: number, to: number, keepFocus: boolean) {
+    const ids = this.boards.map((b) => b.id);
+    const next = moveBoard(ids, from, to);
+    if (next === ids) return;
+    const moved = this.boards[from];
+    this.emit('board-order-change', next);
+    this.boardAnnouncement = `${moved.name}, ${to + 1}번째로 옮겼어요`;
+    if (keepFocus) setTimeout(() => this.querySelector<HTMLButtonElement>(`.board-handle[data-id="${CSS.escape(moved.id)}"]`)?.focus(), 0);
+  }
+
+  private onHandleKey(event: KeyboardEvent, index: number) {
+    if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') return;
+    event.preventDefault();
+    event.stopPropagation();
+    this.moveBoardTo(index, index + (event.key === 'ArrowUp' ? -1 : 1), true);
+  }
+
+  private boardOrderSettings() {
+    if (this.boards.length < 2) return nothing;
+    return html`
+        <section aria-labelledby="s-board-order">
+          <div class="settings-head-row">
+            <h2 id="s-board-order" class="settings-head">게시판 순서</h2>
+            <button type="button" class="text-button" @click=${() => { this.reordering = !this.reordering; this.boardAnnouncement = ''; }}>${this.reordering ? '완료' : '순서 바꾸기'}</button>
+          </div>
+          <div class="box">
+            <ul class="keyword-list board-order-list">${repeat(this.boards, (b) => b.id, (b, index) => html`
+              <li data-id=${b.id}><span>${b.name}</span>${this.reordering ? html`
+                <button type="button" class="board-handle" data-id=${b.id} aria-label="${b.name} 순서 옮기기"
+                  @keydown=${(e: KeyboardEvent) => this.onHandleKey(e, index)}>
+                  <svg class="i" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M5 8h14M5 12h14M5 16h14"/></svg>
+                </button>` : nothing}</li>`)}</ul>
+            ${this.reordering ? html`<p class="field-note board-order-help">손잡이를 끌거나 방향키로 옮겨요</p>` : nothing}
+            ${this.boardOrderStatus ? html`<p class="field-note ${this.boardOrderStatus.ok ? 'ok' : 'error'}" role="status">${this.boardOrderStatus.text}</p>` : nothing}
+            <p class="visually-hidden" aria-live="polite">${this.boardAnnouncement}</p>
+          </div>
+        </section>`;
   }
 
   private async saveKeywords() {
@@ -895,6 +968,7 @@ export class SettingsView extends LitElement {
           </div>
           </div>
         </section>
+        ${this.boardOrderSettings()}
         <section aria-labelledby="s-canvas">
           <h2 id="s-canvas" class="settings-head">아이캠퍼스</h2>
           <div class="box">

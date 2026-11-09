@@ -110,7 +110,7 @@ def update_detail(
     attempted_at: str | None = None,
 ) -> Archive:
     item = archive.items[key]
-    updated = {**item, "body_text": body, "body_html": body_html,
+    updated = {**item, "body_text": body, "page_text": body, "body_html": body_html,
                "attachments": [
         {"name": name, "url": url, "type": kind, "size": size}
         for name, url, kind, size in attachments
@@ -187,30 +187,45 @@ def note_list_changes(archive: Archive, notices: list, now: str) -> tuple[Archiv
 
 
 def note_body_change(archive: Archive, key: str, body: str | None, now: str) -> tuple[Archive, bool]:
-    """Re-read body of an important notice. Marks a change only when the text really differs."""
+    """Re-read body of an important notice. Marks a change only when the school page text really differs."""
     item = archive.items[key]
-    if body is None or (body or "").strip() == (item.get("body_text") or "").strip():
+    if body is None:
         return Archive({**archive.items, key: {**item, "rechecked_at": now}}), False
+    # 그림만 있는 글의 body_text는 읽어 낸 그림 글자라서 학교 페이지 글과 비교하면 늘 달라진다.
+    # 그 경우는 페이지 글을 따로 저장한 page_text와 비교하고, 없으면 이번 것을 기준으로만 기록한다.
+    if item.get("body_from_image"):
+        before = item.get("page_text")
+    else:
+        before = item.get("body_text")
+    if before is None or body.strip() == (before or "").strip():
+        return Archive({**archive.items, key: {**item, "page_text": body, "rechecked_at": now}}), False
     rest = {k: v for k, v in item.items() if k not in REDO_ON_CHANGE}
-    return Archive({**archive.items, key: {**rest, "body_text": body, "rechecked_at": now,
+    return Archive({**archive.items, key: {**rest, "body_text": body, "page_text": body, "rechecked_at": now,
                                            "changed_at": now, "change_kind": "본문"}}), True
 
 
 def refresh_media(
     archive: Archive, key: str, attachments: tuple[tuple[str, str, str, str | None], ...],
-    images: tuple[str, ...], body_html: str | None,
-) -> Archive:
-    """Same text, swapped poster or file: the school deletes the old image, so keep only the new addresses."""
+    images: tuple[str, ...], body_html: str | None, now: str,
+) -> tuple[Archive, bool]:
+    """Same text, swapped poster or file: the school deletes the old image, so keep only the new addresses.
+
+    A real swap counts as an edit (changed_at) and redoes derived fields, which may depend on the old poster.
+    """
     item = archive.items[key]
     files = [{"name": name, "url": url, "type": kind, "size": size} for name, url, kind, size in attachments]
     # A half-loaded page reads as zero images; keep what we had rather than wipe a good poster.
     if not images and item.get("images"):
-        return archive
-    if (item.get("images", []) == list(images) and item.get("body_html") == body_html
-            and item.get("attachments", []) == files):
-        return archive
-    return Archive({**archive.items, key: {**item, "images": list(images), "body_html": body_html,
-                                           "attachments": files}})
+        return archive, False
+    if item.get("images", []) == list(images) and item.get("attachments", []) == files:
+        # Only the cleaned HTML differs, often because our sanitizer changed. Update it without an alert.
+        if item.get("body_html") == body_html:
+            return archive, False
+        return Archive({**archive.items, key: {**item, "body_html": body_html}}), False
+    rest = {k: v for k, v in item.items() if k not in REDO_ON_CHANGE}
+    return Archive({**archive.items, key: {**rest, "images": list(images), "body_html": body_html,
+                                           "attachments": files, "rechecked_at": now,
+                                           "changed_at": now, "change_kind": "본문"}}), True
 
 
 def set_source_deadlines(archive: Archive, deadlines: dict[str, str]) -> Archive:

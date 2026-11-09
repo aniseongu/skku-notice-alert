@@ -234,7 +234,8 @@ def _recheck_details(archive, settings: dict, now: datetime):
             marks = {"changed_at": now.isoformat(), "change_kind": "본문", "rechecked_at": now.isoformat()}
             archive = Archive({**archive.items, key: {**archive.items[key], **marks}})
         else:
-            archive = refresh_media(archive, key, detail.attachments, detail.images, detail.body_html)
+            archive = refresh_media(archive, key, detail.attachments, detail.images, detail.body_html,
+                                    now.isoformat())[0]
         save_archive(ARCHIVE_PATH, archive)
     return archive
 

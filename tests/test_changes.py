@@ -44,20 +44,25 @@ def test_body_change_only_when_text_differs():
     assert changed and new.items["a/1"]["changed_at"] == "t2" and new.items["a/1"]["change_kind"] == "본문"
 
 
-def test_swapped_image_refreshes_quietly():
+def test_swapped_image_counts_as_edit_and_redoes_summary():
     old = "https://www.skku.edu/_attach/image/2026/11/old.jpg"
     new = "https://www.skku.edu/_attach/image/2026/11/new.jpg"
     files = [{"name": "포스터.pdf", "url": "https://x/1", "type": "PDF", "size": None}]
     archive = Archive({"a/1": {"notice": {"id": "a/1"}, "body_text": "본문", "images": [old],
-                               "body_html": f'<img src="{old}">', "attachments": files, "body_attempts": 1}})
+                               "body_html": f'<img src="{old}">', "attachments": files, "body_attempts": 1,
+                               "summary": "옛 요약"}})
     pdf = (("포스터.pdf", "https://x/1", "PDF", None),)
-    same = refresh_media(archive, "a/1", pdf, (old,), f'<img src="{old}">')
-    assert same is archive
-    swapped = refresh_media(archive, "a/1", pdf, (new,), f'<img src="{new}">')
+    same, changed = refresh_media(archive, "a/1", pdf, (old,), f'<img src="{old}">', "t1")
+    assert same is archive and not changed
+    swapped, changed = refresh_media(archive, "a/1", pdf, (new,), f'<img src="{new}">', "t1")
     item = swapped.items["a/1"]
-    assert item["images"] == [new] and new in item["body_html"]
-    assert "changed_at" not in item and item["body_attempts"] == 1
-    assert refresh_media(archive, "a/1", (), (), "<p>본문</p>") is archive
+    assert changed and item["images"] == [new] and new in item["body_html"]
+    assert item["changed_at"] == "t1" and item["change_kind"] == "본문" and item["body_attempts"] == 1
+    assert "summary" not in item
+    assert refresh_media(archive, "a/1", (), (), "<p>본문</p>", "t1") == (archive, False)
+    html_only, changed = refresh_media(archive, "a/1", pdf, (old,), f'<p>본문</p><img src="{old}">', "t1")
+    assert not changed and "changed_at" not in html_only.items["a/1"]
+    assert html_only.items["a/1"]["body_html"].startswith("<p>")
 
 
 def test_changed_important_notice_is_announced_once(monkeypatch, tmp_path):
@@ -88,3 +93,59 @@ def test_external_title_change_does_not_send_school_change_alert(monkeypatch):
                        'match': {**item['match'], 'rule_name': '인턴'}}})
     cli._notify_changes(archive, {}, frozenset({'cse-notice'}))
     assert not sent
+
+
+def _image_item(**extra):
+    return {"notice": {"id": "a/1"}, "body_text": "포스터에서 읽은 글자", "body_from_image": True,
+            "images": ["https://www.skku.edu/x.jpg"], "body_html": "<img>", **extra}
+
+
+def test_image_notice_same_page_text_is_not_a_change():
+    archive = Archive({"a/1": _image_item(page_text="첨부 참조")})
+    result, changed = note_body_change(archive, "a/1", "첨부 참조", "t1")
+    item = result.items["a/1"]
+    assert not changed and "changed_at" not in item and item["body_text"] == "포스터에서 읽은 글자"
+
+
+def test_image_notice_real_page_change_is_a_change():
+    archive = Archive({"a/1": _image_item(page_text="첨부 참조")})
+    result, changed = note_body_change(archive, "a/1", "마감이 연장되었습니다", "t1")
+    item = result.items["a/1"]
+    assert changed and item["change_kind"] == "본문" and item["page_text"] == "마감이 연장되었습니다"
+
+
+def test_legacy_image_notice_records_baseline_without_change():
+    archive = Archive({"a/1": _image_item()})
+    result, changed = note_body_change(archive, "a/1", "첨부 참조", "t1")
+    item = result.items["a/1"]
+    assert not changed and "changed_at" not in item
+    assert item["page_text"] == "첨부 참조" and item["body_text"] == "포스터에서 읽은 글자"
+    again, changed = note_body_change(result, "a/1", "첨부 참조", "t2")
+    assert not changed
+
+
+def test_unchanged_recheck_sends_nothing(monkeypatch, tmp_path):
+    from datetime import datetime
+    from types import SimpleNamespace
+    monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
+    monkeypatch.delenv("SAVED_NOTICES", raising=False)
+    monkeypatch.setattr(cli.time, "sleep", lambda s: None)
+    sent = []
+    monkeypatch.setattr(cli, "send_notice", lambda n, *args: sent.append(n.title) or True)
+    img = "https://www.skku.edu/x.jpg"
+    key = "cse-notice/1"
+    base = add_notice(Archive(), notice("인턴 모집"), "2026-11-02T00:00:00+09:00")
+    item = {**base.items[key], "match": {**base.items[key]["match"], "rule_name": "인턴"},
+            "body_text": "포스터에서 읽은 글자", "body_from_image": True, "page_text": "첨부 참조",
+            "images": [img], "body_html": "<img>", "attachments": [],
+            "fetched_at": "2026-11-01T00:00:00+09:00"}
+    archive = Archive({key: item})
+    detail = SimpleNamespace(body_text="첨부 참조", attachments=(), images=(img,), body_html="<img>")
+    monkeypatch.setattr(cli, "fetch_detail", lambda *a: "")
+    monkeypatch.setattr(cli, "parse_detail", lambda *a: detail)
+    settings = {"sources": [], "request_gap_seconds": 0, "user_agent": "t", "timeout_seconds": 1}
+    now = datetime.fromisoformat("2026-11-09T00:00:00+09:00")
+    result = cli._recheck_details(archive, settings, now)
+    assert "changed_at" not in result.items[key] and result.items[key]["body_text"] == "포스터에서 읽은 글자"
+    cli._notify_changes(result, {"cse-notice": "소프트웨어학과"})
+    assert sent == []

@@ -348,6 +348,26 @@
           "first_seen": "2026-11-08T18:45:29.241976+09:00",
           "status": "notified",
           "attempts": 0
+        },
+        "141690": {
+          "first_seen": "2026-11-09T10:22:54.424340+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141686": {
+          "first_seen": "2026-11-09T10:22:54.424340+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141687": {
+          "first_seen": "2026-11-09T10:22:54.424340+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141685": {
+          "first_seen": "2026-11-09T10:22:54.424340+09:00",
+          "status": "notified",
+          "attempts": 0
         }
       }
     },
@@ -431,6 +451,11 @@
         },
         "228201": {
           "first_seen": "2026-11-06T17:06:47.981027+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "228224": {
+          "first_seen": "2026-11-09T10:22:54.424340+09:00",
           "status": "notified",
           "attempts": 0
         }

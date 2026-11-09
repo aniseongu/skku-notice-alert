@@ -55,6 +55,265 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141690": {
+      "notice": {
+        "id": "skku-notice01/141690",
+        "source_id": "skku-notice01",
+        "article_no": "141690",
+        "title": "★ 2026 제2회 성균관대학교 삼성융합의과학원 국제심포지엄 안내 ★(11월 30일(월)까지 홈페이지 사전 등록 )",
+        "category": "행사/세미나",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141690",
+        "posted_on": "2026-11-09",
+        "pinned": true,
+        "deadline": "2026-11-30T23:59:00+09:00",
+        "first_seen": "2026-11-09T10:22:54.424340+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "재학생 누구나 참여 가능한 국제 심포지엄으로 연구 분야 탐색에 도움이 될 수 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[제2회 삼성융합의과학원 국제심포지엄 안내]\nPhysical AI in Medicine: From Recognition and Reasoning to Embodied Intelligence\n\n성균관대학교 삼성융합의과학원(SAIHST)에서는 오는 12월 3일(목), ‘Physical AI in Medicine: From Recognition and Reasoning to Embodied Intelligence’라는 주제로 제2회 국제 심포지엄을 개최합니다.\n\n영상을 읽고 판단을 돕던 인공지능이 이제 로봇이라는 몸을 얻어 수술실에서 직접 움직이기 시작했습니다. 이번 심포지엄에서는 국내외 연자가 두 차례의 기조 강연과 다섯 개 세션을 통해, 수술 영상 분석부터 의료 파운데이션 모델, 수술 로봇, 임상 적용까지 이 변화의 최전선을 소개합니다.\n\n의학과 공학이 처음부터 함께해야 하는 이 분야에서, 이번 자리가 대학원생과 젊은 연구자들에게 새로운 연구 방향을 찾는 기회가 되기를 바랍니다.\n\n본 국제 심포지엄은 온라인으로 생중계되며, 11월 30일(월)까지 홈페이지 사전 등록 후 무료로 참여하실 수 있습니다. 관심 있는 분들의 많은 참여를 부탁드립니다.\n\n｢심포지엄 개요｣\n◎ 주제: Physical AI in Medicine: From Recognition and Reasoning to Embodied Intelligence\n◎ 일시: 2026년 12월 3일(목) 09:00–17:45 (온라인)\n◎ 등록비: 무료\n- 2026년 11월 30일(일)까지 사전등록 필수\n◎ 등록 및 시청 방법\n- 하단 포스터의 QR코드 이용\n- 공식 홈페이지(https://saihst.org) 접속\n◎ 주최: 성균관대학교 삼성융합의과학원(SAIHST)\n◎ 문의: 031-284-0835 / 02-2148-7560",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "2026 SAIHST 국제심포지엄 포스터-20261109.pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141690&attachNo=118911",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<p>[제2회 삼성융합의과학원 국제심포지엄 안내]</p><p>Physical AI in Medicine: From Recognition and Reasoning to Embodied Intelligence</p><p>성균관대학교 삼성융합의과학원(SAIHST)에서는 오는 12월 3일(목), ‘Physical AI in Medicine: From Recognition and Reasoning to Embodied Intelligence’라는 주제로 제2회 국제 심포지엄을 개최합니다.</p><p>영상을 읽고 판단을 돕던 인공지능이 이제 로봇이라는 몸을 얻어 수술실에서 직접 움직이기 시작했습니다. 이번 심포지엄에서는 국내외 연자가 두 차례의 기조 강연과 다섯 개 세션을 통해, 수술 영상 분석부터 의료 파운데이션 모델, 수술 로봇, 임상 적용까지 이 변화의 최전선을 소개합니다.</p><p>의학과 공학이 처음부터 함께해야 하는 이 분야에서, 이번 자리가 대학원생과 젊은 연구자들에게 새로운 연구 방향을 찾는 기회가 되기를 바랍니다.</p><p>본 국제 심포지엄은 온라인으로 생중계되며, 11월 30일(월)까지 홈페이지 사전 등록 후 무료로 참여하실 수 있습니다. 관심 있는 분들의 많은 참여를 부탁드립니다.</p><p>｢심포지엄 개요｣</p><p>◎ 주제: Physical AI in Medicine: From Recognition and Reasoning to Embodied Intelligence</p><p>◎ 일시: 2026년 12월 3일(목) 09:00–17:45 (온라인)</p><p>◎ 등록비: 무료</p><ul><li>2026년 11월 30일(일)까지 사전등록 필수</li></ul><p>◎ 등록 및 시청 방법</p><ul><li>하단 포스터의 QR코드 이용</li><li>공식 홈페이지(<a href=\"https://saihst.org)\">https://saihst.org)</a> 접속</li></ul><p>◎ 주최: 성균관대학교 삼성융합의과학원(SAIHST)</p><p>◎ 문의: 031-284-0835 / 02-2148-7560</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"SAIHAT_제2회 국제심포지엄 포스터 \" src=\"https://www.skku.edu/_attach/image/2026/11/FSGsljWHUxsQXQgjzOxR.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/FSGsljWHUxsQXQgjzOxR.jpg"
+      ],
+      "summary": "11월 30일까지 홈페이지에서 사전 등록을 완료하면 12월 3일에 열리는 온라인 심포지엄에 무료로 참여할 수 있습니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T10:22:54.424340+09:00",
+      "body_attempted_at": "2026-11-09T10:22:54.424340+09:00"
+    },
+    "skku-notice01/141687": {
+      "notice": {
+        "id": "skku-notice01/141687",
+        "source_id": "skku-notice01",
+        "article_no": "141687",
+        "title": "제7회 크리에이티브 브릿지 페스티벌 작품 공모",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141687",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T10:22:54.424340+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "학부 재학생이 참여할 수 있는 인터랙티브 아트 작품 공모전으로 지원 자격에 부합합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[Creative Bridge Festival 인터랙티브 아트 작품 공모 안내]\n\n문화예술미디어융합원에서 인터랙티브 아트 작품을 공모하오니 관심 있는 분들의 많은 참여 바랍니다.\n\n● 공모 개요\n공모 분야: 인터랙티브 아트(Interactive Art)\n공모 대상:\n- 개인: 대학생\n- 팀: 대학생이 1명 이상 포함된 팀\n(공모 대상 대학생의 기준은 학사 과정생 또는 수료생으로 함)\n선정 규모: 총 10개 작품 선정\n\n● 선정 작품 지원\n작품 설치 준비비: 선정 팀당 300,000원\n전시 작품 중 우수 작품 5점 선정 및 상금 지급\n\n● 주요 일정\n공모 접수: 11월 1일 ~ 11월 23일 22:59까지\n선정 발표: 11월 27일\n전시 일정: 2026년 12월 21일 ~ 23일\n전시 장소: 성균관대학교 성균갤러리\n\n● 접수 방법\n신청서 및 필수 서류 (첨부파일 참조) 작성 후 이메일 제출\n제출 서류: 지원신청서 2부\n제출 이메일: skkutmi@skku.edu\n파일 형식: HWP, PDF (같은 파일을 두 가지 형식으로 제출)\n\n● 문의\n트랜스미디어연구소\n담당자 팽지현 | hyunjiinn@g.skku.edu\n\n인터랙티브 아트 및 미디어아트 작업에 관심 있는 분들의 많은 지원 부탁드립니다!\n※ 자세한 내용은 첨부된 공모 포스터를 참고해 주세요.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "[크브페]지원신청서_작품명_지원자(팀)명.hwp",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141687&attachNo=118907",
+          "type": "HWP",
+          "size": null
+        }
+      ],
+      "body_html": "<p>[Creative Bridge Festival 인터랙티브 아트 작품 공모 안내]</p><p>문화예술미디어융합원에서 인터랙티브 아트 작품을 공모하오니 관심 있는 분들의 많은 참여 바랍니다.</p><p>● 공모 개요</p><p>공모 분야: 인터랙티브 아트(Interactive Art)</p><p>공모 대상:</p><ul><li>개인: 대학생</li><li>팀: 대학생이 1명 이상 포함된 팀</li></ul><p>(공모 대상 대학생의 기준은 학사 과정생 또는 수료생으로 함)</p><p>선정 규모: 총 10개 작품 선정</p><p>● 선정 작품 지원</p><p>작품 설치 준비비: 선정 팀당 300,000원</p><p>전시 작품 중 우수 작품 5점 선정 및 상금 지급</p><p>● 주요 일정</p><p>공모 접수: 11월 1일 ~ 11월 23일 22:59까지</p><p>선정 발표: 11월 27일</p><p>전시 일정: 2026년 12월 21일 ~ 23일</p><p>전시 장소: 성균관대학교 성균갤러리</p><p>● 접수 방법</p><p>신청서 및 필수 서류 (첨부파일 참조) 작성 후 이메일 제출</p><p>제출 서류: 지원신청서 2부</p><p>제출 이메일: skkutmi@skku.edu</p><p>파일 형식: HWP, PDF (같은 파일을 두 가지 형식으로 제출)</p><p>● 문의</p><p>트랜스미디어연구소</p><p>담당자 팽지현 | hyunjiinn@g.skku.edu</p><p>인터랙티브 아트 및 미디어아트 작업에 관심 있는 분들의 많은 지원 부탁드립니다!</p><p>※ 자세한 내용은 첨부된 공모 포스터를 참고해 주세요.</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"CBF 2027 포스터 \" src=\"https://www.skku.edu/_attach/image/2026/11/oOoVTfsCgnSZewamANSN.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/oOoVTfsCgnSZewamANSN.jpg"
+      ],
+      "summary": "11월 23일 22:59까지 신청서와 필수 서류를 이메일로 제출하여 공모에 참여할 수 있습니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T10:22:54.424340+09:00",
+      "body_attempted_at": "2026-11-09T10:22:54.424340+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-23T22:59:00+09:00"
+      }
+    },
+    "skku-notice01/141686": {
+      "notice": {
+        "id": "skku-notice01/141686",
+        "source_id": "skku-notice01",
+        "article_no": "141686",
+        "title": "[대학혁신과공유센터] 제28차 대학교육혁신 워크숍 안내 \"AI 시대, AI 핵심역량과 대학 교육의 혁신\"",
+        "category": "행사/세미나",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141686",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T10:22:54.424340+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "학부생도 참여 가능한 AI 관련 대학교육혁신 워크숍으로 관심 분야와 일치합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "성균관대학교 대학혁신과공유센터에서 \"제28차 대학교육혁신 워크숍\"을 개최합니다.\n이번 워크숍은 \"AI 시대, AI 핵심역량과 대학 교육의 혁신\"을 주제로 진행됩니다. 관계자 여러분의 많은 참여 바랍니다.\n\n1. 행 사 명: 제28차 대학교육혁신 워크숍\n\n2. 주 제: AI 시대, AI 핵심역량과 대학 교육의 혁신\n\n3. 일 시: 2026년 11월 26일(목) 오후 1시 ~ 3시\n\n4. 방 법: Youtube 생중계\n\n5. 내 용\n1) 전남대 HAI-UP 학생 AI 역량 강화 프로그램\n- 이효성 팀장 (전남대학교 교육혁신본부)\n2) AI 시대, 대학은 무엇을 가속하고 무엇을 깊게 할 것인가: 진단하고, 가속하고, 깊게 묻 는 AI 역량 교육\n- 정효정 교수 (단국대학교 교수학습개발센터 센터장)\n3) AI 시대, 대학은 어떤 역량을 길러야 하는가?: SKKU AI 핵심역량 체계 개발과 진단 결과\n- 이세영 센터장 (성균관대학교 대학혁신과공유센터)\n\n6. 대 상: 대학교육혁신에 관심 있는 전국 대학, 대학(원)생 및 기관\n\n7. 참가신청\n1) 신청기간: 2026년 11월 23일 월요일 오후 3시까지\n2) 신청링크: https://forms.gle/DMnwfDC2FdXqkYau9\n\n8. 문 의: 성균관대학교 대학혁신과공유센터 (02-740-1680, 1671/ ksy0619@skku.edu, rebecca80@skku.edu )\n※ 자세한 사항은 워크숍 홈페이지(https://sites.google.com/g.skku.edu/28th-workshop/home)를 참고해 주십시오.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "제28차 대학교육혁신 워크숍 포스터_링크포함.pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141686&attachNo=118902",
+          "type": "PDF",
+          "size": null
+        },
+        {
+          "name": "제28차 대학교육혁신 워크숍 초청장_링크포함.pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141686&attachNo=118912",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<p>성균관대학교 대학혁신과공유센터에서 \"제28차 대학교육혁신 워크숍\"을 개최합니다.</p><p>이번 워크숍은 \"AI 시대, AI 핵심역량과 대학 교육의 혁신\"을 주제로 진행됩니다. 관계자 여러분의 많은 참여 바랍니다.</p><p>1. 행  사  명: 제28차 대학교육혁신 워크숍</p><p>2. 주        제: AI 시대, AI 핵심역량과 대학 교육의 혁신</p><p>3. 일        시: 2026년 11월 26일(목) 오후 1시 ~ 3시</p><p>4. 방        법: Youtube 생중계</p><p>5. 내        용</p><p>1) 전남대 HAI-UP 학생 AI 역량 강화 프로그램</p><ul><li>이효성 팀장 (전남대학교 교육혁신본부)</li></ul><p>2) AI 시대, 대학은 무엇을 가속하고 무엇을 깊게 할 것인가: 진단하고, 가속하고, 깊게 묻       는 AI 역량 교육</p><ul><li>정효정 교수 (단국대학교 교수학습개발센터 센터장)</li></ul><p>3) AI 시대, 대학은 어떤 역량을 길러야 하는가?: SKKU AI 핵심역량 체계 개발과 진단 결과</p><ul><li>이세영 센터장 (성균관대학교 대학혁신과공유센터)</li></ul><p>6. 대        상: 대학교육혁신에 관심 있는 전국 대학, 대학(원)생 및 기관</p><p>7. 참가신청</p><p>1) 신청기간: 2026년 11월 23일 월요일 오후 3시까지</p><p>2) 신청링크: <a href=\"https://forms.gle/DMnwfDC2FdXqkYau9\">https://forms.gle/DMnwfDC2FdXqkYau9</a></p><p>8. 문        의: 성균관대학교 대학혁신과공유센터 (02-740-1680, 1671/ ksy0619@skku.edu, rebecca80@skku.edu )</p><p>※ 자세한 사항은 워크숍 홈페이지(<a href=\"https://sites.google.com/g.skku.edu/28th-workshop/home)를\">https://sites.google.com/g.skku.edu/28th-workshop/home)를</a> 참고해 주십시오.</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"제28차 대학교육혁신 워크숍 포스터_링크포함\" src=\"https://www.skku.edu/_attach/image/2026/11/MJNuGScYFWFBWWGGUDTY.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/MJNuGScYFWFBWWGGUDTY.jpg"
+      ],
+      "summary": "11월 23일 오후 3시까지 신청 링크를 통해 접수하면 11월 26일 유튜브 생중계로 진행되는 워크숍을 시청할 수 있습니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T10:22:54.424340+09:00",
+      "body_attempted_at": "2026-11-09T10:22:54.424340+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-23T15:00:00+09:00"
+      }
+    },
+    "skku-notice01/141685": {
+      "notice": {
+        "id": "skku-notice01/141685",
+        "source_id": "skku-notice01",
+        "article_no": "141685",
+        "title": "[교내 인성품 봉사 2시간 부여] 2026년도 사회적 장애인식개선교육",
+        "category": "행사/세미나",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141685",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T10:22:54.424340+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "학부생 참여가 가능하며 인성품 봉사 시간을 부여받을 수 있어 유익합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "장애학생지원센터에서 '2026년도 사회적 장애인식개선교육'을 진행하오니 학생분들의 많은 참여 부탁드립니다.\n\n◎일시 : 2026.12.4(금) 14:00~15:00\n◎대상 : 학부 및 대학원생\n◎장소 : 성균관대학교 인문과학캠퍼스 국제관 9B218\n◎강사 : 신홍윤(보건복지부 장애청년 정책위원회 위원)\n◎참여 방법 : 현장접수\n◎참여혜택 : 교내 인성품 봉사 2시간 부여(학부생 한정)\n\n◎문의 : 장애학생지원센터\nTel. 02-760-1090 / 031-299-4425\nE-mail. supporter@skku.edu\n\n*상기 일정 및 내용은 변동 될 수 있습니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>장애학생지원센터에서 '2026년도 사회적 장애인식개선교육'을 진행하오니 학생분들의 많은 참여 부탁드립니다.</p><p>◎일시 : 2026.12.4(금) 14:00~15:00</p><p>◎대상 : 학부 및 대학원생</p><p>◎장소 : 성균관대학교 인문과학캠퍼스 국제관 9B218</p><p>◎강사 : 신홍윤(보건복지부 장애청년 정책위원회 위원)</p><p>◎참여 방법 : 현장접수</p><p>◎참여혜택 : 교내 인성품 봉사 2시간 부여(학부생 한정)</p><p>◎문의 : 장애학생지원센터</p><p>Tel. 02-760-1090 / 031-299-4425</p><p>E-mail. supporter@skku.edu</p><p>*상기 일정 및 내용은 변동 될 수 있습니다.</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"사회적장애인식개선교육 홍보포스터\" src=\"https://www.skku.edu/_attach/image/2026/11/egfQQGlDKzWccWnkYZWD.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/egfQQGlDKzWccWnkYZWD.jpg"
+      ],
+      "summary": "12월 4일 오후 2시부터 인문과학캠퍼스 국제관에서 진행되는 교육에 현장 접수를 통해 참여할 수 있습니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T10:22:54.424340+09:00",
+      "body_attempted_at": "2026-11-09T10:22:54.424340+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-12-04T14:00:00+09:00"
+      }
+    },
+    "cse-notice/228224": {
+      "notice": {
+        "id": "cse-notice/228224",
+        "source_id": "cse-notice",
+        "article_no": "228224",
+        "title": "Variational Diffusion Model: Line-by-line derivations(15:00 - 16:00, Nov 25, 2026)",
+        "category": "행사/세미나",
+        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=228224",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T10:22:54.424340+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "소프트웨어학과 학부생이 수강하기 적절한 전문적인 AI 세미나입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "Title: Variational Diffusion Model: Line-by-line derivations\n\nSpeaker: Prof. Jooyeon Kim @ UNIST\n\nTime : 15:00 - 16:00, Nov 25, 2026\n\nLocation:\nOnline: https://zoom.us/j/83139609156\nMeeting ID: 831 3960 9156\nPasscode: 91818154\n\nLanguage: English speech & English slides\n\nAbstract:\nDiffusion models are making real-world impacts across multiple data modalities and applications. In this lecture, I aim to mathematically derive the variational diffusion models from scratch using variational approaches. I start by constructing and expanding the evidence lower bound (ELBO). Once we derive the final results, which are the neural network parameter update rules, they can be used directly at the code level.\n\nBio:\nJooyeon Kim is an assistant professor at UNIST. He obtained his BS degree at the University of Tokyo, and his MS and Ph.D. degrees at KAIST. He worked as a researcher at Microsoft Research Cambridge (MSRC) for a year and a half and as a postdoctoral researcher at RIKEN for another year and a half. He is currently interested in (in no particular order): world models, model scaling, generalization, generative models (transformers, diffusions). He is also the founder and CEO of a startup company, ARI.AI, that aims to develop AI foundation models that operate on predictive individual, health-related, measurable biological indicators.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><span>Title</span><span>: Variational Diffusion Model: Line-by-line derivations</span></p><p><span>Speaker</span><span>: Prof. Jooyeon Kim @ UNIST</span></p><p><span>Time&nbsp;</span><span>: 15:00 - 16:00, Nov 25, 2026</span></p><p><span>Location</span><span>:&nbsp;</span></p><p><span>Online:&nbsp;</span><a href=\"https://zoom.us/j/83139609156\"></a><a href=\"https://zoom.us/j/83139609156\">https://zoom.us/j/83139609156</a><span>&nbsp;</span></p><p><span>Meeting ID: 831 3960 9156</span></p><p><span>Passcode: 91818154</span></p><p><span>Language</span><span>: English speech &amp; English slides</span></p><p><span>Abstract</span><span>:&nbsp;</span></p><p><span>Diffusion models are making real-world impacts across multiple data modalities and applications. In this lecture, I aim to mathematically derive the variational diffusion models from scratch using variational approaches. I start by constructing and expanding the evidence lower bound (ELBO). Once we derive the final results, which are the neural network parameter update rules, they can be used directly at the code level.</span></p><p><span>Bio</span><span>:</span></p><p><span>Jooyeon Kim is an assistant professor at UNIST. He obtained his BS degree at the University of Tokyo, and his MS and Ph.D. degrees at KAIST. He worked as a researcher at Microsoft Research Cambridge (MSRC) for a year and a half and as a postdoctoral researcher at RIKEN for another year and a half. He is currently interested in (in no particular order): world models, model scaling, generalization, generative models (transformers, diffusions). He is also the founder and CEO of a startup company, ARI.AI, that aims to develop AI foundation models that operate on predictive individual, health-related, measurable biological indicators.</span></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [],
+      "summary": "11월 25일 오후 3시에 열리는 온라인 세미나에 줌 링크를 통해 자유롭게 참여할 수 있습니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T10:22:54.424340+09:00",
+      "body_attempted_at": "2026-11-09T10:22:54.424340+09:00",
+      "translation": {
+        "title": "Variational Diffusion Model: Line-by-line derivations(15:00 - 16:00, 2026년 11월 25일)",
+        "body": "제목: Variational Diffusion Model: Line-by-line derivations\n\n연사: Jooyeon Kim 교수 @ UNIST\n\n일시: 15:00 - 16:00, 2026년 11월 25일\n\n장소:\n온라인: https://zoom.us/j/83139609156\n회의 ID: 831 3960 9156\n암호: 91818154\n\n언어: 영어 강연 및 영어 슬라이드\n\n초록:\n확산 모델(Diffusion models)은 다양한 데이터 양식과 응용 분야에서 실질적인 영향을 미치고 있습니다. 본 강연에서는 변분법적 접근 방식을 사용하여 변분 확산 모델을 처음부터 수학적으로 유도하고자 합니다. 증거 하한(ELBO)을 구성하고 확장하는 것부터 시작합니다. 신경망 매개변수 업데이트 규칙인 최종 결과를 도출하면 이를 코드 수준에서 직접 사용할 수 있습니다.\n\n약력:\nJooyeon Kim은 UNIST 조교수입니다. 도쿄대학교에서 학사 학위를, KAIST에서 석사 및 박사 학위를 취득했습니다. Microsoft Research Cambridge(MSRC)에서 1년 6개월간 연구원으로, RIKEN에서 1년 6개월간 박사후 연구원으로 근무했습니다. 현재 관심 분야는 월드 모델, 모델 스케일링, 일반화, 생성 모델(트랜스포머, 확산 모델)입니다(순서 무관). 또한 개인의 건강 관련 측정 가능한 생체 지표를 예측하여 작동하는 AI 파운데이션 모델 개발을 목표로 하는 스타트업 ARI.AI의 창립자이자 CEO입니다.",
+        "model": "gemini-3.1-flash-lite"
+      },
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-25T15:00:00+09:00"
+      }
+    },
     "skku-career-intern/165093": {
       "notice": {
         "id": "skku-career-intern/165093",
@@ -4665,7 +4924,7 @@
         "kind": "마감",
         "at": "2026-12-03T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-08T20:43:01.943166+09:00"
+      "rechecked_at": "2026-11-09T10:22:54.424340+09:00"
     },
     "skku-notice01/141609": {
       "notice": {
@@ -4722,7 +4981,7 @@
         "kind": "마감",
         "at": "2026-12-03T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-08T20:43:01.943166+09:00"
+      "rechecked_at": "2026-11-09T10:22:54.424340+09:00"
     },
     "skku-notice01/141608": {
       "notice": {
@@ -4770,7 +5029,7 @@
         "kind": "마감",
         "at": "2026-11-20T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-08T20:43:01.943166+09:00"
+      "rechecked_at": "2026-11-09T10:22:54.424340+09:00"
     },
     "skku-notice01/141604": {
       "notice": {
@@ -13592,7 +13851,7 @@
         "id": "skku-notice01/141494",
         "source_id": "skku-notice01",
         "article_no": "141494",
-        "title": "[학생사회공헌단 다소미 X 학생성공센터] 2026 배워서 남 주는 프로젝트 성과공유회 개최 안내",
+        "title": "[학생사회공헌단 다소미 X 학생성공센터] 2026 배워서 남 주는 프로젝트 성과공유회 개최 안내(-11/15 신청마감)",
         "category": "행사/세미나",
         "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141494",
         "posted_on": "2026-11-02",
@@ -13618,15 +13877,19 @@
       "images": [
         "https://www.skku.edu/_attach/image/2026/11/DQVYgjuXYCNaeNXUDfCD.png"
       ],
-      "summary": "학생사회공헌단과 학생성공센터가 11월 18일 국제관에서 '배워서 남 주는 프로젝트' 성과공유회를 개최합니다. 관심 있는 학생은 챌린지스퀘어를 통해 신청할 수 있으며 창의품 2시간이 인정됩니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-03T14:16:56.035412+09:00",
+      "previous_title": "[학생사회공헌단 다소미 X 학생성공센터] 2026 배워서 남 주는 프로젝트 성과공유회 개최 안내",
+      "changed_at": "2026-11-09T10:22:54.424340+09:00",
+      "change_kind": "제목",
       "ai_deadline": {
         "checked": true,
         "model": "gemini-3.1-flash-lite",
-        "kind": "일정",
-        "at": "2026-11-18T15:00:00+09:00"
-      }
+        "kind": "마감",
+        "at": "2026-11-15T23:59:00+09:00"
+      },
+      "summary": "배워서 남 주는 프로젝트 성과공유회는 프로젝트에 관심 있는 학생 누구나 참여할 수 있다. 11월 18일 열리는 성과발표회는 챌린지스퀘어를 통해 신청하며 11월 15일까지 접수한다.",
+      "summary_last_failed_at": null
     },
     "cse-notice/227923": {
       "notice": {

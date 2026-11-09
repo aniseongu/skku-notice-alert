@@ -551,8 +551,8 @@
   .settings-head-row .settings-head { margin: 0; }
   .head-action { min-height: 44px; margin: -13px -8px; padding: 0 8px; border: 0; background: none; color: var(--accent); font-size: 14px; font-weight: 600; cursor: pointer; }
   .box.is-editing { box-shadow: inset 0 0 0 1px var(--accent); }
-  .board-order-list { border-top: 0; }
-  .board-order-list li { min-height: 52px; }
+  .keyword-list.board-order-list { border-top: 0; }
+  .keyword-list.board-order-list li { min-height: 52px; }
   .board-order-list li:last-child { border-bottom: 0; }
   .order-controls { display: flex; align-items: center; margin-right: -10px; }
   .order-move, .board-handle { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0; background: none; color: var(--text-2); }

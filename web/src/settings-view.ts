@@ -581,7 +581,7 @@ export class SettingsView extends LitElement {
                   @keydown=${(e: KeyboardEvent) => this.onHandleKey(e, index)}>
                   <svg class="i" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M5 8h14M5 12h14M5 16h14"/></svg>
                 </button>` : nothing}</li>`)}</ul>
-            ${this.reordering ? html`<p class="field-note board-order-help">손잡이를 끌거나 방향키로 옮겨요</p>` : nothing}
+            ${this.reordering ? html`<p class="field-note board-order-help">${matchMedia('(pointer: coarse)').matches ? '손잡이를 끌어서 옮겨요' : '손잡이를 끌거나 방향키로 옮겨요'}</p>` : nothing}
             ${this.boardOrderStatus ? html`<p class="field-note ${this.boardOrderStatus.ok ? 'ok' : 'error'}" role="status">${this.boardOrderStatus.text}</p>` : nothing}
             <p class="visually-hidden" aria-live="polite">${this.boardAnnouncement}</p>
           </div>

@@ -149,3 +149,52 @@ def test_unchanged_recheck_sends_nothing(monkeypatch, tmp_path):
     assert "changed_at" not in result.items[key] and result.items[key]["body_text"] == "포스터에서 읽은 글자"
     cli._notify_changes(result, {"cse-notice": "소프트웨어학과"})
     assert sent == []
+
+
+def _recheck_setup(monkeypatch, tmp_path, specs):
+    """specs: (번호, 처음 본 시각, 마지막 받은 시각, 내 공지 여부). 받아 간 글 번호 목록을 돌려준다."""
+    from datetime import datetime
+    from types import SimpleNamespace
+    monkeypatch.setattr(cli, "ARCHIVE_PATH", tmp_path / "archive.json")
+    monkeypatch.delenv("SAVED_NOTICES", raising=False)
+    monkeypatch.setattr(cli.time, "sleep", lambda s: None)
+    items = {}
+    for no, seen, fetched, mine in specs:
+        n = Notice("cse-notice", no, "공지", "채용", f"https://cse.skku.edu/cse/notice.do?articleNo={no}",
+                   date(2026, 11, 9), False)
+        base = add_notice(Archive(), n, seen).items[f"cse-notice/{no}"]
+        match = {**base["match"], "rule_name": "인턴" if mine else None}
+        items[f"cse-notice/{no}"] = {**base, "match": match, "body_text": "본문", "images": [],
+                                     "body_html": "", "attachments": [], "fetched_at": fetched}
+    fetched_urls = []
+    detail = SimpleNamespace(body_text="본문", attachments=(), images=(), body_html="")
+    monkeypatch.setattr(cli, "fetch_detail", lambda url, *a: fetched_urls.append(url) or "")
+    monkeypatch.setattr(cli, "parse_detail", lambda *a: detail)
+    settings = {"sources": [], "request_gap_seconds": 0, "user_agent": "t", "timeout_seconds": 1}
+    now = datetime.fromisoformat("2026-11-09T12:00:00+09:00")
+    cli._recheck_details(Archive(items), settings, now)
+    return [url.rsplit("=", 1)[1] for url in fetched_urls]
+
+
+def test_recent_notice_is_rechecked_every_three_hours(monkeypatch, tmp_path):
+    got = _recheck_setup(monkeypatch, tmp_path, [
+        ("1", "2026-11-09T02:00:00+09:00", "2026-11-09T08:00:00+09:00", False)])
+    assert got == ["1"]
+
+
+def test_old_or_just_fetched_notice_is_not_rechecked(monkeypatch, tmp_path):
+    got = _recheck_setup(monkeypatch, tmp_path, [
+        ("1", "2026-11-06T02:00:00+09:00", "2026-11-06T08:00:00+09:00", False),
+        ("2", "2026-11-09T02:00:00+09:00", "2026-11-09T11:00:00+09:00", False)])
+    assert got == []
+
+
+def test_recheck_cap_puts_important_first(monkeypatch, tmp_path):
+    old = "2026-11-08T01:00:00+09:00"
+    got = _recheck_setup(monkeypatch, tmp_path, [
+        ("1", "2026-11-09T02:00:00+09:00", old, False),
+        ("2", "2026-11-09T04:00:00+09:00", old, False),
+        ("3", "2026-11-09T01:00:00+09:00", old, False),
+        ("4", "2026-11-05T01:00:00+09:00", "2026-11-05T01:00:00+09:00", True),
+        ("5", "2026-11-04T01:00:00+09:00", "2026-11-04T01:00:00+09:00", True)])
+    assert got == ["4", "5", "2"]

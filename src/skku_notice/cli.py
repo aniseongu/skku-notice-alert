@@ -185,9 +185,13 @@ def _translate(archive, ai: dict, api_key: str):
     return archive
 
 
-# 바뀐 글 다시 확인(D-025): 내 공지와 저장한 공지 중 마감이 남은 글만, 같은 글은 12시간에 한 번, 실행당 3건.
+# 바뀐 글 다시 확인(D-025): 내 공지와 저장한 공지 중 마감이 남은 글은 12시간에 한 번,
+# 올라온 지 48시간 안의 학교 글은 중요도와 상관없이 3시간에 한 번, 실행당 전체 3건.
+# 글쓴이가 올린 직후에 포스터를 바꾸고 옛 그림 파일을 지우는 일이 잦아서 갓 올라온 글은 더 자주 본다.
 RECHECK_PER_RUN = 3
 RECHECK_HOURS = 12
+RECENT_HOURS = 48
+RECENT_RECHECK_HOURS = 3
 
 
 def _important(item: dict, saved_ids: set[str]) -> bool:
@@ -203,22 +207,39 @@ def _saved_ids() -> set[str]:
     return {entry["id"] for entry in saved if isinstance(entry, dict) and isinstance(entry.get("id"), str)}
 
 
-def _recheck_details(archive, settings: dict, now: datetime):
+def _recheck_candidates(archive, settings: dict, now: datetime) -> list[str]:
+    """다시 읽을 글 키를 정한다. 중요한 글이 먼저, 그다음 갓 올라온 글(최신순). 같으면 키 순서."""
     saved = _saved_ids()
     external = {source['id'] for source in settings['sources'] if source.get('external')}
-    done = 0
-    for key, item in list(archive.items.items()):
-        if done == RECHECK_PER_RUN:
-            break
-        deadline = item["notice"].get("deadline") or (item.get("ai_deadline") or {}).get("at")
-        last = item.get("rechecked_at") or item.get("fetched_at")
-        if (not _important(item, saved) or item.get("body_text") is None
-                or item['notice']['source_id'] in external
-                or ".skku.edu/" not in item["notice"]["url"]
-                or (deadline and datetime.fromisoformat(deadline) < now)
-                or (last and now - datetime.fromisoformat(last) < timedelta(hours=RECHECK_HOURS))):
+    important: list[str] = []
+    recent: list[tuple[str, str]] = []
+    for key, item in archive.items.items():
+        notice = item["notice"]
+        deadline = notice.get("deadline") or (item.get("ai_deadline") or {}).get("at")
+        if (item.get("body_text") is None or notice['source_id'] in external
+                or ".skku.edu/" not in notice["url"]
+                or (deadline and datetime.fromisoformat(deadline) < now)):
             continue
-        done += 1
+        last = item.get("rechecked_at") or item.get("fetched_at")
+        age = now - datetime.fromisoformat(last) if last else None
+        first_seen = notice.get("first_seen")
+        is_recent = (bool(first_seen)
+                     and now - datetime.fromisoformat(first_seen) < timedelta(hours=RECENT_HOURS))
+        due_recent = is_recent and (age is None or age >= timedelta(hours=RECENT_RECHECK_HOURS))
+        due_important = (_important(item, saved)
+                         and (age is None or age >= timedelta(hours=RECHECK_HOURS)))
+        if due_important:
+            important.append(key)
+        elif due_recent:
+            recent.append((first_seen, key))
+    recent.sort(key=lambda pair: pair[1])
+    recent.sort(key=lambda pair: pair[0], reverse=True)
+    return (important + [key for _, key in recent])[:RECHECK_PER_RUN]
+
+
+def _recheck_details(archive, settings: dict, now: datetime):
+    for key in _recheck_candidates(archive, settings, now):
+        item = archive.items[key]
         time.sleep(float(settings["request_gap_seconds"]))
         try:
             html = fetch_detail(item["notice"]["url"], settings["user_agent"],

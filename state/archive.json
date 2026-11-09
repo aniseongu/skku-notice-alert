@@ -55,6 +55,286 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/363160": {
+      "notice": {
+        "id": "linkareer-intern/363160",
+        "source_id": "linkareer-intern",
+        "article_no": "363160",
+        "title": "[삼정KPMG] Deal Adv 3본부 인턴 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363160",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T00:10:24.719526+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "재무실사 및 데이터 분석 업무를 수행하며 경영, 경제, 회계학 전공자를 우대하는 비개발 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[삼정KPMG] Deal Adv 3본부 인턴 채용\n\n\n[담당업무]\n- M&A 거래 관련 Financial Due Diligence(재무실사) 업무 지원\n- 대상회사의 재무제표 및 재무·회계·관리 데이터 분석\n- 산업 및 시장 관련 리서치\n- 분석자료 및 보고서 작성 지원\n\n\n[접수기간]\n11월 05일 ~ 11월 20일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[삼정KPMG] Deal Adv 3본부 인턴 채용</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>- M&amp;A 거래 관련 Financial Due Diligence(재무실사) 업무 지원</span></p><p><span>- 대상회사의 재무제표 및 재무·회계·관리 데이터 분석</span></p><p><span>- 산업 및 시장 관련 리서치</span></p><p><span>- 분석자료 및 보고서 작성 지원</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 05일 ~ 11월 20일</span></p><p><b><br></b></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984023\" title=\"스크린샷_9-11-2026_225532_career.kr.kpmg.com.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984023"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T00:10:24.719526+09:00",
+      "page_text": "[삼정KPMG] Deal Adv 3본부 인턴 채용\n\n\n[담당업무]\n- M&A 거래 관련 Financial Due Diligence(재무실사) 업무 지원\n- 대상회사의 재무제표 및 재무·회계·관리 데이터 분석\n- 산업 및 시장 관련 리서치\n- 분석자료 및 보고서 작성 지원\n\n\n[접수기간]\n11월 05일 ~ 11월 20일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-10T00:10:24.719526+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-20T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "694d78619db39a29ea7266925b4f344fa1e56daaec975e70b38952f8aaae2a9a",
+        "verdict": "not_relevant",
+        "reason": "재무실사 및 데이터 분석 업무를 수행하며 경영, 경제, 회계학 전공자를 우대하는 비개발 직무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363149": {
+      "notice": {
+        "id": "linkareer-intern/363149",
+        "source_id": "linkareer-intern",
+        "article_no": "363149",
+        "title": "[한화세미텍] 2027년 상반기 채용전제형 인턴 채용(영업/CS)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363149",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T00:10:24.719526+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "영업 및 글로벌 CS 직무로 소프트웨어 개발과 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[한화세미텍] 2027년 상반기 채용전제형 인턴 채용(영업/CS)\n\n\n[모집분야]\n영업\n글로벌 CS\n\n\n[접수기간]\n11월 09일 ~ 11월 23일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[한화세미텍] 2027년 상반기 채용전제형 인턴 채용(영업/CS)</span></b></p><p><b><span>[모집분야]</span></b></p><p><span>영업</span></p><p><span>글로벌 CS</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 09일 ~ 11월 23일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/983997\" title=\"20261106_092202964_43779.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/983997"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T00:10:24.719526+09:00",
+      "page_text": "[한화세미텍] 2027년 상반기 채용전제형 인턴 채용(영업/CS)\n\n\n[모집분야]\n영업\n글로벌 CS\n\n\n[접수기간]\n11월 09일 ~ 11월 23일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-10T00:10:24.719526+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T08:00:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "dd58d3b49dfa2bbaad11a650480c298f848dd2dcf32a9107f1e7c4ad0eeaf0db",
+        "verdict": "not_relevant",
+        "reason": "영업 및 글로벌 CS 직무로 소프트웨어 개발과 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107153": {
+      "notice": {
+        "id": "jasoseol-intern/107153",
+        "source_id": "jasoseol-intern",
+        "article_no": "107153",
+        "title": "[한국GM] 2027 동계인턴사원 모집 (생산/안전/품질)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107153",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T00:10:24.719526+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "생산, 안전, 품질 직무를 모집하며 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/450/webp/gmk_%EC%9D%B8%ED%84%B4%EC%8B%AD_%EB%AA%A8%EC%A7%91%EA%B3%B5%EA%B3%A0_750.webp?1794211838\" alt=\"한국GM 2027 동계인턴사원 모집 (생산/안전/품질)\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/450/webp/gmk_%EC%9D%B8%ED%84%B4%EC%8B%AD_%EB%AA%A8%EC%A7%91%EA%B3%B5%EA%B3%A0_750.webp?1794211838"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T00:10:24.719526+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-10T00:10:24.719526+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "71f129d79d8c2a6816c6cf5d2625156a34f05cb118f20dd1b8e0f7bfd564fa0c",
+        "verdict": "not_relevant",
+        "reason": "생산, 안전, 품질 직무를 모집하며 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107145": {
+      "notice": {
+        "id": "jasoseol-intern/107145",
+        "source_id": "jasoseol-intern",
+        "article_no": "107145",
+        "title": "[카카오뱅크] DevOps 엔지니어링팀 정규직 전환형 인턴 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107145",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T00:10:24.719526+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "DevOps 엔지니어링 직무로 소프트웨어 개발 역량을 요구하며 학부생이 지원 가능한 인턴 공고입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/379/webp/image.webp?1794199024\" alt=\"카카오뱅크 DevOps 엔지니어링팀 정규직 전환형 인턴 채용\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/379/webp/image.webp?1794199024"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T00:10:24.719526+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-10T00:10:24.719526+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-25T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "a385a8c4ffca4ff20aa7dc39a24da008e0526abf5879951d2df32f2f5ccd5244",
+        "verdict": "relevant",
+        "reason": "DevOps 엔지니어링 직무로 소프트웨어 개발 역량을 요구하며 학부생이 지원 가능한 인턴 공고입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107097": {
+      "notice": {
+        "id": "jasoseol-intern/107097",
+        "source_id": "jasoseol-intern",
+        "article_no": "107097",
+        "title": "[이삼오구] 2359 MARKETER INTERNSHIP RUN-N-UP",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107097",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T00:10:24.719526+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "마케팅 직무를 모집하며 소프트웨어 개발과 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n<div><a href=\"https://www.2359.co.kr/job_posting/Y8qCuMX3?utm_source=%EC%9E%90%EC%86%8C%EC%84%A4%EB%8B%B7%EC%BB%B4&amp;utm_medium=%EA%B2%8C%EC%8B%9C%EB%AC%BC%EA%B3%B5%EA%B3%A0&amp;utm_campaign=%EC%9E%90%EC%86%8C%EC%84%A4%EB%8B%B7%EC%BB%B4%EA%B2%8C%EC%8B%9C%EB%AC%BC%EA%B3%B5%EA%B3%A0\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/074/webp/2359_RUN-UP_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A9.webp?1793867306\" alt=\"이삼오구 2359 MARKETER INTERNSHIP RUN-N-UP\"></div>\n</div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/074/webp/2359_RUN-UP_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A9.webp?1793867306"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T00:10:24.719526+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-10T00:10:24.719526+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-04T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "928780d8e2387f6e53c25d3e0e285d23e3b2daadd7bb03da95cab74eee83f339",
+        "verdict": "not_relevant",
+        "reason": "마케팅 직무를 모집하며 소프트웨어 개발과 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "linkareer-intern/363146": {
       "notice": {
         "id": "linkareer-intern/363146",
@@ -1533,7 +1813,7 @@
       "fetched_at": "2026-11-09T16:49:09.958586+09:00",
       "page_text": "[그래파이] 2026 하반기 신입/경력 엔지니어 채용 (~11/30)\n\n■ 접수기간\n2026.11.09.(월) - 2026.11.30.(월)\n\n■ 모집 부문\nForward Deployed Engineer (고객 현장 중심 AI 솔루션 개발 및 구축)\nDB Engineer (그래프·벡터·관계형 통합 DB 엔진 개발)\nAI Engineer (온톨로지·에이전트 메모리·클라우드 기반 AI 시스템 개발)\n\n■ 지원 자격\n전 직무 신입·경력 무관 지원 가능합니다.\n전문연구요원 지원 안내: DB Engineer 및 AI Engineer 직무에 한해 지원 가능하며, 이공계 석사 이상 학위 소지자(취득 예정자 포함) 중 신규 편입 또는 전직이 가능한 분을 대상으로 합니다. 전문연구요원은 대전 연구소에서 근무합니다.\n\nTPM·BDM 등 기타 모집 직무 및 상세 지원 요건은 채용 페이지(QR코드)를 통해 확인해 주세요.\n\n■ 근무지\n서울 (*전문연구요원(병특) 제외)\n\n■ 전형 절차\n서류전형 → 1차 면접 → 2차 면접 → 최종합격\n\n※ 직무에 따라 과제 전형이나 PT 면접이 추가될 수 있습니다.\n※ 서류 결과는 2주 안에 개별로 알려 드립니다.\n\n■ 지원 방법\n그래파이 채용 홈페이지(https://graphai.career.greetinghr.com/intro)\n\n■ 문의\n회사 홈페이지: graphai.io\n채용 문의: recruit@graphai.io",
       "body_attempted_at": "2026-11-09T16:49:09.958586+09:00",
-      "rechecked_at": "2026-11-09T20:29:39.855806+09:00"
+      "rechecked_at": "2026-11-10T00:10:24.719526+09:00"
     },
     "skku-notice01/141706": {
       "notice": {
@@ -5106,7 +5386,7 @@
         },
         "notified": true
       },
-      "body_text": "1. 모집 분야 및 상세 업무\n※ 공통 유의사항: 각 직무 간 중복 지원이 가능하며, 세부 업무 및 일정은 추후 변경될 수 있습니다.\n① TA (Teaching Assistant)\n• 모집 인원: 과목당 1~2명\n• 주요 업무: WISE 교수 강의 지원, 문화체험 활동 참여 및 인솔 지원\n• 활동 혜택: 해당 과목 수업료 면제, 문화체험비 면제, 수료증 발급, 교환학생 가산점\n• 유의 사항:\n- 1개 수업에 한하여 신청 가능 (지원 가능 과목은 첨부 엑셀 파일 참고)\n- 문화행사 필수 참석\n- 수업 폐강 시 TA 배정은 취소되며, 가능한 경우 타 과목 재배치 또는 다른 업무로 조정 가능\n② OA (Office Assistant)\n• 모집 인원: 3명 (인사캠)\n• 주요 업무: WISE Office 운영 및 행정 지원, 프로그램 제반 업무 전반 관리\n• 활동 혜택: 수료증 발급, 교환학생 가산점\n• 시급: 2026년 10,320원, 2027년 10,700원 (세전)\n• 유의 사항:\n- 재학생 및 휴학생 모두 지원 가능\n- WISE 수업 수강 불가\n- 문화행사 일부 참석 가능\n③ HA (Housing Assistant)\n• 모집 인원: 각 기숙사(G하우스 및 E하우스) 당 3명 예정 (주간 1명, 야간 2명)\n• 주요 업무: WISE 참가자 대상 기숙사(G하우스) 운영 및 생활 지원\n• 활동 혜택: 수료증 발급, 교환학생 가산점\n• 시급: 2026년 10,320원, 2027년 10,700원 (세전)\n• 유의 사항:\n- 재학생 및 휴학생 모두 지원 가능\n- 문화행사 일부 참석 가능\n- 수강신청을 이미 완료한 경우, 합격 시 환불 관련 별도 안내 예정\n\n2. 직무별 근무 기간 및 시간\n• TA: 2026. 12. 21.(월)~2027. 1. 8.(금)\n• OA: 2026. 12. 17.(목)~2027. 1. 8.(금) (공휴일 및 주말 휴무)\n- 08:00~17:30\n• HA: 2026. 12. 20.(일)~2027. 1. 10.(일)\n- 07:00~12:00\n- 17:00~22:00\n- 22:00~익일 05:00\n※ 체크인 및 체크아웃일은 본인 근무시간에 상관없이 추가근로 필수\n※ 공휴일 및 주말 포함하여 기간 내 모든 날짜 근무 가능할 경우만 지원할 것\n\n3. 지원 방법\n• 제출 기한: 2026. 11. 11.(수) 17:00까지\n• 제출 서류: 첨부된 공고 및 지원서 양식 확인 후 작성 (한국어/영어 중 자유롭게 작성)\n• 제출 방법: 구글 폼 제출 (https://forms.gle/Tov2dDbKMJnZTLzN7)\n- 필수 사항: 반드시 성균관대 킹고메일(@g.skku.edu) 계정으로 접속 (개인 Gmail 사용 불가)\n• 파일명 양식: 지원분야_이름.pdf (예: TA_김명륜.pdf / OA_김율전.pdf / HA_홍길동.pdf)\n• 면접 안내: 면접은 한국어와 영어로 모두 진행되며, 질문받은 언어로 답변\n\n4. 선발 일정\n• 서류 심사 결과: 추후 공지 (면접 결과는 이메일로 개별 연락 예정)\n• 면접 일정: 11. 17.(화)~11. 20.(목) 중 진행 (대면 면접)\n• 조교 오리엔테이션: 12. 17.(목) 15:00, 국제관 (예정)\n- 최종 선발된 TA 및 OA는 프로그램 원활한 운영을 위해 필수 참석\n- HA 오리엔테이션은 별도 진행 예정\n\n5. 문의처: 국제교류팀 WISE Office\n• Tel: 02-760-0184\n• Email: skkuwinter@skku.edu\n• 홈페이지: https://winter.skku.edu",
+      "body_text": "1. 모집 분야 및 상세 업무\n※ 공통 유의사항: 각 직무 간 중복 지원이 가능하며, 세부 업무 및 일정은 추후 변경될 수 있습니다.\n① TA (Teaching Assistant)\n• 모집 인원: 과목당 1~2명\n• 주요 업무: WISE 교수 강의 지원, 문화체험 활동 참여 및 인솔 지원\n• 활동 혜택: 해당 과목 수업료 면제, 문화체험비 면제, 수료증 발급, 교환학생 가산점\n• 유의 사항:\n- 1개 수업에 한하여 신청 가능 (지원 가능 과목은 첨부 엑셀 파일 참고)\n- 문화행사 필수 참석\n- 수업 폐강 시 TA 배정은 취소되며, 가능한 경우 타 과목 재배치 또는 다른 업무로 조정 가능\n② OA (Office Assistant)\n• 모집 인원: 3명 (인사캠)\n• 주요 업무: WISE Office 운영 및 행정 지원, 프로그램 제반 업무 전반 관리\n• 활동 혜택: 수료증 발급, 교환학생 가산점\n• 시급: 2026년 10,320원, 2027년 10,700원 (세전)\n• 유의 사항:\n- 재학생 및 휴학생 모두 지원 가능\n- WISE 수업 수강 불가\n- 문화행사 일부 참석 가능\n③ HA (Housing Assistant)\n• 모집 인원: 각 기숙사(G하우스 및 E하우스) 당 3명 예정 (주간 1명, 야간 2명)\n• 주요 업무: WISE 참가자 대상 기숙사(G하우스) 운영 및 생활 지원\n• 활동 혜택: 수료증 발급, 교환학생 가산점\n• 시급: 2026년 10,320원, 2027년 10,700원 (세전)\n• 유의 사항:\n- 재학생 및 휴학생 모두 지원 가능\n- 문화행사 일부 참석 가능\n- 수강신청을 이미 완료한 경우, 합격 시 환불 관련 별도 안내 예정\n\n2. 직무별 근무 기간 및 시간\n• TA: 2026. 12. 21.(월)~2027. 1. 8.(금)\n• OA: 2026. 12. 17.(목)~2027. 1. 8.(금) (공휴일 및 주말 휴무)\n- 08:00~17:30\n• HA: 2026. 12. 20.(일)~2027. 1. 10.(일)\n- 07:00~12:00\n- 17:00~22:00\n- 22:00~익일 05:00\n※ 체크인 및 체크아웃일은 본인 근무시간에 상관없이 추가근로 필수\n※ 공휴일 및 주말 포함하여 기간 내 모든 날짜 근무 가능할 경우만 지원할 것\n\n3. 지원 방법\n• 제출 기한: 2026. 11. 11.(수) 17:00까지\n• 제출 서류: 첨부된 공고 및 지원서 양식 확인 후 작성 (한국어/영어 중 자유롭게 작성)\n• 제출 방법: 구글 폼 제출 (https://forms.gle/Tov2dDbKMJnZTLzN7)\n- 필수 사항: 반드시 성균관대 킹고메일(@g.skku.edu) 계정으로 접속 (개인 Gmail 사용 불가)\n• 파일명 양식: 지원분야_이름.pdf (예: TA_김명륜.pdf / OA_김율전.pdf / HA_홍길동.pdf)\n• 면접 안내: 면접은 한국어와 영어로 모두 진행되며, 질문받은 언어로 답변\n\n4. 선발 일정\n• 서류 심사 결과: 추후 공지 (면접 결과는 이메일로 개별 연락 예정)\n• 면접 일정: 11. 17.(화)~11. 20.(금) 중 진행 (대면 면접)\n• 조교 오리엔테이션: 12. 17.(목) 15:00, 국제관 (예정)\n- 최종 선발된 TA 및 OA는 프로그램 원활한 운영을 위해 필수 참석\n- HA 오리엔테이션은 별도 진행 예정\n\n5. 문의처: 국제교류팀 WISE Office\n• Tel: 02-760-0184\n• Email: skkuwinter@skku.edu\n• 홈페이지: https://winter.skku.edu",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
@@ -5125,20 +5405,24 @@
           "size": null
         }
       ],
-      "body_html": "<p>1. 모집 분야 및 상세 업무</p><p>※ 공통 유의사항: 각 직무 간 중복 지원이 가능하며, 세부 업무 및 일정은 추후 변경될 수 있습니다.</p><p>① TA (Teaching Assistant)</p><p>• 모집 인원: 과목당 1~2명</p><p>• 주요 업무: WISE 교수 강의 지원, 문화체험 활동 참여 및 인솔 지원</p><p>• 활동 혜택: 해당 과목 수업료 면제, 문화체험비 면제, 수료증 발급, 교환학생 가산점</p><p>• 유의 사항:</p><ul><li>1개 수업에 한하여 신청 가능 (지원 가능 과목은 첨부 엑셀 파일 참고)</li><li>문화행사 필수 참석</li><li>수업 폐강 시 TA 배정은 취소되며, 가능한 경우 타 과목 재배치 또는 다른 업무로 조정 가능</li></ul><p>② OA (Office Assistant)</p><p>• 모집 인원: 3명 (인사캠)</p><p>• 주요 업무: WISE Office 운영 및 행정 지원, 프로그램 제반 업무 전반 관리</p><p>• 활동 혜택: 수료증 발급, 교환학생 가산점</p><p>• 시급: 2026년 10,320원, 2027년 10,700원 (세전)</p><p>• 유의 사항:</p><ul><li>재학생 및 휴학생 모두 지원 가능</li><li>WISE 수업 수강 불가</li><li>문화행사 일부 참석 가능</li></ul><p>③ HA (Housing Assistant)</p><p>• 모집 인원: 각 기숙사(G하우스 및 E하우스) 당 3명 예정 (주간 1명, 야간 2명)</p><p>• 주요 업무: WISE 참가자 대상 기숙사(G하우스) 운영 및 생활 지원</p><p>• 활동 혜택: 수료증 발급, 교환학생 가산점</p><p>• 시급: 2026년 10,320원, 2027년 10,700원 (세전)</p><p>• 유의 사항:</p><ul><li>재학생 및 휴학생 모두 지원 가능</li><li>문화행사 일부 참석 가능</li><li>수강신청을 이미 완료한 경우, 합격 시 환불 관련 별도 안내 예정</li></ul><p>2. 직무별 근무 기간 및 시간</p><p>• TA: 2026. 12. 21.(월)~2027. 1. 8.(금)</p><p>• OA: 2026. 12. 17.(목)~2027. 1. 8.(금) (공휴일 및 주말 휴무)</p><ul><li>08:00~17:30</li></ul><p>• HA: 2026. 12. 20.(일)~2027. 1. 10.(일)</p><ul><li>07:00~12:00</li><li>17:00~22:00</li><li>22:00~익일 05:00</li></ul><p>※ 체크인 및 체크아웃일은 본인 근무시간에 상관없이 추가근로 필수</p><p>※ 공휴일 및 주말 포함하여 기간 내 모든 날짜 근무 가능할 경우만 지원할 것</p><p>3. 지원 방법</p><p>• 제출 기한: 2026. 11. 11.(수) 17:00까지</p><p>• 제출 서류: 첨부된 공고 및 지원서 양식 확인 후 작성 (한국어/영어 중 자유롭게 작성)</p><p>• 제출 방법: 구글 폼 제출 (<a href=\"https://forms.gle/Tov2dDbKMJnZTLzN7)\">https://forms.gle/Tov2dDbKMJnZTLzN7)</a></p><ul><li>필수 사항: 반드시 성균관대 킹고메일(@g.skku.edu) 계정으로 접속 (개인 Gmail 사용 불가)</li></ul><p>• 파일명 양식: 지원분야_이름.pdf (예: TA_김명륜.pdf / OA_김율전.pdf / HA_홍길동.pdf)</p><p>• 면접 안내: 면접은 한국어와 영어로 모두 진행되며, 질문받은 언어로 답변</p><p>4. 선발 일정</p><p>• 서류 심사 결과: 추후 공지 (면접 결과는 이메일로 개별 연락 예정)</p><p>• 면접 일정: 11. 17.(화)~11. 20.(목) 중 진행 (대면 면접)</p><p>• 조교 오리엔테이션: 12. 17.(목) 15:00, 국제관 (예정)</p><ul><li>최종 선발된 TA 및 OA는 프로그램 원활한 운영을 위해 필수 참석</li><li>HA 오리엔테이션은 별도 진행 예정</li></ul><p>5. 문의처: 국제교류팀 WISE Office</p><p>• Tel: 02-760-0184</p><p>• Email: skkuwinter@skku.edu</p><p>• 홈페이지: <a href=\"https://winter.skku.edu\">https://winter.skku.edu</a></p>",
+      "body_html": "<p>1. 모집 분야 및 상세 업무</p><p>※ 공통 유의사항: 각 직무 간 중복 지원이 가능하며, 세부 업무 및 일정은 추후 변경될 수 있습니다.</p><p>① TA (Teaching Assistant)</p><p>• 모집 인원: 과목당 1~2명</p><p>• 주요 업무: WISE 교수 강의 지원, 문화체험 활동 참여 및 인솔 지원</p><p>• 활동 혜택: 해당 과목 수업료 면제, 문화체험비 면제, 수료증 발급, 교환학생 가산점</p><p>• 유의 사항:</p><ul><li>1개 수업에 한하여 신청 가능 (지원 가능 과목은 첨부 엑셀 파일 참고)</li><li>문화행사 필수 참석</li><li>수업 폐강 시 TA 배정은 취소되며, 가능한 경우 타 과목 재배치 또는 다른 업무로 조정 가능</li></ul><p>② OA (Office Assistant)</p><p>• 모집 인원: 3명 (인사캠)</p><p>• 주요 업무: WISE Office 운영 및 행정 지원, 프로그램 제반 업무 전반 관리</p><p>• 활동 혜택: 수료증 발급, 교환학생 가산점</p><p>• 시급: 2026년 10,320원, 2027년 10,700원 (세전)</p><p>• 유의 사항:</p><ul><li>재학생 및 휴학생 모두 지원 가능</li><li>WISE 수업 수강 불가</li><li>문화행사 일부 참석 가능</li></ul><p>③ HA (Housing Assistant)</p><p>• 모집 인원: 각 기숙사(G하우스 및 E하우스) 당 3명 예정 (주간 1명, 야간 2명)</p><p>• 주요 업무: WISE 참가자 대상 기숙사(G하우스) 운영 및 생활 지원</p><p>• 활동 혜택: 수료증 발급, 교환학생 가산점</p><p>• 시급: 2026년 10,320원, 2027년 10,700원 (세전)</p><p>• 유의 사항:</p><ul><li>재학생 및 휴학생 모두 지원 가능</li><li>문화행사 일부 참석 가능</li><li>수강신청을 이미 완료한 경우, 합격 시 환불 관련 별도 안내 예정</li></ul><p>2. 직무별 근무 기간 및 시간</p><p>• TA: 2026. 12. 21.(월)~2027. 1. 8.(금)</p><p>• OA: 2026. 12. 17.(목)~2027. 1. 8.(금) (공휴일 및 주말 휴무)</p><ul><li>08:00~17:30</li></ul><p>• HA: 2026. 12. 20.(일)~2027. 1. 10.(일)</p><ul><li>07:00~12:00</li><li>17:00~22:00</li><li>22:00~익일 05:00</li></ul><p>※ 체크인 및 체크아웃일은 본인 근무시간에 상관없이 추가근로 필수</p><p>※ 공휴일 및 주말 포함하여 기간 내 모든 날짜 근무 가능할 경우만 지원할 것</p><p>3. 지원 방법</p><p>• 제출 기한: 2026. 11. 11.(수) 17:00까지</p><p>• 제출 서류: 첨부된 공고 및 지원서 양식 확인 후 작성 (한국어/영어 중 자유롭게 작성)</p><p>• 제출 방법: 구글 폼 제출 (<a href=\"https://forms.gle/Tov2dDbKMJnZTLzN7)\">https://forms.gle/Tov2dDbKMJnZTLzN7)</a></p><ul><li>필수 사항: 반드시 성균관대 킹고메일(@g.skku.edu) 계정으로 접속 (개인 Gmail 사용 불가)</li></ul><p>• 파일명 양식: 지원분야_이름.pdf (예: TA_김명륜.pdf / OA_김율전.pdf / HA_홍길동.pdf)</p><p>• 면접 안내: 면접은 한국어와 영어로 모두 진행되며, 질문받은 언어로 답변</p><p>4. 선발 일정</p><p>• 서류 심사 결과: 추후 공지 (면접 결과는 이메일로 개별 연락 예정)</p><p>• 면접 일정: 11. 17.(화)~11. 20.(금) 중 진행 (대면 면접)</p><p>• 조교 오리엔테이션: 12. 17.(목) 15:00, 국제관 (예정)</p><ul><li>최종 선발된 TA 및 OA는 프로그램 원활한 운영을 위해 필수 참석</li><li>HA 오리엔테이션은 별도 진행 예정</li></ul><p>5. 문의처: 국제교류팀 WISE Office</p><p>• Tel: 02-760-0184</p><p>• Email: skkuwinter@skku.edu</p><p>• 홈페이지: <a href=\"https://winter.skku.edu\">https://winter.skku.edu</a></p>",
       "images": [],
-      "summary": "11월 11일 17시까지 구글 폼을 통해 지원서를 제출하면 됩니다. 성균관대 킹고메일 계정으로 접속하여 지원 분야별 양식을 작성하시기 바랍니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-06T07:55:06.332804+09:00",
-      "body_attempted_at": "2026-11-06T07:55:06.332804+09:00",
+      "body_attempts": 2,
+      "fetched_at": "2026-11-10T00:10:24.719526+09:00",
+      "body_attempted_at": "2026-11-10T00:10:24.719526+09:00",
+      "rechecked_at": "2026-11-10T00:10:24.719526+09:00",
+      "page_text": "1. 모집 분야 및 상세 업무\n※ 공통 유의사항: 각 직무 간 중복 지원이 가능하며, 세부 업무 및 일정은 추후 변경될 수 있습니다.\n① TA (Teaching Assistant)\n• 모집 인원: 과목당 1~2명\n• 주요 업무: WISE 교수 강의 지원, 문화체험 활동 참여 및 인솔 지원\n• 활동 혜택: 해당 과목 수업료 면제, 문화체험비 면제, 수료증 발급, 교환학생 가산점\n• 유의 사항:\n- 1개 수업에 한하여 신청 가능 (지원 가능 과목은 첨부 엑셀 파일 참고)\n- 문화행사 필수 참석\n- 수업 폐강 시 TA 배정은 취소되며, 가능한 경우 타 과목 재배치 또는 다른 업무로 조정 가능\n② OA (Office Assistant)\n• 모집 인원: 3명 (인사캠)\n• 주요 업무: WISE Office 운영 및 행정 지원, 프로그램 제반 업무 전반 관리\n• 활동 혜택: 수료증 발급, 교환학생 가산점\n• 시급: 2026년 10,320원, 2027년 10,700원 (세전)\n• 유의 사항:\n- 재학생 및 휴학생 모두 지원 가능\n- WISE 수업 수강 불가\n- 문화행사 일부 참석 가능\n③ HA (Housing Assistant)\n• 모집 인원: 각 기숙사(G하우스 및 E하우스) 당 3명 예정 (주간 1명, 야간 2명)\n• 주요 업무: WISE 참가자 대상 기숙사(G하우스) 운영 및 생활 지원\n• 활동 혜택: 수료증 발급, 교환학생 가산점\n• 시급: 2026년 10,320원, 2027년 10,700원 (세전)\n• 유의 사항:\n- 재학생 및 휴학생 모두 지원 가능\n- 문화행사 일부 참석 가능\n- 수강신청을 이미 완료한 경우, 합격 시 환불 관련 별도 안내 예정\n\n2. 직무별 근무 기간 및 시간\n• TA: 2026. 12. 21.(월)~2027. 1. 8.(금)\n• OA: 2026. 12. 17.(목)~2027. 1. 8.(금) (공휴일 및 주말 휴무)\n- 08:00~17:30\n• HA: 2026. 12. 20.(일)~2027. 1. 10.(일)\n- 07:00~12:00\n- 17:00~22:00\n- 22:00~익일 05:00\n※ 체크인 및 체크아웃일은 본인 근무시간에 상관없이 추가근로 필수\n※ 공휴일 및 주말 포함하여 기간 내 모든 날짜 근무 가능할 경우만 지원할 것\n\n3. 지원 방법\n• 제출 기한: 2026. 11. 11.(수) 17:00까지\n• 제출 서류: 첨부된 공고 및 지원서 양식 확인 후 작성 (한국어/영어 중 자유롭게 작성)\n• 제출 방법: 구글 폼 제출 (https://forms.gle/Tov2dDbKMJnZTLzN7)\n- 필수 사항: 반드시 성균관대 킹고메일(@g.skku.edu) 계정으로 접속 (개인 Gmail 사용 불가)\n• 파일명 양식: 지원분야_이름.pdf (예: TA_김명륜.pdf / OA_김율전.pdf / HA_홍길동.pdf)\n• 면접 안내: 면접은 한국어와 영어로 모두 진행되며, 질문받은 언어로 답변\n\n4. 선발 일정\n• 서류 심사 결과: 추후 공지 (면접 결과는 이메일로 개별 연락 예정)\n• 면접 일정: 11. 17.(화)~11. 20.(금) 중 진행 (대면 면접)\n• 조교 오리엔테이션: 12. 17.(목) 15:00, 국제관 (예정)\n- 최종 선발된 TA 및 OA는 프로그램 원활한 운영을 위해 필수 참석\n- HA 오리엔테이션은 별도 진행 예정\n\n5. 문의처: 국제교류팀 WISE Office\n• Tel: 02-760-0184\n• Email: skkuwinter@skku.edu\n• 홈페이지: https://winter.skku.edu",
+      "changed_at": "2026-11-10T00:10:24.719526+09:00",
+      "change_kind": "본문",
       "ai_deadline": {
         "checked": true,
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-11T17:00:00+09:00"
       },
-      "rechecked_at": "2026-11-09T11:18:13.058572+09:00",
-      "page_text": "1. 모집 분야 및 상세 업무\n※ 공통 유의사항: 각 직무 간 중복 지원이 가능하며, 세부 업무 및 일정은 추후 변경될 수 있습니다.\n① TA (Teaching Assistant)\n• 모집 인원: 과목당 1~2명\n• 주요 업무: WISE 교수 강의 지원, 문화체험 활동 참여 및 인솔 지원\n• 활동 혜택: 해당 과목 수업료 면제, 문화체험비 면제, 수료증 발급, 교환학생 가산점\n• 유의 사항:\n- 1개 수업에 한하여 신청 가능 (지원 가능 과목은 첨부 엑셀 파일 참고)\n- 문화행사 필수 참석\n- 수업 폐강 시 TA 배정은 취소되며, 가능한 경우 타 과목 재배치 또는 다른 업무로 조정 가능\n② OA (Office Assistant)\n• 모집 인원: 3명 (인사캠)\n• 주요 업무: WISE Office 운영 및 행정 지원, 프로그램 제반 업무 전반 관리\n• 활동 혜택: 수료증 발급, 교환학생 가산점\n• 시급: 2026년 10,320원, 2027년 10,700원 (세전)\n• 유의 사항:\n- 재학생 및 휴학생 모두 지원 가능\n- WISE 수업 수강 불가\n- 문화행사 일부 참석 가능\n③ HA (Housing Assistant)\n• 모집 인원: 각 기숙사(G하우스 및 E하우스) 당 3명 예정 (주간 1명, 야간 2명)\n• 주요 업무: WISE 참가자 대상 기숙사(G하우스) 운영 및 생활 지원\n• 활동 혜택: 수료증 발급, 교환학생 가산점\n• 시급: 2026년 10,320원, 2027년 10,700원 (세전)\n• 유의 사항:\n- 재학생 및 휴학생 모두 지원 가능\n- 문화행사 일부 참석 가능\n- 수강신청을 이미 완료한 경우, 합격 시 환불 관련 별도 안내 예정\n\n2. 직무별 근무 기간 및 시간\n• TA: 2026. 12. 21.(월)~2027. 1. 8.(금)\n• OA: 2026. 12. 17.(목)~2027. 1. 8.(금) (공휴일 및 주말 휴무)\n- 08:00~17:30\n• HA: 2026. 12. 20.(일)~2027. 1. 10.(일)\n- 07:00~12:00\n- 17:00~22:00\n- 22:00~익일 05:00\n※ 체크인 및 체크아웃일은 본인 근무시간에 상관없이 추가근로 필수\n※ 공휴일 및 주말 포함하여 기간 내 모든 날짜 근무 가능할 경우만 지원할 것\n\n3. 지원 방법\n• 제출 기한: 2026. 11. 11.(수) 17:00까지\n• 제출 서류: 첨부된 공고 및 지원서 양식 확인 후 작성 (한국어/영어 중 자유롭게 작성)\n• 제출 방법: 구글 폼 제출 (https://forms.gle/Tov2dDbKMJnZTLzN7)\n- 필수 사항: 반드시 성균관대 킹고메일(@g.skku.edu) 계정으로 접속 (개인 Gmail 사용 불가)\n• 파일명 양식: 지원분야_이름.pdf (예: TA_김명륜.pdf / OA_김율전.pdf / HA_홍길동.pdf)\n• 면접 안내: 면접은 한국어와 영어로 모두 진행되며, 질문받은 언어로 답변\n\n4. 선발 일정\n• 서류 심사 결과: 추후 공지 (면접 결과는 이메일로 개별 연락 예정)\n• 면접 일정: 11. 17.(화)~11. 20.(목) 중 진행 (대면 면접)\n• 조교 오리엔테이션: 12. 17.(목) 15:00, 국제관 (예정)\n- 최종 선발된 TA 및 OA는 프로그램 원활한 운영을 위해 필수 참석\n- HA 오리엔테이션은 별도 진행 예정\n\n5. 문의처: 국제교류팀 WISE Office\n• Tel: 02-760-0184\n• Email: skkuwinter@skku.edu\n• 홈페이지: https://winter.skku.edu"
+      "summary": "성균관대학교에서 2026학년도 국제동계학기(WISE)를 운영할 TA, OA, HA 조교를 모집합니다. 지원 자격과 직무별 근무 기간을 확인하여 2026년 11월 11일 17시까지 구글 폼을 통해 신청해야 합니다. 제출 시 반드시 학교 킹고메일 계정을 사용해야 하며, 면접은 11월 17일부터 20일 사이에 대면으로 진행됩니다.",
+      "summary_last_failed_at": null,
+      "change_notified": "2026-11-10T00:10:24.719526+09:00"
     },
     "skku-notice01/140823": {
       "notice": {
@@ -5191,7 +5475,7 @@
       "body_attempts": 1,
       "fetched_at": "2026-11-06T07:55:06.332804+09:00",
       "body_attempted_at": "2026-11-06T07:55:06.332804+09:00",
-      "rechecked_at": "2026-11-09T11:18:13.058572+09:00",
+      "rechecked_at": "2026-11-10T00:10:24.719526+09:00",
       "page_text": "안녕하세요, 성균관대학교 학우 여러분.\n\n해외 학생들과 함께 수업을 들으며 글로벌 역량을 키우고 계절학기 학점도 취득할 수 있는 2026학년도 국제동계학기 WISE 프로그램에 대해 안내드리니 학우 여러분의 많은 관심과 참여 바랍니다.\n\n○ 프로그램 기간: 2026. 12. 22.(화)~2027. 1. 7.(목)\n\n○ 수업 시간: 매주 월요일~금요일 / 오전 (09:00~12:30), 오후 (13:30~17:00)\n※ 주말 및 공휴일 휴강 (단, 1/1(금) 강의는 사전 녹화된 온라인 강의로 대체)\n\n○ 수강 대상: 본교 학부 재학생 및 휴학생\n※ 휴학생 유의사항: WISE 수강을 통해 졸업학점을 충족하더라도, 반드시 이후에 정규학기를 등록해야 졸업 가능. (휴학생의 계절수업 신청은 재적기간 중 2회에 한함)\n\n○ 장소: 성균관대학교 인문사회과학캠퍼스\n\n○ 수강신청 일정: 2026. 11. 26.(목) 10:00~12. 10.(목) 17:00\n※ 1차, 2차 구분 없음\n\n○ 수강료 납부 기한: 2026. 12. 10.(목) 17:00\n※ 납부 기한 내에 반드시 등록금 납부까지 완료하여야 하며, 등록금을 미납한 경우 수강신청 내역은 자동 삭제됩니다.\n\n○ 수강료: 과목별 450,000원\n\n○ 신청 방법: GLS > 수업영역 > 학부수강신청 > ISS/WISE\n\n○ 수강 혜택 및 학점 규정:\n- 학점 인정: 최대 6학점 인정 (WISE와 일반 계절수업을 합쳐서 최대 6학점 이내, 학년도 당 9학점 이내)\n- 유의사항: 전공으로 인정되지 않는 과목은 '일반선택'(전공X, 교양X)으로 취득됨\n- 추가 혜택: 신(新)글로벌품 시간 부여(학점당 15시간 / 22학번부터), 교환학생 지원 시 가산점 부여\n\n○ 참고사항:\n- 강의계획서 확인: https://winter.skku.edu/winter/intro/Course.do\n- 전공 인정 학과: 첨부파일 참고\n- 문화체험 프로그램: 본교생에게도 부분적으로 오픈될 예정이며, 해외 학생들과 함께 참여가능\n※ 단, 일부 활동은 참가비가 있을 수 있으며, 자세한 내용 추후 안내 예정.\n\n○ 문의처: 국제교류팀 WISE Office (02-760-0184 / skkuwinter@skku.edu)\n\n--------------------\n\nHello, Sungkyunkwan University students.\n\nWe are pleased to announce the 2026 Winter International Student Experience (WISE) programme. We look forward to your interest and participation.\n\n○ Programme Period: December 22, 2026 (Tue) ~ January 7, 2027 (Thu)\n\n○ Class Hours: Every Monday to Friday / Morning (09:00~12:30), Afternoon (13:30~17:00)\n- Note: No classes at weekends and public holidays (However, the January 1 (Fri) class will be replaced by a pre-recorded online lecture).\n\n○ Eligibility: Current undergraduate students and students on a leave of absence (LOA) at SKKU.\n- Note for students on LOA: Even if you meet graduation credit requirements through WISE, you must register for a regular semester afterward in order to graduate. (Students on LOA can apply for seasonal semesters up to 2 times during their enrollment period).\n\n○ Location: Humanities and Social Sciences Campus, Sungkyunkwan University\n\n○ Course Registration Period: November 26, 2026 (Thu) 10:00 ~ December 10, 2026 (Thu) 17:00\n\n○ Tuition Payment Deadline: December 10, 2026 (Thu) 17:00\n- Note: Tuition payment must be completed within the deadline. If unpaid, the course registration will be automatically canceled.\n\n○ Tuition Fee: 450,000 KRW per course\n\n○ How to Apply: GLS > Course Area > Undergraduate Course Registration > ISS/WISE\n\n○ Benefits & Credit Regulations:\n- Credit Recognition: Up to 6 credits (Maximum of 6 credits combined between WISE and regular winter sessions, and up to 9 credits per academic year).\n- Note: Courses not recognised as major credits will be classified as 'General Elective'.\n- Additional Benefits: 5 points given when applying for exchange student programs.\n\n○ Additional Information:\n- Course Syllabus: https://winter.skku.edu/winter/intro/Course.do\n- Departments Recognizing Major Credits: Please refer to the attached file.\n- Cultural Experience Programs: Will be partially open to SKKU students, allowing you to participate alongside international students. (Note: Some activities may require a participation fee. Details will be announced at a later date.)\n\n○ Inquiries: WISE Office (02-760-0184 / skkuwinter@skku.edu)"
     },
     "linkareer-intern/362548": {

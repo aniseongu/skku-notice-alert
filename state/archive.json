@@ -55,6 +55,340 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-career-intern/165093": {
+      "notice": {
+        "id": "skku-career-intern/165093",
+        "source_id": "skku-career-intern",
+        "article_no": "165093",
+        "title": "[디노티시아] 전략팀 인턴 채용",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=6MY2dg8AWPUp5Ji79RshokgY2bX0myBKeBq5pImhshE&modalChk=Y",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T09:27:51.504802+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "maybe",
+          "reason": "전략팀 인턴의 구체적인 업무 내용과 자격 요건이 본문에 명시되지 않아 소프트웨어 직무 관련성을 판단하기 어렵습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "전략팀_인턴_JD.docx",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "전략팀_인턴_JD.docx",
+          "url": "https://job.skku.edu/upload/Recruit/20261109_38032273/전략팀_인턴_JD.docx",
+          "type": "DOCX",
+          "size": null
+        }
+      ],
+      "body_html": "<span><div><a href=\"https://job.skku.edu/upload/Recruit/20261109_38032273/전략팀_인턴_JD.docx\">전략팀_인턴_JD.docx</a></div><br></span>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T09:27:51.504802+09:00",
+      "body_attempted_at": "2026-11-09T09:27:51.504802+09:00",
+      "intern_judgment": {
+        "fingerprint": "df9f053bd78bb390b50ee0e397397b43f00666ece6e05063c3ba12c4a6a66784",
+        "verdict": "maybe",
+        "reason": "전략팀 인턴의 구체적인 업무 내용과 자격 요건이 본문에 명시되지 않아 소프트웨어 직무 관련성을 판단하기 어렵습니다.",
+        "model": "gemini-3.1-flash-lite"
+      },
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165091": {
+      "notice": {
+        "id": "skku-career-intern/165091",
+        "source_id": "skku-career-intern",
+        "article_no": "165091",
+        "title": "[와디즈] 마케팅 PD (MD성장형포지션) 채용(채용연계형 인턴)",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=6MY2dg8AWPUp5Ji79Rshog7uZi9OfbxLIkCKheZNyNL&modalChk=Y",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T09:27:51.504802+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "마케팅 PD 직무는 광고 운영 및 콘텐츠 기획을 담당하는 비개발 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "자격요건 : 졸업예정자, 졸업자 가능\n\n고용형태 : 채용 연계형 인턴 (6개월 이후 정규직 전환 기회 부여)\n\n\n링크: https://job.wadiz.io/ko/wbd-mpd",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><ul><li><p>자격요건 : 졸업예정자, 졸업자 가능</p></li><li><p>고용형태 : 채용 연계형 인턴 (6개월 이후 정규직 전환 기회 부여)<br></p></li><li><p>링크: <span><a href=\"https://job.wadiz.io/ko/wbd-mpd\">https://job.wadiz.io/ko/wbd-mpd</a></span></p></li></ul><div><span><br></span></div><div></div><div><img src=\"https://job.skku.edu/upload/Recruit/20261109_11244377/다운로드 - 2026-11-09T091656.449.png\"></div><br></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261109_11244377/다운로드 - 2026-11-09T091656.449.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T09:27:51.504802+09:00",
+      "body_attempted_at": "2026-11-09T09:27:51.504802+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "65a20d6ed2b253beb34bc12995e2d9ca2eb959f6634f315feed048433e5c19c7",
+        "verdict": "not_relevant",
+        "reason": "마케팅 PD 직무는 광고 운영 및 콘텐츠 기획을 담당하는 비개발 직무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165089": {
+      "notice": {
+        "id": "skku-career-intern/165089",
+        "source_id": "skku-career-intern",
+        "article_no": "165089",
+        "title": "[타임퍼센트] 그로스마케터 인턴채용 (금융, 알고리즘 트레이딩, 퀀트)",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=6MY2dg8AWPUp5Ji79Rshoj6dSUsrdJOh9JKQGGaoZr4&modalChk=Y",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T09:27:51.504802+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "금융 및 알고리즘 트레이딩, 퀀트 관련 그로스마케터 직무는 데이터 분석 역량을 활용하는 소프트웨어 관련 직무로 판단됩니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "타임퍼센트 그로스마케터 인턴 채용 지원링크 >\n홈페이지: timepercentcorp.com\n\n\n\nRecruiting_Growth_Marketer_Intern_Timepercent.pdf",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "Recruiting_Growth_Marketer_Intern_Timepercent.pdf",
+          "url": "https://job.skku.edu/upload/Recruit/20261109_17202513/Recruiting_Growth_Marketer_Intern_Timepercent.pdf",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<span><div><div><a href=\"https://timepercentcorp.com/recruit/growth-marketer-intern\">타임퍼센트 그로스마케터 인턴 채용 지원링크 &gt;</a></div><div>홈페이지: <a href=\"http://timepercentcorp.com/\">timepercentcorp.com</a></div></div><div><br></div><div><div><a href=\"https://job.skku.edu/upload/Recruit/20261109_17202513/Recruiting_Growth_Marketer_Intern_Timepercent.pdf\">Recruiting_Growth_Marketer_Intern_Timepercent.pdf</a></div><br></div></span>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T09:27:51.504802+09:00",
+      "body_attempted_at": "2026-11-09T09:27:51.504802+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "78593dbb4a37582ee99290ce96b97d68cb7e6b3370164798432d06963afdc581",
+        "verdict": "relevant",
+        "reason": "금융 및 알고리즘 트레이딩, 퀀트 관련 그로스마케터 직무는 데이터 분석 역량을 활용하는 소프트웨어 관련 직무로 판단됩니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165085": {
+      "notice": {
+        "id": "skku-career-intern/165085",
+        "source_id": "skku-career-intern",
+        "article_no": "165085",
+        "title": "[아이엔지은행] Financial Markets 금융시장부 (증권) 인턴 모집",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=6MY2dg8AWPUp5Ji79RshoiLdXhPnDWC57Jjjg07ES0T&modalChk=Y",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T09:27:51.504802+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "금융시장부 세일즈 인턴은 금융권 영업 및 시장 분석을 담당하는 비개발 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "Financial Markets 금융시장부 (증권)\n\n(Sec) Financial Markets Sales Intern - 2027 1H",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><ul><li><span>Financial Markets <span lang=\"KO\">금융시장부</span> (<span lang=\"KO\">증권</span>)</span><span lang=\"EN-US\"></span></li><ul><li><span><a href=\"https://ing.wd3.myworkdayjobs.com/ICSGBLCOR/job/Seoul/XMLNAME--Sec--Financial-Markets-Sales-Intern---2027-1H_REQ-10124316\">(Sec) Financial Markets Sales Intern - 2027 1H</a></span></li></ul></ul></span>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T09:27:51.504802+09:00",
+      "body_attempted_at": "2026-11-09T09:27:51.504802+09:00",
+      "intern_judgment": {
+        "fingerprint": "4dec045cc3ab1b64ede4aa96426f8b7aeb0d726673984e56b27ea29a4995f0e3",
+        "verdict": "not_relevant",
+        "reason": "금융시장부 세일즈 인턴은 금융권 영업 및 시장 분석을 담당하는 비개발 직무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      },
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165084": {
+      "notice": {
+        "id": "skku-career-intern/165084",
+        "source_id": "skku-career-intern",
+        "article_no": "165084",
+        "title": "[한국관광공사] 2027년 체험형 청년인턴 및 기간제 근로자 채용공고",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=6MY2dg8AWPUp5Ji79RsholEFhguxQNVI249x4AOZhnX&modalChk=Y",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T09:27:51.504802+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "공공기관의 일반 행정 및 사무보조 인턴은 소프트웨어 개발 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "■ 한국관광공사 2027년 체험형 청년인턴 및 기간제 근로자 채용공고(1분기)\n\n\n☞접수기간 : 2026년 11월 3일(화) 14:00 ~ 11월 11일(수) 12:00까지\n☞채용인원 : 총 39명(체험형 청년인턴 35명, 기간제 근로자 4명)\n☞지원자격 : 분야별 상이\n\n☞전형절차 : 서류전형 – 면접전형 - 최종합격자 선정\n☞공고링크 : https://kto.recruit-zone.co.kr/recruits/6ad1dc5a6c7f4839a32b73fa\n\n\n※ 채용과 관련된 자세한 사항은 공고링크에서 확인 부탁드립니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><div><span>■ </span><span>한국관광공사 2027년 체험형 청년인턴 및 기간제 근로자 채용공고(1분기)</span></div><div><span><br></span></div><div><span>☞접수기간 : 2026년 11월 3일(화) 14:00 ~ 11월 11일(수) 12:00까지</span></div><div><span>☞채용인원 : 총 39명(체험형 청년인턴 35명, 기간제 근로자 4명)</span></div><div><span>☞지원자격 : 분야별 상이</span><span><br></span></div><div><span>☞전형절차 : 서류전형 – 면접전형 - 최종합격자 선정</span></div><div><span>☞공고링크 : </span><span><a href=\"https://kto.recruit-zone.co.kr/recruits/6ad1dc5a6c7f4839a32b73fa\">https://kto.recruit-zone.co.kr/recruits/6ad1dc5a6c7f4839a32b73fa</a></span></div><div><span><br></span></div><div><span>※ 채용과 관련된 자세한 사항은 공고링크에서 확인 부탁드립니다.<div><img src=\"https://job.skku.edu/upload/Recruit/20261109_33533756/01.공고문 이미지.png\"></div></span></div></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261109_33533756/01.공고문 이미지.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T09:27:51.504802+09:00",
+      "body_attempted_at": "2026-11-09T09:27:51.504802+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-11T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "7084e6eae6c575fa463cadf4b3e35673671f91c7005348b90b5667506e4e5422",
+        "verdict": "not_relevant",
+        "reason": "공공기관의 일반 행정 및 사무보조 인턴은 소프트웨어 개발 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/362716": {
+      "notice": {
+        "id": "linkareer-intern/362716",
+        "source_id": "linkareer-intern",
+        "article_no": "362716",
+        "title": "[LG생활건강] 소셜크루 25기 채용 공고",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/362716",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T09:27:51.504802+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "소셜크루는 SNS 채널 운영 및 콘텐츠 제작을 담당하는 마케팅 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/982296\" title=\"(최종)소셜크루 모집 공고 페이지 버튼x_조윤정 책임님_김희영d_261030_v02.jpg\"><br><br></p></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/982296"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T09:27:51.504802+09:00",
+      "body_attempted_at": "2026-11-09T09:27:51.504802+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "ee39bf4783221b10a88e586d1fb3ed11265ede368767bb83a9f2d0b9379016ab",
+        "verdict": "not_relevant",
+        "reason": "소셜크루는 SNS 채널 운영 및 콘텐츠 제작을 담당하는 마케팅 직무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "jasoseol-intern/107122": {
       "notice": {
         "id": "jasoseol-intern/107122",
@@ -631,7 +965,7 @@
         "kind": "일정",
         "at": "2026-12-01T18:30:00+09:00"
       },
-      "rechecked_at": "2026-11-08T20:35:35.771342+09:00"
+      "rechecked_at": "2026-11-09T09:27:51.504802+09:00"
     },
     "linkareer-intern/362738": {
       "notice": {
@@ -4226,7 +4560,7 @@
         "kind": "마감",
         "at": "2026-11-25T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-08T20:35:35.771342+09:00"
+      "rechecked_at": "2026-11-09T09:27:51.504802+09:00"
     },
     "sw-notice/228121": {
       "notice": {
@@ -4274,7 +4608,7 @@
         "kind": "일정",
         "at": "2026-11-21T13:00:00+09:00"
       },
-      "rechecked_at": "2026-11-08T20:35:35.771342+09:00"
+      "rechecked_at": "2026-11-09T09:27:51.504802+09:00"
     },
     "skku-notice01/141610": {
       "notice": {

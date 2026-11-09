@@ -55,6 +55,286 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/363127": {
+      "notice": {
+        "id": "linkareer-intern/363127",
+        "source_id": "linkareer-intern",
+        "article_no": "363127",
+        "title": "[카카오뱅크] DevOps 엔지니어 (채용연계형 인턴)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363127",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T20:29:39.855806+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "소프트웨어 관련 직무인 DevOps 엔지니어 인턴 공고이며, 학부생이 지원 가능한 자격 요건을 갖추고 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[카카오뱅크] DevOps 엔지니어 (채용연계형 인턴)\n\n\n[담당업무]\n현업 엔지니어와 함께 아래 업무 중 일부를 맡아 수행합니다.\n· 카카오뱅크 표준 CI/CD 파이프라인 개선 및 CLI 도구 기능 개발 참여 (GitLab CI, Go)\n· GitLab, ArgoCD, Nexus, JFrog, AWX 등 CI/CD 도구 운영 보조 및 자동화 작업 (AWS EKS, Helm, GitOps)\n· 카카오뱅크 배포 Workflow 시스템 기능 개발 참여\n· 담당 업무와 관련된 기술 문서 작성 및 결과 공유\n\n\n[접수기간]\n11월 09일 ~ 11월 25일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[카카오뱅크] DevOps 엔지니어 (채용연계형 인턴)</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>현업 엔지니어와 함께 아래 업무 중 일부를 맡아 수행합니다.</span></p><p><span>· 카카오뱅크 표준 CI/CD 파이프라인 개선 및 CLI 도구 기능 개발 참여 (GitLab CI, Go)</span></p><p><span>· GitLab, ArgoCD, Nexus, JFrog, AWX 등 CI/CD 도구 운영 보조 및 자동화 작업 (AWS EKS, Helm, GitOps)</span></p><p><span>· 카카오뱅크 배포 Workflow 시스템 기능 개발 참여</span></p><p><span>· 담당 업무와 관련된 기술 문서 작성 및 결과 공유</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 09일 ~ 11월 25일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/983927\" title=\"스크린샷_9-11-2026_193742_recruit.kakaobank.com.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/983927"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T20:29:39.855806+09:00",
+      "page_text": "[카카오뱅크] DevOps 엔지니어 (채용연계형 인턴)\n\n\n[담당업무]\n현업 엔지니어와 함께 아래 업무 중 일부를 맡아 수행합니다.\n· 카카오뱅크 표준 CI/CD 파이프라인 개선 및 CLI 도구 기능 개발 참여 (GitLab CI, Go)\n· GitLab, ArgoCD, Nexus, JFrog, AWX 등 CI/CD 도구 운영 보조 및 자동화 작업 (AWS EKS, Helm, GitOps)\n· 카카오뱅크 배포 Workflow 시스템 기능 개발 참여\n· 담당 업무와 관련된 기술 문서 작성 및 결과 공유\n\n\n[접수기간]\n11월 09일 ~ 11월 25일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-09T20:29:39.855806+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-25T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "79ed5fb69fc3a4e22b42328fccb45c0a0b3a9e07df1a9fbf48e5d05742d53f72",
+        "verdict": "relevant",
+        "reason": "소프트웨어 관련 직무인 DevOps 엔지니어 인턴 공고이며, 학부생이 지원 가능한 자격 요건을 갖추고 있습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363126": {
+      "notice": {
+        "id": "linkareer-intern/363126",
+        "source_id": "linkareer-intern",
+        "article_no": "363126",
+        "title": "[마녀공장] 유럽ㆍ아시아 사업본부 전환형 인턴 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363126",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T20:29:39.855806+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "영업, 마케팅, 상품 전략 직무로 소프트웨어 개발과 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/983919\" title=\"합본.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/983919"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T20:29:39.855806+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-09T20:29:39.855806+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "4a4d1f39cebd77141aeb79cea23643ba133ef714b565626a40083f6ca4272c95",
+        "verdict": "not_relevant",
+        "reason": "영업, 마케팅, 상품 전략 직무로 소프트웨어 개발과 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363125": {
+      "notice": {
+        "id": "linkareer-intern/363125",
+        "source_id": "linkareer-intern",
+        "article_no": "363125",
+        "title": "[마녀공장] 일본 사업본부 전환형 인턴 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363125",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T20:29:39.855806+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "영업 및 마케팅 직무로 소프트웨어 개발과 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/983916\" title=\"합본.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/983916"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T20:29:39.855806+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-09T20:29:39.855806+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "9930a056da9b48ca482574623074bf4258b432c26a1a89dcf6c9ee60bfbe52b2",
+        "verdict": "not_relevant",
+        "reason": "영업 및 마케팅 직무로 소프트웨어 개발과 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363124": {
+      "notice": {
+        "id": "linkareer-intern/363124",
+        "source_id": "linkareer-intern",
+        "article_no": "363124",
+        "title": "[마녀공장] 북미 사업본부 전환형 인턴 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363124",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T20:29:39.855806+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "영업 및 마케팅 직무로 소프트웨어 개발과 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/983913\" title=\"합본.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/983913"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T20:29:39.855806+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-09T20:29:39.855806+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "da6f2ee272aac2e8c65d334c66f5f8982eba35107e9c5b2ae0b73d11e02d9658",
+        "verdict": "not_relevant",
+        "reason": "영업 및 마케팅 직무로 소프트웨어 개발과 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363123": {
+      "notice": {
+        "id": "linkareer-intern/363123",
+        "source_id": "linkareer-intern",
+        "article_no": "363123",
+        "title": "[마녀공장] 국내사업본부 전환형 인턴 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363123",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-09T20:29:39.855806+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "영업, 마케팅, 상품 전략 직무로 소프트웨어 개발과 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/983908\" title=\"합본.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/983908"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-09T20:29:39.855806+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-09T20:29:39.855806+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "ddd52994372964f74ddea7081262948fb650bd042f10739577286a6221aab4b7",
+        "verdict": "not_relevant",
+        "reason": "영업, 마케팅, 상품 전략 직무로 소프트웨어 개발과 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "skku-career-intern/165115": {
       "notice": {
         "id": "skku-career-intern/165115",
@@ -475,7 +755,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-16T23:59:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-09T20:29:39.855806+09:00"
     },
     "skku-career-intern/165112": {
       "notice": {
@@ -981,7 +1262,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-12-30T09:00:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-09T20:29:39.855806+09:00"
     },
     "cse-notice/228261": {
       "notice": {
@@ -1023,7 +1305,8 @@
       "body_attempts": 1,
       "fetched_at": "2026-11-09T16:49:09.958586+09:00",
       "page_text": "[그래파이] 2026 하반기 신입/경력 엔지니어 채용 (~11/30)\n\n■ 접수기간\n2026.11.09.(월) - 2026.11.30.(월)\n\n■ 모집 부문\nForward Deployed Engineer (고객 현장 중심 AI 솔루션 개발 및 구축)\nDB Engineer (그래프·벡터·관계형 통합 DB 엔진 개발)\nAI Engineer (온톨로지·에이전트 메모리·클라우드 기반 AI 시스템 개발)\n\n■ 지원 자격\n전 직무 신입·경력 무관 지원 가능합니다.\n전문연구요원 지원 안내: DB Engineer 및 AI Engineer 직무에 한해 지원 가능하며, 이공계 석사 이상 학위 소지자(취득 예정자 포함) 중 신규 편입 또는 전직이 가능한 분을 대상으로 합니다. 전문연구요원은 대전 연구소에서 근무합니다.\n\nTPM·BDM 등 기타 모집 직무 및 상세 지원 요건은 채용 페이지(QR코드)를 통해 확인해 주세요.\n\n■ 근무지\n서울 (*전문연구요원(병특) 제외)\n\n■ 전형 절차\n서류전형 → 1차 면접 → 2차 면접 → 최종합격\n\n※ 직무에 따라 과제 전형이나 PT 면접이 추가될 수 있습니다.\n※ 서류 결과는 2주 안에 개별로 알려 드립니다.\n\n■ 지원 방법\n그래파이 채용 홈페이지(https://graphai.career.greetinghr.com/intro)\n\n■ 문의\n회사 홈페이지: graphai.io\n채용 문의: recruit@graphai.io",
-      "body_attempted_at": "2026-11-09T16:49:09.958586+09:00"
+      "body_attempted_at": "2026-11-09T16:49:09.958586+09:00",
+      "rechecked_at": "2026-11-09T20:29:39.855806+09:00"
     },
     "skku-notice01/141706": {
       "notice": {

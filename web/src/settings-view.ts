@@ -549,39 +549,52 @@ export class SettingsView extends LitElement {
 
   private destroySortable() { this.sortable?.destroy(); this.sortable = null; }
 
-  private moveBoardTo(from: number, to: number, keepFocus: boolean) {
+  // keepFocus는 옮긴 줄에서 다시 포커스할 단추(손잡이, 위, 아래). 끝에 닿아 꺼진 단추면 반대쪽 단추로 간다.
+  private moveBoardTo(from: number, to: number, keepFocus: false | 'handle' | 'up' | 'down') {
     const ids = this.boards.map((b) => b.id);
     const next = moveBoard(ids, from, to);
     if (next === ids) return;
     const moved = this.boards[from];
     this.emit('board-order-change', next);
     this.boardAnnouncement = `${moved.name}, ${to + 1}번째로 옮겼어요`;
-    if (keepFocus) setTimeout(() => this.querySelector<HTMLButtonElement>(`.board-handle[data-id="${CSS.escape(moved.id)}"]`)?.focus(), 0);
+    if (!keepFocus) return;
+    setTimeout(() => {
+      const row = this.querySelector(`.board-order-list li[data-id="${CSS.escape(moved.id)}"]`);
+      const pick = (dir: string) => row?.querySelector<HTMLButtonElement>(dir === 'handle' ? '.board-handle' : `.order-move[data-dir="${dir}"]`);
+      const target = pick(keepFocus);
+      (target && !target.disabled ? target : pick(keepFocus === 'up' ? 'down' : keepFocus === 'down' ? 'up' : 'handle'))?.focus();
+    }, 0);
   }
 
   private onHandleKey(event: KeyboardEvent, index: number) {
     if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') return;
     event.preventDefault();
     event.stopPropagation();
-    this.moveBoardTo(index, index + (event.key === 'ArrowUp' ? -1 : 1), true);
+    this.moveBoardTo(index, index + (event.key === 'ArrowUp' ? -1 : 1), 'handle');
   }
 
   private boardOrderSettings() {
     if (this.boards.length < 2) return nothing;
+    const last = this.boards.length - 1;
+    const chevron = (d: string) => html`<svg class="i" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d=${d}/></svg>`;
     return html`
         <section aria-labelledby="s-board-order">
           <div class="settings-head-row">
             <h2 id="s-board-order" class="settings-head">게시판 순서</h2>
-            <button type="button" class="text-button" @click=${() => { this.reordering = !this.reordering; this.boardAnnouncement = ''; }}>${this.reordering ? '완료' : '순서 바꾸기'}</button>
+            <button type="button" class="head-action" @click=${() => { this.reordering = !this.reordering; this.boardAnnouncement = ''; }}>${this.reordering ? '완료' : '순서 바꾸기'}</button>
           </div>
-          <div class="box">
+          <div class="box ${this.reordering ? 'is-editing' : ''}">
             <ul class="keyword-list board-order-list">${repeat(this.boards, (b) => b.id, (b, index) => html`
               <li data-id=${b.id}><span>${b.name}</span>${this.reordering ? html`
-                <button type="button" class="board-handle" data-id=${b.id} aria-label="${b.name} 순서 옮기기"
-                  @keydown=${(e: KeyboardEvent) => this.onHandleKey(e, index)}>
-                  <svg class="i" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M5 8h14M5 12h14M5 16h14"/></svg>
-                </button>` : nothing}</li>`)}</ul>
-            ${this.reordering ? html`<p class="field-note board-order-help">${matchMedia('(pointer: coarse)').matches ? '손잡이를 끌어서 옮겨요' : '손잡이를 끌거나 방향키로 옮겨요'}</p>` : nothing}
+                <span class="order-controls">
+                  <button type="button" class="order-move" data-dir="up" aria-label="${b.name} 위로 옮기기" ?disabled=${index === 0}
+                    @click=${() => this.moveBoardTo(index, index - 1, 'up')}>${chevron('M6 15l6-6 6 6')}</button>
+                  <button type="button" class="order-move" data-dir="down" aria-label="${b.name} 아래로 옮기기" ?disabled=${index === last}
+                    @click=${() => this.moveBoardTo(index, index + 1, 'down')}>${chevron('M6 9l6 6 6-6')}</button>
+                  <button type="button" class="board-handle" data-id=${b.id} aria-label="${b.name} 순서 옮기기"
+                    @keydown=${(e: KeyboardEvent) => this.onHandleKey(e, index)}>${chevron('M5 8h14M5 12h14M5 16h14')}</button>
+                </span>` : nothing}</li>`)}</ul>
+            ${this.reordering ? html`<p class="field-note board-order-help">끌거나 위아래 단추로 옮겨요. 왼쪽 목록에 바로 반영돼요</p>` : nothing}
             ${this.boardOrderStatus ? html`<p class="field-note ${this.boardOrderStatus.ok ? 'ok' : 'error'}" role="status">${this.boardOrderStatus.text}</p>` : nothing}
             <p class="visually-hidden" aria-live="polite">${this.boardAnnouncement}</p>
           </div>

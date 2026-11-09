@@ -7,7 +7,7 @@ import {
   daysLeft, fetchBody, fetchJson, keywordMatches, koreanDate, postedGroup, safeUrl, todayKst,
 } from './data';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
-import { cleanHtml, fileType } from './rich';
+import { brokenImageListener, cleanHtml, fileType } from './rich';
 import './settings-view';
 import { GitHubError, collectionWorkflowUrl, readVariable, saveVariable, requestCollection } from './github';
 import { loadToken } from './settings-storage';
@@ -759,13 +759,13 @@ export class NoticeApp extends LitElement {
     const paragraphs = (loaded.body ?? '').split(/\n+/).filter(Boolean);
     // 정제한 본문 HTML이 있으면 표, 굵게, 링크, 목록을 살려 그린다(D-016). 그림도 그 안에 들어 있다.
     if (loaded.body_html && !loaded.body_from_image) {
-      return html`<section class="detail-section body-text" aria-label=${heading}><h3>${heading}</h3>
+      return html`<section class="detail-section body-text" aria-label=${heading} @error=${brokenImageListener}><h3>${heading}</h3>
         <div class="rich">${unsafeHTML(cleanHtml(loaded.body_html))}</div></section>`;
     }
     // 그림은 사용자가 볼 때만 학교 서버에서 받는다(수집 실행은 주소만 저장).
     const images = (loaded.images ?? []).map(safeUrl).filter((url) => url !== '#');
     if (!paragraphs.length && !images.length) return html`<p class="detail-note">본문에 글자가 없어요. 원문 열기로 볼 수 있어요</p>`;
-    return html`<section class="detail-section body-text" aria-label="본문">
+    return html`<section class="detail-section body-text" aria-label="본문" @error=${brokenImageListener}>
       <h3>${loaded.body_from_image ? `${heading} (그림에서 읽은 글)` : heading}</h3>
       ${loaded.body_from_image && paragraphs.length ? html`<p class="detail-note first">그림 속 글자를 기계가 옮겨 적어서 틀린 곳이 있을 수 있어요. 아래 그림과 원문이 정확해요</p>` : nothing}
       ${paragraphs.map((para) => html`<p>${para}</p>`)}

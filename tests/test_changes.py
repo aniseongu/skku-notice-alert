@@ -1,7 +1,7 @@
 from datetime import date
 
 from skku_notice import cli
-from skku_notice.archive import Archive, add_notice, note_body_change, note_list_changes
+from skku_notice.archive import Archive, add_notice, note_body_change, note_list_changes, refresh_media
 from skku_notice.export import _public_notice
 from skku_notice.model import Notice
 
@@ -42,6 +42,22 @@ def test_body_change_only_when_text_differs():
     assert not changed and same.items["a/1"]["rechecked_at"] == "t1" and "changed_at" not in same.items["a/1"]
     new, changed = note_body_change(archive, "a/1", "고친 본문", "t2")
     assert changed and new.items["a/1"]["changed_at"] == "t2" and new.items["a/1"]["change_kind"] == "본문"
+
+
+def test_swapped_image_refreshes_quietly():
+    old = "https://www.skku.edu/_attach/image/2026/11/old.jpg"
+    new = "https://www.skku.edu/_attach/image/2026/11/new.jpg"
+    files = [{"name": "포스터.pdf", "url": "https://x/1", "type": "PDF", "size": None}]
+    archive = Archive({"a/1": {"notice": {"id": "a/1"}, "body_text": "본문", "images": [old],
+                               "body_html": f'<img src="{old}">', "attachments": files, "body_attempts": 1}})
+    pdf = (("포스터.pdf", "https://x/1", "PDF", None),)
+    same = refresh_media(archive, "a/1", pdf, (old,), f'<img src="{old}">')
+    assert same is archive
+    swapped = refresh_media(archive, "a/1", pdf, (new,), f'<img src="{new}">')
+    item = swapped.items["a/1"]
+    assert item["images"] == [new] and new in item["body_html"]
+    assert "changed_at" not in item and item["body_attempts"] == 1
+    assert refresh_media(archive, "a/1", (), (), "<p>본문</p>") is archive
 
 
 def test_changed_important_notice_is_announced_once(monkeypatch, tmp_path):

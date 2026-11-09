@@ -196,6 +196,23 @@ def note_body_change(archive: Archive, key: str, body: str | None, now: str) -> 
                                            "changed_at": now, "change_kind": "본문"}}), True
 
 
+def refresh_media(
+    archive: Archive, key: str, attachments: tuple[tuple[str, str, str, str | None], ...],
+    images: tuple[str, ...], body_html: str | None,
+) -> Archive:
+    """Same text, swapped poster or file: the school deletes the old image, so keep only the new addresses."""
+    item = archive.items[key]
+    files = [{"name": name, "url": url, "type": kind, "size": size} for name, url, kind, size in attachments]
+    # A half-loaded page reads as zero images; keep what we had rather than wipe a good poster.
+    if not images and item.get("images"):
+        return archive
+    if (item.get("images", []) == list(images) and item.get("body_html") == body_html
+            and item.get("attachments", []) == files):
+        return archive
+    return Archive({**archive.items, key: {**item, "images": list(images), "body_html": body_html,
+                                           "attachments": files}})
+
+
 def set_source_deadlines(archive: Archive, deadlines: dict[str, str]) -> Archive:
     """External postings carry their own deadline, stored like a body-read one for export and calendars."""
     items = dict(archive.items)

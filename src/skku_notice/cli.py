@@ -19,6 +19,7 @@ from skku_notice.archive import (
     mark_image_attempted,
     note_body_change,
     note_list_changes,
+    refresh_media,
     save_archive,
     set_source_deadlines,
     update_ai_deadlines,
@@ -232,6 +233,8 @@ def _recheck_details(archive, settings: dict, now: datetime):
                                     detail.images, detail.body_html)
             marks = {"changed_at": now.isoformat(), "change_kind": "본문", "rechecked_at": now.isoformat()}
             archive = Archive({**archive.items, key: {**archive.items[key], **marks}})
+        else:
+            archive = refresh_media(archive, key, detail.attachments, detail.images, detail.body_html)
         save_archive(ARCHIVE_PATH, archive)
     return archive
 

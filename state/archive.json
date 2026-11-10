@@ -55,6 +55,559 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141724": {
+      "notice": {
+        "id": "skku-notice01/141724",
+        "source_id": "skku-notice01",
+        "article_no": "141724",
+        "title": "3품 인턴십 인증 신청 절차 안내",
+        "category": "학사",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141724",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "high",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "재학생으로서 교외 인턴십 활동 후 챌린지스퀘어를 통해 3품 인증을 신청할 수 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "인턴"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "3품 중 인턴십 인증 신청 절차를 안내드립니다.\n\n✪ 인턴십인증\n\n[현장실습]\n1. 산학사업팀이 인정하는 교과 현장실습을 수행하여 1학점 이상 취득\n2. 비교과 현장실습(기업‧기관 인턴십 등)을 280시간 이상 수행\n- 챌린지스퀘어-교외이수비교과승인신청 메뉴를 통해 신청 후 승인되면 인턴십 인증 신청 가능\n- 개인적으로 참여한 기업.기관 인턴십도 신청 가능\n- 경력증명서(근무기간 기재, 회사/기관 장 직인 포함) 첨부 필수\n* 증빙서류 상 근무시간이 없더라도 근무기간만 있어도 됩니다(1일 8시간/1주 5일 이내 인정, 휴일 제외)\n\n[연구체험]\n1.­ 교과 연구체험[학부생 연구학점제(URP 1형), 팀연구학점제(URP 2형), 융합연구학점제(URP 3형)]을 이수하여 2학점 이상 취득\n2.­ 비교과 연구체험을 280시간 이상 수행\n- 챌린지스퀘어-교외이수비교과승인신청 메뉴를 통해 신청 후 승인되면 인턴십 인증 신청 가능\n- 연구체험 이수/수료증 및 연구결과보고서(출근부 포함, 지도교수 서명 및 기관 직인 날인 포함) 제출 필수\n* 기관/대학/학과 차원에서 공식적으로 진행한 연구체험 프로그램 인정(연구실에서 개별적으로 실시한 연구체험은 원칙적으로 인정 불가하나, 지도교수 서명 외에 단과대학장 또는 학과장 확인 후 직인 날인 시 인정)\n\n○ 인턴십 인증 신청 절차\n1. 인턴십 내역 등록 및 승인\n1) 챌린지스퀘어 접속 - 비교과프로그램 - 비교과수강관리 - 교외이수비교과승인신청\n2) 추가 버튼 클릭 후 인턴십 내역 입력\n- 과목선택-기타(직접입력) 선택 후 프로그램명 및 주관기관 등 인턴십 내역 기재\n- 외부 인턴십의 경우, 프로그램명에 '교외인턴십(현장실습)' 입력\n- 근무시간 계산 방법: 1일 8시간/1주 5일 이내(주말, 공휴일 제외)\n3) 첨부파일 등록(경력증명서-근무기간 기재, 회사/기관 장 직인 포함) 후 저장\n4) 교무팀 3품 담당자 신청내역 확인 후 승인(3~5일 이내)\n\n2. 3품 인턴십 인증 신청\n1) 챌린지스퀘어 접속 -3품인증 - 인턴십인증 - 인턴십인증 취득현황 및 신청 메뉴 접속\n2) 신청하기 버튼 클릭 - 비교과 탭에서 교외이수비교과 승인 내역 선택 후 저장\n3) 소속대학 행정실 담당자 승인 후 인증 완료",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>3품 중 인턴십 인증 신청 절차를 안내드립니다.</p><p>✪ 인턴십인증</p><p>[현장실습]</p><p>1. 산학사업팀이 인정하는 교과 현장실습을 수행하여 1학점 이상 취득</p><p>2. 비교과 현장실습(기업‧기관 인턴십 등)을 280시간 이상 수행</p><ul><li>챌린지스퀘어-교외이수비교과승인신청 메뉴를 통해 신청 후 승인되면 인턴십 인증 신청 가능</li><li>개인적으로 참여한 기업.기관 인턴십도 신청 가능</li><li>경력증명서(근무기간 기재, 회사/기관 장 직인 포함) 첨부 필수</li></ul><p>* 증빙서류 상 근무시간이 없더라도 근무기간만 있어도 됩니다(1일 8시간/1주 5일 이내 인정, 휴일 제외)</p><p>[연구체험]</p><p>1.­ 교과 연구체험[학부생 연구학점제(URP 1형), 팀연구학점제(URP 2형), 융합연구학점제(URP 3형)]을 이수하여 2학점 이상 취득</p><p>2.­ 비교과 연구체험을 280시간 이상 수행</p><ul><li>챌린지스퀘어-교외이수비교과승인신청 메뉴를 통해 신청 후 승인되면 인턴십 인증 신청 가능</li><li>연구체험 이수/수료증 및 연구결과보고서(출근부 포함, 지도교수 서명 및 기관 직인 날인 포함) 제출 필수</li></ul><p>* 기관/대학/학과 차원에서 공식적으로 진행한 연구체험 프로그램 인정(연구실에서 개별적으로 실시한 연구체험은 원칙적으로 인정 불가하나, 지도교수 서명 외에 단과대학장 또는 학과장 확인 후 직인 날인 시 인정)</p><p>○ 인턴십 인증 신청 절차</p><p>1. 인턴십 내역 등록 및 승인</p><p>1) 챌린지스퀘어 접속 - 비교과프로그램 - 비교과수강관리 - 교외이수비교과승인신청</p><p>2) 추가 버튼 클릭 후 인턴십 내역 입력</p><ul><li>과목선택-기타(직접입력) 선택 후 프로그램명 및 주관기관 등 인턴십 내역 기재</li><li>외부 인턴십의 경우, 프로그램명에 '교외인턴십(현장실습)' 입력</li><li>근무시간 계산 방법: 1일 8시간/1주 5일 이내(주말, 공휴일 제외)</li></ul><p>3) 첨부파일 등록(경력증명서-근무기간 기재, 회사/기관 장 직인 포함) 후 저장</p><p>4) 교무팀 3품 담당자 신청내역 확인 후 승인(3~5일 이내)</p><p>2. 3품 인턴십 인증 신청</p><p>1) 챌린지스퀘어 접속 -3품인증 - 인턴십인증 - 인턴십인증 취득현황 및 신청 메뉴 접속</p><p>2) 신청하기 버튼 클릭 - 비교과 탭에서 교외이수비교과 승인 내역 선택 후 저장</p><p>3) 소속대학 행정실 담당자 승인 후 인증 완료</p>",
+      "images": [],
+      "summary": "현장실습이나 교외 인턴십을 수행한 후 챌린지스퀘어에서 승인 신청을 거쳐 3품 인턴십 인증을 받을 수 있습니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T11:12:31.276304+09:00",
+      "page_text": "3품 중 인턴십 인증 신청 절차를 안내드립니다.\n\n✪ 인턴십인증\n\n[현장실습]\n1. 산학사업팀이 인정하는 교과 현장실습을 수행하여 1학점 이상 취득\n2. 비교과 현장실습(기업‧기관 인턴십 등)을 280시간 이상 수행\n- 챌린지스퀘어-교외이수비교과승인신청 메뉴를 통해 신청 후 승인되면 인턴십 인증 신청 가능\n- 개인적으로 참여한 기업.기관 인턴십도 신청 가능\n- 경력증명서(근무기간 기재, 회사/기관 장 직인 포함) 첨부 필수\n* 증빙서류 상 근무시간이 없더라도 근무기간만 있어도 됩니다(1일 8시간/1주 5일 이내 인정, 휴일 제외)\n\n[연구체험]\n1.­ 교과 연구체험[학부생 연구학점제(URP 1형), 팀연구학점제(URP 2형), 융합연구학점제(URP 3형)]을 이수하여 2학점 이상 취득\n2.­ 비교과 연구체험을 280시간 이상 수행\n- 챌린지스퀘어-교외이수비교과승인신청 메뉴를 통해 신청 후 승인되면 인턴십 인증 신청 가능\n- 연구체험 이수/수료증 및 연구결과보고서(출근부 포함, 지도교수 서명 및 기관 직인 날인 포함) 제출 필수\n* 기관/대학/학과 차원에서 공식적으로 진행한 연구체험 프로그램 인정(연구실에서 개별적으로 실시한 연구체험은 원칙적으로 인정 불가하나, 지도교수 서명 외에 단과대학장 또는 학과장 확인 후 직인 날인 시 인정)\n\n○ 인턴십 인증 신청 절차\n1. 인턴십 내역 등록 및 승인\n1) 챌린지스퀘어 접속 - 비교과프로그램 - 비교과수강관리 - 교외이수비교과승인신청\n2) 추가 버튼 클릭 후 인턴십 내역 입력\n- 과목선택-기타(직접입력) 선택 후 프로그램명 및 주관기관 등 인턴십 내역 기재\n- 외부 인턴십의 경우, 프로그램명에 '교외인턴십(현장실습)' 입력\n- 근무시간 계산 방법: 1일 8시간/1주 5일 이내(주말, 공휴일 제외)\n3) 첨부파일 등록(경력증명서-근무기간 기재, 회사/기관 장 직인 포함) 후 저장\n4) 교무팀 3품 담당자 신청내역 확인 후 승인(3~5일 이내)\n\n2. 3품 인턴십 인증 신청\n1) 챌린지스퀘어 접속 -3품인증 - 인턴십인증 - 인턴십인증 취득현황 및 신청 메뉴 접속\n2) 신청하기 버튼 클릭 - 비교과 탭에서 교외이수비교과 승인 내역 선택 후 저장\n3) 소속대학 행정실 담당자 승인 후 인증 완료",
+      "body_attempted_at": "2026-11-10T11:12:31.276304+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-notice01/141723": {
+      "notice": {
+        "id": "skku-notice01/141723",
+        "source_id": "skku-notice01",
+        "article_no": "141723",
+        "title": "AI응용공학과(일반대학원) 2027학년도 전기 수시 1차 대학원 신입생 모집",
+        "category": "입학",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141723",
+        "posted_on": "2026-11-10",
+        "pinned": true,
+        "deadline": null,
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "high",
+        "interests": [
+          "인턴",
+          "장학"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "학부생이 아닌 대학원 과정 신입생을 모집하는 공고이므로 해당하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "인턴"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "성균관대학교 일반대학원 “AI응용공학과”는 도메인 지식과 AI 기술을 융합하여 첨단 제조 AX (AI전환)를 선도할 2027학년도 전기 수시1차 석사, 박사, 석박사통합과정 학생을 모집합니다.\n\n1. 학과 소개\n본 성균관대학교 “AI응용공학과”에서는 과학기술정보통신부의 지원을 통해 AI팩토리 및 자율제조를 구현하는 핵심 기술인 제조AI, 피지컬AI, 생성형AI, 에이전틱AI, 디지털트윈, 지능형 로봇 등에 대해 집중적으로 학습하며 공동기업과의 협력을 통한 AX산학공동프로젝트 수행을 통해 이론과 실무를 겸비한 양손잡이형 제조AX 선도 석박사급 고급인재 양성을 목표로 하고 있습니다.\n\n2. 모집 정보\n• 모집 단위 및 학위 과정: 성균관대학교 일반대학원 AI응용공학과 (석사, 박사, 석·박사통합과정)\n• 모집 인원: 포스터 및 학과 홈페이지 참조\n\n3. 학생 지원 혜택\n• 신입학생 전원 학업장려 인건비 및 장학금 지급\n• 해외(미국, 유럽 등) 유수대학으로의 장단기 연수 기회 제공\n• 우수학생 조기 박사 학위 취득 기회 제공(패스트트랙)\n• 기업 인턴십 및 취·창업 지원\n\n4. 지원 자격 및 전형일정\n• 지원 자격\n- 국내외 대학에서 학사학위 또는 석사학위를 취득했거나 2027년 3월 입학 전까지 취득 예정인 사람으로서, 성균관대학교 일반대학원 석사·박사· 석박사통합과정의 지원 자격을 충족한 지원자를 대상으로 합니다.\n- 기계공학, 산업공학, 전자·전기공학, 로봇공학, 소프트웨어, 인공지능, 데이터과학, 스마트팩토리, 컴퓨터과학 등 관련 전공자는 물론, 제조 산업 과 AI 융합연구에 관심과 잠재력을 가진 타 전공자도 지원 가능 합니다.\n\n• 2027학년도 전기 입학전형 일정\n- 원서접수: 2026년 11월 24일(화) ~ 12월 02일(수), 지도교수 사전 컨택 및 추천서 권장\n- 서류제출: 2026년 11월 24일(화) ~ 12월 03일(목)\n- 면접일정: 2026년 12월 12(토)\n- 합격자 발표 : 2027년 01월 05일(화) 17시 예정\n\n5. 문의처\n• 이메일 : skkuaxe@skku.edu\n• 전 화 : 031–299-4753\n• 홈페이지 : https://axe.skku.edu\n\n※ 참고사항\n입학관련문의: skkuaxe@skku.edu 또는 포스터 파일의 QR코드 스캔 후 문의사항 작성\n- 입학관련 자세한 내용은 성균관대학교 대학원 입학홈페이지를 참고하기 바랍니다.\n( https://gradschool.skku.edu/grad )\n- 또한, AI응용공학과 홈페이지 (https://axe.skku.edu), 아래 학과 소개 유투브 링크 및 첨부된 참여 교수진 참고 바랍니다.\n\n( https://youtu.be/zQQi47mXFsU )",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>성균관대학교 일반대학원 “AI응용공학과”는 도메인 지식과 AI 기술을 융합하여 첨단 제조 AX (AI전환)를 선도할 2027학년도 전기 수시1차 석사, 박사, 석박사통합과정 학생을 모집합니다.</p><p>1. 학과 소개</p><p>본 성균관대학교 “AI응용공학과”에서는 과학기술정보통신부의 지원을 통해 AI팩토리 및 자율제조를 구현하는 핵심 기술인 제조AI, 피지컬AI, 생성형AI, 에이전틱AI, 디지털트윈, 지능형 로봇 등에 대해 집중적으로 학습하며 공동기업과의 협력을 통한 AX산학공동프로젝트 수행을 통해 이론과 실무를 겸비한 양손잡이형 제조AX 선도 석박사급 고급인재 양성을 목표로 하고 있습니다.</p><p>2. 모집 정보</p><p>• 모집 단위 및 학위 과정: 성균관대학교 일반대학원 AI응용공학과 (석사, 박사, 석·박사통합과정)</p><p>• 모집 인원: 포스터 및 학과 홈페이지 참조</p><p>3. 학생 지원 혜택</p><p>• 신입학생 전원 학업장려 인건비 및 장학금 지급</p><p>• 해외(미국, 유럽 등) 유수대학으로의 장단기 연수 기회 제공</p><p>• 우수학생 조기 박사 학위 취득 기회 제공(패스트트랙)</p><p>• 기업 인턴십 및 취·창업 지원</p><p>4. 지원 자격 및 전형일정</p><p>• 지원 자격</p><ul><li>국내외 대학에서 학사학위 또는 석사학위를 취득했거나 2027년 3월 입학 전까지 취득 예정인 사람으로서, 성균관대학교 일반대학원 석사·박사·    석박사통합과정의 지원 자격을 충족한 지원자를 대상으로 합니다.</li><li>기계공학, 산업공학, 전자·전기공학, 로봇공학, 소프트웨어, 인공지능, 데이터과학, 스마트팩토리, 컴퓨터과학 등 관련 전공자는 물론, 제조 산업    과 AI 융합연구에 관심과 잠재력을 가진 타 전공자도 지원 가능 합니다.</li></ul><p>• 2027학년도 전기 입학전형 일정</p><ul><li>원서접수: 2026년 11월 24일(화) ~ 12월 02일(수), 지도교수 사전 컨택 및 추천서 권장</li><li>서류제출: 2026년 11월 24일(화) ~ 12월 03일(목)</li><li>면접일정: 2026년 12월 12(토)</li><li>합격자 발표 : 2027년 01월 05일(화) 17시 예정</li></ul><p>5. 문의처</p><p>• 이메일 : skkuaxe@skku.edu</p><p>• 전    화 : 031–299-4753</p><p>• 홈페이지 : <a href=\"https://axe.skku.edu\">https://axe.skku.edu</a></p><p>※ 참고사항</p><p>입학관련문의: skkuaxe@skku.edu 또는 포스터 파일의 QR코드 스캔 후 문의사항 작성</p><ul><li>입학관련 자세한 내용은 성균관대학교 대학원 입학홈페이지를 참고하기 바랍니다.</li></ul><p>( <a href=\"https://gradschool.skku.edu/grad\">https://gradschool.skku.edu/grad</a> )</p><ul><li>또한, AI응용공학과 홈페이지 (<a href=\"https://axe.skku.edu),\">https://axe.skku.edu),</a> 아래 학과 소개 유투브 링크 및 첨부된 참여 교수진 참고 바랍니다.</li></ul><p>( <a href=\"https://youtu.be/zQQi47mXFsU\">https://youtu.be/zQQi47mXFsU</a> )</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"2027학년도 AI응용공학과 전기 수시1차 모집 \" src=\"https://www.skku.edu/_attach/image/2026/11/huDzmROvRcaPMjbJKNfV.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/huDzmROvRcaPMjbJKNfV.jpg"
+      ],
+      "summary": "2027학년도 전기 일반대학원 신입생을 모집합니다. 관심 있는 학생은 12월 2일까지 원서를 접수하고 지도교수 사전 컨택을 권장합니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T11:12:31.276304+09:00",
+      "page_text": "성균관대학교 일반대학원 “AI응용공학과”는 도메인 지식과 AI 기술을 융합하여 첨단 제조 AX (AI전환)를 선도할 2027학년도 전기 수시1차 석사, 박사, 석박사통합과정 학생을 모집합니다.\n\n1. 학과 소개\n본 성균관대학교 “AI응용공학과”에서는 과학기술정보통신부의 지원을 통해 AI팩토리 및 자율제조를 구현하는 핵심 기술인 제조AI, 피지컬AI, 생성형AI, 에이전틱AI, 디지털트윈, 지능형 로봇 등에 대해 집중적으로 학습하며 공동기업과의 협력을 통한 AX산학공동프로젝트 수행을 통해 이론과 실무를 겸비한 양손잡이형 제조AX 선도 석박사급 고급인재 양성을 목표로 하고 있습니다.\n\n2. 모집 정보\n• 모집 단위 및 학위 과정: 성균관대학교 일반대학원 AI응용공학과 (석사, 박사, 석·박사통합과정)\n• 모집 인원: 포스터 및 학과 홈페이지 참조\n\n3. 학생 지원 혜택\n• 신입학생 전원 학업장려 인건비 및 장학금 지급\n• 해외(미국, 유럽 등) 유수대학으로의 장단기 연수 기회 제공\n• 우수학생 조기 박사 학위 취득 기회 제공(패스트트랙)\n• 기업 인턴십 및 취·창업 지원\n\n4. 지원 자격 및 전형일정\n• 지원 자격\n- 국내외 대학에서 학사학위 또는 석사학위를 취득했거나 2027년 3월 입학 전까지 취득 예정인 사람으로서, 성균관대학교 일반대학원 석사·박사· 석박사통합과정의 지원 자격을 충족한 지원자를 대상으로 합니다.\n- 기계공학, 산업공학, 전자·전기공학, 로봇공학, 소프트웨어, 인공지능, 데이터과학, 스마트팩토리, 컴퓨터과학 등 관련 전공자는 물론, 제조 산업 과 AI 융합연구에 관심과 잠재력을 가진 타 전공자도 지원 가능 합니다.\n\n• 2027학년도 전기 입학전형 일정\n- 원서접수: 2026년 11월 24일(화) ~ 12월 02일(수), 지도교수 사전 컨택 및 추천서 권장\n- 서류제출: 2026년 11월 24일(화) ~ 12월 03일(목)\n- 면접일정: 2026년 12월 12(토)\n- 합격자 발표 : 2027년 01월 05일(화) 17시 예정\n\n5. 문의처\n• 이메일 : skkuaxe@skku.edu\n• 전 화 : 031–299-4753\n• 홈페이지 : https://axe.skku.edu\n\n※ 참고사항\n입학관련문의: skkuaxe@skku.edu 또는 포스터 파일의 QR코드 스캔 후 문의사항 작성\n- 입학관련 자세한 내용은 성균관대학교 대학원 입학홈페이지를 참고하기 바랍니다.\n( https://gradschool.skku.edu/grad )\n- 또한, AI응용공학과 홈페이지 (https://axe.skku.edu), 아래 학과 소개 유투브 링크 및 첨부된 참여 교수진 참고 바랍니다.\n\n( https://youtu.be/zQQi47mXFsU )",
+      "body_attempted_at": "2026-11-10T11:12:31.276304+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-12-03T23:59:00+09:00"
+      }
+    },
+    "skku-notice01/141722": {
+      "notice": {
+        "id": "skku-notice01/141722",
+        "source_id": "skku-notice01",
+        "article_no": "141722",
+        "title": "법학전문대학원 글로벌 커머셜 공개과정 운영 조교 모집",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141722",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "본교 학부 재학생이 지원 가능한 조교 모집 공고입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "성균관대학교 법학전문대학원에서 삼성 5개社(전자/전기/SDI/디스플레이/바이오로직스) 재직자 대상 글로벌 커머셜 과정 운영을 보조할 조교를 다음과 같이 모집합니다.\n관심 있는 학생 여러분들의 많은 지원 바랍니다.\n\n1. 모집인원: 1명\n\n2. 주요업무: 과정 운영 지원\n- 교육생 출석체크, 수업 준비\n- 기타 사무 보조\n\n3. 자격요건\n- 우리 대학 학부생 또는 대학원생(*휴학생, 수료생 환영!)\n\n4. 근무 장소 및 기간/시간\n가. 장소: 성균관대학교 인문사회과학캠퍼스(서울시 종로구) 법학관 1층 법학전문대학원행정실\n나. 기간/시간: 11월 19일(목) ~ 12월 08일(화), 08시 30분~17시 30분(점심시간: 12:30~13:30)\n* 근무시간 협의하여 조정 가능\n\n5. 급여: 시급 1만 2천원(1일 7시간), 주휴수당 별도 지급 및 점심/다과 제공\n\n6. 제출서류\n- 이력서 및 자기소개서(자유양식, 사진 첨부) 1부(*3페이지 이내)\n\n7. 서류 제출 기한 및 제출 방법\n가. 서류 상시 접수\n나. 제출 방법: e-mail 접수(수신자: ionios@skku.edu)\n- 발송 메일 제목 : 글로벌 커머셜 조교 지원(학번_성명)\n※ 붙임(첨부) 파일: 이력서 및 자기소개서 1부\n\n8. 채용방법: 지원자 전원 면접전형(법학전문대학원행정실 약 15분) → 면접 결과 안내\n※ 면접 일정은 협의하여 정함\n\n9. 기타\n- 제출서류는 반환하지 않으며, 모집 종료 후 파기합니다.\n\n10. 문의 전화: 02-760-0924(*문의전화 환영!). 끝.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>성균관대학교 법학전문대학원에서 삼성 5개社(전자/전기/SDI/디스플레이/바이오로직스) 재직자 대상 글로벌 커머셜 과정 운영을 보조할 조교를 다음과 같이 모집합니다.</p><p>관심 있는 학생 여러분들의 많은 지원 바랍니다.</p><p>1. 모집인원: 1명</p><p>2. 주요업무: 과정 운영 지원</p><ul><li>교육생 출석체크, 수업 준비</li><li>기타 사무 보조</li></ul><p>3. 자격요건</p><ul><li>우리 대학 학부생 또는 대학원생(*휴학생, 수료생 환영!)</li></ul><p>4. 근무 장소 및 기간/시간</p><p>가. 장소: 성균관대학교 인문사회과학캠퍼스(서울시 종로구) 법학관 1층 법학전문대학원행정실</p><p>나. 기간/시간:  11월 19일(목) ~ 12월 08일(화),  08시 30분~17시 30분(점심시간: 12:30~13:30)</p><p>* 근무시간 협의하여 조정 가능</p><p>5. 급여: 시급 1만 2천원(1일 7시간), 주휴수당 별도 지급 및 점심/다과 제공</p><p>6. 제출서류</p><ul><li>이력서 및 자기소개서(자유양식, 사진 첨부) 1부(*3페이지 이내)</li></ul><p>7. 서류 제출 기한 및 제출 방법</p><p>가. 서류 상시 접수</p><p>나. 제출 방법: e-mail 접수(수신자: ionios@skku.edu)</p><ul><li>발송 메일 제목 : 글로벌 커머셜 조교 지원(학번_성명)</li></ul><p>※ 붙임(첨부) 파일:  이력서 및 자기소개서 1부</p><p>8. 채용방법: 지원자 전원 면접전형(법학전문대학원행정실 약 15분) → 면접 결과 안내</p><p>※  면접 일정은 협의하여 정함</p><p>9. 기타</p><ul><li>제출서류는 반환하지 않으며, 모집 종료 후 파기합니다.</li></ul><p>10. 문의 전화: 02-760-0924(*문의전화 환영!).    끝.</p>",
+      "images": [],
+      "summary": "법학전문대학원 행정실에서 글로벌 커머셜 과정 보조 조교를 모집합니다. 희망자는 이력서와 자기소개서를 준비하여 이메일로 상시 접수하면 됩니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T11:12:31.276304+09:00",
+      "page_text": "성균관대학교 법학전문대학원에서 삼성 5개社(전자/전기/SDI/디스플레이/바이오로직스) 재직자 대상 글로벌 커머셜 과정 운영을 보조할 조교를 다음과 같이 모집합니다.\n관심 있는 학생 여러분들의 많은 지원 바랍니다.\n\n1. 모집인원: 1명\n\n2. 주요업무: 과정 운영 지원\n- 교육생 출석체크, 수업 준비\n- 기타 사무 보조\n\n3. 자격요건\n- 우리 대학 학부생 또는 대학원생(*휴학생, 수료생 환영!)\n\n4. 근무 장소 및 기간/시간\n가. 장소: 성균관대학교 인문사회과학캠퍼스(서울시 종로구) 법학관 1층 법학전문대학원행정실\n나. 기간/시간: 11월 19일(목) ~ 12월 08일(화), 08시 30분~17시 30분(점심시간: 12:30~13:30)\n* 근무시간 협의하여 조정 가능\n\n5. 급여: 시급 1만 2천원(1일 7시간), 주휴수당 별도 지급 및 점심/다과 제공\n\n6. 제출서류\n- 이력서 및 자기소개서(자유양식, 사진 첨부) 1부(*3페이지 이내)\n\n7. 서류 제출 기한 및 제출 방법\n가. 서류 상시 접수\n나. 제출 방법: e-mail 접수(수신자: ionios@skku.edu)\n- 발송 메일 제목 : 글로벌 커머셜 조교 지원(학번_성명)\n※ 붙임(첨부) 파일: 이력서 및 자기소개서 1부\n\n8. 채용방법: 지원자 전원 면접전형(법학전문대학원행정실 약 15분) → 면접 결과 안내\n※ 면접 일정은 협의하여 정함\n\n9. 기타\n- 제출서류는 반환하지 않으며, 모집 종료 후 파기합니다.\n\n10. 문의 전화: 02-760-0924(*문의전화 환영!). 끝.",
+      "body_attempted_at": "2026-11-10T11:12:31.276304+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165130": {
+      "notice": {
+        "id": "skku-career-intern/165130",
+        "source_id": "skku-career-intern",
+        "article_no": "165130",
+        "title": "[슈피겐] 2026년 미국법인 마케팅 인턴 채용 (~11/27)",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=qm84cvfoXgfIVcq1HeNd6bs8hSkPrKvIkP5ZQpNMdLj&modalChk=Y",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": "2026-11-27T23:59:00+09:00",
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 마케팅 직무를 모집하고 있어 소프트웨어 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "■ 접수 안내 및 지원 문의\n2026년 11월 27일까지 영문이력서 제출\n\nJ-1 비자 발급 비용은 본인 부담입니다.\n\n'미국 J-1 프로그램 안내서’를 반드시 사전에 참고해 주세요.\n\n■ 지원 문의: 031-8027-9060\n■ 이력서 접수 및 문의: hr@careerlabs.co.kr\n■ 입사/지원관련 상담 신청: https://forms.gle/JDniMmJnRN39ESU56\n\n\n\n[슈피겐 미국법인] 채용 안내자료.zip",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "[슈피겐 미국법인] 채용 안내자료.zip",
+          "url": "https://job.skku.edu/upload/Recruit/20261110_20006117/[슈피겐 미국법인] 채용 안내자료.zip",
+          "type": "ZIP",
+          "size": null
+        }
+      ],
+      "body_html": "<span><div><img src=\"https://job.skku.edu/upload/Recruit/20261110_20006117/채용포스터 [Spigen Inc.].jpg\"></div><div><p><span>■ 접수 안내 및 지원 문의</span></p><ul><li><p><span>2026년 11월 27일까지 영문이력서 제출</span></p></li><li><p><span><em>J-1 비자 발급 비용은 본인 부담입니다.</em></span></p></li><li><p><span><em>'미국 J-1 프로그램 안내서’를 반드시 사전에 참고해 주세요.</em></span></p></li></ul><p><span>■ 지원 문의: 031-8027-9060</span><br><span>■ 이력서 접수 및 문의: <a>hr@careerlabs.co.kr<span></span></a><br>■ 입사/지원관련 상담 신청: <a href=\"https://forms.gle/JDniMmJnRN39ESU56\">https://forms.gle/JDniMmJnRN39ESU56</a></span></p></div><div><br></div><div><a href=\"https://job.skku.edu/upload/Recruit/20261110_20006117/[슈피겐 미국법인] 채용 안내자료.zip\">[슈피겐 미국법인] 채용 안내자료.zip</a></div><br></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261110_20006117/채용포스터 [Spigen Inc.].jpg"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T11:12:31.276304+09:00",
+      "page_text": "■ 접수 안내 및 지원 문의\n2026년 11월 27일까지 영문이력서 제출\n\nJ-1 비자 발급 비용은 본인 부담입니다.\n\n'미국 J-1 프로그램 안내서’를 반드시 사전에 참고해 주세요.\n\n■ 지원 문의: 031-8027-9060\n■ 이력서 접수 및 문의: hr@careerlabs.co.kr\n■ 입사/지원관련 상담 신청: https://forms.gle/JDniMmJnRN39ESU56\n\n\n\n[슈피겐 미국법인] 채용 안내자료.zip",
+      "body_attempted_at": "2026-11-10T11:12:31.276304+09:00",
+      "intern_judgment": {
+        "fingerprint": "366e2531a39c03face4812ee7fa11639c32284273ee92aa8d1df745496c1df2b",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 마케팅 직무를 모집하고 있어 소프트웨어 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165120": {
+      "notice": {
+        "id": "skku-career-intern/165120",
+        "source_id": "skku-career-intern",
+        "article_no": "165120",
+        "title": "[메타넷그룹] 2026년 AI 서비스 인프라·플랫폼 엔지니어 신입 인턴사원 모집(교육 3개월)",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=qm84cvfoXgfIVcq1HeNd6Wnc9TajifDHJqDDAXdtsYs&modalChk=Y",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "AI 서비스 인프라 및 플랫폼 엔지니어 직무를 모집하며 리눅스, 네트워크, 데이터베이스 등 소프트웨어 관련 역량을 요구하므로 학부생이 지원하기에 적합합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "1. 채용일정안\n[2026년 메타넷그룹 AI 서비스 인프라·플랫폼 엔지니어 신입 인턴사원 모집(교육 3개월)]\nI. 모집 직군 : AI 서비스 인프라·플랫폼 엔지니어\nII. 모집 기간 : ~ 2026년 12월 13일(일) 24:00까지 모집\nIII. 교육 기간 : 3개월 (상세 진행 시점 별도 안내)\nIV. 자격 요건\nLinux 및 네트워크 관련 기본 기술역량 보유자\n\n인프라·컨테이너 또는 데이터베이스(DBMS)·SQL에 대한기본지식과 관심을 보유한 자\n\n분석적 사고와 원활한 커뮤니케이션 역량을 보유한 자\n\n새로운 기술을 지속적으로 학습하고 실무 역량을 개발하려는 자\n\nV. 교육 운영기관 : 한국소프트웨어산업협회(KOSA)\nVI. 채용 포인트\n신입으로서 기본적인 인성과 업무에 대한 적극적인 태도 및 성장 가능성을 갖춘 인재 선발\n3개월간의 인턴십 교육 프로그램 이수 후 최종 면접을 통해 정규직 채용 기회 부여\n※ 잡코리아(공고문) : 잡코리아 공고문 (지원경로)\n※ 입사지원서(자사양식) : 별도 첨부\nVII. 인턴십 전형\n3개월간의 인턴십 교육 프로그램 이수\n\n최종 면접 진행\n최종 평가 결과에 따라 정규직 채용 기회 부여\n\n\n\n\n2. 회사소개\n① 회사 소개\n메타넷 홈페이지 : https://metanetglobal.com/\n② 회사 홍보 영상\n회사 소개 영상 (메타넷그룹)\n알쓸궁잡 (메타넷 복리후생)\nMetanet Family Day (메타넷 복리후생)\n\n\n3. 문의 사항\n이메일 : job@metanet.co.kr\n\n\n\n\nMetanet(인턴십)입사지원서 개인정보활용동의서.xlsx",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "Metanet(인턴십)입사지원서 개인정보활용동의서.xlsx",
+          "url": "https://job.skku.edu/upload/Recruit/20261110_71211375/Metanet(인턴십)입사지원서 개인정보활용동의서.xlsx",
+          "type": "XLSX",
+          "size": null
+        }
+      ],
+      "body_html": "<span><div><b>1. 채용일정안</b></div><div><span><b>[2026년 메타넷그룹 AI 서비스 인프라·플랫폼 엔지니어 신입 인턴사원 모집(교육 3개월)]</b></span></div><div>I.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 모집 직군 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;:&nbsp; AI 서비스 인프라·플랫폼 엔지니어</div><div>II.&nbsp;&nbsp;&nbsp;&nbsp; 모집 기간&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:&nbsp; ~ 2026년 12월 13일(일) 24:00까지 모집</div><div>III.&nbsp;&nbsp;&nbsp; 교육 기간 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; :&nbsp; 3개월 (상세 진행 시점 별도 안내)</div><div>IV.&nbsp; &nbsp; 자격 요건&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div><ul><li><div>Linux 및 네트워크 관련 기본 기술역량 보유자</div></li><li><div>인프라·컨테이너 또는 데이터베이스(DBMS)·SQL에 대한기본지식과 관심을 보유한 자</div></li><li><div>분석적 사고와 원활한 커뮤니케이션 역량을 보유한 자</div></li><li><div>새로운 기술을 지속적으로 학습하고 실무 역량을 개발하려는 자&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div></li></ul><div>V.&nbsp;&nbsp;&nbsp;&nbsp; 교육 운영기관&nbsp; &nbsp; :&nbsp; 한국소프트웨어산업협회(KOSA)</div><div>VI.&nbsp; &nbsp;채용 포인트&nbsp; &nbsp; &nbsp; &nbsp;</div><ul><li>신입으로서 기본적인 인성과 업무에 대한 적극적인 태도 및 성장 가능성을 갖춘 인재 선발</li><li><span>3개월간의 인턴십 교육 프로그램 이수 후 최종 면접을 통해 정규직 채용 기회 부여</span></li></ul><div><span>&nbsp;&nbsp; &nbsp; &nbsp; ※ 잡코리아(공고문) : </span><span><a href=\"https://www.jobkorea.co.kr/Recruit/GI_Read/50300268?Oem_Code=C1&amp;PageGbn=ST&amp;sc=225\" title=\"https://www.jobkorea.co.kr/Recruit/GI_Read/50300268?Oem_Code=C1&amp;PageGbn=ST&amp;sc=225\"><b>잡코리아 공고문 (지원경로)</b></a></span></div><p>&nbsp;<span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ※ 입사지원서(자사양식) :<b> </b>별도 첨부</span></p><p><span>VII.&nbsp;</span><span></span><span>인턴십 전형&nbsp; &nbsp; &nbsp; &nbsp;</span></p><ul><li><div>3개월간의 인턴십 교육 프로그램 이수</div></li><li>최종 면접 진행</li><li><div>최종 평가 결과에 따라 정규직 채용 기회 부여</div><div></div></li></ul><div><br></div><p><b>2. 회사소개&nbsp;</b></p><p><span>①&nbsp;</span><b></b><span>회사 소개</span></p><ul><li>메타넷 홈페이지 : <a href=\"https://metanetglobal.com/\" title=\"https://metanetglobal.com/\">https://metanetglobal.com</a>/</li></ul><p><span>②&nbsp;</span><span>회사 홍보 영상</span></p><ul><li><a href=\"https://www.youtube.com/watch?v=kI92eoTuGuI\" title=\"https://www.youtube.com/watch?v=kI92eoTuGuI\">회사 소개 영상 (메타넷그룹)</a></li><li><a href=\"https://www.youtube.com/watch?v=IVWQAhBX4r0\" title=\"https://www.youtube.com/watch?v=IVWQAhBX4r0\">알쓸궁잡 (메타넷 복리후생)</a></li><li><a href=\"https://www.youtube.com/watch?v=RzqnG9TMUnc\" title=\"https://www.youtube.com/watch?v=RzqnG9TMUnc\">Metanet Family Day (메타넷 복리후생)</a></li></ul><div><br></div><div><b>3. 문의 사항</b></div><ul><li>이메일 : <a href=\"mailto:job@metanet.co.kr\" title=\"job@metanet.co.kr\">job@metanet.co.kr</a></li></ul><div><img src=\"https://job.skku.edu/upload/Recruit/20261110_71211375/AI인프라플랫폼_교육인턴십_모집공고_A4 (1).jpg\"></div><div><a href=\"https://job.skku.edu/upload/Recruit/20261110_71211375/Metanet(인턴십)입사지원서 개인정보활용동의서.xlsx\">Metanet(인턴십)입사지원서 개인정보활용동의서.xlsx</a></div><br></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261110_71211375/AI인프라플랫폼_교육인턴십_모집공고_A4 (1).jpg"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T11:12:31.276304+09:00",
+      "page_text": "1. 채용일정안\n[2026년 메타넷그룹 AI 서비스 인프라·플랫폼 엔지니어 신입 인턴사원 모집(교육 3개월)]\nI. 모집 직군 : AI 서비스 인프라·플랫폼 엔지니어\nII. 모집 기간 : ~ 2026년 12월 13일(일) 24:00까지 모집\nIII. 교육 기간 : 3개월 (상세 진행 시점 별도 안내)\nIV. 자격 요건\nLinux 및 네트워크 관련 기본 기술역량 보유자\n\n인프라·컨테이너 또는 데이터베이스(DBMS)·SQL에 대한기본지식과 관심을 보유한 자\n\n분석적 사고와 원활한 커뮤니케이션 역량을 보유한 자\n\n새로운 기술을 지속적으로 학습하고 실무 역량을 개발하려는 자\n\nV. 교육 운영기관 : 한국소프트웨어산업협회(KOSA)\nVI. 채용 포인트\n신입으로서 기본적인 인성과 업무에 대한 적극적인 태도 및 성장 가능성을 갖춘 인재 선발\n3개월간의 인턴십 교육 프로그램 이수 후 최종 면접을 통해 정규직 채용 기회 부여\n※ 잡코리아(공고문) : 잡코리아 공고문 (지원경로)\n※ 입사지원서(자사양식) : 별도 첨부\nVII. 인턴십 전형\n3개월간의 인턴십 교육 프로그램 이수\n\n최종 면접 진행\n최종 평가 결과에 따라 정규직 채용 기회 부여\n\n\n\n\n2. 회사소개\n① 회사 소개\n메타넷 홈페이지 : https://metanetglobal.com/\n② 회사 홍보 영상\n회사 소개 영상 (메타넷그룹)\n알쓸궁잡 (메타넷 복리후생)\nMetanet Family Day (메타넷 복리후생)\n\n\n3. 문의 사항\n이메일 : job@metanet.co.kr\n\n\n\n\nMetanet(인턴십)입사지원서 개인정보활용동의서.xlsx",
+      "body_attempted_at": "2026-11-10T11:12:31.276304+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-13T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "cc8e60be3771a74b6883e446168e6e16ac098ba9cc134cab62be746aedc7fad1",
+        "verdict": "relevant",
+        "reason": "AI 서비스 인프라 및 플랫폼 엔지니어 직무를 모집하며 리눅스, 네트워크, 데이터베이스 등 소프트웨어 관련 역량을 요구하므로 학부생이 지원하기에 적합합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363253": {
+      "notice": {
+        "id": "linkareer-intern/363253",
+        "source_id": "linkareer-intern",
+        "article_no": "363253",
+        "title": "[Spigen, Inc.] [미국인턴/캘리포니아] Spigen 마케팅 부문 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363253",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "Spigen Inc.\nLocation : 8845 Irvine Center Dr #100, Irvine, CA 92618\nWebsite: https://www.spigen.com/\n\n“ Spigen Inc.는 미국 캘리포니아주 얼바인(Irvine)에 본사를 둔 글로벌 모바일 액세서리 기업입니다. 스마트폰 케이스와 화면 보호 제품을 비롯해 태블릿·웨어러블 액세서리, 충전 제품, 차량용 액세서리 등 다양한 제품을 통해 고객의 일상을 더욱 편리하게 만듭니다.\n스피겐은 사용자의 필요를 반영한 실용적인 디자인과 품질을 바탕으로 제품을 기획·개발하며, Amazon을 비롯한 글로벌 이커머스 채널을 통해 세계 각지의 고객과 만나고 있습니다. 빠르게 변화하는 모바일 환경에 맞춰 제품군을 확장하고, 고객이 신뢰할 수 있는 제품과 서비스를 제공하기 위해 노력합니다. 스피겐은 고객의 경험을 개선하는 일과 구성원의 성장을 함께 추구합니다. 다양한 시장과 고객을 이해하고, 새로운 아이디어를 제품과 서비스로 구현하며 함께 성장할 인재를 기다립니다. ”\n\n\n📍Irvine은 미국 캘리포니아주 오렌지카운티에 위치한 계획도시로, 남부 캘리포니아의 주요 비즈니스·주거 지역입니다. Interstate 5와 Interstate 405 등 주요 고속도로를 통해 로스앤젤레스와 샌디에이고 방면으로 이동할 수 있으며, 인근에 존 웨인 공항이 있어 출장과 여행에도 편리합니다. IT, 소프트웨어, 바이오, 의료기기 등 다양한 산업의 기업들이 자리하고 있으며, 캘리포니아대학교 얼바인 캠퍼스(UC Irvine)를 비롯한 교육·연구 기반도 갖추고 있습니다.\n한인 마트와 한국 음식점 등 생활 편의시설을 이용하기 편리하고, 얼바인 스펙트럼 센터와 공원, 문화·체육시설 등 쇼핑과 여가를 즐길 수 있는 공간도 다양합니다. 또한 인근 뉴포트비치와 라구나비치 등 해안 지역을 방문하기 좋아 도시의 생활 편의성과 남부 캘리포니아의 자연환경을 함께 누릴 수 있는 것이 특징입니다.\n\n모집안내\n◾ 채용부문 : Marketing Associate\n◾ 근무기간 : 12개월 이상\n◾ 근무시간 : 주40시간\n◾ 급여 : $22-24 / an hour\n◾ 연 환산 급여: 약 $45,760-49,920 (주 40시간 52주 근무 기준 이며, 주말 및 공휴일 over time 근무에 따라 변동 가능)\n◾ 급여 외 보상 :\n점심 제공 ($20 상당의 한식, 양식, 중식 등 다양한 메뉴)\n\n명절 보너스 및 휴일 수당 지급\n\n유급 휴가 10일\n\nSpigen Day (매주 금요일 Paid Half Day)\n\n회사 이벤트 (분기별 이벤트, Team Bonding $50/month, Workshop $300/year)\n\n\n\nJob Description\nJob summary\nAs a Marketing Associate, you will play a crucial role in supporting the marketing team’s efforts to achieve strategic goals and drive business growth. You will collaborate closely with cross-functional teams to execute integrated marketing campaigns, enhance brand awareness, and generate leads. This position offers an opportunity to contribute to various aspects of marketing, from digital marketing and content creation to market research and campaign analysis.\n\n\nDuties / Responsibilities\nCampaign Execution and Coordination\nContent Creation and Management\nMarket Research and Analysis\nCollaboration and Communication\n\n\nRequired Skills / Abilities\nProven experience (internship or entry-level) in marketing, digital marketing, or a similar role\nStrong written and verbal communication skills with attention to detail\nProficiency in digital marketing tools and platforms (Google Analytics, social media management tools, content management systems, etc.)\nAnalytical mindset with the ability to interpret data and generate actionable insights\nCreative thinker with the ability to contribute innovative ideas to marketing campaigns\nAbility to manage multiple projects simultaneously and prioritize tasks effectively\nAble to use Photoshop and Premier\n\n\nEducation and Experience\nIndividuals pursuing an undergraduate degree, preferably with a concentration in Bachelor’s degree in Marketing, Communications, Business Administration, or related field\nInternship or project experience in Marketing, Communications, Business Administration, or related field\n\n\n전형절차\n◾ 문의 신청서 제출(구글폼)\n◾ 비자발급 가능 여부 검토 후 개별 전형/기업 안내 실시\n◾ 전달받은 이력서 작성 후 회신(첨삭진행)\n◾ 기업 서류 전형\n◾ 서류전형 합격자 인적성 진행(온라인)\n◾ 1차 면접(인성)\n◾ 2차 면접(직무)\n◾ 합격자, 미국 스폰서기관 인터뷰 (회사-지원자 간의 보증을 해주는 미국 국무성 지정 기관, 별도 안내예정)\n◾ 주한미국대사관 인터뷰 (별도 안내예정)\n◾ 출국/출근\n\n\n전형절차\n◾ 문의 신청서 제출(구글폼)\n◾ 비자발급 가능 여부 검토 후 개별 전형/기업 안내 실시\n◾ 전달받은 이력서 작성 후 회신(첨삭진행)\n◾ 기업 서류/ 화상 면접전형 진행\n◾ 합격자, 미국 스폰서기관 인터뷰 (회사-지원자 간의 보증을 해주는 미국 국무성 지정 기관, 별도 안내예정)\n◾ 주한미국대사관 인터뷰 (별도 안내예정)\n◾ 출국/출근\n\n\n접수기간\n채용 시 마감\n\n㈜커리어랩스는 지원자에게 알선비나 기업 매칭에 따른 비용을 받지 않습니다.\n⋇ 파견직이 아닌 「합격기업 소속」으로 근무하게 됩니다.\n⋇ 비자 발급비용은 본인 부담입니다.\n\n☎ 지원문의: Tel. 031-8027-9060 / Email : hr@careerlabs.co.kr\n✏ 신청서 제출: https://forms.gle/JDniMmJnRN39ESU56\n\n\n\n\n주식회사 커리어랩스 | 031-8027-9060\n경기도 하남시 미사대로520, 현대지식산업센터 2차 C동 319호, 320호\n국외유료직업소개사업 등록번호: F1516020210001",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://cdn.imweb.me/upload/S20220623b6db24c7eda01/82f3fcde542ee.png\" alt=\"1c32aad3e6c69.png\"></p><p><span><span>Spigen Inc.</span></span></p><p>Location : 8845 Irvine Center Dr #100, Irvine, CA 92618&nbsp;</p><p>Website: <a href=\"https://www.spigen.com/\">https://www.spigen.com/</a></p><p><img src=\"https://cdn.imweb.me/upload/S20220623b6db24c7eda01/38d3ab2703cad.png\" alt=\"7b44a45c8c7e7.png\"></p><p>“ Spigen Inc.는 미국 캘리포니아주 얼바인(Irvine)에 본사를 둔 글로벌 모바일 액세서리 기업입니다. 스마트폰 케이스와 화면 보호 제품을 비롯해 태블릿·웨어러블 액세서리, 충전 제품, 차량용 액세서리 등 다양한 제품을 통해 고객의 일상을 더욱 편리하게 만듭니다.</p><p>스피겐은 사용자의 필요를 반영한 실용적인 디자인과 품질을 바탕으로 제품을 기획·개발하며, Amazon을 비롯한 글로벌 이커머스 채널을 통해 세계 각지의 고객과 만나고 있습니다. 빠르게 변화하는 모바일 환경에 맞춰 제품군을 확장하고, 고객이 신뢰할 수 있는 제품과 서비스를 제공하기 위해 노력합니다. 스피겐은 고객의 경험을 개선하는 일과 구성원의 성장을 함께 추구합니다. 다양한 시장과 고객을 이해하고, 새로운 아이디어를 제품과 서비스로 구현하며 함께 성장할 인재를 기다립니다. ”&nbsp;</p><p>📍Irvine은 미국 캘리포니아주 오렌지카운티에 위치한 계획도시로, 남부 캘리포니아의 주요 비즈니스·주거 지역입니다. Interstate 5와 Interstate 405 등 주요 고속도로를 통해 로스앤젤레스와 샌디에이고 방면으로 이동할 수 있으며, 인근에 존 웨인 공항이 있어 출장과 여행에도 편리합니다. &nbsp;IT, 소프트웨어, 바이오, 의료기기 등 다양한 산업의 기업들이 자리하고 있으며, 캘리포니아대학교 얼바인 캠퍼스(UC Irvine)를 비롯한 교육·연구 기반도 갖추고 있습니다.</p><p>한인 마트와 한국 음식점 등 생활 편의시설을 이용하기 편리하고, 얼바인 스펙트럼 센터와 공원, 문화·체육시설 등 쇼핑과 여가를 즐길 수 있는 공간도 다양합니다. 또한 인근 뉴포트비치와 라구나비치 등 해안 지역을 방문하기 좋아 도시의 생활 편의성과 남부 캘리포니아의 자연환경을 함께 누릴 수 있는 것이 특징입니다.</p><p><img src=\"https://cdn.imweb.me/upload/S20220623b6db24c7eda01/018c72f9b4a77.png\" alt=\"3866a8e7c3bce.png\">&nbsp;</p><p><span><span>모집안내</span></span></p><p>◾ 채용부문 : Marketing Associate</p><p>◾ 근무기간 : 12개월 이상</p><p>◾ 근무시간 : 주40시간</p><p>◾ 급여 : $22-24 / an hour</p><p>◾ 연 환산 급여: 약 $45,760-49,920 (주 40시간 52주 근무 기준 이며, 주말 및 공휴일 over time 근무에 따라 변동 가능)</p><p>◾ 급여 외 보상 :&nbsp;</p><ul><li><p>점심 제공 ($20 상당의 한식, 양식, 중식 등 다양한 메뉴)</p></li><li><p>명절 보너스 및 휴일 수당 지급</p></li><li><p>유급 휴가 10일</p></li><li><p>Spigen Day (매주 금요일 Paid Half Day)</p></li><li><p>회사 이벤트 (분기별 이벤트, Team Bonding $50/month, Workshop $300/year)</p></li></ul><p><span><span>Job Description</span></span></p><p><span><u>Job summary&nbsp;</u></span></p><p>As a Marketing Associate, you will play a crucial role in supporting the marketing team’s efforts to achieve strategic goals and drive business growth. You will collaborate closely with cross-functional teams to execute integrated marketing campaigns, enhance brand awareness, and generate leads. This position offers an opportunity to contribute to various aspects of marketing, from digital marketing and content creation to market research and campaign analysis.&nbsp;</p><p><span><u>Duties / Responsibilities</u></span></p><ul><li>Campaign Execution and Coordination</li><li>Content Creation and Management</li><li>Market Research and Analysis</li><li>Collaboration and Communication</li></ul><p><span><span>Required Skills / Abilities</span></span></p><ul><li>Proven experience (internship or entry-level) in marketing, digital marketing, or a similar role</li><li>Strong written and verbal communication skills with attention to detail</li><li>Proficiency in digital marketing tools and platforms (Google Analytics, social media management tools, content management systems, etc.)</li><li>Analytical mindset with the ability to interpret data and generate actionable insights</li><li>Creative thinker with the ability to contribute innovative ideas to marketing campaigns</li><li>Ability to manage multiple projects simultaneously and prioritize tasks effectively</li><li>Able to use Photoshop and Premier</li></ul><p><span><u>Education and Experience</u></span></p><ul><li>Individuals pursuing an undergraduate degree, preferably with a concentration in Bachelor’s degree in Marketing, Communications, Business Administration, or related field</li><li>Internship or project experience in Marketing, Communications, Business Administration, or related field</li></ul><p><span><span>전형절차</span></span></p><p>◾ 문의 신청서 제출(구글폼)</p><p>◾ 비자발급 가능 여부 검토 후 개별 전형/기업 안내 실시</p><p>◾ 전달받은 이력서 작성 후 회신(첨삭진행)</p><p>◾ 기업 서류 전형</p><p>◾ 서류전형 합격자 인적성 진행(온라인)</p><p>◾ 1차 면접(인성)</p><p>◾ 2차 면접(직무)</p><p>◾ 합격자, 미국 스폰서기관 인터뷰 (회사-지원자 간의 보증을 해주는 미국 국무성 지정 기관, 별도 안내예정)</p><p>◾ 주한미국대사관 인터뷰 (별도 안내예정)</p><p>◾ 출국/출근</p><p><span><span>전형절차</span></span></p><p>◾ 문의 신청서 제출(구글폼)</p><p>◾ 비자발급 가능 여부 검토 후 개별 전형/기업 안내 실시</p><p>◾ 전달받은 이력서 작성 후 회신(첨삭진행)</p><p>◾ 기업 서류/ 화상 면접전형 진행</p><p>◾ 합격자, 미국 스폰서기관 인터뷰 (회사-지원자 간의 보증을 해주는 미국 국무성 지정 기관, 별도 안내예정)</p><p>◾ 주한미국대사관 인터뷰 (별도 안내예정)</p><p>◾ 출국/출근</p><p><span><span><br></span></span></p><p><span><span>접수기간</span></span></p><p>채용 시 마감<br><img src=\"https://cdn.imweb.me/upload/S20220623b6db24c7eda01/8791c9e009fff.png\" alt=\"13ef2131c8744.png\"></p><p>㈜커리어랩스는 지원자에게 알선비나 기업 매칭에 따른 비용을 받지 않습니다.</p><p>⋇ 파견직이 아닌 「합격기업 소속」으로 근무하게 됩니다.&nbsp;</p><p>⋇ 비자 발급비용은 본인 부담입니다.</p><p>☎ 지원문의: Tel. <a>031-8027-9060</a> / Email : hr@careerlabs.co.kr</p><p>✏ 신청서 제출: &nbsp;<a href=\"https://forms.gle/JDniMmJnRN39ESU56\">https://forms.gle/JDniMmJnRN39ESU56</a></p><p><span><span>주식회사 커리어랩스 | 031-8027-9060</span></span></p><p><span><span>경기도 하남시 미사대로520, 현대지식산업센터 2차 C동 319호, 320호</span></span></p><p><span><span>국외유료직업소개사업 등록번호: F1516020210001</span></span></p>",
+      "images": [
+        "https://cdn.imweb.me/upload/S20220623b6db24c7eda01/82f3fcde542ee.png",
+        "https://cdn.imweb.me/upload/S20220623b6db24c7eda01/38d3ab2703cad.png",
+        "https://cdn.imweb.me/upload/S20220623b6db24c7eda01/018c72f9b4a77.png",
+        "https://cdn.imweb.me/upload/S20220623b6db24c7eda01/8791c9e009fff.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T11:12:31.276304+09:00",
+      "page_text": "Spigen Inc.\nLocation : 8845 Irvine Center Dr #100, Irvine, CA 92618\nWebsite: https://www.spigen.com/\n\n“ Spigen Inc.는 미국 캘리포니아주 얼바인(Irvine)에 본사를 둔 글로벌 모바일 액세서리 기업입니다. 스마트폰 케이스와 화면 보호 제품을 비롯해 태블릿·웨어러블 액세서리, 충전 제품, 차량용 액세서리 등 다양한 제품을 통해 고객의 일상을 더욱 편리하게 만듭니다.\n스피겐은 사용자의 필요를 반영한 실용적인 디자인과 품질을 바탕으로 제품을 기획·개발하며, Amazon을 비롯한 글로벌 이커머스 채널을 통해 세계 각지의 고객과 만나고 있습니다. 빠르게 변화하는 모바일 환경에 맞춰 제품군을 확장하고, 고객이 신뢰할 수 있는 제품과 서비스를 제공하기 위해 노력합니다. 스피겐은 고객의 경험을 개선하는 일과 구성원의 성장을 함께 추구합니다. 다양한 시장과 고객을 이해하고, 새로운 아이디어를 제품과 서비스로 구현하며 함께 성장할 인재를 기다립니다. ”\n\n\n📍Irvine은 미국 캘리포니아주 오렌지카운티에 위치한 계획도시로, 남부 캘리포니아의 주요 비즈니스·주거 지역입니다. Interstate 5와 Interstate 405 등 주요 고속도로를 통해 로스앤젤레스와 샌디에이고 방면으로 이동할 수 있으며, 인근에 존 웨인 공항이 있어 출장과 여행에도 편리합니다. IT, 소프트웨어, 바이오, 의료기기 등 다양한 산업의 기업들이 자리하고 있으며, 캘리포니아대학교 얼바인 캠퍼스(UC Irvine)를 비롯한 교육·연구 기반도 갖추고 있습니다.\n한인 마트와 한국 음식점 등 생활 편의시설을 이용하기 편리하고, 얼바인 스펙트럼 센터와 공원, 문화·체육시설 등 쇼핑과 여가를 즐길 수 있는 공간도 다양합니다. 또한 인근 뉴포트비치와 라구나비치 등 해안 지역을 방문하기 좋아 도시의 생활 편의성과 남부 캘리포니아의 자연환경을 함께 누릴 수 있는 것이 특징입니다.\n\n모집안내\n◾ 채용부문 : Marketing Associate\n◾ 근무기간 : 12개월 이상\n◾ 근무시간 : 주40시간\n◾ 급여 : $22-24 / an hour\n◾ 연 환산 급여: 약 $45,760-49,920 (주 40시간 52주 근무 기준 이며, 주말 및 공휴일 over time 근무에 따라 변동 가능)\n◾ 급여 외 보상 :\n점심 제공 ($20 상당의 한식, 양식, 중식 등 다양한 메뉴)\n\n명절 보너스 및 휴일 수당 지급\n\n유급 휴가 10일\n\nSpigen Day (매주 금요일 Paid Half Day)\n\n회사 이벤트 (분기별 이벤트, Team Bonding $50/month, Workshop $300/year)\n\n\n\nJob Description\nJob summary\nAs a Marketing Associate, you will play a crucial role in supporting the marketing team’s efforts to achieve strategic goals and drive business growth. You will collaborate closely with cross-functional teams to execute integrated marketing campaigns, enhance brand awareness, and generate leads. This position offers an opportunity to contribute to various aspects of marketing, from digital marketing and content creation to market research and campaign analysis.\n\n\nDuties / Responsibilities\nCampaign Execution and Coordination\nContent Creation and Management\nMarket Research and Analysis\nCollaboration and Communication\n\n\nRequired Skills / Abilities\nProven experience (internship or entry-level) in marketing, digital marketing, or a similar role\nStrong written and verbal communication skills with attention to detail\nProficiency in digital marketing tools and platforms (Google Analytics, social media management tools, content management systems, etc.)\nAnalytical mindset with the ability to interpret data and generate actionable insights\nCreative thinker with the ability to contribute innovative ideas to marketing campaigns\nAbility to manage multiple projects simultaneously and prioritize tasks effectively\nAble to use Photoshop and Premier\n\n\nEducation and Experience\nIndividuals pursuing an undergraduate degree, preferably with a concentration in Bachelor’s degree in Marketing, Communications, Business Administration, or related field\nInternship or project experience in Marketing, Communications, Business Administration, or related field\n\n\n전형절차\n◾ 문의 신청서 제출(구글폼)\n◾ 비자발급 가능 여부 검토 후 개별 전형/기업 안내 실시\n◾ 전달받은 이력서 작성 후 회신(첨삭진행)\n◾ 기업 서류 전형\n◾ 서류전형 합격자 인적성 진행(온라인)\n◾ 1차 면접(인성)\n◾ 2차 면접(직무)\n◾ 합격자, 미국 스폰서기관 인터뷰 (회사-지원자 간의 보증을 해주는 미국 국무성 지정 기관, 별도 안내예정)\n◾ 주한미국대사관 인터뷰 (별도 안내예정)\n◾ 출국/출근\n\n\n전형절차\n◾ 문의 신청서 제출(구글폼)\n◾ 비자발급 가능 여부 검토 후 개별 전형/기업 안내 실시\n◾ 전달받은 이력서 작성 후 회신(첨삭진행)\n◾ 기업 서류/ 화상 면접전형 진행\n◾ 합격자, 미국 스폰서기관 인터뷰 (회사-지원자 간의 보증을 해주는 미국 국무성 지정 기관, 별도 안내예정)\n◾ 주한미국대사관 인터뷰 (별도 안내예정)\n◾ 출국/출근\n\n\n접수기간\n채용 시 마감\n\n㈜커리어랩스는 지원자에게 알선비나 기업 매칭에 따른 비용을 받지 않습니다.\n⋇ 파견직이 아닌 「합격기업 소속」으로 근무하게 됩니다.\n⋇ 비자 발급비용은 본인 부담입니다.\n\n☎ 지원문의: Tel. 031-8027-9060 / Email : hr@careerlabs.co.kr\n✏ 신청서 제출: https://forms.gle/JDniMmJnRN39ESU56\n\n\n\n\n주식회사 커리어랩스 | 031-8027-9060\n경기도 하남시 미사대로520, 현대지식산업센터 2차 C동 319호, 320호\n국외유료직업소개사업 등록번호: F1516020210001",
+      "body_attempted_at": "2026-11-10T11:12:31.276304+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-08T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363252": {
+      "notice": {
+        "id": "linkareer-intern/363252",
+        "source_id": "linkareer-intern",
+        "article_no": "363252",
+        "title": "[카카오페이] [어시스턴트] 온라인 가맹점 심사 업무 지원",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363252",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "가맹점 심사 및 정보 검수 업무는 소프트웨어 개발이나 데이터 분석 직무와 거리가 먼 운영 지원 업무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[카카오페이] [어시스턴트] 온라인 가맹점 심사 업무 지원\n\n\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 온라인 가맹점 심사 업무\n\n\n\n\n[업무내용]\n\n\n- 가맹점이 접수한 가맹점 기본 정보를 확인하고, 시스템 입력 및 검수하는 업무를 담당\n\n\n\n\n[채용절차]\n\n\n- 서류 - 1차 인터뷰 - 최종합격\n\n\n\n\n[근무조건]\n\n\n- 고용형태 : 어시스턴트\n- 시급 : 10,900원 (월 만근 시 2,478,100원/ 식대 200,000원 포함)\n- 근무 일시 : ASAP (1일 8시간, 6개월 근무)\n\n\n\n\n[공고상세]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[카카오페이] [어시스턴트] 온라인 가맹점 심사 업무 지원</b></span></p><p><span><b>[모집분야]</b></span></p><p>- 온라인 가맹점 심사 업무</p><p><span><b>[업무내용]</b></span></p><p>- 가맹점이 접수한 ​가맹점 ​기본 정보를 확인하고, ​시스템 입력 ​및 검수하는 업무를 담당</p><p><span><b>[채용절차]</b></span></p><p>- 서류 - 1차 인터뷰 - 최종합격</p><p><span><b>[근무조건]</b></span></p><p>- 고용형태 : 어시스턴트</p><p>- 시급 : 10,900원 (월 만근 시 2,478,100원/ 식대 200,000원 포함)</p><p>- 근무 일시 : ASAP (1일 8시간, 6개월 근무)</p><p><span><b>[공고상세]</b></span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984333\" title=\"스크린샷 2026-11-10 104827.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984334\" title=\"스크린샷 2026-11-10 104847.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984332\" title=\"스크린샷 2026-11-10 104857.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984333",
+        "https://media-cdn.linkareer.com/se2editor/image/984334",
+        "https://media-cdn.linkareer.com/se2editor/image/984332"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T11:12:31.276304+09:00",
+      "page_text": "[카카오페이] [어시스턴트] 온라인 가맹점 심사 업무 지원\n\n\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 온라인 가맹점 심사 업무\n\n\n\n\n[업무내용]\n\n\n- 가맹점이 접수한 가맹점 기본 정보를 확인하고, 시스템 입력 및 검수하는 업무를 담당\n\n\n\n\n[채용절차]\n\n\n- 서류 - 1차 인터뷰 - 최종합격\n\n\n\n\n[근무조건]\n\n\n- 고용형태 : 어시스턴트\n- 시급 : 10,900원 (월 만근 시 2,478,100원/ 식대 200,000원 포함)\n- 근무 일시 : ASAP (1일 8시간, 6개월 근무)\n\n\n\n\n[공고상세]",
+      "body_attempted_at": "2026-11-10T11:12:31.276304+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-08T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "1d7d32d990f052380a2efe8be93020df25c28fb8a8edab743b9ea9e79e84f147",
+        "verdict": "not_relevant",
+        "reason": "가맹점 심사 및 정보 검수 업무는 소프트웨어 개발이나 데이터 분석 직무와 거리가 먼 운영 지원 업무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363245": {
+      "notice": {
+        "id": "linkareer-intern/363245",
+        "source_id": "linkareer-intern",
+        "article_no": "363245",
+        "title": "[EY한영] 감사부문 ESG 경영 컨설턴트 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363245",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "ESG 경영 컨설턴트 직무는 경영 컨설팅 분야로 소프트웨어 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[EY한영] 감사부문 ESG 경영 컨설턴트 인턴\n\n\n\n\n[담당업무]\n- ESG,지속가능경영 전략 수립 및 성과관리\n- ESG 정보공시 및 대외평가 대응\n- 기후변화, 탄소중립, 환경경영 전략 수립\n- 사회적 가치 평가 업무 지원\n\n\n[지원자격]\n- 국내외 4년제 대학 졸업(예정)자, 예정자의 경우 학점 수료자(27년 2월 이내 졸업 예정자)\n\n\n[우대사항]\n- 경영전략 컨설팅, 프로젝트 관리, 전략/기획 등의 업무 경험자\n- 금융권 ESG, 지속가능성, CSR 관련 업무 수행 경험자\n- 원활한 협업 및 커뮤니케이션 역량 보유자\n- 영어 커뮤니케이션 및 영문 보고서 작성 가능자\n\n\n[근무기간]\n- 3개월 (업무 평가에 따라 3개월 연장 및 정규전환 검토 대상)\n\n\n[전형절차]\n- 1차 서류 심사\n- 온라인 인성검사\n- 2차 실무/임원 면접",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[EY한영] 감사부문 ESG 경영 컨설턴트 인턴</b></span></p><p><span>[담당업무]</span></p><p><span>- ESG,지속가능경영 전략 수립 및 성과관리</span></p><p><span>- ESG 정보공시 및 대외평가 대응</span></p><p><span>- 기후변화, 탄소중립, 환경경영 전략 수립</span></p><p><span>- 사회적 가치 평가 업무 지원</span></p><p><span>[지원자격]</span></p><p><span>- 국내외 4년제 대학 졸업(예정)자, 예정자의 경우 학점 수료자(27년 2월 이내 졸업 예정자)</span></p><p><span>[우대사항]</span></p><p><span>- 경영전략 컨설팅, 프로젝트 관리, 전략/기획 등의 업무 경험자</span></p><p><span>- 금융권 ESG, 지속가능성, CSR 관련 업무 수행 경험자</span></p><p><span>- 원활한 협업 및 커뮤니케이션 역량 보유자</span></p><p><span>- 영어 커뮤니케이션 및 영문 보고서 작성 가능자</span></p><p><span>[근무기간]</span></p><p><span>- 3개월 (업무 평가에 따라 3개월 연장 및 정규전환 검토 대상)</span></p><p><span>[전형절차]</span></p><p><span>- 1차 서류 심사</span></p><p><span>- 온라인 인성검사</span></p><p><span>- 2차 실무/임원 면접&nbsp;</span>&nbsp;</p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984302\" title=\"20261110_102952.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984302"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T11:12:31.276304+09:00",
+      "page_text": "[EY한영] 감사부문 ESG 경영 컨설턴트 인턴\n\n\n\n\n[담당업무]\n- ESG,지속가능경영 전략 수립 및 성과관리\n- ESG 정보공시 및 대외평가 대응\n- 기후변화, 탄소중립, 환경경영 전략 수립\n- 사회적 가치 평가 업무 지원\n\n\n[지원자격]\n- 국내외 4년제 대학 졸업(예정)자, 예정자의 경우 학점 수료자(27년 2월 이내 졸업 예정자)\n\n\n[우대사항]\n- 경영전략 컨설팅, 프로젝트 관리, 전략/기획 등의 업무 경험자\n- 금융권 ESG, 지속가능성, CSR 관련 업무 수행 경험자\n- 원활한 협업 및 커뮤니케이션 역량 보유자\n- 영어 커뮤니케이션 및 영문 보고서 작성 가능자\n\n\n[근무기간]\n- 3개월 (업무 평가에 따라 3개월 연장 및 정규전환 검토 대상)\n\n\n[전형절차]\n- 1차 서류 심사\n- 온라인 인성검사\n- 2차 실무/임원 면접",
+      "body_attempted_at": "2026-11-10T11:12:31.276304+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "36804878306b55c62a52d97bd40aff20f82c5179f4ebac9645d9232297e142ab",
+        "verdict": "not_relevant",
+        "reason": "ESG 경영 컨설턴트 직무는 경영 컨설팅 분야로 소프트웨어 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363231": {
+      "notice": {
+        "id": "linkareer-intern/363231",
+        "source_id": "linkareer-intern",
+        "article_no": "363231",
+        "title": "[Spigen Inc] [미국인턴/캘리포니아] - 슈피겐(Spigen) 미주지사  - 마케팅 인턴 채용",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363231",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[미국인턴/캘리포니아] - 슈피겐(Spigen) 미주지사\n- 마케팅 인턴 채용\n접수 기간 2026-11-10 ~ 채용 시 마감\n\n모집부문 및 상세내용\n모집 부문상세내용\nMarketing\nAssociate\n(0명)\n\n\n슈피겐은 모바일 액세서리 및 IT 제품 분야를 선도하는 글로벌 이커머스 기업입니다.\nAmazon을 비롯한 주요 온라인 마켓플레이스를 통해 전 세계 고객에게 혁신적인 제품을 제공하고 있으며, 데이터 기반의 운영과 고객 중심의 서비스를 바탕으로 지속적인 성장을 이어가고 있습니다.\n\n🔎1차 채용 마감일 : ~11/15까지\n\n\n\n\n📋담당업무\n- 마케팅 전략 실행 및 통합 마케팅 캠페인 운영 지원\n- 디지털 마케팅, 콘텐츠 제작 및 브랜드 인지도 향상\n- 시장조사, 마케팅 성과 분석 및 잠재 고객 발굴\n- 유관 부서와 협업하여 마케팅 프로젝트 진행\n\n\n\n\n\n📋채용형태\n- 인턴 12개월\n\n\n\n\n\n📋자격조건\n- 신입 채용\n- 마케팅, 커뮤니케이션, 경영학 또는 관련 전공 학사 재학·졸업자\n- 중급 수준의 영어 능력(회화 및 작문)\n- 대학교 3학년 이상 재학생 및 졸업(예정)자 지원 가능\n- 마케팅 관련 인턴십 또는 프로젝트 경험 보유자\n- Google Analytics, SNS 관리 도구 등 디지털 마케팅 플랫폼 활용 능력\n- Photoshop 및 Premiere 활용 가능자\n- MS Office 또는 Google Workspace 활용 능력\n- 미국 취업에 결격 사유 없는 자\n\n\n\n\n\n\n🏠 근무조건 (공통)\n• 고용형태 : 인턴직, 해외취업\n• 급여 : 22/hrs or up (한화 약 6,100만원 내외, 회사 내규에 따름)\n• 근무지 : 미국 캘리포니아주 Irvine\n\n\n\n\n\n\n\n\n\n\n🎁 복지 및 혜택 (공통)\n- 4.5일 근무제\n- 중식 제공\n- 명절 보너스 제공\n- 회사 내규에 따라 병가/연차 제공\n\n\n\n\n\n\n\n\n\n\n\n🚀 채용절차\n1. 지원/접수\n2. 채용대행 에이전시(ICN Korea) 통해 서류 검토, J-1 Visa 발급요건 부합여부 확인\n3. 기업 인적성검사 및 인터뷰 (화상 Zoom으로 통해 진행)\n4. 합격자, 미국 스폰서기관 인터뷰 (회사-지원자 간의 보증을 해주는 미국 국무성 지정 기관)\n5. 주한미국대사관 인터뷰\n6. 출국/출근\n\n\n\n\n\n\n\n\n\n🏠 접수문의\n아이씨엔그룹(주)는 미국인턴 전문 에이전시입니다.\n※ 파견직이 아닌 해당기업 미국현지법인 직접고용으로 근무하게 됩니다.\n※ J-1비자로 입사하며 비자발급비용은 지원자 개인부담입니다.\nVisa 수속 비용 - $4,950\n(DS-7002, DS-2019, Site Visit, SEVIS Fee, 1년 J1 보험 비용 등 포함 / 기업 채용 확정 시 납부)\n\n\n\n\n\n\n\n\n🏠 지원문의 :\n(유선) 02-3445-4278\n(메일) icngroup@icncareer.com\n(카카오톡) http://pf.kakao.com/_RBmwj/chat\n✏ (신청서 제출 : https://forms.gle/TVkc8knomHkrfrXq9\n\n\n\n\n\n\n\n\n\n자격요건\n학력\n대학졸업(4년) 이상(졸업예정자 가능)\n\n근무조건\n급여\n연봉 6100만원 ~ 6100만원\n\n근무시간\n주 5일(월~금) 08:00 ~ 17:00\n\n근무지역\n해외 (미국)\n\n\n지원 기간 및 방법\n접수기간\n2026-11-10 ~ 채용 시 마감\n\n접수방법\n링커리어 간편지원\n\n문의\n전화번호\n0234454278\n\n이메일\nicngroup@icncareer.com\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><img src=\"https://linkareer.com/images/activity/banner/template_3_banner.webp\"><div><h2><span>[미국인턴/캘리포니아] - 슈피겐(Spigen) 미주지사</span></h2><h2><span>&nbsp;&nbsp;- 마케팅 인턴 채용</span></h2><p><span>접수 기간 </span><span>2026-11-10 ~ 채용 시 마감</span></p></div><div><strong><span>모집부문 및 상세내용</span></strong></div><table><thead><tr><th><span>모집 부문</span></th><th><span>상세내용</span></th></tr></thead><tbody><tr><td><p><span>Marketing</span></p><p><span> Associate</span></p><span> </span><span>(0명)</span></td><td><div><div><div><span><img src=\"https://media-cdn.linkareer.com/se2editor/image/984275\" title=\"Spigen4.jpg\"><br><br></span></div><div><span>슈</span><span>피겐은 모바일 액세서리 및 IT 제품 분야를 선도하는 글로벌 이커머스 기업입니다.&nbsp;</span></div><div><span>Amazon을 비롯한 주요 온라인 마켓플레이스를 통해 전 세계 고객에게 혁신적인 제품을 제공하고 있으며, 데이터 기반의 운영과 고객 중심의 서비스를 바탕으로 지속적인 성장을 이어가고 있습니다.</span></div></div><div><span>🔎</span><span><span><b>1차 채용 마감일 : ~11/15까지</b></span></span></div><div><span><br></span></div><div><span><br></span></div><div><span>📋</span><span>담당업무</span></div><p><span>-  마케팅 전략 실행 및 통합 마케팅 캠페인 운영 지원\n-  디지털 마케팅, 콘텐츠 제작 및 브랜드 인지도 향상\n-  시장조사, 마케팅 성과 분석 및 잠재 고객 발굴\n-  유관 부서와 협업하여 마케팅 프로젝트 진행</span></p><p><span><br></span></p><p><span><br></span></p></div><div><div><span>📋</span><span>채용형태</span></div><p><span>-</span><span> </span><span>인턴 12개월</span></p><p><span><br></span></p><p><span><br></span></p></div><div><div><span>📋</span><span>자격조건</span></div><p><span>- 신입 채용\n- 마케팅, 커뮤니케이션, 경영학 또는 관련 전공 학사 재학·졸업자\n- 중급 수준의 영어 능력(회화 및 작문)\n- 대학교 3학년 이상 재학생 및 졸업(예정)자 지원 가능\n- 마케팅 관련 인턴십 또는 프로젝트 경험 보유자\n- Google Analytics, SNS 관리 도구 등 디지털 마케팅 플랫폼 활용 능력\n- Photoshop 및 Premiere 활용 가능자\n- MS Office 또는 Google Workspace 활용 능력\n- 미국 취업에 결격 사유 없는 자</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><div><p><span>🏠 근무조건 (공통)</span></p><div><p><span> • 고용형태 : </span><span><strong><span>인턴직</span></strong>, <strong><span>해외취업</span></strong></span></p><p><span> • 급여 : 22/hrs or up (한화 약 6,100만원 내외, 회사 내규에 따름)</span></p><p><span> • 근무지 : 미국 캘리포니아주 Irvine</span></p></div></div><div><p><span>🎁 복지 및 혜택 (공통)</span></p><div><p><span>-&nbsp;4.5일&nbsp;근무제</span></p><p><span>-&nbsp;중식&nbsp;제공</span></p><p><span>-&nbsp;명절&nbsp;보너스&nbsp;제공</span></p><p><span>-&nbsp;회사&nbsp;내규에&nbsp;따라&nbsp;병가/연차&nbsp;제공</span></p></div></div><div></div><div><div><p><span>🚀 채용절차</span></p><div><p><span>1. 지원/접수&nbsp;</span><br><span>2. 채용대행 에이전시(ICN Korea) 통해 서류 검토, J-1 Visa 발급요건 부합여부 확인</span><br><span>3. 기업 인적성검사 및 인터뷰 (화상 Zoom으로 통해 진행)</span><br><span>4. 합격자, 미국 스폰서기관 인터뷰 (회사-지원자 간의 보증을 해주는 미국 국무성 지정 기관)</span><br><span>5. 주한미국대사관 인터뷰</span><br><span>6. 출국/출근</span></p></div></div></div><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><div><div><p><span>🏠 </span><span><b>접수문의</b></span></p><p><span><span>아이씨엔그룹(주)는 미국인턴 전문 에이전시입니다.\n※ 파견직이 아닌 해당기업 미국현지법인 직접고용으로 근무하게 됩니다.\n※ J-1비자로 입사하며 비자발급비용은 지원자 개인부담입니다.\n</span></span><span><span>    Visa 수속 비용 - $4,950 </span></span></p><p><span><span>    (DS-7002, DS-2019, Site Visit, </span></span><span>SEVIS Fee, 1년 J1 보험 비용 등 </span><span>포함 / 기업 채용 확정 시 납부</span><span>)</span><span></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span>\n\n<b><span>&nbsp;</span></b></span><span>🏠</span><span><b><span>&nbsp; 지원문의 :</span></b> \n   (유선) 02-3445-4278&nbsp; \n(메일) icngroup@icncareer.com&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \n(카카오톡) http://pf.kakao.com/_RBmwj/chat</span></p><p><span><b><span>✏ (신청서 제출 : </span><a href=\"https://forms.gle/TVkc8knomHkrfrXq9\"><span>https://forms.gle/TVkc8knomHkrfrXq9</span></a></b></span></p></div></div><p><br><br><br><span></span></p></div></td></tr></tbody></table><div><strong><span>자격요건</span></strong></div><div><p><span>학력</span></p><p><span>대학졸업(4년) 이상(졸업예정자 가능)</span></p></div><div><strong><span>근무조건</span></strong></div><ul><li><p><span>급여</span></p><p><span>연봉 6100만원 ~ 6100만원</span></p></li><li><p><span>근무시간</span></p><p><span>주 5일(월~금) 08:00 ~ 17:00</span></p></li><li><p><span>근무지역</span></p><div><p><span>해외 (미국)</span></p></div></li></ul><div><strong><span>지원 기간 및 방법</span></strong></div><ul><li><p><span>접수기간</span></p><p><span>2026-11-10 ~ 채용 시 마감</span></p></li><li><p><span>접수방법</span></p><p><span>링커리어 간편지원</span></p></li></ul><div><strong><span>문의</span></strong></div><ul><li><p><span>전화번호</span></p><p><span>0234454278</span></p></li><li><p><span>이메일</span></p><p><span>icngroup@icncareer.com</span></p></li></ul><div><strong><span>유의사항</span></strong></div><ul><li><span>허위 사실이 발견될 경우 채용이 취소될 수 있습니다.</span></li></ul></div></div>",
+      "images": [
+        "https://linkareer.com/images/activity/banner/template_3_banner.webp",
+        "https://media-cdn.linkareer.com/se2editor/image/984275"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T11:12:31.276304+09:00",
+      "page_text": "[미국인턴/캘리포니아] - 슈피겐(Spigen) 미주지사\n- 마케팅 인턴 채용\n접수 기간 2026-11-10 ~ 채용 시 마감\n\n모집부문 및 상세내용\n모집 부문상세내용\nMarketing\nAssociate\n(0명)\n\n\n슈피겐은 모바일 액세서리 및 IT 제품 분야를 선도하는 글로벌 이커머스 기업입니다.\nAmazon을 비롯한 주요 온라인 마켓플레이스를 통해 전 세계 고객에게 혁신적인 제품을 제공하고 있으며, 데이터 기반의 운영과 고객 중심의 서비스를 바탕으로 지속적인 성장을 이어가고 있습니다.\n\n🔎1차 채용 마감일 : ~11/15까지\n\n\n\n\n📋담당업무\n- 마케팅 전략 실행 및 통합 마케팅 캠페인 운영 지원\n- 디지털 마케팅, 콘텐츠 제작 및 브랜드 인지도 향상\n- 시장조사, 마케팅 성과 분석 및 잠재 고객 발굴\n- 유관 부서와 협업하여 마케팅 프로젝트 진행\n\n\n\n\n\n📋채용형태\n- 인턴 12개월\n\n\n\n\n\n📋자격조건\n- 신입 채용\n- 마케팅, 커뮤니케이션, 경영학 또는 관련 전공 학사 재학·졸업자\n- 중급 수준의 영어 능력(회화 및 작문)\n- 대학교 3학년 이상 재학생 및 졸업(예정)자 지원 가능\n- 마케팅 관련 인턴십 또는 프로젝트 경험 보유자\n- Google Analytics, SNS 관리 도구 등 디지털 마케팅 플랫폼 활용 능력\n- Photoshop 및 Premiere 활용 가능자\n- MS Office 또는 Google Workspace 활용 능력\n- 미국 취업에 결격 사유 없는 자\n\n\n\n\n\n\n🏠 근무조건 (공통)\n• 고용형태 : 인턴직, 해외취업\n• 급여 : 22/hrs or up (한화 약 6,100만원 내외, 회사 내규에 따름)\n• 근무지 : 미국 캘리포니아주 Irvine\n\n\n\n\n\n\n\n\n\n\n🎁 복지 및 혜택 (공통)\n- 4.5일 근무제\n- 중식 제공\n- 명절 보너스 제공\n- 회사 내규에 따라 병가/연차 제공\n\n\n\n\n\n\n\n\n\n\n\n🚀 채용절차\n1. 지원/접수\n2. 채용대행 에이전시(ICN Korea) 통해 서류 검토, J-1 Visa 발급요건 부합여부 확인\n3. 기업 인적성검사 및 인터뷰 (화상 Zoom으로 통해 진행)\n4. 합격자, 미국 스폰서기관 인터뷰 (회사-지원자 간의 보증을 해주는 미국 국무성 지정 기관)\n5. 주한미국대사관 인터뷰\n6. 출국/출근\n\n\n\n\n\n\n\n\n\n🏠 접수문의\n아이씨엔그룹(주)는 미국인턴 전문 에이전시입니다.\n※ 파견직이 아닌 해당기업 미국현지법인 직접고용으로 근무하게 됩니다.\n※ J-1비자로 입사하며 비자발급비용은 지원자 개인부담입니다.\nVisa 수속 비용 - $4,950\n(DS-7002, DS-2019, Site Visit, SEVIS Fee, 1년 J1 보험 비용 등 포함 / 기업 채용 확정 시 납부)\n\n\n\n\n\n\n\n\n🏠 지원문의 :\n(유선) 02-3445-4278\n(메일) icngroup@icncareer.com\n(카카오톡) http://pf.kakao.com/_RBmwj/chat\n✏ (신청서 제출 : https://forms.gle/TVkc8knomHkrfrXq9\n\n\n\n\n\n\n\n\n\n자격요건\n학력\n대학졸업(4년) 이상(졸업예정자 가능)\n\n근무조건\n급여\n연봉 6100만원 ~ 6100만원\n\n근무시간\n주 5일(월~금) 08:00 ~ 17:00\n\n근무지역\n해외 (미국)\n\n\n지원 기간 및 방법\n접수기간\n2026-11-10 ~ 채용 시 마감\n\n접수방법\n링커리어 간편지원\n\n문의\n전화번호\n0234454278\n\n이메일\nicngroup@icncareer.com\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
+      "body_attempted_at": "2026-11-10T11:12:31.276304+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-08T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363229": {
+      "notice": {
+        "id": "linkareer-intern/363229",
+        "source_id": "linkareer-intern",
+        "article_no": "363229",
+        "title": "[(주)효성] [효성그룹/HRD] 효성인력개발원 체험형 인턴 모집 (~11/18)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363229",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": "2026-11-18T23:59:00+09:00",
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984268\" alt=\"\"></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984274\" alt=\"\"></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984272\" alt=\"\"></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984268",
+        "https://media-cdn.linkareer.com/se2editor/image/984274",
+        "https://media-cdn.linkareer.com/se2editor/image/984272"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T11:12:31.276304+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-10T11:12:31.276304+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-18T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363224": {
+      "notice": {
+        "id": "linkareer-intern/363224",
+        "source_id": "linkareer-intern",
+        "article_no": "363224",
+        "title": "[이랜드파크] 호텔 경영자 Fast-Track 채용 (신입/경력)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363224",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "cse-notice/228285": {
       "notice": {
         "id": "cse-notice/228285",
@@ -313,6 +866,45 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-12-05T07:00:00+09:00"
+      }
+    },
+    "linkareer-intern/363226": {
+      "notice": {
+        "id": "linkareer-intern/363226",
+        "source_id": "linkareer-intern",
+        "article_no": "363226",
+        "title": "[한국GM] 2027 동계인턴사원 모집 (생산/안전/품질)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363226",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T11:12:31.276304+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T23:59:59.999000+09:00",
+        "model": "source"
       }
     },
     "linkareer-intern/363202": {
@@ -4376,7 +4968,7 @@
         "kind": "일정",
         "at": "2026-12-01T18:30:00+09:00"
       },
-      "rechecked_at": "2026-11-09T22:20:03.698805+09:00",
+      "rechecked_at": "2026-11-10T11:12:31.276304+09:00",
       "page_text": "삼성바이오로직스 현직 동문께서 후배 여러분들을 위해 특강을 진행할 예정입니다.\n취업준비생분들과 본인의 진로 및 직무를 고민하고 계시는 모든 학생 여러분들의 많은 참여 바랍니다.\n\n[삼성바이오로직스 현직 동문 특강]\n1. 강연자 소개\n- 성균관대학교 화학공학부 학사 졸업(13학번)\n- 2019년 7월 삼성바이오로직스 하계인턴\n- 2019년 11월 유한양행 품질보증팀 입사\n- 2020년 12월 동아ST 밸리데이션팀 입사\n- 2024년 10월 삼성바이오로직스 품질보증팀 재직 중\n- 주요 경력: 동아ST - 인천 송도 신공장 추진, 삼성바이오로직스 - 글로벌 빅파마 기술이전(화이자 등)\n\n2. 특강 내용\n- 제약 vs 바이오 산업 차이 알아보기, 기초 배경지식, 현대 트렌드 이해\n- 제약바이오 산업 취업을 위해 준비해야 할 스펙\n- 좋은 회사를 고르는 기준, 국내 유명 제약회사 리뷰\n- 품질보증(QA), 품질관리(QC)팀 직무 설명 및 장단점 소개\n- Q&A\n\n3. 특강 일시 및 장소: 12/1(화) 18:30~20:30 (자과캠) 제2과학관 32255 강의실\n\n★ 사전 신청을 받고 있으니 참여 희망하는 학생분들은 아래 링크를 통하여 신청해 주시기 바랍니다(로그인 필요).\n링크: https://job.skku.edu/community/Program/programView.aspx?pgdx=uDUi6nZDleIzs28YttgR5W3zLn8SnDphgXAkTtytRZ4\n★ 출석 확인 시, 강의 시간만큼 창의품 인증이 가능한 비교과 프로그램 이수시간을 부여해 드릴 예정입니다."
     },
     "linkareer-intern/362738": {
@@ -7989,7 +8581,7 @@
         "kind": "마감",
         "at": "2026-11-25T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-09T22:20:03.698805+09:00",
+      "rechecked_at": "2026-11-10T11:12:31.276304+09:00",
       "page_text": "2026 랜선으로 만나는 릴레이 글로벌 취·창업 톡톡톡(talk)\n\n글로벌 취업·창업· 인턴십을 꿈꾸는 재학생을 위한『 2026 랜선으로 만나는 릴레이 글로벌 취·창업 톡톡톡』을 진행합니다.\n\n미국, 프랑스 등 해외에서 실제로 활동하고 있는 글로벌 기업 및 연구기관의 연사들이 전하는 생생한 경험과 이야기를 통해 해외 취·창업에 대한 정보와 글로벌 진로에 대한 다양한 인사이트를 얻어보세요!\n\n또한 강의 후 진행되는 Q&A 시간을 통해 평소 접하기 어려웠던 해외 기업 및 현지 취업·창업에 대한 궁금증을 직접 질문하고 다양한 정보를 얻을 수 있습니다.\n\n많은 관심과 참여 부탁드립니다.\n\n■ 교육기간: 2026. 11. 3.(화) ~ 11. 26.(목) / 총 8회(매주 화, 목)\n\n■ 교육시간: 19:00~20:30 (한국시간 기준)\n\n■ 교육방법 : 줌 실시간 온라인 강의\n\n■ 신청기한: 희망 교육 차수 기준 1일전까지 신청(각 회차당 선착순 300명)\n\n■ 참여혜택: 3회 이상 참여 시 아주대학교 앵커사업단장 명의 수료증 발급(45분 이상 수강 기준)"
     },
     "sw-notice/228121": {
@@ -8038,7 +8630,7 @@
         "kind": "일정",
         "at": "2026-11-21T13:00:00+09:00"
       },
-      "rechecked_at": "2026-11-09T22:20:03.698805+09:00",
+      "rechecked_at": "2026-11-10T11:12:31.276304+09:00",
       "page_text": "행사 개요\n일시: 2026년 11월 21일(토) 오후 1시~5시 30분\n장소: 서울특별시 강남구 테헤란로 138 성홍타워 3층 (드리움) Forest Hall\n참석 대상: 온디바이스 AI 유관 분야 학생, 연구자 및 산업 종사자\n행사 개요: 카카오, 연세대, 에너자이 등 산학 연사들이 공유하는 온디바이스 AI 연구 및 상용화 경험\n참가비: 무료\n신청 링크: https://event-us.kr/m/138890/63964\n\n세부 일정\n12:30 - 13:00 행사 등록 및 안내\n13:00 - 13:20 인사말 및 후원사 소개 (에너자이 | 장한힘 대표)\n13:20 - 13:50 Optimizing Tiny Speech Models for Hearding Aids (Flysounds | 김경민 연구원)\n13:50 - 14:00 쉬는 시간\n14:00 - 14:20 Personal 에이전트 시대가 부르는 온디바이스 AI (에너자이 | 장한힘 대표)\n14:20 - 14:50 Systems for Efficient On-Device AI (연세대학교 | 이제호 연구원)\n14:50 - 15:00 쉬는 시간\n15:00 - 15:30 Building an Open-Source NPU Compiler: Synaptics Torq (에너자이 | 김재호 Compiler Engineer Team Lead)\n15:30 - 16:00 Kanana 온디바이스 AI 에이전트 개발기 (카카오 | 민규식 AI 엔지니어)\n16:00 - 17:30 네트워킹 및 마무리\n\n기타 안내\n주차공간은 별도로 제공되지 않습니다.\n공간 제한으로 인해 모집이 조기 마감될 수 있습니다.\n발표자, 발표 순서, 발표 주제, 발표 구성 등이 향후 변경될 수 있습니다.\n기타 문의는 sungmin.woo@enerzai.com 로 부탁드립니다."
     },
     "skku-notice01/141610": {

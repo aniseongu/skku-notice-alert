@@ -6232,7 +6232,7 @@
         "at": "2026-12-04T14:00:00+09:00"
       },
       "page_text": "장애학생지원센터에서 '2026년도 사회적 장애인식개선교육'을 진행하오니 학생분들의 많은 참여 부탁드립니다.\n\n◎일시 : 2026.12.4(금) 14:00~15:00\n◎대상 : 학부 및 대학원생\n◎장소 : 성균관대학교 인문과학캠퍼스 국제관 9B218\n◎강사 : 신홍윤(보건복지부 장애청년 정책위원회 위원)\n◎참여 방법 : 현장접수\n◎참여혜택 : 교내 인성품 봉사 2시간 부여(학부생 한정)\n\n◎문의 : 장애학생지원센터\nTel. 02-760-1090 / 031-299-4425\nE-mail. supporter@skku.edu\n\n*상기 일정 및 내용은 변동 될 수 있습니다.",
-      "rechecked_at": "2026-11-10T17:22:51.879428+09:00"
+      "rechecked_at": "2026-11-11T07:26:39.957595+09:00"
     },
     "cse-notice/228224": {
       "notice": {
@@ -6284,7 +6284,7 @@
         "at": "2026-11-25T15:00:00+09:00"
       },
       "page_text": "Title: Variational Diffusion Model: Line-by-line derivations\n\nSpeaker: Prof. Jooyeon Kim @ UNIST\n\nTime : 15:00 - 16:00, Nov 25, 2026\n\nLocation:\nOnline: https://zoom.us/j/83139609156\nMeeting ID: 831 3960 9156\nPasscode: 91818154\n\nLanguage: English speech & English slides\n\nAbstract:\nDiffusion models are making real-world impacts across multiple data modalities and applications. In this lecture, I aim to mathematically derive the variational diffusion models from scratch using variational approaches. I start by constructing and expanding the evidence lower bound (ELBO). Once we derive the final results, which are the neural network parameter update rules, they can be used directly at the code level.\n\nBio:\nJooyeon Kim is an assistant professor at UNIST. He obtained his BS degree at the University of Tokyo, and his MS and Ph.D. degrees at KAIST. He worked as a researcher at Microsoft Research Cambridge (MSRC) for a year and a half and as a postdoctoral researcher at RIKEN for another year and a half. He is currently interested in (in no particular order): world models, model scaling, generalization, generative models (transformers, diffusions). He is also the founder and CEO of a startup company, ARI.AI, that aims to develop AI foundation models that operate on predictive individual, health-related, measurable biological indicators.",
-      "rechecked_at": "2026-11-10T18:33:54.793508+09:00"
+      "rechecked_at": "2026-11-11T07:26:39.957595+09:00"
     },
     "skku-career-intern/165093": {
       "notice": {
@@ -7770,7 +7770,7 @@
       "body_attempts": 2,
       "fetched_at": "2026-11-07T02:18:21.718635+09:00",
       "body_attempted_at": "2026-11-07T02:18:21.718635+09:00",
-      "rechecked_at": "2026-11-10T18:33:54.793508+09:00",
+      "rechecked_at": "2026-11-11T07:26:39.957595+09:00",
       "changed_at": "2026-11-07T02:18:21.718635+09:00",
       "change_kind": "본문",
       "ai_deadline": {

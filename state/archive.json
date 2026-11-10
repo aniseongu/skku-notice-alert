@@ -55,12 +55,58 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141718": {
+      "notice": {
+        "id": "skku-notice01/141718",
+        "source_id": "skku-notice01",
+        "article_no": "141718",
+        "title": "[모집] 최근 발목 접질린 환자를 위한 재활 운동 프로그램 참여자를 모집합니다",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141718",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T09:40:50.576448+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "학업 및 개발 직무와 무관한 단순 스포츠 재활 연구 참여 모집 공고입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "성균관대학교 스포츠과학과 스포츠재활 연구실에서는 최근 발목을 접질린 성인을 대상으로 전기자극을 활용한 발목 재활 트레이닝 연구를 진행합니다. 본 연구는 발목에 가벼운 전기자극을 적용한 상태에서 4주간의 발목 재활 운동 프로그램을 실시하고, 이를 통해 발목의 신경반응, 통증, 부종, 근력 및 발목 기능의 변화를 확인하는 실험 연구입니다. 급성 발목 염좌로 인해 일상생활이나 스포츠 활동 참여에 어려움을 겪고 계신 분들의 많은 참여를 부탁드립니다.\n\n1. 모집대상\n\n• 18세 이상 성인\n• 최근 2주 내 발목을 접질린 경험이 있는 분\n• 발목 문제로 인해 일상 생활이나 스포츠 활동에 제한이 있는 분\n• 4주간 주 3회 실험실 방문이 가능한 분\n\n2. 참여가 어려울 수 있는 경우\n\n• 발목 골절이 의심되거나 진단을 받은 경우\n• 6개월 이내 발목 수술을 받은 경우\n• 연구자가 판단하기에 안전한 운동 참여가 어렵다고 판단되는 경우\n\n3. 실험장소\n\n• 성균관대학교 자연과학캠퍼스 수성관 3층 스포츠재활 실험실\n\n4. 연구 참여 절차 및 소요시간\n\n• 연구 참여 전, 먼저 실험실에 1회 방문하여 발목 상태에 대한 스크리닝 검사를 받게 됩니다.\n• 스크리닝 검사 후 연구 참여가 가능한 것으로 확인된 분께 담당 연구자가 개별 연락을 드립니다.\n\n연구 참여가 확정된 경우, 아래 절차에 따라 진행됩니다.\n\n1) 연구 시작 전 평가\n• 신경반응 검사\n• 발목 근력 평가\n• 통증, 부종 및 발목 기능 관련 설문\n• 소요시간: 약 1시간 이내\n\n2) 4주간 발목 재활 트레이닝\n• 주 3회 실험실 방문\n• 총 12회 진행\n• 1회 약 30–40분 소요\n• 발목 재활 운동과 함께 피부 위에 부착한 전극을 통해 가벼운 감각 수준의 전기자극을 적용합니다.\n\n3) 연구 종료 후, 2주 후 추적 평가\n• 연구 시작 전과 동일한 평가 진행\n\n5. 실험 참여 보상\n\n연구 절차를 성실히 완료하신 분께는 현금 10만원의 참여 보상이 지급될 예정입니다.\n보상 지급 조건은 다음과 같습니다.\n• 4주간 총 12회의 발목 재활 트레이닝 참여\n• 연구 시작 전, 연구 종료 직후, 연구 종료 2주 후 평가 참여\n단, 총 12회의 트레이닝 중 3회 이상 결석할 경우 연구 참여 및 보상 지급에 제한이 있을 수 있습니다.\n\n6. 주의 사항\n\n• 실험 전날 과도한 음주나 카페인 섭취를 피해주세요.\n• 충분한 수면을 취한 후 방문해 주세요.\n• 실험 중 통증이나 불편감이 있을 경우 언제든지 연구자에게 말씀해 주세요.\n\n7. 연구 참여 및 문의\n\n본 연구 참여를 희망하시는 분은 아래 이메일로 연락해 주세요.\n신청 후 실험실 방문을 통해 발목 상태에 대한 스크리닝 검사를 진행하며, 검사 결과에 따라 최종 참여 여부가 결정\n됩니다.\n스크리닝 검사 결과, 통증이나 부종이 뚜렷한 경우, 안전한 운동 재활을 위해 증상이 안정된 이후 연구 참여가 시작\n될 수 있습니다.\n\n이메일: isports.lab@gmail.com (성균관대학교 스포츠과학과 스포츠재활 연구실)\nkangnaengz@g.skku.edu (성균관대학교 스포츠과학과 연구담당자 이강준)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>성균관대학교 스포츠과학과 스포츠재활 연구실에서는 최근 발목을 접질린 성인을 대상으로 전기자극을 활용한 발목 재활 트레이닝 연구를 진행합니다. 본 연구는 발목에 가벼운 전기자극을 적용한 상태에서 4주간의 발목 재활 운동 프로그램을 실시하고, 이를 통해 발목의 신경반응, 통증, 부종, 근력 및 발목 기능의 변화를 확인하는 실험 연구입니다. 급성 발목 염좌로 인해 일상생활이나 스포츠 활동 참여에 어려움을 겪고 계신 분들의 많은 참여를 부탁드립니다.</p><p>1. 모집대상</p><p>•    18세 이상 성인</p><p>•    최근 2주 내 발목을 접질린 경험이 있는 분</p><p>•    발목 문제로 인해 일상 생활이나 스포츠 활동에 제한이 있는 분</p><p>•    4주간 주 3회 실험실 방문이 가능한 분</p><p>2. 참여가 어려울 수 있는 경우</p><p>•    발목 골절이 의심되거나 진단을 받은 경우</p><p>•    6개월 이내 발목 수술을 받은 경우</p><p>•    연구자가 판단하기에 안전한 운동 참여가 어렵다고 판단되는 경우</p><p>3. 실험장소</p><p>•    성균관대학교 자연과학캠퍼스 수성관 3층 스포츠재활 실험실</p><p>4. 연구 참여 절차 및 소요시간</p><p>• 연구 참여 전, 먼저 실험실에 1회 방문하여 발목 상태에 대한 스크리닝 검사를 받게 됩니다.</p><p>• 스크리닝 검사 후 연구 참여가 가능한 것으로 확인된 분께 담당 연구자가 개별 연락을 드립니다.</p><p>연구 참여가 확정된 경우, 아래 절차에 따라 진행됩니다.</p><p>1)    연구 시작 전 평가</p><p>•    신경반응 검사</p><p>•    발목 근력 평가</p><p>•    통증, 부종 및 발목 기능 관련 설문</p><p>•    소요시간: 약 1시간 이내</p><p>2)    4주간 발목 재활 트레이닝</p><p>•    주 3회 실험실 방문</p><p>•    총 12회 진행</p><p>•    1회 약 30–40분 소요</p><p>•    발목 재활 운동과 함께 피부 위에 부착한 전극을 통해 가벼운 감각 수준의 전기자극을 적용합니다.</p><p>3)    연구 종료 후, 2주 후 추적 평가</p><p>•    연구 시작 전과 동일한 평가 진행</p><p>5. 실험 참여 보상</p><p>연구 절차를 성실히 완료하신 분께는 현금 10만원의 참여 보상이 지급될 예정입니다.</p><p>보상 지급 조건은 다음과 같습니다.</p><p>•    4주간 총 12회의 발목 재활 트레이닝 참여</p><p>•    연구 시작 전, 연구 종료 직후, 연구 종료 2주 후 평가 참여</p><p>단, 총 12회의 트레이닝 중 3회 이상 결석할 경우 연구 참여 및 보상 지급에 제한이 있을 수 있습니다.</p><p>6. 주의 사항</p><p>•    실험 전날 과도한 음주나 카페인 섭취를 피해주세요.</p><p>•    충분한 수면을 취한 후 방문해 주세요.</p><p>•   실험 중 통증이나 불편감이 있을 경우 언제든지 연구자에게 말씀해 주세요.</p><p>7. 연구 참여 및 문의</p><p>본 연구 참여를 희망하시는 분은 아래 이메일로 연락해 주세요.</p><p>신청 후 실험실 방문을 통해 발목 상태에 대한 스크리닝 검사를 진행하며, 검사 결과에 따라 최종 참여 여부가 결정</p><p>됩니다.</p><p>스크리닝 검사 결과, 통증이나 부종이 뚜렷한 경우, 안전한 운동 재활을 위해 증상이 안정된 이후 연구 참여가 시작</p><p>될 수 있습니다.</p><p>이메일: isports.lab@gmail.com (성균관대학교 스포츠과학과 스포츠재활 연구실)</p><p>kangnaengz@g.skku.edu (성균관대학교 스포츠과학과 연구담당자 이강준)</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"모집 포스터\" src=\"https://www.skku.edu/_attach/image/2026/11/VTJburYjeDlMLUCEMUTP.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/VTJburYjeDlMLUCEMUTP.jpg"
+      ],
+      "summary": "최근 2주 내 발목을 접질린 성인은 이메일을 통해 재활 연구 참여를 신청하세요. 4주간 주 3회 실험실 방문 및 평가 완료 시 보상이 지급됩니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T09:40:50.576448+09:00",
+      "page_text": "성균관대학교 스포츠과학과 스포츠재활 연구실에서는 최근 발목을 접질린 성인을 대상으로 전기자극을 활용한 발목 재활 트레이닝 연구를 진행합니다. 본 연구는 발목에 가벼운 전기자극을 적용한 상태에서 4주간의 발목 재활 운동 프로그램을 실시하고, 이를 통해 발목의 신경반응, 통증, 부종, 근력 및 발목 기능의 변화를 확인하는 실험 연구입니다. 급성 발목 염좌로 인해 일상생활이나 스포츠 활동 참여에 어려움을 겪고 계신 분들의 많은 참여를 부탁드립니다.\n\n1. 모집대상\n\n• 18세 이상 성인\n• 최근 2주 내 발목을 접질린 경험이 있는 분\n• 발목 문제로 인해 일상 생활이나 스포츠 활동에 제한이 있는 분\n• 4주간 주 3회 실험실 방문이 가능한 분\n\n2. 참여가 어려울 수 있는 경우\n\n• 발목 골절이 의심되거나 진단을 받은 경우\n• 6개월 이내 발목 수술을 받은 경우\n• 연구자가 판단하기에 안전한 운동 참여가 어렵다고 판단되는 경우\n\n3. 실험장소\n\n• 성균관대학교 자연과학캠퍼스 수성관 3층 스포츠재활 실험실\n\n4. 연구 참여 절차 및 소요시간\n\n• 연구 참여 전, 먼저 실험실에 1회 방문하여 발목 상태에 대한 스크리닝 검사를 받게 됩니다.\n• 스크리닝 검사 후 연구 참여가 가능한 것으로 확인된 분께 담당 연구자가 개별 연락을 드립니다.\n\n연구 참여가 확정된 경우, 아래 절차에 따라 진행됩니다.\n\n1) 연구 시작 전 평가\n• 신경반응 검사\n• 발목 근력 평가\n• 통증, 부종 및 발목 기능 관련 설문\n• 소요시간: 약 1시간 이내\n\n2) 4주간 발목 재활 트레이닝\n• 주 3회 실험실 방문\n• 총 12회 진행\n• 1회 약 30–40분 소요\n• 발목 재활 운동과 함께 피부 위에 부착한 전극을 통해 가벼운 감각 수준의 전기자극을 적용합니다.\n\n3) 연구 종료 후, 2주 후 추적 평가\n• 연구 시작 전과 동일한 평가 진행\n\n5. 실험 참여 보상\n\n연구 절차를 성실히 완료하신 분께는 현금 10만원의 참여 보상이 지급될 예정입니다.\n보상 지급 조건은 다음과 같습니다.\n• 4주간 총 12회의 발목 재활 트레이닝 참여\n• 연구 시작 전, 연구 종료 직후, 연구 종료 2주 후 평가 참여\n단, 총 12회의 트레이닝 중 3회 이상 결석할 경우 연구 참여 및 보상 지급에 제한이 있을 수 있습니다.\n\n6. 주의 사항\n\n• 실험 전날 과도한 음주나 카페인 섭취를 피해주세요.\n• 충분한 수면을 취한 후 방문해 주세요.\n• 실험 중 통증이나 불편감이 있을 경우 언제든지 연구자에게 말씀해 주세요.\n\n7. 연구 참여 및 문의\n\n본 연구 참여를 희망하시는 분은 아래 이메일로 연락해 주세요.\n신청 후 실험실 방문을 통해 발목 상태에 대한 스크리닝 검사를 진행하며, 검사 결과에 따라 최종 참여 여부가 결정\n됩니다.\n스크리닝 검사 결과, 통증이나 부종이 뚜렷한 경우, 안전한 운동 재활을 위해 증상이 안정된 이후 연구 참여가 시작\n될 수 있습니다.\n\n이메일: isports.lab@gmail.com (성균관대학교 스포츠과학과 스포츠재활 연구실)\nkangnaengz@g.skku.edu (성균관대학교 스포츠과학과 연구담당자 이강준)",
+      "body_attempted_at": "2026-11-10T09:40:50.576448+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "skku-notice01/141717": {
       "notice": {
         "id": "skku-notice01/141717",
         "source_id": "skku-notice01",
         "article_no": "141717",
-        "title": "[행사/세미나] 2026학년도 제16회 성균토론대회 개최 안내(접수마감: 11월 27일)",
+        "title": "2026학년도 제16회 성균토론대회 개최 안내(접수마감: 11월 27일)",
         "category": "행사/세미나",
         "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141717",
         "posted_on": "2026-11-10",
@@ -136,11 +182,16 @@
       "images": [
         "https://www.skku.edu/_attach/image/2026/11/BfVUrISAJNEEFFuwnOSQ.png"
       ],
-      "summary": "11월 27일까지 참가 신청서와 동의서를 이메일로 제출하세요. 인공지능 관련 논제로 예선은 12월 1일과 2일, 본선은 12월 19일에 진행됩니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-10T09:22:12.979703+09:00",
       "page_text": "성균관대학교 학부대학에서는 미래 사회를 이끌어갈 다음 세대에게 필요한 인문학적 성찰과 통찰을 모색하고, 비판적 사고력과 논리적 의사소통 능력, 타인의 의견을 존중하고 경청하는 태도를 함양하기 위해 「제16회 성균토론대회」를 개최합니다.\n\n올해로 16회를 맞이하는 성균토론대회는 성균관대학교 재학생들이 참여하는 대표적인 토론 축제로, 오랜 전통과 역사를 이어오고 있습니다. 본 대회는 대학혁신지원사업의 일환으로, 학생들이 다양한 사회적 쟁점을 깊이 있게 탐구하고 서로 다른 관점을 이해하며 미래 사회에 필요한 성찰적 사고와 민주적 소통 역량을 기르는 데 목적이 있습니다. 아울러 지난 대회 본선 진출자를 학생 배심원단으로 선발하여 학생 중심의 참여 기회를 확대하고, 대회 참가 경험이 심사 참여로 이어지는 선순환 구조를 통해 학생들의 주체적인 참여를 활성화하고자 합니다. 성균토론대회는 대학 내 토론문화를 더욱 공고히 하고, 지역사회로 확산하는 데 기여하고자 합니다.\n\n성균토론대회가 미래 사회를 위한 성찰과 소통의 공론장으로 자리매김할 수 있도록\n\n많은 관심과 적극적인 참여를 부탁드립니다.\n\n[논제] 대한민국 정부는 고영향 인공지능에 대해 독립적인 외부 기관의 안전성 및 기본권 영향 사전 검증을 의무화해야 한다\n\n[개최 일시]\n\n예선①: 2026년 12월 1일(화) 18:00~22:00, 인문사회과학캠퍼스 퇴계인문관\n\n예선②: 2026년 12월 2일(수) 18:00~22:00, 자연과학캠퍼스 제2공학관\n\n본선: 2026년 12월 19일(토) 11:00~18:00, 자연과학캠퍼스 E센터,\n\n삼성학술정보관 B1 오디토리움\n\n현장참여 대면 토론입니다.\n\n토론을 하는 대회 장소는 추후 공지할 예정입니다.\n\n[참가 자격]\n\n성균관대학교 학부생 (1~4학년 재학생)\n\n(단, 교내 및 교외 토론대회 결승 진출자 제외)\n\n[참가 신청]\n\n❍ 접수기간: 2026년 11월 4일(수) ~ 11월 27일(금요일)\n\ne-mail 주소: skkuwc2026@gmail.com\n\n(*신청은 반드시 27일까지, 다만 입론은 11월 29일 일요일까지 제출해도 됩니다.)\n\n참가 신청서 양식 작성하여 <2인 1조>로 신청, 각 캠퍼스별 예선 진행\n\n❍ 문의: ♥ e-mail 주소: skkuwc2026@gmail.com\n\n☎ 031-299-4229 글쓰기클리닉\n\n❍ 접수방법: 첨부파일 ‘[붙임2] 2026년 제16회 성균토론대회 참가 신청서’ 와 [붙임6] 동의서 작성 후 이메일로 접수\n\n사전조사 1도 함께 작성해 주세요.\n\nhttps://forms.gle/DzYro7i5WugmPmhAA\n\n원활한 진행을 위해 신청서는 가급적 빨리 제출해 주시고,\n\n입론은 29일까지 보내주시기 바랍니다.\n\n❍주최: 성균관대학교 학부대학\n\n❍주관: 성균관대학교 학부대학, 교양기초교육연구소\n\n[안내 사항]\n\n-제16회 성균토론대회에 참여하는 1학년 학생은 글쓰기클리닉 비교과프로그램 활동으로 FYE 세미나 15점을 획득합니다.\n\n-대학혁신지원사업으로 진행되며, 지난 성균토론대회 본선 수상자는 대학생 배심원단 자격을 얻습니다. 배심원단은 휴학생, 졸업생도 참여할 수 있습니다.\n\n-비교과 프로그램 챌린지 스퀘어 수강으로 SKKU 디지털 배지를 수여합니다.\n\n대학혁신지원사업의 비교과프로그램 ‘성균소양•SKKU 공동체(10-1-3)' 활동으로\n\n프로그램 참여 전과 프로그램 참여 후 설문조사를 반드시 해 주셔야 합니다.\n\n-사진 및 영상 촬영 안내\n\n예선전 및 본선전 진행 시 대회 현장 사진 및 영상 촬영이 진행됩니다.\n\n촬영된 사진과 영상은 교육적 목적으로 대학혁신지원사업의 성균토론대회 기록과 홍보 및 학부대학 의사소통 교과목 및 「스피치와 토론」 강의 시간에 한하여 제한적으로 활용될 수 있습니다.\n\n따라서 사진 및 영상 촬영, 교육자료 활용에 동의하시는 토론자에 한해 신청해 주시기 바랍니다.\n\n[시상 내역]\n\n▶ 대상 1팀: 1,000,000원\n\n▶ 최우수상 1팀: 500,000원\n\n▶ 우수상 2팀: 각 300,000원\n\n▶ 장려상 4팀: 각 200,000원\n\n※ 상금은 장학금 형태로 팀 단위 지급되며, 세금 공제 후 지급됩니다.\n\n성균관대학교 학부대학 제16회 성균토론대회 운영 위원회 -",
-      "body_attempted_at": "2026-11-10T09:22:12.979703+09:00"
+      "body_attempted_at": "2026-11-10T09:22:12.979703+09:00",
+      "previous_title": "[행사/세미나] 2026학년도 제16회 성균토론대회 개최 안내(접수마감: 11월 27일)",
+      "changed_at": "2026-11-10T09:40:50.576448+09:00",
+      "change_kind": "제목",
+      "summary": "성균관대학교 학부 재학생을 대상으로 제16회 성균토론대회를 개최합니다. 2인 1조로 구성하여 11월 27일까지 참가 신청서와 동의서 등을 이메일로 제출해야 합니다. 예선은 12월 1일과 2일, 본선은 12월 19일에 진행됩니다.",
+      "summary_last_failed_at": null,
+      "change_notified": "2026-11-10T09:40:50.576448+09:00"
     },
     "skku-notice01/141716": {
       "notice": {
@@ -195,6 +246,127 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-12-05T07:00:00+09:00"
+      }
+    },
+    "linkareer-intern/363202": {
+      "notice": {
+        "id": "linkareer-intern/363202",
+        "source_id": "linkareer-intern",
+        "article_no": "363202",
+        "title": "[SNOW] AI 콘텐츠 프로모션 기획/운영 체험형 인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363202",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T09:40:50.576448+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 소프트웨어 개발이 아닌 콘텐츠 기획 및 운영 업무를 중심으로 하며, 개발 역량에 대한 요구사항이 포함되어 있지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[SNOW] AI 콘텐츠 프로모션 기획/운영 체험형 인턴\n\n\n\n\n[이런 경험을 할 수 있어요]\n- SODA/Foodie 인앱 프로모션(배너·팝업·이벤트 페이지)의 소재 세팅, 노출 일정 관리, 검수\n- AI를 활용한 프로모션 소재(이미지·이벤트 페이지·소개 카피 등) 기획 및 제작\n- 국내외 카메라 앱 및 SNS의 필터·뷰티·AI 트렌드 모니터링\n\n\n[이런 분을 기다립니다]\n- 계약 기간(약 3개월) 동안 full-time 근무 가능하신 분 [월-금, 10-19시]\n- 전형 절차 별 일정에 참여 가능하신 분 [입과 예정일: 2026년 12월 21일]\n- 정해진 일정과 체크리스트에 맞춰 소재를 세팅·검수하는 반복 운영 업무를 꼼꼼하게 해낼 수 있는 분\n- 생성형 AI 도구(ChatGPT, Claude 등)로 결과물을 직접 만들어 본 경험이 있으신 분\n- 서비스 기능이나 콘텐츠를 한두 줄로 소개해 본 경험(앱 문구, SNS 게시물, 상세페이지 등)이 있는 분\n- SODA, Foodie 등 카메라 앱의 필터·메이크업·보정 기능을 평소 즐겨 쓰고, 뷰티·메이크업 트렌드에 관심이 많으신 분\n- 자기 주도적으로 업무를 계획하고 실행할 수 있으신 분\n\n\n[이런 경험이 있다면 더욱 좋아요]\n- 생성형 AI로 만든 결과물(사이트, 서비스 등)을 포트폴리오나 링크로 제출 가능하신 분\n- 필름·레트로 카메라, 색보정 등 비주얼 스타일과 트렌드에 조예가 깊으신 분\n- 인스타그램·틱톡·유튜브 등 SNS에 콘텐츠를 직접 만들어 공유해 본 경험이 있으신 분\n- 해외(영미권·일본 등) SNS의 카메라·뷰티 트렌드를 꾸준히 보는 분",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[SNOW] AI 콘텐츠 프로모션 기획/운영 체험형 인턴</b></span></p><p><span>[이런 경험을 할 수 있어요]</span></p><p><span>﻿- SODA/Foodie 인앱 프로모션(배너·팝업·이벤트 페이지)의 소재 세팅, 노출 일정 관리, 검수</span></p><p><span>- AI를 활용한 프로모션 소재(이미지·이벤트 페이지·소개 카피 등) 기획 및 제작</span></p><p><span>- 국내외 카메라 앱 및 SNS의 필터·뷰티·AI 트렌드 모니터링</span></p><p><span>[이런 분을 기다립니다]</span></p><p><span>﻿- 계약 기간(약 3개월) 동안 full-time 근무 가능하신 분 [월-금, 10-19시]</span></p><p><span>- 전형 절차 별 일정에 참여 가능하신 분 [입과 예정일: 2026년 12월 21일]</span></p><p><span>- 정해진 일정과 체크리스트에 맞춰 소재를 세팅·검수하는 반복 운영 업무를 꼼꼼하게 해낼 수 있는 분</span></p><p><span>- 생성형 AI 도구(ChatGPT, Claude 등)로 결과물을 직접 만들어 본 경험이 있으신 분</span></p><p><span>- 서비스 기능이나 콘텐츠를 한두 줄로 소개해 본 경험(앱 문구, SNS 게시물, 상세페이지 등)이 있는 분</span></p><p><span>- SODA, Foodie 등 카메라 앱의 필터·메이크업·보정 기능을 평소 즐겨 쓰고, 뷰티·메이크업 트렌드에 관심이 많으신 분</span></p><p><span>- 자기 주도적으로 업무를 계획하고 실행할 수 있으신 분</span></p><p><span>[이런 경험이 있다면 더욱 좋아요]</span></p><p><span>﻿- 생성형 AI로 만든 결과물(사이트, 서비스 등)을 포트폴리오나 링크로 제출 가능하신 분</span></p><p><span>- 필름·레트로 카메라, 색보정 등 비주얼 스타일과 트렌드에 조예가 깊으신 분</span></p><p><span>- 인스타그램·틱톡·유튜브 등 SNS에 콘텐츠를 직접 만들어 공유해 본 경험이 있으신 분&nbsp;</span></p><p><span>- 해외(영미권·일본 등) SNS의 카메라·뷰티 트렌드를 꾸준히 보는 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984181\" title=\"20261110_084341.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984181"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T09:40:50.576448+09:00",
+      "page_text": "[SNOW] AI 콘텐츠 프로모션 기획/운영 체험형 인턴\n\n\n\n\n[이런 경험을 할 수 있어요]\n- SODA/Foodie 인앱 프로모션(배너·팝업·이벤트 페이지)의 소재 세팅, 노출 일정 관리, 검수\n- AI를 활용한 프로모션 소재(이미지·이벤트 페이지·소개 카피 등) 기획 및 제작\n- 국내외 카메라 앱 및 SNS의 필터·뷰티·AI 트렌드 모니터링\n\n\n[이런 분을 기다립니다]\n- 계약 기간(약 3개월) 동안 full-time 근무 가능하신 분 [월-금, 10-19시]\n- 전형 절차 별 일정에 참여 가능하신 분 [입과 예정일: 2026년 12월 21일]\n- 정해진 일정과 체크리스트에 맞춰 소재를 세팅·검수하는 반복 운영 업무를 꼼꼼하게 해낼 수 있는 분\n- 생성형 AI 도구(ChatGPT, Claude 등)로 결과물을 직접 만들어 본 경험이 있으신 분\n- 서비스 기능이나 콘텐츠를 한두 줄로 소개해 본 경험(앱 문구, SNS 게시물, 상세페이지 등)이 있는 분\n- SODA, Foodie 등 카메라 앱의 필터·메이크업·보정 기능을 평소 즐겨 쓰고, 뷰티·메이크업 트렌드에 관심이 많으신 분\n- 자기 주도적으로 업무를 계획하고 실행할 수 있으신 분\n\n\n[이런 경험이 있다면 더욱 좋아요]\n- 생성형 AI로 만든 결과물(사이트, 서비스 등)을 포트폴리오나 링크로 제출 가능하신 분\n- 필름·레트로 카메라, 색보정 등 비주얼 스타일과 트렌드에 조예가 깊으신 분\n- 인스타그램·틱톡·유튜브 등 SNS에 콘텐츠를 직접 만들어 공유해 본 경험이 있으신 분\n- 해외(영미권·일본 등) SNS의 카메라·뷰티 트렌드를 꾸준히 보는 분",
+      "body_attempted_at": "2026-11-10T09:40:50.576448+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-18T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "0fb408892cf9691cf4ec356d5a5af516b856a4469db37bccbd19389969becfa8",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 소프트웨어 개발이 아닌 콘텐츠 기획 및 운영 업무를 중심으로 하며, 개발 역량에 대한 요구사항이 포함되어 있지 않습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363198": {
+      "notice": {
+        "id": "linkareer-intern/363198",
+        "source_id": "linkareer-intern",
+        "article_no": "363198",
+        "title": "[네이버제트] 12월 전분야 체험형 인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363198",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T09:40:50.576448+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 관련 분야 경력 3년 이상을 필수 자격 요건으로 명시하고 있어 학부생이 지원하기에 적합하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[네이버제트] 12월 전분야 체험형 인턴\n\n\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 체험형 인턴\n- SNS 콘텐츠 제작\n- 제페토 결제 운영\n- 제페토 아바타 샵 운영\n- 제페토 라이브 서비스 운영\n- AI 챗봇 영미권 콘텐츠 기획\n- AI 챗봇 한국 콘텐츠 기획\n- 제페토 데이터 분석\n- SNS 바이럴 마케팅\n\n\n\n\n[업무내용 및 우대사항]\n\n\n- 각 모집군 상세요강 참조\n\n\n\n\n[전형절차]\n\n\n- 서류 전형 ▶ 인터뷰 ▶ 입과\n\n\n\n\n[자격요건]\n\n\n- 학사 학위\n- 금융기관, 보험사, 공제조합 등 관련분야 경력 3년 이상 보유자\n\n\n\n\n[참고사항]\n\n\n- 근무지: 경기도 성남시 분당구 정자동\n- 본 공고 내 포지션 간 중복 지원은 불가합니다.\n- 지원서 내용 중 허위 사실이 있는 경우에는 합격이 취소될 수 있습니다.\n- 본 전형 지원 완료 시 사용한 이메일로 제출 확인 메일이 발송되고 있으며, 서류 전형 결과는 개인별 모두 안내해 드리고 있습니다.\n\n\n\n\n[공고상세]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[네이버제트] 12월 전분야 체험형 인턴</b></span></p><p><span><b>[모집분야]</b></span></p><p>- 체험형 인턴</p><p>&nbsp; - SNS 콘텐츠 제작</p><p>&nbsp; - 제페토 결제 운영&nbsp;</p><p>&nbsp; - 제페토 아바타 샵 운영</p><p>&nbsp; - 제페토 라이브 서비스 운영</p><p>&nbsp; - AI 챗봇 영미권 콘텐츠 기획</p><p>&nbsp; - AI 챗봇 한국 콘텐츠 기획&nbsp;</p><p>&nbsp; - 제페토 데이터 분석</p><p>&nbsp; - SNS 바이럴 마케팅</p><p><span><b>[업무내용 및 우대사항]</b></span></p><p>- 각 모집군 상세요강 참조</p><p><span><b>[전형절차]</b></span></p><p>- 서류 전형 ▶ 인터뷰 ▶ 입과</p><p><span><b>[자격요건]</b></span></p><p>- 학사 학위</p><p>- 금융기관, 보험사, 공제조합 등 관련분야 경력 3년 이상 보유자</p><p><span><b>[참고사항]</b></span></p><p>﻿﻿- 근무지: 경기도 성남시 분당구 정자동&nbsp;&nbsp;</p><p>- 본 공고 내 포지션 간 중복 지원은 불가합니다.</p><p>- 지원서 내용 중 허위 사실이 있는 경우에는 합격이 취소될 수 있습니다.</p><p>- 본 전형 지원 완료 시 사용한 이메일로 제출 확인 메일이 발송되고 있으며, 서류 전형 결과는 개인별 모두 안내해 드리고 있습니다.</p><p><span><b>[공고상세]</b></span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984187\" title=\"스크린샷 2026-11-10 084132.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984194\" title=\"스크린샷 2026-11-10 084145.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984186\" title=\"스크린샷 2026-11-10 084156.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984192\" title=\"스크린샷 2026-11-10 084206.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984191\" title=\"스크린샷 2026-11-10 084219.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984185\" title=\"스크린샷 2026-11-10 084229.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984190\" title=\"스크린샷 2026-11-10 084244.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984193\" title=\"스크린샷 2026-11-10 084254.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984189\" title=\"스크린샷 2026-11-10 084305.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984188\" title=\"스크린샷 2026-11-10 084316.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984187",
+        "https://media-cdn.linkareer.com/se2editor/image/984194",
+        "https://media-cdn.linkareer.com/se2editor/image/984186",
+        "https://media-cdn.linkareer.com/se2editor/image/984192",
+        "https://media-cdn.linkareer.com/se2editor/image/984191",
+        "https://media-cdn.linkareer.com/se2editor/image/984185",
+        "https://media-cdn.linkareer.com/se2editor/image/984190",
+        "https://media-cdn.linkareer.com/se2editor/image/984193",
+        "https://media-cdn.linkareer.com/se2editor/image/984189",
+        "https://media-cdn.linkareer.com/se2editor/image/984188"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T09:40:50.576448+09:00",
+      "page_text": "[네이버제트] 12월 전분야 체험형 인턴\n\n\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 체험형 인턴\n- SNS 콘텐츠 제작\n- 제페토 결제 운영\n- 제페토 아바타 샵 운영\n- 제페토 라이브 서비스 운영\n- AI 챗봇 영미권 콘텐츠 기획\n- AI 챗봇 한국 콘텐츠 기획\n- 제페토 데이터 분석\n- SNS 바이럴 마케팅\n\n\n\n\n[업무내용 및 우대사항]\n\n\n- 각 모집군 상세요강 참조\n\n\n\n\n[전형절차]\n\n\n- 서류 전형 ▶ 인터뷰 ▶ 입과\n\n\n\n\n[자격요건]\n\n\n- 학사 학위\n- 금융기관, 보험사, 공제조합 등 관련분야 경력 3년 이상 보유자\n\n\n\n\n[참고사항]\n\n\n- 근무지: 경기도 성남시 분당구 정자동\n- 본 공고 내 포지션 간 중복 지원은 불가합니다.\n- 지원서 내용 중 허위 사실이 있는 경우에는 합격이 취소될 수 있습니다.\n- 본 전형 지원 완료 시 사용한 이메일로 제출 확인 메일이 발송되고 있으며, 서류 전형 결과는 개인별 모두 안내해 드리고 있습니다.\n\n\n\n\n[공고상세]",
+      "body_attempted_at": "2026-11-10T09:40:50.576448+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "75b92eff5f2808bde381acb7b1a4713ee6d5eb2039baa9c396a813cf6bbe08c9",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 관련 분야 경력 3년 이상을 필수 자격 요건으로 명시하고 있어 학부생이 지원하기에 적합하지 않습니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/363160": {
@@ -1299,7 +1471,7 @@
       "fetched_at": "2026-11-09T16:49:09.958586+09:00",
       "page_text": "방학 중 교육지원이 필요한 청소년(초․중․고등학생, 학교 밖 청소년 등)을 대상으로 다양한 주제의 재능 나눔을 실천하고, 창의적인 인재로 함께 성장할 대학(원)생 멘토를 다음과 같이 모집하오니 참여를 희망하는 여러분의 많은 신청 바랍니다.\n\n◎ 봉사활동 안내: 동계 방학 중 약 4-6일간 대학생 멘토가 팀을 이루어,\n교육 소외계층/지역 청소년을 대상으로 교과목 학습지도, 창의적 체험활동, 진로 및 고민 상담 등 다양한 주제로 재능 나눔을 실천하는 캠프 형식의 멘토링 활동\n\n◎ 활동기간: 2026년 12월 ~ 2027년 2월, 약 4~6일(동계 방학 기간 중)\n※ 캠프 운영 일정은 각 멘토팀과 참여(활동)기관 간 협의 후 설정\n\n◎ 활동시간: 최소 30시간 이상\n※ 1일 최대 8시간 인정 가능(활동 준비 및 식사 시간 포함, 이동시간 제외)\n\n◎ 활동단위: 멘토팀은 5명 내외로 구성(2팀 선발 예정, 멘토 1인당 멘티 3명 내외로 캠프 운영)\n\n◎ 활동내용: 교과목 학습지도, 창의적 체험활동, 진로 교육 및 고민 상담 등 다양한 주제의 재능 나눔 활동을 멘토(팀) 자율 구성 후 운영\n※ 멘티 특성을 고려한 프로그램 구성 등 활동 시작 전 참여기관과 사전 협의 필수\n※ 다양한 체험활동과 연계하여 프로그램 편성\n- (예시 1) 과학실험과 연계한 과학탐구력 향상 프로그램\n- (예시 2) 영화 감상 및 토론을 통한 논리력, 발표력 향상 프로그램\n- (예시 3) 팝송을 통한 영어 어휘력 향상 프로그램\n※ 미래 필요역량인 ESG(환경), 첨단산업 주제 프로그램 운영(1개 이상) 권장\n\n◎ 활동방법\n1) 오프라인 캠프: 멘토와 멘티가 직접 만나서 진행하는 대면 방식 캠프\n2) 온라인 캠프: 화상회의 시스템 등을 활용한 비대면 방식 캠프\n3) 혼합형 캠프: 오프라인과 온라인 유형을 병행하는 캠프\n\n◎ 신청기간 및 방법:\n1차 캠프계획서 제출: 2026.11.22.(일)까지 첨부의 프로그램 계획서 작성하여 메일로 제출\n(studentaid@skku.edu)\n*전체 선발인원 TO가 적은 관계로, 지원서를 제출하시더라도 합격 요건에 미달한 경우 성균관대학교 내 인원 선발이 불가할 수 있는 점 양해 부탁드립니다.\n\n- 문의사항: 학생지원팀 인성품 (02-760-1004, 1072)\n\n자세한 내용은 붙임 파일 참고 부탁드립니다.",
       "body_attempted_at": "2026-11-09T16:49:09.958586+09:00",
-      "rechecked_at": "2026-11-09T21:25:01.277525+09:00"
+      "rechecked_at": "2026-11-10T09:40:50.576448+09:00"
     },
     "skku-notice01/141707": {
       "notice": {
@@ -1348,7 +1520,7 @@
         "kind": "마감",
         "at": "2026-11-18T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-09T21:25:01.277525+09:00"
+      "rechecked_at": "2026-11-10T09:40:50.576448+09:00"
     },
     "skku-notice01/141425": {
       "notice": {
@@ -3582,6 +3754,54 @@
       },
       "rechecked_at": "2026-11-10T01:50:40.152178+09:00",
       "page_text": "로봇공학자로서 현재 (사)한국생성AI재단 회장, (주)로자이크 대표이사, KAIST 기계공학과 겸직교수을 역임하고 계신 송세경 교수와 유학동양학과 부교수로 주역을 전공한 안승우 교수가 AX시대 『주역』의 판단 문법으로 나만의 업(業)을 어떻게 세우고 열어갈 수 있을까를 고민하는 자리를 마련했습니다.\n송세경 교수의 AX시대에 관한 성찰, 성공적인 창업의 경험과 지혜와 함께 안승우 교수의 수 천 년간 동아시아인들의 타이밍, 포지션, 역량, 가치 판단의 지혜가 되었던 주역에 관한 성찰을 젊은 시대의 주역인 여러분들께 나누어드리는 시간을 갖고자 합니다.\n참고로 여기에서 다루는 창업은 새로운 사업을 시작한다는 협소한 의미의 창업이라기 보다는 내 인생의 소명, 업(業)을 어떻게 연구적, 직업적, 사업적으로 실현해 갈 수 있을까에 관한 창업가 정신을 의미합니다.\nAX시대 정해진 직업군 안에서만 내 업을 찾아가는 것이 아니라 이전에 없던 새로운 직업을 만들고 나만의 업을 다양한 직업, 연구, 사업을 통해 실현해 나갈 수 있는 시대가 된 만큼 창업가 정신을 보다 폭넓은 의미에서 다루고자 합니다.\n소수 정예로 선발하고자 하는 만큼 정말 꼭 참여하고 싶으신 분들만 지원서를 보내주시면 감사하겠습니다. 11월 28일(토)부터 매달 마지막주 토요일, 총 8회(2027년 6월까지) 진행될 예정이며 참가비는 무료입니다.\n일정이 다소 빠듯한 관계로 첨부해 드린 지원서를 간단하게 작성하여 11월 14일(토)까지 answ@skku.edu로 보내주시기 바랍니다.\n기본적인 선발은 서류를 통해 이루어지며 지원자가 많을 경우에 한하여 면접이 진행될 수 있습니다. 기타 궁금하신 사항도 answ@skku.edu로 연락주세요!"
+    },
+    "linkareer-intern/363211": {
+      "notice": {
+        "id": "linkareer-intern/363211",
+        "source_id": "linkareer-intern",
+        "article_no": "363211",
+        "title": "[예금보험공사] 제28기 동계 대학생인턴 모집 안내",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363211",
+        "posted_on": "2026-11-06",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T09:40:50.576448+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[예금보험공사] 제28기 동계 대학생인턴 모집 안내\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 체험형 인턴\n- 일반행정\n- 해외제도 리서치\n\n\n\n\n[전형절차]\n\n\n- 서류 전형 ▶ 면접전형 ▶ 최종합격\n\n\n\n\n[자격요건]\n\n\n- 전문학사 이상, 석사 1~2년차\n- 채용 확정 후 즉시 근무가 가능한 자일 것\n- 우리 공사 인사관리규정상 채용 결격사유에 해당하지 않을 것\n- 우리 공사와 인턴 계약을 체결한 적이 업을 것\n\n\n\n\n[공고상세]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[예금보험공사] 제28기 동계 대학생인턴 모집 안내</b></span></p><p><span><b>[모집분야]</b></span></p><p>- 체험형 인턴</p><p>&nbsp; - 일반행정</p><p>&nbsp; - 해외제도 리서치</p><p><span><b>[전형절차]</b></span></p><p>- 서류 전형 ▶ 면접전형 ▶ 최종합격</p><p><span><b>[자격요건]</b></span></p><p>- 전문학사 이상, 석사 1~2년차</p><p>- 채용 확정 후 즉시 근무가 가능한 자일 것</p><p>- 우리 공사 인사관리규정상 채용 결격사유에 해당하지 않을 것</p><p>- 우리 공사와 인턴 계약을 체결한 적이 업을 것</p><p><span><b>[공고상세]</b></span></p><div><br></div><div><img src=\"https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+Yu4mzMScxhWrJjN/E1ijKFVKDTLzzqJwncDUVXnZh+o4RSp9ZmMFL7Dxnbr6LlGlLQ==\"></div><div><img src=\"https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+YiMqCboSliLLXMbGA2OUU6maR7drUxA7T24WLApkr9fb2T2UdaycQq3i2+bgmQaHlw==\"></div><div><img src=\"https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+YpV7aNUiOQ5ATm2fBN1lGstl5mpigAFoM6IuuKq5tZn0ksPJr0kW6+gtoQ6f0p+EGA==\"></div><div><img src=\"https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+YoS/7F4qnqY98OmO1crNz7jjSwmZGLFEHFAX5NwZ1dz0dYN5GMnrK3vMcyjpA6i5cQ==\"></div><div><img src=\"https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+Yjj8Lqu9xl2N091ffwmhtlCj4J4KraldK79VCqo2/tCkcdbgjZKwkXhE1OCJtbw0sA==\"></div><div><img src=\"https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+Yv83vyXhois10lrPnN0e1smBCORlWPu2Zny3KjGucN/G32ZLVlbLVeIf2pMFfVKJBQ==\"></div><div><br></div>",
+      "images": [
+        "https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+Yu4mzMScxhWrJjN/E1ijKFVKDTLzzqJwncDUVXnZh+o4RSp9ZmMFL7Dxnbr6LlGlLQ==",
+        "https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+YiMqCboSliLLXMbGA2OUU6maR7drUxA7T24WLApkr9fb2T2UdaycQq3i2+bgmQaHlw==",
+        "https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+YpV7aNUiOQ5ATm2fBN1lGstl5mpigAFoM6IuuKq5tZn0ksPJr0kW6+gtoQ6f0p+EGA==",
+        "https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+YoS/7F4qnqY98OmO1crNz7jjSwmZGLFEHFAX5NwZ1dz0dYN5GMnrK3vMcyjpA6i5cQ==",
+        "https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+Yjj8Lqu9xl2N091ffwmhtlCj4J4KraldK79VCqo2/tCkcdbgjZKwkXhE1OCJtbw0sA==",
+        "https://www.kdic.or.kr/cm/file/downloadImage.do?encAtchFilePathNm=I0vWQmOZfrUosOzJ9J7+Yv83vyXhois10lrPnN0e1smBCORlWPu2Zny3KjGucN/G32ZLVlbLVeIf2pMFfVKJBQ=="
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T09:40:50.576448+09:00",
+      "page_text": "[예금보험공사] 제28기 동계 대학생인턴 모집 안내\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 체험형 인턴\n- 일반행정\n- 해외제도 리서치\n\n\n\n\n[전형절차]\n\n\n- 서류 전형 ▶ 면접전형 ▶ 최종합격\n\n\n\n\n[자격요건]\n\n\n- 전문학사 이상, 석사 1~2년차\n- 채용 확정 후 즉시 근무가 가능한 자일 것\n- 우리 공사 인사관리규정상 채용 결격사유에 해당하지 않을 것\n- 우리 공사와 인턴 계약을 체결한 적이 업을 것\n\n\n\n\n[공고상세]",
+      "body_attempted_at": "2026-11-10T09:40:50.576448+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-20T23:59:59.999000+09:00",
+        "model": "source"
+      }
     },
     "linkareer-intern/362831": {
       "notice": {
@@ -12430,7 +12650,7 @@
         "checked": true,
         "model": "gemini-3.1-flash-lite"
       },
-      "rechecked_at": "2026-11-09T18:39:27.714912+09:00",
+      "rechecked_at": "2026-11-10T09:40:50.576448+09:00",
       "page_text": "안녕하세요, 미래차부트캠프사업단입니다.\n금일 2026 한국자동차공학회 추계학술대회 포스터 제작 지원 안내 메일로 공지 드렸습니다.\n추가 문의 사항은 아래 메일로 문의 주시기 바랍니다.\nkh9286@skku.edu\n\n감사합니다."
     },
     "cse-notice/228049": {

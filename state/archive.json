@@ -55,6 +55,177 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/363458": {
+      "notice": {
+        "id": "linkareer-intern/363458",
+        "source_id": "linkareer-intern",
+        "article_no": "363458",
+        "title": "[주식회사 더퓨어랩] [더퓨어랩] 닥터엘시아 아마존 AMD 인턴(전환형) 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363458",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T18:33:54.793508+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 이커머스 플랫폼 운영 및 판매 관리를 담당하는 AMD 직무로 소프트웨어 개발이나 데이터 분석 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984957\" title=\"[채용공고] 아마존AMD(인턴).jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984957"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T18:33:54.793508+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-10T18:33:54.793508+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-08T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "2130981b5588090ebb61c21ca20a106c79f36f5fa4f9a708876d794308c6009d",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 이커머스 플랫폼 운영 및 판매 관리를 담당하는 AMD 직무로 소프트웨어 개발이나 데이터 분석 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363457": {
+      "notice": {
+        "id": "linkareer-intern/363457",
+        "source_id": "linkareer-intern",
+        "article_no": "363457",
+        "title": "[(주)안다르] andar 상품기획팀 6개월 체험형 인턴 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363457",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T18:33:54.793508+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "상품기획팀 업무 보조를 수행하는 직무로 소프트웨어 개발이나 데이터 분석 직무가 아니며 전공 우대 사항에도 컴퓨터 관련 전공이 포함되어 있지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984952\" title=\"1.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984953\" title=\"2.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984954\" title=\"3.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/984955\" title=\"4.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984952",
+        "https://media-cdn.linkareer.com/se2editor/image/984953",
+        "https://media-cdn.linkareer.com/se2editor/image/984954",
+        "https://media-cdn.linkareer.com/se2editor/image/984955"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T18:33:54.793508+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-10T18:33:54.793508+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "aa25cd7f280c26184934d39833b3946b1a6d301f281a15233a953a7c3c419bff",
+        "verdict": "not_relevant",
+        "reason": "상품기획팀 업무 보조를 수행하는 직무로 소프트웨어 개발이나 데이터 분석 직무가 아니며 전공 우대 사항에도 컴퓨터 관련 전공이 포함되어 있지 않습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363456": {
+      "notice": {
+        "id": "linkareer-intern/363456",
+        "source_id": "linkareer-intern",
+        "article_no": "363456",
+        "title": "[주식회사 더퓨어랩] [더퓨어랩] 닥터엘시아 쇼피 AMD 인턴(전환형) 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363456",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T18:33:54.793508+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 이커머스 플랫폼 운영 및 판매 관리를 담당하는 AMD 직무로 소프트웨어 개발이나 데이터 분석 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984949\" title=\"[채용공고] 쇼피AMD(인턴).jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984949"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T18:33:54.793508+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-10T18:33:54.793508+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-08T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "8c10e4b95c4822b77776282e97b0f5e20d77af8c8dcf82ab458046c8c5b648c3",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 이커머스 플랫폼 운영 및 판매 관리를 담당하는 AMD 직무로 소프트웨어 개발이나 데이터 분석 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "skku-notice01/141750": {
       "notice": {
         "id": "skku-notice01/141750",
@@ -723,7 +894,7 @@
         "article_no": "165145",
         "title": "[NHN Cloud] HR(인사담당) 정규직 전환형 인턴 채용",
         "category": "인턴",
-        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=OMUCJxmhcTkUzmMdDh94GabG22Ldf1aW5MG5uppyR6K&modalChk=Y",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=EqJQLzH4k2IYD6jnAEHSD4GrM2pbPSBVH48qKUyfZIG&modalChk=Y",
         "posted_on": "2026-11-10",
         "pinned": false,
         "deadline": null,
@@ -1172,7 +1343,9 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
@@ -2587,8 +2760,10 @@
       },
       "match": {
         "rule_name": null,
-        "priority": null,
-        "interests": [],
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
         "ai": {
           "verdict": "relevant",
@@ -2596,7 +2771,7 @@
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
-        "notified": false
+        "notified": true
       },
       "body_text": "[한국GM] 2027 동계인턴사원 모집 (생산/안전/품질)\n\n\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 생산, 안전, 품질\n\n\n\n\n[담당업무]\n\n\n- 각 분야별 상세모집요강 참조\n\n\n\n\n[자격요건]\n\n\n- 4년제 대학 학사 혹은 27년 2월 졸업예정자\n- 평점 B이상 혹은 4.5점 만점 기준 3.0 이상\n- 각 분야별 해당 전공자\n- TOEIC 750점 이상(OPic IM2 이상 혹은 TOEIC Speaking 130점 포함)\n\n\n\n\n[공고상세]",
       "body_from_image": false,
@@ -3798,7 +3973,7 @@
         "kind": "일정",
         "at": "2026-11-12T14:00:00+09:00"
       },
-      "rechecked_at": "2026-11-10T05:41:34.000923+09:00"
+      "rechecked_at": "2026-11-10T18:33:54.793508+09:00"
     },
     "skku-notice01/141708": {
       "notice": {
@@ -5691,7 +5866,7 @@
         "at": "2026-11-25T15:00:00+09:00"
       },
       "page_text": "Title: Variational Diffusion Model: Line-by-line derivations\n\nSpeaker: Prof. Jooyeon Kim @ UNIST\n\nTime : 15:00 - 16:00, Nov 25, 2026\n\nLocation:\nOnline: https://zoom.us/j/83139609156\nMeeting ID: 831 3960 9156\nPasscode: 91818154\n\nLanguage: English speech & English slides\n\nAbstract:\nDiffusion models are making real-world impacts across multiple data modalities and applications. In this lecture, I aim to mathematically derive the variational diffusion models from scratch using variational approaches. I start by constructing and expanding the evidence lower bound (ELBO). Once we derive the final results, which are the neural network parameter update rules, they can be used directly at the code level.\n\nBio:\nJooyeon Kim is an assistant professor at UNIST. He obtained his BS degree at the University of Tokyo, and his MS and Ph.D. degrees at KAIST. He worked as a researcher at Microsoft Research Cambridge (MSRC) for a year and a half and as a postdoctoral researcher at RIKEN for another year and a half. He is currently interested in (in no particular order): world models, model scaling, generalization, generative models (transformers, diffusions). He is also the founder and CEO of a startup company, ARI.AI, that aims to develop AI foundation models that operate on predictive individual, health-related, measurable biological indicators.",
-      "rechecked_at": "2026-11-10T05:41:34.000923+09:00"
+      "rechecked_at": "2026-11-10T18:33:54.793508+09:00"
     },
     "skku-career-intern/165093": {
       "notice": {
@@ -7177,7 +7352,7 @@
       "body_attempts": 2,
       "fetched_at": "2026-11-07T02:18:21.718635+09:00",
       "body_attempted_at": "2026-11-07T02:18:21.718635+09:00",
-      "rechecked_at": "2026-11-10T05:41:34.000923+09:00",
+      "rechecked_at": "2026-11-10T18:33:54.793508+09:00",
       "changed_at": "2026-11-07T02:18:21.718635+09:00",
       "change_kind": "본문",
       "ai_deadline": {

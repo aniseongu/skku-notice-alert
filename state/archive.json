@@ -55,6 +55,538 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "sw-notice/228328": {
+      "notice": {
+        "id": "sw-notice/228328",
+        "source_id": "sw-notice",
+        "article_no": "228328",
+        "title": "[AI중심대학사업단] AX SW특강 생성형 AI의 이해와 실전 활용법 안내",
+        "category": "행사/세미나",
+        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=228328",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": true
+      },
+      "body_text": "[AX SW특강] \"생성형 AI의 이해와 실전 활용법\"\n\n딥러닝부터 피지컬 AI까지 이어지는 기술의 흐름을 이해하고, 학업과 실무에 바로 쓰는 프롬프트 노하우와 보안·윤리 가이드까지 한 번에 마스터합니다.\n변화하는 시대, 생성형 AI를 가장 똑똑하게 활용하여 학업부터 취업 준비까지 앞서 나가는 법을 배워봅니다.\n\n□ 특강 주요 내용\n1. AI 발전사 - 딥러닝의 등장부터 피지컬 AI까지\n- 인공지능의 거대한 흐름: 딥러닝 혁명에서 LLM과 멀티모달(VLM)로의 진화\n- 로보틱스와 실세계가 만나는 최신 트렌드: 피지컬 AI(Physical AI)의 세계 조망\n2. 생성형 AI 실전 활용법 - 원하는 결과를 이끌어내는 핵심 기술\n- AI가 정확한 답을 내놓게 만드는 핵심 프롬프트 작성 팁 (역할 부여, 구조화, 제약 조건 설정)\n- 학업 레포트 자료조사, 기획서 작성, 프로그래밍 및 취업 준비(자소서) 실무 활용 노하우\n3. AI 시대의 보안과 윤리 - 미래를 준비하는 자세\n- 상용 AI 플랫폼 사용 시 꼭 알아야 할 기업/개인 정보 보안 및 프라이버시 이슈\n- 생성물 저작권 이해와 학업·연구 윤리 가이드\n□ 일시: 2026년 11월 24일(화) 15:00~17:00\n□ 장소: 산학협력센터 85151호\n□ 강사: 최인호 대표\n현) ㈜디케릭 대표이사\n현) 건국대학교 문화콘텐츠학과 겸임교수\n□ 문의: 김재현 산학교수, gimjaehyun@skku.edu\n□ 신청: https://forms.gle/m3VEJPz8dvQnaFZ37\n※ 참석할 분만 신청바라며, 킹고코인 마일리지 5,000코인 부여",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><span><strong>[AX&nbsp;SW특강]</strong></span><span><strong>&nbsp;\"</strong></span><span><strong>생성형&nbsp;AI의&nbsp;이해와&nbsp;실전&nbsp;활용법</strong></span><span><strong>\"</strong></span></p><p><span><strong>&nbsp;</strong></span></p><p><span>딥러닝부터</span><span>&nbsp;피지컬 AI까지 이어지는 기술의 흐름을 이해하고, 학업과 실무에 바로 쓰는 프롬프트 노하우와 보안·윤리 가이드까지 한 번에 마스터합니다.</span><span>&nbsp;</span></p><p><span>변화하는&nbsp;시대,&nbsp;생성형&nbsp;AI를&nbsp;가장&nbsp;똑똑하게&nbsp;활용하여&nbsp;학업부터&nbsp;취업&nbsp;준비까지&nbsp;앞서</span><span>&nbsp;</span><span>나가는&nbsp;법을&nbsp;배워봅니다.</span></p><p><span><strong>&nbsp;</strong></span></p><p>□ <span><strong>특강&nbsp;주요&nbsp;내용</strong></span></p><p><span>1. <b>AI&nbsp;발전사&nbsp;-&nbsp;딥러닝의&nbsp;등장부터&nbsp;피지컬&nbsp;AI까지</b></span></p><p><span>&nbsp; - 인공지능의 거대한 흐름: 딥러닝 혁명에서 LLM과 멀티모달(VLM)로의 진화</span></p><p><span>&nbsp; - 로보틱스와 실세계가 만나는 최신 트렌드: 피지컬 AI(Physical AI)의 세계 조망</span></p><p><span>2. <b>생성형&nbsp;AI&nbsp;실전&nbsp;활용법&nbsp;-&nbsp;원하는&nbsp;결과를&nbsp;이끌어내는&nbsp;핵심&nbsp;기술</b></span></p><p><span>&nbsp; - AI가 정확한 답을 내놓게 만드는 핵심 프롬프트 작성 팁 (역할 부여, 구조화, 제약 조건 설정)</span></p><p><span>&nbsp; - 학업 레포트 자료조사, 기획서 작성, 프로그래밍 및 취업 준비(자소서) 실무 활용 노하우</span></p><p><span>3.&nbsp;</span><span><strong>AI&nbsp;시대의&nbsp;보안과&nbsp;윤리&nbsp;-&nbsp;미래를&nbsp;준비하는&nbsp;자세</strong></span></p><p><span>&nbsp; - 상용 AI 플랫폼 사용 시 꼭 알아야 할 기업/개인 정보 보안 및 프라이버시 이슈</span></p><p><span>&nbsp; - 생성물 저작권 이해와 학업·연구 윤리 가이드</span></p><p><span>□&nbsp;</span><span><strong>일시:</strong></span><span>&nbsp;</span><span><strong>2026년&nbsp;</strong></span><span><strong>11</strong></span><span><strong>월&nbsp;</strong></span><span><strong>24</strong></span><span><strong>일(</strong></span><span><strong>화</strong></span><span><strong>)&nbsp;15:00~17:00</strong></span></p><p><span>□&nbsp;</span><span><strong>장소:&nbsp;</strong></span><span><strong>산학협력센터&nbsp;85151</strong></span><span><strong>호</strong></span></p><p><span>□&nbsp;</span><span><strong>강사:&nbsp;</strong></span><span><strong>최인호&nbsp;대표</strong></span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span>현)&nbsp;</span><span>㈜</span><span>디케릭&nbsp;대표이사</span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; 현) 건국대학교 문화콘텐츠학과 겸임교수</span></p><p><span>□&nbsp;</span><span><strong>문의</strong></span><span>:&nbsp;김재현&nbsp;산학교수,&nbsp;gimjaehyun@skku.edu</span></p><p><span>□&nbsp;</span><span><strong>신청:</strong></span><span>&nbsp;</span><u><a href=\"https://forms.gle/m3VEJPz8dvQnaFZ37\"></a><a href=\"https://forms.gle/m3VEJPz8dvQnaFZ37\">https://forms.gle/m3VEJPz8dvQnaFZ37</a></u><span>&nbsp; &nbsp; &nbsp;</span></p><p>※ <span>참석할&nbsp;분만&nbsp;신청바라며,&nbsp;킹고코인&nbsp;마일리지&nbsp;5,000코인&nbsp;부여</span></p><p><img src=\"https://sw.skku.edu/_res/editor_image/2026/11/uGgSApJwSOnDfiweRmbv0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://sw.skku.edu/_res/editor_image/2026/11/uGgSApJwSOnDfiweRmbv0.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "[AX SW특강] \"생성형 AI의 이해와 실전 활용법\"\n\n딥러닝부터 피지컬 AI까지 이어지는 기술의 흐름을 이해하고, 학업과 실무에 바로 쓰는 프롬프트 노하우와 보안·윤리 가이드까지 한 번에 마스터합니다.\n변화하는 시대, 생성형 AI를 가장 똑똑하게 활용하여 학업부터 취업 준비까지 앞서 나가는 법을 배워봅니다.\n\n□ 특강 주요 내용\n1. AI 발전사 - 딥러닝의 등장부터 피지컬 AI까지\n- 인공지능의 거대한 흐름: 딥러닝 혁명에서 LLM과 멀티모달(VLM)로의 진화\n- 로보틱스와 실세계가 만나는 최신 트렌드: 피지컬 AI(Physical AI)의 세계 조망\n2. 생성형 AI 실전 활용법 - 원하는 결과를 이끌어내는 핵심 기술\n- AI가 정확한 답을 내놓게 만드는 핵심 프롬프트 작성 팁 (역할 부여, 구조화, 제약 조건 설정)\n- 학업 레포트 자료조사, 기획서 작성, 프로그래밍 및 취업 준비(자소서) 실무 활용 노하우\n3. AI 시대의 보안과 윤리 - 미래를 준비하는 자세\n- 상용 AI 플랫폼 사용 시 꼭 알아야 할 기업/개인 정보 보안 및 프라이버시 이슈\n- 생성물 저작권 이해와 학업·연구 윤리 가이드\n□ 일시: 2026년 11월 24일(화) 15:00~17:00\n□ 장소: 산학협력센터 85151호\n□ 강사: 최인호 대표\n현) ㈜디케릭 대표이사\n현) 건국대학교 문화콘텐츠학과 겸임교수\n□ 문의: 김재현 산학교수, gimjaehyun@skku.edu\n□ 신청: https://forms.gle/m3VEJPz8dvQnaFZ37\n※ 참석할 분만 신청바라며, 킹고코인 마일리지 5,000코인 부여",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
+      "ai_judgment_pending": true
+    },
+    "skku-notice01/141738": {
+      "notice": {
+        "id": "skku-notice01/141738",
+        "source_id": "skku-notice01",
+        "article_no": "141738",
+        "title": "[SAINT] WAVE 글로벌 공동강의 특강 안내 (University of Banja Luka, Saša Zeljković 특강)",
+        "category": "행사/세미나",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141738",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": true
+      },
+      "body_text": "WAVE 글로벌공동강의는 본교 교원과 해외 저명대학 교원이 공동으로 제공하는 수준 높은 수업을 통해 학생들의 글로벌 학습 경험을 확대하고, 이를 바탕으로 본교 교육 경쟁력 제고 및 글로벌 학습 플랫폼 구축을 목표로 하는 프로그램이다. 본 프로그램은 해외대학과의 공동 교육과정 운영 및 공동 연구 등 다양한 협력 기반을 확대하기 위한 성균관대학교 특성화 프로그램으로서 중점적으로 운영되고 있다.\n\n1. 강연자: Saša Zeljković 교수 (Department of Chemistry, University of Banja Luka, Bosnia and Herzegovina)\n- University of Banja Luka 무기화학 정교수(Full Professor, 2021~), 화학과장 역임(2013~2015)\n- University of Florida 박사후연구원(Fulbright Visiting Scholar), Matsumae International Foundation Grant(2015)\n- 연구 분야: 다기능 산화물·세라믹·나노소재, 용매결핍합성법(solvent-deficient method)과 기계화학, 태양전지·연료전지 등 에너지 소재\n\n2. 특강 주제 및 내용: The Solvent-Deficient Method: A New Paradigm in Nanomaterials Synthesis\n- 수화 금속염의 결정수를 제한된 반응 매질로 활용하여 기존 용매 사용을 크게 줄이거나 없앤 지속가능한 합성 전략인 용매결핍합성법(SDM)의 원리, 반응 메커니즘과 장점을 소개한다.\n- 기계화학적 활성화와 열처리를 결합하여 구조·형상·기능이 제어된 나노결정 금속산화물을 제조하는 과정을 다룬다.\n- 에너지 소재 응용 사례로 입계 전기저항을 낮춘 가돌리늄 도핑 세리아, 태양광 광촉매 활성이 향상된 질소 도핑 산화아연, 폐기물 유래 코발트 기능화 실리카 수처리 광촉매, 수소 생산 촉매용 고엔트로피 산화물을 소개한다.\n- 합성 조건, 결함 화학, 결정성, 미세구조가 산화물의 기능 특성에 미치는 영향과 SDM의 가능성 및 한계를 논의한다.\n\n[Abstract]\nThe development of sustainable approaches for the synthesis of functional materials is an important aspect of contemporary energy chemistry. The solvent-deficient method (SDM) represents an alternative synthesis strategy in which the water of crystallization from hydrated metal salts acts as a limited reaction medium, substantially reducing or eliminating the need for conventional solvents. Combined with mechanochemical activation and controlled thermal treatment, this approach enables the preparation of nanocrystalline metal oxides with tailored structural, morphological and functional properties.\nThis presentation introduces the fundamental principles, reaction mechanisms and main advantages of SDM, with particular emphasis on its potential contribution to energy-related materials research. Selected examples include gadolinium-doped ceria, for which SDM has been demonstrated to reduce grain-boundary electrical resistivity, and nitrogen-doped zinc oxide, exhibiting enhanced solar-driven photocatalytic activity. Additionally, one of the examples discussed will be cobalt-functionalized silica derived from waste material used as a photocatalyst for water purification, and high-entropy oxides as potential catalysts for hydrogen production. These examples illustrate how synthesis conditions, defect chemistry, crystallinity and microstructure influence the functional properties of oxide materials relevant to energy conversion and environmental applications.\nBy combining solvent reduction with the design of functional nanomaterials, SDM offers an interesting approach at the intersection of green synthesis, materials chemistry and energy chemistry. Its potential and limitations as a sustainable synthesis strategy are also discussed.\n\n3. 주관: 성균나노과학기술원(SAINT) 나노과학기술학과 (전일 교수 에너지화학 수업)\n\n4. 일시 및 장소\n- 1회차: 2026년 11월 10일(화) 16:00~17:00, 온라인(Zoom)\n- 2회차: 일정 확정 후 별도 안내\n\n5. Zoom 참석 정보\n- 회의 ID: 862 1935 8496 (암호: 1234)\n- Zoom 링크: https://zoom.us/j/86219358496\n- 참여자명은 학과/성명으로 설정\n※ 본 특강은 WAVE 글로벌공동강의 프로그램의 일환이며, Zoom 링크는 성균관대 구성원 누구나 참여할 수 있도록 전체공개합니다.\n6. 문의: 성균나노과학기술원 행정실 (031-299-4115)\n* 참여학생들은 Video On, Mic Off 하여 주시기 바랍니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>WAVE 글로벌공동강의는 본교 교원과 해외 저명대학 교원이 공동으로 제공하는 수준 높은 수업을 통해 학생들의 글로벌 학습 경험을 확대하고, 이를 바탕으로 본교 교육 경쟁력 제고 및 글로벌 학습 플랫폼 구축을 목표로 하는 프로그램이다. 본 프로그램은 해외대학과의 공동 교육과정 운영 및 공동 연구 등 다양한 협력 기반을 확대하기 위한 성균관대학교 특성화 프로그램으로서 중점적으로 운영되고 있다.</p><p>1. 강연자: Saša Zeljković 교수 (Department of Chemistry, University of Banja Luka, Bosnia and Herzegovina)</p><ul><li>University of Banja Luka 무기화학 정교수(Full Professor, 2021~), 화학과장 역임(2013~2015)</li><li>University of Florida 박사후연구원(Fulbright Visiting Scholar), Matsumae International Foundation Grant(2015)</li><li>연구 분야: 다기능 산화물·세라믹·나노소재, 용매결핍합성법(solvent-deficient method)과 기계화학, 태양전지·연료전지 등 에너지 소재</li></ul><p>2. 특강 주제 및 내용: The Solvent-Deficient Method: A New Paradigm in Nanomaterials Synthesis</p><ul><li>수화 금속염의 결정수를 제한된 반응 매질로 활용하여 기존 용매 사용을 크게 줄이거나 없앤 지속가능한 합성 전략인 용매결핍합성법(SDM)의 원리, 반응 메커니즘과 장점을 소개한다.</li><li>기계화학적 활성화와 열처리를 결합하여 구조·형상·기능이 제어된 나노결정 금속산화물을 제조하는 과정을 다룬다.</li><li>에너지 소재 응용 사례로 입계 전기저항을 낮춘 가돌리늄 도핑 세리아, 태양광 광촉매 활성이 향상된 질소 도핑 산화아연, 폐기물 유래 코발트 기능화 실리카 수처리 광촉매, 수소 생산 촉매용 고엔트로피 산화물을 소개한다.</li><li>합성 조건, 결함 화학, 결정성, 미세구조가 산화물의 기능 특성에 미치는 영향과 SDM의 가능성 및 한계를 논의한다.</li></ul><p>[Abstract]</p><p>The development of sustainable approaches for the synthesis of functional materials is an important aspect of contemporary energy chemistry. The solvent-deficient method (SDM) represents an alternative synthesis strategy in which the water of crystallization from hydrated metal salts acts as a limited reaction medium, substantially reducing or eliminating the need for conventional solvents. Combined with mechanochemical activation and controlled thermal treatment, this approach enables the preparation of nanocrystalline metal oxides with tailored structural, morphological and functional properties.</p><p>This presentation introduces the fundamental principles, reaction mechanisms and main advantages of SDM, with particular emphasis on its potential contribution to energy-related materials research. Selected examples include gadolinium-doped ceria, for which SDM has been demonstrated to reduce grain-boundary electrical resistivity, and nitrogen-doped zinc oxide, exhibiting enhanced solar-driven photocatalytic activity. Additionally, one of the examples discussed will be cobalt-functionalized silica derived from waste material used as a photocatalyst for water purification, and high-entropy oxides as potential catalysts for hydrogen production. These examples illustrate how synthesis conditions, defect chemistry, crystallinity and microstructure influence the functional properties of oxide materials relevant to energy conversion and environmental applications.</p><p>By combining solvent reduction with the design of functional nanomaterials, SDM offers an interesting approach at the intersection of green synthesis, materials chemistry and energy chemistry. Its potential and limitations as a sustainable synthesis strategy are also discussed.</p><p>3. 주관: 성균나노과학기술원(SAINT) 나노과학기술학과 (전일 교수 에너지화학 수업)</p><p>4. 일시 및 장소</p><ul><li>1회차: 2026년 11월 10일(화) 16:00~17:00, 온라인(Zoom)</li><li>2회차: 일정 확정 후 별도 안내</li></ul><p>5. Zoom 참석 정보</p><ul><li>회의 ID: 862 1935 8496 (암호: 1234)</li><li>Zoom 링크: <a href=\"https://zoom.us/j/86219358496\">https://zoom.us/j/86219358496</a></li><li>참여자명은 학과/성명으로 설정</li></ul><p>※ 본 특강은 WAVE 글로벌공동강의 프로그램의 일환이며, Zoom 링크는 성균관대 구성원 누구나 참여할 수 있도록 전체공개합니다.</p><p>6. 문의: 성균나노과학기술원 행정실 (031-299-4115)</p><p>* 참여학생들은 Video On, Mic Off 하여 주시기 바랍니다.</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"Saša Zeljković \" src=\"https://www.skku.edu/_attach/image/2026/11/evypUcXKkWOUkFcANsAS.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/evypUcXKkWOUkFcANsAS.jpg"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "WAVE 글로벌공동강의는 본교 교원과 해외 저명대학 교원이 공동으로 제공하는 수준 높은 수업을 통해 학생들의 글로벌 학습 경험을 확대하고, 이를 바탕으로 본교 교육 경쟁력 제고 및 글로벌 학습 플랫폼 구축을 목표로 하는 프로그램이다. 본 프로그램은 해외대학과의 공동 교육과정 운영 및 공동 연구 등 다양한 협력 기반을 확대하기 위한 성균관대학교 특성화 프로그램으로서 중점적으로 운영되고 있다.\n\n1. 강연자: Saša Zeljković 교수 (Department of Chemistry, University of Banja Luka, Bosnia and Herzegovina)\n- University of Banja Luka 무기화학 정교수(Full Professor, 2021~), 화학과장 역임(2013~2015)\n- University of Florida 박사후연구원(Fulbright Visiting Scholar), Matsumae International Foundation Grant(2015)\n- 연구 분야: 다기능 산화물·세라믹·나노소재, 용매결핍합성법(solvent-deficient method)과 기계화학, 태양전지·연료전지 등 에너지 소재\n\n2. 특강 주제 및 내용: The Solvent-Deficient Method: A New Paradigm in Nanomaterials Synthesis\n- 수화 금속염의 결정수를 제한된 반응 매질로 활용하여 기존 용매 사용을 크게 줄이거나 없앤 지속가능한 합성 전략인 용매결핍합성법(SDM)의 원리, 반응 메커니즘과 장점을 소개한다.\n- 기계화학적 활성화와 열처리를 결합하여 구조·형상·기능이 제어된 나노결정 금속산화물을 제조하는 과정을 다룬다.\n- 에너지 소재 응용 사례로 입계 전기저항을 낮춘 가돌리늄 도핑 세리아, 태양광 광촉매 활성이 향상된 질소 도핑 산화아연, 폐기물 유래 코발트 기능화 실리카 수처리 광촉매, 수소 생산 촉매용 고엔트로피 산화물을 소개한다.\n- 합성 조건, 결함 화학, 결정성, 미세구조가 산화물의 기능 특성에 미치는 영향과 SDM의 가능성 및 한계를 논의한다.\n\n[Abstract]\nThe development of sustainable approaches for the synthesis of functional materials is an important aspect of contemporary energy chemistry. The solvent-deficient method (SDM) represents an alternative synthesis strategy in which the water of crystallization from hydrated metal salts acts as a limited reaction medium, substantially reducing or eliminating the need for conventional solvents. Combined with mechanochemical activation and controlled thermal treatment, this approach enables the preparation of nanocrystalline metal oxides with tailored structural, morphological and functional properties.\nThis presentation introduces the fundamental principles, reaction mechanisms and main advantages of SDM, with particular emphasis on its potential contribution to energy-related materials research. Selected examples include gadolinium-doped ceria, for which SDM has been demonstrated to reduce grain-boundary electrical resistivity, and nitrogen-doped zinc oxide, exhibiting enhanced solar-driven photocatalytic activity. Additionally, one of the examples discussed will be cobalt-functionalized silica derived from waste material used as a photocatalyst for water purification, and high-entropy oxides as potential catalysts for hydrogen production. These examples illustrate how synthesis conditions, defect chemistry, crystallinity and microstructure influence the functional properties of oxide materials relevant to energy conversion and environmental applications.\nBy combining solvent reduction with the design of functional nanomaterials, SDM offers an interesting approach at the intersection of green synthesis, materials chemistry and energy chemistry. Its potential and limitations as a sustainable synthesis strategy are also discussed.\n\n3. 주관: 성균나노과학기술원(SAINT) 나노과학기술학과 (전일 교수 에너지화학 수업)\n\n4. 일시 및 장소\n- 1회차: 2026년 11월 10일(화) 16:00~17:00, 온라인(Zoom)\n- 2회차: 일정 확정 후 별도 안내\n\n5. Zoom 참석 정보\n- 회의 ID: 862 1935 8496 (암호: 1234)\n- Zoom 링크: https://zoom.us/j/86219358496\n- 참여자명은 학과/성명으로 설정\n※ 본 특강은 WAVE 글로벌공동강의 프로그램의 일환이며, Zoom 링크는 성균관대 구성원 누구나 참여할 수 있도록 전체공개합니다.\n6. 문의: 성균나노과학기술원 행정실 (031-299-4115)\n* 참여학생들은 Video On, Mic Off 하여 주시기 바랍니다.",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
+      "ai_judgment_pending": true
+    },
+    "skku-career-intern/165145": {
+      "notice": {
+        "id": "skku-career-intern/165145",
+        "source_id": "skku-career-intern",
+        "article_no": "165145",
+        "title": "[NHN Cloud] HR(인사담당) 정규직 전환형 인턴 채용",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=nU47gDz7tRjfFaQvJve3iyhtxJ7YQAzyIsSPY0uGLON&modalChk=Y",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "NHN Cloud\nNHN Cloud는 대한민국을 대표하는 클라우드 서비스로서 데이터 센터부터 플랫폼, 애플리케이션 서비스에 이르기까지\n고객이 필요한 모든 클라우드 서비스를 제공하는 클라우드 서비스 제공사(CSP)입니다.\n탄탄한 기술력으로 폭발적인 성장을 이뤄온 NHN Cloud는 이제 국내를 넘어 글로벌 테크 기업으로의 성장을 목표로 하고 있습니다.\n\n이런 업무를 해요 (주요 업무)\nNHN Cloud 및 Enterprise 법인 인사 운영 및 제도 개선\n임직원의 입사부터 퇴사까지 라이프사이클 전반에 걸친 HR 운영 업무 수행\n근태, 평가, 보상, 개편/발령 등 HRM 업무 중 일부 수행\n\n이런 분들을 찾고 있어요 (자격 요건)\n생성형 AI 활용 경험이 있거나 관련 역량을 보유하신 분\nHR 트렌드에 관심이 많고 새로운 방식을 빠르게 학습하는 분\n맡은 일을 주도적으로 찾아 끝까지 책임감 있게 완수하는 분\n원활한 커뮤니케이션 역량을 보유하여 다양한 부서와 협업이 가능하신 분\n\n이런 분이면 더 좋아요 (우대 사항)\n클라우드 및 IT 산업에 관심이 많으신 분\n노동관계법령 지식을 보유하신 분\n다양한 OA 활용 능력을 보유하신 분 (Excel, PPT, Word 등)\n영어 또는 일본어로 이메일·문서 작성 및 기본적인 업무 소통이 가능한 분\n\n안내 사항\n동일 직군 내에서는 중복 지원이 가능하며, 다른 직군으로의 중복 지원은 불가합니다.\n예시) HRM 직무와 클라우드 사업 직무 중복 지원 불가\n\n\n1. 지원 기간\n2026.11.09(월) ~ 2026.11.22(일)\n\n2. 지원 방법\n- 직무 : HR(인사담당)\n- https://careers.nhn.com/preview/4462570852002570070\n- 위 링크를 통해 JD 확인 후 지원\n\n3. 모집 인원\n- 총 0명\n\n\n4. 지원 자격 요건\n\n- 기 졸업자 또는 2027년 2월 졸업 예정자\n\n\n5. 근무형태\n\n\n- 정규직 전환형 인턴",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><div><div><p><img src=\"https://careers.nhn.com/nstatic/he-image/2026/b202b85b-23ac-4327-a34d-9b710a776c861793774605572.png\"></p></div></div><div>NHN Cloud<ul><li><span>NHN Cloud는 대한민국을 대표하는 클라우드 서비스로서 데이터 센터부터 플랫폼, 애플리케이션 서비스에 이르기까지\n고객이 필요한 모든 클라우드 서비스를 제공하는 클라우드 서비스 제공사(CSP)입니다. \n탄탄한 기술력으로 폭발적인 성장을 이뤄온 NHN Cloud는 이제 국내를 넘어 글로벌 테크 기업으로의 성장을 목표로 하고 있습니다.</span></li></ul></div><div>이런 업무를 해요 (주요 업무)<ul><li><span>NHN Cloud 및 Enterprise 법인 인사 운영 및 제도 개선</span></li><li><span>임직원의 입사부터 퇴사까지 라이프사이클 전반에 걸친 HR 운영 업무 수행</span></li><li><span>근태, 평가, 보상, 개편/발령 등 HRM 업무 중 일부 수행</span></li></ul></div><div>이런 분들을 찾고 있어요 (자격 요건)<ul><li><span>생성형 AI 활용 경험이 있거나 관련 역량을 보유하신 분</span></li><li><span>HR 트렌드에 관심이 많고 새로운 방식을 빠르게 학습하는 분</span></li><li><span>맡은 일을 주도적으로 찾아 끝까지 책임감 있게 완수하는 분</span></li><li><span>원활한 커뮤니케이션 역량을 보유하여 다양한 부서와 협업이 가능하신 분</span></li></ul></div><div>이런 분이면 더 좋아요 (우대 사항)<ul><li><span>클라우드 및 IT 산업에 관심이 많으신 분</span></li><li><span>노동관계법령 지식을 보유하신 분</span></li><li><span>다양한 OA 활용 능력을 보유하신 분 (Excel, PPT, Word 등)</span></li><li><span>영어 또는 일본어로 이메일·문서 작성 및 기본적인 업무 소통이 가능한 분</span></li></ul></div><div>안내 사항<ul><li><span>동일 직군 내에서는 중복 지원이 가능하며, 다른 직군으로의 중복 지원은 불가합니다.</span></li><li><span>예시) HRM 직무와 클라우드 사업 직무 중복 지원 불가</span></li></ul><div><span><br></span></div><div><p><span><span><span><span><span>1. 지원 기간 </span></span></span></span></span></p><p><span><span>2026.11.09(월) ~ 2026.11.22(일)</span></span></p><p><span><span> </span></span></p><p><span><span><span><span><span><span><span>2. 지원 방법</span></span></span></span></span></span></span></p><p><span><strong><span><span>- 직무 : HR(인사담당)</span></span></strong></span></p><p><span><span><span><span><span><span>- <a href=\"https://careers.nhn.com/preview/4462570852002570070\">https://careers.nhn.com/preview/4462570852002570070</a></span></span></span></span></span></span></p><p><span><span>- 위 링크를 통해 JD 확인 후 지원</span></span></p><p><span><span> </span></span></p><p><span><span><span><span><span><span><span>3. 모집 인원</span></span></span></span></span></span></span></p><p><span><span>- 총 0명</span></span></p><p><span><br></span></p><div><p><span><span><span><span><span><span><strong>4. 지원 자격 요건</strong></span></span></span></span></span></span></p></div><div><div><span><span>- 기 졸업자 또는 2027년 2월 졸업 예정자</span></span></div><div><span><span><br></span></span></div><div><p><span><span><span><span><span><span><strong>5. 근무형태</strong></span></span></span></span></span></span></p></div></div><div>- 정규직 전환형 인턴</div></div></div></span>",
+      "images": [
+        "https://careers.nhn.com/nstatic/he-image/2026/b202b85b-23ac-4327-a34d-9b710a776c861793774605572.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "NHN Cloud\nNHN Cloud는 대한민국을 대표하는 클라우드 서비스로서 데이터 센터부터 플랫폼, 애플리케이션 서비스에 이르기까지\n고객이 필요한 모든 클라우드 서비스를 제공하는 클라우드 서비스 제공사(CSP)입니다.\n탄탄한 기술력으로 폭발적인 성장을 이뤄온 NHN Cloud는 이제 국내를 넘어 글로벌 테크 기업으로의 성장을 목표로 하고 있습니다.\n\n이런 업무를 해요 (주요 업무)\nNHN Cloud 및 Enterprise 법인 인사 운영 및 제도 개선\n임직원의 입사부터 퇴사까지 라이프사이클 전반에 걸친 HR 운영 업무 수행\n근태, 평가, 보상, 개편/발령 등 HRM 업무 중 일부 수행\n\n이런 분들을 찾고 있어요 (자격 요건)\n생성형 AI 활용 경험이 있거나 관련 역량을 보유하신 분\nHR 트렌드에 관심이 많고 새로운 방식을 빠르게 학습하는 분\n맡은 일을 주도적으로 찾아 끝까지 책임감 있게 완수하는 분\n원활한 커뮤니케이션 역량을 보유하여 다양한 부서와 협업이 가능하신 분\n\n이런 분이면 더 좋아요 (우대 사항)\n클라우드 및 IT 산업에 관심이 많으신 분\n노동관계법령 지식을 보유하신 분\n다양한 OA 활용 능력을 보유하신 분 (Excel, PPT, Word 등)\n영어 또는 일본어로 이메일·문서 작성 및 기본적인 업무 소통이 가능한 분\n\n안내 사항\n동일 직군 내에서는 중복 지원이 가능하며, 다른 직군으로의 중복 지원은 불가합니다.\n예시) HRM 직무와 클라우드 사업 직무 중복 지원 불가\n\n\n1. 지원 기간\n2026.11.09(월) ~ 2026.11.22(일)\n\n2. 지원 방법\n- 직무 : HR(인사담당)\n- https://careers.nhn.com/preview/4462570852002570070\n- 위 링크를 통해 JD 확인 후 지원\n\n3. 모집 인원\n- 총 0명\n\n\n4. 지원 자격 요건\n\n- 기 졸업자 또는 2027년 2월 졸업 예정자\n\n\n5. 근무형태\n\n\n- 정규직 전환형 인턴",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "skku-career-intern/165140": {
+      "notice": {
+        "id": "skku-career-intern/165140",
+        "source_id": "skku-career-intern",
+        "article_no": "165140",
+        "title": "[ANUA] 단기 인턴 2건 채용 공고",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=nU47gDz7tRjfFaQvJve3ixUIlXdpJYtWKYW6i4wgjh9&modalChk=Y",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "(1) 직무명: [ANUA] 한국 퍼포먼스마케팅 단기 인턴\n공고 링크: https://thefounders.kr/job_posting/Vkqvrx5w?utm_source=커리어센터\n서류 접수 기간: 채용 시 마감\n접수 방법: 홈페이지 지원\n급 여: 월 250만원\n\n\n\n(2) 직무명: [ANUA] 한국영업팀 전략리서치 단기 인턴 공고 링크: https://thefounders.careers/job_posting/GfPIQAun?utm_source=커리어센터\n서류 접수 기간: 채용 시 마감\n접수 방법: 홈페이지 지원\n급 여: 월 250만원\n공고 이미지: 하단 첨부 파일",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><ul><li><strong>(1) 직무명:&nbsp;</strong><b> [ANUA] 한국 퍼포먼스마케팅 단기 인턴&nbsp;&nbsp;&nbsp;</b>&nbsp;</li><ul><li>공고 링크: <a href=\"https://thefounders.kr/job_posting/Vkqvrx5w?utm_source=%EC%BB%A4%EB%A6%AC%EC%96%B4%EC%84%BC%ED%84%B0\">https://thefounders.kr/job_posting/Vkqvrx5w?utm_source=커리어센터</a></li><li>서류 접수 기간: 채용 시 마감</li><li>접수 방법: 홈페이지 지원</li><li>급 여: <b>월 250만원</b></li></ul></ul><div><span><b><div><img src=\"https://job.skku.edu/upload/Recruit/20261110_46004127/한국퍼포먼스마케팅_단기인턴.png\"></div><br></b></span></div><div><ul><li><strong>(2) 직무명: </strong><span>[ANUA] 한국영업팀 전략리서치 단기 인턴</span>&nbsp;&nbsp;&nbsp;<ul><li>공고 링크:<a href=\"https://thefounders.careers/job_posting/GfPIQAun?utm_source=%EC%BB%A4%EB%A6%AC%EC%96%B4%EC%84%BC%ED%84%B0\"> https://thefounders.careers/job_posting/GfPIQAun?utm_source=커리어센터</a></li><li>서류 접수 기간: 채용 시 마감</li><li>접수 방법: 홈페이지 지원</li><li>급 여: <b>월 250만원</b></li><li>공고 이미지: 하단 첨부 파일</li></ul></li></ul></div><div><img src=\"https://job.skku.edu/upload/Recruit/20261110_46004127/한국영입팀_단기인턴.png\"></div><br></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261110_46004127/한국퍼포먼스마케팅_단기인턴.png",
+        "https://job.skku.edu/upload/Recruit/20261110_46004127/한국영입팀_단기인턴.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "(1) 직무명: [ANUA] 한국 퍼포먼스마케팅 단기 인턴\n공고 링크: https://thefounders.kr/job_posting/Vkqvrx5w?utm_source=커리어센터\n서류 접수 기간: 채용 시 마감\n접수 방법: 홈페이지 지원\n급 여: 월 250만원\n\n\n\n(2) 직무명: [ANUA] 한국영업팀 전략리서치 단기 인턴 공고 링크: https://thefounders.careers/job_posting/GfPIQAun?utm_source=커리어센터\n서류 접수 기간: 채용 시 마감\n접수 방법: 홈페이지 지원\n급 여: 월 250만원\n공고 이미지: 하단 첨부 파일",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00"
+    },
+    "skku-career-intern/165138": {
+      "notice": {
+        "id": "skku-career-intern/165138",
+        "source_id": "skku-career-intern",
+        "article_no": "165138",
+        "title": "[Liberty Labs] RA Intern 채용 공고",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=nU47gDz7tRjfFaQvJve3ixYZoO40ecXQTaMx327x4sy&modalChk=Y",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "회사 소개\n\n리버티랩스는 연쇄 M&A와 장기 보유를 통해 기업의 연속성과 가치를 지키는 투자회사입니다.좋은 오너십을 통한 자본효율성과 장기적인 가치 창출에 집중함으로써, 기존 사모펀드 혹은 투자기관에서는 불가능했던 방식으로 기업들과 함께 성장합니다.승계 문제 등으로 우수한 기술력과 고객 기반을 보유한 제조기업들을 인수할 수 있는 기회가 많아지고 있습니다. 리버티랩스는 이러한 기업들을 인수하고, 훌륭한 경영진과 내부 운영시스템인 LBS를 통해 장기적인 관점으로 더 잘 경영하여 한국의 Danaher, 버크셔해서웨이와 같은 영속하는 복합 기업 그룹을 만들어갑니다.\n\n저희는 영구자본(Permanent Capital) 구조를 기반으로 국내 유수의 투자사들로부터 투자를 받아 성장하고 있는 연쇄 인수합병 회사입니다. 80여 개의 GP 출자 경험을 보유한 CEO, 하버드 로스쿨 출신 미국 뉴욕주 M&A 변호사인 CIO와 직접 소통하며 Deal Sourcing & Execution, Commercial Due Diligence, Valuation, Corporate Level Strategy 등 의미 있는 업무를 함께할 재능과 열정을 겸비한 인턴을 모집합니다.\n\n| 홈페이지: https://libertylabs.ai/\n\n| 채용 페이지: https://libertylabs.ninehire.site/\n\n[RA Intern 채용 정보]\n\n- 채용 포지션: RA Intern\n- 업무: 투자팀 Staff\n- M&A execution\n- Deal pipeline management\n- Valuation and financial modeling\n- CDD(Commercial Due Diligence)\n- M&A target research / lead generation\n- 자격\n1. 리서치 역량\n2. M&A 전반에 대한 지식\n3. PPT/Word/Excel 등 기본적인 OA 업무 능력\n4. 재무 및 회계, 가치 평가, 재무 모델링에 대한 이해 및 실무 능력\n- 제출 서류\n- (필수) Resume or 이력서(한/영 무관)\n- (선택) 자기소개서\n- 지원 기간: 2026.11.09(월) ~ 2026.11.27(금) 오후 5시 (한국시간)\n- 지원 방법: 홈페이지 지원(https://libertylabs.ninehire.site/job_posting/4YCwHxnt)\n- 근무 형태 및 기간: 3개월(계약직) *협의 가능\n\n---\n\n기타 추가 안내 사항\n\n[함께 하는 것이 즐거운 각 분야 최고의 팀원]\n\n- CEO / 성담 패밀리오피스 Investor, Activant Capital, Cornell University EconomicsBlackstone, KPS Capital Partners, MBK Partners 외 80여 개의 GP 출자한 경험과 다양한 PE 지인 네트워크 보유\n- CIO / Simpson Thacher & Bartlett, Harvard Law School미국 뉴욕주 변호사로 Blackstone, Carlyle, Microsoft 등의 M&A 프로젝트 경험\n- CTO / InterSystems Senior Engineer, 데이트립 Founding Engineer, Cornell University연 매출 $976mm의 규모의 대기업에서 레거시 플랫폼 개선과 신기능 개발 참여\n\n[복지 및 근무 환경]\n\n- 선릉역 10번 출구 1분 거리의 전망 좋은 16층 사무실\n- 업무를 위해 필요한 SW, 전자 기기 등 모든 것을 지원\n- 점심 식대, 야근 시 저녁 식대 및 택시비 지원\n\n[주의 사항]\n\n- 근무 기간은 3개월이 기본이나, 지원자의 요청에 따라 협의 가능합니다.\n- 이력서 및 제출 서류에 허위 사실이 발견될 시 채용이 취소될 수 있습니다.\n\n자세한 채용 정보가 담긴 채용 공고를 첨부 드리며, 추가적으로 필요한 정보 혹은 문의가 있을 시 [recruit@libertylabs.ai]로 전달주시면 빠르게 회신 드릴 수 있도록 하겠습니다.\n\n\n*리버티랩스는 최저임금법을 준수하고 있습니다.\n\n\n\n\n\n채용 공고_RA Intern_2026.11.09.docx",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "채용 공고_RA Intern_2026.11.09.docx",
+          "url": "https://job.skku.edu/upload/Recruit/20261110_27031182/채용 공고_RA Intern_2026.11.09.docx",
+          "type": "DOCX",
+          "size": null
+        }
+      ],
+      "body_html": "<span><p><span>회사 소개</span><br><br><span>리버티랩스는 연쇄 M&amp;A와 장기 보유를 통해 기업의 연속성과 가치를 지키는 투자회사입니다.좋은 오너십을 통한 자본효율성과 장기적인 가치 창출에 집중함으로써, 기존 사모펀드 혹은 투자기관에서는 불가능했던 방식으로 기업들과 함께 성장합니다.승계 문제 등으로 우수한 기술력과 고객 기반을 보유한 제조기업들을 인수할 수 있는 기회가 많아지고 있습니다. 리버티랩스는 이러한 기업들을 인수하고, 훌륭한 경영진과 내부 운영시스템인 LBS를 통해 장기적인 관점으로 더 잘 경영하여 한국의 Danaher, 버크셔해서웨이와 같은 영속하는 복합 기업 그룹을 만들어갑니다.</span><br><br><span>저희는 영구자본(Permanent Capital) 구조를 기반으로 국내 유수의 투자사들로부터 투자를 받아 성장하고 있는 연쇄 인수합병 회사입니다. 80여 개의 GP 출자 경험을 보유한 CEO, 하버드 로스쿨 출신 미국 뉴욕주 M&amp;A 변호사인 CIO와 직접 소통하며 Deal Sourcing &amp; Execution, Commercial Due Diligence, Valuation, Corporate Level Strategy 등 의미 있는 업무를 함께할 재능과 열정을 겸비한 인턴을 모집합니다.</span><br><br><span>| 홈페이지: </span><a href=\"https://libertylabs.ai/\">https://libertylabs.ai/</a><br><br><span>| 채용 페이지: </span><a href=\"https://libertylabs.ninehire.site/\">https://libertylabs.ninehire.site/</a><br><br><span>[RA Intern 채용 정보]</span><br><br><span>- 채용 포지션: RA Intern</span><br><span>- 업무: 투자팀 Staff</span><br><span>&nbsp;- M&amp;A execution</span><br><span>&nbsp;- Deal pipeline management</span><br><span>&nbsp;- Valuation and financial modeling</span><br><span>&nbsp;- CDD(Commercial Due Diligence)</span><br><span>&nbsp;- M&amp;A target research / lead generation</span><br><span>- 자격</span><br><span>&nbsp;1. 리서치 역량</span><br><span>&nbsp;2. M&amp;A 전반에 대한 지식</span><br><span>&nbsp;3. PPT/Word/Excel 등 기본적인 OA 업무 능력</span><br><span>&nbsp;4. 재무 및 회계, 가치 평가, 재무 모델링에 대한 이해 및 실무 능력</span><br><span>- 제출 서류</span><br><span>&nbsp;- (필수) Resume or 이력서(한/영 무관)</span><br><span>&nbsp;- (선택) 자기소개서</span><br><span>- 지원 기간: 2026.11.09(월) ~ 2026.11.27(금) 오후 5시 (한국시간)</span><br><span>- 지원 방법: 홈페이지 지원(</span><a href=\"https://libertylabs.ninehire.site/job_posting/4YCwHxnt)\">https://libertylabs.ninehire.site/job_posting/4YCwHxnt)</a><br><span>- 근무 형태 및 기간: 3개월(계약직) *협의 가능</span><br><br><span>---</span><br><br><span>기타 추가 안내 사항</span><br><br><span>[함께 하는 것이 즐거운 각 분야 최고의 팀원]</span><br><br><span>- CEO / 성담 패밀리오피스 Investor, Activant Capital, Cornell University EconomicsBlackstone, KPS Capital Partners, MBK Partners 외 80여 개의 GP 출자한 경험과 다양한 PE 지인 네트워크 보유</span><br><span>- CIO / Simpson Thacher &amp; Bartlett, Harvard Law School미국 뉴욕주 변호사로 Blackstone, Carlyle, Microsoft 등의 M&amp;A 프로젝트 경험</span><br><span>- CTO / InterSystems Senior Engineer, 데이트립 Founding Engineer, Cornell University연 매출 $976mm의 규모의 대기업에서 레거시 플랫폼 개선과 신기능 개발 참여</span><br><br><span>[복지 및 근무 환경]</span><br><br><span>- 선릉역 10번 출구 1분 거리의 전망 좋은 16층 사무실</span><br><span>- 업무를 위해 필요한 SW, 전자 기기 등 모든 것을 지원</span><br><span>- 점심 식대, 야근 시 저녁 식대 및 택시비 지원</span><br><br><span>[주의 사항]</span><br><br><span>- 근무 기간은 3개월이 기본이나, 지원자의 요청에 따라 협의 가능합니다.</span><br><span>- 이력서 및 제출 서류에 허위 사실이 발견될 시 채용이 취소될 수 있습니다.</span><br><br><span>자세한 채용 정보가 담긴 채용 공고를 첨부 드리며, 추가적으로 필요한 정보 혹은 문의가 있을 시 [recruit@libertylabs.ai]로 전달주시면 빠르게 회신 드릴 수 있도록 하겠습니다.</span><br><br><br><span>*리버티랩스는 최저임금법을 준수하고 있습니다.</span></p><p><span><br></span></p><p><span><br></span></p><p><span></span></p><div><a href=\"https://job.skku.edu/upload/Recruit/20261110_27031182/채용 공고_RA Intern_2026.11.09.docx\">채용 공고_RA Intern_2026.11.09.docx</a></div><br></span>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "회사 소개\n\n리버티랩스는 연쇄 M&A와 장기 보유를 통해 기업의 연속성과 가치를 지키는 투자회사입니다.좋은 오너십을 통한 자본효율성과 장기적인 가치 창출에 집중함으로써, 기존 사모펀드 혹은 투자기관에서는 불가능했던 방식으로 기업들과 함께 성장합니다.승계 문제 등으로 우수한 기술력과 고객 기반을 보유한 제조기업들을 인수할 수 있는 기회가 많아지고 있습니다. 리버티랩스는 이러한 기업들을 인수하고, 훌륭한 경영진과 내부 운영시스템인 LBS를 통해 장기적인 관점으로 더 잘 경영하여 한국의 Danaher, 버크셔해서웨이와 같은 영속하는 복합 기업 그룹을 만들어갑니다.\n\n저희는 영구자본(Permanent Capital) 구조를 기반으로 국내 유수의 투자사들로부터 투자를 받아 성장하고 있는 연쇄 인수합병 회사입니다. 80여 개의 GP 출자 경험을 보유한 CEO, 하버드 로스쿨 출신 미국 뉴욕주 M&A 변호사인 CIO와 직접 소통하며 Deal Sourcing & Execution, Commercial Due Diligence, Valuation, Corporate Level Strategy 등 의미 있는 업무를 함께할 재능과 열정을 겸비한 인턴을 모집합니다.\n\n| 홈페이지: https://libertylabs.ai/\n\n| 채용 페이지: https://libertylabs.ninehire.site/\n\n[RA Intern 채용 정보]\n\n- 채용 포지션: RA Intern\n- 업무: 투자팀 Staff\n- M&A execution\n- Deal pipeline management\n- Valuation and financial modeling\n- CDD(Commercial Due Diligence)\n- M&A target research / lead generation\n- 자격\n1. 리서치 역량\n2. M&A 전반에 대한 지식\n3. PPT/Word/Excel 등 기본적인 OA 업무 능력\n4. 재무 및 회계, 가치 평가, 재무 모델링에 대한 이해 및 실무 능력\n- 제출 서류\n- (필수) Resume or 이력서(한/영 무관)\n- (선택) 자기소개서\n- 지원 기간: 2026.11.09(월) ~ 2026.11.27(금) 오후 5시 (한국시간)\n- 지원 방법: 홈페이지 지원(https://libertylabs.ninehire.site/job_posting/4YCwHxnt)\n- 근무 형태 및 기간: 3개월(계약직) *협의 가능\n\n---\n\n기타 추가 안내 사항\n\n[함께 하는 것이 즐거운 각 분야 최고의 팀원]\n\n- CEO / 성담 패밀리오피스 Investor, Activant Capital, Cornell University EconomicsBlackstone, KPS Capital Partners, MBK Partners 외 80여 개의 GP 출자한 경험과 다양한 PE 지인 네트워크 보유\n- CIO / Simpson Thacher & Bartlett, Harvard Law School미국 뉴욕주 변호사로 Blackstone, Carlyle, Microsoft 등의 M&A 프로젝트 경험\n- CTO / InterSystems Senior Engineer, 데이트립 Founding Engineer, Cornell University연 매출 $976mm의 규모의 대기업에서 레거시 플랫폼 개선과 신기능 개발 참여\n\n[복지 및 근무 환경]\n\n- 선릉역 10번 출구 1분 거리의 전망 좋은 16층 사무실\n- 업무를 위해 필요한 SW, 전자 기기 등 모든 것을 지원\n- 점심 식대, 야근 시 저녁 식대 및 택시비 지원\n\n[주의 사항]\n\n- 근무 기간은 3개월이 기본이나, 지원자의 요청에 따라 협의 가능합니다.\n- 이력서 및 제출 서류에 허위 사실이 발견될 시 채용이 취소될 수 있습니다.\n\n자세한 채용 정보가 담긴 채용 공고를 첨부 드리며, 추가적으로 필요한 정보 혹은 문의가 있을 시 [recruit@libertylabs.ai]로 전달주시면 빠르게 회신 드릴 수 있도록 하겠습니다.\n\n\n*리버티랩스는 최저임금법을 준수하고 있습니다.\n\n\n\n\n\n채용 공고_RA Intern_2026.11.09.docx",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-27T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "skku-career-intern/165137": {
+      "notice": {
+        "id": "skku-career-intern/165137",
+        "source_id": "skku-career-intern",
+        "article_no": "165137",
+        "title": "[NAVER Z] 체험형 인턴 모집",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=nU47gDz7tRjfFaQvJve3irR0eY9wP2I9FVywtvWPoLP&modalChk=Y",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[NAVER Z] 인재 채용 공문_제 HR-2026-110902.pdf\n\n\n\n※ 공정한 채용 진행을 위하여 입사 지원서는 NAVER Z 채용 홈페이지 를 통해서만 접수하고 있습니다.\n※ NAVER Z 체험형 인턴 급여는 최저 시급을 상회하는 수준으로 지급하고 있습니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "[NAVER Z] 인재 채용 공문_제 HR-2026-110902.pdf",
+          "url": "https://job.skku.edu/upload/Recruit/20261110_83235346/[NAVER Z] 인재 채용 공문_제 HR-2026-110902.pdf",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<span><div><a href=\"https://job.skku.edu/upload/Recruit/20261110_83235346/[NAVER Z] 인재 채용 공문_제 HR-2026-110902.pdf\">[NAVER Z] 인재 채용 공문_제 HR-2026-110902.pdf</a></div><p><span>※ 공정한 채용 진행을 위하여 입사 지원서는 <a href=\"https://recruit.snowcorp.com/rcrt/view.do?annoId=30005670&amp;lang=ko\">NAVER Z 채용 홈페이지 </a>를 통해서만 접수하고 있습니다.</span></p><p><span>※ NAVER Z 체험형 인턴 급여는 최저 시급을 상회하는 수준으로 지급하고 있습니다.</span><br></p></span>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "[NAVER Z] 인재 채용 공문_제 HR-2026-110902.pdf\n\n\n\n※ 공정한 채용 진행을 위하여 입사 지원서는 NAVER Z 채용 홈페이지 를 통해서만 접수하고 있습니다.\n※ NAVER Z 체험형 인턴 급여는 최저 시급을 상회하는 수준으로 지급하고 있습니다.",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00"
+    },
+    "linkareer-intern/363331": {
+      "notice": {
+        "id": "linkareer-intern/363331",
+        "source_id": "linkareer-intern",
+        "article_no": "363331",
+        "title": "[이오스튜디오] [EO] 액셀러레이팅 매니저",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363331",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[이오스튜디오] [EO] 액셀러레이팅 매니저\n\n\n\n\n[맡게 될 주요 업무]\n• 창업가 발굴과 연결 - 프로그램에 맞는 창업가를 찾아 선발하고, 국내외 연사·멘토·코치를 섭외해 필요한 순간에 연결합니다. 프로그램이 끝난 뒤의 관계까지 이어갑니다.\n• 프로그램 설계와 운영 - 교육·액셀러레이팅·데모데이의 커리큘럼을 설계하고, 모집부터 종료까지 전 과정을 책임집니다. 참가자의 진행 상황을 보고 언제 개입할지 판단합니다.\n• 사업 개발과 고객사 대응 (강점에 따라 담당) - 신규 프로그램을 기획해 제안서를 쓰고, 재단·공공기관·기업 고객사와 커뮤니케이션하며 마무리까지 맡습니다.\n\n\n[필수]\n1. 본인의 강점을 기반으로 스타트업 생태계에 어떻게 쓰일 수 있는지 설명할 수 있는 분\n2. 사람을 발굴하고 연결해본 경험이 있는 분 (프로그램, 커뮤니티, 행사, 섭외 모두 포함)\n3. 프로그램/행사를 처음부터 끝까지 책임져본 경험이 있는 분\n4. 논리적 사고를 갖고 제안과 설득이 가능하신 분\n5. AI를 활용하여 업무 효율을 높일 수 있는 분\n6. 해외 연사·멘토들과 영어로 커뮤니케이션할 수 있는 분\n\n\n[마인드셋]\n1. 주도성. 팀에 필요한 일을 스스로 만들고, 실행해서 결과까지 가져가는 분\n2. 문제를 꺼내는 사람이 해결을 시작합니다. 문제를 발견하면 담당을 찾기 전에 이슈로 꺼내고 함께 푸는 분\n3. 본질을 파고들고, 임팩트 큰 것부터 합니다. 겉으로 드러난 증상이 아니라 문제의 본질을 정의한 뒤 해결책을 찾고, 할 일의 순서를 임팩트로 정하는 분\n4. 본인이 가진 것만으로 일하지 않는 분. 내 역량 안에서 선을 긋지 않고, EO의 네트워크와 글로벌 인프라를 끌어다 써서 더 큰 가치를 만드는 분\n5. 빠르게 받아들이고 빠르게 느는 분. 피드백을 방어하지 않고 흡수하며, 해본 적 없는 일도 부담이 아니라 기회로 받아들이는 분\n6. 솔직한 피드백과 상호존중을 함께 가져가는 분",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[이오스튜디오] [EO] 액셀러레이팅 매니저</b></span></p><p><span>[맡게 될 주요 업무]</span></p><p><span>• 창업가 발굴과 연결 - 프로그램에 맞는 창업가를 찾아 선발하고, 국내외 연사·멘토·코치를 섭외해 필요한 순간에 연결합니다. 프로그램이 끝난 뒤의 관계까지 이어갑니다.</span></p><p><span>• 프로그램 설계와 운영 - 교육·액셀러레이팅·데모데이의 커리큘럼을 설계하고, 모집부터 종료까지 전 과정을 책임집니다. 참가자의 진행 상황을 보고 언제 개입할지 판단합니다.</span></p><p><span>• 사업 개발과 고객사 대응 (강점에 따라 담당) - 신규 프로그램을 기획해 제안서를 쓰고, 재단·공공기관·기업 고객사와 커뮤니케이션하며 마무리까지 맡습니다.</span></p><p><span>[필수]</span></p><p><span>1. 본인의 강점을 기반으로 스타트업 생태계에 어떻게 쓰일 수 있는지 설명할 수 있는 분</span></p><p><span>2. 사람을 발굴하고 연결해본 경험이 있는 분 (프로그램, 커뮤니티, 행사, 섭외 모두 포함)</span></p><p><span>3. 프로그램/행사를 처음부터 끝까지 책임져본 경험이 있는 분</span></p><p><span>4. 논리적 사고를 갖고 제안과 설득이 가능하신 분</span></p><p><span>5. AI를 활용하여 업무 효율을 높일 수 있는 분</span></p><p><span>6. 해외 연사·멘토들과 영어로 커뮤니케이션할 수 있는 분</span></p><p><span>[마인드셋]</span></p><p><span>1. 주도성. 팀에 필요한 일을 스스로 만들고, 실행해서 결과까지 가져가는 분</span></p><p><span>2. 문제를 꺼내는 사람이 해결을 시작합니다. 문제를 발견하면 담당을 찾기 전에 이슈로 꺼내고 함께 푸는 분</span></p><p><span>3. 본질을 파고들고, 임팩트 큰 것부터 합니다. 겉으로 드러난 증상이 아니라 문제의 본질을 정의한 뒤 해결책을 찾고, 할 일의 순서를 임팩트로 정하는 분</span></p><p><span>4. 본인이 가진 것만으로 일하지 않는 분. 내 역량 안에서 선을 긋지 않고, EO의 네트워크와 글로벌 인프라를 끌어다 써서 더 큰 가치를 만드는 분</span></p><p><span>5. 빠르게 받아들이고 빠르게 느는 분. 피드백을 방어하지 않고 흡수하며, 해본 적 없는 일도 부담이 아니라 기회로 받아들이는 분</span></p><p><span>6. 솔직한 피드백과 상호존중을 함께 가져가는 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984543\" title=\"20261110_134617.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984543"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "[이오스튜디오] [EO] 액셀러레이팅 매니저\n\n\n\n\n[맡게 될 주요 업무]\n• 창업가 발굴과 연결 - 프로그램에 맞는 창업가를 찾아 선발하고, 국내외 연사·멘토·코치를 섭외해 필요한 순간에 연결합니다. 프로그램이 끝난 뒤의 관계까지 이어갑니다.\n• 프로그램 설계와 운영 - 교육·액셀러레이팅·데모데이의 커리큘럼을 설계하고, 모집부터 종료까지 전 과정을 책임집니다. 참가자의 진행 상황을 보고 언제 개입할지 판단합니다.\n• 사업 개발과 고객사 대응 (강점에 따라 담당) - 신규 프로그램을 기획해 제안서를 쓰고, 재단·공공기관·기업 고객사와 커뮤니케이션하며 마무리까지 맡습니다.\n\n\n[필수]\n1. 본인의 강점을 기반으로 스타트업 생태계에 어떻게 쓰일 수 있는지 설명할 수 있는 분\n2. 사람을 발굴하고 연결해본 경험이 있는 분 (프로그램, 커뮤니티, 행사, 섭외 모두 포함)\n3. 프로그램/행사를 처음부터 끝까지 책임져본 경험이 있는 분\n4. 논리적 사고를 갖고 제안과 설득이 가능하신 분\n5. AI를 활용하여 업무 효율을 높일 수 있는 분\n6. 해외 연사·멘토들과 영어로 커뮤니케이션할 수 있는 분\n\n\n[마인드셋]\n1. 주도성. 팀에 필요한 일을 스스로 만들고, 실행해서 결과까지 가져가는 분\n2. 문제를 꺼내는 사람이 해결을 시작합니다. 문제를 발견하면 담당을 찾기 전에 이슈로 꺼내고 함께 푸는 분\n3. 본질을 파고들고, 임팩트 큰 것부터 합니다. 겉으로 드러난 증상이 아니라 문제의 본질을 정의한 뒤 해결책을 찾고, 할 일의 순서를 임팩트로 정하는 분\n4. 본인이 가진 것만으로 일하지 않는 분. 내 역량 안에서 선을 긋지 않고, EO의 네트워크와 글로벌 인프라를 끌어다 써서 더 큰 가치를 만드는 분\n5. 빠르게 받아들이고 빠르게 느는 분. 피드백을 방어하지 않고 흡수하며, 해본 적 없는 일도 부담이 아니라 기회로 받아들이는 분\n6. 솔직한 피드백과 상호존중을 함께 가져가는 분",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-08T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363317": {
+      "notice": {
+        "id": "linkareer-intern/363317",
+        "source_id": "linkareer-intern",
+        "article_no": "363317",
+        "title": "[주식회사유니에스] [하루7H근무/중식제공/본사] 신세계인터내셔날 이커머스 입점팀 패션 AMD 채용",
+        "category": "인턴",
+        "url": "https://linkareer.com/activity/363317",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[하루7H근무/중식제공/본사]\n신세계인터내셔날\n이커머스 입점팀 패션 AMD 채용\n접수 기간 2026-11-10 ~ 2026-11-16\n\n모집부문 및 상세내용\n모집 부문상세내용\n이커머스\n온라인 AMD\n(0명)\n담당업무\n이커머스 입점팀 패션 담당AMD\n- 신세계 V 입점 패션 브랜드 AMD\n- 온라인 프로모션 및 기획전 업무 보조 (세팅, 배너, 제작 등)\n- 상품 및 재고, 브랜드, CS 관리\n\n채용형태\n- 인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)\n- 파트너\n\n\n우대조건\n- 온라인몰 경력자(개인 쇼핑몰 운영 경험자 등)\n- 장기근무 가능자\n- 포토샵/피그마 숙련자\n- 엑셀 등 문서작업 능숙자\n- 성실하고 책임감 있는 성격 보유자\n\n\n복리후생\n▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)\n\n\n\n\n자격요건\n학력\n학력무관\n\n근무조건\n급여\n회사 내규에 따름 (연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)\n\n근무지역\n서울 강남구 도산대로 449 SI 청담 본사\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n실무진 면접\n\nStep 2\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-10 ~ 2026-11-16 (ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)\n\n접수방법\n이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.\n채용 절차\n1. 서류전형 (서류전형 합격자분들 한하여 연락 드리는 점 유의 부탁 드립니다.)\n※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.\n\n\n2. 실무진 면접\n\n\n3. 최종 합격",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><img src=\"https://linkareer.com/images/activity/banner/template_3_banner.webp\"><div><h2>[하루7H근무/중식제공/본사]&nbsp;</h2><h2>신세계인터내셔날&nbsp;</h2><h2>이커머스 입점팀 패션 AMD 채용</h2><p>접수 기간 2026-11-10 ~ 2026-11-16</p></div><div><strong>모집부문 및 상세내용</strong></div><table><thead><tr><th>모집 부문</th><th>상세내용</th></tr></thead><tbody><tr><td><p><b>이커머스</b></p><p><b> 온라인 AMD<br> (0명)</b></p></td><td><div><div><div><div><b>담당업무</b></div><p>이커머스 입점팀 패션 담당AMD\n- 신세계 V 입점 패션 브랜드 AMD\n- 온라인 프로모션 및 기획전 업무 보조 (세팅, 배너, 제작 등)\n- 상품 및 재고, 브랜드, CS 관리</p></div><div><div><div><b>채용형태</b></div><p><span>- </span><span>인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)</span><br><span>- 파트너</span></p></div></div><div><div><b>우대조건</b></div><p>- 온라인몰 경력자(개인 쇼핑몰 운영 경험자 등)\n- 장기근무 가능자</p><p>- 포토샵/피그마 숙련자\n- 엑셀 등 문서작업 능숙자\n- 성실하고 책임감 있는 성격 보유자</p><div><b>복리후생</b></div><p><span>▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)</span></p></div></div></div></td></tr></tbody></table><div><strong>자격요건</strong></div><div><p>학력</p><p>학력무관</p></div><div><strong>근무조건</strong></div><ul><li><p>급여</p><p>회사 내규에 따름&nbsp;<span>(연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)</span></p></li><li><p>근무지역</p><div><p>서울 강남구 도산대로 449 SI 청담 본사 </p></div></li></ul><div><strong>전형 절차</strong></div><div><p>Step 1</p><p>서류전형</p></div><div><p>Step 2</p><p>실무진 면접</p></div><div><p>Step 2</p><p>최종합격</p></div><div><strong>지원 기간 및 방법</strong></div><ul><li><p>접수기간</p><p>2026-11-10 ~ 2026-11-16&nbsp;<span>(ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)</span></p></li><li><p>접수방법</p><p><span>이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대</span></p></li></ul><div><strong>유의사항</strong></div><ul><li>허위 사실이 발견될 경우 채용이 취소될 수 있습니다.</li><li><div><b>채용 절차</b></div><p><b><span>1. 서류전형 (</span><span>서류전형 합격자분들 한하여</span><span> 연락 드리는 점 유의 부탁 드립니다.)</span></b></p><p><b>&nbsp; &nbsp;※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.&nbsp;&nbsp;</b></p><p><b>2. 실무진 면접&nbsp;&nbsp;</b><br><br></p><p><b>3. 최종 합격</b></p></li></ul></div></div>",
+      "images": [
+        "https://linkareer.com/images/activity/banner/template_3_banner.webp"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "[하루7H근무/중식제공/본사]\n신세계인터내셔날\n이커머스 입점팀 패션 AMD 채용\n접수 기간 2026-11-10 ~ 2026-11-16\n\n모집부문 및 상세내용\n모집 부문상세내용\n이커머스\n온라인 AMD\n(0명)\n담당업무\n이커머스 입점팀 패션 담당AMD\n- 신세계 V 입점 패션 브랜드 AMD\n- 온라인 프로모션 및 기획전 업무 보조 (세팅, 배너, 제작 등)\n- 상품 및 재고, 브랜드, CS 관리\n\n채용형태\n- 인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)\n- 파트너\n\n\n우대조건\n- 온라인몰 경력자(개인 쇼핑몰 운영 경험자 등)\n- 장기근무 가능자\n- 포토샵/피그마 숙련자\n- 엑셀 등 문서작업 능숙자\n- 성실하고 책임감 있는 성격 보유자\n\n\n복리후생\n▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)\n\n\n\n\n자격요건\n학력\n학력무관\n\n근무조건\n급여\n회사 내규에 따름 (연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)\n\n근무지역\n서울 강남구 도산대로 449 SI 청담 본사\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n실무진 면접\n\nStep 2\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-10 ~ 2026-11-16 (ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)\n\n접수방법\n이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.\n채용 절차\n1. 서류전형 (서류전형 합격자분들 한하여 연락 드리는 점 유의 부탁 드립니다.)\n※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.\n\n\n2. 실무진 면접\n\n\n3. 최종 합격",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-16T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363316": {
+      "notice": {
+        "id": "linkareer-intern/363316",
+        "source_id": "linkareer-intern",
+        "article_no": "363316",
+        "title": "[HD Midwest, Inc.] [미국] 식품 유통회사 세일즈 오퍼레이션 모집",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363316",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "● Host Organization\n- 시카고 서버브에 위치한 식품도매 소기업으로, 일리노이를 중심으로 7개 도시에 식품 제품을 배송하고 있는 유통 전문 업체\n: 캘리포니아에서 자체 생산되는 쌀 브랜드를 보유하고 있으며, 이를 기반으로 사업 영역을 확장\n● Website\n- http://www.hsmidwestinc.com/\n● Location\n- 미국 일리노이주, Wood Dale\n● Training Position : 세일즈 오퍼레이션\n- 인보이스 발행\n- 주문 관리\n- 출고 문서 처리\n- 재고 관리\n- 세일즈 전략 기획 및 실행 보조\n- 제품 가격 조정\n● Stipend\n- TBD\n● Training Hours\n- 월~금요일, 오전 8:00~오후 5:00\n\n\n———————————————————————-\n[진행절차]\n1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)\n2. 지원에 필요한 서류 준비\n- 영문 이력서, 대학&대학교 재학 또는 졸업증명서, 대학&대학교 성적증명서, 여권사본 등\n3. 회사에 이력서 접수\n4. 스카이프, 줌 등을 통한 화상면접 진행\n5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행\n6. 비자인터뷰 진행\n7. 출국하여 근무시작\n———————————————————————-\n※ 본 채용정보는 해외취업전문기업 워크브릿지(www.workbridge.co.kr)를 통하여 HD Midwest, Inc.에 지원들어 갑니다.\n※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.\n※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.\n- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)\n: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료\n: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용\n———————————————————————-\n[문의 및 지원하기]\n- 전화 : 02-554-7574 // 010-4593-7564\n- 카톡 : heungchan\n- 메일 : janghc@workbridge.co.kr",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984510\" title=\"회사.png\"><br><br></p><p><b>● Host Organization</b></p><p><span>&nbsp;- </span><span><span>시카고 서버브에 위치한 식품도매 소기업으로, 일리노이를 중심으로 7개 도시에 식품 제품을 배송하고 있는 유통 전문 업체</span></span></p><p><span>&nbsp; : </span><span><span>캘리포니아에서 자체 생산되는 쌀 브랜드를 보유하고 있으며, 이를 기반으로 사업 영역을 확장</span></span></p><p><span><b>● Website</b></span></p><p><span>&nbsp;- <a href=\"http://www.hsmidwestinc.com/\">http://www.hsmidwestinc.com/</a></span></p><p><span><b>● Location</b></span></p><p><span>&nbsp;- 미국 일리노이주, Wood Dale</span>&nbsp;</p><p><b>● Training Position </b><span>: 세일즈 오퍼레이션</span></p><p><span></span><span><span>&nbsp;- 인보이스 발행</span></span></p><p><span><span>&nbsp;- 주문 관리</span></span></p><p><span><span>&nbsp;- 출고 문서 처리</span></span></p><p><span><span>&nbsp;- 재고 관리</span></span></p><p><span><span>&nbsp;- 세일즈 전략 기획 및 실행 보조</span></span></p><p><span><span>&nbsp;- 제품 가격 조정</span></span></p><p><b>● Stipend</b></p><p><span>&nbsp;- TBD&nbsp;</span></p><p><span>● Training Hours</span></p><p><span>&nbsp;- 월~금요일, 오전 8:00~오후 5:00</span></p><p><span><br></span></p><p><span>———————————————————————-</span></p><p><span>[진행절차]</span></p><p><span>1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 </span><span>janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)</span></p><p><span>2. 지원에 필요한 서류 준비</span></p><p><span>&nbsp;- 영문 이력서, 대학&amp;대학교 재학 또는 졸업증명서, 대학&amp;대학교 성적증명서, 여권사본 등</span></p><p><span>3. 회사에 이력서 접수</span></p><p><span>4. 스카이프, 줌 등을 통한 화상면접 진행</span></p><p><span>5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행</span></p><p><span>6. 비자인터뷰 진행</span></p><p><span>7. 출국하여 근무시작</span></p><p><span>———————————————————————-</span></p><p><span>※ 본 채용정보는 해외취업전문기업 워크브릿지(<a href=\"http://www.workbridge.co.kr/\"><span>www.workbridge.co.kr</span></a>)를 통하여 HD Midwest, Inc.</span><span><span>에 지원들어 갑니다.</span></span></p><p><span>※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.</span></p><p><span>※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.</span></p><p><span>&nbsp;- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)</span></p><p><span>&nbsp;: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료</span></p><p><span>&nbsp;: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용</span></p><p><span>———————————————————————-</span></p><p><span>[문의 및 지원하기]</span></p><p><span>- 전화 : 02-554-7574 // 010-4593-7564</span></p><p><span>- 카톡 : heungchan</span></p><p><span>- 메일 : janghc@workbridge.co.k</span><span>r</span></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984510"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "● Host Organization\n- 시카고 서버브에 위치한 식품도매 소기업으로, 일리노이를 중심으로 7개 도시에 식품 제품을 배송하고 있는 유통 전문 업체\n: 캘리포니아에서 자체 생산되는 쌀 브랜드를 보유하고 있으며, 이를 기반으로 사업 영역을 확장\n● Website\n- http://www.hsmidwestinc.com/\n● Location\n- 미국 일리노이주, Wood Dale\n● Training Position : 세일즈 오퍼레이션\n- 인보이스 발행\n- 주문 관리\n- 출고 문서 처리\n- 재고 관리\n- 세일즈 전략 기획 및 실행 보조\n- 제품 가격 조정\n● Stipend\n- TBD\n● Training Hours\n- 월~금요일, 오전 8:00~오후 5:00\n\n\n———————————————————————-\n[진행절차]\n1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)\n2. 지원에 필요한 서류 준비\n- 영문 이력서, 대학&대학교 재학 또는 졸업증명서, 대학&대학교 성적증명서, 여권사본 등\n3. 회사에 이력서 접수\n4. 스카이프, 줌 등을 통한 화상면접 진행\n5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행\n6. 비자인터뷰 진행\n7. 출국하여 근무시작\n———————————————————————-\n※ 본 채용정보는 해외취업전문기업 워크브릿지(www.workbridge.co.kr)를 통하여 HD Midwest, Inc.에 지원들어 갑니다.\n※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.\n※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.\n- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)\n: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료\n: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용\n———————————————————————-\n[문의 및 지원하기]\n- 전화 : 02-554-7574 // 010-4593-7564\n- 카톡 : heungchan\n- 메일 : janghc@workbridge.co.kr",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-08T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363314": {
+      "notice": {
+        "id": "linkareer-intern/363314",
+        "source_id": "linkareer-intern",
+        "article_no": "363314",
+        "title": "[Finetech US, Inc. ] 글로벌 반도체 프로젝트 및 현장 기술 지원 전문 회사 공무 / 구매 / 총무 / 자재관리 / 재무 / 품질 / 설계 / 현장 코디네이터 모집",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363314",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "● Host Organization\n- 글로벌 반도체 프로젝트 및 현장 기술 지원 전문 회사\n: 미국 텍사스주를 중심으로 반도체 장비 설치·운영·유지보수, 통역 및 행정 지원 서비스를 제공\n: 한국에 본사를 두고 있음\n● Website\n- http://fine-tech.kr/\n● Location\n- 미국 텍사스주, Hutto & Taylor\n● Training Position\n1. 공무 업무\n2. 구매 업무\n3. 총무 업무\n4. 자재관리\n5. 재무\n6. 품질\n7. 설계\n8. 현장 코디네이터\n※ 희망하는 포지션으로 선택해서 지원\n● Stipend\n- 면접 후 결정\n● Training Hours\n- 주 40시간\n\n———————————————————————-\n[진행절차]\n1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)\n2. 지원에 필요한 서류 준비\n- 영문 이력서, 대학&대학교 재학 또는 졸업증명서, 대학&대학교 성적증명서, 여권사본 등\n3. 회사에 이력서 접수\n4. 스카이프, 줌 등을 통한 화상면접 진행\n5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행\n6. 비자인터뷰 진행\n7. 출국하여 근무시작\n———————————————————————-\n※ 본 채용정보는 해외취업전문기업 워크브릿지(www.workbridge.co.kr)를 통하여 Finetech US, Inc. 에 지원들어 갑니다.\n※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.\n※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.\n- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)\n: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료\n: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용\n———————————————————————-\n[문의 및 지원하기]\n- 전화 : 02-554-7574 // 010-4593-7564\n- 카톡 : heungchan\n- 메일 : janghc@workbridge.co.kr",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><p><b>● Host Organization</b></p><p><span>&nbsp;- 글로벌 반도체 프로젝트 및 현장 기술 지원 전문 회사</span></p><p><span>&nbsp; : 미국 텍사스주를 중심으로 반도체 장비 설치·운영·유지보수, 통역 및 행정 지원 서비스를 제공</span></p><p><span>&nbsp; : 한국에 본사를 두고 있음</span></p><p><b><span></span></b><span><span><b>● Website</b></span></span></p><p><span>&nbsp;- <a href=\"http://fine-tech.kr/\"><span>http://fine-tech.kr/</span></a></span></p><p><b><span></span></b><span><span><b>● Location</b></span></span></p><p><span>&nbsp;- 미국 텍사스주, Hutto &amp; Taylor</span></p><p><b><span>● Training Position</span></b></p><p><span><span>&nbsp;1. 공무 업무&nbsp;</span></span></p><p><span><span>&nbsp;2. 구매 업무&nbsp;</span></span></p><p><span><span>&nbsp;3. 총무 업무</span></span></p><p><span><span>&nbsp;4. 자재관리</span></span></p><p><span><span>&nbsp;5. 재무</span></span></p><p><span><span>&nbsp;6. 품질</span></span></p><p><span><span>&nbsp;7. 설계</span></span></p><p><span><span>&nbsp;8.&nbsp; 현장 코디네이터</span></span></p><p><span><span>※ 희망하는 포지션으로 선택해서 지원</span></span></p><p><b>● Stipend</b></p><p><span>&nbsp;- 면접 후 결정</span></p><p><b><span></span></b><span><span><b>● Training Hours</b></span></span></p><p><span>&nbsp;- 주 40시간</span></p><p><span>&nbsp;</span></p><p><span>———————————————————————-</span></p><p><span>[진행절차]</span></p><p><span>1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 </span><span>janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)</span></p><p><span>2. 지원에 필요한 서류 준비</span></p><p><span>&nbsp;- 영문 이력서, 대학&amp;대학교 재학 또는 졸업증명서, 대학&amp;대학교 성적증명서, 여권사본 등</span></p><p><span>3. 회사에 이력서 접수</span></p><p><span>4. 스카이프, 줌 등을 통한 화상면접 진행</span></p><p><span>5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행</span></p><p><span>6. 비자인터뷰 진행</span></p><p><span>7. 출국하여 근무시작</span></p><p><span>———————————————————————-</span></p><p><span>※ 본 채용정보는 해외취업전문기업 워크브릿지(<a href=\"http://www.workbridge.co.kr/\"><span>www.workbridge.co.kr</span></a>)를 통하여 Finetech US, Inc. </span><span><span>에 지원들어 갑니다.</span></span></p><p><span>※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.</span></p><p><span>※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.</span></p><p><span>&nbsp;- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)</span></p><p><span>&nbsp;: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료</span></p><p><span>&nbsp;: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용</span></p><p><span>———————————————————————-</span></p><p><span>[문의 및 지원하기]</span></p><p><span>- 전화 : 02-554-7574 // 010-4593-7564</span></p><p><span>- 카톡 : heungchan</span></p><p><span>- 메일 : janghc@workbridge.co.k</span><span>r</span></p></div>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "● Host Organization\n- 글로벌 반도체 프로젝트 및 현장 기술 지원 전문 회사\n: 미국 텍사스주를 중심으로 반도체 장비 설치·운영·유지보수, 통역 및 행정 지원 서비스를 제공\n: 한국에 본사를 두고 있음\n● Website\n- http://fine-tech.kr/\n● Location\n- 미국 텍사스주, Hutto & Taylor\n● Training Position\n1. 공무 업무\n2. 구매 업무\n3. 총무 업무\n4. 자재관리\n5. 재무\n6. 품질\n7. 설계\n8. 현장 코디네이터\n※ 희망하는 포지션으로 선택해서 지원\n● Stipend\n- 면접 후 결정\n● Training Hours\n- 주 40시간\n\n———————————————————————-\n[진행절차]\n1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)\n2. 지원에 필요한 서류 준비\n- 영문 이력서, 대학&대학교 재학 또는 졸업증명서, 대학&대학교 성적증명서, 여권사본 등\n3. 회사에 이력서 접수\n4. 스카이프, 줌 등을 통한 화상면접 진행\n5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행\n6. 비자인터뷰 진행\n7. 출국하여 근무시작\n———————————————————————-\n※ 본 채용정보는 해외취업전문기업 워크브릿지(www.workbridge.co.kr)를 통하여 Finetech US, Inc. 에 지원들어 갑니다.\n※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.\n※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.\n- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)\n: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료\n: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용\n———————————————————————-\n[문의 및 지원하기]\n- 전화 : 02-554-7574 // 010-4593-7564\n- 카톡 : heungchan\n- 메일 : janghc@workbridge.co.kr",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-08T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363313": {
+      "notice": {
+        "id": "linkareer-intern/363313",
+        "source_id": "linkareer-intern",
+        "article_no": "363313",
+        "title": "[(주)스토리시티] [여행에미치다] 세일즈 매니저 인턴 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363313",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-08T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "cse-notice/228336": {
+      "notice": {
+        "id": "cse-notice/228336",
+        "source_id": "cse-notice",
+        "article_no": "228336",
+        "title": "[삼성메디슨] 2026 하반기 3급 신입사원 채용 (~11.19)",
+        "category": "채용/모집",
+        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=228336",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": "2026-11-19T23:59:00+09:00",
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": true
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "SAMSUNG MEDISON\n2026 하반기\n삼성메디슨\n삼성헬스케어 보러가기\n채용 자세히 보러가기\n3급 신입사원 채용\n11월 10일 (화)~11월 19일 (목)17시까지\nInnovate. Grow.Succeed\n삼성메디슨에서 무한한 성장 기회를 함께할 인재를 찾습니다.\n리릭기ㄷ클공기능를아·륨드위 클리무머우즈콩ㅜ후|디ㄷ이\n모집직무\n회로/FPGA개발,SW개발,영상개발\n지원방법\n삼성메디슨 홈페이지>인재채용>채용사이트 클릭\n※https://samsungmedison.careerlink.kr\n지원자격\n·2027년 2월 이전 졸업 또는 졸업예정인 분\n·해외여행에 결격 사유가 없는 분(남자의 경우 병역필 또는 면제자)\n·영어회화자격을 보유하신 분(OPIc 및 토익스피킹에 한함)\n채용절차\n지원서 접수>직무적합성평가>직무적성검사>종합면접>채용검진\n채용전형 및 직무에 대한 상세 내용은 삼성메디슨 홈페이지를 참고해 주세요.",
+      "ocr_engine": "rapidocr",
+      "image_attempted": true,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><img src=\"https://cse.skku.edu/_res/editor_image/2026/11/PIvtedNceORyBzNjDTZR0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://cse.skku.edu/_res/editor_image/2026/11/PIvtedNceORyBzNjDTZR0.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
+      "ai_judgment_pending": true
+    },
+    "cse-notice/228334": {
+      "notice": {
+        "id": "cse-notice/228334",
+        "source_id": "cse-notice",
+        "article_no": "228334",
+        "title": "[AX SW특강] \"생성형 AI의 이해와 실전 활용법\"",
+        "category": "행사/세미나",
+        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=228334",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": true
+      },
+      "body_text": "[AX SW특강] \"생성형 AI의 이해와 실전 활용법\"\n\n딥러닝부터 피지컬 AI까지 이어지는 기술의 흐름을 이해하고, 학업과 실무에 바로 쓰는 프롬프트 노하우와 보안·윤리 가이드까지 한 번에 마스터합니다.\n변화하는 시대, 생성형 AI를 가장 똑똑하게 활용하여 학업부터 취업 준비까지 앞서 나가는 법을 배워봅니다.\n\n□ 특강 주요 내용\n1. AI 발전사 - 딥러닝의 등장부터 피지컬 AI까지\n- 인공지능의 거대한 흐름: 딥러닝 혁명에서 LLM과 멀티모달(VLM)로의 진화\n- 로보틱스와 실세계가 만나는 최신 트렌드: 피지컬 AI(Physical AI)의 세계 조망\n2. 생성형 AI 실전 활용법 - 원하는 결과를 이끌어내는 핵심 기술\n- AI가 정확한 답을 내놓게 만드는 핵심 프롬프트 작성 팁 (역할 부여, 구조화, 제약 조건 설정)\n- 학업 레포트 자료조사, 기획서 작성, 프로그래밍 및 취업 준비(자소서) 실무 활용 노하우\n3. AI 시대의 보안과 윤리 - 미래를 준비하는 자세\n- 상용 AI 플랫폼 사용 시 꼭 알아야 할 기업/개인 정보 보안 및 프라이버시 이슈\n- 생성물 저작권 이해와 학업·연구 윤리 가이드\n□ 일시:\n2026년 11월 24일(화) 15:00~17:00\n□ 장소: 산학협력센터 85151호\n□ 강사: 최인호 대표\n현) ㈜디케릭 대표이사\n현) 건국대학교 문화콘텐츠학과 겸임교수\n□ 문의: 김재현 산학교수, gimjaehyun@skku.edu\n□ 신청:\nhttps://forms.gle/m3VEJPz8dvQnaFZ37\n※ 참석할 분만 신청바라며, 킹고코인 마일리지 5,000코인 부여",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><strong>[AX SW특강] \"생성형 AI의 이해와 실전 활용법\"</strong></p><p><strong>&nbsp;</strong></p><p>딥러닝부터 피지컬 AI까지 이어지는 기술의 흐름을 이해하고, 학업과 실무에 바로 쓰는 프롬프트 노하우와 보안·윤리 가이드까지 한 번에 마스터합니다.</p><p>변화하는 시대, 생성형 AI를 가장 똑똑하게 활용하여 학업부터 취업 준비까지 앞서 나가는 법을 배워봅니다.</p><p><strong>&nbsp;</strong></p><p>□ <strong>특강 주요 내용</strong></p><p>1. <strong>AI&nbsp;</strong><strong>발전사 - 딥러닝의 등장부터 피지컬 AI까지</strong></p><p>- 인공지능의 거대한 흐름: 딥러닝 혁명에서 LLM과 멀티모달(VLM)로의 진화</p><p>- 로보틱스와 실세계가 만나는 최신 트렌드: 피지컬 AI(Physical AI)의 세계 조망</p><p>2. <strong>생성형 AI 실전 활용법 - 원하는 결과를 이끌어내는 핵심 기술</strong></p><p>- AI가 정확한 답을 내놓게 만드는 핵심 프롬프트 작성 팁 (역할 부여, 구조화, 제약 조건 설정)</p><p>- 학업 레포트 자료조사, 기획서 작성, 프로그래밍 및 취업 준비(자소서) 실무 활용 노하우</p><p>3. <strong>AI&nbsp;</strong><strong>시대의 보안과 윤리 - 미래를 준비하는 자세</strong></p><p>- 상용 AI 플랫폼 사용 시 꼭 알아야 할 기업/개인 정보 보안 및 프라이버시 이슈</p><p>- 생성물 저작권 이해와 학업·연구 윤리 가이드</p><p>□ <strong>일시:</strong>\n<strong>2026</strong><strong>년 11월 24일(화) 15:00~17:00</strong></p><p>□ <strong>장소: 산학협력센터 85151호</strong></p><p>□ <strong>강사: 최인호 대표</strong></p><p>현) ㈜디케릭 대표이사</p><p>현) 건국대학교 문화콘텐츠학과 겸임교수</p><p>□ <strong>문의</strong>: 김재현 산학교수, gimjaehyun@skku.edu</p><p>□ <strong>신청:</strong>\n<u><a href=\"https://forms.gle/m3VEJPz8dvQnaFZ37\"></a><a href=\"https://forms.gle/m3VEJPz8dvQnaFZ37\">https://forms.gle/m3VEJPz8dvQnaFZ37</a></u></p><p>※ 참석할 분만 신청바라며, 킹고코인 마일리지 5,000코인 부여</p><p><img src=\"https://cse.skku.edu/_res/editor_image/2026/11/mJlSUsCpegzDFpawOiZX0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [
+        "https://cse.skku.edu/_res/editor_image/2026/11/mJlSUsCpegzDFpawOiZX0.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "[AX SW특강] \"생성형 AI의 이해와 실전 활용법\"\n\n딥러닝부터 피지컬 AI까지 이어지는 기술의 흐름을 이해하고, 학업과 실무에 바로 쓰는 프롬프트 노하우와 보안·윤리 가이드까지 한 번에 마스터합니다.\n변화하는 시대, 생성형 AI를 가장 똑똑하게 활용하여 학업부터 취업 준비까지 앞서 나가는 법을 배워봅니다.\n\n□ 특강 주요 내용\n1. AI 발전사 - 딥러닝의 등장부터 피지컬 AI까지\n- 인공지능의 거대한 흐름: 딥러닝 혁명에서 LLM과 멀티모달(VLM)로의 진화\n- 로보틱스와 실세계가 만나는 최신 트렌드: 피지컬 AI(Physical AI)의 세계 조망\n2. 생성형 AI 실전 활용법 - 원하는 결과를 이끌어내는 핵심 기술\n- AI가 정확한 답을 내놓게 만드는 핵심 프롬프트 작성 팁 (역할 부여, 구조화, 제약 조건 설정)\n- 학업 레포트 자료조사, 기획서 작성, 프로그래밍 및 취업 준비(자소서) 실무 활용 노하우\n3. AI 시대의 보안과 윤리 - 미래를 준비하는 자세\n- 상용 AI 플랫폼 사용 시 꼭 알아야 할 기업/개인 정보 보안 및 프라이버시 이슈\n- 생성물 저작권 이해와 학업·연구 윤리 가이드\n□ 일시:\n2026년 11월 24일(화) 15:00~17:00\n□ 장소: 산학협력센터 85151호\n□ 강사: 최인호 대표\n현) ㈜디케릭 대표이사\n현) 건국대학교 문화콘텐츠학과 겸임교수\n□ 문의: 김재현 산학교수, gimjaehyun@skku.edu\n□ 신청:\nhttps://forms.gle/m3VEJPz8dvQnaFZ37\n※ 참석할 분만 신청바라며, 킹고코인 마일리지 5,000코인 부여",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
+      "ai_judgment_pending": true
+    },
     "skku-notice01/141732": {
       "notice": {
         "id": "skku-notice01/141732",
@@ -91,12 +623,13 @@
       ],
       "body_html": "<p>한국종합사회조사를 수행하는 성균관대학교 서베이리서치센터에서는 함께 근무할 연구원보를 다음과 같이 모집합니다.</p><p>조사 수행과 연구에 관심있는 분들의 많은 지원을 바랍니다.</p><p>1. 모집대상</p><ul><li>대학원생 및 학부 2-3학년</li></ul><p>2. 업무내용</p><ul><li>한국종합사회조사(KGSS) 준비 및 자료 정리 보조</li><li>서베이리서치센터(SRC) 수행연구 및 업무 보조</li><li>SSK 연구비 처리</li></ul><p>3. 근무조건</p><ul><li>근무장소: 인문사회과학캠퍼스 호암관 50607호</li><li>근무시간: 주 17시간 (17시간은 고정, 근무요일 및 근무시간은 협의)</li><li>급여: 월 833,333원 (세전)</li><li>비고: 최소 6개월 이상, 겨울 방학 근무 가능한 자</li></ul><p>4. 지원방법</p><ul><li>지원서 양식 작성 후 이메일 송부</li><li>제출기한: 2026. 11. 13.(금)까지</li><li>담당자: 서베이리서치센터 선임연구원 김월화 (kimworlhwa@skku.edu)</li></ul><p>※ 메일 제목 및 파일명: 서베이리서치센터 근로 지원서(성명)</p><p>5. 선발방법</p><ul><li>서류전형 및 면접 (서류전형 합격자에 한하여 면접 대상자 개별 안내)</li></ul><p>※ 면접 일자: 2026년 11월 3째주 중</p><p>※ 제출된 서류는 반환하지 않음</p><p>기타 문의사항은 이메일(kimworlhwa@skku.edu)로 연락주시기 바랍니다.</p>",
       "images": [],
-      "summary": null,
+      "summary": "서베이리서치센터에서 대학원생 및 학부 2~3학년을 대상으로 연구원보를 모집합니다. 지원서 양식을 작성하여 2026년 11월 13일까지 이메일로 제출해야 합니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-10T13:58:08.042779+09:00",
       "page_text": "한국종합사회조사를 수행하는 성균관대학교 서베이리서치센터에서는 함께 근무할 연구원보를 다음과 같이 모집합니다.\n조사 수행과 연구에 관심있는 분들의 많은 지원을 바랍니다.\n\n1. 모집대상\n- 대학원생 및 학부 2-3학년\n\n2. 업무내용\n- 한국종합사회조사(KGSS) 준비 및 자료 정리 보조\n- 서베이리서치센터(SRC) 수행연구 및 업무 보조\n- SSK 연구비 처리\n\n3. 근무조건\n- 근무장소: 인문사회과학캠퍼스 호암관 50607호\n- 근무시간: 주 17시간 (17시간은 고정, 근무요일 및 근무시간은 협의)\n- 급여: 월 833,333원 (세전)\n- 비고: 최소 6개월 이상, 겨울 방학 근무 가능한 자\n\n4. 지원방법\n- 지원서 양식 작성 후 이메일 송부\n- 제출기한: 2026. 11. 13.(금)까지\n- 담당자: 서베이리서치센터 선임연구원 김월화 (kimworlhwa@skku.edu)\n※ 메일 제목 및 파일명: 서베이리서치센터 근로 지원서(성명)\n\n5. 선발방법\n- 서류전형 및 면접 (서류전형 합격자에 한하여 면접 대상자 개별 안내)\n※ 면접 일자: 2026년 11월 3째주 중\n※ 제출된 서류는 반환하지 않음\n\n기타 문의사항은 이메일(kimworlhwa@skku.edu)로 연락주시기 바랍니다.",
       "body_attempted_at": "2026-11-10T13:58:08.042779+09:00",
-      "ai_judgment_pending": true
+      "ai_judgment_pending": true,
+      "summary_last_failed_at": null
     },
     "skku-notice01/141728": {
       "notice": {
@@ -134,12 +667,13 @@
       ],
       "body_html": "<p>2027학년도 외국인 특별전형 학사과정 입시 업무 보조 단기근로(아르바이트) 모집_몽골어 가능자</p><p>1. 모집인원: 0명</p><p>2. 지원 자격: 본교 재학생 또는 휴학생</p><ul><li>한국인일 경우, 몽골어 능통자(해외 유학 경력자 우대)</li><li>외국인일 경우, 한국어 능통자(유효기간 내 TOPIK 6급 보유자 우대)</li></ul><p>*수료생 지원 가능, 졸업생 지원 불가</p><p>3. 근무 기간 및 시간</p><ul><li>근무 기간: ~ 12. 04.(금)</li><li>근무 시간: 09:00 ~ 17:30</li></ul><p>* 파트타임 근무 가능(근무 가능한 일정을 지원서에 기재)</p><p>* 근무 일정은 내부 업무량에 따라 수시로 변동될 수 있음</p><p>4. 근무 장소 및 업무 내용</p><ul><li>근무 장소: 국제관 9B104</li><li>근무 내용: 외국인 특별전형 입시서류 검토 및 통보(전화, 이메일 응대)</li></ul><p>5. 근무 조건</p><ul><li>시급: 10,320원</li><li>점심 식사 제공</li></ul><p>6. 지원 방법</p><ul><li>지원서 양식(첨부파일 참고) 작성 후, 아래 이메일로 접수</li><li>이메일: sarah0807@skku.edu</li><li>이메일 제목 양식: 외유팀 입시근로 지원자_OOO</li><li>파일 제목: 외유팀 입시근로 지원자_OOO</li></ul><p>7. 지원 마감일: 11. 13.(금) 17:00</p><p>*지원자가 많을 시 조기 마감될 수 있음.</p><p>8. 합격자 통보: 합격자에 한하여 개별 통보</p><p>기타 문의 사항은 이메일 (sarah0807@skku.edu)로 연락 바랍니다.</p><p>감사합니다.</p>",
       "images": [],
-      "summary": null,
+      "summary": "외국인 특별전형 입시 업무를 보조할 재학생 및 휴학생을 모집합니다. 몽골어 또는 한국어 능통자를 우대하며, 2026년 11월 13일 17시까지 이메일로 지원서를 제출해야 합니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-10T13:58:08.042779+09:00",
       "page_text": "2027학년도 외국인 특별전형 학사과정 입시 업무 보조 단기근로(아르바이트) 모집_몽골어 가능자\n\n1. 모집인원: 0명\n\n2. 지원 자격: 본교 재학생 또는 휴학생\n- 한국인일 경우, 몽골어 능통자(해외 유학 경력자 우대)\n- 외국인일 경우, 한국어 능통자(유효기간 내 TOPIK 6급 보유자 우대)\n*수료생 지원 가능, 졸업생 지원 불가\n\n3. 근무 기간 및 시간\n- 근무 기간: ~ 12. 04.(금)\n- 근무 시간: 09:00 ~ 17:30\n* 파트타임 근무 가능(근무 가능한 일정을 지원서에 기재)\n* 근무 일정은 내부 업무량에 따라 수시로 변동될 수 있음\n\n4. 근무 장소 및 업무 내용\n- 근무 장소: 국제관 9B104\n- 근무 내용: 외국인 특별전형 입시서류 검토 및 통보(전화, 이메일 응대)\n\n5. 근무 조건\n- 시급: 10,320원\n- 점심 식사 제공\n\n6. 지원 방법\n- 지원서 양식(첨부파일 참고) 작성 후, 아래 이메일로 접수\n- 이메일: sarah0807@skku.edu\n- 이메일 제목 양식: 외유팀 입시근로 지원자_OOO\n- 파일 제목: 외유팀 입시근로 지원자_OOO\n\n7. 지원 마감일: 11. 13.(금) 17:00\n*지원자가 많을 시 조기 마감될 수 있음.\n\n8. 합격자 통보: 합격자에 한하여 개별 통보\n\n기타 문의 사항은 이메일 (sarah0807@skku.edu)로 연락 바랍니다.\n\n감사합니다.",
       "body_attempted_at": "2026-11-10T13:58:08.042779+09:00",
-      "ai_judgment_pending": true
+      "ai_judgment_pending": true,
+      "summary_last_failed_at": null
     },
     "skku-notice01/141727": {
       "notice": {
@@ -177,12 +711,13 @@
       ],
       "body_html": "<p>성균관대학교 인재교육원과 한국대테러안전협회는 「국토안보 최고책임자과정(HSEP)」 제1기를 다음과 같이 운영합니다. 많은 관심과 지원을 바랍니다.</p><p>&lt;주요 사항&gt;</p><p>가. 기관장, 대표이사, 안전·보안 총괄 임원을 위한 12차시 과정</p><p>나. 대테러, 재난안전, 안전보건, 사이버 등 법령이 조직에 부과한 책무에서 출발하는 의사결정 중심 커리큘럼</p><p>다. 제1기 개설기념 등록금 100만 원 감면(전원 적용)</p><p>라. 성균관대학교 총장 명의 수료증 수여</p><p>1. 운영 개요</p><p>가. 원서 접수: 2026년 12월 2일(수)까지 수시 접수(정원 충족 시 조기 마감)</p><p>나. 교육 기간: 2026년 12월 3일(목) ~ 2027년 3월 4일(목), 12차시</p><p>※ 12월 24일, 12월 31일은 휴강</p><p>다. 수업 시간: 매주 목요일 15:00~17:30</p><p>라. 교육 장소: 성균관대학교 서울캠퍼스 (강의실 개별 안내)</p><p>마. 모집 인원: 30명</p><p>바. 책임교수: 조원빈 성균관대학교 국가전략대학원장</p><p>2. 지원 자격</p><p>가. 공공기관·공기업·지방자치단체의 기관장 및 안전·보안 총괄 간부</p><p>나. 군·경찰·소방·치안 유관기관의 지휘관 및 고위 간부</p><p>다. 국가기반시설·교통시설, 다중이용시설 운영기관의 임원 및 안전총괄책임자</p><p>라. 안보·안전 산업 분야 기업 대표 및 임원</p><p>※ 같은 기관의 최고책임자와 안전 담당 임원이 함께 참여하실 수 있습니다.</p><p>3. 교육과정</p><p>01차시 12. 3(목) 입학식 및 오리엔테이션 / 기조강연: 국토안보 시대의 리더십 (노상도, 이재민, 조원빈)</p><p>02차시 12. 10(목) 국제 테러리즘 동향과 한반도 안보환경 (김인욱)</p><p>03차시 12. 17(목) 국내 테러위협 실태와 대응 (전종섭)</p><p>04차시 1. 7(목) 테러방지법과 국가대테러체계 (전종섭)</p><p>05차시 1. 14(목) 드론 테러 위협과 대드론 체계 구축 (김이수)</p><p>06차시 1. 21(목) AI 영상분석과 통합관제 도입 전략 (김영혁)</p><p>07차시 1. 28(목) 국가 사이버 안보 정책과 공공·민간 시설 보호 (백종욱)</p><p>08차시 2. 4(목) 다중운집 환경의 위험 관리와 책임 구조 (이삼기)</p><p>09차시 2. 11(목) 재난 대응과 업무연속성 (김태환)</p><p>10차시 2. 18(목) 공공안전 위기 대응과 유관기관 협력체계 (박보라)</p><p>11차시 2. 25(목) 실전차시: 토론형 도상훈련(TTX) 또는 국가중요시설 현장 견학(택1) (전종섭, 박중윤)</p><p>12차시 3. 4(목) 수료특강: 조직의 안전문화와 회복력을 설계하는 리더 / 수료식 (박성민)</p><p>※ 커리큘럼과 강사진, 세부 일정은 과정 운영계획에 따라 일부 변경될 수 있습니다.</p><p>4. 등록금</p><p>가. 490만 원(일시납, 성균관대학교 수납)</p><p>※ 정상 등록금 590만 원, 제1기 개설기념 100만 원 감면</p><p>나. 포함 사항: 교재·훈련자료, 매 차시 다과, 수료만찬, 주차권</p><p>다. 계산서·교육비 납입증명서 발급으로 기관 교육훈련비 처리 가능</p><p>라. 수료 기준: 총 수업일수의 80% 이상 출석</p><p>※ 등록금 환불은 성균관대학교 환불 규정에 따릅니다.</p><p>5. 원우 특전</p><p>가. 성균관대학교 총장 명의 수료증, 디지털 러닝 배지 발급</p><p>나. 성균관대학교 HSEP 원우회 회원 자격, 도서관 및 학술 데이터베이스 이용</p><p>다. 한국대테러안전협회 회원 자격(수료 후 1년간 연회비 면제), 전문 직무자격 취득 연계</p><p>6. 지원 방법</p><p>가. 제출 서류: 입학지원서(첨부 양식), 지원자 사진, 재직증명서(대표는 사업자등록증 사본으로 대체 가능)</p><p>나. 제출 방법: E-mail(hsep@skku.edu)</p><p>다. 전형 방법: 접수 순 서류전형, 합격 개별 통지, 등록금 납부</p><p>※ 기관 결재용 자료(교육훈련계획서, 세부 커리큘럼 등)는 요청 시 제공합니다.</p><p>7.문의: HSEP 운영사무국 Tel. 1800-9483 / E-mail. hsep@skku.edu</p><p>기타 자세한 사항은 첨부된 브로셔를 참고하여 주시기 바랍니다.</p>",
       "images": [],
-      "summary": null,
+      "summary": "기관장 및 안전·보안 총괄 임원을 대상으로 국토안보 최고책임자과정 제1기 수강생을 모집합니다. 2026년 12월 2일까지 이메일을 통해 수시 접수하며, 서류 전형을 거쳐 선발합니다.",
       "body_attempts": 1,
       "fetched_at": "2026-11-10T13:58:08.042779+09:00",
       "page_text": "성균관대학교 인재교육원과 한국대테러안전협회는 「국토안보 최고책임자과정(HSEP)」 제1기를 다음과 같이 운영합니다. 많은 관심과 지원을 바랍니다.\n\n<주요 사항>\n가. 기관장, 대표이사, 안전·보안 총괄 임원을 위한 12차시 과정\n나. 대테러, 재난안전, 안전보건, 사이버 등 법령이 조직에 부과한 책무에서 출발하는 의사결정 중심 커리큘럼\n다. 제1기 개설기념 등록금 100만 원 감면(전원 적용)\n라. 성균관대학교 총장 명의 수료증 수여\n\n1. 운영 개요\n가. 원서 접수: 2026년 12월 2일(수)까지 수시 접수(정원 충족 시 조기 마감)\n나. 교육 기간: 2026년 12월 3일(목) ~ 2027년 3월 4일(목), 12차시\n※ 12월 24일, 12월 31일은 휴강\n다. 수업 시간: 매주 목요일 15:00~17:30\n라. 교육 장소: 성균관대학교 서울캠퍼스 (강의실 개별 안내)\n마. 모집 인원: 30명\n바. 책임교수: 조원빈 성균관대학교 국가전략대학원장\n\n2. 지원 자격\n가. 공공기관·공기업·지방자치단체의 기관장 및 안전·보안 총괄 간부\n나. 군·경찰·소방·치안 유관기관의 지휘관 및 고위 간부\n다. 국가기반시설·교통시설, 다중이용시설 운영기관의 임원 및 안전총괄책임자\n라. 안보·안전 산업 분야 기업 대표 및 임원\n※ 같은 기관의 최고책임자와 안전 담당 임원이 함께 참여하실 수 있습니다.\n\n3. 교육과정\n01차시 12. 3(목) 입학식 및 오리엔테이션 / 기조강연: 국토안보 시대의 리더십 (노상도, 이재민, 조원빈)\n02차시 12. 10(목) 국제 테러리즘 동향과 한반도 안보환경 (김인욱)\n03차시 12. 17(목) 국내 테러위협 실태와 대응 (전종섭)\n04차시 1. 7(목) 테러방지법과 국가대테러체계 (전종섭)\n05차시 1. 14(목) 드론 테러 위협과 대드론 체계 구축 (김이수)\n06차시 1. 21(목) AI 영상분석과 통합관제 도입 전략 (김영혁)\n07차시 1. 28(목) 국가 사이버 안보 정책과 공공·민간 시설 보호 (백종욱)\n08차시 2. 4(목) 다중운집 환경의 위험 관리와 책임 구조 (이삼기)\n09차시 2. 11(목) 재난 대응과 업무연속성 (김태환)\n10차시 2. 18(목) 공공안전 위기 대응과 유관기관 협력체계 (박보라)\n11차시 2. 25(목) 실전차시: 토론형 도상훈련(TTX) 또는 국가중요시설 현장 견학(택1) (전종섭, 박중윤)\n12차시 3. 4(목) 수료특강: 조직의 안전문화와 회복력을 설계하는 리더 / 수료식 (박성민)\n※ 커리큘럼과 강사진, 세부 일정은 과정 운영계획에 따라 일부 변경될 수 있습니다.\n\n4. 등록금\n가. 490만 원(일시납, 성균관대학교 수납)\n※ 정상 등록금 590만 원, 제1기 개설기념 100만 원 감면\n나. 포함 사항: 교재·훈련자료, 매 차시 다과, 수료만찬, 주차권\n다. 계산서·교육비 납입증명서 발급으로 기관 교육훈련비 처리 가능\n라. 수료 기준: 총 수업일수의 80% 이상 출석\n※ 등록금 환불은 성균관대학교 환불 규정에 따릅니다.\n\n5. 원우 특전\n가. 성균관대학교 총장 명의 수료증, 디지털 러닝 배지 발급\n나. 성균관대학교 HSEP 원우회 회원 자격, 도서관 및 학술 데이터베이스 이용\n다. 한국대테러안전협회 회원 자격(수료 후 1년간 연회비 면제), 전문 직무자격 취득 연계\n\n6. 지원 방법\n가. 제출 서류: 입학지원서(첨부 양식), 지원자 사진, 재직증명서(대표는 사업자등록증 사본으로 대체 가능)\n나. 제출 방법: E-mail(hsep@skku.edu)\n다. 전형 방법: 접수 순 서류전형, 합격 개별 통지, 등록금 납부\n※ 기관 결재용 자료(교육훈련계획서, 세부 커리큘럼 등)는 요청 시 제공합니다.\n\n7.문의: HSEP 운영사무국 Tel. 1800-9483 / E-mail. hsep@skku.edu\n\n기타 자세한 사항은 첨부된 브로셔를 참고하여 주시기 바랍니다.",
       "body_attempted_at": "2026-11-10T13:58:08.042779+09:00",
-      "ai_judgment_pending": true
+      "ai_judgment_pending": true,
+      "summary_last_failed_at": null
     },
     "skku-notice01/141726": {
       "notice": {
@@ -9429,7 +9964,7 @@
       "body_attempts": 1,
       "fetched_at": "2026-11-05T16:11:56.911421+09:00",
       "body_attempted_at": "2026-11-05T16:11:56.911421+09:00",
-      "rechecked_at": "2026-11-10T01:05:33.963987+09:00",
+      "rechecked_at": "2026-11-10T14:53:14.840350+09:00",
       "page_text": "본교에서는 WACE가 운영하는 국제 학생 체험 프로그램 「Global Challenge #15」 에 참가할 학생을 모집합니다.\n\nGlobal Challenge는 WACE가 교육기술 스타트업 Practera와 협력하여 운영하는 프로그램입니다. 참가 학생들은 다양한 국가의 학생들과 국제 팀을 구성하여 유엔 지속가능발전목표(SDGs)와 연계된 실제 프로젝트를 수행하게 됩니다.\n\n국제 협업과 사회문제 해결에 관심 있는 학생 여러분의 많은 관심과 참여를 바랍니다.\n\n▶프로그램 개요\n주제 : 유엔 지속가능발전목표(SDGs) 연계 실전 프로젝트\n방식 : 8개국 9개 WACE 회원교 학생들과 국제 팀 구성 후 협업\n기간 : 2027년 2월 8일 ~ 3월 7일 (4주간)\n특징 :\n1) 실제 글로벌 이슈 해결을 위한 프로젝트 수행\n2) 다국적 팀원과의 협업 경험\n3) 교육기술 플랫폼(Practera)을 활용한 혁신적 학습\n\n▶프로그램 안내\nWACE Global Challenge 홈페이지 참고: https://waceinc.org/global-challenge/\n\n▶신청 안내\n참가 신청 마감: ~11월 30일 월요일 마감\n참가 신청 방법: https://forms.gle/BedyovpLcLJwXdGx8 구글폼 접수\n문의: 서울앵커사업단 김도연 매니저(june02267@skku.edu)\n\n▶참가 유의사항\n참가비: 없음\n단, 최종 신청 마감일 이후 참가를 취소하거나 불참할 경우, 참가비 전액을 본인이 부담해야 합니다.\n신청자는 위 유의사항을 확인하고 동의해야 하며, 동의하지 않을 경우 신청이 제한될 수 있습니다."
     },
     "linkareer-intern/362432": {
@@ -10333,7 +10868,7 @@
         "kind": "마감",
         "at": "2026-11-29T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-10T01:05:33.963987+09:00",
+      "rechecked_at": "2026-11-10T14:53:14.840350+09:00",
       "page_text": "○ 2026학년도 겨울학기 현장실습 참여학생 모집\n\n1. 참여 자격: 2학년 이상 재학생 중 \"2026학년도 겨울학기\"학점인정이 가능한 학생\n2. 지원방법: 포스터 내용 참고\n3. 일정\n- 신청기간: 2026. 11. 9.(월)~11.29.(일)\n- 실습기간: 2026. 12. 21.(월)~2027. 2. 28.(일) *기업별 신청기간 및 실습기간 상이(운영계획서 확인)\n4. 기타 안내사항\n- 현장실습 교과목 수강 필수\n- 중복지원 불가(탈락 후 타 기업 지원가능)\n- 현장실습 교과목&타 교과목 동시수강 불가능 *단, 중대형온라인(I-campus)강의 또는 100%온라인 동영상 강의에 한하여 수강 가능\n※ 본교 홈페이지 공지사항\n※ 현장실습 홈페이지 공지사항"
     },
     "skku-notice01/141580": {
@@ -12322,7 +12857,7 @@
         "kind": "마감",
         "at": "2026-11-15T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-10T01:50:40.152178+09:00",
+      "rechecked_at": "2026-11-10T14:53:14.840350+09:00",
       "page_text": "2026학년도 2학기 DS교과지원(DS교육센터) TA 모집\n\n1. 모집대상 및 지원자격\n① 3-5학년 이상 재학생\n(재학생만 가능, 휴학생/수료생/DS교과 이론·실습TA로 활동 중인 학생은 동시활동 불가)\n② TA활동 기간 중 현장실습, 교환학생, 인턴 중인 학생은 지원불가\n③ 직전학기 평점평균과 전학기 평점평균이 3.5이상인 자\n④ 홈페이지지원TA의 경우, 엑셀(중급이상) 사용가능자\n⑤ 전시지원TA의 경우, 전시준비시간 및 철거시간 TA활동이 가능자, 12월 12일 or 13일 시험감독 가능한 자\n⑥ DS교과 TA활동 이력이 있는 학생 우대\n*현 DS교과 : 문제해결과컴퓨팅사고, 데이터분석과AI기초, 공학컴퓨터프로그래밍, 프로그래밍기초와실습\n*구 DS교과 : 컴퓨팅사고와SW코딩, 문제해결과알고리즘, AI기초와활용, 데이터분석기초\n\n2. TA 활동사항\n유형1) 온라인 Learning Fair 홈페이지 전시지원 : 학생 프로젝트 업로드 지원\n유형2) 오프라인 Learning Fair 전시지원, 기말시험감독 : 전시준비 및 철거 지원, 인사/자과 출석시험감독\n\n3. TA활동기간 및 TA비\n유형1) 11.18.(수) ~ 12.8(화) (3주) / TA비 20만원(세전)\n유형2) 12.2(수) 오전 10~12시, 12.4(금) 오후 3시~4시 30분, 12.12 or 12.13 3~5시간(시간미정) / TA비 30만원(세전)\n*12월 21일 이후 지급예정\n\n4. 합격 통지 및 TA 오리엔테이션\n- 합격 통지 : 2026. 11. 17(화) 오후 킹고 알림으로 개별 연락 예정\n- TA오리엔테이션 : 2026. 11. 18(수) 예정, 인사캠 호암관\n*유형1만 OT진행, 유형2는 OT없이 개별연락\n\n5. 접수기간 및 방법\n- 2026. 10. 28(수) ~ 11. 15(일) 자정 마감\n- 지원방법 : 구글 폼 지원 // gmail만 사용가능\nhttps://forms.gle/CmZRUDcR7TLGpdiN8\n\n6. 주의사항(필독)\n- 지원서는 거짓없이 자세하고 상세히 작성해주기 바랍니다.\n- 미선발자에 대해서는 개별공지하지 않는 점 양해 바랍니다.\n- 문의 : 데이터사이언스교육센터(DS교육센터) ☎02-740-1686 / jiuns@skku.edu"
     },
     "linkareer-intern/362118": {
@@ -17283,6 +17818,49 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-11-18T10:30:00+09:00"
+      }
+    },
+    "linkareer-intern/363325": {
+      "notice": {
+        "id": "linkareer-intern/363325",
+        "source_id": "linkareer-intern",
+        "article_no": "363325",
+        "title": "(주)윈스테크넷 2027년 상반기 인턴 모집",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363325",
+        "posted_on": "2026-11-02",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-10T14:53:14.840350+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984526\" title=\"그림3.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/984526"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
       }
     },
     "jasoseol-intern/107078": {

@@ -1,6 +1,118 @@
 {
   "version": 1,
   "items": {
+    "jasoseol-intern/107165": {
+      "notice": {
+        "id": "jasoseol-intern/107165",
+        "source_id": "jasoseol-intern",
+        "article_no": "107165",
+        "title": "[중소기업중앙회] 2027년 정규직(5급) 채용연계형 인턴직원 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107165",
+        "posted_on": "2026-11-13",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T00:05:12.919085+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "일반사무 직무를 모집하며 소프트웨어 개발 및 관련 직무와 무관합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n<div><a href=\"https://job.incruit.com/jobdb_info/jobpost.asp?job=2611100000984\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://job.incruit.com/jobdb_info/jobpost.asp?job=2611100000984\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/558/webp/image.webp?1794284333\" alt=\"중소기업중앙회 2027년 정규직(5급) 채용연계형 인턴직원 채용\"></div>\n</div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/558/webp/image.webp?1794284333"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T00:05:12.919085+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-11T00:05:12.919085+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-27T17:00:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "5cdc7a8a244a7ec2837acdbbcf06b4478323841394fc64a4cb28212959991be5",
+        "verdict": "not_relevant",
+        "reason": "일반사무 직무를 모집하며 소프트웨어 개발 및 관련 직무와 무관합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107154": {
+      "notice": {
+        "id": "jasoseol-intern/107154",
+        "source_id": "jasoseol-intern",
+        "article_no": "107154",
+        "title": "[현대자동차] 2027 서비스엔지니어 채용전환형 인턴십 High-Tech Talent Track",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107154",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T00:05:12.919085+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "자동차 서비스 엔지니어 직무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n<div><a href=\"https://talent.hyundai.com/main/main.hc\">&nbsp;&nbsp;&nbsp;</a></div>\n<div>\n<div><a href=\"https://talent.hyundai.com/faq/faqList.hc\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://talent.hyundai.com/main/main.hc\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://talent.hyundai.com/main/main.hc\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://talent.hyundai.com/main/main.hc\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/464/webp/image.webp?1794213275\" alt=\"현대자동차 2027 서비스엔지니어 채용전환형 인턴십 High-Tech Talent Track\"></div>\n</div>\n</div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/464/webp/image.webp?1794213275"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T00:05:12.919085+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-11T00:05:12.919085+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T17:00:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "3e1d2c74364dd68db73ef1cdfc579d767a2c3055489166b00272d0d2540ba4c2",
+        "verdict": "not_relevant",
+        "reason": "자동차 서비스 엔지니어 직무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "jasoseol-intern/107061": {
       "notice": {
         "id": "jasoseol-intern/107061",
@@ -55,6 +167,174 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/363499": {
+      "notice": {
+        "id": "linkareer-intern/363499",
+        "source_id": "linkareer-intern",
+        "article_no": "363499",
+        "title": "[인피니언테크놀로지스코리아] Internship - Thermal Measurement & 3D Modeling",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363499",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T00:05:12.919085+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "기계공학 및 기계설계 전공자를 대상으로 하는 기계 설계 및 테스트 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[인피니언테크놀로지스코리아] Internship - Thermal Measurement & 3D Modeling\n\n\n[담당업무]\nThermal measurement: Measure thermal characteristics of power modules\nMechanical testing: Perform mechanical tests such as mounting torque\n3D drawing: Use 3D modeling tools for module design and drawing\n\n\n[접수기간]\n11월 10일 ~ 채용시 마감\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[인피니언테크놀로지스코리아] Internship - Thermal Measurement &amp; 3D Modeling</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>Thermal measurement: Measure thermal characteristics of power modules</span></p><p><span>Mechanical testing: Perform mechanical tests such as mounting torque</span></p><p><span>3D drawing: Use 3D modeling tools for module design and drawing</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 10일 ~ 채용시 마감</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985136\" title=\"스크린샷_10-11-2026_231439_jobs.infineon.com.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985136"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T00:05:12.919085+09:00",
+      "page_text": "[인피니언테크놀로지스코리아] Internship - Thermal Measurement & 3D Modeling\n\n\n[담당업무]\nThermal measurement: Measure thermal characteristics of power modules\nMechanical testing: Perform mechanical tests such as mounting torque\n3D drawing: Use 3D modeling tools for module design and drawing\n\n\n[접수기간]\n11월 10일 ~ 채용시 마감\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-11T00:05:12.919085+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-08T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "53d6c880de84216f3e7f145fde54c03068b0784197c8f7b6bf2a1d84b15786eb",
+        "verdict": "not_relevant",
+        "reason": "기계공학 및 기계설계 전공자를 대상으로 하는 기계 설계 및 테스트 직무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363498": {
+      "notice": {
+        "id": "linkareer-intern/363498",
+        "source_id": "linkareer-intern",
+        "article_no": "363498",
+        "title": "[이마트24] 2027년 신입인턴 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363498",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T00:05:12.919085+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "편의점 점포 운영 및 관리 직무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[이마트24] 2027년 신입인턴 채용\n\n\n[담당업무]\n신규 오픈점 개점 준비 및 운영 업무 실습\n직영점 상품, 매출, 재고 등 점포 운영 관리\n점포 운영 현황 및 상권·고객 특성 분석\n점포 매출 활성화 및 운영 효율 개선 활동\n고객 및 가맹점 관점의 현장 문제해결 경험\n\n\n[접수기간]\n11월 09일 ~ 11월 18일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[이마트24] 2027년 신입인턴 채용</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>신규 오픈점 개점 준비 및 운영 업무 실습</span></p><p><span>직영점 상품, 매출, 재고 등 점포 운영 관리</span></p><p><span>점포 운영 현황 및 상권·고객 특성 분석</span></p><p><span>점포 매출 활성화 및 운영 효율 개선 활동</span></p><p><span>고객 및 가맹점 관점의 현장 문제해결 경험</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 09일 ~ 11월 18일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985133\" title=\"스크린샷_10-11-2026_23919_job.shinsegae.com.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985133"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T00:05:12.919085+09:00",
+      "page_text": "[이마트24] 2027년 신입인턴 채용\n\n\n[담당업무]\n신규 오픈점 개점 준비 및 운영 업무 실습\n직영점 상품, 매출, 재고 등 점포 운영 관리\n점포 운영 현황 및 상권·고객 특성 분석\n점포 매출 활성화 및 운영 효율 개선 활동\n고객 및 가맹점 관점의 현장 문제해결 경험\n\n\n[접수기간]\n11월 09일 ~ 11월 18일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-11T00:05:12.919085+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-18T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "f21475bbc1e7baf1673fccc6a3af478c2899e9c63d79709d6c966e3502ef05a7",
+        "verdict": "not_relevant",
+        "reason": "편의점 점포 운영 및 관리 직무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363497": {
+      "notice": {
+        "id": "linkareer-intern/363497",
+        "source_id": "linkareer-intern",
+        "article_no": "363497",
+        "title": "[두산퓨얼셀] 연료전지 원격 운전/모니터링 인턴 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363497",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T00:05:12.919085+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "전기 및 기계 전공자를 대상으로 하는 연료전지 운전 및 모니터링 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[두산퓨얼셀] 연료전지 원격 운전/모니터링 인턴 채용\n\n\n[담당업무]\n- 발전용 연료전지 원격운전 및 상시 모니터링\n- 발전용 연료전지 고객사(공공기간/민간발전사) Call 응대\n- 발전용 연료전지 이슈 발생 시 CRM(Sales Force) 등록/관리\n\n\n[접수기간]\n11월 03일 ~ 11월 15일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[두산퓨얼셀] 연료전지 원격 운전/모니터링 인턴 채용</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>- 발전용 연료전지 원격운전 및 상시 모니터링</span></p><p><span>- 발전용 연료전지 고객사(공공기간/민간발전사) Call 응대</span></p><p><span>- 발전용 연료전지 이슈 발생 시 CRM(Sales Force) 등록/관리</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 03일 ~ 11월 15일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985130\" title=\"CaptureX_2026-11-10_230400_career.doosan.com.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985130"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T00:05:12.919085+09:00",
+      "page_text": "[두산퓨얼셀] 연료전지 원격 운전/모니터링 인턴 채용\n\n\n[담당업무]\n- 발전용 연료전지 원격운전 및 상시 모니터링\n- 발전용 연료전지 고객사(공공기간/민간발전사) Call 응대\n- 발전용 연료전지 이슈 발생 시 CRM(Sales Force) 등록/관리\n\n\n[접수기간]\n11월 03일 ~ 11월 15일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-11T00:05:12.919085+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "2b8b3b48e62e7af8196a8466b78918879ecb0c3a89389ad28cdaec4581954195",
+        "verdict": "not_relevant",
+        "reason": "전기 및 기계 전공자를 대상으로 하는 연료전지 운전 및 모니터링 직무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "linkareer-intern/363490": {
       "notice": {
         "id": "linkareer-intern/363490",
@@ -71,7 +351,9 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
@@ -949,7 +1231,7 @@
         "article_no": "165145",
         "title": "[NHN Cloud] HR(인사담당) 정규직 전환형 인턴 채용",
         "category": "인턴",
-        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=CXnUC15ILU4jSLBoRFtgqXcavlKEDOC6axyBgur0sTk&modalChk=Y",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=67gLYreng4UU6NlPAOaiptcjpG98ay6atASXR8441kr&modalChk=Y",
         "posted_on": "2026-11-10",
         "pinned": false,
         "deadline": null,
@@ -1990,7 +2272,8 @@
       "ai_deadline": {
         "checked": true,
         "model": "gemini-3.1-flash-lite"
-      }
+      },
+      "rechecked_at": "2026-11-11T00:05:12.919085+09:00"
     },
     "skku-notice01/141723": {
       "notice": {
@@ -2029,7 +2312,7 @@
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": "<p>성균관대학교 일반대학원 “AI응용공학과”는 도메인 지식과 AI 기술을 융합하여 첨단 제조 AX (AI전환)를 선도할 2027학년도 전기 수시1차 석사, 박사, 석박사통합과정 학생을 모집합니다.</p><p>1. 학과 소개</p><p>본 성균관대학교 “AI응용공학과”에서는 과학기술정보통신부의 지원을 통해 AI팩토리 및 자율제조를 구현하는 핵심 기술인 제조AI, 피지컬AI, 생성형AI, 에이전틱AI, 디지털트윈, 지능형 로봇 등에 대해 집중적으로 학습하며 공동기업과의 협력을 통한 AX산학공동프로젝트 수행을 통해 이론과 실무를 겸비한 양손잡이형 제조AX 선도 석박사급 고급인재 양성을 목표로 하고 있습니다.</p><p>2. 모집 정보</p><p>• 모집 단위 및 학위 과정: 성균관대학교 일반대학원 AI응용공학과 (석사, 박사, 석·박사통합과정)</p><p>• 모집 인원: 포스터 및 학과 홈페이지 참조</p><p>3. 학생 지원 혜택</p><p>• 신입학생 전원 학업장려 인건비 및 장학금 지급</p><p>• 해외(미국, 유럽 등) 유수대학으로의 장단기 연수 기회 제공</p><p>• 우수학생 조기 박사 학위 취득 기회 제공(패스트트랙)</p><p>• 기업 인턴십 및 취·창업 지원</p><p>4. 지원 자격 및 전형일정</p><p>• 지원 자격</p><ul><li>국내외 대학에서 학사학위 또는 석사학위를 취득했거나 2027년 3월 입학 전까지 취득 예정인 사람으로서, 성균관대학교 일반대학원 석사·박사·    석박사통합과정의 지원 자격을 충족한 지원자를 대상으로 합니다.</li><li>기계공학, 산업공학, 전자·전기공학, 로봇공학, 소프트웨어, 인공지능, 데이터과학, 스마트팩토리, 컴퓨터과학 등 관련 전공자는 물론, 제조 산업    과 AI 융합연구에 관심과 잠재력을 가진 타 전공자도 지원 가능 합니다.</li></ul><p>• 2027학년도 전기 입학전형 일정</p><ul><li>원서접수: 2026년 11월 24일(화) ~ 12월 02일(수), 지도교수 사전 컨택 및 추천서 권장</li><li>서류제출: 2026년 11월 24일(화) ~ 12월 03일(목)</li><li>면접일정: 2026년 12월 12(토)</li><li>합격자 발표 : 2027년 01월 05일(화) 17시 예정</li></ul><p>5. 문의처</p><p>• 이메일 : skkuaxe@skku.edu</p><p>• 전    화 : 031–299-4753</p><p>• 홈페이지 : <a href=\"https://axe.skku.edu\">https://axe.skku.edu</a></p><p>※ 참고사항</p><p>입학관련문의: skkuaxe@skku.edu 또는 포스터 파일의 QR코드 스캔 후 문의사항 작성</p><ul><li>입학관련 자세한 내용은 성균관대학교 대학원 입학홈페이지를 참고하기 바랍니다.</li></ul><p>( <a href=\"https://gradschool.skku.edu/grad\">https://gradschool.skku.edu/grad</a> )</p><ul><li>또한, AI응용공학과 홈페이지 (<a href=\"https://axe.skku.edu),\">https://axe.skku.edu),</a> 아래 학과 소개 유투브 링크 및 첨부된 참여 교수진 참고 바랍니다.</li></ul><p>( <a href=\"https://youtu.be/zQQi47mXFsU\">https://youtu.be/zQQi47mXFsU</a> )</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"2027학년도 AI응용공학과 전기 수시1차 모집 \" src=\"https://www.skku.edu/_attach/image/2026/11/huDzmROvRcaPMjbJKNfV.jpg\">",
+      "body_html": "<div><p>성균관대학교&nbsp;일반대학원&nbsp;“AI응용공학과”는&nbsp;도메인&nbsp;지식과&nbsp;AI&nbsp;기술을&nbsp;융합하여&nbsp;첨단&nbsp;제조&nbsp;AX&nbsp;(AI전환)를&nbsp;선도할&nbsp;2027학년도&nbsp;전기&nbsp;수시1차&nbsp;석사,&nbsp;박사,&nbsp;석박사통합과정&nbsp;학생을&nbsp;모집합니다.</p><p>1.&nbsp;학과&nbsp;소개</p><p>&nbsp; 본 성균관대학교 “AI응용공학과”에서는 과학기술정보통신부의 지원을 통해 AI팩토리 및 자율제조를 구현하는 핵심 기술인 제조AI, 피지컬AI, 생성형AI, 에이전틱AI, 디지털트윈, 지능형 로봇 등에 대해 집중적으로 학습하며 공동기업과의 협력을 통한 AX산학공동프로젝트 수행을 통해 이론과 실무를 겸비한 양손잡이형 제조AX 선도 석박사급 고급인재 양성을 목표로 하고 있습니다.</p><p>&nbsp;2. 모집 정보</p><p>&nbsp; • 모집 단위 및 학위 과정: 성균관대학교 일반대학원 AI응용공학과 (석사, 박사, 석·박사통합과정)</p><p>&nbsp; • 모집 인원: 포스터 및 학과 홈페이지 참조</p><p>3.&nbsp;학생&nbsp;지원&nbsp;혜택</p><p>&nbsp; • 신입학생 전원 학업장려 인건비 및 장학금 지급</p><p>&nbsp; • 해외(미국, 유럽 등) 유수대학으로의 장단기 연수 기회 제공</p><p>&nbsp; • 우수학생 조기 박사 학위 취득 기회 제공(패스트트랙)</p><p>&nbsp; • 기업 인턴십 및 취·창업 지원</p><p>4.&nbsp;지원&nbsp;자격&nbsp;및&nbsp;전형일정</p><p>&nbsp; • 지원 자격</p><p>&nbsp; &nbsp; - 국내외 대학에서 학사학위 또는 석사학위를 취득했거나 2027년 3월 입학 전까지 취득 예정인 사람으로서, 성균관대학교 일반대학원 석사·박사· &nbsp; &nbsp;석박사통합과정의 지원 자격을 충족한 지원자를 대상으로 합니다.</p><p>&nbsp; &nbsp; - 기계공학, 산업공학, 전자·전기공학, 로봇공학, 소프트웨어, 인공지능, 데이터과학, 스마트팩토리, 컴퓨터과학 등 관련 전공자는 물론, 제조 산업 &nbsp; &nbsp;과 AI 융합연구에 관심과 잠재력을 가진 타 전공자도 지원 가능 합니다.</p><p>&nbsp; &nbsp;• 2027학년도 전기 입학전형 일정</p><p>&nbsp; &nbsp; - 원서접수: 2026년 11월 24일(화) ~ 12월 02일(수), 지도교수 사전 컨택 및 추천서 권장</p><p>&nbsp; &nbsp; - 서류제출: 2026년 11월 24일(화) ~ 12월 03일(목)</p><p>&nbsp; &nbsp; - 면접일정: 2026년 12월 12(토)</p><p>&nbsp; &nbsp; - 합격자 발표 : 2027년 01월 05일(화) 17시 예정</p><p>5.&nbsp;문의처</p><p>&nbsp; • 이메일 : skkuaxe@skku.edu</p><p>&nbsp; • 전 &nbsp; &nbsp;화 : 031–299-4753</p><p>&nbsp; • 홈페이지 : https://axe.skku.edu</p><p>※&nbsp;참고사항</p><p>&nbsp; 입학관련문의: skkuaxe@skku.edu 또는 포스터 파일의 QR코드 스캔 후 문의사항 작성</p><p>&nbsp; &nbsp; - 입학관련 자세한 내용은 성균관대학교 대학원 입학홈페이지를 참고하기 바랍니다.</p><p>&nbsp; &nbsp; &nbsp; ( https://gradschool.skku.edu/grad )</p><p>&nbsp; &nbsp; - 또한, AI응용공학과 홈페이지 (https://axe.skku.edu), 아래 학과 소개 유투브 링크 및 첨부된 참여 교수진 참고 바랍니다.</p><p>&nbsp; &nbsp; &nbsp; ( https://youtu.be/zQQi47mXFsU )</p></div>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"2027학년도 AI응용공학과 전기 수시1차 모집 \" src=\"https://www.skku.edu/_attach/image/2026/11/huDzmROvRcaPMjbJKNfV.jpg\">",
       "images": [
         "https://www.skku.edu/_attach/image/2026/11/huDzmROvRcaPMjbJKNfV.jpg"
       ],
@@ -2043,7 +2326,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-12-03T23:59:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-11T00:05:12.919085+09:00"
     },
     "skku-notice01/141722": {
       "notice": {
@@ -2087,7 +2371,8 @@
       "ai_deadline": {
         "checked": true,
         "model": "gemini-3.1-flash-lite"
-      }
+      },
+      "rechecked_at": "2026-11-11T00:05:12.919085+09:00"
     },
     "skku-career-intern/165130": {
       "notice": {
@@ -2802,6 +3087,62 @@
         "at": "2026-12-05T07:00:00+09:00"
       },
       "rechecked_at": "2026-11-10T22:14:45.505798+09:00"
+    },
+    "jasoseol-intern/107177": {
+      "notice": {
+        "id": "jasoseol-intern/107177",
+        "source_id": "jasoseol-intern",
+        "article_no": "107177",
+        "title": "[경기테크노파크] (인턴 연계) 2026년 스마트제조 전문인력 육성사업 기술Track교육_autodesk",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107177",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T00:05:12.919085+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "maybe",
+          "reason": "제조업 기반의 CAD/CAM 교육 및 인턴십으로 소프트웨어 개발 직무와 직접적인 연관성이 낮습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/614/webp/11%EC%9B%94_%EC%98%A4%ED%86%A0%EB%8D%B0%EC%8A%A4%ED%81%AC_%EB%AA%A8%EC%A7%91%ED%8F%AC%EC%8A%A4%ED%84%B0.webp?1794299047\" alt=\"경기테크노파크 (인턴 연계) 2026년 스마트제조 전문인력 육성사업 기술Track교육_autodesk\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/614/webp/11%EC%9B%94_%EC%98%A4%ED%86%A0%EB%8D%B0%EC%8A%A4%ED%81%AC_%EB%AA%A8%EC%A7%91%ED%8F%AC%EC%8A%A4%ED%84%B0.webp?1794299047"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T00:05:12.919085+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-11T00:05:12.919085+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "a86583deb843095681a206e32bc389de1a44a59489f5ce186f57213e757b3627",
+        "verdict": "maybe",
+        "reason": "제조업 기반의 CAD/CAM 교육 및 인턴십으로 소프트웨어 개발 직무와 직접적인 연관성이 낮습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "linkareer-intern/363226": {
       "notice": {

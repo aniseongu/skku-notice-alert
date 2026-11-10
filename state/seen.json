@@ -488,6 +488,16 @@
           "first_seen": "2026-11-10T14:53:14.840350+09:00",
           "status": "notified",
           "attempts": 0
+        },
+        "141743": {
+          "first_seen": "2026-11-10T15:48:28.426706+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141741": {
+          "first_seen": "2026-11-10T15:48:28.426706+09:00",
+          "status": "notified",
+          "attempts": 0
         }
       }
     },

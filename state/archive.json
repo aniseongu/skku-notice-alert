@@ -1175,7 +1175,8 @@
         "kind": "일정",
         "at": "2026-11-24T15:00:00+09:00"
       },
-      "summary_last_failed_at": null
+      "summary_last_failed_at": null,
+      "rechecked_at": "2026-11-11T03:45:55.555955+09:00"
     },
     "skku-notice01/141738": {
       "notice": {
@@ -1222,7 +1223,8 @@
         "checked": true,
         "model": "gemini-3.1-flash-lite"
       },
-      "summary_last_failed_at": null
+      "summary_last_failed_at": null,
+      "rechecked_at": "2026-11-11T03:45:55.555955+09:00"
     },
     "skku-career-intern/165145": {
       "notice": {
@@ -1808,7 +1810,8 @@
         "kind": "일정",
         "at": "2026-11-24T15:00:00+09:00"
       },
-      "summary_last_failed_at": null
+      "summary_last_failed_at": null,
+      "rechecked_at": "2026-11-11T03:45:55.555955+09:00"
     },
     "skku-notice01/141732": {
       "notice": {

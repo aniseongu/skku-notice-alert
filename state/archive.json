@@ -1075,7 +1075,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-18T18:00:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-11T04:41:02.655787+09:00"
     },
     "skku-notice01/141741": {
       "notice": {
@@ -1126,7 +1127,8 @@
       "ai_deadline": {
         "checked": true,
         "model": "gemini-3.1-flash-lite"
-      }
+      },
+      "rechecked_at": "2026-11-11T04:41:02.655787+09:00"
     },
     "sw-notice/228328": {
       "notice": {
@@ -1233,7 +1235,7 @@
         "article_no": "165145",
         "title": "[NHN Cloud] HR(인사담당) 정규직 전환형 인턴 채용",
         "category": "인턴",
-        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=AKL6tsQpAg5dzCcJDnoXHAsCd07baUGStCum4zBwbJn&modalChk=Y",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=PBg5vR3Srko4UriU0T0Kqj489wEixDu4gSbMU7Gb9vG&modalChk=Y",
         "posted_on": "2026-11-10",
         "pinned": false,
         "deadline": null,
@@ -5589,7 +5591,7 @@
         "kind": "마감",
         "at": "2026-11-30T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-10T15:48:28.426706+09:00"
+      "rechecked_at": "2026-11-11T04:41:02.655787+09:00"
     },
     "skku-notice01/141698": {
       "notice": {

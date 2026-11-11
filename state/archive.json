@@ -57,6 +57,388 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141765": {
+      "notice": {
+        "id": "skku-notice01/141765",
+        "source_id": "skku-notice01",
+        "article_no": "141765",
+        "title": "2026학년도 한국고등교육재단 제6기 문우림 장학생 선발 안내",
+        "category": "장학",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141765",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T10:12:12.129186+09:00"
+      },
+      "match": {
+        "rule_name": "장학",
+        "priority": "high",
+        "interests": [
+          "장학"
+        ],
+        "reasons": [
+          "category:장학"
+        ],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "현재 학부 2학년으로 2개 학기 이상 이수하였으며 평점 4.01로 지원 자격을 충분히 충족합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "장학"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "한국고등교육재단에서 2026학년도 제6기 문우림 장학생을 선발하오니 아래 내역을 확인하시어 관심있는 학생들의 많은 지원 부탁드립니다.\n\n1. 지원자격\n\n○ 대한민국 국적 보유자\n※복수국적자 지원 가능\n\n○ 학부 2, 3학년이며 2개 학기 이상 이수자 (학년 수료 기준은 재학 중인 학교 기준을 따름)\n- 이수 학기 개수에 계절 학기는 불포함\n- 2026년 10월 기준, 1학년 2학기 이수 후~3학년 2학기 이수 후 휴학중인 자\n- 학제가 5년 혹은 6년인 전공에 한하여, 각각 2~4학년과 2~5학년에 재학중인 자 (ex. 건축학과 / 한의예과 등)\n\n○ 평균 학점 3.5 이상인 자(4.5 만점 기준)\n\n○ 2년간 재단 연수 프로그램에 대면 참여할 수 있는 자\n- 도중 어학연수 및 교환학생, 군 복무 등의 사유로 프로그램 중단이 불가함\n\n2. 선발인원: 4년제 대학교 학부 2, 3학년 10명 내외 (※전공 제한 없음)\n\n3. 지원내용 - 문우림 프로그램 교육비 및 답사비 전액 지원\n- 교통비 지원(수도권 외 거주자)\n- 장학금(연간 800만원)\n\n4. 모집 기간: 2026.11.9.(월)~2026.12.11.(금)\n\n5. 지원방법: 온라인 지원서 작성\n\n6. 문 의 처\n\n○ (문의 접수) https://forms.gle/Mim4Vz5azcy9J1xp9\n\n○ (전화) 02-6310-7878\n- 문의 시간: 평일 10:00~17:00 (점심시간 12:00~13:00 제외)\n\n○ (FAQ)https://link24.kr/8Ttkqld\n\n※ 자세한 사항은 첨부 파일 확인 바랍니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "문우림 제6기 장학생 선발 공고문.hwp",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141765&attachNo=118991",
+          "type": "HWP",
+          "size": null
+        },
+        {
+          "name": "문우림 제6기 장학생 선발 모집요강.pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141765&attachNo=118992",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<p>한국고등교육재단에서 2026학년도 제6기 문우림 장학생을 선발하오니 아래 내역을 확인하시어 관심있는 학생들의 많은 지원 부탁드립니다.</p><p>1. 지원자격</p><p>○ 대한민국 국적 보유자</p><p>※복수국적자 지원 가능</p><p>○ 학부 2, 3학년이며 2개 학기 이상 이수자 (학년 수료 기준은 재학 중인 학교 기준을 따름)</p><ul><li>이수 학기 개수에 계절 학기는 불포함</li><li>2026년 10월 기준, 1학년 2학기 이수 후~3학년 2학기 이수 후 휴학중인 자</li><li>학제가 5년 혹은 6년인 전공에 한하여, 각각 2~4학년과 2~5학년에 재학중인 자 (ex. 건축학과 / 한의예과 등)</li></ul><p>○ 평균 학점 3.5 이상인 자(4.5 만점 기준)</p><p>○ 2년간 재단 연수 프로그램에 대면 참여할 수 있는 자</p><ul><li>도중 어학연수 및 교환학생, 군 복무 등의 사유로 프로그램 중단이 불가함</li></ul><p>2. 선발인원: 4년제 대학교 학부 2, 3학년 10명 내외 (※전공 제한 없음)</p><p>3. 지원내용  - 문우림 프로그램 교육비 및 답사비 전액 지원</p><ul><li>교통비 지원(수도권 외 거주자)</li><li>장학금(연간 800만원)</li></ul><p>4. 모집 기간: 2026.11.9.(월)~2026.12.11.(금)</p><p>5. 지원방법: 온라인 지원서 작성</p><p>6. 문 의 처</p><p>○ (문의 접수)  <a href=\"https://forms.gle/Mim4Vz5azcy9J1xp9\">https://forms.gle/Mim4Vz5azcy9J1xp9</a></p><p>○ (전화) 02-6310-7878</p><ul><li>문의 시간: 평일 10:00~17:00 (점심시간 12:00~13:00 제외)</li></ul><p>○ (FAQ)<a href=\"https://link24.kr/8Ttkqld\">https://link24.kr/8Ttkqld</a></p><p>※ 자세한 사항은 첨부 파일 확인 바랍니다.</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/11/bTzWIayUhMseZvmxRLdk.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/bTzWIayUhMseZvmxRLdk.jpg"
+      ],
+      "summary": "12월 11일까지 한국고등교육재단 홈페이지를 통해 온라인 지원서를 작성하여 제출하세요. 2년간 재단 연수 프로그램에 대면으로 참여해야 하므로 일정 확인이 필요합니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T10:12:12.129186+09:00",
+      "page_text": "한국고등교육재단에서 2026학년도 제6기 문우림 장학생을 선발하오니 아래 내역을 확인하시어 관심있는 학생들의 많은 지원 부탁드립니다.\n\n1. 지원자격\n\n○ 대한민국 국적 보유자\n※복수국적자 지원 가능\n\n○ 학부 2, 3학년이며 2개 학기 이상 이수자 (학년 수료 기준은 재학 중인 학교 기준을 따름)\n- 이수 학기 개수에 계절 학기는 불포함\n- 2026년 10월 기준, 1학년 2학기 이수 후~3학년 2학기 이수 후 휴학중인 자\n- 학제가 5년 혹은 6년인 전공에 한하여, 각각 2~4학년과 2~5학년에 재학중인 자 (ex. 건축학과 / 한의예과 등)\n\n○ 평균 학점 3.5 이상인 자(4.5 만점 기준)\n\n○ 2년간 재단 연수 프로그램에 대면 참여할 수 있는 자\n- 도중 어학연수 및 교환학생, 군 복무 등의 사유로 프로그램 중단이 불가함\n\n2. 선발인원: 4년제 대학교 학부 2, 3학년 10명 내외 (※전공 제한 없음)\n\n3. 지원내용 - 문우림 프로그램 교육비 및 답사비 전액 지원\n- 교통비 지원(수도권 외 거주자)\n- 장학금(연간 800만원)\n\n4. 모집 기간: 2026.11.9.(월)~2026.12.11.(금)\n\n5. 지원방법: 온라인 지원서 작성\n\n6. 문 의 처\n\n○ (문의 접수) https://forms.gle/Mim4Vz5azcy9J1xp9\n\n○ (전화) 02-6310-7878\n- 문의 시간: 평일 10:00~17:00 (점심시간 12:00~13:00 제외)\n\n○ (FAQ)https://link24.kr/8Ttkqld\n\n※ 자세한 사항은 첨부 파일 확인 바랍니다.",
+      "body_attempted_at": "2026-11-11T10:12:12.129186+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-12-11T23:59:00+09:00"
+      }
+    },
+    "skku-notice01/141760": {
+      "notice": {
+        "id": "skku-notice01/141760",
+        "source_id": "skku-notice01",
+        "article_no": "141760",
+        "title": "2026년 겨울학기 한국농어촌희망재단 한국마사회 대학생 봉사자 연계 지역돌봄 지원사업 (겨울방학) 장학생 선발 안내",
+        "category": "장학",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141760",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T10:12:12.129186+09:00"
+      },
+      "match": {
+        "rule_name": "장학",
+        "priority": "high",
+        "interests": [
+          "장학"
+        ],
+        "reasons": [
+          "category:장학"
+        ],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "2026년 2학기 재학생이며 장학금 지급 예정인 2027년 1학기에도 재학 예정이므로 지원 가능합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "장학"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "한국농어촌희망재단과 한국마사회가 함께하는 2026년 겨울방학 대학생 봉사자 연계 지역돌봄 지원사업 장학생 선발 안내를 드리오니 관심있는 학생들의 많은 신청 부탁드립니다.\n\n○ 신청기간 : 2026.11.12.(목) 13:00 ~ 11.18.(수) 17:00\n\n○ 대상 : 26.1학기 성적 보유자 중 26.2학기 재학생 및 27.1학기 재학예정자\n※ 장학금은 27년 3월 중 지급 예정이므로 해당 학기 정규학기 내 재학 상태가 유지되어야 함(초과학기 X)\n\n○ 활동내용 : 경기도 지역아동센터 봉사활동 100시간 이상\n\n※ 활동기간 : 2026.12.14.(월) ~ 2027.02.26.(금)\n\n○ 지원내용 : 학업장려금 130만원 지급 및 활동우수자 표창 수여(5명)\n\n○ 신청방법 : 농어촌희망재단 홈페이지(www.rhof.or.kr) 신청\n\n※ 문의 : 한국농어촌희망재단 02-6958-9475\n\n※ 비고: 신청과 관련된 서류(포스터 및 안내문)는 GLS-장학영역-장학금모아보기 메뉴에서 확인하세요",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>한국농어촌희망재단과 한국마사회가 함께하는 2026년 겨울방학 대학생 봉사자 연계 지역돌봄 지원사업 장학생 선발 안내를 드리오니 관심있는 학생들의 많은 신청 부탁드립니다.</p><p>○ 신청기간 : 2026.11.12.(목) 13:00 ~ 11.18.(수) 17:00</p><p>○ 대상 : 26.1학기 성적 보유자 중 26.2학기 재학생 및 27.1학기 재학예정자</p><p>※ 장학금은 27년 3월 중 지급 예정이므로 해당 학기 정규학기 내 재학 상태가 유지되어야 함(초과학기 X)</p><p>○ 활동내용 : 경기도 지역아동센터 봉사활동 100시간 이상</p><p>※ 활동기간 : 2026.12.14.(월) ~ 2027.02.26.(금)</p><p>○ 지원내용 : 학업장려금 130만원 지급 및 활동우수자 표창 수여(5명)</p><p>○ 신청방법 : 농어촌희망재단 홈페이지(www.rhof.or.kr) 신청</p><p>※ 문의 : 한국농어촌희망재단 02-6958-9475</p><p>※ 비고: 신청과 관련된 서류(포스터 및 안내문)는 GLS-장학영역-장학금모아보기 메뉴에서 확인하세요</p>",
+      "images": [],
+      "summary": "11월 12일부터 11월 18일까지 농어촌희망재단 홈페이지에서 신청하세요. 겨울방학 동안 경기도 지역아동센터에서 100시간 이상의 봉사활동을 수행해야 합니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T10:12:12.129186+09:00",
+      "page_text": "한국농어촌희망재단과 한국마사회가 함께하는 2026년 겨울방학 대학생 봉사자 연계 지역돌봄 지원사업 장학생 선발 안내를 드리오니 관심있는 학생들의 많은 신청 부탁드립니다.\n\n○ 신청기간 : 2026.11.12.(목) 13:00 ~ 11.18.(수) 17:00\n\n○ 대상 : 26.1학기 성적 보유자 중 26.2학기 재학생 및 27.1학기 재학예정자\n※ 장학금은 27년 3월 중 지급 예정이므로 해당 학기 정규학기 내 재학 상태가 유지되어야 함(초과학기 X)\n\n○ 활동내용 : 경기도 지역아동센터 봉사활동 100시간 이상\n\n※ 활동기간 : 2026.12.14.(월) ~ 2027.02.26.(금)\n\n○ 지원내용 : 학업장려금 130만원 지급 및 활동우수자 표창 수여(5명)\n\n○ 신청방법 : 농어촌희망재단 홈페이지(www.rhof.or.kr) 신청\n\n※ 문의 : 한국농어촌희망재단 02-6958-9475\n\n※ 비고: 신청과 관련된 서류(포스터 및 안내문)는 GLS-장학영역-장학금모아보기 메뉴에서 확인하세요",
+      "body_attempted_at": "2026-11-11T10:12:12.129186+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-18T17:00:00+09:00"
+      }
+    },
+    "skku-career-intern/165155": {
+      "notice": {
+        "id": "skku-career-intern/165155",
+        "source_id": "skku-career-intern",
+        "article_no": "165155",
+        "title": "[코드잇] 채용공고",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=SG8EHtyiUcx27VLJVPnUoOCCe37hmYhfpAlAS2Qu9U2&modalChk=Y",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T10:12:12.129186+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "모집 직무가 마케팅 및 교육 운영으로 소프트웨어 개발이나 데이터 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "마케팅 인턴\n마케팅 인턴 (신사업)\n교육 운영 인턴 [부트캠프]\n모집 기간은 채용시 마감이며, 채용 공고 내용은 다음과 같습니다.\n\n\n\n\n\n\n1. [코드잇] 마케팅 인턴\n채용공고 상세 링크: https://careers.codeit.com/c/oeVMXiNCPu\n\n\n\n\n\n\n2. [코드잇] 마케팅 인턴 (신사업)\n채용공고 상세 링크: https://careers.codeit.com/c/vs9XCfjqLZ\n\n\n\n\n\n\n\n\n3. [코드잇] 교육 운영 인턴 [부트캠프]\n채용공고 상세 링크: https://careers.codeit.com/c/yHt1KJSb7W",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><div><ul><li><b>마케팅 인턴</b></li><li><b>마케팅 인턴 (신사업)</b></li><li><b>교육 운영 인턴 [부트캠프]</b></li></ul>모집 기간은 <u>채용시 마감</u>이며, <span>채용 공고 내용은 다음과 같습니다.</span></div><div><span><div><br></div><br></span></div><div><span><br></span></div><div><span><b>1. [코드잇] 마케팅 인턴</b></span></div><div><ul><li>채용공고 상세 링크: <a href=\"https://careers.codeit.com/c/oeVMXiNCPu\">https://careers.codeit.com/c/oeVMXiNCPu</a></li></ul></div><div><div><img src=\"https://job.skku.edu/upload/Recruit/20261111_32220331/다운로드.png\"></div><br></div><div><span><br></span></div><div><span><b>2. [코드잇] 마케팅 인턴 (신사업)</b></span></div><div><ul><li>채용공고 상세 링크: <a href=\"https://careers.codeit.com/c/vs9XCfjqLZ\">https://careers.codeit.com/c/vs9XCfjqLZ</a></li></ul></div><div><div><img src=\"https://job.skku.edu/upload/Recruit/20261111_32220331/다운로드 (1).png\"></div><br></div><div><span><br></span></div><div><span><br></span></div><div><span><b>3. [코드잇] 교육 운영 인턴 [부트캠프]</b></span></div><div><ul><li>채용공고 상세 링크: <a href=\"https://careers.codeit.com/c/yHt1KJSb7W\">https://careers.codeit.com/c/yHt1KJSb7W</a></li></ul></div><div><div><img src=\"https://job.skku.edu/upload/Recruit/20261111_32220331/다운로드 (2).png\"></div><br></div></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261111_32220331/다운로드.png",
+        "https://job.skku.edu/upload/Recruit/20261111_32220331/다운로드 (1).png",
+        "https://job.skku.edu/upload/Recruit/20261111_32220331/다운로드 (2).png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T10:12:12.129186+09:00",
+      "page_text": "마케팅 인턴\n마케팅 인턴 (신사업)\n교육 운영 인턴 [부트캠프]\n모집 기간은 채용시 마감이며, 채용 공고 내용은 다음과 같습니다.\n\n\n\n\n\n\n1. [코드잇] 마케팅 인턴\n채용공고 상세 링크: https://careers.codeit.com/c/oeVMXiNCPu\n\n\n\n\n\n\n2. [코드잇] 마케팅 인턴 (신사업)\n채용공고 상세 링크: https://careers.codeit.com/c/vs9XCfjqLZ\n\n\n\n\n\n\n\n\n3. [코드잇] 교육 운영 인턴 [부트캠프]\n채용공고 상세 링크: https://careers.codeit.com/c/yHt1KJSb7W",
+      "body_attempted_at": "2026-11-11T10:12:12.129186+09:00",
+      "intern_judgment": {
+        "fingerprint": "479d2ffccb9eb5d72283ca47a4b3da2a7aba91554cfab18c057d0357b9ba5e2e",
+        "verdict": "not_relevant",
+        "reason": "모집 직무가 마케팅 및 교육 운영으로 소프트웨어 개발이나 데이터 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      },
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363543": {
+      "notice": {
+        "id": "linkareer-intern/363543",
+        "source_id": "linkareer-intern",
+        "article_no": "363543",
+        "title": "[EY한영] 전략·재무자문부문 TRS(Turnaround & Restructuring Services)팀 단기인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363543",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T10:12:12.129186+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "기업 구조조정 및 재무 자문 업무를 수행하는 비개발 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[EY한영] 전략·재무자문부문 TRS(Turnaround & Restructuring Services)팀 단기인턴\n\n\n\n\n[담당업무]\n- TRS (Turnaround & Restructuring Services) 팀\n- 기업 구조조정, M&A, 재무실사 및 가치평가 등의 업무 지원\n- 해외투자 프로젝트 영문 자료 통번역 등 지원\n- 산업/회사 리서치 및 분석 지원\n- 내/외부 미팅자료 준비\n\n\n[지원자격 및 우대사항]\n- 26년 11월 내로 입사 가능한 자\n- 국내외 대학 4년제 졸업 또는 재학중인 자\n- 증권사, 회계법인, Private Equity 등에서 M&A 자문, 실사 및 평가 업무 경혐자 우대\n- 비즈니스 영어 가능자 우대\n- KICPA/USCPA 합격자 우대\n\n\n[근무기간]\n- 3개월\n\n\n[전형절차]\n- 1차 서류 심사\n- 2차 실무/임원 면접 (대면)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[EY한영] 전략·재무자문부문 TRS(Turnaround &amp; Restructuring Services)팀 단기인턴</b></span></p><p><span>[담당업무]&nbsp;</span></p><p><span>- TRS (Turnaround &amp; Restructuring Services) 팀</span></p><p><span>- 기업 구조조정, M&amp;A, 재무실사 및 가치평가 등의 업무 지원</span></p><p><span>- 해외투자 프로젝트 영문 자료 통번역 등 지원</span></p><p><span>- 산업/회사 리서치 및 분석 지원</span></p><p><span>- 내/외부 미팅자료 준비</span></p><p><span>[지원자격 및 우대사항]</span></p><p><span>- 26년 11월 내로 입사 가능한 자</span></p><p><span>- 국내외 대학 4년제 졸업 또는 재학중인 자</span></p><p><span>- 증권사, 회계법인, Private Equity 등에서 M&amp;A 자문, 실사 및 평가 업무 경혐자 우대</span></p><p><span>- 비즈니스 영어 가능자 우대</span></p><p><span>- KICPA/USCPA 합격자 우대</span></p><p><span>[근무기간]</span></p><p><span>- 3개월</span></p><p><span>[전형절차]&nbsp;&nbsp;</span></p><p><span>- 1차 서류 심사</span></p><p><span>- 2차 실무/임원 면접 (대면)</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985285\" title=\"20261111_095024.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985285"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T10:12:12.129186+09:00",
+      "page_text": "[EY한영] 전략·재무자문부문 TRS(Turnaround & Restructuring Services)팀 단기인턴\n\n\n\n\n[담당업무]\n- TRS (Turnaround & Restructuring Services) 팀\n- 기업 구조조정, M&A, 재무실사 및 가치평가 등의 업무 지원\n- 해외투자 프로젝트 영문 자료 통번역 등 지원\n- 산업/회사 리서치 및 분석 지원\n- 내/외부 미팅자료 준비\n\n\n[지원자격 및 우대사항]\n- 26년 11월 내로 입사 가능한 자\n- 국내외 대학 4년제 졸업 또는 재학중인 자\n- 증권사, 회계법인, Private Equity 등에서 M&A 자문, 실사 및 평가 업무 경혐자 우대\n- 비즈니스 영어 가능자 우대\n- KICPA/USCPA 합격자 우대\n\n\n[근무기간]\n- 3개월\n\n\n[전형절차]\n- 1차 서류 심사\n- 2차 실무/임원 면접 (대면)",
+      "body_attempted_at": "2026-11-11T10:12:12.129186+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "2852c813c58e0099a788658782b4cd50145d1bf5a2854a7755cd55cb5902b959",
+        "verdict": "not_relevant",
+        "reason": "기업 구조조정 및 재무 자문 업무를 수행하는 비개발 직무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363534": {
+      "notice": {
+        "id": "linkareer-intern/363534",
+        "source_id": "linkareer-intern",
+        "article_no": "363534",
+        "title": "[카카오페이] [어시스턴트] 언론 PR/커뮤니케이션 업무 지원",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363534",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T10:12:12.129186+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "언론 PR 및 커뮤니케이션 업무를 지원하는 비개발 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[카카오페이] [어시스턴트] 언론 PR/커뮤니케이션 업무 지원\n\n\n\n\n[업무내용]\n- 카카오페이 관련 뉴스를 실시간으로 모니터링 합니다.\n- PR 자료 기획 및 실행 전반에 걸친 실무를 담당합니다.\n- 시장 트렌드 조사와 업계 동향 분석을 수행합니다.\n- 미디어 대상 이벤트 및 행사 운영 전반을 서포트 합니다.\n- 그 외 팀의 원활한 운영을 위한 업무를 지원합니다.\n\n\n[필요 역량/경험]\n- 뉴스 모니터링 담당 경험\n- 보도자료 등 콘텐츠 작성 역량\n- 자료 조사 경험\n\n\n[선호 역량/경험]\n- PR 에이전시, 인하우스 PR팀 인턴 경력 등 PR/커뮤니케이션 관련 업무 경력\n- 홍보/커뮤니케이션 및 국문/문예창작/콘텐츠 등 관련 전공 학위",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[카카오페이] [어시스턴트] 언론 PR/커뮤니케이션 업무 지원</b></span></p><p><span>[업무내용]</span></p><p><span>- 카카오페이 관련 뉴스를 실시간으로 모니터링 합니다.</span></p><p><span>- PR 자료 기획 및 실행 전반에 걸친 실무를 담당합니다.</span></p><p><span>- 시장 트렌드 조사와 업계 동향 분석을 수행합니다.</span></p><p><span>- 미디어 대상 이벤트 및 행사 운영 전반을 서포트 합니다.</span></p><p><span>- 그 외 팀의 원활한 운영을 위한 업무를 지원합니다.</span></p><p><span>[필요 역량/경험]</span></p><p><span>- 뉴스 모니터링 담당 경험</span></p><p><span>- 보도자료 등 콘텐츠 작성 역량</span></p><p><span>- 자료 조사 경험</span></p><p><span>[선호 역량/경험]</span></p><p><span>- PR 에이전시, 인하우스 PR팀 인턴 경력 등 PR/커뮤니케이션 관련 업무 경력</span></p><p><span>- 홍보/커뮤니케이션 및 국문/문예창작/콘텐츠 등 관련 전공 학위</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985259\" title=\"20261111_091417.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985259"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T10:12:12.129186+09:00",
+      "page_text": "[카카오페이] [어시스턴트] 언론 PR/커뮤니케이션 업무 지원\n\n\n\n\n[업무내용]\n- 카카오페이 관련 뉴스를 실시간으로 모니터링 합니다.\n- PR 자료 기획 및 실행 전반에 걸친 실무를 담당합니다.\n- 시장 트렌드 조사와 업계 동향 분석을 수행합니다.\n- 미디어 대상 이벤트 및 행사 운영 전반을 서포트 합니다.\n- 그 외 팀의 원활한 운영을 위한 업무를 지원합니다.\n\n\n[필요 역량/경험]\n- 뉴스 모니터링 담당 경험\n- 보도자료 등 콘텐츠 작성 역량\n- 자료 조사 경험\n\n\n[선호 역량/경험]\n- PR 에이전시, 인하우스 PR팀 인턴 경력 등 PR/커뮤니케이션 관련 업무 경력\n- 홍보/커뮤니케이션 및 국문/문예창작/콘텐츠 등 관련 전공 학위",
+      "body_attempted_at": "2026-11-11T10:12:12.129186+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-09T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "30d311e447b2e8b5225e64a95073b5322909b45cc3eab57ca30e564f25a25990",
+        "verdict": "not_relevant",
+        "reason": "언론 PR 및 커뮤니케이션 업무를 지원하는 비개발 직무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363533": {
+      "notice": {
+        "id": "linkareer-intern/363533",
+        "source_id": "linkareer-intern",
+        "article_no": "363533",
+        "title": "[동성케미컬] HR실 체험형 인턴사원 모집 (6개월)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363533",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T10:12:12.129186+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "채용 프로세스 및 행정 업무를 지원하는 인사(HR) 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[동성케미컬] HR실 체험형 인턴사원 모집 (6개월)\n\n\n\n\n[담당 업무]\n- 채용 프로세스와 행정 업무를 지원합니다.\n- 지원자 데이터 및 서류를 체계적으로 관리합니다.\n- 지원자 및 면접관과 면접 일정을 조율하며 커뮤니케이션합니다.\n- 면접장 세팅과 지원자 대기 공간 관리 등 면접을 위한 환경을 준비하고, 면접 평가 결과를 취합하여 정리합니다.\n- 기타 팀 제반 업무를 지원합니다.\n\n\n[필수요건]\n- 4년제 정규 대학 기졸업 또는 졸업 예정이신 분 (전공무관)\n- 인턴 기간 동안 Full Time 근무 가능하신 분\n\n\n[우대사항]\n- 인사 관련 강의(인적자원관리 등)를 수강하여 기초 지식이 있으신 분\n- 인사 트렌드에 대한 관심과 이해도가 높으신 분\n- 원활한 소통 능력과 업무에 대한 열정, 책임감을 보유하신 분\n- MS Office 활용능력 우수자",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[동성케미컬] HR실 체험형 인턴사원 모집 (6개월)</b></span></p><p><span>[담당 업무]</span></p><p><span>- 채용 프로세스와 행정 업무를 지원합니다.</span></p><p><span>- 지원자 데이터 및 서류를 체계적으로 관리합니다.</span></p><p><span>- 지원자 및 면접관과 면접 일정을 조율하며 커뮤니케이션합니다.</span></p><p><span>- 면접장 세팅과 지원자 대기 공간 관리 등 면접을 위한 환경을 준비하고, 면접 평가 결과를 취합하여 정리합니다.</span></p><p><span>- 기타 팀 제반 업무를 지원합니다.</span></p><p><span>[필수요건]</span></p><p><span>- 4년제 정규 대학 기졸업 또는 졸업 예정이신 분 (전공무관)</span></p><p><span>- 인턴 기간 동안 Full Time 근무 가능하신 분</span></p><p><span>[우대사항]</span></p><p><span>- 인사 관련 강의(인적자원관리 등)를 수강하여 기초 지식이 있으신 분</span></p><p><span>- 인사 트렌드에 대한 관심과 이해도가 높으신 분</span></p><p><span>- 원활한 소통 능력과 업무에 대한 열정, 책임감을 보유하신 분</span></p><p><span>- MS Office 활용능력 우수자</span></p><div><br></div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985256\" title=\"20261111_091417.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985256"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T10:12:12.129186+09:00",
+      "page_text": "[동성케미컬] HR실 체험형 인턴사원 모집 (6개월)\n\n\n\n\n[담당 업무]\n- 채용 프로세스와 행정 업무를 지원합니다.\n- 지원자 데이터 및 서류를 체계적으로 관리합니다.\n- 지원자 및 면접관과 면접 일정을 조율하며 커뮤니케이션합니다.\n- 면접장 세팅과 지원자 대기 공간 관리 등 면접을 위한 환경을 준비하고, 면접 평가 결과를 취합하여 정리합니다.\n- 기타 팀 제반 업무를 지원합니다.\n\n\n[필수요건]\n- 4년제 정규 대학 기졸업 또는 졸업 예정이신 분 (전공무관)\n- 인턴 기간 동안 Full Time 근무 가능하신 분\n\n\n[우대사항]\n- 인사 관련 강의(인적자원관리 등)를 수강하여 기초 지식이 있으신 분\n- 인사 트렌드에 대한 관심과 이해도가 높으신 분\n- 원활한 소통 능력과 업무에 대한 열정, 책임감을 보유하신 분\n- MS Office 활용능력 우수자",
+      "body_attempted_at": "2026-11-11T10:12:12.129186+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-18T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "7bf9b0dda1fe54350bfd77c0f9d98e3cac0b096c27717f66c4b77348f462fd8b",
+        "verdict": "not_relevant",
+        "reason": "채용 프로세스 및 행정 업무를 지원하는 인사(HR) 직무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363470": {
+      "notice": {
+        "id": "linkareer-intern/363470",
+        "source_id": "linkareer-intern",
+        "article_no": "363470",
+        "title": "[주식회사 우아한청년들] 영상 콘텐츠 제작 인턴 모집(신입)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363470",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T10:12:12.129186+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-09T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "jasoseol-intern/107154": {
       "notice": {
         "id": "jasoseol-intern/107154",
@@ -164,6 +546,60 @@
         "fingerprint": "2ca756e42e4beb2b956df10b5f953fa517f9ccdd3fd2bd70c6f19173b1acbc2c",
         "verdict": "maybe",
         "reason": "AI 인턴십 공고이나 상세 모집 요강이 공개되지 않아 구체적인 지원 자격 및 직무 적합성을 판단하기 어렵습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363481": {
+      "notice": {
+        "id": "linkareer-intern/363481",
+        "source_id": "linkareer-intern",
+        "article_no": "363481",
+        "title": "[스캐터랩[zeta]] [11월 집중채용] zeta 서비스 기획·운영 인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363481",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T10:12:12.129186+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "서비스 기획 및 운영 직무로 소프트웨어 개발이나 데이터 분석 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "스캐터랩 소개\n제타는 사용자가 직접 캐릭터와 세계관을 설계하고 AI와 실시간으로 상호 작용하며 자신만의 이야기를 만들어가는 AI 기반 인터랙티브 엔터테인먼트 서비스예요. 드라마나 웹툰처럼 정해진 콘텐츠를 수동적으로 소비하는 방식이 아니라, 유저가 직접 선택하고 개입하며 자신만의 이야기를 능동적으로 써 내려가는 경험을 제공합니다.\n\n\n2024년 4월 출시한 제타는 한국을 넘어 일본·미국 등 글로벌 시장에서 빠르게 성장하고 있어요. 현재 글로벌 누적 가입자 수 1000만 명, 누적 플롯(콘텐츠) 약 300만개를 돌파하며 한일 양국에서 압도적인 1위 AI 엔터테인먼트 플랫폼이 되었어요. 특히 일본에서는 주간 평균 이용시간이 26시간 이상으로, 넷플릭스, chat GPT보다 높은 사용량을 기록하고 있습니다.\n\n\n스캐터랩은 제타를 통해 인간이 경험할 수 있는 즐거움의 지평을 넓히고 있어요. 제타를 경험하는 사용자, 새로운 창작의 가능성을 모색하는 크리에이터, 이 혁명에 동참할 팀원, 미래 가치에 투자하는 투자자, 그리고 AI가 만들 더 즐거운 세상을 꿈꾸는 모든 분을 이 여정에 초대합니다🚀\n\n\n\n\n포지션 소개\nzeta 서비스를 함께 만들어나갈 열정이 많은 분을 모시고 있어요. 정해진 자격조건이 없으며, 이력서보다는 사전 과제를 위주로 평가할 예정이에요. 아래 내용을 꼼꼼히 읽어보신 후, “어, 나잖아?!” 싶으면 망설이지 말고 지원해주세요.\n\n\n이번 서비스 기획·운영 인턴은 두 팀 중 한 팀에 소속되어 업무를 수행할 예정이에요. 두 팀 중 희망하는 팀을 선택하여 지원해주세요. 두 팀에 동시 지원하는 것도 가능해요!\n\n\n\n\n1️⃣ 크리에이터 팀\n크리에이터 팀은 제타의 크리에이터 분들과 적극적으로 소통하며 창작 활동을 하는 데에 필요한 다양한 서포트를 하는 팀이에요. 크리에이터와 소통하며 크리에이터의 의견을 적극적으로 반영하고 개선점을 찾아요. 크리에이터 피드 및 댓글 기능 같은 크리에이터에게 필요한 기능을 도입하거나 글로벌 크리에이터 콘테스트 등과 같은 큰 이벤트를 열기도 해요.\n\n\n*크리에이터: zeta에서 플롯을 만드는 제작자를 지칭해요. 유튜버를 유튜브 ‘크리에이터’라고 부르는 것과 같아요.\n\n🏃‍♂️ 이런 일을 해요\n• 크리에이터 관리 및 커뮤니케이션 지원\n• 크리에이터 설문조사 및 인터뷰 진행\n• 온/오프라인 크리에이터 행사 준비 및 운영 지원\n• 크리에이터 트렌드 및 유사 서비스 사례 조사 및 정리\n\n\n⭐️ 아래 내용이 내 이야기처럼 느껴지는 분을 기다려요\n• 장르불문 새 콘텐츠가 올라오면 꼭 챙겨보는 크리에이터(zeta, youtube, tiktok, instagram 등)가 있어요\n• 사람들의 이야기를 듣는 걸 좋아하고 처음 만나는 사람과도 편안하게 대화를 나눌 수 있어요\n• 생일파티나 작은 모임도 나만의 콘셉트로 기획하고 사람들을 모아본 적이 있어요\n• (우대) 주간 스크린 타임에 제타가 10시간 넘게 찍힌 적이 있어요\n\n\n\n\n2️⃣ 플러그인 팀\n플러그인 팀은 제타 플레이를 더욱 풍부하고 몰입감 있게 만드는 플러그인을 기획하고 제작하는 팀이에요. 제타에 아직 없는 새로운 플러그인을 직접 만들기도 하고, 크리에이터와 협업해서 플롯에 꼭 맞는 플러그인을 함께 만들기도 해요. 크리에이터가 직접 플러그인을 기획할 때는 기능 기획부터 디자인까지 필요한 서포트를 하고 있어요.\n\n\n*플러그인: 스토리챗을 더 실감나게 즐길 수 있도록 하는 퀘스트, BGM 등의 추가기능을 말해요. 제타를 이용하다보면 제목 하단의 태그를 통해 발견할 수 있어요.\n\n🏃‍♂️ 이런 일을 해요\n• 크리에이터 관리 및 커뮤니케이션 지원\n• 홈 배너 및 팝업 제작\n• 플러그인 기획 및 제작 서포트\n• AI 플러그인 테스트 및 품질 개선\n• 플러그인 디자인 지원\n\n\n⭐️ 아래 내용이 내 이야기처럼 느껴지는 분을 기다려요\n• 제타를 쓰다가 “이런 기능이 있으면 더 재밌을 텐데” 하고 떠올린 적이 있어요\n• 로맨스 외에 무협, 아포칼립스, 공포, 추리 등 다양한 장르를 즐겨요.\n• 제타 플롯 표지를 보다가 \"내가 만들면 더 예쁘게 만들 텐데\" 싶었던 적이 있어요.\n• 이미지 생성 AI로 원하는 느낌이 나올 때까지 프롬프트를 고쳐 가며 수십 장 뽑아 본 적이 있어요.\n• 친구들한테 \"이거 봐 봐\" 하고 보내면 다들 재밌어하는 편이에요.\n\n\n\n\n채용 프로세스\n지원자님께서 소중한 시간을 내어주시는 만큼, 저희 역시 무거운 책임감을 가지고 채용에 임하고 있어요. 한 분 한 분의 이야기를 진심을 다해 듣고, 단순한 '평가'가 아닌 서로를 깊이 알아가는 시간으로 전형을 진행합니다. 상황에 따라 전형이 생략 또는 추가될 수 있는 점 양해 부탁드려요.\n\n\n• 지원 접수(사전과제) → 직무 면접 → 최종 합격\n\n\n\n\n참고사항\n• 3개월 체험형 인턴 포지션 이에요. 협의에 따라 기간이 변동될 수 있어요.\n• 빠르게 합류하실 수 있는 분을 우선적으로 모시고 있어요. 지원서를 통해 입사 가능일을 체크해주세요.\n• 업무 경력이 없더라도 동아리, 대외활동, 아르바이트, 제타 사용시간 등 자신을 표현할 수 있는 내용을 담아서 이력서를 작성해주세요. 이력서에 정해진 형식은 없어요",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<h1><span>스캐터랩 소개</span></h1><p>제타는 사용자가 직접 캐릭터와 세계관을 설계하고 AI와 실시간으로 상호 작용하며 자신만의 이야기를 만들어가는 AI 기반 인터랙티브 엔터테인먼트 서비스예요. 드라마나 웹툰처럼 정해진 콘텐츠를 수동적으로 소비하는 방식이 아니라, 유저가 직접 선택하고 개입하며 자신만의 이야기를 능동적으로 써 내려가는 경험을 제공합니다.</p><p>2024년 4월 출시한 제타는 한국을 넘어 일본·미국 등 글로벌 시장에서 빠르게 성장하고 있어요. 현재 글로벌 누적 가입자 수 1000만 명, 누적 플롯(콘텐츠) 약 300만개를 돌파하며 한일 양국에서 압도적인 1위 AI 엔터테인먼트 플랫폼이 되었어요. 특히 일본에서는 주간 평균 이용시간이 26시간 이상으로, 넷플릭스, chat GPT보다 높은 사용량을 기록하고 있습니다.</p><p>스캐터랩은 제타를 통해 인간이 경험할 수 있는 즐거움의 지평을 넓히고 있어요. 제타를 경험하는 사용자, 새로운 창작의 가능성을 모색하는 크리에이터, 이 혁명에 동참할 팀원, 미래 가치에 투자하는 투자자, 그리고 AI가 만들 더 즐거운 세상을 꿈꾸는 모든 분을 이 여정에 초대합니다🚀</p><h1><span>포지션 소개</span></h1><p>zeta 서비스를 함께 만들어나갈 열정이 많은 분을 모시고 있어요. 정해진 자격조건이 없으며, 이력서보다는 <span>사전 과제</span>를 위주로 평가할 예정이에요. 아래 내용을 꼼꼼히 읽어보신 후, <span>“어, 나잖아?!”</span> 싶으면 망설이지 말고 지원해주세요.</p><p>이번 서비스 기획·운영 인턴은 두 팀 중 한 팀에 소속되어 업무를 수행할 예정이에요. 두 팀 중 희망하는 팀을 선택하여 지원해주세요. 두 팀에 동시 지원하는 것도 가능해요!</p><h2><span>1️⃣&nbsp;크리에이터 팀</span></h2><p>크리에이터 팀은 제타의 크리에이터 분들과 적극적으로 소통하며 창작 활동을 하는 데에 필요한 다양한 서포트를 하는 팀이에요. 크리에이터와 소통하며 크리에이터의 의견을 적극적으로 반영하고 개선점을 찾아요. 크리에이터 피드 및 댓글 기능 같은 크리에이터에게 필요한 기능을 도입하거나 글로벌 크리에이터 콘테스트 등과 같은 큰 이벤트를 열기도 해요.</p><blockquote><span>*크리에이터: zeta에서 플롯을 만드는 제작자를 지칭해요. 유튜버를 유튜브 ‘크리에이터’라고 부르는 것과 같아요.</span></blockquote><h3><span>🏃‍♂️ 이런 일을 해요</span></h3><h3><span><span><span>​</span></span><span><span>•&nbsp;</span></span><span>크리에이터 관리 및 커뮤니케이션 지원</span></span></h3><h3><span><span><span>• </span></span><span><span>크리에이터 설문조사 및 인터뷰 진행</span></span></span></h3><h3><span><span><span>• </span></span><span><span>온/오프라인 크리에이터 행사 준비 및 운영 지원</span></span></span></h3><h3><span><span><span>• </span></span><span><span>크리에이터 트렌드 및 유사 서비스 사례 조사 및 정리</span></span></span></h3><h3><span>⭐️ 아래 내용이 내 이야기처럼 느껴지는 분을 기다려요</span></h3><h3><span><span>• </span></span><span><span>장르불문 새 콘텐츠가 올라오면 </span></span><span><span><span>꼭 챙겨보는 </span>크리에이터</span></span><span><span>(zeta, youtube, tiktok, instagram 등)가 있어요</span></span></h3><h3><span><span><span>• </span></span><span><span>사람들의 이야기를 듣는 걸 좋아하고 </span></span><span><span>처음 만나는 사람과도 편안하게 대화</span></span><span><span>를 나눌 수 있어요</span></span></span></h3><h3><span><span>• </span></span><span><span>생일파티나 </span></span><span><span>작은 모임도 나만의 콘셉트로 기획</span></span><span><span>하고 사람들을 모아본 적이 있어요</span></span></h3><h3><span><span>• </span></span><span><span>(우대) 주간 스크린 타임에 </span></span><span><span>제타가 10시간</span></span><span><span> 넘게 찍힌 적이 있어요</span></span></h3><h2>2️⃣<span>&nbsp;플러그인 팀</span></h2><p>플러그인 팀은 제타 플레이를 더욱 풍부하고 몰입감 있게 만드는 플러그인을 기획하고 제작하는 팀이에요. 제타에 아직 없는 새로운 플러그인을 직접 만들기도 하고, 크리에이터와 협업해서 플롯에 꼭 맞는 플러그인을 함께 만들기도 해요. 크리에이터가 직접 플러그인을 기획할 때는 기능 기획부터 디자인까지 필요한 서포트를 하고 있어요.</p><blockquote>*플러그인: 스토리챗을 더 실감나게 즐길 수 있도록 하는 퀘스트, BGM 등의 추가기능을 말해요. 제타를 이용하다보면 제목 하단의 태그를 통해 발견할 수 있어요.</blockquote><h3><span>🏃‍♂️ 이런 일을 해요</span></h3><h3><span><span><span>• </span></span><span><span>크리에이터 관리 및 커뮤니케이션 지원</span></span></span></h3><h3><span><span><span>• </span></span><span><span>홈 배너 및 팝업 제작</span></span></span></h3><h3><span><span><span>• </span></span><span><span>플러그인 기획 및 제작 서포트</span></span></span></h3><h3><span><span><span>• </span></span><span><span>AI 플러그인 테스트 및 품질 개선</span></span></span></h3><h3><span><span><span>• </span></span><span><span>플러그인 디자인 지원</span></span></span></h3><h3><span>⭐️ 아래 내용이 내 이야기처럼 느껴지는 분을 기다려요</span></h3><h3><span><span>• </span></span><span><span>제타를 쓰다가 </span></span><span><span>“이런 기능이 있으면 더 재밌을 텐데”</span></span><span><span> 하고 떠올린 적이 있어요</span></span></h3><h3><span><span><span>• </span></span><span><span>로맨스 외에 무협, 아포칼립스, 공포, 추리 등 </span></span><span><span>다양한 장르</span></span><span><span>를 즐겨요.</span></span></span></h3><h3><span><span>• </span></span><span><span>제타 플롯 표지를 보다가 </span></span><span><span>\"내가 만들면 더 예쁘게 만들 텐데\"</span></span><span><span> <span>싶었던 적이 있어요.</span></span></span></h3><h3><span><span>• </span></span><span><span>이미지 생성 AI</span></span><span><span>로 원하는 느낌이 나올 때까지 프롬프트를 고쳐 가며 수십 장 뽑아 본 적이 있어요.</span></span></h3><h3><span><span>• </span></span><span><span><span>친구들한테 </span>\"이거 봐 봐\"<span> 하고 보내면 다들 재밌어하는 편이에요.</span></span></span></h3><h2><span>채용 프로세스</span></h2><p>지원자님께서 소중한 시간을 내어주시는 만큼, 저희 역시 무거운 책임감을 가지고 채용에 임하고 있어요. 한 분 한 분의 이야기를 진심을 다해 듣고, 단순한 '평가'가 아닌 서로를 깊이 알아가는 시간으로 전형을 진행합니다. 상황에 따라 전형이 생략 또는 추가될 수 있는 점 양해 부탁드려요.</p><p>• 지원 접수(사전과제) → 직무 면접 → 최종 합격</p><h2><span>참고사항</span></h2><h2><span><span>• </span></span><span><span>3개월 체험형 인턴</span></span><span><span> 포지션 </span><span>이에요. 협의에 따라 기간이 변동될 수 있어요.</span></span></h2><h2><span><span><span>• </span></span><span><span>빠르게 합류하실 수 있는 분을 우선적으로 모시고 있어요. 지원서를 통해 입사 가능일을 체크해주세요.</span></span></span></h2><h2><span><span><span>• </span></span><span><span>업무 경력이 없더라도 동아리, 대외활동, 아르바이트, 제타 사용시간 등 자신을 표현할 수 있는 내용을 담아서 이력서를 작성해주세요. 이력서에 정해진 형식은 없어요</span></span></span></h2>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T10:12:12.129186+09:00",
+      "page_text": "스캐터랩 소개\n제타는 사용자가 직접 캐릭터와 세계관을 설계하고 AI와 실시간으로 상호 작용하며 자신만의 이야기를 만들어가는 AI 기반 인터랙티브 엔터테인먼트 서비스예요. 드라마나 웹툰처럼 정해진 콘텐츠를 수동적으로 소비하는 방식이 아니라, 유저가 직접 선택하고 개입하며 자신만의 이야기를 능동적으로 써 내려가는 경험을 제공합니다.\n\n\n2024년 4월 출시한 제타는 한국을 넘어 일본·미국 등 글로벌 시장에서 빠르게 성장하고 있어요. 현재 글로벌 누적 가입자 수 1000만 명, 누적 플롯(콘텐츠) 약 300만개를 돌파하며 한일 양국에서 압도적인 1위 AI 엔터테인먼트 플랫폼이 되었어요. 특히 일본에서는 주간 평균 이용시간이 26시간 이상으로, 넷플릭스, chat GPT보다 높은 사용량을 기록하고 있습니다.\n\n\n스캐터랩은 제타를 통해 인간이 경험할 수 있는 즐거움의 지평을 넓히고 있어요. 제타를 경험하는 사용자, 새로운 창작의 가능성을 모색하는 크리에이터, 이 혁명에 동참할 팀원, 미래 가치에 투자하는 투자자, 그리고 AI가 만들 더 즐거운 세상을 꿈꾸는 모든 분을 이 여정에 초대합니다🚀\n\n\n\n\n포지션 소개\nzeta 서비스를 함께 만들어나갈 열정이 많은 분을 모시고 있어요. 정해진 자격조건이 없으며, 이력서보다는 사전 과제를 위주로 평가할 예정이에요. 아래 내용을 꼼꼼히 읽어보신 후, “어, 나잖아?!” 싶으면 망설이지 말고 지원해주세요.\n\n\n이번 서비스 기획·운영 인턴은 두 팀 중 한 팀에 소속되어 업무를 수행할 예정이에요. 두 팀 중 희망하는 팀을 선택하여 지원해주세요. 두 팀에 동시 지원하는 것도 가능해요!\n\n\n\n\n1️⃣ 크리에이터 팀\n크리에이터 팀은 제타의 크리에이터 분들과 적극적으로 소통하며 창작 활동을 하는 데에 필요한 다양한 서포트를 하는 팀이에요. 크리에이터와 소통하며 크리에이터의 의견을 적극적으로 반영하고 개선점을 찾아요. 크리에이터 피드 및 댓글 기능 같은 크리에이터에게 필요한 기능을 도입하거나 글로벌 크리에이터 콘테스트 등과 같은 큰 이벤트를 열기도 해요.\n\n\n*크리에이터: zeta에서 플롯을 만드는 제작자를 지칭해요. 유튜버를 유튜브 ‘크리에이터’라고 부르는 것과 같아요.\n\n🏃‍♂️ 이런 일을 해요\n• 크리에이터 관리 및 커뮤니케이션 지원\n• 크리에이터 설문조사 및 인터뷰 진행\n• 온/오프라인 크리에이터 행사 준비 및 운영 지원\n• 크리에이터 트렌드 및 유사 서비스 사례 조사 및 정리\n\n\n⭐️ 아래 내용이 내 이야기처럼 느껴지는 분을 기다려요\n• 장르불문 새 콘텐츠가 올라오면 꼭 챙겨보는 크리에이터(zeta, youtube, tiktok, instagram 등)가 있어요\n• 사람들의 이야기를 듣는 걸 좋아하고 처음 만나는 사람과도 편안하게 대화를 나눌 수 있어요\n• 생일파티나 작은 모임도 나만의 콘셉트로 기획하고 사람들을 모아본 적이 있어요\n• (우대) 주간 스크린 타임에 제타가 10시간 넘게 찍힌 적이 있어요\n\n\n\n\n2️⃣ 플러그인 팀\n플러그인 팀은 제타 플레이를 더욱 풍부하고 몰입감 있게 만드는 플러그인을 기획하고 제작하는 팀이에요. 제타에 아직 없는 새로운 플러그인을 직접 만들기도 하고, 크리에이터와 협업해서 플롯에 꼭 맞는 플러그인을 함께 만들기도 해요. 크리에이터가 직접 플러그인을 기획할 때는 기능 기획부터 디자인까지 필요한 서포트를 하고 있어요.\n\n\n*플러그인: 스토리챗을 더 실감나게 즐길 수 있도록 하는 퀘스트, BGM 등의 추가기능을 말해요. 제타를 이용하다보면 제목 하단의 태그를 통해 발견할 수 있어요.\n\n🏃‍♂️ 이런 일을 해요\n• 크리에이터 관리 및 커뮤니케이션 지원\n• 홈 배너 및 팝업 제작\n• 플러그인 기획 및 제작 서포트\n• AI 플러그인 테스트 및 품질 개선\n• 플러그인 디자인 지원\n\n\n⭐️ 아래 내용이 내 이야기처럼 느껴지는 분을 기다려요\n• 제타를 쓰다가 “이런 기능이 있으면 더 재밌을 텐데” 하고 떠올린 적이 있어요\n• 로맨스 외에 무협, 아포칼립스, 공포, 추리 등 다양한 장르를 즐겨요.\n• 제타 플롯 표지를 보다가 \"내가 만들면 더 예쁘게 만들 텐데\" 싶었던 적이 있어요.\n• 이미지 생성 AI로 원하는 느낌이 나올 때까지 프롬프트를 고쳐 가며 수십 장 뽑아 본 적이 있어요.\n• 친구들한테 \"이거 봐 봐\" 하고 보내면 다들 재밌어하는 편이에요.\n\n\n\n\n채용 프로세스\n지원자님께서 소중한 시간을 내어주시는 만큼, 저희 역시 무거운 책임감을 가지고 채용에 임하고 있어요. 한 분 한 분의 이야기를 진심을 다해 듣고, 단순한 '평가'가 아닌 서로를 깊이 알아가는 시간으로 전형을 진행합니다. 상황에 따라 전형이 생략 또는 추가될 수 있는 점 양해 부탁드려요.\n\n\n• 지원 접수(사전과제) → 직무 면접 → 최종 합격\n\n\n\n\n참고사항\n• 3개월 체험형 인턴 포지션 이에요. 협의에 따라 기간이 변동될 수 있어요.\n• 빠르게 합류하실 수 있는 분을 우선적으로 모시고 있어요. 지원서를 통해 입사 가능일을 체크해주세요.\n• 업무 경력이 없더라도 동아리, 대외활동, 아르바이트, 제타 사용시간 등 자신을 표현할 수 있는 내용을 담아서 이력서를 작성해주세요. 이력서에 정해진 형식은 없어요",
+      "body_attempted_at": "2026-11-11T10:12:12.129186+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-19T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "8b929b67ae870f530fac8d0381cc61b5c00934fa5ee3a58c02d90d1e7b56a8b2",
+        "verdict": "not_relevant",
+        "reason": "서비스 기획 및 운영 직무로 소프트웨어 개발이나 데이터 분석 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -3102,6 +3538,101 @@
         "at": "2026-12-05T07:00:00+09:00"
       },
       "rechecked_at": "2026-11-10T22:14:45.505798+09:00"
+    },
+    "linkareer-intern/363521": {
+      "notice": {
+        "id": "linkareer-intern/363521",
+        "source_id": "linkareer-intern",
+        "article_no": "363521",
+        "title": "[카카오뱅크] AI 운영 어시스턴트 (체험형 인턴)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363521",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T10:12:12.129186+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "AI 서비스 운영, 데이터 모니터링, 답변 검증 등 소프트웨어 및 AI 관련 직무를 수행하며 학부생도 지원 가능합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[카카오뱅크] AI 운영 어시스턴트 (체험형 인턴)\n\n\n\n\n[담당할 업무]\n· 카카오뱅크 AI로 연결되는 선제안/추천 질문 콘텐츠 운영\n· AI 답변에 활용되는 RAG 문서 생성 및 관리\n· 카카오뱅크 AI 데이터 모니터링\n· 카카오뱅크 AI 고객 피드백 모니터링 및 개선사항 발굴\n· AI 모델 업데이트 시 AI 답변 검증 및 개선 사항 발굴\n\n\n[필수 경험과 역량]\n· 금융 및 경제 뉴스와 LLM, Agent 등 AI 트렌드에 관심이 있는 분\n· Google Sheets (구글 스프레드시트), Excel 등 오피스 프로그램 활용 능력을 보유한 분\n· 꼼꼼하면서도 빠른 작업 능력을 보유한 분\n· 원활한 커뮤니케이션 및 협업 역량이 있는 분\n\n\n[우대사항]\n· 콘텐츠를 발굴하거나 마케팅 결과물을 직접 만든 경험이 있는 분\n· IT 서비스/프로덕트 운영 경험이 있는 분",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[카카오뱅크] AI 운영 어시스턴트 (체험형 인턴)</b></span></p><p><span>[담당할 업무]</span></p><p><span>· 카카오뱅크 AI로 연결되는 선제안/추천 질문 콘텐츠 운영</span></p><p><span>· AI 답변에 활용되는 RAG 문서 생성 및 관리</span></p><p><span>· 카카오뱅크 AI 데이터 모니터링</span></p><p><span>· 카카오뱅크 AI 고객 피드백 모니터링 및 개선사항 발굴</span></p><p><span>· AI 모델 업데이트 시 AI 답변 검증 및 개선 사항 발굴</span></p><p><span>[필수 경험과 역량]</span></p><p><span>· 금융 및 경제 뉴스와 LLM, Agent 등 AI 트렌드에 관심이 있는 분</span></p><p><span>· Google Sheets (구글 스프레드시트), Excel 등 오피스 프로그램 활용 능력을 보유한 분</span></p><p><span>· 꼼꼼하면서도 빠른 작업 능력을 보유한 분&nbsp;</span></p><p><span>· 원활한 커뮤니케이션 및 협업 역량이 있는 분</span></p><p><span>[우대사항]</span></p><p><span>· 콘텐츠를 발굴하거나 마케팅 결과물을 직접 만든 경험이 있는 분</span></p><p><span>· IT 서비스/프로덕트 운영 경험이 있는 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985240\" title=\"20261111_084403.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985240"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T10:12:12.129186+09:00",
+      "page_text": "[카카오뱅크] AI 운영 어시스턴트 (체험형 인턴)\n\n\n\n\n[담당할 업무]\n· 카카오뱅크 AI로 연결되는 선제안/추천 질문 콘텐츠 운영\n· AI 답변에 활용되는 RAG 문서 생성 및 관리\n· 카카오뱅크 AI 데이터 모니터링\n· 카카오뱅크 AI 고객 피드백 모니터링 및 개선사항 발굴\n· AI 모델 업데이트 시 AI 답변 검증 및 개선 사항 발굴\n\n\n[필수 경험과 역량]\n· 금융 및 경제 뉴스와 LLM, Agent 등 AI 트렌드에 관심이 있는 분\n· Google Sheets (구글 스프레드시트), Excel 등 오피스 프로그램 활용 능력을 보유한 분\n· 꼼꼼하면서도 빠른 작업 능력을 보유한 분\n· 원활한 커뮤니케이션 및 협업 역량이 있는 분\n\n\n[우대사항]\n· 콘텐츠를 발굴하거나 마케팅 결과물을 직접 만든 경험이 있는 분\n· IT 서비스/프로덕트 운영 경험이 있는 분",
+      "body_attempted_at": "2026-11-11T10:12:12.129186+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "4e90d4e18a89ecdeb4ca2df8b3bd45fab1b01d283c1b665323247c11857fa1ed",
+        "verdict": "relevant",
+        "reason": "AI 서비스 운영, 데이터 모니터링, 답변 검증 등 소프트웨어 및 AI 관련 직무를 수행하며 학부생도 지원 가능합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363474": {
+      "notice": {
+        "id": "linkareer-intern/363474",
+        "source_id": "linkareer-intern",
+        "article_no": "363474",
+        "title": "[이삼오구] [얼리버드 -11/2] 신입 마케터 대규모 채용 (채용연계형 인턴)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363474",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T10:12:12.129186+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      }
     },
     "jasoseol-intern/107177": {
       "notice": {
@@ -8294,7 +8825,7 @@
       "body_attempts": 1,
       "fetched_at": "2026-11-06T13:26:12.824678+09:00",
       "body_attempted_at": "2026-11-06T13:26:12.824678+09:00",
-      "rechecked_at": "2026-11-10T21:19:35.765961+09:00",
+      "rechecked_at": "2026-11-11T10:12:12.129186+09:00",
       "page_text": ""
     },
     "linkareer-intern/362666": {
@@ -11120,7 +11651,7 @@
         "kind": "마감",
         "at": "2026-11-20T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-10T12:07:45.913232+09:00",
+      "rechecked_at": "2026-11-11T10:12:12.129186+09:00",
       "page_text": "카운슬링센터에서 준비한 심리특강!\n'소통이 어려운 당신의 마음 대화법' 의 참여자를 모집합니다!\n\n다양한 사례를 통한 관계 스트레스에 대한 이해와\n나 자신의 소통 패턴을 점검하고 마음을 이야기하는 방법에 대해 알아보세요!\n\n■ 일시 : 11월 27일(목) 14:00 ~ 16:00\n■ 장소: 자연과학캠퍼스 반도체관 1층 400112\n■ 신청 링크: https://forms.gle/2Nhy2csG8jQGwaot8\n■ 신청 기한: 11월 20일(금)까지\n■ 대상: 성균관대학교 학부 및 대학원 재(휴)학생\n■ 문의: 031-290-5680 / nobless0423@skku.edu"
     },
     "skku-notice01/141604": {
@@ -11279,7 +11810,7 @@
         "kind": "마감",
         "at": "2027-01-05T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-10T13:58:08.042779+09:00",
+      "rechecked_at": "2026-11-11T10:12:12.129186+09:00",
       "page_text": "2027년도 1학기 제7회 보림선원 서울선원 장학생 선발 안내\n\n보림선원 서울선원은 백봉 김기추 선생님이 전하신 ‘생활과 수행이 하나 되는 새말귀’ 공부법을 통해 자기 마음을 이해하고 삶을 주체적으로 이끌어 갈 수 있도록 ‘보림 새말귀 장학생’을 선발합니다. 삶 속에서 수행을 실천하고, 수행 속에서 삶을 키워가며 함께 성장하고 싶은 마음 따뜻한 청년들의 많은 지원을 바랍니다.\n\n1. 선발 대상 및 장학금 규모\n\n∙ 대상 : 대학생 및 대학원생(석사)\n\n∙ 인원 : 총 4명(신규)\n\n∙ 장학금액 : 1인 최대 8백만원(8학기 동안 학기당 1백만원씩 분할지급\n(단, 해당 학기에 졸업 및 휴학시 장학금 지급 제외)\n\n- 첫 학기 장학금 백만원 지급 이후 다음 학기 장학금 계속 지급 여부 : 법회 참석 및 수행 참여도 평가 후 결정\n\n- 장학재원 : 보림울산연화당장학회 및 보림선원 도반들의 후원금\n\n2. 제출서류\n\n가. 장학금 신청서\n나. 자기소개서\n다. 재학증명서\n라. 2026년 2학기 성적증명서\n마. 독후감 : <새말귀 안내서> ※ 교보문고 e-book 코너 참조. AI 요약 글 사용 금지.\n∙ 양식 다운로드 : 보림선원 서울선원 카페 [전체 공지란]https://cafe.naver.com/borimseoul\n∙ 자기소개서 및 독후감 제출은 A4 기준으로, 분량은 자율적으로 정합니다.\n∙ 제출 방식 : 모든 서류는 PDF파일로 작성, borimseon@gmail.com으로 이메일 송부\n\n3. 주요 일정\n\n∙ 서류 제출 마감 : 2027년 1월 5일(화)\n\n∙ 면접 일시 : 2027년 1월 16일(토) (잠정, 서류 심사 후 개별 통지합니다)\n\n∙ 선정자 발표 : 2027년 1월 18일(월) (잠정)\n\n∙ 장학금 수여 : 2027년 1월 24일(일) (잠정, 추후 발표)\n\n※ 참고사항\n\n∙ 제출 내용이 사실과 다르거나 자격 요건을 충족하지 않을 경우, 지급된 장학금은 회수될 수 있습니다.\n\n∙ 비대면 법회 참석 및 기타 문의 : 보림선원 사무국(02-3452-3033)\n\n※ 법회안내\n\n- 목요법회 (교재 : 새말귀 안내서, 오후 7시 30분 ~ 9시)\n\n- 일요법회 (교재 : 이 말 한마디 듣기 위해 이 세상에 왔노라, 오전 11시~13시)"
     },
     "skku-notice01/141599": {

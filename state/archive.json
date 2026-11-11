@@ -57,6 +57,322 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/363315": {
+      "notice": {
+        "id": "linkareer-intern/363315",
+        "source_id": "linkareer-intern",
+        "article_no": "363315",
+        "title": "[오오비컴퍼니] 마케팅(AE)_오프라인_인턴(체험형)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363315",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T12:02:32.252426+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T15:00:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "skku-notice01/141778": {
+      "notice": {
+        "id": "skku-notice01/141778",
+        "source_id": "skku-notice01",
+        "article_no": "141778",
+        "title": "[연구참여자 모집]대학생 대상 도박중독 예방을 위한 보드게임 기반 심리교육 프로그램 개발 및 파일럿 평가 연구",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141778",
+        "posted_on": "2026-11-11",
+        "pinned": true,
+        "deadline": null,
+        "first_seen": "2026-11-11T12:02:32.252426+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "연구 참여 조건인 도박 경험 여부가 사용자 프로필과 맞지 않으며 관심 분야와도 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "본 연구는 온라인 또는 오프라인 도박 경험이 있는 대학생을 대상으로 보드게임을 활용한 심리교육 프로그램을 개발하여 도박문제를 완화하고 예방하기 위한 연구입니다. 연구에 참여하시면 주 1회, 회기 당 약 2시간으로 구성된 프로그램에 총 4회 참여하시게 됩니다. 각 회기는 도박문제에 관한 심리교육 60분, 보드게임 플레이 30분, 게임 경험을 함께 나누고 논의하는 디브리핑 30분으로 진행됩니다. 프로그램 참여 전과 후에는 도박 관련 행동과 태도 등을 알아보기 위한 설문조사에 각 1회씩 참여하시게 됩니다. 프로그램 종료 후에는 참여 경험과 도박에 대한 생각이나 행동의 변화, 프로그램을 개선하기 위한 의견 등을 여쭙는 개별인터뷰가 1회 진행됩니다. 여러분의 많은 관심과 참여를 부탁드립니다.\n\n■ 연구참여자 모집기간: IRB 승인 이후 ~ 2026년 11월 30일까지\n\n■ 연구참여자 모집 수: 총 20명 내외\n\n■ 연구참여자 조건:\n1) 만 19세 이상 29세 이하의 국내 대학에 등록되어 있는 대학생\n2) 최근 1년 이내 온라인 또는 오프라인 도박(카지노 게임, 복권, 스포츠결과 돈걸기, 스포츠경주 돈걸기, 돈을 거는 미니게임 및 내기화투 등)에 참여 경험이 있는 자(일반적인 주식투자, 인형 뽑기 제외)\n3) 본 연구에서 제공하는 보드게임 기반 심리교육 프로그램 4회기에 모두 참여할 수 있는 자\n\n단, 지난 1년간 도박문제를 해결하기 위해 상담 및 심리사회적 치료를 받은 경험이 있는 자는 제외됨\n\n■ 연구참여자 사례비(연구 종료 이후 지급되며, 원천징수세액 공제 후 지급)\n- 보드게임 기반 심리교육 프로그램 회기 당 40,000원(40,000원*4회기=160,000원)\n- 개별인터뷰 1회(60분) 40,000원\n\n■ 참여 내용\n보드게임 기반 심리교육 프로그램(회기별 2시간)에 4주 간 결석 없이 참석해야 합니다.\n\n일시: 2026년 11월 30일(월), 12월 7일(월), 12월 14일(월), 12월 21일(월) 오후 5~7시(2시간)\n장소: 성균관대학교(서울) 캠퍼스 내 강의실(장소는 추후 개별 안내)\n\n- 심리교육 프로그램(1시간): 도박 중독의 발생 및 진행 과정 이해, 도박 중독의 위험성에 대한 인식 증진, 도박 중독에 대한 잘못된 인지 및 신념의 확인과 변화, 도박 중독 예방을 위한 보호요인 이해 및 예방행동 증진\n- 보드게임 플레이(30분) 및 디브리핑(30분)\n\n■ 참여 신청: 위의 조건에 충족하는 분은 아래 링크 또는 QR코드를 이용하여 스크리닝 조사에 참여해 주시기 바랍니다. 이후 연구진이 개별 연락드리도록 하겠습니다.\n\n신청링크: https://forms.gle/KqmHzDnm8THs2qRx5\n\n성균관대학교 사회복지학과 김민아 교수 연구실\n연구책임자: 김민아(성균관대학교 사회복지학과)\n연구담당자: 배준수(성균관대학교 사회복지학과)\n연구담당자 연락처: 010-2948-6035",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "참여자모집공고문_보드게임.pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141778&attachNo=119041",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<p>본 연구는 온라인 또는 오프라인 도박 경험이 있는 대학생을 대상으로 보드게임을 활용한 심리교육 프로그램을 개발하여 도박문제를 완화하고 예방하기 위한 연구입니다. 연구에 참여하시면 주 1회, 회기 당 약 2시간으로 구성된 프로그램에 총 4회 참여하시게 됩니다. 각 회기는 도박문제에 관한 심리교육 60분, 보드게임 플레이 30분, 게임 경험을 함께 나누고 논의하는 디브리핑 30분으로 진행됩니다. 프로그램 참여 전과 후에는 도박 관련 행동과 태도 등을 알아보기 위한 설문조사에 각 1회씩 참여하시게 됩니다. 프로그램 종료 후에는 참여 경험과 도박에 대한 생각이나 행동의 변화, 프로그램을 개선하기 위한 의견 등을 여쭙는 개별인터뷰가 1회 진행됩니다. 여러분의 많은 관심과 참여를 부탁드립니다.</p><p>■ 연구참여자 모집기간: IRB 승인 이후 ~ 2026년 11월 30일까지</p><p>■ 연구참여자 모집 수: 총 20명 내외</p><p>■ 연구참여자 조건:</p><p>1) 만 19세 이상 29세 이하의 국내 대학에 등록되어 있는 대학생</p><p>2) 최근 1년 이내 온라인 또는 오프라인 도박(카지노 게임, 복권, 스포츠결과 돈걸기, 스포츠경주 돈걸기, 돈을 거는 미니게임 및 내기화투 등)에 참여 경험이 있는 자(일반적인 주식투자, 인형 뽑기 제외)</p><p>3) 본 연구에서 제공하는 보드게임 기반 심리교육 프로그램 4회기에 모두 참여할 수 있는 자</p><p>단, 지난 1년간 도박문제를 해결하기 위해 상담 및 심리사회적 치료를 받은 경험이 있는 자는 제외됨</p><p>■ 연구참여자 사례비(연구 종료 이후 지급되며, 원천징수세액 공제 후 지급)</p><ul><li>보드게임 기반 심리교육 프로그램 회기 당 40,000원(40,000원*4회기=160,000원)</li><li>개별인터뷰 1회(60분) 40,000원</li></ul><p>■ 참여 내용</p><p>보드게임 기반 심리교육 프로그램(회기별 2시간)에 4주 간 결석 없이 참석해야 합니다.</p><p>일시: 2026년 11월 30일(월), 12월 7일(월), 12월 14일(월), 12월 21일(월) 오후 5~7시(2시간)</p><p>장소: 성균관대학교(서울) 캠퍼스 내 강의실(장소는 추후 개별 안내)</p><ul><li>심리교육 프로그램(1시간): 도박 중독의 발생 및 진행 과정 이해, 도박 중독의 위험성에 대한 인식 증진, 도박 중독에 대한 잘못된 인지 및 신념의 확인과 변화, 도박 중독 예방을 위한 보호요인 이해 및 예방행동 증진</li><li>보드게임 플레이(30분) 및 디브리핑(30분)</li></ul><p>■ 참여 신청: 위의 조건에 충족하는 분은 아래 링크 또는 QR코드를 이용하여 스크리닝 조사에 참여해 주시기 바랍니다. 이후 연구진이 개별 연락드리도록 하겠습니다.</p><p>신청링크: <a href=\"https://forms.gle/KqmHzDnm8THs2qRx5\">https://forms.gle/KqmHzDnm8THs2qRx5</a></p><p>성균관대학교 사회복지학과 김민아 교수 연구실</p><p>연구책임자: 김민아(성균관대학교 사회복지학과)</p><p>연구담당자: 배준수(성균관대학교 사회복지학과)</p><p>연구담당자 연락처: 010-2948-6035</p>",
+      "images": [],
+      "summary": "도박 중독 예방 연구 참여자를 모집합니다. 11월 30일까지 신청 링크를 통해 스크리닝 조사에 참여하세요.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T12:02:32.252426+09:00",
+      "page_text": "본 연구는 온라인 또는 오프라인 도박 경험이 있는 대학생을 대상으로 보드게임을 활용한 심리교육 프로그램을 개발하여 도박문제를 완화하고 예방하기 위한 연구입니다. 연구에 참여하시면 주 1회, 회기 당 약 2시간으로 구성된 프로그램에 총 4회 참여하시게 됩니다. 각 회기는 도박문제에 관한 심리교육 60분, 보드게임 플레이 30분, 게임 경험을 함께 나누고 논의하는 디브리핑 30분으로 진행됩니다. 프로그램 참여 전과 후에는 도박 관련 행동과 태도 등을 알아보기 위한 설문조사에 각 1회씩 참여하시게 됩니다. 프로그램 종료 후에는 참여 경험과 도박에 대한 생각이나 행동의 변화, 프로그램을 개선하기 위한 의견 등을 여쭙는 개별인터뷰가 1회 진행됩니다. 여러분의 많은 관심과 참여를 부탁드립니다.\n\n■ 연구참여자 모집기간: IRB 승인 이후 ~ 2026년 11월 30일까지\n\n■ 연구참여자 모집 수: 총 20명 내외\n\n■ 연구참여자 조건:\n1) 만 19세 이상 29세 이하의 국내 대학에 등록되어 있는 대학생\n2) 최근 1년 이내 온라인 또는 오프라인 도박(카지노 게임, 복권, 스포츠결과 돈걸기, 스포츠경주 돈걸기, 돈을 거는 미니게임 및 내기화투 등)에 참여 경험이 있는 자(일반적인 주식투자, 인형 뽑기 제외)\n3) 본 연구에서 제공하는 보드게임 기반 심리교육 프로그램 4회기에 모두 참여할 수 있는 자\n\n단, 지난 1년간 도박문제를 해결하기 위해 상담 및 심리사회적 치료를 받은 경험이 있는 자는 제외됨\n\n■ 연구참여자 사례비(연구 종료 이후 지급되며, 원천징수세액 공제 후 지급)\n- 보드게임 기반 심리교육 프로그램 회기 당 40,000원(40,000원*4회기=160,000원)\n- 개별인터뷰 1회(60분) 40,000원\n\n■ 참여 내용\n보드게임 기반 심리교육 프로그램(회기별 2시간)에 4주 간 결석 없이 참석해야 합니다.\n\n일시: 2026년 11월 30일(월), 12월 7일(월), 12월 14일(월), 12월 21일(월) 오후 5~7시(2시간)\n장소: 성균관대학교(서울) 캠퍼스 내 강의실(장소는 추후 개별 안내)\n\n- 심리교육 프로그램(1시간): 도박 중독의 발생 및 진행 과정 이해, 도박 중독의 위험성에 대한 인식 증진, 도박 중독에 대한 잘못된 인지 및 신념의 확인과 변화, 도박 중독 예방을 위한 보호요인 이해 및 예방행동 증진\n- 보드게임 플레이(30분) 및 디브리핑(30분)\n\n■ 참여 신청: 위의 조건에 충족하는 분은 아래 링크 또는 QR코드를 이용하여 스크리닝 조사에 참여해 주시기 바랍니다. 이후 연구진이 개별 연락드리도록 하겠습니다.\n\n신청링크: https://forms.gle/KqmHzDnm8THs2qRx5\n\n성균관대학교 사회복지학과 김민아 교수 연구실\n연구책임자: 김민아(성균관대학교 사회복지학과)\n연구담당자: 배준수(성균관대학교 사회복지학과)\n연구담당자 연락처: 010-2948-6035",
+      "body_attempted_at": "2026-11-11T12:02:32.252426+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-30T23:59:00+09:00"
+      }
+    },
+    "linkareer-intern/363584": {
+      "notice": {
+        "id": "linkareer-intern/363584",
+        "source_id": "linkareer-intern",
+        "article_no": "363584",
+        "title": "[Kwang Jin America, Inc.] [미국] 자동차 도어시스템 및 자동차 부품 전문기업 광진그룹 미국법인 생산관리 모집",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363584",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T12:02:32.252426+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 생산관리 업무로 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "● Host Organization\n- 자동차 도어 시스템 및 자동차 부품 전문기업 광진(KWANGJIN)그의 미국 현지법인\n: 광진은 1973년 설립되어 자동차 산업과 함께 성장해 온 자동차 부품 전문기업 (*광진 아메리카는 1996년에 설립)\n: 50여 년간 축적된 도어 시스템 관련 기술과 경험을 바탕으로 자동차 부품을 생산하고 있으며, 국내외 주요 고객사에 제품을 공급\n: 높은 품질과 기술력을 기반으로 글로벌 자동차 산업에 도어 시스템을 공급하고 있는 자동차 부품 제조기업\n● Website\n- http://www.kwangjin-kr.com/\n● Location\n- 미국 미시간주, Warren\n: 총 직원수 160명, 한국계 직원 34명\n● Training Position - Production Control Intern (생산관리)\n- ERP 시스템을 활용한 생산 데이터 입력·관리 및 일일 생산 실적 모니터링\n- 고객 발주·납품 지시, 생산 일정 및 출하 요구사항 관리\n- 생산라인 운영 준비 지원 및 안전재고 수준 유지·관리\n- 원자재 사용량, 완제품 생산 실적 및 재고 현황 모니터링\n- 재고 거래 내역 검증, 재고 불일치 사항 확인 및 순환 재고실사 지원\n- ERP 시스템 내 자재명세서(BOM), 공정 경로 및 기준정보 검토·업데이트\n- 고객 수요 변동 및 출하 일정 관리, ASN·EDI 거래 검증 및 G3PS 관련 출하 서류 준비\n- 생산·출하 부서 간 협업 프로젝트, 공정 개선 활동 및 감사 준비 지원\n\n● Stipend\n- 시간당 20달러 (OT: x1.5)\n● Additional Information\n- 유급 휴가 13일 제공\n● Training Hours\n- 주 40시간\n: 오전 7시 근무시작\n\n\n———————————————————————-\n[진행절차]\n1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)\n2. 지원에 필요한 서류 준비\n- 영문 이력서, 대학&대학교 재학 또는 졸업증명서, 대학&대학교 성적증명서, 여권사본 등\n3. 회사에 이력서 접수\n4. 스카이프, 줌 등을 통한 화상면접 진행\n5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행\n6. 비자인터뷰 진행\n7. 출국하여 근무시작\n———————————————————————-\n※ 본 채용정보는 해외취업전문기업 워크브릿지(www.workbridge.co.kr)를 통하여 Kwang Jin America, Inc.에 지원들어 갑니다.\n※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.\n※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.\n- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)\n: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료\n: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용\n———————————————————————-\n[문의 및 지원하기]\n- 전화 : 02-554-7574 // 010-4593-7564\n- 카톡 : heungchan\n- 메일 : janghc@workbridge.co.kr",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span><img src=\"https://media-cdn.linkareer.com/se2editor/image/985404\" title=\"회사.png\"><br><br></span></b></p><p><b><span>● Host Organization</span></b></p><p><span>&nbsp;- 자동차 도어 시스템 및 자동차 부품 전문기업 광진(KWANGJIN)그의 미국 현지법인</span></p><p><span>&nbsp; : 광진은 1973년 설립되어 자동차 산업과 함께 성장해 온 자동차 부품 전문기업 (*</span><span><span>광진 아메리카는 1996년에 설립)</span></span></p><p><span>&nbsp; : 50여 년간 축적된 도어 시스템 관련 기술과 경험을 바탕으로 자동차 부품을 생산하고 있으며, 국내외 주요 고객사에 제품을 공급</span></p><p><span>&nbsp; : 높은 품질과 기술력을 기반으로 글로벌 자동차 산업에 도어 시스템을 공급하고 있는 자동차 부품 제조기업</span></p><p><b><span>● Website</span></b></p><p><span>&nbsp;- <a href=\"http://www.kwangjin-kr.com/\"><span>http://www.kwangjin-kr.com/</span></a></span></p><p><b><span>● Location</span></b></p><p><span>&nbsp;- 미국 미시간주, Warren</span></p><p><span>&nbsp;: 총 직원수 160명, 한국계 직원 34명</span></p><p><b><span>● Training Position - </span></b><span><span><b>Production Control Intern (생산관리)</b></span></span></p><div><span>&nbsp;- ERP 시스템을 활용한 생산 데이터 입력·관리 및 일일 생산 실적 모니터링</span></div><div><span>&nbsp;- 고객 발주·납품 지시, 생산 일정 및 출하 요구사항 관리</span></div><div><span>&nbsp;- 생산라인 운영 준비 지원 및 안전재고 수준 유지·관리</span></div><div><span>&nbsp;- 원자재 사용량, 완제품 생산 실적 및 재고 현황 모니터링</span></div><div><span>&nbsp;- 재고 거래 내역 검증, 재고 불일치 사항 확인 및 순환 재고실사 지원</span></div><div><span>&nbsp;- ERP 시스템 내 자재명세서(BOM), 공정 경로 및 기준정보 검토·업데이트</span></div><div><span>&nbsp;- 고객 수요 변동 및 출하 일정 관리, ASN·EDI 거래 검증 및 G3PS 관련 출하 서류 준비</span></div><div><span>&nbsp;- 생산·출하 부서 간 협업 프로젝트, 공정 개선 활동 및 감사 준비 지원</span><br></div><p><b><span>● Stipend</span></b></p><p><span>&nbsp;- 시간당 20달러 </span><span><span>(OT: x1.5)</span></span></p><p><span></span><b><span>● Additional Information</span></b></p><p><span>&nbsp;- 유급 휴가 13일 제공</span></p><p><b><span>● Training Hours</span></b></p><p><span>&nbsp;- 주 40시간&nbsp;</span></p><p><span>&nbsp; : 오전 7시 근무시작</span></p><p><span><br></span></p><p><span>———————————————————————-</span></p><p><span>[진행절차]</span></p><p><span>1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 </span><span>janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)</span></p><p><span>2. 지원에 필요한 서류 준비</span></p><p><span>&nbsp;- 영문 이력서, 대학&amp;대학교 재학 또는 졸업증명서, 대학&amp;대학교 성적증명서, 여권사본 등</span></p><p><span>3. 회사에 이력서 접수</span></p><p><span>4. 스카이프, 줌 등을 통한 화상면접 진행</span></p><p><span>5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행</span></p><p><span>6. 비자인터뷰 진행</span></p><p><span>7. 출국하여 근무시작</span></p><p><span>———————————————————————-</span></p><p><span>※ 본 채용정보는 해외취업전문기업 워크브릿지(<a href=\"http://www.workbridge.co.kr/\"><span>www.workbridge.co.kr</span></a>)를 통하여&nbsp;</span><span><span>Kwang Jin America, Inc.</span></span><span>에 지원들어 갑니다.</span></p><p><span>※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.</span></p><p><span>※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.</span></p><p><span>&nbsp;- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)</span></p><p><span>&nbsp;: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료</span></p><p><span>&nbsp;: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용</span></p><p><span>———————————————————————-</span></p><p><span>[문의 및 지원하기]</span></p><p><span>- 전화 : 02-554-7574 // 010-4593-7564</span></p><p><span>- 카톡 : heungchan</span></p><p><span>- 메일 : janghc@workbridge.co.k</span><span>r</span></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985404"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T12:02:32.252426+09:00",
+      "page_text": "● Host Organization\n- 자동차 도어 시스템 및 자동차 부품 전문기업 광진(KWANGJIN)그의 미국 현지법인\n: 광진은 1973년 설립되어 자동차 산업과 함께 성장해 온 자동차 부품 전문기업 (*광진 아메리카는 1996년에 설립)\n: 50여 년간 축적된 도어 시스템 관련 기술과 경험을 바탕으로 자동차 부품을 생산하고 있으며, 국내외 주요 고객사에 제품을 공급\n: 높은 품질과 기술력을 기반으로 글로벌 자동차 산업에 도어 시스템을 공급하고 있는 자동차 부품 제조기업\n● Website\n- http://www.kwangjin-kr.com/\n● Location\n- 미국 미시간주, Warren\n: 총 직원수 160명, 한국계 직원 34명\n● Training Position - Production Control Intern (생산관리)\n- ERP 시스템을 활용한 생산 데이터 입력·관리 및 일일 생산 실적 모니터링\n- 고객 발주·납품 지시, 생산 일정 및 출하 요구사항 관리\n- 생산라인 운영 준비 지원 및 안전재고 수준 유지·관리\n- 원자재 사용량, 완제품 생산 실적 및 재고 현황 모니터링\n- 재고 거래 내역 검증, 재고 불일치 사항 확인 및 순환 재고실사 지원\n- ERP 시스템 내 자재명세서(BOM), 공정 경로 및 기준정보 검토·업데이트\n- 고객 수요 변동 및 출하 일정 관리, ASN·EDI 거래 검증 및 G3PS 관련 출하 서류 준비\n- 생산·출하 부서 간 협업 프로젝트, 공정 개선 활동 및 감사 준비 지원\n\n● Stipend\n- 시간당 20달러 (OT: x1.5)\n● Additional Information\n- 유급 휴가 13일 제공\n● Training Hours\n- 주 40시간\n: 오전 7시 근무시작\n\n\n———————————————————————-\n[진행절차]\n1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)\n2. 지원에 필요한 서류 준비\n- 영문 이력서, 대학&대학교 재학 또는 졸업증명서, 대학&대학교 성적증명서, 여권사본 등\n3. 회사에 이력서 접수\n4. 스카이프, 줌 등을 통한 화상면접 진행\n5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행\n6. 비자인터뷰 진행\n7. 출국하여 근무시작\n———————————————————————-\n※ 본 채용정보는 해외취업전문기업 워크브릿지(www.workbridge.co.kr)를 통하여 Kwang Jin America, Inc.에 지원들어 갑니다.\n※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.\n※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.\n- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)\n: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료\n: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용\n———————————————————————-\n[문의 및 지원하기]\n- 전화 : 02-554-7574 // 010-4593-7564\n- 카톡 : heungchan\n- 메일 : janghc@workbridge.co.kr",
+      "body_attempted_at": "2026-11-11T12:02:32.252426+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-09T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "f18186154c90c1992b2f3a04a624fd6d4af9689c03ac6e3f365ecbbf0dafbabf",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 생산관리 업무로 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363582": {
+      "notice": {
+        "id": "linkareer-intern/363582",
+        "source_id": "linkareer-intern",
+        "article_no": "363582",
+        "title": "[EY한영] 마켓부문 사업지원팀(Client & Industries Growth) 전환형 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363582",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T12:02:32.252426+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 마켓부문 사업지원 업무로 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[EY한영] 마켓부문 사업지원팀(Client & Industries Growth) 전환형 인턴\n\n\n\n\n[담당 업무]\n1. Market Strategy & Analytics 업무 지원\n- EY Global 고객사 데이터베이스 관리 업무 지원\n- 법인 운영 전략 지원을 위한 내부 Sales Data 관리\n- 내부 전략 미팅 및 보고 자료 작성\n2. EY Account (고객사) 활동 지원\n- 주요 고객사의 최신 동향 (신사업, 투자, 인수합병 등)에 대한 뉴스 클리핑\n- Account 미팅 자료 작성 지원\n- 고객사 주요 현황 관리 (주요 의사결정자, 지배구조도 등)\n- 주요 고객사/용역 대상 만족도 조사 지원\n- 법인 사업 기회 리스트 및 주요 수임 프로젝트 정보 정리\n\n\n[지원자격]\n- 인턴 근무 기간동안 full-time 근무 가능한 자\n- Data 기반 분석 및 문제 해결방안 도출 역량\n- MS Office (Excel, PPT) 활용 역량\n- 원활하고 효과적인 커뮤니케이션 역량\n- 비즈니스 영어 가능\n\n\n[우대사항]\n- 상경계열 전공자\n- 영어 능통(공인성적 보유)\n- 기업 및 산업 리서치/분석 등 유관 업무 경험자\n- MS Office (Excel, Power point, Word) 자격증 보유자\n\n\n[근무기간]\n- 6개월 (평가에 따라 정규직 전환 검토대상)\n\n\n[전형절차]\n- 1차 서류 심사\n- Aptitude Test (온라인 인성검사)\n- 2차 실무/임원 면접 (대면)\n* 간단한 영어질문 또한 포함될 예정이오니 이점 참고 바랍니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[EY한영] 마켓부문 사업지원팀(Client &amp; Industries Growth) 전환형 인턴</b></span></p><p><span>[담당 업무]</span></p><p><span>1. Market Strategy &amp; Analytics 업무 지원</span></p><p><span>- EY Global 고객사 데이터베이스 관리 업무 지원</span></p><p><span>- 법인 운영 전략 지원을 위한 내부 Sales Data 관리&nbsp;</span></p><p><span>- 내부 전략 미팅 및 보고 자료 작성</span></p><p><span>2. EY Account (고객사) 활동 지원</span></p><p><span>- 주요 고객사의 최신 동향 (신사업, 투자, 인수합병 등)에 대한 뉴스 클리핑</span></p><p><span>- Account 미팅 자료 작성 지원</span></p><p><span>- 고객사 주요 현황 관리 (주요 의사결정자, 지배구조도 등)</span></p><p><span>- 주요 고객사/용역 대상 만족도 조사 지원</span></p><p><span>- 법인 사업 기회 리스트 및 주요 수임 프로젝트 정보 정리</span></p><p><span>[지원자격]</span></p><p><span>- 인턴 근무 기간동안 full-time 근무 가능한 자</span></p><p><span>- Data 기반 분석 및 문제 해결방안 도출 역량</span></p><p><span>- MS Office (Excel, PPT) 활용 역량</span></p><p><span>- 원활하고 효과적인 커뮤니케이션 역량</span></p><p><span>- 비즈니스 영어 가능</span></p><p><span>[우대사항]</span></p><p><span>- 상경계열 전공자</span></p><p><span>- 영어 능통(공인성적 보유)</span></p><p><span>- 기업 및 산업 리서치/분석 등 유관 업무 경험자</span></p><p><span>- MS Office (Excel, Power point, Word) 자격증 보유자</span></p><p><span>[근무기간]</span></p><p><span>- 6개월 (평가에 따라 정규직 전환 검토대상)</span></p><p><span>[전형절차]</span></p><p><span>- 1차 서류 심사</span></p><p><span>- Aptitude Test (온라인 인성검사)</span></p><p><span>- 2차 실무/임원 면접 (대면)</span></p><p><span>* 간단한 영어질문 또한 포함될 예정이오니 이점 참고 바랍니다.</span></p><div><br></div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985396\" title=\"20261111_111839.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985396"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T12:02:32.252426+09:00",
+      "page_text": "[EY한영] 마켓부문 사업지원팀(Client & Industries Growth) 전환형 인턴\n\n\n\n\n[담당 업무]\n1. Market Strategy & Analytics 업무 지원\n- EY Global 고객사 데이터베이스 관리 업무 지원\n- 법인 운영 전략 지원을 위한 내부 Sales Data 관리\n- 내부 전략 미팅 및 보고 자료 작성\n2. EY Account (고객사) 활동 지원\n- 주요 고객사의 최신 동향 (신사업, 투자, 인수합병 등)에 대한 뉴스 클리핑\n- Account 미팅 자료 작성 지원\n- 고객사 주요 현황 관리 (주요 의사결정자, 지배구조도 등)\n- 주요 고객사/용역 대상 만족도 조사 지원\n- 법인 사업 기회 리스트 및 주요 수임 프로젝트 정보 정리\n\n\n[지원자격]\n- 인턴 근무 기간동안 full-time 근무 가능한 자\n- Data 기반 분석 및 문제 해결방안 도출 역량\n- MS Office (Excel, PPT) 활용 역량\n- 원활하고 효과적인 커뮤니케이션 역량\n- 비즈니스 영어 가능\n\n\n[우대사항]\n- 상경계열 전공자\n- 영어 능통(공인성적 보유)\n- 기업 및 산업 리서치/분석 등 유관 업무 경험자\n- MS Office (Excel, Power point, Word) 자격증 보유자\n\n\n[근무기간]\n- 6개월 (평가에 따라 정규직 전환 검토대상)\n\n\n[전형절차]\n- 1차 서류 심사\n- Aptitude Test (온라인 인성검사)\n- 2차 실무/임원 면접 (대면)\n* 간단한 영어질문 또한 포함될 예정이오니 이점 참고 바랍니다.",
+      "body_attempted_at": "2026-11-11T12:02:32.252426+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "fb1c8fd3f9f3ac0e7b97751c33993fa04e54b1915ca7d301155cf84d0d745f53",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 마켓부문 사업지원 업무로 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363578": {
+      "notice": {
+        "id": "linkareer-intern/363578",
+        "source_id": "linkareer-intern",
+        "article_no": "363578",
+        "title": "[도루코] (상시) AI 개발 및 PoC 엔지니어 인턴사원(6개월) 상시채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363578",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T12:02:32.252426+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "인공지능 및 컴퓨터 관련 학과 전공자를 우대하며 AI 개발 및 PoC 엔지니어링 업무를 수행하므로 소프트웨어 학부생이 지원하기에 적합합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[도루코] (상시) AI 개발 및 PoC 엔지니어 인턴사원(6개월) 상시채용\n\n\n\n\n[직무내용]\nㆍAI 개선과제의 구현 방안 검토 및 시스템 설계\nㆍ범용 AI 활용 가능성 분석 및 최적 적용 방안 수립\nㆍLLM 기반 자동화 및 사내 데이터 연계 PoC·프로토타입 개발\nㆍ현업과 공동으로 프로젝트 수행 및 운영 이관 지원\nㆍ데이터 관리 기준, 접근 권한 등 보안 요건 검토 및 준수\nㆍKPI 기반 성과 측정 체계 수립 및 프로젝트 산출물 문서화\n\n\n[자격 요건 및 우대사항]\nㆍ인공지능 및 컴퓨터 관련 학과 전공자\nㆍLLM/RAG 등 생성형 AI 활용 서비스 개발 경험자 우대\nㆍAI 개발 경험자 우대\nㆍ27년 1월 1일 입사 가능하신 분(최초 출근일: 27년 1월 4일)\n\n\n[전형절차]\n- 입사지원 > 서류전형 > 역량검사 > 직무인터뷰 > 컬쳐핏 인터뷰 > 채용 검진",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[도루코] (상시) AI 개발 및 PoC 엔지니어 인턴사원(6개월) 상시채용</b></span></p><p><span>[직무내용]</span></p><p><span>ㆍAI 개선과제의 구현 방안 검토 및 시스템 설계</span></p><p><span>ㆍ범용 AI 활용 가능성 분석 및 최적 적용 방안 수립</span></p><p><span>ㆍLLM 기반 자동화 및 사내 데이터 연계 PoC·프로토타입 개발</span></p><p><span>ㆍ현업과 공동으로 프로젝트 수행 및 운영 이관 지원</span></p><p><span>ㆍ데이터 관리 기준, 접근 권한 등 보안 요건 검토 및 준수</span></p><p><span>ㆍKPI 기반 성과 측정 체계 수립 및 프로젝트 산출물 문서화</span></p><p><span>[자격 요건 및 우대사항]</span></p><p><span>ㆍ인공지능 및 컴퓨터 관련 학과 전공자</span></p><p><span>ㆍLLM/RAG 등 생성형 AI 활용 서비스 개발 경험자 우대</span></p><p><span>ㆍAI 개발 경험자 우대</span></p><p><span>ㆍ27년 1월 1일 입사 가능하신 분(최초 출근일: 27년 1월 4일)</span></p><p><span>[전형절차]</span></p><p><span>- 입사지원 &gt; 서류전형 &gt; 역량검사 &gt; 직무인터뷰 &gt; 컬쳐핏 인터뷰 &gt; 채용 검진</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985378\" title=\"20261111_110744.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985378"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T12:02:32.252426+09:00",
+      "page_text": "[도루코] (상시) AI 개발 및 PoC 엔지니어 인턴사원(6개월) 상시채용\n\n\n\n\n[직무내용]\nㆍAI 개선과제의 구현 방안 검토 및 시스템 설계\nㆍ범용 AI 활용 가능성 분석 및 최적 적용 방안 수립\nㆍLLM 기반 자동화 및 사내 데이터 연계 PoC·프로토타입 개발\nㆍ현업과 공동으로 프로젝트 수행 및 운영 이관 지원\nㆍ데이터 관리 기준, 접근 권한 등 보안 요건 검토 및 준수\nㆍKPI 기반 성과 측정 체계 수립 및 프로젝트 산출물 문서화\n\n\n[자격 요건 및 우대사항]\nㆍ인공지능 및 컴퓨터 관련 학과 전공자\nㆍLLM/RAG 등 생성형 AI 활용 서비스 개발 경험자 우대\nㆍAI 개발 경험자 우대\nㆍ27년 1월 1일 입사 가능하신 분(최초 출근일: 27년 1월 4일)\n\n\n[전형절차]\n- 입사지원 > 서류전형 > 역량검사 > 직무인터뷰 > 컬쳐핏 인터뷰 > 채용 검진",
+      "body_attempted_at": "2026-11-11T12:02:32.252426+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-09T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "96f6682d0bbfcb29356bc8a8b1a43ef6ca5f95ce28ebc35fe83b298d48484928",
+        "verdict": "relevant",
+        "reason": "인공지능 및 컴퓨터 관련 학과 전공자를 우대하며 AI 개발 및 PoC 엔지니어링 업무를 수행하므로 소프트웨어 학부생이 지원하기에 적합합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363577": {
+      "notice": {
+        "id": "linkareer-intern/363577",
+        "source_id": "linkareer-intern",
+        "article_no": "363577",
+        "title": "[LUX BEAUTY SUPERSTORE] [미국] 미국 라스베이거스 Beauty Supplies company 매장운영 / POS매출 분석 / 구매&재고관리 / 마케팅&이벤트 기획모집",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363577",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T12:02:32.252426+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 매장 운영 및 마케팅 관련 업무로 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "● Host Organization\n- 미국 라스베가스에 위치한 Beauty Supplies company\n- 라스베이거스에 4개의 매장, 80여명의 직원이 근무중\n● Website\n- https://www.jungmanagementgroup.com\n● Location\n- 미국 네바다주, Las Vegas\n● Training Position\n1. 매장운영\n2. POS매출 분석\n3. 구매&재고관리\n4. 마케팅&이벤트 기획\n● Stipend\n- 연봉 48,000달러\n● Additional Information\n- 월 600달러 숙소비 지원\n- 미국 입국 후 1,000달러 체제비 지급\n- 12개월 트레이닝 후 1,000달러 지급\n● Training Hours\n- 주 5일, 주 40시간 이상\n\n———————————————————————-\n[진행절차]\n1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)\n2. 지원에 필요한 서류 준비\n- 영문 이력서, 대학&대학교 재학 또는 졸업증명서, 대학&대학교 성적증명서, 여권사본 등\n3. 회사에 이력서 접수\n4. 스카이프, 줌 등을 통한 화상면접 진행\n5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행\n6. 비자인터뷰 진행\n7. 출국하여 근무시작\n———————————————————————-\n※ 본 채용정보는 해외취업전문기업 워크브릿지(www.workbridge.co.kr)를 통하여 LUX BEAUTY SUPERSTORE에 지원들어 갑니다.\n※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.\n※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.\n- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)\n: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료\n: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용\n———————————————————————-\n[문의 및 지원하기]\n- 전화 : 02-554-7574 // 010-4593-7564\n- 카톡 : heungchan\n- 메일 : janghc@workbridge.co.kr",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><img src=\"https://media-cdn.linkareer.com/se2editor/image/985373\" title=\"회사.png\"><br><br></b></p><p><b>● Host Organization</b></p><p><span>&nbsp;- 미국 라스베가스에 위치한 Beauty Supplies company</span></p><p><span>&nbsp;- 라스베이거스에 4개의 매장, 80여명의 직원이 근무중</span></p><p><span><b>● Website</b></span></p><p><span>&nbsp;- https://<a href=\"http://www.jungmanagementgroup.com/\">www.jungmanagementgroup.com</a></span></p><p><span><b>● Location</b></span></p><p><span>&nbsp;- 미국 네바다주, Las Vegas</span></p><p><b>● Training Position&nbsp;</b></p><p><span>&nbsp;1. 매장운영</span></p><p><span>&nbsp;2. POS매출 분석</span></p><p><span>&nbsp;3. 구매&amp;재고관리</span></p><p><span>&nbsp;4. 마케팅&amp;이벤트 기획</span></p><p><span><b>● Stipend</b></span></p><p><span>&nbsp;- 연봉 48,000달러</span></p><p><span></span><b><span>● Additional Information</span></b></p><p><span>&nbsp;- 월 600달러 숙소비 지원</span></p><p><span>&nbsp;- 미국 입국 후 1,000달러 체제비 지급</span></p><p><span>&nbsp;- 12개월 트레이닝 후 1,000달러 지급</span></p><p><span><b>● Training Hours&nbsp;</b></span></p><p><span>&nbsp;- 주 5일, 주 40시간 이상</span></p><p><span>&nbsp;</span></p><p><span>———————————————————————-</span></p><p><span>[진행절차]</span></p><p><span>1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 </span><span>janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)</span></p><p><span>2. 지원에 필요한 서류 준비</span></p><p><span>&nbsp;- 영문 이력서, 대학&amp;대학교 재학 또는 졸업증명서, 대학&amp;대학교 성적증명서, 여권사본 등</span></p><p><span>3. 회사에 이력서 접수</span></p><p><span>4. 스카이프, 줌 등을 통한 화상면접 진행</span></p><p><span>5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행</span></p><p><span>6. 비자인터뷰 진행</span></p><p><span>7. 출국하여 근무시작</span></p><p><span>———————————————————————-</span></p><p><span>※ 본 채용정보는 해외취업전문기업 워크브릿지(<a href=\"http://www.workbridge.co.kr/\"><span>www.workbridge.co.kr</span></a>)를 통하여 LUX BEAUTY SUPERSTORE</span><span><span>에 지원들어 갑니다.</span></span></p><p><span>※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.</span></p><p><span>※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.</span></p><p><span>&nbsp;- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)</span></p><p><span>&nbsp;: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료</span></p><p><span>&nbsp;: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용</span></p><p><span>———————————————————————-</span></p><p><span>[문의 및 지원하기]</span></p><p><span>- 전화 : 02-554-7574 // 010-4593-7564</span></p><p><span>- 카톡 : heungchan</span></p><p><span>- 메일 : janghc@workbridge.co.k</span><span>r</span></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985373"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T12:02:32.252426+09:00",
+      "page_text": "● Host Organization\n- 미국 라스베가스에 위치한 Beauty Supplies company\n- 라스베이거스에 4개의 매장, 80여명의 직원이 근무중\n● Website\n- https://www.jungmanagementgroup.com\n● Location\n- 미국 네바다주, Las Vegas\n● Training Position\n1. 매장운영\n2. POS매출 분석\n3. 구매&재고관리\n4. 마케팅&이벤트 기획\n● Stipend\n- 연봉 48,000달러\n● Additional Information\n- 월 600달러 숙소비 지원\n- 미국 입국 후 1,000달러 체제비 지급\n- 12개월 트레이닝 후 1,000달러 지급\n● Training Hours\n- 주 5일, 주 40시간 이상\n\n———————————————————————-\n[진행절차]\n1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)\n2. 지원에 필요한 서류 준비\n- 영문 이력서, 대학&대학교 재학 또는 졸업증명서, 대학&대학교 성적증명서, 여권사본 등\n3. 회사에 이력서 접수\n4. 스카이프, 줌 등을 통한 화상면접 진행\n5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행\n6. 비자인터뷰 진행\n7. 출국하여 근무시작\n———————————————————————-\n※ 본 채용정보는 해외취업전문기업 워크브릿지(www.workbridge.co.kr)를 통하여 LUX BEAUTY SUPERSTORE에 지원들어 갑니다.\n※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.\n※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.\n- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)\n: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료\n: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용\n———————————————————————-\n[문의 및 지원하기]\n- 전화 : 02-554-7574 // 010-4593-7564\n- 카톡 : heungchan\n- 메일 : janghc@workbridge.co.kr",
+      "body_attempted_at": "2026-11-11T12:02:32.252426+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-09T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "453e38a1d85f13ef91f43e792ee62f697f836616c6583e3eed51783557aa8c70",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 매장 운영 및 마케팅 관련 업무로 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "skku-notice01/141767": {
       "notice": {
         "id": "skku-notice01/141767",
@@ -3401,7 +3717,7 @@
         "kind": "마감",
         "at": "2026-12-02T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-10T23:09:53.533458+09:00"
+      "rechecked_at": "2026-11-11T12:02:32.252426+09:00"
     },
     "skku-notice01/141718": {
       "notice": {
@@ -5092,7 +5408,7 @@
         "kind": "마감",
         "at": "2026-11-18T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-10T23:09:53.533458+09:00"
+      "rechecked_at": "2026-11-11T12:02:32.252426+09:00"
     },
     "skku-notice01/141425": {
       "notice": {
@@ -5150,7 +5466,7 @@
         "kind": "마감",
         "at": "2026-11-16T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-10T23:09:53.533458+09:00"
+      "rechecked_at": "2026-11-11T12:02:32.252426+09:00"
     },
     "skku-career-intern/165112": {
       "notice": {
@@ -22123,6 +22439,50 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-01T23:59:00+09:00"
+      }
+    },
+    "linkareer-intern/363593": {
+      "notice": {
+        "id": "linkareer-intern/363593",
+        "source_id": "linkareer-intern",
+        "article_no": "363593",
+        "title": "[주식회사 두부] [DUBU] AI 대화형 콘텐츠 기획 인턴 모집",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363593",
+        "posted_on": "2026-10-23",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T12:02:32.252426+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985442\" title=\"1.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/985443\" title=\"3.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985442",
+        "https://media-cdn.linkareer.com/se2editor/image/985443"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T12:02:32.252426+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-11T12:02:32.252426+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-01-21T23:59:59.999000+09:00",
+        "model": "source"
       }
     },
     "cse-notice/227280": {

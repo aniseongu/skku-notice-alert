@@ -113,6 +113,165 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141808": {
+      "notice": {
+        "id": "skku-notice01/141808",
+        "source_id": "skku-notice01",
+        "article_no": "141808",
+        "title": "[스포츠재활 연구실] 만성 발목 불안정성 대상 감각-인지 기반 발목 재활운동 연구 참여자 모집",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141808",
+        "posted_on": "2026-11-11",
+        "pinned": true,
+        "deadline": null,
+        "first_seen": "2026-11-11T23:04:27.446323+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "전공 및 관심사와 무관한 스포츠 재활 연구 실험 모집으로 참여 목적에 부합하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "안녕하세요!\n\n성균관대학교 스포츠과학과 스포츠재활 연구실에서는 반복적으로 발목을 접질리거나 불안함을 느끼는 “만성 발목 불안정성” 을 가진 성인을 대상으로 [감각-인지 기반의 고도화된 운동 재활 트레이닝]의 임상 효과를 검증하는 실험 연구를 진행합니다. 반복되는 발목 부상으로 일상생활 및 스포츠 활동 참여에 어려움을 겪고 계신가요? 기존의 표준화된 발목 재활 프로그램을 넘어선 감각과 인지를 함께 훈련하여 재부상의 위험을 줄이고 안전한 생활로의 복귀를 위한 운동 치료 프로그램 효과 검증 연구를 통해 발목이 불안해서 포기했던 건강한 일상과 스포츠를 스포츠 재활 연구실과 함께 다시 시작할 수 있습니다. 여러분들의 많은 관심과 참여 부탁드립니다!\n\n1. 모집대상\n- 만 19세 이상 성인으로 최소 1회 이상 발목의 접질림으로 발목 외측 인대 부상 병력이 있는 경우\n- 최근 6개월 이내 최소 2회 이상 발목 관절의 ‘휘청거림’ 경험이 있는 경우\n\"발목의 휘청거림\"은 일시적으로 발목을 통제할 수 없는 불안정성이나 발목이 접질리는 느낌\n- 발목의 반복적인 접질림 때문에 일상생활 및 스포츠 활동에 어려움이 있는 경우\n\n2. 실험장소\n- 성균관대학교 자연과학캠퍼스 수성관 3층 스포츠재활 실험실\n\n3. 연구 내용 및 참여기간\n- 감각-인지 기반 개인 맞춤형 발목 재활 운동 프로그램 제공\n- 주 3회 (회당 약 30분), 총 4주 운동 재활 프로그램 진행\n\n4. 실험 참여 보상\n총 최대 현금 20만원의 연구 참여 사례비를 지급합니다.\n1) 실험 전 및 실험 후 발목 기능 평가 시, 4만원\n2) 12회 운동 재활 프로그램 참여 시, 12만원\n3) 추가로 주차별 성실 참여 인센티브 매주 1만원씩 최대 4만원\n\n5. 실험 참여 방법\n- 본 연구 참여 대상자라고 생각되시면, 포스터의 QR코드 또는 아래의 접속링크를 통해 발목 기능 점수 설문에 참여해 주세요. 설문 완료 후, 본 실험 참여가 가능한 분들께 개별적으로 연락 드리겠습니다.\n\n[실험참여 가능성 확인 Link_ 발목 기능성 설문조사]\nhttps://docs.google.com/forms/d/e/1FAIpQLSe6WT5bAHmrRezCis9sD1NFMHOiHvCdponnetLnl5QOpNeKhg/viewform\n\n6. 문의사항\n- 실험 참여와 관련된 문의사항이 있으신 분은 아래의 이메일로 연락 주시면 감사하겠습니다.\n(연구책임자 남승희 namsh210@g.skku.edu)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>안녕하세요!</p><p>성균관대학교 스포츠과학과 스포츠재활 연구실에서는 반복적으로 발목을 접질리거나 불안함을 느끼는 “만성 발목 불안정성” 을 가진 성인을 대상으로 [감각-인지 기반의 고도화된 운동 재활 트레이닝]의 임상 효과를 검증하는 실험 연구를 진행합니다. 반복되는 발목 부상으로 일상생활 및 스포츠 활동 참여에 어려움을 겪고 계신가요? 기존의 표준화된 발목 재활 프로그램을 넘어선 감각과 인지를 함께 훈련하여 재부상의 위험을 줄이고 안전한 생활로의 복귀를 위한 운동 치료 프로그램 효과 검증 연구를 통해 발목이 불안해서 포기했던 건강한 일상과 스포츠를 스포츠 재활 연구실과 함께 다시 시작할 수 있습니다. 여러분들의 많은 관심과 참여 부탁드립니다!</p><p>1. 모집대상</p><ul><li>만 19세 이상 성인으로 최소 1회 이상 발목의 접질림으로 발목 외측 인대 부상 병력이 있는 경우</li><li>최근 6개월 이내 최소 2회 이상 발목 관절의 ‘휘청거림’ 경험이 있는 경우</li></ul><p>\"발목의 휘청거림\"은 일시적으로 발목을 통제할 수 없는 불안정성이나 발목이 접질리는 느낌</p><ul><li>발목의 반복적인 접질림 때문에 일상생활 및 스포츠 활동에 어려움이 있는 경우</li></ul><p>2. 실험장소</p><ul><li>성균관대학교 자연과학캠퍼스 수성관 3층 스포츠재활 실험실</li></ul><p>3. 연구 내용 및 참여기간</p><ul><li>감각-인지 기반 개인 맞춤형 발목 재활 운동 프로그램 제공</li><li>주 3회 (회당 약 30분), 총 4주 운동 재활 프로그램 진행</li></ul><p>4. 실험 참여 보상</p><p>총 최대 현금 20만원의 연구 참여 사례비를 지급합니다.</p><p>1) 실험 전 및 실험 후 발목 기능 평가 시, 4만원</p><p>2) 12회 운동 재활 프로그램 참여 시, 12만원</p><p>3) 추가로 주차별 성실 참여 인센티브 매주 1만원씩 최대 4만원</p><p>5. 실험 참여 방법</p><ul><li>본 연구 참여 대상자라고 생각되시면, 포스터의 QR코드 또는 아래의 접속링크를 통해 발목 기능 점수 설문에 참여해 주세요. 설문 완료 후, 본 실험 참여가 가능한 분들께 개별적으로 연락 드리겠습니다.</li></ul><p>[실험참여 가능성 확인 Link_ 발목 기능성 설문조사]</p><p><a href=\"https://docs.google.com/forms/d/e/1FAIpQLSe6WT5bAHmrRezCis9sD1NFMHOiHvCdponnetLnl5QOpNeKhg/viewform\">https://docs.google.com/forms/d/e/1FAIpQLSe6WT5bAHmrRezCis9sD1NFMHOiHvCdponnetLnl5QOpNeKhg/viewform</a></p><p>6. 문의사항</p><ul><li>실험 참여와 관련된 문의사항이 있으신 분은 아래의 이메일로 연락 주시면 감사하겠습니다.</li></ul><p>(연구책임자 남승희 namsh210@g.skku.edu)</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"연구 참여자 모집 포스터\" src=\"https://www.skku.edu/_attach/image/2026/11/bPEQnzSqtVGXsrWsybDC.png\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/bPEQnzSqtVGXsrWsybDC.png"
+      ],
+      "summary": "만성 발목 불안정성을 가진 성인을 대상으로 재활 운동 연구 참여자를 모집합니다. 자연과학캠퍼스 실험실에서 4주간 주 3회 참여하며 보상을 받을 수 있습니다. 참여를 희망하면 안내된 구글 설문 링크를 통해 신청하세요.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T23:04:27.446323+09:00",
+      "page_text": "안녕하세요!\n\n성균관대학교 스포츠과학과 스포츠재활 연구실에서는 반복적으로 발목을 접질리거나 불안함을 느끼는 “만성 발목 불안정성” 을 가진 성인을 대상으로 [감각-인지 기반의 고도화된 운동 재활 트레이닝]의 임상 효과를 검증하는 실험 연구를 진행합니다. 반복되는 발목 부상으로 일상생활 및 스포츠 활동 참여에 어려움을 겪고 계신가요? 기존의 표준화된 발목 재활 프로그램을 넘어선 감각과 인지를 함께 훈련하여 재부상의 위험을 줄이고 안전한 생활로의 복귀를 위한 운동 치료 프로그램 효과 검증 연구를 통해 발목이 불안해서 포기했던 건강한 일상과 스포츠를 스포츠 재활 연구실과 함께 다시 시작할 수 있습니다. 여러분들의 많은 관심과 참여 부탁드립니다!\n\n1. 모집대상\n- 만 19세 이상 성인으로 최소 1회 이상 발목의 접질림으로 발목 외측 인대 부상 병력이 있는 경우\n- 최근 6개월 이내 최소 2회 이상 발목 관절의 ‘휘청거림’ 경험이 있는 경우\n\"발목의 휘청거림\"은 일시적으로 발목을 통제할 수 없는 불안정성이나 발목이 접질리는 느낌\n- 발목의 반복적인 접질림 때문에 일상생활 및 스포츠 활동에 어려움이 있는 경우\n\n2. 실험장소\n- 성균관대학교 자연과학캠퍼스 수성관 3층 스포츠재활 실험실\n\n3. 연구 내용 및 참여기간\n- 감각-인지 기반 개인 맞춤형 발목 재활 운동 프로그램 제공\n- 주 3회 (회당 약 30분), 총 4주 운동 재활 프로그램 진행\n\n4. 실험 참여 보상\n총 최대 현금 20만원의 연구 참여 사례비를 지급합니다.\n1) 실험 전 및 실험 후 발목 기능 평가 시, 4만원\n2) 12회 운동 재활 프로그램 참여 시, 12만원\n3) 추가로 주차별 성실 참여 인센티브 매주 1만원씩 최대 4만원\n\n5. 실험 참여 방법\n- 본 연구 참여 대상자라고 생각되시면, 포스터의 QR코드 또는 아래의 접속링크를 통해 발목 기능 점수 설문에 참여해 주세요. 설문 완료 후, 본 실험 참여가 가능한 분들께 개별적으로 연락 드리겠습니다.\n\n[실험참여 가능성 확인 Link_ 발목 기능성 설문조사]\nhttps://docs.google.com/forms/d/e/1FAIpQLSe6WT5bAHmrRezCis9sD1NFMHOiHvCdponnetLnl5QOpNeKhg/viewform\n\n6. 문의사항\n- 실험 참여와 관련된 문의사항이 있으신 분은 아래의 이메일로 연락 주시면 감사하겠습니다.\n(연구책임자 남승희 namsh210@g.skku.edu)",
+      "body_attempted_at": "2026-11-11T23:04:27.446323+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363752": {
+      "notice": {
+        "id": "linkareer-intern/363752",
+        "source_id": "linkareer-intern",
+        "article_no": "363752",
+        "title": "[삼일회계법인] 삼일피더블유씨엑셀러레이션센터  인사 채용·인사 운영 인턴 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363752",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T23:04:27.446323+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 인사 채용 및 운영 업무를 수행하는 직무로 소프트웨어 개발이나 데이터 분석 등 IT 관련 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[삼일회계법인] 삼일피더블유씨엑셀러레이션센터 인사 채용·인사 운영 인턴 채용\n접수 기간 2026-11-11 ~ 2026-11-15\n\n모집부문 및 상세내용\n모집 부문상세내용\n인사 채용·인사 운영\n(0명)담당업무\n인사팀의 HRM 운영 전반에 대한 실무를 지원합니다.\n- 채용 전형 운영 및 지원자 커뮤니케이션 지원\n- 임직원 인사정보 및 HR 데이터 관리\n- 입·퇴사 예정자 관련 프로세스 운영 및 인사 시스템 반영 지원\n- 인사 제도 및 프로그램 업무 지원\n- 인사팀 공통 업무 및 팀 서포트\n\n채용형태\n- 인턴 6개월\n\n직무관련\n- 2·3년제 전문대 이상 졸업생 또는 졸업(예정)자로 Full-Time 근무가 가능하신 분\n- 계약기간(입사일로부터 6개월) 동안 중도 이탈 없이 근무가 가능하신 분\n- HR 직무에 관심이 있으며 실제 조직 내 인사 업무를 경험해보고 싶으신 분\n- 채용 및 인사 운영 관련 업무를 꼼꼼하고 책임감 있게 수행하실 수 있는 분\n- 엑셀, 문서 작성 및 정리 등 기본적인 사무 업무 수행 역량을 갖추신 분\n- 다양한 이해관계자와 원활하게 소통하며 협업할 수 있는 분\n\n우대사항\n- 채용 운영, 인사 행정 등 HR 관련 업무 경험이 있으신 분\n- 엑셀을 활용한 데이터 정리 및 관리 업무에 익숙하신 분\n- 운영 지원 업무를 체계적으로 수행해본 경험이 있으신 분\n\n\n자격요건\n학력\n대학졸업(2,3년) 이상(졸업예정자 가능)\n\n근무조건\n급여\n회사 내규에 따름\n\n근무지역\n서울 용산구 서빙고로 17 삼일회계법인\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n인성 검사\n\nStep 3\n면접 전형\n\nStep 3\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-11 ~ 2026-11-15\n\n접수방법\n홈페이지 지원\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><img src=\"https://linkareer.com/images/activity/banner/template_3_banner.webp\"><div><h2>[삼일회계법인] 삼일피더블유씨엑셀러레이션센터  인사 채용·인사 운영 인턴 채용</h2><p>접수 기간 2026-11-11 ~ 2026-11-15</p></div><div><strong>모집부문 및 상세내용</strong></div><table><thead><tr><th>모집 부문</th><th>상세내용</th></tr></thead><tbody><tr><td>인사 채용·인사 운영<br> (0명)</td><td><div><div>담당업무</div><p>인사팀의 HRM 운영 전반에 대한 실무를 지원합니다.\n- 채용 전형 운영 및 지원자 커뮤니케이션 지원\n- 임직원 인사정보 및 HR 데이터 관리\n- 입·퇴사 예정자 관련 프로세스 운영 및 인사 시스템 반영 지원\n- 인사 제도 및 프로그램 업무 지원\n- 인사팀 공통 업무 및 팀 서포트</p></div><div><div>채용형태</div><p>- 인턴 6개월</p></div><div><p>직무관련\n- 2·3년제 전문대 이상 졸업생 또는 졸업(예정)자로 Full-Time 근무가 가능하신 분\n- 계약기간(입사일로부터 6개월) 동안 중도 이탈 없이 근무가 가능하신 분\n- HR 직무에 관심이 있으며 실제 조직 내 인사 업무를 경험해보고 싶으신 분\n- 채용 및 인사 운영 관련 업무를 꼼꼼하고 책임감 있게 수행하실 수 있는 분\n- 엑셀, 문서 작성 및 정리 등 기본적인 사무 업무 수행 역량을 갖추신 분\n- 다양한 이해관계자와 원활하게 소통하며 협업할 수 있는 분</p><p>\n우대사항\n- 채용 운영, 인사 행정 등 HR 관련 업무 경험이 있으신 분\n- 엑셀을 활용한 데이터 정리 및 관리 업무에 익숙하신 분\n- 운영 지원 업무를 체계적으로 수행해본 경험이 있으신 분</p></div></td></tr></tbody></table><div><strong>자격요건</strong></div><div><p>학력</p><p>대학졸업(2,3년) 이상(졸업예정자 가능)</p></div><div><strong>근무조건</strong></div><ul><li><p>급여</p><p>회사 내규에 따름</p></li><li><p>근무지역</p><div><p>서울 용산구 서빙고로 17 삼일회계법인 </p></div></li></ul><div><strong>전형 절차</strong></div><div><p>Step 1</p><p>서류전형</p></div><div><p>Step 2</p><p>인성 검사</p></div><div><p>Step 3</p><p>면접 전형</p></div><div><p>Step 3</p><p>최종합격</p></div><div><strong>지원 기간 및 방법</strong></div><ul><li><p>접수기간</p><p>2026-11-11 ~ 2026-11-15</p></li><li><p>접수방법</p><p>홈페이지 지원</p></li></ul><div><strong>유의사항</strong></div><ul><li>허위 사실이 발견될 경우 채용이 취소될 수 있습니다.</li></ul></div></div>",
+      "images": [
+        "https://linkareer.com/images/activity/banner/template_3_banner.webp"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T23:04:27.446323+09:00",
+      "page_text": "[삼일회계법인] 삼일피더블유씨엑셀러레이션센터 인사 채용·인사 운영 인턴 채용\n접수 기간 2026-11-11 ~ 2026-11-15\n\n모집부문 및 상세내용\n모집 부문상세내용\n인사 채용·인사 운영\n(0명)담당업무\n인사팀의 HRM 운영 전반에 대한 실무를 지원합니다.\n- 채용 전형 운영 및 지원자 커뮤니케이션 지원\n- 임직원 인사정보 및 HR 데이터 관리\n- 입·퇴사 예정자 관련 프로세스 운영 및 인사 시스템 반영 지원\n- 인사 제도 및 프로그램 업무 지원\n- 인사팀 공통 업무 및 팀 서포트\n\n채용형태\n- 인턴 6개월\n\n직무관련\n- 2·3년제 전문대 이상 졸업생 또는 졸업(예정)자로 Full-Time 근무가 가능하신 분\n- 계약기간(입사일로부터 6개월) 동안 중도 이탈 없이 근무가 가능하신 분\n- HR 직무에 관심이 있으며 실제 조직 내 인사 업무를 경험해보고 싶으신 분\n- 채용 및 인사 운영 관련 업무를 꼼꼼하고 책임감 있게 수행하실 수 있는 분\n- 엑셀, 문서 작성 및 정리 등 기본적인 사무 업무 수행 역량을 갖추신 분\n- 다양한 이해관계자와 원활하게 소통하며 협업할 수 있는 분\n\n우대사항\n- 채용 운영, 인사 행정 등 HR 관련 업무 경험이 있으신 분\n- 엑셀을 활용한 데이터 정리 및 관리 업무에 익숙하신 분\n- 운영 지원 업무를 체계적으로 수행해본 경험이 있으신 분\n\n\n자격요건\n학력\n대학졸업(2,3년) 이상(졸업예정자 가능)\n\n근무조건\n급여\n회사 내규에 따름\n\n근무지역\n서울 용산구 서빙고로 17 삼일회계법인\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n인성 검사\n\nStep 3\n면접 전형\n\nStep 3\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-11 ~ 2026-11-15\n\n접수방법\n홈페이지 지원\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
+      "body_attempted_at": "2026-11-11T23:04:27.446323+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "0bfc1a87d384541a45927015cd3c5e65a493198436f77565f938845dc4ebf3ec",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 인사 채용 및 운영 업무를 수행하는 직무로 소프트웨어 개발이나 데이터 분석 등 IT 관련 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363750": {
+      "notice": {
+        "id": "linkareer-intern/363750",
+        "source_id": "linkareer-intern",
+        "article_no": "363750",
+        "title": "[트립닷컴] Korea Brand Marketing Intern",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363750",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-11T23:04:27.446323+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 브랜드 마케팅 및 캠페인 운영을 담당하는 직무로 소프트웨어 개발이나 데이터 분석 등 IT 관련 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[트립닷컴] Korea Brand Marketing Intern\n\n\n[담당업무]\n1. Strategic Brand Management\n\n\nSupport the implementation of Trip.com's brand strategy in Korea aligned with business goals\nAssist in market, competitor, and consumer research\nHelp organize and structure brand materials, guidelines, and references\nContribute ideas to improve brand communication and positioning\n\n\n2. Brand Marketing Campaign Management\n\n\nSupport execution of integrated brand campaigns across online and offline channels (TVC, DOOH, digital, branding touchpoints)\nAssist in campaign rollout including asset deployment, timeline management, and deliverable tracking\nCoordinate with internal teams and external partners (Hotel & Flight BD, agencies, medias)\nSupport KOL campaign execution including sourcing assistance, communication, and shooting coordination\nSupport QC (quality check) of campaign materials to ensure alignment with brand guidelines\nAssist in managing campaign assets and ensuring timely delivery across channels\n\n\n3. Data, Reporting & Insights\n\n\nTrack and organize business and market trend data relevant to brand and campaign performance\nSupport campaign reporting through data consolidation and basic analysis\nMaintain regular updates on campaign progress and key metrics\n\n\n4. Budget & Operations\n\n\nSupport tracking of brand marketing budget and spend utilization\nAssist in maintaining cost sheets and campaign-related financial records\nProvide regular updates to the Brand Marketing Manager\n\n\n[접수기간]\n11월 11일 ~ 채용시 마감\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[트립닷컴] Korea Brand Marketing Intern</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>1. Strategic Brand Management</span></p><p><span>Support the implementation of Trip.com's brand strategy in Korea aligned with business goals</span></p><p><span>Assist in market, competitor, and consumer research</span></p><p><span>Help organize and structure brand materials, guidelines, and references</span></p><p><span>Contribute ideas to improve brand communication and positioning</span></p><p><span>2. Brand Marketing Campaign Management</span></p><p><span>Support execution of integrated brand campaigns across online and offline channels (TVC, DOOH, digital, branding touchpoints)</span></p><p><span>Assist in campaign rollout including asset deployment, timeline management, and deliverable tracking</span></p><p><span>Coordinate with internal teams and external partners (Hotel &amp; Flight BD, agencies, medias)</span></p><p><span>Support KOL campaign execution including sourcing assistance, communication, and shooting coordination</span></p><p><span>Support QC (quality check) of campaign materials to ensure alignment with brand guidelines</span></p><p><span>Assist in managing campaign assets and ensuring timely delivery across channels</span></p><p><span>3. Data, Reporting &amp; Insights</span></p><p><span>Track and organize business and market trend data relevant to brand and campaign performance</span></p><p><span>Support campaign reporting through data consolidation and basic analysis</span></p><p><span>Maintain regular updates on campaign progress and key metrics</span></p><p><span>4. Budget &amp; Operations</span></p><p><span>Support tracking of brand marketing budget and spend utilization</span></p><p><span>Assist in maintaining cost sheets and campaign-related financial records</span></p><p><span>Provide regular updates to the Brand Marketing Manager</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 11일 ~ 채용시 마감</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985954\" title=\"스크린샷_11-11-2026_22655_hire-r1.mokahr.com.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985954"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T23:04:27.446323+09:00",
+      "page_text": "[트립닷컴] Korea Brand Marketing Intern\n\n\n[담당업무]\n1. Strategic Brand Management\n\n\nSupport the implementation of Trip.com's brand strategy in Korea aligned with business goals\nAssist in market, competitor, and consumer research\nHelp organize and structure brand materials, guidelines, and references\nContribute ideas to improve brand communication and positioning\n\n\n2. Brand Marketing Campaign Management\n\n\nSupport execution of integrated brand campaigns across online and offline channels (TVC, DOOH, digital, branding touchpoints)\nAssist in campaign rollout including asset deployment, timeline management, and deliverable tracking\nCoordinate with internal teams and external partners (Hotel & Flight BD, agencies, medias)\nSupport KOL campaign execution including sourcing assistance, communication, and shooting coordination\nSupport QC (quality check) of campaign materials to ensure alignment with brand guidelines\nAssist in managing campaign assets and ensuring timely delivery across channels\n\n\n3. Data, Reporting & Insights\n\n\nTrack and organize business and market trend data relevant to brand and campaign performance\nSupport campaign reporting through data consolidation and basic analysis\nMaintain regular updates on campaign progress and key metrics\n\n\n4. Budget & Operations\n\n\nSupport tracking of brand marketing budget and spend utilization\nAssist in maintaining cost sheets and campaign-related financial records\nProvide regular updates to the Brand Marketing Manager\n\n\n[접수기간]\n11월 11일 ~ 채용시 마감\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-11T23:04:27.446323+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-09T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "7ff8b952b732a05b581445b4c446ada69354be2a00e5bbe0906271010088b0cf",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 브랜드 마케팅 및 캠페인 운영을 담당하는 직무로 소프트웨어 개발이나 데이터 분석 등 IT 관련 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      },
+      "translation_attempts": 1
+    },
     "linkareer-intern/363733": {
       "notice": {
         "id": "linkareer-intern/363733",
@@ -2346,7 +2505,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-23T23:59:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-11T23:04:27.446323+09:00"
     },
     "skku-notice01/141765": {
       "notice": {
@@ -2413,7 +2573,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-12-11T23:59:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-11T23:04:27.446323+09:00"
     },
     "skku-notice01/141760": {
       "notice": {
@@ -2465,7 +2626,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2026-11-18T17:00:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-11T23:04:27.446323+09:00"
     },
     "skku-career-intern/165155": {
       "notice": {

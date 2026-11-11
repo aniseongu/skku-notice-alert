@@ -1579,27 +1579,44 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 상품 운영 및 방송 모니터링을 수행하는 직무로, 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와는 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[카카오] 카카오 쇼핑라이브 상품 운영_어시스턴트\n\n\n\n\n◆ 업무내용\n카카오쇼핑라이브 상품 운영 전반적인 서포트\n라이브 상품 코드 세팅 및 운영\n방송 운영 전반적인 시스템 서포트\n커머스 트렌드 리서치\n라이브 방송 모니터링 & 댓글 대응\n\n\n\n\n◆ 지원자격\n모바일 쇼핑 및 커머스 트렌드에 대한 관심이 많으신 분\n이커머스에 관심이 많으신 분\n성실하고 꼼꼼하며 책임감이 강하신 분\n바로 업무 및 3개월 이상 근무 가능하신 분\n주말 업무 가능하신 분 (평일 대체 휴무)\n\n\n\n\n◆우대사항\n엑셀, 포토샵 사용 가능하신 분\n타 유통사 근무 경험 있으신 분\n모바일 라이브 업무 경험이 있으신 분",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><span><b>[카카오] 카카오 쇼핑라이브 상품 운영_어시스턴트</b></span></p><p><span>◆ 업무내용</span></p><p><span>카카오쇼핑라이브 상품 운영 전반적인 서포트</span></p><p><span>라이브 상품 코드 세팅 및 운영</span></p><p><span>방송 운영 전반적인 시스템 서포트</span></p><p><span>커머스 트렌드 리서치</span></p><p><span>라이브 방송 모니터링 &amp; 댓글 대응</span></p><p><span>◆ 지원자격</span></p><p><span>모바일 쇼핑 및 커머스 트렌드에 대한 관심이 많으신 분</span></p><p><span>이커머스에 관심이 많으신 분</span></p><p><span>성실하고 꼼꼼하며 책임감이 강하신 분</span></p><p><span>바로 업무 및 3개월 이상 근무 가능하신 분</span></p><p><span>주말 업무 가능하신 분 (평일 대체 휴무)</span></p><p><span>◆우대사항</span></p><p><span>엑셀, 포토샵 사용 가능하신 분</span></p><p><span>타 유통사 근무 경험 있으신 분</span></p><p><span>모바일 라이브 업무 경험이 있으신 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/985599\" title=\"20261111_135418.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/985599"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-11T21:14:13.392253+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2027-02-09T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "page_text": "[카카오] 카카오 쇼핑라이브 상품 운영_어시스턴트\n\n\n\n\n◆ 업무내용\n카카오쇼핑라이브 상품 운영 전반적인 서포트\n라이브 상품 코드 세팅 및 운영\n방송 운영 전반적인 시스템 서포트\n커머스 트렌드 리서치\n라이브 방송 모니터링 & 댓글 대응\n\n\n\n\n◆ 지원자격\n모바일 쇼핑 및 커머스 트렌드에 대한 관심이 많으신 분\n이커머스에 관심이 많으신 분\n성실하고 꼼꼼하며 책임감이 강하신 분\n바로 업무 및 3개월 이상 근무 가능하신 분\n주말 업무 가능하신 분 (평일 대체 휴무)\n\n\n\n\n◆우대사항\n엑셀, 포토샵 사용 가능하신 분\n타 유통사 근무 경험 있으신 분\n모바일 라이브 업무 경험이 있으신 분",
+      "body_attempted_at": "2026-11-11T21:14:13.392253+09:00",
+      "intern_judgment": {
+        "fingerprint": "a840adc459c5f4aaeb7be952ae90266805641a7e1b13605ce7521f8998bb4e01",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 상품 운영 및 방송 모니터링을 수행하는 직무로, 소프트웨어 개발이나 데이터 분석 등 IT 기술 직무와는 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "skku-notice01/141783": {
@@ -9058,7 +9075,7 @@
         "at": "2026-12-04T14:00:00+09:00"
       },
       "page_text": "장애학생지원센터에서 '2026년도 사회적 장애인식개선교육'을 진행하오니 학생분들의 많은 참여 부탁드립니다.\n\n◎일시 : 2026.12.4(금) 14:00~15:00\n◎대상 : 학부 및 대학원생\n◎장소 : 성균관대학교 인문과학캠퍼스 국제관 9B218\n◎강사 : 신홍윤(보건복지부 장애청년 정책위원회 위원)\n◎참여 방법 : 현장접수\n◎참여혜택 : 교내 인성품 봉사 2시간 부여(학부생 한정)\n\n◎문의 : 장애학생지원센터\nTel. 02-760-1090 / 031-299-4425\nE-mail. supporter@skku.edu\n\n*상기 일정 및 내용은 변동 될 수 있습니다.",
-      "rechecked_at": "2026-11-11T07:26:39.957595+09:00"
+      "rechecked_at": "2026-11-11T21:14:13.392253+09:00"
     },
     "cse-notice/228224": {
       "notice": {
@@ -9110,7 +9127,7 @@
         "at": "2026-11-25T15:00:00+09:00"
       },
       "page_text": "Title: Variational Diffusion Model: Line-by-line derivations\n\nSpeaker: Prof. Jooyeon Kim @ UNIST\n\nTime : 15:00 - 16:00, Nov 25, 2026\n\nLocation:\nOnline: https://zoom.us/j/83139609156\nMeeting ID: 831 3960 9156\nPasscode: 91818154\n\nLanguage: English speech & English slides\n\nAbstract:\nDiffusion models are making real-world impacts across multiple data modalities and applications. In this lecture, I aim to mathematically derive the variational diffusion models from scratch using variational approaches. I start by constructing and expanding the evidence lower bound (ELBO). Once we derive the final results, which are the neural network parameter update rules, they can be used directly at the code level.\n\nBio:\nJooyeon Kim is an assistant professor at UNIST. He obtained his BS degree at the University of Tokyo, and his MS and Ph.D. degrees at KAIST. He worked as a researcher at Microsoft Research Cambridge (MSRC) for a year and a half and as a postdoctoral researcher at RIKEN for another year and a half. He is currently interested in (in no particular order): world models, model scaling, generalization, generative models (transformers, diffusions). He is also the founder and CEO of a startup company, ARI.AI, that aims to develop AI foundation models that operate on predictive individual, health-related, measurable biological indicators.",
-      "rechecked_at": "2026-11-11T07:26:39.957595+09:00"
+      "rechecked_at": "2026-11-11T21:14:13.392253+09:00"
     },
     "skku-career-intern/165093": {
       "notice": {
@@ -10596,7 +10613,7 @@
       "body_attempts": 2,
       "fetched_at": "2026-11-07T02:18:21.718635+09:00",
       "body_attempted_at": "2026-11-07T02:18:21.718635+09:00",
-      "rechecked_at": "2026-11-11T07:26:39.957595+09:00",
+      "rechecked_at": "2026-11-11T21:14:13.392253+09:00",
       "changed_at": "2026-11-07T02:18:21.718635+09:00",
       "change_kind": "본문",
       "ai_deadline": {

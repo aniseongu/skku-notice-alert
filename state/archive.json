@@ -4212,7 +4212,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 글로벌 마케팅 및 SNS 운영을 담당하는 마케팅 직무로 소프트웨어 개발이나 데이터 분석과는 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -4236,7 +4241,13 @@
         "model": "source"
       },
       "page_text": "",
-      "body_attempted_at": "2026-11-13T02:29:20.219176+09:00"
+      "body_attempted_at": "2026-11-13T02:29:20.219176+09:00",
+      "intern_judgment": {
+        "fingerprint": "4c0cb492166c667e973b695914e666b464a336566bc4cad5ace948d3ceb01de0",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 글로벌 마케팅 및 SNS 운영을 담당하는 마케팅 직무로 소프트웨어 개발이나 데이터 분석과는 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "linkareer-intern/364109": {
       "notice": {
@@ -7729,7 +7740,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 호텔 객실 예약 및 고객 응대를 담당하는 서비스 직무로 소프트웨어 개발이나 데이터 분석과는 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[호텔롯데] 롯데시티호텔 L-Crew(체험형 인턴) 채용(통합객실예약)(12월)\n\n\n\n\n■ 주요 업무\n1) Direct booking 진행 및 고객 전화문의 응대\n2) 이메일, OTA, 기업체 단체 예약 및 관리\n3) 노쇼, 리컨펌 등 전반적인 호텔 예약 업무\n\n\n■ 우대 사항\n1) 외국어 우수자\n2) 관련 경력 보유자\n3) Opera 활용 가능자\n\n\n■ 전형단계\n1) 입사지원 > 서류전형 > 면접전형 > LIST검사 > 신체검사 > 최종합격",
@@ -7752,7 +7768,13 @@
         "model": "source"
       },
       "page_text": "[호텔롯데] 롯데시티호텔 L-Crew(체험형 인턴) 채용(통합객실예약)(12월)\n\n\n\n\n■ 주요 업무\n1) Direct booking 진행 및 고객 전화문의 응대\n2) 이메일, OTA, 기업체 단체 예약 및 관리\n3) 노쇼, 리컨펌 등 전반적인 호텔 예약 업무\n\n\n■ 우대 사항\n1) 외국어 우수자\n2) 관련 경력 보유자\n3) Opera 활용 가능자\n\n\n■ 전형단계\n1) 입사지원 > 서류전형 > 면접전형 > LIST검사 > 신체검사 > 최종합격",
-      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00"
+      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00",
+      "intern_judgment": {
+        "fingerprint": "a8e8e951d9b42a078a49c1c362b35cfbf29491954db913fc91065484dc095092",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 호텔 객실 예약 및 고객 응대를 담당하는 서비스 직무로 소프트웨어 개발이나 데이터 분석과는 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
     },
     "jasoseol-intern/107179": {
       "notice": {
@@ -12414,7 +12436,7 @@
         "kind": "마감",
         "at": "2026-11-18T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-12T13:30:14.684624+09:00"
+      "rechecked_at": "2026-11-13T03:24:27.426481+09:00"
     },
     "skku-notice01/141425": {
       "notice": {
@@ -15768,7 +15790,7 @@
       "body_attempts": 2,
       "fetched_at": "2026-11-07T02:18:21.718635+09:00",
       "body_attempted_at": "2026-11-07T02:18:21.718635+09:00",
-      "rechecked_at": "2026-11-11T21:14:13.392253+09:00",
+      "rechecked_at": "2026-11-13T03:24:27.426481+09:00",
       "changed_at": "2026-11-07T02:18:21.718635+09:00",
       "change_kind": "본문",
       "ai_deadline": {
@@ -15830,7 +15852,7 @@
       "body_attempts": 2,
       "fetched_at": "2026-11-07T02:18:21.718635+09:00",
       "body_attempted_at": "2026-11-07T02:18:21.718635+09:00",
-      "rechecked_at": "2026-11-11T22:09:26.299520+09:00",
+      "rechecked_at": "2026-11-13T03:24:27.426481+09:00",
       "changed_at": "2026-11-07T02:18:21.718635+09:00",
       "change_kind": "본문",
       "translation": {

@@ -225,6 +225,442 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "jasoseol-intern/107219": {
+      "notice": {
+        "id": "jasoseol-intern/107219",
+        "source_id": "jasoseol-intern",
+        "article_no": "107219",
+        "title": "[에이피알] [품질] 뷰티디바이스 수입검사 담당 채용연계형 인턴사원 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107219",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "품질 검사 및 관리 직무로 소프트웨어 개발과 직접적인 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/909/webp/%EA%B3%B5%EA%B3%A0_%281%29.webp?1794469768\" alt=\"에이피알 [품질] 뷰티디바이스 수입검사 담당 채용연계형 인턴사원 모집\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/909/webp/%EA%B3%B5%EA%B3%A0_%281%29.webp?1794469768"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-13T00:39:05.962669+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-01-10T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "44cd9b11e4df58f66e11dfa2f5e50cc3b7eccef30e5de6e2b8b289f2431e12c2",
+        "verdict": "not_relevant",
+        "reason": "품질 검사 및 관리 직무로 소프트웨어 개발과 직접적인 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107213": {
+      "notice": {
+        "id": "jasoseol-intern/107213",
+        "source_id": "jasoseol-intern",
+        "article_no": "107213",
+        "title": "[에이피알] [마케팅] 동남아 틱톡샵 어필리에이트 마케팅 채용연계형 인턴사원 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107213",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-01-10T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/107203": {
+      "notice": {
+        "id": "jasoseol-intern/107203",
+        "source_id": "jasoseol-intern",
+        "article_no": "107203",
+        "title": "[에어퍼스트] 2027년 각 부문 동계인턴 채용공고",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107203",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-26T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/107191": {
+      "notice": {
+        "id": "jasoseol-intern/107191",
+        "source_id": "jasoseol-intern",
+        "article_no": "107191",
+        "title": "[교보생명] 2026 채용연계형 인턴 모집",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107191",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "자산운용, 영업, Wealth Manager 직무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/750/webp/image.webp?1794372938\" alt=\"교보생명 2026 채용연계형 인턴 모집\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/750/webp/image.webp?1794372938"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-13T00:39:05.962669+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "fc201b2fb612172d7b575ffd7128b1fc88ead7ac78384f789f405290c42c2132",
+        "verdict": "not_relevant",
+        "reason": "자산운용, 영업, Wealth Manager 직무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107174": {
+      "notice": {
+        "id": "jasoseol-intern/107174",
+        "source_id": "jasoseol-intern",
+        "article_no": "107174",
+        "title": "[오오비컴퍼니] 2026년 4분기 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107174",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "마케팅 및 디자인 직무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/604/webp/image.webp?1794295678\" alt=\"오오비컴퍼니 2026년 4분기 채용\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/604/webp/image.webp?1794295678"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-13T00:39:05.962669+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T15:00:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "aadeabb544d23f94bb6a3708e039bbd2011315f4a83b9972f7e5e8f9ab83f2ae",
+        "verdict": "not_relevant",
+        "reason": "마케팅 및 디자인 직무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/107168": {
+      "notice": {
+        "id": "jasoseol-intern/107168",
+        "source_id": "jasoseol-intern",
+        "article_no": "107168",
+        "title": "[ST인터내셔널] 2027년 상반기 채용연계형 인턴 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107168",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "마케팅, 사업개발, 엔지니어링(토목/기계/전기/화공), 부동산투자 직무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/875/webp/_ST%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%84%82%E1%85%A2%E1%84%89%E1%85%A7%E1%84%82%E1%85%A5%E1%86%AF__2027%E1%84%82%E1%85%A7%E1%86%AB_%E1%84%89%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A1%E1%86%AB%E1%84%80%E1%85%B5_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%AD%E1%86%BC_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A9.webp?1794459144\" alt=\"ST인터내셔널 2027년 상반기 채용연계형 인턴 채용\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/376/875/webp/_ST%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%84%82%E1%85%A2%E1%84%89%E1%85%A7%E1%84%82%E1%85%A5%E1%86%AF__2027%E1%84%82%E1%85%A7%E1%86%AB_%E1%84%89%E1%85%A1%E1%86%BC%E1%84%87%E1%85%A1%E1%86%AB%E1%84%80%E1%85%B5_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%AD%E1%86%BC_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A9.webp?1794459144"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-13T00:39:05.962669+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "853cc68dac61c9558fd12b054e8d308af9045ef25acb27e8a3a0f6f5f6d92357",
+        "verdict": "not_relevant",
+        "reason": "마케팅, 사업개발, 엔지니어링(토목/기계/전기/화공), 부동산투자 직무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "jasoseol-intern/106663": {
+      "notice": {
+        "id": "jasoseol-intern/106663",
+        "source_id": "jasoseol-intern",
+        "article_no": "106663",
+        "title": "[모두닥] [휴학생 우대/월 350만원] 비즈니스 실전 체험 인턴 (세일즈·마케팅)",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106663",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106662": {
+      "notice": {
+        "id": "jasoseol-intern/106662",
+        "source_id": "jasoseol-intern",
+        "article_no": "106662",
+        "title": "[모두닥] [채용전환형/월 500만원] Problem Solver - 인플루언서 마케팅 인턴",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106662",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:00+09:00",
+        "model": "source"
+      }
+    },
+    "jasoseol-intern/106661": {
+      "notice": {
+        "id": "jasoseol-intern/106661",
+        "source_id": "jasoseol-intern",
+        "article_no": "106661",
+        "title": "[모두닥] [채용전환형/월 500만원] Problem Solver - Product Marketer 인턴",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/106661",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "프로덕트 마케터 직무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/020/webp/70c716bc-image.webp?1791767673\"></div>",
+      "images": [
+        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/020/webp/70c716bc-image.webp?1791767673"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-13T00:39:05.962669+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "fb13f6995b3caf580a7ffe003b8ae119e8665bb21f33b044d1a579834e51a66f",
+        "verdict": "not_relevant",
+        "reason": "프로덕트 마케터 직무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "linkareer-intern/364100": {
       "notice": {
         "id": "linkareer-intern/364100",
@@ -353,27 +789,44 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "중화권 마케팅 직무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[뷰티셀렉션] [Biodance] 중화권 마케팅 인턴 (채용연계형)\n\n\n[담당업무]\n인플루언서 발굴과 협업 제안\n인스타그램, 유튜브 등 플랫폼별로 홍콩 현지 인플루언서(KOL·KOC)를 찾고, DM·이메일로 시딩 및 공동구매 협업을 제안해요\n홍콩 인플루언서 데이터베이스(팔로워 규모·카테고리·협업 이력 등)를 관리하고, 브랜드 캠페인에 초대할 인플루언서 리스트를 만들어요\n시딩 운영과 성과 트래킹\n시딩 인플루언서에게 제품과 브리핑 자료를 전달하고, 업로드된 콘텐츠 검수를 지원해요\n시딩 샘플 수량을 요청하고 발송 현황과 커뮤니케이션을 꼼꼼하게 관리해요\n시딩 현황과 콘텐츠 성과(조회수·참여율·D2C 유입 및 전환)를 정리하고 주간 리포트를 지원해요\n공식 SNS 계정 운영\n바이오던스 공식 SNS 계정을 운영해요\n바이오던스의 콘텐츠와 여러 광고 소재를 기획해요\n인플루언서 공동구매 운영 지원\n홍콩 인플루언서 공동구매(團購)를 섭외하고, 일정·조건·제품 준비 등 진행 실무를 지원해요\n시장 조사와 브랜드 자료 현지화\n홍콩 뷰티 시장, 경쟁 K-뷰티 브랜드, 현지 리테일(Watsons, Mannings 등)·온라인 채널 트렌드를 조사해 제품별 소구 포인트와 콘텐츠 방향을 정리해요\n브랜드 소개서, 제품 상세 정보 등 마케팅 자료를 홍콩 현지 표현에 맞게 현지화해요\n그 밖에 팀의 운영 실무를 함께 진행해요\n업무에 필요한 행정 처리와 리서치를 지원해요\n\n\n[접수기간]\n11월 12일 ~ 상시 모집\n\n\n[채용공고]",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><b><span>[뷰티셀렉션] [Biodance] 중화권 마케팅 인턴 (채용연계형)</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>인플루언서 발굴과 협업 제안</span></p><p><span>인스타그램, 유튜브 등 플랫폼별로 홍콩 현지 인플루언서(KOL·KOC)를 찾고, DM·이메일로 시딩 및 공동구매 협업을 제안해요</span></p><p><span>홍콩 인플루언서 데이터베이스(팔로워 규모·카테고리·협업 이력 등)를 관리하고, 브랜드 캠페인에 초대할 인플루언서 리스트를 만들어요</span></p><p><span>시딩 운영과 성과 트래킹</span></p><p><span>시딩 인플루언서에게 제품과 브리핑 자료를 전달하고, 업로드된 콘텐츠 검수를 지원해요</span></p><p><span>시딩 샘플 수량을 요청하고 발송 현황과 커뮤니케이션을 꼼꼼하게 관리해요</span></p><p><span>시딩 현황과 콘텐츠 성과(조회수·참여율·D2C 유입 및 전환)를 정리하고 주간 리포트를 지원해요</span></p><p><span>공식 SNS 계정 운영</span></p><p><span>바이오던스 공식 SNS 계정을 운영해요</span></p><p><span>바이오던스의 콘텐츠와 여러 광고 소재를 기획해요</span></p><p><span>인플루언서 공동구매 운영 지원</span></p><p><span>홍콩 인플루언서 공동구매(團購)를 섭외하고, 일정·조건·제품 준비 등 진행 실무를 지원해요</span></p><p><span>시장 조사와 브랜드 자료 현지화</span></p><p><span>홍콩 뷰티 시장, 경쟁 K-뷰티 브랜드, 현지 리테일(Watsons, Mannings 등)·온라인 채널 트렌드를 조사해 제품별 소구 포인트와 콘텐츠 방향을 정리해요</span></p><p><span>브랜드 소개서, 제품 상세 정보 등 마케팅 자료를 홍콩 현지 표현에 맞게 현지화해요</span></p><p><span>그 밖에 팀의 운영 실무를 함께 진행해요</span></p><p><span>업무에 필요한 행정 처리와 리서치를 지원해요</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 12일 ~ 상시 모집</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/987048\" title=\"CaptureX_2026-11-12_212357_www.beautyselection.co.kr.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/987048"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-13T00:39:05.962669+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2027-02-10T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "page_text": "[뷰티셀렉션] [Biodance] 중화권 마케팅 인턴 (채용연계형)\n\n\n[담당업무]\n인플루언서 발굴과 협업 제안\n인스타그램, 유튜브 등 플랫폼별로 홍콩 현지 인플루언서(KOL·KOC)를 찾고, DM·이메일로 시딩 및 공동구매 협업을 제안해요\n홍콩 인플루언서 데이터베이스(팔로워 규모·카테고리·협업 이력 등)를 관리하고, 브랜드 캠페인에 초대할 인플루언서 리스트를 만들어요\n시딩 운영과 성과 트래킹\n시딩 인플루언서에게 제품과 브리핑 자료를 전달하고, 업로드된 콘텐츠 검수를 지원해요\n시딩 샘플 수량을 요청하고 발송 현황과 커뮤니케이션을 꼼꼼하게 관리해요\n시딩 현황과 콘텐츠 성과(조회수·참여율·D2C 유입 및 전환)를 정리하고 주간 리포트를 지원해요\n공식 SNS 계정 운영\n바이오던스 공식 SNS 계정을 운영해요\n바이오던스의 콘텐츠와 여러 광고 소재를 기획해요\n인플루언서 공동구매 운영 지원\n홍콩 인플루언서 공동구매(團購)를 섭외하고, 일정·조건·제품 준비 등 진행 실무를 지원해요\n시장 조사와 브랜드 자료 현지화\n홍콩 뷰티 시장, 경쟁 K-뷰티 브랜드, 현지 리테일(Watsons, Mannings 등)·온라인 채널 트렌드를 조사해 제품별 소구 포인트와 콘텐츠 방향을 정리해요\n브랜드 소개서, 제품 상세 정보 등 마케팅 자료를 홍콩 현지 표현에 맞게 현지화해요\n그 밖에 팀의 운영 실무를 함께 진행해요\n업무에 필요한 행정 처리와 리서치를 지원해요\n\n\n[접수기간]\n11월 12일 ~ 상시 모집\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00",
+      "intern_judgment": {
+        "fingerprint": "826cc132e4841e4dff99ec66566117664bfff5fe98c30dd9037c2499d0fd4068",
+        "verdict": "not_relevant",
+        "reason": "중화권 마케팅 직무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/364097": {
@@ -397,23 +850,27 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[앳홈] [톰(THOME)/글로벌/디바이스] 인플루언서 마케팅 전환형 인턴 (틱톡샵)\n\n\n[담당업무]\n크리에이터 발굴: 피부고민(에이징·광채·진정 등)별로 소비자를 움직이는 미국 크리에이터를 찾고 협업 적합도를 판단합니다.\n아웃리치·협상: 크리에이터별 맞춤 영문 DM·이메일로 컨택하고, 매니저·에이전시와 조건을 협의합니다.\n협업 운영: 계약, 샘플 발송, 브리프 전달, 드래프트 검수, 게시까지 일정을 관리합니다.\n관계 관리: 선물·손편지 등 개인화된 관계 터치를 하고, 협업이 끝난 뒤에도 재협업으로 이어갑니다.\n성과 트래킹: 콘텐츠별 조회수·GMV를 정리하고, 성과가 좋은 크리에이터를 장기협업 후보로 제안합니다.\n\n\n[접수기간]\n11월 12일 ~ 상시 모집\n\n\n[채용공고]",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><b><span>[앳홈] [톰(THOME)/글로벌/디바이스] 인플루언서 마케팅 전환형 인턴 (틱톡샵)</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>크리에이터 발굴: 피부고민(에이징·광채·진정 등)별로 소비자를 움직이는 미국 크리에이터를 찾고 협업 적합도를 판단합니다.</span></p><p><span>아웃리치·협상: 크리에이터별 맞춤 영문 DM·이메일로 컨택하고, 매니저·에이전시와 조건을 협의합니다.</span></p><p><span>협업 운영: 계약, 샘플 발송, 브리프 전달, 드래프트 검수, 게시까지 일정을 관리합니다.</span></p><p><span>관계 관리: 선물·손편지 등 개인화된 관계 터치를 하고, 협업이 끝난 뒤에도 재협업으로 이어갑니다.</span></p><p><span>성과 트래킹: 콘텐츠별 조회수·GMV를 정리하고, 성과가 좋은 크리에이터를 장기협업 후보로 제안합니다.</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 12일 ~ 상시 모집</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/987042\" title=\"CaptureX_2026-11-12_212057_career.athomecorp.com.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/987042"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-13T00:39:05.962669+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2027-02-10T23:59:59.999000+09:00",
         "model": "source"
-      }
+      },
+      "page_text": "[앳홈] [톰(THOME)/글로벌/디바이스] 인플루언서 마케팅 전환형 인턴 (틱톡샵)\n\n\n[담당업무]\n크리에이터 발굴: 피부고민(에이징·광채·진정 등)별로 소비자를 움직이는 미국 크리에이터를 찾고 협업 적합도를 판단합니다.\n아웃리치·협상: 크리에이터별 맞춤 영문 DM·이메일로 컨택하고, 매니저·에이전시와 조건을 협의합니다.\n협업 운영: 계약, 샘플 발송, 브리프 전달, 드래프트 검수, 게시까지 일정을 관리합니다.\n관계 관리: 선물·손편지 등 개인화된 관계 터치를 하고, 협업이 끝난 뒤에도 재협업으로 이어갑니다.\n성과 트래킹: 콘텐츠별 조회수·GMV를 정리하고, 성과가 좋은 크리에이터를 장기협업 후보로 제안합니다.\n\n\n[접수기간]\n11월 12일 ~ 상시 모집\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00"
     },
     "linkareer-intern/364093": {
       "notice": {
@@ -3655,6 +4112,45 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "jasoseol-intern/107208": {
+      "notice": {
+        "id": "jasoseol-intern/107208",
+        "source_id": "jasoseol-intern",
+        "article_no": "107208",
+        "title": "[삼구아이앤씨] 신세계인터내셔날 코스메틱부문 비디비치 마케팅팀 글로벌 인턴 채용",
+        "category": "인턴",
+        "url": "https://jasoseol.com/recruit/107208",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-14T23:59:00+09:00",
+        "model": "source"
+      }
+    },
     "linkareer-intern/364109": {
       "notice": {
         "id": "linkareer-intern/364109",
@@ -3671,7 +4167,9 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
@@ -6958,6 +7456,92 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/364115": {
+      "notice": {
+        "id": "linkareer-intern/364115",
+        "source_id": "linkareer-intern",
+        "article_no": "364115",
+        "title": "[호텔롯데] 롯데시티호텔 명동 L-CREW(체험형 인턴) 채용(12월)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/364115",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[호텔롯데] 롯데시티호텔 명동 L-CREW(체험형 인턴) 채용(12월)\n\n\n[담당업무]\n1) 고객 응대 및 객실 배정\n2) 객실 요금 정산\n3) VOC 관리\n\n\n[접수기간]\n11월 10일 ~ 11월 22일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[호텔롯데] 롯데시티호텔 명동 L-CREW(체험형 인턴) 채용(12월)</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>&nbsp; &nbsp; 1) 고객 응대 및 객실 배정</span></p><p><span>&nbsp; &nbsp; 2) 객실 요금 정산</span></p><p><span>&nbsp; &nbsp; 3) VOC 관리</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 10일 ~ 11월 22일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/987090\" title=\"CaptureX_2026-11-12_225806_career.lottehotel.com.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/987090"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-13T00:39:05.962669+09:00",
+      "page_text": "[호텔롯데] 롯데시티호텔 명동 L-CREW(체험형 인턴) 채용(12월)\n\n\n[담당업무]\n1) 고객 응대 및 객실 배정\n2) 객실 요금 정산\n3) VOC 관리\n\n\n[접수기간]\n11월 10일 ~ 11월 22일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/364114": {
+      "notice": {
+        "id": "linkareer-intern/364114",
+        "source_id": "linkareer-intern",
+        "article_no": "364114",
+        "title": "[호텔롯데] 롯데시티호텔 대전 L-Crew(체험형 인턴) 채용_식음/조리(12월)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/364114",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-13T00:39:05.962669+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[호텔롯데] 롯데시티호텔 대전 L-Crew(체험형 인턴) 채용_식음/조리(12월)\n\n\n[모집부문]\n조리부문\n식음부문\n\n\n[접수기간]\n11월 10일 ~ 11월 22일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[호텔롯데] 롯데시티호텔 대전 L-Crew(체험형 인턴) 채용_식음/조리(12월)</span></b></p><p><b><span>[모집부문]</span></b></p><p><span>조리부문</span></p><p><span>식음부문</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 10일 ~ 11월 22일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/987089\" title=\"CaptureX_2026-11-12_225406_career.lottehotel.com.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/987089"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-13T00:39:05.962669+09:00",
+      "page_text": "[호텔롯데] 롯데시티호텔 대전 L-Crew(체험형 인턴) 채용_식음/조리(12월)\n\n\n[모집부문]\n조리부문\n식음부문\n\n\n[접수기간]\n11월 10일 ~ 11월 22일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "linkareer-intern/363814": {
       "notice": {
         "id": "linkareer-intern/363814",
@@ -7035,23 +7619,27 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[호텔롯데] 롯데시티호텔 L-Crew(체험형 인턴) 채용(통합객실예약)(12월)\n\n\n\n\n■ 주요 업무\n1) Direct booking 진행 및 고객 전화문의 응대\n2) 이메일, OTA, 기업체 단체 예약 및 관리\n3) 노쇼, 리컨펌 등 전반적인 호텔 예약 업무\n\n\n■ 우대 사항\n1) 외국어 우수자\n2) 관련 경력 보유자\n3) Opera 활용 가능자\n\n\n■ 전형단계\n1) 입사지원 > 서류전형 > 면접전형 > LIST검사 > 신체검사 > 최종합격",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><span><b>[호텔롯데] 롯데시티호텔 L-Crew(체험형 인턴) 채용(통합객실예약)(12월)</b></span></p><p><span>&nbsp; ■ 주요 업무</span></p><p><span>&nbsp; &nbsp; 1) Direct booking 진행 및 고객 전화문의 응대</span></p><p><span>&nbsp; &nbsp; 2) 이메일, OTA, 기업체 단체 예약 및 관리</span></p><p><span>&nbsp; &nbsp; 3) 노쇼, 리컨펌 등 전반적인 호텔 예약 업무</span></p><p><span>&nbsp; ■ 우대 사항</span></p><p><span>&nbsp; &nbsp; 1) 외국어 우수자</span></p><p><span>&nbsp; &nbsp; 2) 관련 경력 보유자</span></p><p><span>&nbsp; &nbsp; 3) Opera 활용 가능자</span></p><p><span>&nbsp; ■ 전형단계</span></p><p><span>&nbsp; &nbsp; 1) 입사지원 &gt; 서류전형 &gt; 면접전형 &gt; LIST검사 &gt; 신체검사 &gt; 최종합격</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/986165\" title=\"20261112_091340.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/986165"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-13T00:39:05.962669+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2026-11-22T23:59:59.999000+09:00",
         "model": "source"
-      }
+      },
+      "page_text": "[호텔롯데] 롯데시티호텔 L-Crew(체험형 인턴) 채용(통합객실예약)(12월)\n\n\n\n\n■ 주요 업무\n1) Direct booking 진행 및 고객 전화문의 응대\n2) 이메일, OTA, 기업체 단체 예약 및 관리\n3) 노쇼, 리컨펌 등 전반적인 호텔 예약 업무\n\n\n■ 우대 사항\n1) 외국어 우수자\n2) 관련 경력 보유자\n3) Opera 활용 가능자\n\n\n■ 전형단계\n1) 입사지원 > 서류전형 > 면접전형 > LIST검사 > 신체검사 > 최종합격",
+      "body_attempted_at": "2026-11-13T00:39:05.962669+09:00"
     },
     "jasoseol-intern/107179": {
       "notice": {
@@ -8181,7 +8769,7 @@
         "at": "2026-11-24T15:00:00+09:00"
       },
       "summary_last_failed_at": null,
-      "rechecked_at": "2026-11-12T09:39:12.630524+09:00"
+      "rechecked_at": "2026-11-13T00:39:05.962669+09:00"
     },
     "skku-notice01/141738": {
       "notice": {
@@ -8229,7 +8817,7 @@
         "model": "gemini-3.1-flash-lite"
       },
       "summary_last_failed_at": null,
-      "rechecked_at": "2026-11-12T10:36:12.172628+09:00"
+      "rechecked_at": "2026-11-13T00:39:05.962669+09:00"
     },
     "skku-career-intern/165145": {
       "notice": {
@@ -8816,7 +9404,7 @@
         "at": "2026-11-24T15:00:00+09:00"
       },
       "summary_last_failed_at": null,
-      "rechecked_at": "2026-11-12T10:36:12.172628+09:00"
+      "rechecked_at": "2026-11-13T00:39:05.962669+09:00"
     },
     "skku-notice01/141732": {
       "notice": {
@@ -26041,528 +26629,6 @@
       },
       "summary": "삼성그룹 임원 초청 멘토링이 2026년 11월 24일 10시부터 인문사회과학캠퍼스에서 진행됩니다. 재학생은 잡센터 홈페이지를 통해 신청할 수 있으며 신청 시 사전 질문을 반드시 작성해야 합니다.",
       "summary_last_failed_at": null
-    },
-    "skku-notice01/141510": {
-      "notice": {
-        "id": "skku-notice01/141510",
-        "source_id": "skku-notice01",
-        "article_no": "141510",
-        "title": "[마감] [뇌과학이미징연구단] 이야기/사건 지각 온라인 실험 참여자 모집",
-        "category": "채용/모집",
-        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141510",
-        "posted_on": "2026-11-03",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "안녕하세요.\n\n성균관대학교 뇌과학 이미징 연구단에서 이야기/사건 지각에 관한 심리학 실험 참여자를 모집합니다. 본 실험은 사람들이 이야기/사건을 어떻게 지각하는지 그 메커니즘을 이해하는 것을 목적으로 합니다.\n\n아래 기재되어 있는 실험 내용을 확인하시고 실험 참여가 가능하신 분은 설문지를 작성해주신 후 저희 연구실 카카오톡 채널로 연락 바랍니다.\n\n1. 실험 장소:\n온라인 (실험 참여자에게 실험 웹사이트 링크 공유)\n\n2. 실험 내용:\n- 본 실험에서 여러분은 음악을 듣고 영상(애니메이션, 단편 영화)을 보면서 사건을 의미 있는 단위로 나누는 분할 과제를 수행합니다. 자세한 방법은 실험 중에 안내해 드립니다.\n\n- 음악 경험 설문과 미디어 사용 설문(휴대폰 스크린 타임 캡처 업로드 포함)에 응답합니다. 응답은 연구 목적으로만 사용되며 익명으로 처리됩니다.\n\n- 온라인으로, 원하는 시간에 본인의 컴퓨터에서 참여\n\n- 총 2회 세션, 각 약 70–80분 소요 (두 번째 세션은 첫 세션 후 24시간 ~ 7일 이내)\n\n3. 실험 참여 제외 대상자:\n① 교정시력이 매우 나쁘거나 색맹 혹은 색약\n② 신경정신과적 병력을 가진 사람\n③ 뇌과학이미징연구단 소속\n④ 키보드가 있는 노트북 또는 데스크톱 컴퓨터와 헤드폰(또는 이어폰)을 사용할 수 없으신 분\n⑤ 이전에 ‘이야기 사건 지각실험(행동/온라인/fMRI 실험)’과 ‘시각적 기억 실험’에 참가하셨던 피험자\n\n4. 실험 참여 보상:\n시간 당 22,500원, 총 45,000원\n\n5. 실험 참여 신청 방법:\n① 실험 참여 신청을 위해 다음의 설문지/동의서를 작성해 주십시오:\nhttps://forms.gle/HTEm5f5AN2bhR63J6\n\n② 설문지를 작성한 후에 저희 연구실 카카오톡 채널(뇌과학이미징연구단 SIN Lab: http://pf.kakao.com/_xosWxdn)로 연락을 부탁드립니다.\n\n※ 설문지 작성 후 꼭 카카오톡 채널로 연락을 주셔야 신청 확인이 완료됩니다!!!!※\n\n공지사항을 꼼꼼히 숙지하신 후 연락을 주시면 감사하겠습니다. 연구에 도움을 주신다는 생각으로 실험에 성실히 참여해주시길 부탁드립니다.\n\n다른 궁금하신 사항이 있으시면 카카오톡 채널(뇌과학이미징연구단 SIN Lab: http://pf.kakao.com/_xosWxdn)로 연락주시기 바랍니다.",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p>안녕하세요.</p><p>성균관대학교 뇌과학 이미징 연구단에서 이야기/사건 지각에 관한 심리학 실험 참여자를 모집합니다. 본 실험은 사람들이 이야기/사건을 어떻게 지각하는지 그 메커니즘을 이해하는 것을 목적으로 합니다.</p><p>아래 기재되어 있는 실험 내용을 확인하시고 실험 참여가 가능하신 분은 설문지를 작성해주신 후 저희 연구실 카카오톡 채널로 연락 바랍니다.</p><p>1. 실험 장소:</p><p>온라인 (실험 참여자에게 실험 웹사이트 링크 공유)</p><p>2. 실험 내용:</p><ul><li>본 실험에서 여러분은 음악을 듣고 영상(애니메이션, 단편 영화)을 보면서 사건을 의미 있는 단위로 나누는 분할 과제를 수행합니다. 자세한 방법은 실험 중에 안내해 드립니다.</li></ul><ul><li>음악 경험 설문과 미디어 사용 설문(휴대폰 스크린 타임 캡처 업로드 포함)에 응답합니다. 응답은 연구 목적으로만 사용되며 익명으로 처리됩니다.</li></ul><ul><li>온라인으로, 원하는 시간에 본인의 컴퓨터에서 참여</li></ul><ul><li>총 2회 세션, 각 약 70–80분 소요 (두 번째 세션은 첫 세션 후 24시간 ~ 7일 이내)</li></ul><p>3. 실험 참여 제외 대상자:</p><p>① 교정시력이 매우 나쁘거나 색맹 혹은 색약</p><p>② 신경정신과적 병력을 가진 사람</p><p>③ 뇌과학이미징연구단 소속</p><p>④ 키보드가 있는 노트북 또는 데스크톱 컴퓨터와 헤드폰(또는 이어폰)을 사용할 수 없으신 분</p><p>⑤ 이전에 ‘이야기 사건 지각실험(행동/온라인/fMRI 실험)’과 ‘시각적 기억 실험’에 참가하셨던 피험자</p><p>4. 실험 참여 보상:</p><p>시간 당 22,500원, 총 45,000원</p><p>5. 실험 참여 신청 방법:</p><p>① 실험 참여 신청을 위해 다음의 설문지/동의서를 작성해 주십시오:</p><p><a href=\"https://forms.gle/HTEm5f5AN2bhR63J6\">https://forms.gle/HTEm5f5AN2bhR63J6</a></p><p>② 설문지를 작성한 후에 저희 연구실 카카오톡 채널(뇌과학이미징연구단 SIN Lab: <a href=\"http://pf.kakao.com/_xosWxdn)로\">http://pf.kakao.com/_xosWxdn)로</a> 연락을 부탁드립니다.</p><p>※ 설문지 작성 후 꼭 카카오톡 채널로 연락을 주셔야 신청 확인이 완료됩니다!!!!※</p><p>공지사항을 꼼꼼히 숙지하신 후 연락을 주시면 감사하겠습니다. 연구에 도움을 주신다는 생각으로 실험에 성실히 참여해주시길 부탁드립니다.</p><p>다른 궁금하신 사항이 있으시면 카카오톡 채널(뇌과학이미징연구단 SIN Lab: <a href=\"http://pf.kakao.com/_xosWxdn)로\">http://pf.kakao.com/_xosWxdn)로</a> 연락주시기 바랍니다.</p>",
-      "images": [],
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00",
-      "previous_title": "[뇌과학이미징연구단] 이야기/사건 지각에 관한 심리학 실험 참여자 모집",
-      "changed_at": "2026-11-05T15:52:38.458392+09:00",
-      "change_kind": "제목",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite"
-      },
-      "summary": "뇌과학이미징연구단에서 이야기 및 사건 지각 온라인 실험 참여자를 모집합니다. 설문지 작성 후 연구실 카카오톡 채널로 연락하여 신청할 수 있습니다.",
-      "summary_last_failed_at": null
-    },
-    "skku-notice01/141509": {
-      "notice": {
-        "id": "skku-notice01/141509",
-        "source_id": "skku-notice01",
-        "article_no": "141509",
-        "title": "[학생성공센터] 자유전공계열 학생 대상 비교과·안내 정보 수요조사 안내(~11.13.)",
-        "category": "행사/세미나",
-        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141509",
-        "posted_on": "2026-11-03",
-        "pinned": true,
-        "deadline": "2026-11-13T23:59:00+09:00",
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "학생성공센터에서는 자유전공계열 학생 여러분에게 필요한 비교과 프로그램과 대학생활 안내 정보를 파악하기 위해 수요조사를 진행합니다.\n\n전공 탐색에 필요한 지원, 참여하고 싶은 비교과 활동, 정보를 안내받고 싶은 방법 등을 알려주세요. 보내주신 의견은 향후 맞춤형 학생 지원과 안내자료 개선에 활용됩니다.\n\n비교과 프로그램에 참여한 경험이 없는 학생도 응답할 수 있습니다. 자유전공계열 학생 여러분의 많은 관심과 참여 바랍니다.\n\n1. 조사 대상\n\n현재 자유전공계열 소속 학생 약 255명\n\n2. 조사 기간\n\n11.2.(월)~11. 13.(금)\n\n3. 조사 내용\n\n전공 탐색 및 진로 설계에 필요한 지원\n\n비교과 프로그램 참여 경험 및 향후 참여 희망 분야\n\n비교과·대학생활 정보 필요도와 선호 안내 방식\n\n비교과 프로그램 및 안내 정보 개선 의견\n\n4. 참여 방법\n\n온라인 설문 참여: https://forms.gle/8GKDWetpiE7V6QqG9\n\n첨부 카드뉴스의 QR코드로도 접속 가능\n\n예상 소요 시간: 약 5~7분\n\n5. 우수 의견 작성자 기프티콘 지급\n\n구체적인 개선 의견을 작성한 응답자 중 심사를 통해 선정\n\n선정 규모: 유효응답자의 약 30%, 최대 77명\n\n심사 기준: 주제 적합성·구체성·활용 가능성·명확성\n\n지급 품목: 이디야커피 아이스 콜드브루 1잔 교환권\n\n지급 시기: 2026년 11월 말 예정\n\n※ 기프티콘은 설문 참여자 전원에게 지급되지 않으며, 우수 의견 심사·선정 후 지급됩니다.\n\n※ 긍정·부정 의견 및 비교과 참여 경험 유무에 따른 차등 없이 심사합니다.\n\n6. 문의\n\n학생성공센터: 02-740-1768 / stusuccess@skku.edu",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p>학생성공센터에서는 자유전공계열 학생 여러분에게 필요한 비교과 프로그램과 대학생활 안내 정보를 파악하기 위해 수요조사를 진행합니다.</p><p>전공 탐색에 필요한 지원, 참여하고 싶은 비교과 활동, 정보를 안내받고 싶은 방법 등을 알려주세요. 보내주신 의견은 향후 맞춤형 학생 지원과 안내자료 개선에 활용됩니다.</p><p>비교과 프로그램에 참여한 경험이 없는 학생도 응답할 수 있습니다. 자유전공계열 학생 여러분의 많은 관심과 참여 바랍니다.</p><p>1. 조사 대상</p><p>현재 자유전공계열 소속 학생 약 255명</p><p>2. 조사 기간</p><p>11.2.(월)~11. 13.(금)</p><p>3. 조사 내용</p><p>전공 탐색 및 진로 설계에 필요한 지원</p><p>비교과 프로그램 참여 경험 및 향후 참여 희망 분야</p><p>비교과·대학생활 정보 필요도와 선호 안내 방식</p><p>비교과 프로그램 및 안내 정보 개선 의견</p><p>4. 참여 방법</p><p>온라인 설문 참여: <a href=\"https://forms.gle/8GKDWetpiE7V6QqG9\">https://forms.gle/8GKDWetpiE7V6QqG9</a></p><p>첨부 카드뉴스의 QR코드로도 접속 가능</p><p>예상 소요 시간: 약 5~7분</p><p>5. 우수 의견 작성자 기프티콘 지급</p><p>구체적인 개선 의견을 작성한 응답자 중 심사를 통해 선정</p><p>선정 규모: 유효응답자의 약 30%, 최대 77명</p><p>심사 기준: 주제 적합성·구체성·활용 가능성·명확성</p><p>지급 품목: 이디야커피 아이스 콜드브루 1잔 교환권</p><p>지급 시기: 2026년 11월 말 예정</p><p>※ 기프티콘은 설문 참여자 전원에게 지급되지 않으며, 우수 의견 심사·선정 후 지급됩니다.</p><p>※ 긍정·부정 의견 및 비교과 참여 경험 유무에 따른 차등 없이 심사합니다.</p><p>6. 문의</p><p>학생성공센터: 02-740-1768 / stusuccess@skku.edu</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"자유전공계열 학생 대상 비교과 수요조사\" src=\"https://www.skku.edu/_attach/image/2026/11/SHLYnZnpBRoZeMuBvQoc.png\">",
-      "images": [
-        "https://www.skku.edu/_attach/image/2026/11/SHLYnZnpBRoZeMuBvQoc.png"
-      ],
-      "summary": "자유전공계열 학생을 대상으로 비교과 및 대학생활 정보 수요조사가 11월 13일까지 진행됩니다. 온라인 설문 링크를 통해 참여할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00"
-    },
-    "skku-notice01/141131": {
-      "notice": {
-        "id": "skku-notice01/141131",
-        "source_id": "skku-notice01",
-        "article_no": "141131",
-        "title": "양자생명물리과학원 행정직원 모집",
-        "category": "채용/모집",
-        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141131",
-        "posted_on": "2026-11-03",
-        "pinned": true,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "성균관대학교 양자생명물리과학원에서 근무할 직원을 아래와 같이 모집하오니 많은 관심과 지원을 바랍니다.\n\n1. 모집부문 및 근무조건\n가. 채용분야 및 인원 : 행정 1명\n나. 업무내용 : 양자생명물리과학원 기관 행정 업무 제반\n다. 근무조건\n(1) 계약직(1년 계약 후 근무평가에 따라 연장 가능)\n(2) 주5일 근무(주중 09:00~17:30)\n(3) 보수 수준 : 내부 규정에 따름\n(4) 근무장소 : 성균관대학교 자연과학캠퍼스 N센터 (경기도 수원)\n라. 우대사항\n(1) 즉시 근무 가능한 자\n(2) 인근 거주자\n(3) 영어가능자 (간단한 의사소통)\n\n2. 지원자격\n가. 4년제 대학 졸업자\n나. 성균관대학교 직원 임용규정상 결격사유가 없는 자\n\n3. 제출서류\n- 첨부의 이력서 서식으로 파일명(양자생명물리과학원 지원자_홍길동) 기재 후, 이메일 제출(ohjuyi@skku.edu)\n\n* 최종합격자에 한해 임용에 필요한 추가서류 접수예정.\n* 제출서류는 반환하지 않습니다.\n\n4. 모집기간 및 지원방법\n가. 모집기간 : 2026.10.30(금)~2026.11.10(화)까지\n나. 지원방법 : 이메일지원 ohjuyi@skku.edu\n\n5. 전형절차\n가. 1단계 : 서류전형\n나. 2단계 : 면접 (서류전형 합격자에 한해 면접일자 개별통보)\n\n6. 문의 및 접수: 양자생명물리과학원\nohjuyi@skku.edu, 031-299-4790",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [
-        {
-          "name": "양자생명물리과학원 지원자_홍길동.hwp",
-          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141131&attachNo=118689",
-          "type": "HWP",
-          "size": null
-        }
-      ],
-      "body_html": "<p>성균관대학교 양자생명물리과학원에서 근무할 직원을 아래와 같이 모집하오니 많은 관심과 지원을 바랍니다.</p><p>1. 모집부문 및 근무조건</p><p>가. 채용분야 및 인원 : 행정 1명</p><p>나. 업무내용 : 양자생명물리과학원  기관 행정 업무 제반</p><p>다. 근무조건</p><p>(1) 계약직(1년 계약 후 근무평가에 따라 연장 가능)</p><p>(2) 주5일 근무(주중 09:00~17:30)</p><p>(3) 보수 수준 : 내부 규정에 따름</p><p>(4) 근무장소 : 성균관대학교 자연과학캠퍼스 N센터 (경기도 수원)</p><p>라. 우대사항</p><p>(1) 즉시 근무 가능한 자</p><p>(2) 인근 거주자</p><p>(3) 영어가능자 (간단한 의사소통)</p><p>2. 지원자격</p><p>가. 4년제 대학 졸업자</p><p>나. 성균관대학교 직원 임용규정상 결격사유가 없는 자</p><p>3. 제출서류</p><ul><li>첨부의 이력서 서식으로 파일명(양자생명물리과학원 지원자_홍길동) 기재 후, 이메일 제출(ohjuyi@skku.edu)</li></ul><p>* 최종합격자에 한해 임용에 필요한 추가서류 접수예정.</p><p>* 제출서류는 반환하지 않습니다.</p><p>4. 모집기간 및 지원방법</p><p>가. 모집기간 : 2026.10.30(금)~2026.11.10(화)까지</p><p>나. 지원방법 : 이메일지원 ohjuyi@skku.edu</p><p>5. 전형절차</p><p>가. 1단계 : 서류전형</p><p>나. 2단계 : 면접 (서류전형 합격자에 한해 면접일자 개별통보)</p><p>6. 문의 및 접수: 양자생명물리과학원</p><p>ohjuyi@skku.edu, 031-299-4790</p>",
-      "images": [],
-      "summary": "양자생명물리과학원에서 행정직원을 11월 10일까지 모집합니다. 4년제 대학 졸업자를 대상으로 하며 이메일을 통해 지원할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "마감",
-        "at": "2026-11-10T23:59:00+09:00"
-      }
-    },
-    "skku-notice01/140949": {
-      "notice": {
-        "id": "skku-notice01/140949",
-        "source_id": "skku-notice01",
-        "article_no": "140949",
-        "title": "[성균융합원] 2027학년도 1학기 융합연구학점제 시행 안내(신청 ~11/25)",
-        "category": "학사",
-        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=140949",
-        "posted_on": "2026-11-03",
-        "pinned": false,
-        "deadline": "2026-11-25T23:59:00+09:00",
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "“다양한 전공의 만남, 새로운 프로젝트의 시작”\n\n성균융합원에서 2027학년도 1학기 융합연구학점제를 실시하오니 많은 관심과 참여 바랍니다.\n융합연구학점제를 통해 학술연구, 사회문제 해결, 예술 프로젝트 등 창의적이고 도전적인 연구를 수행하길 적극 응원합니다.\n\n○ 융합연구학점제 홍보 콘텐츠\n* 융합연구학점제 참여 학생들의 솔직한 찐리뷰! https://urp3.skku.edu/urp3/notice.do?mode=view&articleNo=186410\n* 융합연구학점제 어떻게 수행하는 걸까? https://urp3.skku.edu/urp3/index.do\n* 융합연구학점제 소개 영상 https://www.youtube.com/watch?v=yALtHf8s2mM\n\n○ 융합연구학점제(URP Ⅲ형) 개요\n1. 융합연구학점제란?\n다양한 전공의 학생들이 모여 한 학기(정규학기) 동안 ‘자기주도적 문제발굴 – 탐구 및 해법 모색 – 결과물 생성’의\n일련의 과정을 지도교수와 함께 수행하고, 이를 학점(일반선택학점 3학점)으로 인정 받는 제도\n2. 프로젝트 유형\n1) 학술연구(조사, 분석/실험, 실습)\n※ 단, 학생 주도가 아닌 특정 연구실에서 정해진 실험을 진행하는 연구 주제 지양\n2) 발명, 발견/사업, 기획/창업\n3) 정책제안/사회문제해결\n4) 문화/예술 프로젝트(전시, 공연, 창작)\n5) 생성형 AI를 활용한 창의적 콘텐츠 제작\n\n○ 혜택\n1. 학생\n1) 일반선택학점 3학점 취득\n※ 전공 및 교양학점이 아닌 일반선택학점으로 총 이수학점에만 산입\n※ 학기당 1개, 재학기간 중 최대 2개 교과목 이수(6학점 인정) 가능\n2) 3품인증제 인턴십 인증\n3) 우수 성과 시상: 상장(총장상 등) 제공 및 상금(최대 100만원) 지급\n4) 연구 멘토링: 융합연구학점제 전담 연구원의 연구 멘토링(필요시) 및 연구기초교육 제공\n5) 팀연구활동비 지급: 연구 수행과 직접적으로 관련된 항목에 대하여 1팀당 최대 10만원 지원,\n팀장 1인에게 장학금 지급을 통해 사후 정산 처리\n2. 교원\n1) 담당하는 팀 1개당 학부 책임학점 1학점 인정, 연간 최대 3개팀 지도 가능\n(지도교수 2인일 경우 교원 각 학부 책임학점 1학점씩 인정)\n※ 단, 원소속이 ‘정보통신대학’인 전임교원은 책임학점이 인정되지 않음(비전임은 강의시수 인정)\n※ 단, 팀연구학점제(URPⅡ형)와 병행하는 해에는 융합연구학점제(URPⅢ형) 수업 연간 1개만 지도 가능\n2) 교수 업적평가(학생지도-기타) 인정\n※ 단과대학별 자율배점으로 소속 단과대학에 따라 인정 점수 상이\n\n○ 신청자격\n- 2027학년도 1학기 재학 학부생으로 구성된 팀\n\n○ 신청방법\n1. 주제선정\n1) 학생 제안: 학생이 자유롭게 연구 주제를 정하고 연구제안서 작성 → 교수가 연구제안서 확인 후 수락하면\n지도교수로 선정\n2) 교수 제안: 교수가 주제를 정해 연구제안서를 작성 → 융합연구학점제 팀모집 홈페이지 통해 학생팀 모집\n2. 지도교수 선정(1~2명, 전임교원 1명 이상)\n- 지도교수는 학생팀 1개당 1명 이상의 재직 전임교원으로 구성하며 최대 2명까지 가능. (연구년일 경우 참여 불가)\n단, 명예교수는 비전임교원이지만 1인 지도 가능(①전임1 ②전임1+전임1 ③전임1+비전임1 모두 가능)\n3. 학생 팀원 구성(다양한 전공 3~4명)\n- 다양한 전공 3~4명으로 구성(동일 제1전공 2명 이내로 제한)\n※ 팀모집 홈페이지 운영: 교수·학생 모두 연구주제 제안 및 팀 구성원 모집 등에 자유롭게 활용\n(융합연구학점제 팀모집 홈페이지: https://urp3team.vercel.app/)\n※ 팀구성을 위해 위 게시판 외 SNS(에브리타임 등), LC모임, 동아리 등을 적극 활용 권장\n\n○ 주요 일정\n1. 신청 접수 및 지도교수 승인: 2026. 11. 1.(일) ~ 11. 25.(수)\n- 신청방법: GLS > 학업영역 > 학점인정 > 융합연구학점제신청\n※ 팀장 1인이 팀 대표로 신청 및 팀원 정보 입력, [붙임]신청 매뉴얼 참고\n※ 지도교수 사전 승인 필수 및 연구제안서 내 지도교수 서명 기재 필수\n- 팀모집 홈페이지 운영: 교수·학생 모두 연구주제 제안 및 팀원 모집에 자유롭게 활용\n※ 링크: https://urp3team.vercel.app/\n※ 팀 모집 완료 후 신청 기한 내 반드시 GLS 접수\n2. 융합연구학점제 성과전시회 개최: 2026. 11. 9.(월) ~ 11. 13.(금)\n- 성과전시회: 2025학년도 융합연구학점제 수행팀 포스터 전시 행사\n- 장소: (인)경영관 1층 로비, (자)삼성학술정보관 1층 입구\n- 온라인 성과전시(융합연구학점제 홈페이지): https://urp3.skku.edu/urp3/index.do\n3. 최종 수행팀 발표: 2026. 12. 11.(금) 15:00\n- 신청한 GLS 화면에서 프로젝트 승인/반려 확인\n- 수강 가능 학점 범위 내에서 융합연구학점제(3학점)를 수강하며, 직권 수강신청을 위해 여유 3학점 확보\n(예: 15학점 신청 가능 → 융합연구학점제: 3학점, 그 외 과목: 12학점)\n※ 2027년 2월 중 성균융합원행정실에서 직권 수강 신청 진행\n- 수강 취소는 원칙적으로 불가\n4. 프로젝트 수행: 2027. 3. 1.(월) ~ 6. 18.(금) (16주 운영)\n- 방학 중 오리엔테이션(필참) 및 연구기초교육 진행\n- 지도교수와 함께 매주 팀 활동을 진행하며, 팀활동보고서(총 10회) 제출 필수\n- 연구주제 변경: 지도교수와 협의 후 변경 가능하나 수정 연구계획서 제출 필수(2027. 3. 28.(일)까지만 가능)\n5. 중간보고서 제출: 2027년 4월 말\n- 연구 수행 중간 점검을 위한 중간보고서 제출\n6. 성과보고회 개최: 2027년 6월 말(필참)\n- 결과보고서 및 최종 결과물 바탕 성과보고회 및 우수 사례 시상식 진행\n\n○ 기타\n기타 사항은 붙임 문건을 확인바라며, 문의사항이 있을 경우 성균융합원행정실로 문의 요망 (031-290-5703)\n\n성균융합원장",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [
-        {
-          "name": "1. 2027-1학기 융합연구학점제 포스터.pdf",
-          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=140949&attachNo=118768",
-          "type": "PDF",
-          "size": null
-        },
-        {
-          "name": "2. 2027-1학기 융합연구학점제 안내문(교수 및 학생).pdf",
-          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=140949&attachNo=118769",
-          "type": "PDF",
-          "size": null
-        },
-        {
-          "name": "3. 융합연구학점제 신청 GLS 매뉴얼(학생).pdf",
-          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=140949&attachNo=118770",
-          "type": "PDF",
-          "size": null
-        },
-        {
-          "name": "4. 융합연구학점제 운영지침(2024.1.1.).pdf",
-          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=140949&attachNo=118771",
-          "type": "PDF",
-          "size": null
-        }
-      ],
-      "body_html": "<p>“다양한 전공의 만남, 새로운 프로젝트의 시작”</p><p>성균융합원에서 2027학년도 1학기 융합연구학점제를 실시하오니 많은 관심과 참여 바랍니다.</p><p>융합연구학점제를 통해 학술연구, 사회문제 해결, 예술 프로젝트 등 창의적이고 도전적인 연구를 수행하길 적극 응원합니다.</p><p>○ 융합연구학점제 홍보 콘텐츠</p><p>* 융합연구학점제 참여 학생들의 솔직한 찐리뷰! <a href=\"https://urp3.skku.edu/urp3/notice.do?mode=view&amp;articleNo=186410\">https://urp3.skku.edu/urp3/notice.do?mode=view&amp;articleNo=186410</a></p><p>* 융합연구학점제 어떻게 수행하는 걸까? <a href=\"https://urp3.skku.edu/urp3/index.do\">https://urp3.skku.edu/urp3/index.do</a></p><p>* 융합연구학점제 소개 영상 <a href=\"https://www.youtube.com/watch?v=yALtHf8s2mM\">https://www.youtube.com/watch?v=yALtHf8s2mM</a></p><p>○ 융합연구학점제(URP Ⅲ형) 개요</p><p>1. 융합연구학점제란?</p><p>다양한 전공의 학생들이 모여 한 학기(정규학기) 동안 ‘자기주도적 문제발굴 – 탐구 및 해법 모색 – 결과물 생성’의</p><p>일련의 과정을 지도교수와 함께 수행하고, 이를 학점(일반선택학점 3학점)으로 인정 받는 제도</p><p>2. 프로젝트 유형</p><p>1) 학술연구(조사, 분석/실험, 실습)</p><p>※ 단, 학생 주도가 아닌 특정 연구실에서 정해진 실험을 진행하는 연구 주제 지양</p><p>2) 발명, 발견/사업, 기획/창업</p><p>3) 정책제안/사회문제해결</p><p>4) 문화/예술 프로젝트(전시, 공연, 창작)</p><p>5) 생성형 AI를 활용한 창의적 콘텐츠 제작</p><p>○ 혜택</p><p>1. 학생</p><p>1) 일반선택학점 3학점 취득</p><p>※ 전공 및 교양학점이 아닌 일반선택학점으로 총 이수학점에만 산입</p><p>※ 학기당 1개, 재학기간 중 최대 2개 교과목 이수(6학점 인정) 가능</p><p>2) 3품인증제 인턴십 인증</p><p>3) 우수 성과 시상: 상장(총장상 등) 제공 및 상금(최대 100만원) 지급</p><p>4) 연구 멘토링: 융합연구학점제 전담 연구원의 연구 멘토링(필요시) 및 연구기초교육 제공</p><p>5) 팀연구활동비 지급: 연구 수행과 직접적으로 관련된 항목에 대하여 1팀당 최대 10만원 지원,</p><p>팀장 1인에게 장학금 지급을 통해 사후 정산 처리</p><p>2. 교원</p><p>1) 담당하는 팀 1개당 학부 책임학점 1학점 인정, 연간 최대 3개팀 지도 가능</p><p>(지도교수 2인일 경우 교원 각 학부 책임학점 1학점씩 인정)</p><p>※ 단, 원소속이 ‘정보통신대학’인 전임교원은 책임학점이 인정되지 않음(비전임은 강의시수 인정)</p><p>※ 단, 팀연구학점제(URPⅡ형)와 병행하는 해에는 융합연구학점제(URPⅢ형) 수업 연간 1개만 지도 가능</p><p>2) 교수 업적평가(학생지도-기타) 인정</p><p>※ 단과대학별 자율배점으로 소속 단과대학에 따라 인정 점수 상이</p><p>○ 신청자격</p><ul><li>2027학년도 1학기 재학 학부생으로 구성된 팀</li></ul><p>○ 신청방법</p><p>1. 주제선정</p><p>1) 학생 제안: 학생이 자유롭게 연구 주제를 정하고 연구제안서 작성 → 교수가 연구제안서 확인 후 수락하면</p><p>지도교수로 선정</p><p>2) 교수 제안: 교수가 주제를 정해 연구제안서를 작성 → 융합연구학점제 팀모집 홈페이지 통해 학생팀 모집</p><p>2. 지도교수 선정(1~2명, 전임교원 1명 이상)</p><ul><li>지도교수는 학생팀 1개당 1명 이상의 재직 전임교원으로 구성하며 최대 2명까지 가능. (연구년일 경우 참여 불가)</li></ul><p>단, 명예교수는 비전임교원이지만 1인 지도 가능(①전임1 ②전임1+전임1 ③전임1+비전임1 모두 가능)</p><p>3. 학생 팀원 구성(다양한 전공 3~4명)</p><ul><li>다양한 전공 3~4명으로 구성(동일 제1전공 2명 이내로 제한)</li></ul><p>※ 팀모집 홈페이지 운영: 교수·학생 모두 연구주제 제안 및 팀 구성원 모집 등에 자유롭게 활용</p><p>(융합연구학점제 팀모집 홈페이지: <a href=\"https://urp3team.vercel.app/)\">https://urp3team.vercel.app/)</a></p><p>※ 팀구성을 위해 위 게시판 외 SNS(에브리타임 등), LC모임, 동아리 등을 적극 활용 권장</p><p>○ 주요 일정</p><p>1. 신청 접수 및 지도교수 승인: 2026. 11. 1.(일) ~ 11. 25.(수)</p><ul><li>신청방법: GLS &gt; 학업영역 &gt; 학점인정 &gt; 융합연구학점제신청</li></ul><p>※ 팀장 1인이 팀 대표로 신청 및 팀원 정보 입력, [붙임]신청 매뉴얼 참고</p><p>※ 지도교수 사전 승인 필수 및 연구제안서 내 지도교수 서명 기재 필수</p><ul><li>팀모집 홈페이지 운영: 교수·학생 모두 연구주제 제안 및 팀원 모집에 자유롭게 활용</li></ul><p>※ 링크: <a href=\"https://urp3team.vercel.app/\">https://urp3team.vercel.app/</a></p><p>※ 팀 모집 완료 후 신청 기한 내 반드시 GLS 접수</p><p>2. 융합연구학점제 성과전시회 개최: 2026. 11. 9.(월) ~ 11. 13.(금)</p><ul><li>성과전시회: 2025학년도 융합연구학점제 수행팀 포스터 전시 행사</li><li>장소: (인)경영관 1층 로비, (자)삼성학술정보관 1층 입구</li><li>온라인 성과전시(융합연구학점제 홈페이지): <a href=\"https://urp3.skku.edu/urp3/index.do\">https://urp3.skku.edu/urp3/index.do</a></li></ul><p>3. 최종 수행팀 발표: 2026. 12. 11.(금) 15:00</p><ul><li>신청한 GLS 화면에서 프로젝트 승인/반려 확인</li><li>수강 가능 학점 범위 내에서 융합연구학점제(3학점)를 수강하며, 직권 수강신청을 위해 여유 3학점 확보</li></ul><p>(예: 15학점 신청 가능 → 융합연구학점제: 3학점, 그 외 과목: 12학점)</p><p>※ 2027년 2월 중 성균융합원행정실에서 직권 수강 신청 진행</p><ul><li>수강 취소는 원칙적으로 불가</li></ul><p>4. 프로젝트 수행: 2027. 3. 1.(월) ~ 6. 18.(금) (16주 운영)</p><ul><li>방학 중 오리엔테이션(필참) 및 연구기초교육 진행</li><li>지도교수와 함께 매주 팀 활동을 진행하며, 팀활동보고서(총 10회) 제출 필수</li><li>연구주제 변경: 지도교수와 협의 후 변경 가능하나 수정 연구계획서 제출 필수(2027. 3. 28.(일)까지만 가능)</li></ul><p>5. 중간보고서 제출: 2027년 4월 말</p><ul><li>연구 수행 중간 점검을 위한 중간보고서 제출</li></ul><p>6. 성과보고회 개최: 2027년 6월 말(필참)</p><ul><li>결과보고서 및 최종 결과물 바탕 성과보고회 및 우수 사례 시상식 진행</li></ul><p>○ 기타</p><p>기타 사항은 붙임 문건을 확인바라며, 문의사항이 있을 경우 성균융합원행정실로 문의 요망 (031-290-5703)</p><p>성균융합원장</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/10/eGGizjjUMbJcpSQwIyKu.jpg\">",
-      "images": [
-        "https://www.skku.edu/_attach/image/2026/10/eGGizjjUMbJcpSQwIyKu.jpg"
-      ],
-      "summary": "2027학년도 1학기 융합연구학점제 참여 팀을 모집합니다. 재학 중인 학부생 팀을 구성하여 11월 25일까지 GLS를 통해 신청할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
-    },
-    "skku-notice01/140924": {
-      "notice": {
-        "id": "skku-notice01/140924",
-        "source_id": "skku-notice01",
-        "article_no": "140924",
-        "title": "✨(성균인성교육센터) 2026학년도 학부모(동반자) 공감 프로그램 신청 모집",
-        "category": "행사/세미나",
-        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=140924",
-        "posted_on": "2026-11-03",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "안녕하세요. 성균인성교육센터입니다.\n\n성균인성교육센터에서는 대학혁신지원사업 일환으로\n\n멋진 가을 가족 및 지인들과 유대를 돈독히 하며 추억 한 편을 안겨드릴\n\n<2026학년도 학부모(동반자) 공감 프로그램> 을 진행합니다.\n\n1. 일 시: 2026.11.14.(토) 10:00~16:00\n\n2. 장 소: 성균관대학교 인문과학캠퍼스 600주년기념관 5층 조병두홀\n\n3. 참가자 및 모집\n\n- 참가 대상: 본교 학부생 90명 내외(학부모, 가족, 친구 포함) ✨ 1인 신청 가능 ✨\n\n- 신청 방법: QR 스캔 및 구글폼 작성\n\n✨ https://docs.google.com/forms/d/1QxcfQQ3Q-gJ-joVO5V45XedSQ7XA_ZiAL60wJkyowx0/edit\n\n- 신청 기간: 2026.10.28.(수) ~ 11.12.(목)\n\n- 선정자 발표: 2026.11.12.(목) 센터 홈페이지 또는 메세지 발송\n\n- 부모님 모두 또는 부모님 중 한 분 참여 가능, 형제자매, 가족, 친구, 개인 단위 참여 가능\n\n- 참가비 무료\n\n4. 부가 혜택\n\n- 참여 학생 창의품 8시간 부여, 신입생 FYE세미나 15점 추가 부여\n\n- 참여 인원 전체 중식 제공\n\n- 자호 족자 등 기념품 제공\n\n5. 세부 진행 내용\n\n- 성인례 프로그램 : 전통 성년례를 현대적으로 재해석하여 진행\n\n- 초례, 다례 프로그램 : 향음주례, 전통다례 관한 이해 및 실습\n\n- 갓 쓰고 유생복 체험 : 유생복 착용 및 폴라로이드 촬영\n\n- 자관자례 프로그램 : 족자에 자호 글 쓰기\n\n- 수묵 프로그램 : 서예와 사군자 체험\n\n6. 문의: 성균인성교육센터 chec@skku.edu, 02-760-0165",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p>안녕하세요. 성균인성교육센터입니다.</p><p>성균인성교육센터에서는 대학혁신지원사업 일환으로</p><p>멋진 가을 가족 및 지인들과 유대를 돈독히 하며 추억 한 편을 안겨드릴</p><p>&lt;2026학년도 학부모(동반자) 공감 프로그램&gt; 을 진행합니다.</p><p>1. 일 시: 2026.11.14.(토) 10:00~16:00</p><p>2. 장 소: 성균관대학교 인문과학캠퍼스 600주년기념관 5층 조병두홀</p><p>3. 참가자 및 모집</p><ul><li>참가 대상: 본교 학부생 90명 내외(학부모, 가족, 친구 포함) ✨ 1인 신청 가능 ✨</li></ul><ul><li>신청 방법: QR 스캔 및 구글폼 작성</li></ul><p>✨ <a href=\"https://docs.google.com/forms/d/1QxcfQQ3Q-gJ-joVO5V45XedSQ7XA_ZiAL60wJkyowx0/edit\">https://docs.google.com/forms/d/1QxcfQQ3Q-gJ-joVO5V45XedSQ7XA_ZiAL60wJkyowx0/edit</a></p><ul><li>신청 기간: 2026.10.28.(수) ~ 11.12.(목)</li></ul><ul><li>선정자 발표: 2026.11.12.(목) 센터 홈페이지 또는 메세지 발송</li></ul><ul><li> 부모님 모두 또는 부모님 중 한 분 참여 가능, 형제자매, 가족, 친구, 개인 단위 참여 가능</li></ul><ul><li> 참가비 무료</li></ul><p>4. 부가 혜택</p><ul><li>참여 학생 창의품 8시간 부여, 신입생 FYE세미나 15점 추가 부여</li></ul><ul><li>참여 인원 전체 중식 제공</li></ul><ul><li>자호 족자 등 기념품 제공</li></ul><p>5. 세부 진행 내용</p><ul><li>성인례 프로그램 : 전통 성년례를 현대적으로 재해석하여 진행</li></ul><ul><li>초례, 다례 프로그램 : 향음주례, 전통다례 관한 이해 및 실습</li></ul><ul><li>갓 쓰고 유생복 체험 : 유생복 착용 및 폴라로이드 촬영</li></ul><ul><li>자관자례 프로그램 : 족자에 자호 글 쓰기</li></ul><ul><li>수묵 프로그램 : 서예와 사군자 체험</li></ul><p>6. 문의: 성균인성교육센터 chec@skku.edu, 02-760-0165</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/10/eoIFcBTswdoNZkeJsqAe.jpg\">",
-      "images": [
-        "https://www.skku.edu/_attach/image/2026/10/eoIFcBTswdoNZkeJsqAe.jpg"
-      ],
-      "summary": "성균인성교육센터에서 학부모 및 가족과 함께하는 공감 프로그램을 진행합니다. 본교 학부생은 11월 12일까지 구글폼을 통해 신청할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "마감",
-        "at": "2026-11-12T23:59:00+09:00"
-      }
-    },
-    "skku-notice01/140831": {
-      "notice": {
-        "id": "skku-notice01/140831",
-        "source_id": "skku-notice01",
-        "article_no": "140831",
-        "title": "[HUSS] 현직자와 함께하는 「2026-2 HUSS Career Connect」 참가자 모집",
-        "category": "행사/세미나",
-        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=140831",
-        "posted_on": "2026-11-03",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "나의 관심 직무와 취업 준비, 현직자에게 직접 물어보세요! ☕\n대기업·금융·법조·회계 등 다양한 분야의 현직자 10명과 함께하는 「HUSS Career Connect」에 여러분을 초대합니다.\n두 차례의 소그룹 매칭 멘토링과 토크콘서트를 통해 실제 업무와 취업 준비 경험을 나눕니다. 나의 경험과 강점을 담은 개인 명함도 제작해 드리니, 명함 한 장으로 새로운 연결을 시작해 보세요!\n\n▪ 일시: 2026. 11. 12.(목) 18:30~20:30\n▪ 장소: 펄스맥 혜화점\n▪ 대상: 성균관대학교 HUSS 사업단 참여학과 재학생 및 타 컨소시엄·공통활용대학 참여 재학생\n▪ 모집 인원: 30명 내외\n▪ 주요 프로그램: 현직자 소개, 소그룹 매칭 멘토링 2회, 토크콘서트, 럭키 드로우\n▪ 참여 혜택: 개인 명함 제작, 음료·다과 제공, 전 과정 참여자 대상 경품 추첨\n▪ 신청 마감: 11월 9일(월)까지\n▪ 신청: https://forms.gle/68dHvraTKhydE7V58\n▪ 문의: 강민서 연구원 / 02-740-1692 / kmsuse1234@skku.edu\n\n진로를 탐색 중인 학생도 환영합니다. 자세한 내용은 첨부 포스터와 신청서를 확인해 주세요!",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p>나의 관심 직무와 취업 준비, 현직자에게 직접 물어보세요! ☕</p><p>대기업·금융·법조·회계 등 다양한 분야의 현직자 10명과 함께하는 「HUSS Career Connect」에 여러분을 초대합니다.</p><p>두 차례의 소그룹 매칭 멘토링과 토크콘서트를 통해 실제 업무와 취업 준비 경험을 나눕니다. 나의 경험과 강점을 담은 개인 명함도 제작해 드리니, 명함 한 장으로 새로운 연결을 시작해 보세요!</p><p>▪ 일시: 2026. 11. 12.(목) 18:30~20:30</p><p>▪ 장소: 펄스맥 혜화점</p><p>▪ 대상: 성균관대학교 HUSS 사업단 참여학과 재학생 및 타 컨소시엄·공통활용대학 참여 재학생</p><p>▪ 모집 인원: 30명 내외</p><p>▪ 주요 프로그램: 현직자 소개, 소그룹 매칭 멘토링 2회, 토크콘서트, 럭키 드로우</p><p>▪ 참여 혜택: 개인 명함 제작, 음료·다과 제공, 전 과정 참여자 대상 경품 추첨</p><p>▪ 신청 마감: 11월 9일(월)까지</p><p>▪ 신청: <a href=\"https://forms.gle/68dHvraTKhydE7V58\">https://forms.gle/68dHvraTKhydE7V58</a></p><p>▪ 문의: 강민서 연구원 / 02-740-1692 / kmsuse1234@skku.edu</p><p>진로를 탐색 중인 학생도 환영합니다. 자세한 내용은 첨부 포스터와 신청서를 확인해 주세요!</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/10/gjHEpQtUosfCUQOTyGVV.png\">",
-      "images": [
-        "https://www.skku.edu/_attach/image/2026/10/gjHEpQtUosfCUQOTyGVV.png"
-      ],
-      "summary": "HUSS 사업단 참여학과 재학생을 대상으로 현직자 멘토링 프로그램 참가자를 모집합니다. 11월 9일까지 구글폼을 통해 신청 가능합니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "마감",
-        "at": "2026-11-09T23:59:00+09:00"
-      }
-    },
-    "skku-notice01/140798": {
-      "notice": {
-        "id": "skku-notice01/140798",
-        "source_id": "skku-notice01",
-        "article_no": "140798",
-        "title": "[세미나] 양자정보연구지원센터 2026 제5회 양자정보세미나 개최 안내",
-        "category": "행사/세미나",
-        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=140798",
-        "posted_on": "2026-11-03",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "양자정보연구지원센터에서 2026년도 제5회 양자정보세미나를 11월에 개최합니다.\n양자정보과학에 관심있는 누구에게나 열려있으니, 많은 관심과 참여 바랍니다.\n* 세미나 제목 : 양자 얽힘을 이용한 광학 센싱 기술\n* 일시 : 2026년 11월 18일(수) 오후 2시~\n* 장소 : 성균관대학교 자연과학캠퍼스 제1종합연구동 81801호\n(경기도 수원시 장안구 서부로 2066)\n* 연사 : 연세대학교 물리학과 홍성진 교수\n* 참가등록 : https://forms.gle/sKfRbnL5tGco98w89 or 포스터 QR\n> 신청 기간 : 2026.11.13.(금) 까지\n(당일 현장등록도 가능하나, 좌석 준비 등 원활한 세미나 운영을 위해 등록을 부탁 드립니다.)",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p>양자정보연구지원센터에서 2026년도 제5회 양자정보세미나를 11월에 개최합니다.</p><p>양자정보과학에 관심있는 누구에게나 열려있으니, 많은 관심과 참여 바랍니다.</p><p>* 세미나 제목 : 양자 얽힘을 이용한 광학 센싱 기술</p><p>* 일시 : 2026년 11월 18일(수) 오후 2시~</p><p>* 장소 : 성균관대학교 자연과학캠퍼스 제1종합연구동 81801호</p><p>(경기도 수원시 장안구 서부로 2066)</p><p>* 연사 : 연세대학교 물리학과 홍성진 교수</p><p>* 참가등록 :  <a href=\"https://forms.gle/sKfRbnL5tGco98w89\">https://forms.gle/sKfRbnL5tGco98w89</a>  or 포스터 QR</p><p>&gt; 신청 기간 : 2026.11.13.(금) 까지</p><p>(당일 현장등록도 가능하나, 좌석 준비 등 원활한 세미나 운영을 위해 등록을 부탁 드립니다.)</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"5회 양자정보세미나\" src=\"https://www.skku.edu/_attach/image/2026/10/RvxebuvniyKvCzDTRZoL.png\">",
-      "images": [
-        "https://www.skku.edu/_attach/image/2026/10/RvxebuvniyKvCzDTRZoL.png"
-      ],
-      "summary": "양자정보연구지원센터에서 제5회 양자정보세미나를 개최합니다. 관심 있는 학생은 11월 13일까지 온라인으로 참가 등록을 해야 합니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:16:56.035412+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "마감",
-        "at": "2026-11-13T23:59:00+09:00"
-      }
-    },
-    "skku-notice01/140500": {
-      "notice": {
-        "id": "skku-notice01/140500",
-        "source_id": "skku-notice01",
-        "article_no": "140500",
-        "title": "✨(성균인성교육센터) 2026-2 성균인의 자기이해 <인성함양 실천 특별프로그램 [성균]> 참가자 모집",
-        "category": "행사/세미나",
-        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=140500",
-        "posted_on": "2026-11-03",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "성균관대학교의 전통과 가치를 이해하고,\n수기치인(修己治人)과 인의예지(仁義禮智)를 실천하고자 하는\n성균인을 위한 특별프로그램에 여러분을 초대합니다.\n\n1. 일시 (4회 중 택 1)\n① 2026. 11. 02.(월) 15:00~17:00\n② 2026. 11. 09.(월) 15:00~17:00\n③ 2026. 11. 16.(월) 15:00~17:00\n④ 2026. 11. 23.(월) 15:00~17:00\n※ 위 일정 중 원하는 날짜 1회를 선택하여 신청해 주세요.\n\n2. 장소\n국제관 9B215호(집결 장소) 및 성균박물관, 명륜당 등\n\n3. 대상\n성균관대학교 재학생 누구나\n\n4. 프로그램 내용\n① 명륜당 및 성균관 역사 탐방\n② 성균박물관 탐방\n③ 유생복 착용 및 예절 체험\n④ 『논어』·『중용』 성독 및 성찰\n※ 우천 시에도 실내 특별프로그램으로 정상 운영합니다.\n\n5. 참여 학생 인센티브\n① 창의품 2시간 부여\n② 2026년 신입생 FYE 세미나 15점 부여\n(학부대학 대계열 입학생에 한함)\n\n6. 참여 방법\n** 챌린지스퀘어 > 비교과 프로그램 > 인성함양 실천 특별프로그램 [성균] **에서 신청\n※ 4회 중 1회를 선택하여 신청해 주세요.\n\n7. 문의\n성균인성교육센터\n전화: 02-760-0165\n이메일: chec@skku.edu\n성균관대학교의 역사와 전통을 직접 체험하고,\n성균인으로서의 자긍심과 인성을 함양하는 뜻깊은 시간에 많은 관심과 참여 바랍니다.",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p>성균관대학교의 전통과 가치를 이해하고,</p><p>수기치인(修己治人)과 인의예지(仁義禮智)를 실천하고자 하는</p><p>성균인을 위한 특별프로그램에 여러분을 초대합니다.</p><p>1. 일시 (4회 중 택 1)</p><p>① 2026. 11. 02.(월) 15:00~17:00</p><p>② 2026. 11. 09.(월) 15:00~17:00</p><p>③ 2026. 11. 16.(월) 15:00~17:00</p><p>④ 2026. 11. 23.(월) 15:00~17:00</p><p>※ 위 일정 중 원하는 날짜 1회를 선택하여 신청해 주세요.</p><p>2. 장소</p><p>국제관 9B215호(집결 장소) 및 성균박물관, 명륜당 등</p><p>3. 대상</p><p>성균관대학교 재학생 누구나</p><p>4. 프로그램 내용</p><p>① 명륜당 및 성균관 역사 탐방</p><p>② 성균박물관 탐방</p><p>③ 유생복 착용 및 예절 체험</p><p>④ 『논어』·『중용』 성독 및 성찰</p><p>※ 우천 시에도 실내 특별프로그램으로 정상 운영합니다.</p><p>5. 참여 학생 인센티브</p><p>① 창의품 2시간 부여</p><p>② 2026년 신입생 FYE 세미나 15점 부여</p><p>(학부대학 대계열 입학생에 한함)</p><p>6. 참여 방법</p><p>** 챌린지스퀘어 &gt; 비교과 프로그램 &gt; 인성함양 실천 특별프로그램 [성균] **에서 신청</p><p>※ 4회 중 1회를 선택하여 신청해 주세요.</p><p>7. 문의</p><p>성균인성교육센터</p><p>전화: 02-760-0165</p><p>이메일: chec@skku.edu</p><p>성균관대학교의 역사와 전통을 직접 체험하고,</p><p>성균인으로서의 자긍심과 인성을 함양하는 뜻깊은 시간에 많은 관심과 참여 바랍니다.</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/10/kTpGBJHRtrVscfqUaFoe.jpg\">",
-      "images": [
-        "https://www.skku.edu/_attach/image/2026/10/kTpGBJHRtrVscfqUaFoe.jpg"
-      ],
-      "summary": "인공지능혁신융합대학사업 겨울 계절학기 학점교류 신청을 안내합니다. 서울시립대학교 교류 신청은 11월 10일까지 이메일을 통해 접수해야 합니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:16:56.035412+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "일정",
-        "at": "2026-11-02T15:00:00+09:00"
-      }
-    },
-    "skku-notice01/140482": {
-      "notice": {
-        "id": "skku-notice01/140482",
-        "source_id": "skku-notice01",
-        "article_no": "140482",
-        "title": "[인공지능혁신융합대학사업] 2026학년도 인공지능혁신융합대학사업 겨울 계절학기 학점교류 수강 안내 (상시 업데이트)",
-        "category": "학사",
-        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=140482",
-        "posted_on": "2026-11-03",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "인공지능혁신융합대학사업의 협력교와 학점교류를 희망하는 학생은 아래 안내에 따라 신청하시기 바랍니다.\n\n※ 학점교류 교과목의 학점 및 ‘전공’학점 인정여부는 소속학과에서 결정하는 사안입니다.\n※ 학점교류 희망 학생들은 반드시 소속학과 학과장 및 사무실로 해당 사항에 대해 문의하여 확인 후 신청바랍니다.\n※ [학사제도]-[수강신청/수업]-[국내외 타 대학(원) 학점 취득] 내용을 반드시 숙지해주세요.\n※ 본 공지사항 내용을 꼼꼼하게 읽어주세요. 추후 내용 미숙지로 인한 문제 발생 시 모든 책임은 학생에게 있습니다.\n\n인공지능혁신융합대학사업은 대학 간 신기술분야 교육자원을 공동 활용하고 산업체 연구기관 등이 참여해 국가 수준의 핵심인재 양성을 위한 협력체계 구축을 목표로 합니다.\n이 중 인공지능 분야를 담당하는 인공지능혁신융합대학사업단은 주관대학인 전남대를 포함하여 총 7개 대학(전남대, 성균관대, 서울과학기술대, 서울시립대, 경북대, 전주대, 영진전문대)이 컨소시엄으로 참여하고 있고 대학 간의 공유, 개방, 협력을 통해 핵심 인력 양성을 목적으로 하고 범국가적 SW-AI 교육을 통한 융합형 인재 양성을 지향합니다.\n\n2026학년도 겨울 계절수업 인공지능혁신융합대학사업 협력교로의 학점교류를 희망하는 학생은 아래 안내에 따라 신청하시기 바랍니다.\n(게시일 기준으로 교류대학 누적 업데이트 됩니다.)\n\n가. 학점교류 가능 대학 및 과목\n- (마감) 전남대학교: 인공지능기초(3학점), 국외현장실습1(2학점), 산학협력프로젝트2(1학점), 산학협력프로젝트4(1학점)\n※ 국외현장실습1은 AICOSS-THU 글로벌 학생 프로그램 선발자에 한하여 신청 가능하며, 별도 안내 예정.\n※ 산학협력프로젝트2,4의 경우『2026 AI융합 문제발굴 산학연계 해커톤(본선)』,『2026 CO-SHOW 연계 AIM챌린지(부트캠프)』, 『AICOSS Microsoft X SKKU Agenthon 교육 경진대회』참여자만 신청 가능.\n- 서울시립대학교: 인공지능수학기초(3학점), 인공지능수학심화(3학점), 인공지능기초와활용(3학점), 데이터분석기초(3학점), 산학AI프로젝트(1학점)\n※ 산학AI프로젝트는 영진전문대 한달살기 프로그램(가칭) 선발 학생만 신청 가능(생활관 미지원)\n\n나. 추천 마감일 (본교에서 타대학 안내공문을 수령 시 누적 업데이트 예정)\n- (마감) 전남대학교: 2026.10.25.(일)까지\n- 서울시립대학교: 2026.11.10.(화)까지\n→ 첨부된 대학별 안내사항을 확인하여 신청기간 내 필요한 필수 제출 서류 첨부하여 이메일 신청(이메일: aicoss@skku.edu) ※ 붙임 파일 참조 必\n\n※ 추천마감 기한 이후 신청은 절대 불가하며, 시스템상 신청이 가능하더라도 기한 이후 제출분은 탈락 처리(기 모집 인원 중 신청취소자 발생 시에도 추가 선발 없음)\n\n다. 신청자격\n- 학사과정 학생: 2개 학기 이상(3학년 편입생은 1개 학기 이상)을 이수한 자\n※ 단, 2027년 2월 졸업예정자는 제외(졸업 마지막 학기 및 계절수업에는 타 대학 수강 불가)\n※ 파견예정학기 기준으로 의무등록 잔여학기가 0이고 수료기준학점 잔여분이 본인의 수강가능학점보다 적은 경우 졸업예정자로 간주\n\n라. 신청가능학점\n- 본교 계절수업 수강학점과 합산하여 6학점 이내, 연간 총 9학점 이내까지 수강 가능\n\n마. 신청방법\n- 이메일을 통한 온라인 신청\n1) 첨부된 대학별 안내사항을 확인하여 신청기간 내 필요한 필수 제출 서류 첨부하여 이메일 신청(이메일 : aicoss@skku.edu) ※ 붙임 파일 참조 必\n2) 대학별 지원방법에 따라 추가적으로 학점교류 대학에 직접 온라인 신청해야 하는 경우, 별도 안내 참고\n\n* 대학별 신청접수 마감일 이후 일괄 승인/미승인 처리 및 예정조서 작성 권한 부여\n* 동학기 학점교류 중복 신청(2개 대학 이상) 시, 1개 대학 최종 선택(나머지 대학 신청 취소) 후에 예정조서/인정조서 작성이 가능함. 단, 2개 대학 이상 학점교류 동시 수강이 가능한 경우라면 실제 교류수강은 가능하나 예정/인정조서상에서는 최초 신청한 1개 대학으로만 표기되며, 작성 내역에는 모든 교류대학에서 수강한 과목명과 관련 증빙서류를 함께 첨부해야 함.\n* 학점교류 신청 취소를 희망할 경우 '학점교류 신청 학년도/학기, 학번, 성명, 신청대학명, 취소사유'를 기재하여 인공지능혁신공유대학 학점교류 담당자(aicoss@skku.edu)로 회신하며, 회신 내용은 교무팀을 통해 최종 처리함.\n\n바. 주의사항\n- 첨부된 교류대학별 수강안내문을 반드시 숙지하기 바랍니다.(대학별 신청기준 및 조건 상이)\n- 대학별 추천 양식 및 기타 제출이 필요한 서류( (필수제출) 기재 파일 )는 반드시 첨부하여 신청절차를 기한 내 완료하여야 하며, 누락될 경우 신청접수가 불가합니다.\n- 교류대학별로 수강자격이 제한된 곳도 있음을 주의하시기 바랍니다.\n- 신청가능한 교류대학은 타 대학으로부터 안내공문을 수령하는 시점을 기준으로 누적 업데이트됩니다.(공지사항 게시)\n- 승인 이후 학점교류 신청취소를 희망하는 경우 교류대학측 수강내역을 반드시 기한 내 삭제한 뒤 본교 교무팀으로 통보하여야하고, 수강 도중 부득이한 사유에 따라 학점교류를 포기하고자 할 경우 본교와 교류대학측에 반드시 연락하여 관련 상담 및 조치를 받으시기 바랍니다. (그렇지 않을 경우 F학점이 부과되며 성적은 강제입력됩니다.)\n- 마감기간 이후 본교 학생이 추가신청을 위해 타 대학에 전화를 하는 경우가 있습니다. 타 대학측에서 그러지 않도록 자제를 요청하였사오니, 마감기한은 엄격하게 지켜질 수 있도록 협조바랍니다.\n- 타 대학에서 수강한 과목은 '전공' 또는 '일반선택'으로만 인정받을 수 있습니다.\n(교양 및 교직, 교직요건 중 기본이수과목 인정 불가/ 타 대학에서 수강한 교양과목은 본교에서 일반선택 영역으로만 인정)\n- 학점 및 ‘전공’학점 인정여부는 소속학과 학과장 및 사무실로 문의하여 확인 후 신청바랍니다.\n<타대학취득학점예정조서> 작성을 통해 확인받을 수 있습니다.\n\n※ 파견 교류대학측에서 별도 성적증명서를 발급하지 않을 수 있습니다. 교류 수학 종료 후 본교 성적인정절차 진행을 위하여 \"해당 대학 성적공시화면 캡쳐 또는 출력자료\"로도 증빙 제출이 가능하오니, 교류대학측에 성적증명서 발급 요청을 자제해주시기 바랍니다. (이와 같이 학생이 제출한 원성적증빙자료에 대해서는 추후 해당 대학측에서 발송한 공문을 통해 진위여부를 판단한 뒤 성적인정처리됩니다.)\n\n사. 문의: 인공지능혁신융합대학사업단 학점교류 담당자 (T.02-740-1632/aicoss@skku.edu)",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [
-        {
-          "name": "2026학년도 겨울 계절학기 서울시립대학교 인공지능혁신융합대학사업단 학점교류 안내(인공지능컨소시엄).zip",
-          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=140482&attachNo=118739",
-          "type": "ZIP",
-          "size": null
-        }
-      ],
-      "body_html": "<p>인공지능혁신융합대학사업의 협력교와 학점교류를 희망하는 학생은 아래 안내에 따라 신청하시기 바랍니다.</p><p>※ 학점교류 교과목의 학점 및 ‘전공’학점 인정여부는 소속학과에서 결정하는 사안입니다.</p><p>※ 학점교류 희망 학생들은 반드시 소속학과 학과장 및 사무실로 해당 사항에 대해 문의하여 확인 후 신청바랍니다.</p><p>※ [학사제도]-[수강신청/수업]-[국내외 타 대학(원) 학점 취득] 내용을 반드시 숙지해주세요.</p><p>※ 본 공지사항 내용을 꼼꼼하게 읽어주세요. 추후 내용 미숙지로 인한 문제 발생 시 모든 책임은 학생에게 있습니다.</p><p>인공지능혁신융합대학사업은 대학 간 신기술분야 교육자원을 공동 활용하고 산업체 연구기관 등이 참여해 국가 수준의 핵심인재 양성을 위한 협력체계 구축을 목표로 합니다.</p><p>이 중 인공지능 분야를 담당하는 인공지능혁신융합대학사업단은 주관대학인 전남대를 포함하여 총 7개 대학(전남대, 성균관대, 서울과학기술대, 서울시립대, 경북대, 전주대, 영진전문대)이 컨소시엄으로 참여하고 있고 대학 간의 공유, 개방, 협력을 통해 핵심 인력 양성을 목적으로 하고 범국가적 SW-AI 교육을 통한 융합형 인재 양성을 지향합니다.</p><p>2026학년도 겨울 계절수업 인공지능혁신융합대학사업 협력교로의 학점교류를 희망하는 학생은 아래 안내에 따라 신청하시기 바랍니다.</p><p>(게시일 기준으로 교류대학 누적 업데이트 됩니다.)</p><p>가. 학점교류 가능 대학 및 과목</p><ul><li>(마감) 전남대학교: 인공지능기초(3학점), 국외현장실습1(2학점), 산학협력프로젝트2(1학점), 산학협력프로젝트4(1학점)</li></ul><p>※ 국외현장실습1은 AICOSS-THU 글로벌 학생 프로그램 선발자에 한하여 신청 가능하며, 별도 안내 예정.</p><p>※ 산학협력프로젝트2,4의 경우『2026 AI융합 문제발굴 산학연계 해커톤(본선)』,『2026 CO-SHOW 연계 AIM챌린지(부트캠프)』, 『AICOSS Microsoft X SKKU Agenthon 교육 경진대회』참여자만 신청 가능.</p><ul><li>서울시립대학교: 인공지능수학기초(3학점), 인공지능수학심화(3학점), 인공지능기초와활용(3학점), 데이터분석기초(3학점), 산학AI프로젝트(1학점)</li></ul><p>※ 산학AI프로젝트는 영진전문대 한달살기 프로그램(가칭) 선발 학생만 신청 가능(생활관 미지원)</p><p>나. 추천 마감일 (본교에서 타대학 안내공문을 수령 시 누적 업데이트 예정)</p><ul><li>(마감) 전남대학교: 2026.10.25.(일)까지</li><li>서울시립대학교: 2026.11.10.(화)까지</li></ul><p>→ 첨부된 대학별 안내사항을 확인하여 신청기간 내 필요한 필수 제출 서류 첨부하여 이메일 신청(이메일: aicoss@skku.edu) ※ 붙임 파일 참조 必</p><p>※ 추천마감 기한 이후 신청은 절대 불가하며, 시스템상 신청이 가능하더라도 기한 이후 제출분은 탈락 처리(기 모집 인원 중 신청취소자 발생 시에도 추가 선발 없음)</p><p>다. 신청자격</p><ul><li>학사과정 학생: 2개 학기 이상(3학년 편입생은 1개 학기 이상)을 이수한 자</li></ul><p>※ 단, 2027년 2월 졸업예정자는 제외(졸업 마지막 학기 및 계절수업에는 타 대학 수강 불가)</p><p>※ 파견예정학기 기준으로 의무등록 잔여학기가 0이고 수료기준학점 잔여분이 본인의 수강가능학점보다 적은 경우 졸업예정자로 간주</p><p>라. 신청가능학점</p><ul><li>본교 계절수업 수강학점과 합산하여 6학점 이내, 연간 총 9학점 이내까지 수강 가능</li></ul><p>마. 신청방법</p><ul><li>이메일을 통한 온라인 신청</li></ul><p>1) 첨부된 대학별 안내사항을 확인하여 신청기간 내 필요한 필수 제출 서류 첨부하여 이메일 신청(이메일 : aicoss@skku.edu) ※ 붙임 파일 참조 必</p><p>2) 대학별 지원방법에 따라 추가적으로 학점교류 대학에 직접 온라인 신청해야 하는 경우, 별도 안내 참고</p><p>* 대학별 신청접수 마감일 이후 일괄 승인/미승인 처리 및 예정조서 작성 권한 부여</p><p>* 동학기 학점교류 중복 신청(2개 대학 이상) 시, 1개 대학 최종 선택(나머지 대학 신청 취소) 후에 예정조서/인정조서 작성이 가능함. 단, 2개 대학 이상 학점교류 동시 수강이 가능한 경우라면 실제 교류수강은 가능하나 예정/인정조서상에서는 최초 신청한 1개 대학으로만 표기되며, 작성 내역에는 모든 교류대학에서 수강한 과목명과 관련 증빙서류를 함께 첨부해야 함.</p><p>* 학점교류 신청 취소를 희망할 경우 '학점교류 신청 학년도/학기, 학번, 성명, 신청대학명, 취소사유'를 기재하여 인공지능혁신공유대학 학점교류 담당자(aicoss@skku.edu)로 회신하며, 회신 내용은 교무팀을 통해 최종 처리함.</p><p>바. 주의사항</p><ul><li>첨부된 교류대학별 수강안내문을 반드시 숙지하기 바랍니다.(대학별 신청기준 및 조건 상이)</li><li>대학별 추천 양식 및 기타 제출이 필요한 서류( (필수제출) 기재 파일 )는 반드시 첨부하여 신청절차를 기한 내 완료하여야 하며, 누락될 경우 신청접수가 불가합니다.</li><li>교류대학별로 수강자격이 제한된 곳도 있음을 주의하시기 바랍니다.</li><li>신청가능한 교류대학은 타 대학으로부터 안내공문을 수령하는 시점을 기준으로 누적 업데이트됩니다.(공지사항 게시)</li><li>승인 이후 학점교류 신청취소를 희망하는 경우 교류대학측 수강내역을 반드시 기한 내 삭제한 뒤 본교 교무팀으로 통보하여야하고, 수강 도중 부득이한 사유에 따라 학점교류를 포기하고자 할 경우 본교와 교류대학측에 반드시 연락하여 관련 상담 및 조치를 받으시기 바랍니다. (그렇지 않을 경우 F학점이 부과되며 성적은 강제입력됩니다.)</li><li>마감기간 이후 본교 학생이 추가신청을 위해 타 대학에 전화를 하는 경우가 있습니다. 타 대학측에서 그러지 않도록 자제를 요청하였사오니, 마감기한은 엄격하게 지켜질 수 있도록 협조바랍니다.</li><li>타 대학에서 수강한 과목은 '전공' 또는 '일반선택'으로만 인정받을 수 있습니다.</li></ul><p>(교양 및 교직, 교직요건 중 기본이수과목 인정 불가/ 타 대학에서 수강한 교양과목은 본교에서 일반선택 영역으로만 인정)</p><ul><li>학점 및 ‘전공’학점 인정여부는 소속학과 학과장 및 사무실로 문의하여 확인 후 신청바랍니다.</li></ul><p>&lt;타대학취득학점예정조서&gt; 작성을 통해 확인받을 수 있습니다.</p><p>※ 파견 교류대학측에서 별도 성적증명서를 발급하지 않을 수 있습니다. 교류 수학 종료 후 본교 성적인정절차 진행을 위하여 \"해당 대학 성적공시화면 캡쳐 또는 출력자료\"로도 증빙 제출이 가능하오니, 교류대학측에 성적증명서 발급 요청을 자제해주시기 바랍니다. (이와 같이 학생이 제출한 원성적증빙자료에 대해서는 추후 해당 대학측에서 발송한 공문을 통해 진위여부를 판단한 뒤 성적인정처리됩니다.)</p><p>사. 문의: 인공지능혁신융합대학사업단 학점교류 담당자 (T.02-740-1632/aicoss@skku.edu)</p>",
-      "images": [],
-      "summary": "인공지능혁신융합대학사업 학점교류를 희망하는 학생은 소속 학과 문의 후 대학별 안내에 따라 이메일로 신청해야 합니다. 대학별로 신청 마감일이 다르며, 전남대는 10월 25일, 서울시립대는 11월 10일까지입니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:16:56.035412+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "마감",
-        "at": "2026-11-10T23:59:00+09:00"
-      },
-      "summary_attempts": 1
-    },
-    "cse-notice/227952": {
-      "notice": {
-        "id": "cse-notice/227952",
-        "source_id": "cse-notice",
-        "article_no": "227952",
-        "title": "When Noise Is the Point: What Humanistic Tasks Reveal About Our Data Pipelines(11/18 10:30)",
-        "category": "행사/세미나",
-        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=227952",
-        "posted_on": "2026-11-03",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "Title: When Noise Is the Point: What Humanistic Tasks Reveal About Our Data Pipelines\n\nSpeaker: Prof. Maria Antoniak @ University of Colorado Boulder\n\nTime : 10:30 - 11:30, Nov 18, 2026\n\nLocation:\nOnline: https://hli.skku.edu/InvitedTalk261118\n\nLanguage: English speech & English slides\n\nAbstract:\nIn computational studies of humanistic tasks such as storytelling and poetry, we often encounter datasets whose features frustrate standard NLP pipelines. In this talk, I'll draw on three settings where my collaborators and I have run into this friction. First, I'll discuss user–chatbot conversations like WildChat, where creative requests are long, detailed, and frequently revised, making these logs a rich but also complicated view of how people write with chatbots. Second, I'll describe our development of a fine-grained narrative annotation scheme for very large-scale, heterogeneous web text in pretraining data, where operationalizing a humanities concept is complicated by data diversity. Third, I'll turn to poetry, where the linearization systems used to build training corpora routinely flatten or delete formatting that poets use deliberately. Across these cases, I'll argue that what counts as noise depends on who is reading and for what purpose, and that taking humanistic perspectives seriously can help us build data practices, annotation schemes, and evaluations that better reflect how people actually use language.\n\nBio:\nMaria Antoniak is an Assistant Professor of Computer Science at the University of Colorado Boulder where she is also affiliated with the Department of Information Science and a member of the Boulder NLP Group. Previously, she was a Young Investigator at the Allen Institute for AI and a postdoc at the Pioneer Centre for AI at the University of Copenhagen. She completed her PhD in Information Science at Cornell University and her master’s degree in Computational Linguistics at the University of Washington. She has also spent time at places like ETH Zürich, Microsoft Research FATE, Twitter Cortex, and Facebook Core Data Science. Her research is in natural language processing and cultural analytics.",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><span>Title</span><span>: When Noise Is the Point: What Humanistic Tasks Reveal About Our Data Pipelines</span></p><p><span>Speaker</span><span>: Prof. Maria Antoniak @ University of Colorado Boulder</span></p><p><strong><br></strong></p><p><strong><span>Time&nbsp;</span></strong><span><strong>: 10:30 - 11:30, Nov 18, 2026</strong></span></p><p><span><strong>Location</strong></span><strong><span>:&nbsp;</span></strong></p><p><strong><span>Online:&nbsp;</span><a href=\"https://hli.skku.edu/InvitedTalk261118\"></a><a href=\"https://hli.skku.edu/InvitedTalk261118\">https://hli.skku.edu/InvitedTalk261118</a></strong><span><strong>&nbsp;</strong></span></p><p><span>Language</span><span>: English speech &amp; English slides</span></p><p><span>Abstract</span><span>:&nbsp;</span></p><p><span>In computational studies of humanistic tasks such as storytelling and poetry, we often encounter datasets whose features frustrate standard NLP pipelines. In this talk, I'll draw on three settings where my collaborators and I have run into this friction. First, I'll discuss user–chatbot conversations like WildChat, where creative requests are long, detailed, and frequently revised, making these logs a rich but also complicated view of how people write with chatbots. Second, I'll describe our development of a fine-grained narrative annotation scheme for very large-scale, heterogeneous web text in pretraining data, where operationalizing a humanities concept is complicated by data diversity. Third, I'll turn to poetry, where the linearization systems used to build training corpora routinely flatten or delete formatting that poets use deliberately. Across these cases, I'll argue that what counts as noise depends on who is reading and for what purpose, and that taking humanistic perspectives seriously can help us build data practices, annotation schemes, and evaluations that better reflect how people actually use language.</span></p><p><span>Bio</span><span>:</span></p><p><span>Maria Antoniak is an Assistant Professor of Computer Science at the University of Colorado Boulder where she is also affiliated with the Department of Information Science and a member of the Boulder NLP Group. Previously, she was a Young Investigator at the Allen Institute for AI and a postdoc at the Pioneer Centre for AI at the University of Copenhagen. She completed her PhD in Information Science at Cornell University and her master’s degree in Computational Linguistics at the University of Washington. She has also spent time at places like ETH Zürich, Microsoft Research FATE, Twitter Cortex, and Facebook Core Data Science. Her research is in natural language processing and cultural analytics.</span></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
-      "images": [],
-      "summary": "마리아 안토니아크 교수가 '인문학적 과제가 데이터 파이프라인에 시사하는 점'을 주제로 11월 18일 오전 10시 30분에 온라인 강연을 진행합니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00",
-      "translation": {
-        "title": "노이즈가 핵심일 때: 인문학적 과업이 우리의 데이터 파이프라인에 대해 시사하는 점 (11/18 10:30)",
-        "body": "제목: 노이즈가 핵심일 때: 인문학적 과업이 우리의 데이터 파이프라인에 대해 시사하는 점\n\n연사: Maria Antoniak 교수 (University of Colorado Boulder)\n\n일시: 2026년 11월 18일 10:30 - 11:30\n\n장소:\n온라인: https://hli.skku.edu/InvitedTalk261118\n\n언어: 영어 강연 및 영어 슬라이드\n\n초록:\n스토리텔링이나 시와 같은 인문학적 과업에 대한 전산 연구를 수행하다 보면, 표준 NLP 파이프라인을 어렵게 만드는 특성을 가진 데이터셋을 자주 마주하게 됩니다. 이번 강연에서는 저와 공동 연구자들이 이러한 마찰을 겪었던 세 가지 사례를 다룹니다. 첫째, WildChat과 같은 사용자-챗봇 대화에 대해 논의합니다. 창의적인 요청이 길고 상세하며 빈번하게 수정되는 이러한 기록은 사람들이 챗봇과 어떻게 글을 쓰는지 보여주는 풍부하면서도 복잡한 자료입니다. 둘째, 사전 학습 데이터 내의 매우 방대하고 이질적인 웹 텍스트를 위한 세밀한 서사 주석 체계 개발 과정을 설명합니다. 이 과정에서 인문학적 개념을 운용하는 것은 데이터의 다양성으로 인해 복잡해집니다. 셋째, 시를 다룹니다. 학습 말뭉치를 구축하는 데 사용되는 선형화 시스템은 시인들이 의도적으로 사용하는 서식을 일상적으로 평탄화하거나 삭제합니다. 이러한 사례들을 통해 저는 무엇을 노이즈로 간주할지는 누가 어떤 목적으로 읽느냐에 달려 있으며, 인문학적 관점을 진지하게 고려하는 것이 사람들이 실제로 언어를 사용하는 방식을 더 잘 반영하는 데이터 관행, 주석 체계 및 평가를 구축하는 데 도움이 될 것이라고 주장합니다.\n\n연사 약력:\nMaria Antoniak은 University of Colorado Boulder의 컴퓨터과학과 조교수이며, 정보과학과 소속이자 Boulder NLP 그룹의 일원입니다. 이전에는 Allen Institute for AI의 Young Investigator였으며, University of Copenhagen의 Pioneer Centre for AI에서 박사후 연구원을 지냈습니다. Cornell University에서 정보과학 박사 학위를, University of Washington에서 전산언어학 석사 학위를 받았습니다. 또한 ETH Zürich, Microsoft Research FATE, Twitter Cortex, Facebook Core Data Science 등에서 근무한 바 있습니다. 연구 분야는 자연어 처리 및 문화 분석입니다.",
-        "model": "gemini-3.1-flash-lite"
-      },
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "일정",
-        "at": "2026-11-18T10:30:00+09:00"
-      }
-    },
-    "linkareer-intern/363325": {
-      "notice": {
-        "id": "linkareer-intern/363325",
-        "source_id": "linkareer-intern",
-        "article_no": "363325",
-        "title": "(주)윈스테크넷 2027년 상반기 인턴 모집",
-        "category": "체험형 인턴",
-        "url": "https://linkareer.com/activity/363325",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-10T14:53:14.840350+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/984526\" title=\"그림3.png\"><br><br></p>",
-      "images": [
-        "https://media-cdn.linkareer.com/se2editor/image/984526"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-10T14:53:14.840350+09:00",
-      "page_text": "",
-      "body_attempted_at": "2026-11-10T14:53:14.840350+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-15T23:59:59.999000+09:00",
-        "model": "source"
-      }
-    },
-    "jasoseol-intern/107078": {
-      "notice": {
-        "id": "jasoseol-intern/107078",
-        "source_id": "jasoseol-intern",
-        "article_no": "107078",
-        "title": "[케이씨텍] [채용연계형 인턴] 총무 담당자 모집(안성)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/107078",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-06T00:13:37.787736+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/934/webp/screencapture-kc-group-recruiter-co-kr-career-jobs-132989-2026-11-05-08_40_39.webp?1793835701\" alt=\"케이씨텍 [채용연계형 인턴] 총무 담당자 모집(안성)\"></p>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/934/webp/screencapture-kc-group-recruiter-co-kr-career-jobs-132989-2026-11-05-08_40_39.webp?1793835701"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-06T00:35:17.798876+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-15T23:55:00+09:00",
-        "model": "source"
-      },
-      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00"
     }
   }
 }

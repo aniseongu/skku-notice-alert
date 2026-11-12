@@ -57,6 +57,593 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141818": {
+      "notice": {
+        "id": "skku-notice01/141818",
+        "source_id": "skku-notice01",
+        "article_no": "141818",
+        "title": "2026년 제2회 수원청년 틈 페스티벌 행사 안내",
+        "category": "행사/세미나",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141818",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "청년에 관심 있는 누구나 참여 가능한 행사로 학생의 자격 요건에 부합합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "수원청년축제준비위원회 ‘틈’에서는 「2026년 제2회 수원청년 틈 페스티벌」을 추진하오니, 관심 있는 학생 분들의 많은 참여 부탁드립니다.\n\n가. 행 사 명 : 제2회 수원청년 틈 페스티벌\n- 진행일시: 11/21(토) 오전 10시 30분 ~ 오후 5시\n- 진행장소: 복합문화공간111CM (수원시 장안구 수성로195)\n나. 행사목적 : 청년문제 인식 개선 및 확산, 지역 내 청년 커뮤니티 활성화\n다. 참가대상 : '청년'에 관심이 있는 누구나\n라. 주요내용 : 청년 테마 전시 및 힐링 체험 부스(10종 이상), 청년 예술인 공연, 토크 콘서트 등\n마. 참 가 비 : 무료\n바. 문 의 처 : 수원청년축제준비위원회'틈' 홍보담당자(010-6646-7217 / suwonteum@gmail.com)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>수원청년축제준비위원회 ‘틈’에서는 「2026년 제2회 수원청년 틈 페스티벌」을 추진하오니, 관심 있는 학생 분들의 많은 참여 부탁드립니다.</p><p>가. 행 사 명 : 제2회 수원청년 틈 페스티벌</p><ul><li>진행일시: 11/21(토) 오전 10시 30분 ~ 오후 5시</li><li>진행장소: 복합문화공간111CM (수원시 장안구 수성로195)</li></ul><p>나. 행사목적 : 청년문제 인식 개선 및 확산, 지역 내 청년 커뮤니티 활성화</p><p>다. 참가대상 : '청년'에 관심이 있는 누구나</p><p>라. 주요내용 : 청년 테마 전시 및 힐링 체험 부스(10종 이상), 청년 예술인 공연, 토크 콘서트 등</p><p>마. 참 가 비 : 무료</p><p>바. 문 의 처 : 수원청년축제준비위원회'틈' 홍보담당자(010-6646-7217 / suwonteum@gmail.com)</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"2026년 제2회 수원청년 틈 페스티벌 행사 안내\" src=\"https://www.skku.edu/_attach/image/2026/11/KNoYZuiCepHKAIWjRZmP.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/KNoYZuiCepHKAIWjRZmP.jpg"
+      ],
+      "summary": "11월 21일 토요일 10시 30분부터 복합문화공간111CM에서 열리는 수원청년 틈 페스티벌에 참여할 수 있습니다. 청년 테마 전시 및 체험, 공연 등을 무료로 즐길 수 있습니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "수원청년축제준비위원회 ‘틈’에서는 「2026년 제2회 수원청년 틈 페스티벌」을 추진하오니, 관심 있는 학생 분들의 많은 참여 부탁드립니다.\n\n가. 행 사 명 : 제2회 수원청년 틈 페스티벌\n- 진행일시: 11/21(토) 오전 10시 30분 ~ 오후 5시\n- 진행장소: 복합문화공간111CM (수원시 장안구 수성로195)\n나. 행사목적 : 청년문제 인식 개선 및 확산, 지역 내 청년 커뮤니티 활성화\n다. 참가대상 : '청년'에 관심이 있는 누구나\n라. 주요내용 : 청년 테마 전시 및 힐링 체험 부스(10종 이상), 청년 예술인 공연, 토크 콘서트 등\n마. 참 가 비 : 무료\n바. 문 의 처 : 수원청년축제준비위원회'틈' 홍보담당자(010-6646-7217 / suwonteum@gmail.com)",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-21T10:30:00+09:00"
+      }
+    },
+    "skku-notice01/141813": {
+      "notice": {
+        "id": "skku-notice01/141813",
+        "source_id": "skku-notice01",
+        "article_no": "141813",
+        "title": "성균관대학교 배터리학과 행정직원 모집(~11/20(금)까지)",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141813",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": "2026-11-20T23:59:00+09:00",
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "대졸(학사) 이상 소지자를 대상으로 하는 채용 공고이므로 현재 재학 중인 학부생은 지원이 어렵습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "인턴"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "성균관대학교 성균융합원 배터리학과에서 행정직원을 아래와 같이 채용 공고합니다.\n\n1. 채용 분야\n- 주요 업무: 성균융합원 배터리학과 학사 및 학과 업무\n- 인원: 계약직 1명\n\n2. 자격 조건\n- 지원자격: 대졸(학사) 이상 소지자\n- 한글, MS Word, Excel 등 OA 사용 가능자\n- 대학 행정 및 학사 업무 경험자 우대\n\n3. 전형 방법\n- 서류전형 ⇒ 면접전형\n- 면접일정: 서류전형 합격자에 한하여 개별 통보 예정(11.30(월) 면접 진행 예정)\n\n4. 서류전형 제출기한 및 방법\n- 제출기한: ~ 2026.11.20(금)까지\n- 제출서류\n• 이력서, 자기소개서 1부(붙임양식)\n• 최종학교 졸업증명서 1부\n• 경력증명서 및 기타 증명서 1부(해당자에 한함)\n- 제출처: ssbat@skku.edu\n\n5. 근로조건\n- 근로시간: 주 5일(월~금) 09:00~17:30\n- 근무시작일: 2026.12.1.자(협의 가능)\n- 근무처: 성균관대학교 자연과학캠퍼스 내 배터리학과 학과사무실\n\n6. 급여 및 처우\n- 계약기간/조건: 1년 단위 계약 (재계약 가능)\n- 급여: 내부 규정 및 경력을 고려하여 책정\n- 4대 보험 가입, 1년 이상 근무 시 퇴직금 지급\n- 장기 지속 근무자 선호\n\n7. 응시자 주의사항\n- 접수된 서류는 일절 반환하지 않으며, 기재된 내용이 사실과 다른 경우 채용을 취소할 수 있습니다.\n- 기재사항 착오 및 누락으로 인한 불이익은 일체 응시자에게 책임이 있습니다.\n\n8. 문의처\n- 문의처: ssbat@skku.edu",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "지원서_서식.hwp",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141813&attachNo=119087",
+          "type": "HWP",
+          "size": null
+        }
+      ],
+      "body_html": "<p>성균관대학교 성균융합원 배터리학과에서 행정직원을 아래와 같이 채용 공고합니다.</p><p>1. 채용 분야</p><ul><li>주요 업무: 성균융합원 배터리학과 학사 및 학과 업무</li><li>인원: 계약직 1명</li></ul><p>2. 자격 조건</p><ul><li>지원자격: 대졸(학사) 이상 소지자</li><li>한글, MS Word, Excel 등 OA 사용 가능자</li><li>대학 행정 및 학사 업무 경험자 우대</li></ul><p>3. 전형 방법</p><ul><li>서류전형 ⇒ 면접전형</li><li>면접일정: 서류전형 합격자에 한하여 개별 통보 예정(11.30(월) 면접 진행 예정)</li></ul><p>4. 서류전형 제출기한 및 방법</p><ul><li>제출기한: ~ 2026.11.20(금)까지</li><li>제출서류</li></ul><p>• 이력서, 자기소개서 1부(붙임양식)</p><p>• 최종학교 졸업증명서 1부</p><p>• 경력증명서 및 기타 증명서 1부(해당자에 한함)</p><ul><li>제출처: ssbat@skku.edu</li></ul><p>5. 근로조건</p><ul><li>근로시간: 주 5일(월~금) 09:00~17:30</li><li>근무시작일: 2026.12.1.자(협의 가능)</li><li>근무처: 성균관대학교 자연과학캠퍼스 내 배터리학과 학과사무실</li></ul><p>6. 급여 및 처우</p><ul><li>계약기간/조건: 1년 단위 계약 (재계약 가능)</li><li>급여: 내부 규정 및 경력을 고려하여 책정</li><li>4대 보험 가입, 1년 이상 근무 시 퇴직금 지급</li><li>장기 지속 근무자 선호</li></ul><p>7. 응시자 주의사항</p><ul><li>접수된 서류는 일절 반환하지 않으며, 기재된 내용이 사실과 다른 경우 채용을 취소할 수 있습니다.</li><li>기재사항 착오 및 누락으로 인한 불이익은 일체 응시자에게 책임이 있습니다.</li></ul><p>8. 문의처</p><ul><li>문의처: ssbat@skku.edu</li></ul>",
+      "images": [],
+      "summary": "성균융합원 배터리학과에서 11월 20일까지 행정직원을 모집합니다. 관련 서류를 작성하여 이메일로 제출하면 되며 졸업자 대상의 공고입니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "성균관대학교 성균융합원 배터리학과에서 행정직원을 아래와 같이 채용 공고합니다.\n\n1. 채용 분야\n- 주요 업무: 성균융합원 배터리학과 학사 및 학과 업무\n- 인원: 계약직 1명\n\n2. 자격 조건\n- 지원자격: 대졸(학사) 이상 소지자\n- 한글, MS Word, Excel 등 OA 사용 가능자\n- 대학 행정 및 학사 업무 경험자 우대\n\n3. 전형 방법\n- 서류전형 ⇒ 면접전형\n- 면접일정: 서류전형 합격자에 한하여 개별 통보 예정(11.30(월) 면접 진행 예정)\n\n4. 서류전형 제출기한 및 방법\n- 제출기한: ~ 2026.11.20(금)까지\n- 제출서류\n• 이력서, 자기소개서 1부(붙임양식)\n• 최종학교 졸업증명서 1부\n• 경력증명서 및 기타 증명서 1부(해당자에 한함)\n- 제출처: ssbat@skku.edu\n\n5. 근로조건\n- 근로시간: 주 5일(월~금) 09:00~17:30\n- 근무시작일: 2026.12.1.자(협의 가능)\n- 근무처: 성균관대학교 자연과학캠퍼스 내 배터리학과 학과사무실\n\n6. 급여 및 처우\n- 계약기간/조건: 1년 단위 계약 (재계약 가능)\n- 급여: 내부 규정 및 경력을 고려하여 책정\n- 4대 보험 가입, 1년 이상 근무 시 퇴직금 지급\n- 장기 지속 근무자 선호\n\n7. 응시자 주의사항\n- 접수된 서류는 일절 반환하지 않으며, 기재된 내용이 사실과 다른 경우 채용을 취소할 수 있습니다.\n- 기재사항 착오 및 누락으로 인한 불이익은 일체 응시자에게 책임이 있습니다.\n\n8. 문의처\n- 문의처: ssbat@skku.edu",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00"
+    },
+    "skku-notice01/141812": {
+      "notice": {
+        "id": "skku-notice01/141812",
+        "source_id": "skku-notice01",
+        "article_no": "141812",
+        "title": "2027년 1차 imec 글로벌 인턴십 프로그램 연수생 모집 안내",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141812",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": "인턴과 현장실습",
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [
+          "category:채용/모집",
+          "title_any:인턴"
+        ],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "국내 대학원 석·박사 과정생을 대상으로 하는 프로그램으로 학부생인 사용자는 지원 자격에 해당하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "인턴"
+          ]
+        },
+        "notified": false
+      },
+      "body_text": "나노종합기술원에서는 과학기술정보통신부의 지원을 통해 인턴쉽 및 기술인력 교루 사업-imec 글로벌 인턴십 프로그램을 추진하오니, 관심 있는 학생 분들의 많은 지원 부탁드립니다.\n\n가. 사업개요\nㅇ (사업명) 인턴십 및 기술인력교류 사업(해외 Imec 글로벌 인턴십 프로그램)\nㅇ (사업내용) 해외 반도체 주요 연구거점 기관(imec)과의 공동 프로젝트 인턴십 활동을 통한 글로벌 기술 협력 소양을 갖춘 전문 R&D 인재양성\nㅇ (참여대상) 국내 대학원 이공계 석·박사 과정생(졸업생, 휴학생 제외)\nㅇ (연수기간) 12개월 이내('27.03.01.~'28.02.29., 12개월)\n\n나. 지원자격 및 지원사항\nㅇ (지원자격): 첨부 공고문 참고\n* 지원서 제출전 Imec 멘토와 학생 간 사전 인터뷰 필수로 신청방법 및 절차 필독\nㅇ (지원사항) 해외 연구기관(Imec) 연구 수행 제반 비용 및 체재비(인건비 포함) 지원\n\n다. 문의사항: 세부사항 공고문 참조\n※ (담당자) 나노종합기술원 김보미(042-366-2093, kbomi@nnfc.re.kr) 또는 메일(internship@nnfc.re.kr)\n(책임자) 나노종합기술원 기획협력부 남궁지 부장, 미래반도체인재센터 배희경 센터장",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "붙임 1. (공고문) 2027년 1차 인턴쉽 및 기술인력교류 사업 파견자 모집 공고.hwp",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141812&attachNo=119084",
+          "type": "HWP",
+          "size": null
+        },
+        {
+          "name": "붙임 2. 2027년도 인턴십 및 기술인력 교류 및 운영지침(안).hwp",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141812&attachNo=119085",
+          "type": "HWP",
+          "size": null
+        },
+        {
+          "name": "붙임 3. 신청서 등 지원 서류.hwp",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141812&attachNo=119086",
+          "type": "HWP",
+          "size": null
+        }
+      ],
+      "body_html": "<p>나노종합기술원에서는 과학기술정보통신부의 지원을 통해 인턴쉽 및 기술인력 교루 사업-imec 글로벌 인턴십 프로그램을 추진하오니, 관심 있는 학생 분들의 많은 지원 부탁드립니다.</p><p>가. 사업개요</p><p>ㅇ (사업명) 인턴십 및 기술인력교류 사업(해외 Imec 글로벌 인턴십 프로그램)</p><p>ㅇ (사업내용) 해외 반도체 주요 연구거점 기관(imec)과의 공동 프로젝트 인턴십 활동을 통한 글로벌 기술 협력 소양을 갖춘 전문 R&amp;D 인재양성</p><p>ㅇ (참여대상) 국내 대학원 이공계 석·박사 과정생(졸업생, 휴학생 제외)</p><p>ㅇ (연수기간) 12개월 이내('27.03.01.~'28.02.29., 12개월)</p><p>나. 지원자격 및 지원사항</p><p>ㅇ (지원자격): 첨부 공고문 참고</p><p>* 지원서 제출전 Imec 멘토와 학생 간 사전 인터뷰 필수로 신청방법 및 절차 필독</p><p>ㅇ (지원사항) 해외 연구기관(Imec) 연구 수행 제반 비용 및 체재비(인건비 포함) 지원</p><p>다. 문의사항: 세부사항 공고문 참조</p><p>※ (담당자) 나노종합기술원 김보미(042-366-2093, kbomi@nnfc.re.kr) 또는 메일(internship@nnfc.re.kr)</p><p>(책임자) 나노종합기술원 기획협력부 남궁지 부장, 미래반도체인재센터 배희경 센터장</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"2027년 1차 imec 글로벌 인턴십 프로그램 연수생 모집 안내\" src=\"https://www.skku.edu/_attach/image/2026/11/nkmiWZSYBGHWFtjVoSnw.png\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/nkmiWZSYBGHWFtjVoSnw.png"
+      ],
+      "summary": "나노종합기술원에서 2027년 1차 imec 글로벌 인턴십 연수생을 모집합니다. 참여를 희망하는 대학원생은 공고문을 확인하여 멘토 인터뷰 등 지원 절차를 진행해야 합니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "나노종합기술원에서는 과학기술정보통신부의 지원을 통해 인턴쉽 및 기술인력 교루 사업-imec 글로벌 인턴십 프로그램을 추진하오니, 관심 있는 학생 분들의 많은 지원 부탁드립니다.\n\n가. 사업개요\nㅇ (사업명) 인턴십 및 기술인력교류 사업(해외 Imec 글로벌 인턴십 프로그램)\nㅇ (사업내용) 해외 반도체 주요 연구거점 기관(imec)과의 공동 프로젝트 인턴십 활동을 통한 글로벌 기술 협력 소양을 갖춘 전문 R&D 인재양성\nㅇ (참여대상) 국내 대학원 이공계 석·박사 과정생(졸업생, 휴학생 제외)\nㅇ (연수기간) 12개월 이내('27.03.01.~'28.02.29., 12개월)\n\n나. 지원자격 및 지원사항\nㅇ (지원자격): 첨부 공고문 참고\n* 지원서 제출전 Imec 멘토와 학생 간 사전 인터뷰 필수로 신청방법 및 절차 필독\nㅇ (지원사항) 해외 연구기관(Imec) 연구 수행 제반 비용 및 체재비(인건비 포함) 지원\n\n다. 문의사항: 세부사항 공고문 참조\n※ (담당자) 나노종합기술원 김보미(042-366-2093, kbomi@nnfc.re.kr) 또는 메일(internship@nnfc.re.kr)\n(책임자) 나노종합기술원 기획협력부 남궁지 부장, 미래반도체인재센터 배희경 센터장",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165175": {
+      "notice": {
+        "id": "skku-career-intern/165175",
+        "source_id": "skku-career-intern",
+        "article_no": "165175",
+        "title": "[에어퍼스트] 2027년 동계 인턴십 채용공고",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=b96rWNeuTus9w8K7OU3GKBNYnxwaqtKIixfLFjN1u96&modalChk=Y",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "전산팀 및 사업기획팀 등 소프트웨어 관련 직무가 포함되어 있으며, 재학생도 지원 가능한 인턴십입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "접수 방법 : 채용사이트 접수 (https://airfirst.career.greetinghr.com/ko/o/244341)\n접수 기간 : 2026년 11월 12일 00:00 ~ 2026년 11월 26일 23:59",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><div><img src=\"https://job.skku.edu/upload/Recruit/20261112_60000253/AIRFIRST_2027_동계인턴_채용공고.jpg\"></div><br><div><div>접수 방법 : 채용사이트 접수 (<a href=\"https://airfirst.career.greetinghr.com/ko/o/244341\">https://airfirst.career.greetinghr.com/ko/o/244341</a>)</div><div>접수 기간 : 2026년 11월 12일 00:00 ~ 2026년 11월 26일 23:59</div></div></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261112_60000253/AIRFIRST_2027_동계인턴_채용공고.jpg"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "접수 방법 : 채용사이트 접수 (https://airfirst.career.greetinghr.com/ko/o/244341)\n접수 기간 : 2026년 11월 12일 00:00 ~ 2026년 11월 26일 23:59",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-26T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "e2dd802e9394a50bd73d1e554f13735162b509e2236f8b23181ef92fb7fa3e9d",
+        "verdict": "relevant",
+        "reason": "전산팀 및 사업기획팀 등 소프트웨어 관련 직무가 포함되어 있으며, 재학생도 지원 가능한 인턴십입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165173": {
+      "notice": {
+        "id": "skku-career-intern/165173",
+        "source_id": "skku-career-intern",
+        "article_no": "165173",
+        "title": "[PTKOREA] 온라인 패션몰 콘텐츠 기획 및 운영 업무 보조 인턴",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=b96rWNeuTus9w8K7OU3GK8Avd48vhxHcnGgbUPtE5kU&modalChk=Y",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "온라인 패션몰 콘텐츠 기획 및 운영 보조 업무로 소프트웨어 개발 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[담당업무]\n- 온라인 패션몰의 기획전 등 콘텐츠 기획 및 운영 업무 보조 전반\n- 상품 등록 및 수정 관리\n- 상품 품절 관리\n- 기타 업무 보조\n\n\n\n\n[자격요건]\n- 학사 이상이신 분 (기졸업자, 졸업 예정자, 휴학생)\n- MS Office 활용 능력이 우수하신 분, 디자인 Tool 활용이 가능하신 분 (간단한 이미지 리사이징 등)\n- 원활한 커뮤니케이션이 가능하신 분\n- 패션에 관심이 많으신 분\n\n\n\n\n[우대사항]\n- 온라인 AMD, 이커머스 콘텐츠 기획 직무에 대한 이해가 있으신 분\n- 패션업계 또는 유관 업무, 동종업계(광고 대행사, 이커머스 운영사) 근무 경험을 보유하신 분\n\n\n\n\n[복리후생]\n- 유연근로시간제 운영\n- 편리한 출퇴근 (강남역 3번출구 앞)\n- 자율적 업무환경 및 복장\n- 임직원 전용 식당 운영 (식대 보조)\n- 임직원 전용 진료실 지원- 4대보험 가입 (국민연금, 건강보험, 고용보험, 산재보험)\n- 연차유급휴가 부여 (근로기준법 기준)\n- 졸업식 유급휴가 지원\n- 무제한 커피 및 간식 지원\n- 유명명사 초청 사내 세미나\n- 사내도서관 이용 가능\n\n\n\n\n[근무조건]\n- 근무형태 : 인턴직(3개월, 추후 연장 가능)\n- 입사일 : 즉시 입사 가능자 우대\n- 근무일시 : 주 5일(월~금) 선택적근로시간제\n- 근무지역 : (06241) 서울 강남구 강남대로 372 FINE TOWER - 신분당선 강남에서 200m 이내\n\n\n\n\n[전형절차]\n- 서류전형 - 1차면접 - 최종합격\n- 본 채용은 수시진행으로, 우수 인력 채용시 마감될 수 있습니다.\n\n\n*입사지원 서류 내용이 사실과 다를 경우 채용이 취소될 수 있습니다.\n*국가보훈대상자 및 장애인은 관련 법령에 따라 우대합니다.\n\n\n\n\n[기타사항]\n- 합격자에 한하여 개별 연락드립니다.\n- 본 공고는 체험형 인턴입니다.\n\n\n\n\n공고접수기간~ 2026.11.22 오후 11:55 까지\n공고 URLhttps://ptkorea.recruiter.co.kr/career/jobs/131432",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><p><b><span>[담당업무]</span></b></p><p><span>- 온라인 패션몰의 기획전 등 콘텐츠 기획 및 운영 업무 보조 전반</span></p><p><span>- 상품 등록 및 수정 관리</span></p><p><span>- 상품 품절 관리</span></p><p><span>- 기타 업무 보조</span></p><p><span><b>[자격요건]</b></span></p><p><span>- 학사 이상이신 분 (기졸업자, 졸업 예정자, 휴학생)</span></p><p><span>- MS Office 활용 능력이 우수하신 분, 디자인 Tool 활용이 가능하신 분 (간단한 이미지 리사이징 등)</span></p><p><span>- 원활한 커뮤니케이션이 가능하신 분</span></p><p><span>- 패션에 관심이 많으신 분</span></p><p><span><b>[우대사항]</b></span></p><p><span>- 온라인 AMD, 이커머스 콘텐츠 기획 직무에 대한 이해가 있으신 분</span></p><p><span>- 패션업계 또는 유관 업무, 동종업계(광고 대행사, 이커머스 운영사) 근무 경험을 보유하신 분</span></p><p><span><b>[복리후생]</b></span></p><p><span>- 유연근로시간제 운영</span></p><p><span>- 편리한 출퇴근 (강남역 3번출구 앞)</span></p><p><span>- 자율적 업무환경 및 복장</span></p><p><span>- 임직원 전용 식당 운영 (식대 보조)</span></p><p><span>- 임직원 전용 진료실 지원- 4대보험 가입 (국민연금, 건강보험, 고용보험, 산재보험)</span></p><p><span>- 연차유급휴가 부여 (근로기준법 기준)</span></p><p><span>- 졸업식 유급휴가 지원</span></p><p><span>- 무제한 커피 및 간식 지원</span></p><p><span>- 유명명사 초청 사내 세미나</span></p><p><span>- 사내도서관 이용 가능</span></p><p><span><b>[근무조건]</b></span></p><p><span>- 근무형태 : <b>인턴직(3개월, 추후 연장 가능)</b></span></p><p><span>- 입사일 : 즉시 입사 가능자 우대</span></p><p><span>- 근무일시 : 주 5일(월~금) 선택적근로시간제</span></p><p><span>- 근무지역 : (06241) 서울 강남구 강남대로 372 FINE TOWER - 신분당선 강남에서 200m 이내</span></p><p><b><span>[전형절차]</span></b></p><p><span>- 서류전형 - 1차면접 - 최종합격</span></p><p><span><b>- 본 채용은 수시진행으로, 우수 인력 채용시 마감될 수 있습니다.</b></span></p><p><span><b>*입사지원 서류 내용이 사실과 다를 경우 채용이 취소될 수 있습니다.</b></span></p><p><span><b>*국가보훈대상자 및 장애인은 관련 법령에 따라 우대합니다.</b></span></p><p><span><b>[기타사항]</b></span></p><p><span>- 합격자에 한하여 개별 연락드립니다.</span></p><p><span>- 본 공고는 <b>체험형</b> <b>인턴</b>입니다.</span></p><p><span><br></span></p><p><span><br></span></p><table><tbody><tr><td>공고접수기간</td><td>~ 2026.11.22 오후 11:55 까지</td></tr><tr><td>공고 URL</td><td>https://ptkorea.recruiter.co.kr/career/jobs/131432&nbsp;</td></tr></tbody></table></span>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "[담당업무]\n- 온라인 패션몰의 기획전 등 콘텐츠 기획 및 운영 업무 보조 전반\n- 상품 등록 및 수정 관리\n- 상품 품절 관리\n- 기타 업무 보조\n\n\n\n\n[자격요건]\n- 학사 이상이신 분 (기졸업자, 졸업 예정자, 휴학생)\n- MS Office 활용 능력이 우수하신 분, 디자인 Tool 활용이 가능하신 분 (간단한 이미지 리사이징 등)\n- 원활한 커뮤니케이션이 가능하신 분\n- 패션에 관심이 많으신 분\n\n\n\n\n[우대사항]\n- 온라인 AMD, 이커머스 콘텐츠 기획 직무에 대한 이해가 있으신 분\n- 패션업계 또는 유관 업무, 동종업계(광고 대행사, 이커머스 운영사) 근무 경험을 보유하신 분\n\n\n\n\n[복리후생]\n- 유연근로시간제 운영\n- 편리한 출퇴근 (강남역 3번출구 앞)\n- 자율적 업무환경 및 복장\n- 임직원 전용 식당 운영 (식대 보조)\n- 임직원 전용 진료실 지원- 4대보험 가입 (국민연금, 건강보험, 고용보험, 산재보험)\n- 연차유급휴가 부여 (근로기준법 기준)\n- 졸업식 유급휴가 지원\n- 무제한 커피 및 간식 지원\n- 유명명사 초청 사내 세미나\n- 사내도서관 이용 가능\n\n\n\n\n[근무조건]\n- 근무형태 : 인턴직(3개월, 추후 연장 가능)\n- 입사일 : 즉시 입사 가능자 우대\n- 근무일시 : 주 5일(월~금) 선택적근로시간제\n- 근무지역 : (06241) 서울 강남구 강남대로 372 FINE TOWER - 신분당선 강남에서 200m 이내\n\n\n\n\n[전형절차]\n- 서류전형 - 1차면접 - 최종합격\n- 본 채용은 수시진행으로, 우수 인력 채용시 마감될 수 있습니다.\n\n\n*입사지원 서류 내용이 사실과 다를 경우 채용이 취소될 수 있습니다.\n*국가보훈대상자 및 장애인은 관련 법령에 따라 우대합니다.\n\n\n\n\n[기타사항]\n- 합격자에 한하여 개별 연락드립니다.\n- 본 공고는 체험형 인턴입니다.\n\n\n\n\n공고접수기간~ 2026.11.22 오후 11:55 까지\n공고 URLhttps://ptkorea.recruiter.co.kr/career/jobs/131432",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "4ec6bdb8e92d40d3c6ed6039f67a2400790b0c69c427912aac65df56d45eb696",
+        "verdict": "not_relevant",
+        "reason": "온라인 패션몰 콘텐츠 기획 및 운영 보조 업무로 소프트웨어 개발 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165172": {
+      "notice": {
+        "id": "skku-career-intern/165172",
+        "source_id": "skku-career-intern",
+        "article_no": "165172",
+        "title": "[넷마블네오] 2026 AI 인턴십 모집 안내",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=b96rWNeuTus9w8K7OU3GK9Lp164zBRTPGzxHjGMAlMn&modalChk=Y",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "2027년 2월 졸업 예정자 또는 기졸업자만 지원할 수 있어 현재 학부생은 지원 자격에 부합하지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "1. 모집 개요\n\n- 모집 직무: AI Game Maker (게임기획/개발 통합 직무)\n- 채용 형태: 채용연계형 인턴십 (인턴십 기간 중 최종 평가를 통해 정규직 전환 여부 결정)\n- 인턴십 기간: 2027년 3월부터 8월 (약 5개월)\n- 근무지: 서울특별시 구로구 디지털로26길 38, G-Tower\n\n2. 내용\n- 서류 접수: 2026. 11. 11.(수) 12:00 ~ 11. 24.(화) 23:59\n- 지원 방법: 넷마블 채용사이트 [본공고 링크]\n- 상세 내용: [넷마블네오 2026 인턴십 안내 사이트 링크]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><div><img src=\"https://job.skku.edu/upload/Recruit/20261112_22220541/[넷마블네오] 2026 AI 인턴십_본문이미지.png\"></div><b>1. 모집 개요</b><br><span>- 모집 직무: AI Game Maker (게임기획/개발 통합 직무)</span><br><span>- 채용 형태: 채용연계형 인턴십 (인턴십 기간 중 최종 평가를 통해 정규직 전환 여부 결정)</span><br><span>- 인턴십 기간: 2027년 3월부터 8월 (약 5개월)</span><br><span>- 근무지: 서울특별시 구로구 디지털로26길 38, G-Tower</span><br><br><b>2. 내용</b><br><span>- 서류 접수: 2026. 11. 11.(수) 12:00 ~ 11. 24.(화) 23:59</span><br><span>- 지원 방법: 넷마블 채용사이트 </span><a href=\"https://career.netmarble.com/announce/view?anno_id=1899\">[본공고 링크]</a><br><span>- 상세 내용: </span><a href=\"https://ai-internship2026.netmarbleneo.com/\">[넷마블네오 2026 인턴십 안내 사이트 링크]</a></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261112_22220541/[넷마블네오] 2026 AI 인턴십_본문이미지.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "1. 모집 개요\n\n- 모집 직무: AI Game Maker (게임기획/개발 통합 직무)\n- 채용 형태: 채용연계형 인턴십 (인턴십 기간 중 최종 평가를 통해 정규직 전환 여부 결정)\n- 인턴십 기간: 2027년 3월부터 8월 (약 5개월)\n- 근무지: 서울특별시 구로구 디지털로26길 38, G-Tower\n\n2. 내용\n- 서류 접수: 2026. 11. 11.(수) 12:00 ~ 11. 24.(화) 23:59\n- 지원 방법: 넷마블 채용사이트 [본공고 링크]\n- 상세 내용: [넷마블네오 2026 인턴십 안내 사이트 링크]",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-24T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "b88b7f503f6585d57536e83b7dff926b82542cd1218c0855ec681f81c8e4a51d",
+        "verdict": "not_relevant",
+        "reason": "2027년 2월 졸업 예정자 또는 기졸업자만 지원할 수 있어 현재 학부생은 지원 자격에 부합하지 않습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165171": {
+      "notice": {
+        "id": "skku-career-intern/165171",
+        "source_id": "skku-career-intern",
+        "article_no": "165171",
+        "title": "[NICE평가정보] 정보운영그룹 솔루션본부 솔루션개발실 인턴 채용",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=b96rWNeuTus9w8K7OU3GK6qmtI1pPCr4j3lnLtSeiVQ&modalChk=Y",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "솔루션 개발 및 운영 직무를 수행하며 공학 계열 전공자로서 프로그래밍 언어 활용 능력을 갖춘 학부생이 지원 가능합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[채용대상 및 급여]\n\n\n모집분야 및 인원 : NICE평가정보(주) 솔루션본부 솔루션개발실 인턴 1명\n\n\n\n직무: 솔루션개발/운영\n\n\n업무상세 :\n\n- 금융업권의 다양한 영역에 활용되는 솔루션 개발 및 기능 개선 지원\n- 전략운영 솔루션의 신기능 개발 및 안정화 보조\n\n- 내부 개발 프로세스에 따른 테스트, 문서화, 검증 지원\n\n\n지원자격 :\n- 공학/자연과학 계열 전공자\n- 프로그래밍 언어(Java,C#, Python 등) 활용 능력 보유자\n- 새로운 기술을 배우는 데 거부감이 없고, 팀 협업에 적극적인 분\n\n\n우대 :\n- Python 기반 데이터 분석 또는 머신러닝 프로젝트 경험\n- Java 및 Vue3 기반 웹 서비스 개발 프로젝트 경험\n\n\n근무지 : NICE평가정보 본사(여의도동 은행로 17)\n\n\n급여 : 당사 규정에 근거하여 지급 (근로기준법 및 최저임금법 준수)\n\n\n\n제출서류 : 이력서 및 자기소개서\n\n\n\n근무기간 : 입사일로부터 6개월 (입사일은 협의 가능)\n\n\n\n근무시간 :\n- 09:00 ~ 18:00\n- 초과근무 시에는 해당 시간에 준하는 초과근무수당 지급\n\n\n\n[채용일정]\n서류접수: 11월 24일(화) 오전 10시까지, anjieun@nice.co.kr로 이력서 접수\n\n서류전형 결과: 서류전형 합격자에 한하여 개별 발표 예정\n면접: 11월 30일(월) ~ 12월 4일(금), 여의도 NICE 1사옥에서 진행\n\n입사일자: 12월 중순 예정",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><p><span>[</span><span><span>채용대상 및 급여]</span></span></p><p><span><br></span></p><p><span>모집분야 및 인원 : NICE평가정보(주) 솔루션본부 솔루션개발실 인턴 1명&nbsp;<br></span></p><p><span><br></span></p><p><span>직무: </span><span>솔루션개발/운영</span></p><p><span><br></span></p><p><span>업무상세 :&nbsp;<br></span></p><p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;- 금융업권의 다양한 영역에 활용되는 솔루션 개발 및 기능 개선 지원&nbsp;</span><span></span></p><p><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;- 전략운영 솔루션의 신기능 개발 및 안정화 보조<br></span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;- 내부 개발 프로세스에 따른 테스트, 문서화, 검증 지원<br></span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p><span>지원자격 :&nbsp;</span></p><p><span></span><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span>- 공학/자연과학 계열 전공자</span></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span>&nbsp;</span><span>- 프로그래밍 언어(Java,C#, Python 등) 활용 능력 보유자</span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span>- 새로운 기술을 배우는 데 거부감이 없고, 팀 협업에 적극적인 분</span></p><p><span><br></span></p><p><span>우대 :&nbsp;</span></p><p><span>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;</span><span>- Python 기반 데이터 분석 또는 머신러닝 프로젝트 경험</span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span>- Java 및 Vue3 기반 웹 서비스 개발 프로젝트 경험</span></p><p><span>근무지 : NICE평가정보 본사(여의도동 은행로 17)</span></p><p><span><br></span></p><p><span>급여 : 당사 규정에 근거하여 지급 (근로기준법 및 최저임금법 준수)<br></span></p><p><span><br></span></p><p><span>제출서류 : 이력서 및 자기소개서<br></span></p><p><span><br></span></p><p><span>근무기간 : 입사일로부터 6개월 (입사일은 협의 가능)<br></span></p><p><span><br></span></p><p><span>근무시간 :&nbsp;</span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 09:00 ~ 18:00</span></p><p><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; - 초과근무 시에는 해당 시간에 준하는 초과근무수당 지급<br></span></p><p><span><br></span></p><p><span>[</span><span><span>채용일정]</span></span></p><p><span>서류접수</span><span>: 11월 24일(화) 오전 10시까지, anjieun@nice.co.kr로 이력서 접수<br></span></p><p><span>서류전형 결과: 서류전형 합격자에 한하여 개별 발표 예</span><span><span></span>정</span></p><p><span>면접: 11월 30일(월) ~ 12월 4일(금), 여의도 NICE 1사옥에서 진행<br></span></p><p><span>입사일자: 12월 중순 예정</span></p></span>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "[채용대상 및 급여]\n\n\n모집분야 및 인원 : NICE평가정보(주) 솔루션본부 솔루션개발실 인턴 1명\n\n\n\n직무: 솔루션개발/운영\n\n\n업무상세 :\n\n- 금융업권의 다양한 영역에 활용되는 솔루션 개발 및 기능 개선 지원\n- 전략운영 솔루션의 신기능 개발 및 안정화 보조\n\n- 내부 개발 프로세스에 따른 테스트, 문서화, 검증 지원\n\n\n지원자격 :\n- 공학/자연과학 계열 전공자\n- 프로그래밍 언어(Java,C#, Python 등) 활용 능력 보유자\n- 새로운 기술을 배우는 데 거부감이 없고, 팀 협업에 적극적인 분\n\n\n우대 :\n- Python 기반 데이터 분석 또는 머신러닝 프로젝트 경험\n- Java 및 Vue3 기반 웹 서비스 개발 프로젝트 경험\n\n\n근무지 : NICE평가정보 본사(여의도동 은행로 17)\n\n\n급여 : 당사 규정에 근거하여 지급 (근로기준법 및 최저임금법 준수)\n\n\n\n제출서류 : 이력서 및 자기소개서\n\n\n\n근무기간 : 입사일로부터 6개월 (입사일은 협의 가능)\n\n\n\n근무시간 :\n- 09:00 ~ 18:00\n- 초과근무 시에는 해당 시간에 준하는 초과근무수당 지급\n\n\n\n[채용일정]\n서류접수: 11월 24일(화) 오전 10시까지, anjieun@nice.co.kr로 이력서 접수\n\n서류전형 결과: 서류전형 합격자에 한하여 개별 발표 예정\n면접: 11월 30일(월) ~ 12월 4일(금), 여의도 NICE 1사옥에서 진행\n\n입사일자: 12월 중순 예정",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-24T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "6984af332d9fffb68f4c25178469e9030f1b26676c4f3d8d9171029f2f773a16",
+        "verdict": "relevant",
+        "reason": "솔루션 개발 및 운영 직무를 수행하며 공학 계열 전공자로서 프로그래밍 언어 활용 능력을 갖춘 학부생이 지원 가능합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363831": {
+      "notice": {
+        "id": "linkareer-intern/363831",
+        "source_id": "linkareer-intern",
+        "article_no": "363831",
+        "title": "[주식회사유니에스] [하루7H근무/중식제공/본사] 신세계인터내셔날 이커머스 입점팀 AMD 채용(패션 분야)",
+        "category": "인턴",
+        "url": "https://linkareer.com/activity/363831",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "이커머스 입점팀 AMD 직무로 소프트웨어 개발과 무관한 업무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[하루7H근무/중식제공/본사]\n신세계인터내셔날\n이커머스 입점팀 AMD 채용(패션 분야)\n접수 기간 2026-11-12 ~ 2026-11-18\n\n모집부문 및 상세내용\n모집 부문상세내용\n이커머스\n온라인 AMD\n(0명)\n담당업무\n이커머스 입점팀 패션 담당AMD\n- 신세계 V 입점 패션 브랜드 AMD\n- 온라인 프로모션 및 기획전 업무 보조 (세팅, 배너, 제작 등)\n- 상품 및 재고, 브랜드, CS 관리\n\n채용형태\n- 인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)\n- 파트너\n\n\n우대조건\n-장기근무가능자\n- 온라인몰 경력자(개인 쇼핑몰 운영 경험자 등)\n- 포토샵/피그마 숙련자\n- 엑셀 등 문서작업 능숙자\n- 성실하고 책임감 있는 성격 보유자\n\n\n복리후생\n▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)\n\n\n\n\n자격요건\n학력\n학력무관\n\n근무조건\n급여\n회사 내규에 따름\n(연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)\n근무지역\n서울 강남구 도산대로 449 SI 청담 본사\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n실무진 면접\n\nStep 2\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-12 ~ 2026-11-18 (ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)\n\n접수방법\n이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.\n채용 절차\n1. 서류전형 (서류전형 합격자분들 한하여 연락 드리는 점 유의 부탁 드립니다.)\n※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.\n\n\n2. 실무진 면접\n\n\n3. 최종 합격",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><img src=\"https://linkareer.com/images/activity/banner/template_3_banner.webp\"><div><h2>[하루7H근무/중식제공/본사]&nbsp;</h2><h2>신세계인터내셔날&nbsp;</h2><h2>이커머스 입점팀 AMD 채용(패션 분야)</h2><p>접수 기간 2026-11-12 ~ 2026-11-18</p></div><div><strong>모집부문 및 상세내용</strong></div><table><thead><tr><th>모집 부문</th><th>상세내용</th></tr></thead><tbody><tr><td><p><b>이커머스 </b></p><p><b>온라인 AMD<br> (0명)</b></p></td><td><div><div><div><div><b>담당업무</b></div><p>이커머스 입점팀 패션 담당AMD\n- 신세계 V 입점 패션 브랜드 AMD\n- 온라인 프로모션 및 기획전 업무 보조 (세팅, 배너, 제작 등)\n- 상품 및 재고, 브랜드, CS 관리</p></div><div><div><div><b>채용형태</b></div><p><span>- </span><span>인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)</span><br><span>- 파트너</span></p></div></div><div><div><b>우대조건</b></div><div><b>-</b><span><b>장기근무가능자</b></span></div><p>- 온라인몰 경력자(개인 쇼핑몰 운영 경험자 등)\n- 포토샵/피그마 숙련자\n- 엑셀 등 문서작업 능숙자\n- 성실하고 책임감 있는 성격 보유자</p><div><b>복리후생</b></div><p><span>▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)</span></p></div></div></div></td></tr></tbody></table><div><strong>자격요건</strong></div><div><p>학력</p><p>학력무관</p></div><div><strong>근무조건</strong></div><ul><li><p>급여</p><p>회사 내규에 따름&nbsp;<span>&nbsp;</span></p><span>(연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)</span></li><li><p>근무지역</p><div><p>서울 강남구 도산대로 449 SI 청담 본사 </p></div></li></ul><div><strong>전형 절차</strong></div><div><p>Step 1</p><p>서류전형</p></div><div><p>Step 2</p><p>실무진 면접</p></div><div><p>Step 2</p><p>최종합격</p></div><div><strong>지원 기간 및 방법</strong></div><ul><li><p>접수기간</p><p>2026-11-12 ~ 2026-11-18&nbsp;<span>(ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)</span></p></li><li><p>접수방법</p><p><span>이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대</span></p></li></ul><div><strong>유의사항</strong></div><ul><li>허위 사실이 발견될 경우 채용이 취소될 수 있습니다.</li><li><div><b>채용 절차</b></div><p><b><span>1. 서류전형 (</span><span>서류전형 합격자분들 한하여</span><span> 연락 드리는 점 유의 부탁 드립니다.)</span></b></p><p><b>&nbsp; &nbsp;※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.&nbsp;&nbsp;</b></p><p><b>2. 실무진 면접&nbsp;&nbsp;</b><br><br></p><p><b>3. 최종 합격</b></p></li></ul></div></div>",
+      "images": [
+        "https://linkareer.com/images/activity/banner/template_3_banner.webp"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "[하루7H근무/중식제공/본사]\n신세계인터내셔날\n이커머스 입점팀 AMD 채용(패션 분야)\n접수 기간 2026-11-12 ~ 2026-11-18\n\n모집부문 및 상세내용\n모집 부문상세내용\n이커머스\n온라인 AMD\n(0명)\n담당업무\n이커머스 입점팀 패션 담당AMD\n- 신세계 V 입점 패션 브랜드 AMD\n- 온라인 프로모션 및 기획전 업무 보조 (세팅, 배너, 제작 등)\n- 상품 및 재고, 브랜드, CS 관리\n\n채용형태\n- 인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)\n- 파트너\n\n\n우대조건\n-장기근무가능자\n- 온라인몰 경력자(개인 쇼핑몰 운영 경험자 등)\n- 포토샵/피그마 숙련자\n- 엑셀 등 문서작업 능숙자\n- 성실하고 책임감 있는 성격 보유자\n\n\n복리후생\n▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)\n\n\n\n\n자격요건\n학력\n학력무관\n\n근무조건\n급여\n회사 내규에 따름\n(연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)\n근무지역\n서울 강남구 도산대로 449 SI 청담 본사\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n실무진 면접\n\nStep 2\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-12 ~ 2026-11-18 (ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)\n\n접수방법\n이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.\n채용 절차\n1. 서류전형 (서류전형 합격자분들 한하여 연락 드리는 점 유의 부탁 드립니다.)\n※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.\n\n\n2. 실무진 면접\n\n\n3. 최종 합격",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-18T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "a1cafeaf0f8f1cd3dd04332d52b18d5422911a4b0ca0be2fb16c48421512aaa5",
+        "verdict": "not_relevant",
+        "reason": "이커머스 입점팀 AMD 직무로 소프트웨어 개발과 무관한 업무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363828": {
+      "notice": {
+        "id": "linkareer-intern/363828",
+        "source_id": "linkareer-intern",
+        "article_no": "363828",
+        "title": "[주식회사유니에스] [하루7H근무/중식제공/본사] 신세계인터내셔날 이커머스 뷰티팀 AMD 채용",
+        "category": "인턴",
+        "url": "https://linkareer.com/activity/363828",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "이커머스 뷰티팀 AMD 직무로 소프트웨어 개발과 무관한 업무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[하루7H근무/중식제공/본사]\n신세계인터내셔날 이커머스 뷰티팀 AMD 채용\n접수 기간 2026-11-12 ~ 2026-11-18\n\n모집부문 및 상세내용\n모집 부문상세내용\n이커머스\n온라인 AMD\n(0명)\n담당업무\n이커머스 뷰티팀 AMD (SI 자사 뷰티 브랜드)\n- 상품 운영 전산 업무\n- 신세계 V 기획전 세팅 업무\n- MD 업무 전반 보조\n- 배송 CS 처리 업무\n\n채용형태\n- 인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)\n- 파트너\n\n\n우대조건\n- 엑셀 사용 가능자\n- 피그마 사용 가능자 / 포토샵 사용가능자\n- 1년이상 근무 가능자.\n\n\n복리후생\n▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)\n\n\n\n\n자격요건\n학력\n학력무관\n\n근무조건\n급여\n회사 내규에 따름 (연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)\n\n근무지역\n서울 강남구 도산대로 449 SI 청담본사\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n실무진 면접\n\nStep 2\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-12 ~ 2026-11-18 (ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)\n\n접수방법\n이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.\n채용 절차\n1. 서류전형 (서류전형 합격자분들 한하여 연락 드리는 점 유의 부탁 드립니다.)\n※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.\n\n\n2. 실무진 면접\n\n\n3. 최종 합격",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><img src=\"https://linkareer.com/images/activity/banner/template_3_banner.webp\"><div><h2>[하루7H근무/중식제공/본사]&nbsp;</h2><h2>신세계인터내셔날 이커머스 뷰티팀 AMD 채용</h2><p>접수 기간 2026-11-12 ~ 2026-11-18</p></div><div><strong>모집부문 및 상세내용</strong></div><table><thead><tr><th>모집 부문</th><th>상세내용</th></tr></thead><tbody><tr><td><p><b>이커머스 </b></p><p><b>온라인 AMD<br> (0명)</b></p></td><td><div><div><div><div><b>담당업무</b></div><p>이커머스 뷰티팀 AMD (SI 자사 뷰티 브랜드)\n- 상품 운영 전산 업무\n- 신세계 V 기획전 세팅 업무\n- MD 업무 전반 보조\n- 배송 CS 처리 업무</p></div><div><div><div><b>채용형태</b></div><p><span>- </span><span>인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)</span><br><span>- 파트너</span></p></div></div><div><div><b>우대조건</b></div><p>- 엑셀 사용 가능자\n- 피그마 사용 가능자 / 포토샵 사용가능자\n- 1년이상 근무 가능자.</p><div><b>복리후생</b></div><p><span>▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)</span></p></div></div></div></td></tr></tbody></table><div><strong>자격요건</strong></div><div><p>학력</p><p>학력무관</p></div><div><strong>근무조건</strong></div><ul><li><p>급여</p><p>회사 내규에 따름&nbsp;<span>(연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)</span></p></li><li><p>근무지역</p><div><p>서울 강남구 도산대로 449 SI 청담본사 </p></div></li></ul><div><strong>전형 절차</strong></div><div><p>Step 1</p><p>서류전형</p></div><div><p>Step 2</p><p>실무진 면접</p></div><div><p>Step 2</p><p>최종합격</p></div><div><strong>지원 기간 및 방법</strong></div><ul><li><p>접수기간</p><p>2026-11-12 ~ 2026-11-18&nbsp;<span>(ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)</span></p></li><li><p>접수방법</p><p><span>이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대</span></p></li></ul><div><strong>유의사항</strong></div><ul><li>허위 사실이 발견될 경우 채용이 취소될 수 있습니다.</li><li><div><b>채용 절차</b></div><p><b><span>1. 서류전형 (</span><span>서류전형 합격자분들 한하여</span><span> 연락 드리는 점 유의 부탁 드립니다.)</span></b></p><p><b>&nbsp; &nbsp;※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.&nbsp;&nbsp;</b></p><p><b>2. 실무진 면접&nbsp;&nbsp;</b><br><br></p><p><b>3. 최종 합격</b></p></li></ul></div></div>",
+      "images": [
+        "https://linkareer.com/images/activity/banner/template_3_banner.webp"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "[하루7H근무/중식제공/본사]\n신세계인터내셔날 이커머스 뷰티팀 AMD 채용\n접수 기간 2026-11-12 ~ 2026-11-18\n\n모집부문 및 상세내용\n모집 부문상세내용\n이커머스\n온라인 AMD\n(0명)\n담당업무\n이커머스 뷰티팀 AMD (SI 자사 뷰티 브랜드)\n- 상품 운영 전산 업무\n- 신세계 V 기획전 세팅 업무\n- MD 업무 전반 보조\n- 배송 CS 처리 업무\n\n채용형태\n- 인턴/파견계약직 (회사내부사정 및 업무평가에 따라 최대 2년 근무 가능)\n- 파트너\n\n\n우대조건\n- 엑셀 사용 가능자\n- 피그마 사용 가능자 / 포토샵 사용가능자\n- 1년이상 근무 가능자.\n\n\n복리후생\n▶ 중식제공, 명절/생일 선물, 각종경조사 휴가 및 지원금 제공, 연차 외 유급휴가 제공(조건부)\n\n\n\n\n자격요건\n학력\n학력무관\n\n근무조건\n급여\n회사 내규에 따름 (연봉 2,357 만원 ~ 경력자 처우 / 하루 7시간 근무 및 중식 제공함을 유의 부탁 드립니다.)\n\n근무지역\n서울 강남구 도산대로 449 SI 청담본사\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n실무진 면접\n\nStep 2\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-12 ~ 2026-11-18 (ASAP / 개별서류전형 및 면접 진행 / 채용시 마감)\n\n접수방법\n이메일 지원 (kdm0408@unies.com) / 자유 이력서 양식, 포트폴리오 제출 우대\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.\n채용 절차\n1. 서류전형 (서류전형 합격자분들 한하여 연락 드리는 점 유의 부탁 드립니다.)\n※필요시 서류접수 전 유선 인터뷰를 진행하고 있는 점 유의 부탁 드립니다.\n\n\n2. 실무진 면접\n\n\n3. 최종 합격",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-18T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "e9dd525b5bee8e898bf90eec777e32ced34c96c4de553ccf7b246976932a84b8",
+        "verdict": "not_relevant",
+        "reason": "이커머스 뷰티팀 AMD 직무로 소프트웨어 개발과 무관한 업무입니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363827": {
+      "notice": {
+        "id": "linkareer-intern/363827",
+        "source_id": "linkareer-intern",
+        "article_no": "363827",
+        "title": "[팀스파르타] 교육 운영기획 매니저 채용연계형 인턴 (AI·IT 부트캠프)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363827",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/986199\" title=\"교육 운영기획 매니저 채용연계형 인턴 (AI·IT 부트캠프).png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/986199"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-10T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363825": {
+      "notice": {
+        "id": "linkareer-intern/363825",
+        "source_id": "linkareer-intern",
+        "article_no": "363825",
+        "title": "[팀스파르타] 커리큘럼 기획 매니저 채용연계형 인턴 (AI·IT 부트캠프)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363825",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/986196\" title=\"커리큘럼 기획 매니저 채용연계형 인턴 (AI·IT 부트캠프).png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/986196"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-10T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "skku-notice01/141811": {
       "notice": {
         "id": "skku-notice01/141811",
@@ -3358,6 +3945,88 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "linkareer-intern/363814": {
+      "notice": {
+        "id": "linkareer-intern/363814",
+        "source_id": "linkareer-intern",
+        "article_no": "363814",
+        "title": "[호텔롯데] L7호텔 해운대 L-Crew(체험형 인턴) 채용 (12월)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363814",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[호텔롯데] L7호텔 해운대 L-Crew(체험형 인턴) 채용 (12월)\n\n\n\n\n■ 주요 업무\n1) 고객 응대 및 객실 배정\n2) 객실 요금 정산\n3) VOC 관리\n\n\n■ 우대 사항\n1) 외국어 우수자\n2) 관련 경력 보유자\n3) Opera 활용 가능자\n\n\n■ 전형 단계\n1) 입사지원 > 서류전형 > 면접전형 > LIST검사 > 신체검사 > 최종합격",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[호텔롯데] L7호텔 해운대 L-Crew(체험형 인턴) 채용 (12월)</b></span></p><p><span>&nbsp;■ 주요 업무</span></p><p><span>&nbsp; &nbsp; 1) 고객 응대 및 객실 배정</span></p><p><span>&nbsp; &nbsp; 2) 객실 요금 정산</span></p><p><span>&nbsp; &nbsp; 3) VOC 관리</span></p><p><span>&nbsp;■ 우대 사항</span></p><p><span>&nbsp; &nbsp; 1) 외국어 우수자</span></p><p><span>&nbsp; &nbsp; 2) 관련 경력 보유자</span></p><p><span>&nbsp; &nbsp; 3) Opera 활용 가능자</span></p><p><span>&nbsp;■ 전형 단계</span></p><p><span>&nbsp; &nbsp; 1) 입사지원 &gt; 서류전형 &gt; 면접전형 &gt; LIST검사 &gt; 신체검사 &gt; 최종합격</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/986172\" title=\"20261112_092030.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/986172"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T10:36:12.172628+09:00",
+      "page_text": "[호텔롯데] L7호텔 해운대 L-Crew(체험형 인턴) 채용 (12월)\n\n\n\n\n■ 주요 업무\n1) 고객 응대 및 객실 배정\n2) 객실 요금 정산\n3) VOC 관리\n\n\n■ 우대 사항\n1) 외국어 우수자\n2) 관련 경력 보유자\n3) Opera 활용 가능자\n\n\n■ 전형 단계\n1) 입사지원 > 서류전형 > 면접전형 > LIST검사 > 신체검사 > 최종합격",
+      "body_attempted_at": "2026-11-12T10:36:12.172628+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363812": {
+      "notice": {
+        "id": "linkareer-intern/363812",
+        "source_id": "linkareer-intern",
+        "article_no": "363812",
+        "title": "[호텔롯데] 롯데시티호텔 L-Crew(체험형 인턴) 채용(통합객실예약)(12월)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363812",
+        "posted_on": "2026-11-10",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T10:36:12.172628+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "jasoseol-intern/107179": {
       "notice": {
         "id": "jasoseol-intern/107179",
@@ -4534,7 +5203,7 @@
         "model": "gemini-3.1-flash-lite"
       },
       "summary_last_failed_at": null,
-      "rechecked_at": "2026-11-11T16:38:14.648446+09:00"
+      "rechecked_at": "2026-11-12T10:36:12.172628+09:00"
     },
     "skku-career-intern/165145": {
       "notice": {
@@ -5121,7 +5790,7 @@
         "at": "2026-11-24T15:00:00+09:00"
       },
       "summary_last_failed_at": null,
-      "rechecked_at": "2026-11-11T16:38:14.648446+09:00"
+      "rechecked_at": "2026-11-12T10:36:12.172628+09:00"
     },
     "skku-notice01/141732": {
       "notice": {
@@ -5231,7 +5900,7 @@
         "kind": "마감",
         "at": "2026-11-13T17:00:00+09:00"
       },
-      "rechecked_at": "2026-11-11T19:23:46.887481+09:00"
+      "rechecked_at": "2026-11-12T10:36:12.172628+09:00"
     },
     "skku-notice01/141727": {
       "notice": {
@@ -25457,540 +26126,6 @@
         "checked": true,
         "kind": "마감",
         "at": "2026-11-06T23:50:00+09:00",
-        "model": "source"
-      }
-    },
-    "jasoseol-intern/106814": {
-      "notice": {
-        "id": "jasoseol-intern/106814",
-        "source_id": "jasoseol-intern",
-        "article_no": "106814",
-        "title": "[에이피알] [HR] 인재개발(HRD) 채용연계형 인턴사원 모집",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106814",
-        "posted_on": "2026-10-20",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/764/webp/%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A9_2.webp?1792749444\" alt=\"에이피알 [HR] 인재개발(HRD) 채용연계형 인턴사원 모집\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/764/webp/%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A9_2.webp?1792749444"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T20:45:33.974609+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-03T23:59:00+09:00",
-        "model": "source"
-      }
-    },
-    "skku-notice01/140492": {
-      "notice": {
-        "id": "skku-notice01/140492",
-        "source_id": "skku-notice01",
-        "article_no": "140492",
-        "title": "자연과학캠퍼스 통학 셔틀버스 시범운행 안내 (10/19~12/18)",
-        "category": "일반",
-        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=140492",
-        "posted_on": "2026-10-20",
-        "pinned": true,
-        "deadline": "2026-12-18T23:59:00+09:00",
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "자연과학캠퍼스 학생 및 교직원의 통학 편의를 높이고, 향후 통학 지원 정책 수립에 필요한 이용수요와 운영자료를 확보하기 위해 통학 셔틀버스를 다음과 같이 시범운행합니다.\n\n성균인 여러분의 많은 이용 바랍니다.\n\n1. 운행기간 및 이용대상\n- 운행기간: 2026. 10. 19.(월) ~ 12. 18.(금), 평일 운행 ※토요일·일요일 및 공휴일 제외\n- 이용대상: 본교 소속 학생 및 교직원 (모바일 킹고M QR코드를 통한 승차)\n- 이용요금: 시범운행 기간에 한하여 무료\n2. 운행노선 및 시간표\n- 등교노선은 각 역의 승차위치에서 자연과학캠퍼스로, 하교는 자연과학캠퍼스에서 각 역으로 운행합니다.\n- 하교노선 자연과학캠퍼스 승차위치: N센터 건너편(자인셔틀 탑승위치)\n- 자연과학캠퍼스 하차위치: N센터인근 → CNS센터 → 산학협력센터인근 → 학생회관 인근\n\n※ 정확한 대기위치는 “(붙임) 노선별 탑승 위치 안내”의 사진을 확인해주시기 바랍니다.\n※ 강남역 → 양재역은 경유 노선입니다. ※ 교통상황에 따라 출ㆍ도착시간이 달라질 수 있습니다.\n\n3. 이용방법 및 유의사항\n- 별도의 사전 예약 없이 지정된 탑승 위치에서 대기 후 승차합니다.\n- 단, 차량 정원에 도달하면 추가탑승이 제한될 수 있습니다.\n- 탑승 전 킹고M 모바일 QR코드를 준비하고, 차량 내 단말기에 태깅하여 주시기 바랍니다.\n\n4. 시범운행 결과 활용 및 향후 운영\n- 노선별 이용실적과 이용자 만족도는 향후 통학 지원 정책 수립의 기초자료로 활용할 예정입니다. 시범운행 결과를 바탕으로 정식운영 여부, 운행노선 및 이용요금 등 세부 운영방안을 검토하고, 확정된 사항은 추후 안내 예정입니다.\n- 운행 및 이용문의: 학생지원팀 [02-760-1073, 1072]\n- 분실물 및 차량 위치ㆍ배차 관련 문의: (한솔여행사 카카오톡) https://pf.kakao.com/_xkYMdK",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [
-        {
-          "name": "(붙임) 자연과학캠퍼스 통학버스 시범운행 노선별 탑승위치.pdf",
-          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=140492&attachNo=118229",
-          "type": "PDF",
-          "size": null
-        }
-      ],
-      "body_html": "<div><p>자연과학캠퍼스 학생 및 교직원의 통학 편의를 높이고, 향후 통학 지원 정책 수립에 필요한 이용수요와 운영자료를 확보하기 위해 통학 셔틀버스를 다음과 같이 시범운행합니다.&nbsp;</p><p>성균인&nbsp;여러분의&nbsp;많은&nbsp;이용&nbsp;바랍니다.</p><p>&nbsp;1. 운행기간 및 이용대상</p><p>&nbsp; - 운행기간: 2026. 10. 19.(월) ~ 12. 18.(금), 평일 운행 ※토요일·일요일 및 공휴일 제외 &nbsp;</p><p>&nbsp; - 이용대상: 본교 소속 학생 및 교직원 (모바일 킹고M QR코드를 통한 승차) &nbsp;</p><p>&nbsp; - 이용요금: 시범운행 기간에 한하여 무료</p><p>&nbsp;2. 운행노선 및 시간표</p><p>&nbsp; - 등교노선은 각 역의 승차위치에서 자연과학캠퍼스로, 하교는 자연과학캠퍼스에서 각 역으로 운행합니다.</p><p>&nbsp; - 하교노선 자연과학캠퍼스 승차위치: N센터 건너편(자인셔틀 탑승위치)</p><p>&nbsp; - 자연과학캠퍼스 하차위치: N센터인근 → CNS센터 → 산학협력센터인근 → 학생회관 인근</p><p><img src=\"https://www.skku.edu/cms/plugin/editorImage.do?EwBmDYHoEYUhXAXgQwM4AdUBEDWATANQBcBLASQHMBjCkgDTwDkA6dAOwqA%20\"></p><p>※ 정확한 대기위치는 “(붙임) 노선별 탑승 위치 안내”의 사진을 확인해주시기 바랍니다.</p><p>※&nbsp;강남역&nbsp;→&nbsp;양재역은&nbsp;경유&nbsp;노선입니다.&nbsp;※&nbsp;교통상황에&nbsp;따라&nbsp;출ㆍ도착시간이&nbsp;달라질&nbsp;수&nbsp;있습니다.</p><p>&nbsp;3. 이용방법 및 유의사항&nbsp;</p><p>&nbsp; - 별도의 사전 예약 없이 지정된 탑승 위치에서 대기 후 승차합니다.&nbsp;</p><p>&nbsp; - 단, 차량 정원에 도달하면 추가탑승이 제한될 수 있습니다.</p><p>&nbsp; - 탑승 전 킹고M 모바일 QR코드를 준비하고, 차량 내 단말기에 태깅하여 주시기 바랍니다.&nbsp;</p><p>&nbsp;4. 시범운행 결과 활용 및 향후 운영</p><p>&nbsp; - 노선별 이용실적과 이용자 만족도는 향후 통학 지원 정책 수립의 기초자료로 활용할 예정입니다. 시범운행 결과를 바탕으로 정식운영 여부, 운행노선 및 이용요금 등 세부 운영방안을 검토하고, 확정된 사항은 추후 안내 예정입니다.&nbsp;</p><p>&nbsp; - 운행 및 이용문의: 학생지원팀 [02-760-1073, 1072]</p><p>&nbsp; - 분실물 및 차량 위치ㆍ배차 관련 문의: (한솔여행사 카카오톡) https://pf.kakao.com/_xkYMdK</p></div>",
-      "images": [
-        "https://www.skku.edu/cms/plugin/editorImage.do?EwBmDYHoEYUhXAXgQwM4AdUBEDWATANQBcBLASQHMBjCkgDTwDkA6dAOwqA%20"
-      ],
-      "summary": "자연과학캠퍼스 학생 및 교직원을 대상으로 2026년 10월 19일부터 12월 18일까지 통학 셔틀버스를 무료로 시범운행합니다. 별도의 예약 없이 탑승 시 킹고M QR코드를 태깅하여 이용할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:44:43.370511+09:00"
-    },
-    "jasoseol-intern/106756": {
-      "notice": {
-        "id": "jasoseol-intern/106756",
-        "source_id": "jasoseol-intern",
-        "article_no": "106756",
-        "title": "[윗유] [전환형 인턴십] 글로벌 틱톡샵 어필리에이트 마케터 (수료 축하금 100만원 지급)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106756",
-        "posted_on": "2026-10-16",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "[전환형 인턴십] 글로벌 틱톡샵 어필리에이트 마케터 (수료 축하금 100만원 지급)\n\n\n\n\n💡 윗유의 정체성: Short-Form Creator Centric Vision\n\n\"우리는 단순한 대행사가 아닌, '숏폼 크리에이터 이코노미'의 설계자입니다.\"\n\n\n\n윗유는 설립 이후 숏폼 시장을 개척해온 최초이자 최고의 전문가 집단입니다.\n\n2019년 숏폼의 시작, 틱톡 이후 유튜브 쇼츠, 인스타그램 릴스부터, 네이버 클립, 카카오까지\n\n숏폼의 영역이 확장될 때마다 윗유는 언제나 그 선두에 있었습니다.\n\n\n\n윗유가 하면 유행이 됩니다\n\n단순한 슬로건이 아닌 윗유의 본질입니다.\n\n우리는 숏폼의 고유한 문법과 알고리즘 노하우를 가장 깊게 이해하는 ‘숏폼 스페셜리스트’인 동시에, 크리에이터·미디어·브랜드·대행사를 잇는 생태계를 구축하는 ‘숏폼 크리에이터 이코노미의 제너럴리스트’로서 시장의 흐름을 정의합니다.\n\n\n\n숫자로 증명하는 압도적 성장\n\n윗유의 전문성은 숫자로 증명됩니다. 외부 투자 없이 스스로 성장해 누적 매출 2,000억 원을 달성했습니다.\n\n매년 매출과 이익 모두 꾸준히 증가하는 견고한 성장을 바탕으로, 더 과감하고 새로운 시도를 이어가고 있습니다.\n\n\n\n왜 윗유여야만 하는가?\n\n이제 윗유는 국내 No.1을 넘어 글로벌 시장을 향해 더 큰 도약을 준비하고 있습니다.\n\n윗유에 대한 기대와 확신을 갖고, 빠르게 변화하는 시장에서 숏폼 최고 전문가들과 함께 달릴 동료를 기다립니다!\n\n\n\n\n\n\n• 모집 직무\n\n\n글로벌 틱톡샵 어필리에이트 마케터 (인턴)\n\n\n🛠️ 주요 업무\n\n- TikTok Shop 어필리에이트 실무 중심\n\n- 글로벌 파트너 발굴 및 협력 제안\n\n: US / 동남아 시장의 잠재력 있는 크리에이터 리스트를 탐색하고 협업을 제안합니다.\n\n- 어필리에이트 캠페인 운영 관리\n\n: 브랜드 상품 등록, 적절한 커미션 설정, 크리에이터의 콘텐츠 제작 및 업로드 일정을 관리합니다.\n\n- 콘텐츠 검수 및 링크 연동 확인\n\n: 제작된 콘텐츠의 품질 및 적합성을 확인하고, 상품 구매를 위한 어필리에이트 링크의 정확한 연결 여부를 확인합니다.\n\n- 성과 데이터 분석 및 보고\n\n: 콘텐츠 조회수, 전환율, 최종 판매량 등 핵심 성과 지표를 정리하고 데이터 기반으로 성과를 분석합니다.\n\n- 우수 파트너 리텐션 및 관계 관리\n\n: 우수 크리에이터를 지속적으로 관리하고, 장기적인 파트너십을 위한 관계를 유지합니다.\n\n\n\n🧩 요구 역량\n\n- 이메일/메신저로 영어 소통이 가능하시면서 언어에 상관없이 내 생각을 상대에게 명확하게 설명/설득하고 상대의 의도를 빠르게 파악할 수 있는 분\n\n- 주어진 일을 처리하는 데서 끝내지 않고 이 일의 목적과 성과를 위해 한 번 더 생각하는 분\n\n- 데이터를 기반으로 성과와 문제점을 분석하고 개선점을 도출할 수 있는 분\n\n- 새로운 일도 빠르게 시도하고 레슨 런(lesson learn)을 얻어 개선하여 성장할 수 있는 분\n\n- 주도적이고 책임감 있는 업무 처리로 신뢰에 기반한 협업 속도를 높일 수 있는 분\n\n- 업무의 전체적인 흐름과 핵심을 파악하여 우선순위를 판단하여 프로젝트를 관리할 수 있는 분\n\n- 해외 출장에 결격 사유가 없고, 남성의 경우 병역을 마쳤거나 면제된 분\n\n\n\n⭐️ 우대 사항\n\n- 비즈니스 레벨의 영어/중국어/일본어 등 외국어 소통이 가능한 분\n\n- US / SEA 글로벌 시장에 대한 마케팅 이해도가 있는 분\n\n- 틱톡샵, 아마존, Shopee 등의 글로벌 커머스 업무를 담당한 적 있는 분\n\n- 숏폼 매체(TikTok, Meta, Google) 협업 운영 및 광고 경험이 있는 분\n\n- 인플루언서, 크리에이터 마케팅 경력이 있는 분\n\n- 뷰티 브랜드에 관심이 많고 이해도가 높은 분\n\n- TikTok, Instagram Reels, YouTube Shorts 등 숏폼 콘텐츠를 즐겨보고 트렌드에 민감하신 분\n\n- AI 툴을 활용해 기획 또는 업무 효율을 높여본 경험이 있으신 분\n\n\n\n🌏 외국인 지원 안내\n\n- 윗유의 모든 전형은 국적에 상관없이 역량 있는 인재의 지원을 환영합니다.\n\n- 이미 조직 내에 다국적 동료들이 함께 근무하고 있으며, 글로벌 인재 채용에 적극적입니다.\n\n- 다만, 지원 시 이력서에 체류자격(비자유형)과 만료일을 반드시 기재해 주시기 바랍니다.\n\n- D-10, E-7, F 유형 등 입사 시점에 문제 없이 근무 가능한 분만 합류 가능하며, 비자 연장 및 전환에 필요한 절차는 함께 지원해 드리고 있습니다.\n\n\n\n\n\n\n\n\n• 제출 서류\n\n이력서, 자기소개서, 포트폴리오\n\n• 접수 경로\n\n홈페이지 : https://witu.career.greetinghr.com/ko/apply\n\n\n• 근무 지역\n\n서울 > 강남구\n\n\n\n• 근무환경\n\n\n🎁복지 및 지원 제도\n\n\n\n[Work] 몰입을 돕는 환경\n\n- 초역세권 사옥: 강남구청역 도보 3분 전용 사옥\n\n- 자유로운 문화: 연차/반차/시차제 & 유연근무제\n\n- 인프라: 맞춤 장비 및 다양한 유료 AI 툴 구독 지원\n\n\n\n[Life] 활기를 더하는 배려\n\n- 건강 관리: 종합건강검진 및 헬스 비용 지원\n\n- 에너지 충전: 점심시간 70분 & 사내 카페테리아 및 스낵바 상시 운영\n\n- 기념일 케어: 생일·명절 선물 및 경조사 지원\n\n\n\n[Growth] 성장에 따른 보상\n\n- 보상 체계: 성과 기반 인센티브 및 장기 근속 보상\n\n\n\n• 문의처\n\n010-7794-0901",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div>\n<div>\n<div><strong>[전환형 인턴십] 글로벌 틱톡샵 어필리에이트 마케터 (수료 축하금 100만원 지급)</strong></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/business_employment_companies/images/000/053/763/original/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2024-06-27_140010.png?1792066113\" alt=\"윗유 [전환형 인턴십] 글로벌 틱톡샵 어필리에이트 마케터 (수료 축하금 100만원 지급)\"></div>\n<div>\n<div>💡 윗유의 ​정체성: ​Short-Form ​Creator Centric ​Vision</div>\n<div>\"우리는 단순한 대행사가 아닌, ​'숏폼 ​크리에이터 이코노미'의 ​설계자입니다.\"</div>\n<div>&nbsp;</div>\n<div>윗유는 설립 이후 ​숏폼 시장을 ​개척해온 ​최초이자 최고의 ​전문가 ​집단입니다.</div>\n<div>2019년 ​숏폼의 시작, 틱톡 ​이후 ​유튜브 쇼츠, 인스타그램 ​릴스부터, ​네이버 ​클립, 카카오까지</div>\n<div>숏폼의 영역이 ​확장될 때마다 ​윗유는 ​언제나 그 ​선두에 있었습니다.</div>\n<div>&nbsp;</div>\n<div>윗유가 ​하면 ​유행이 됩니다</div>\n<div>단순한 슬로건이 ​아닌 윗유의 ​본질입니다.</div>\n<div>우리는 숏폼의 고유한 문법과 알고리즘 노하우를 가장 깊게 이해하는 ‘숏폼 스페셜리스트’인 동시에, 크리에이터·미디어·브랜드·대행사를 잇는 생태계를 구축하는 ‘숏폼 크리에이터 이코노미의 제너럴리스트’로서 시장의 흐름을 정의합니다.</div>\n<div>&nbsp;</div>\n<div>숫자로 증명하는 압도적 성장</div>\n<div>윗유의 전문성은 숫자로 증명됩니다. 외부 투자 없이 스스로 성장해 누적 매출 2,000억 원을 달성했습니다.</div>\n<div>매년 매출과 이익 모두 꾸준히 증가하는 견고한 성장을 바탕으로, 더 과감하고 새로운 시도를 이어가고 있습니다.</div>\n<div>&nbsp;</div>\n<div>왜 윗유여야만 하는가?</div>\n<div>이제 윗유는 국내 No.1을 넘어 글로벌 시장을 향해 더 큰 도약을 준비하고 있습니다.</div>\n<div>윗유에 대한 기대와 확신을 갖고, 빠르게 변화하는 시장에서 숏폼 최고 전문가들과 함께 달릴 동료를 기다립니다!</div>\n</div>\n</div>\n<div>\n<div><strong>• 모집 직무</strong></div>\n<div>\n<div><strong>글로벌 틱톡샵 어필리에이트 마케터 (인턴)</strong></div>\n<div>\n<div>🛠️ 주요 업무</div>\n<div>- TikTok Shop 어필리에이트 실무 중심</div>\n<div>- 글로벌 파트너 발굴 및 협력 제안</div>\n<div>: US / 동남아 시장의 잠재력 있는 크리에이터 리스트를 탐색하고 협업을 제안합니다.</div>\n<div>- 어필리에이트 캠페인 운영 관리</div>\n<div>: 브랜드 상품 등록, 적절한 커미션 설정, 크리에이터의 콘텐츠 제작 및 업로드 일정을 관리합니다.</div>\n<div>- 콘텐츠 검수 및 링크 연동 확인</div>\n<div>: 제작된 콘텐츠의 품질 및 적합성을 확인하고, 상품 구매를 위한 어필리에이트 링크의 정확한 연결 여부를 확인합니다.</div>\n<div>- 성과 데이터 분석 및 보고</div>\n<div>: 콘텐츠 조회수, 전환율, 최종 판매량 등 핵심 성과 지표를 정리하고 데이터 기반으로 성과를 분석합니다.</div>\n<div>- 우수 파트너 리텐션 및 관계 관리</div>\n<div>: 우수 크리에이터를 지속적으로 관리하고, 장기적인 파트너십을 위한 관계를 유지합니다.</div>\n<div>&nbsp;</div>\n<div>🧩 요구 역량</div>\n<div>- 이메일/메신저로 영어 소통이 가능하시면서 언어에 상관없이 내 생각을 상대에게 명확하게 설명/설득하고 상대의 의도를 빠르게 파악할 수 있는 분</div>\n<div>- 주어진 일을 처리하는 데서 끝내지 않고 이 일의 목적과 성과를 위해 한 번 더 생각하는 분</div>\n<div>- 데이터를 기반으로 성과와 문제점을 분석하고 개선점을 도출할 수 있는 분</div>\n<div>- 새로운 일도 빠르게 시도하고 레슨 런(lesson learn)을 얻어 개선하여 성장할 수 있는 분</div>\n<div>- 주도적이고 책임감 있는 업무 처리로 신뢰에 기반한 협업 속도를 높일 수 있는 분</div>\n<div>- 업무의 전체적인 흐름과 핵심을 파악하여 우선순위를 판단하여 프로젝트를 관리할 수 있는 분</div>\n<div>- 해외 출장에 결격 사유가 없고, 남성의 경우 병역을 마쳤거나 면제된 분</div>\n<div>&nbsp;</div>\n<div>⭐️ 우대 사항</div>\n<div>- 비즈니스 레벨의 영어/중국어/일본어 등 외국어 소통이 가능한 분</div>\n<div>- US / SEA 글로벌 시장에 대한 마케팅 이해도가 있는 분</div>\n<div>- 틱톡샵, 아마존, Shopee 등의 글로벌 커머스 업무를 담당한 적 있는 분</div>\n<div>- 숏폼 매체(TikTok, Meta, Google) 협업 운영 및 광고 경험이 있는 분</div>\n<div>- 인플루언서, 크리에이터 마케팅 경력이 있는 분</div>\n<div>- 뷰티 브랜드에 관심이 많고 이해도가 높은 분</div>\n<div>- TikTok, Instagram Reels, YouTube Shorts 등 숏폼 콘텐츠를 즐겨보고 트렌드에 민감하신 분</div>\n<div>- AI 툴을 활용해 기획 또는 업무 효율을 높여본 경험이 있으신 분</div>\n<div>&nbsp;</div>\n<div>🌏 외국인 지원 안내</div>\n<div>- 윗유의 모든 전형은 국적에 상관없이 역량 있는 인재의 지원을 환영합니다.</div>\n<div>- 이미 조직 내에 다국적 동료들이 함께 근무하고 있으며, 글로벌 인재 채용에 적극적입니다.</div>\n<div>- 다만, 지원 시 이력서에 체류자격(비자유형)과 만료일을 반드시 기재해 주시기 바랍니다.</div>\n<div>- D-10, E-7, F 유형 등 입사 시점에 문제 없이 근무 가능한 분만 합류 가능하며, 비자 연장 및 전환에 필요한 절차는 함께 지원해 드리고 있습니다.</div>\n</div>\n</div>\n</div>\n<div>\n<div><strong>• 제출 서류</strong></div>\n<div>이력서, 자기소개서, 포트폴리오</div>\n<div><strong>• 접수 경로</strong></div>\n<div>홈페이지 : https://witu.career.greetinghr.com/ko/apply</div>\n<div>\n<div><strong>• 근무 지역</strong></div>\n<div>서울 &gt; 강남구</div>\n</div>\n<div><strong>• 근무환경</strong></div>\n<div>\n<div>🎁복지 및 지원 제도</div>\n<div>&nbsp;</div>\n<div>[Work] 몰입을 돕는 환경</div>\n<div>- 초역세권 사옥: 강남구청역 도보 3분 전용 사옥</div>\n<div>- 자유로운 문화: 연차/반차/시차제 &amp; 유연근무제</div>\n<div>- 인프라: 맞춤 장비 및 다양한 유료 AI 툴 구독 지원</div>\n<div>&nbsp;</div>\n<div>[Life] 활기를 더하는 배려</div>\n<div>- 건강 관리: 종합건강검진 및 헬스 비용 지원</div>\n<div>- 에너지 충전: 점심시간 70분 &amp; 사내 카페테리아 및 스낵바 상시 운영</div>\n<div>- 기념일 케어: 생일·명절 선물 및 경조사 지원</div>\n<div>&nbsp;</div>\n<div>[Growth] 성장에 따른 보상</div>\n<div>- 보상 체계: 성과 기반 인센티브 및 장기 근속 보상</div>\n</div>\n<div><strong>• 문의처</strong></div>\n<div>010-7794-0901</div>\n</div>\n</div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/business_employment_companies/images/000/053/763/original/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2024-06-27_140010.png?1792066113"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T20:45:33.974609+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-12-14T23:59:00+09:00",
-        "model": "source"
-      }
-    },
-    "sw-notice/226947": {
-      "notice": {
-        "id": "sw-notice/226947",
-        "source_id": "sw-notice",
-        "article_no": "226947",
-        "title": "(실험 참가자 모집 공고) AI 면접 환경에 따른 지원자의 인식과 경험에 관한 연구",
-        "category": "채용/모집",
-        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=226947",
-        "posted_on": "2026-10-15",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "[연구 참여 안내]\n성균관대학교 인터랙션사이언스학과에서 실험 참가자를 모집합니다.\n본 실험은 AI 면접 환경에 따른 지원자의 인식과 사용자 경험에 관한 연구로, AI 면접 프로그램을 직접 경험해보고 간단한 설문조사를 진행합니다.\n본 실험은 만 19세 이상의 국내 재학 혹은 휴학 중인 한국 국적의 학부생 및 대학원생 모두 참여 가능합니다.\n실험은 선착순으로 마감될 예정이니, 많은 참여 부탁드립니다. 감사합니다.\n\n● 실험방법: 온라인 참여 (신청 후 바로 실험 참여 링크 확인 가능. 신청서 작성 이후 미참여 시에만 연구자가 메일 송부 예정)\n● 조용한 공간, 카메라와 마이크 사용이 가능한 노트북 사용 (핸드폰 참여불가)\n● 음성이 나오니 시작 전 볼륨을 켜주세요.\n\n● 소요시간: 약 30~40분\n● 참여사례: 1만원 네이버페이 지급\n(실험 참여 완료 후 약 3~4주 소요 예정)\n● 참가신청: 하단의 링크 혹은 QR 코드 https://forms.gle/Tv7MpLHQwpfrQsGU8\n\n연구담당자: 김영은 010-4822-9067 yekim@g.skku.edu\n*실험에 관한 문의사항은 연구담당자에게 연락주시기 바랍니다",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><div><b>[연구 참여 안내]</b></div><div>성균관대학교 인터랙션사이언스학과에서 실험 참가자를 모집합니다.<br>본 실험은 AI 면접 환경에 따른 지원자의 인식과 사용자 경험에 관한 연구로, AI 면접 프로그램을 직접 경험해보고 간단한 설문조사를 진행합니다.<br>본 실험은 만 19세 이상의 국내 재학 혹은 휴학 중인 한국 국적의 학부생 및 대학원생 모두 참여 가능합니다.<br>실험은 선착순으로 마감될 예정이니, 많은 참여 부탁드립니다. 감사합니다.<br><br>● 실험방법: 온라인 참여 (신청 후 바로 실험 참여 링크 확인 가능. 신청서 작성 이후 미참여 시에만 연구자가 메일 송부 예정)<br>● 조용한 공간, 카메라와 마이크 사용이 가능한 노트북 사용 (핸드폰 참여불가)<br>● 음성이 나오니 시작 전 볼륨을 켜주세요.<br>&nbsp;<br>● 소요시간: 약 30~40분<br>● 참여사례: 1만원 네이버페이 지급<br>(실험 참여 완료 후 약 3~4주 소요 예정)<br>● 참가신청: 하단의 링크 혹은 QR 코드 <a href=\"https://forms.gle/Tv7MpLHQwpfrQsGU8\"></a><a href=\"https://forms.gle/Tv7MpLHQwpfrQsGU8\">https://forms.gle/Tv7MpLHQwpfrQsGU8</a><br><br>연구담당자: 김영은 010-4822-9067 <a href=\"mailto:yekim@g.skku.edu\">yekim@g.skku.edu</a><br>*실험에 관한 문의사항은 연구담당자에게 연락주시기 바랍니다</div><p><img src=\"https://sw.skku.edu/_res/editor_image/2026/10/DxKdswvMcNWpMTkDajdR0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
-      "images": [
-        "https://sw.skku.edu/_res/editor_image/2026/10/DxKdswvMcNWpMTkDajdR0.png"
-      ],
-      "summary": "인터랙션사이언스학과에서 AI 면접 연구 실험 참가자를 모집합니다. 만 19세 이상의 재학 또는 휴학 중인 학생이 참여 가능하며, 신청 링크를 통해 온라인으로 참여할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T18:24:00.504814+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/106748": {
-      "notice": {
-        "id": "jasoseol-intern/106748",
-        "source_id": "jasoseol-intern",
-        "article_no": "106748",
-        "title": "[이노션] 앱 서비스 기획 (상시채용 인재풀)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106748",
-        "posted_on": "2026-10-15",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/684/webp/innocean.recruiter.co.kr_career_jobs_122543.webp?1792039465\" alt=\"이노션 앱 서비스 기획 (상시채용 인재풀)\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/684/webp/innocean.recruiter.co.kr_career_jobs_122543.webp?1792039465"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T20:45:33.974609+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-12-31T23:59:00+09:00",
-        "model": "source"
-      }
-    },
-    "jasoseol-intern/106746": {
-      "notice": {
-        "id": "jasoseol-intern/106746",
-        "source_id": "jasoseol-intern",
-        "article_no": "106746",
-        "title": "[이노션] UI/UX 디자인 (상시채용 인재풀)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106746",
-        "posted_on": "2026-10-15",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/688/webp/128152.webp?1792039801\" alt=\"이노션 UI/UX 디자인 (상시채용 인재풀)\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/688/webp/128152.webp?1792039801"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T20:45:33.974609+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-12-31T23:59:00+09:00",
-        "model": "source"
-      }
-    },
-    "jasoseol-intern/106743": {
-      "notice": {
-        "id": "jasoseol-intern/106743",
-        "source_id": "jasoseol-intern",
-        "article_no": "106743",
-        "title": "[이노션] 웹/앱 전략·운영 (상시채용 인재풀)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106743",
-        "posted_on": "2026-10-15",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/685/webp/innocean.recruiter.co.kr_career_jobs_122545.webp?1792039550\" alt=\"이노션 웹/앱 전략·운영 (상시채용 인재풀)\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/685/webp/innocean.recruiter.co.kr_career_jobs_122545.webp?1792039550"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T20:45:33.974609+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-12-31T23:59:00+09:00",
-        "model": "source"
-      }
-    },
-    "jasoseol-intern/106741": {
-      "notice": {
-        "id": "jasoseol-intern/106741",
-        "source_id": "jasoseol-intern",
-        "article_no": "106741",
-        "title": "[이노션] 웹 서비스 기획 (상시채용 인재풀)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106741",
-        "posted_on": "2026-10-15",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/682/webp/innocean.recruiter.co.kr_career_jobs_122494.webp?1792039382\" alt=\"이노션 웹 서비스 기획 (상시채용 인재풀)\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/682/webp/innocean.recruiter.co.kr_career_jobs_122494.webp?1792039382"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T21:01:03.909988+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-12-31T23:59:00+09:00",
-        "model": "source"
-      }
-    },
-    "jasoseol-intern/106722": {
-      "notice": {
-        "id": "jasoseol-intern/106722",
-        "source_id": "jasoseol-intern",
-        "article_no": "106722",
-        "title": "[신세계인터내셔날] 국내/해외 영업·디자인 인턴 모집 (퍼셀·스튜디오 톰보이·어뮤즈)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106722",
-        "posted_on": "2026-10-15",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/709/webp/%ED%8D%BC%EC%85%80_%EC%88%98%EC%A0%951.webp?1792043052\" alt=\"신세계인터내셔날 국내/해외 영업·디자인 인턴 모집 (퍼셀·스튜디오 톰보이·어뮤즈)\"></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/710/webp/%ED%8D%BC%EC%85%80_%EC%88%98%EC%A0%952.webp?1792043053\" alt=\"신세계인터내셔날 국내/해외 영업·디자인 인턴 모집 (퍼셀·스튜디오 톰보이·어뮤즈)\"></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/774/webp/2610_%ED%86%B0%EB%B3%B4%EC%9D%B4_%EC%97%AC%EC%84%B1%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%A4_%EA%B3%B5%EA%B3%A0.webp?1792052962\" alt=\"신세계인터내셔날 국내/해외 영업·디자인 인턴 모집 (퍼셀·스튜디오 톰보이·어뮤즈)\"></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/838/webp/%EC%96%B4%EB%AE%A4%EC%A6%88_%EC%BB%A8%ED%85%90%EC%B8%A0%EC%A0%9C%EC%9E%91%ED%8C%80_%EB%94%94%EC%9E%90%EC%9D%B8%EC%9D%B8%ED%84%B4_%EA%B3%B5%EA%B3%A0_1.webp?1792116127\" alt=\"신세계인터내셔날 국내/해외 영업·디자인 인턴 모집 (퍼셀·스튜디오 톰보이·어뮤즈)\"></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/839/webp/%EC%96%B4%EB%AE%A4%EC%A6%88_%EC%BB%A8%ED%85%90%EC%B8%A0%EC%A0%9C%EC%9E%91%ED%8C%80_%EB%94%94%EC%9E%90%EC%9D%B8%EC%9D%B8%ED%84%B4_%EA%B3%B5%EA%B3%A0_2.webp?1792116128\" alt=\"신세계인터내셔날 국내/해외 영업·디자인 인턴 모집 (퍼셀·스튜디오 톰보이·어뮤즈)\"></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/930/webp/%EC%96%B4%EB%AE%A4%EC%A6%88_BX%EB%94%94%EC%9E%90%EC%9D%B8_1.webp?1792130454\" alt=\"신세계인터내셔날 국내/해외 영업·디자인 인턴 모집 (퍼셀·스튜디오 톰보이·어뮤즈)\"></div>\n<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/931/webp/%EC%96%B4%EB%AE%A4%EC%A6%88_BX%EB%94%94%EC%9E%90%EC%9D%B8_2.webp?1792130457\" alt=\"신세계인터내셔날 국내/해외 영업·디자인 인턴 모집 (퍼셀·스튜디오 톰보이·어뮤즈)\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/709/webp/%ED%8D%BC%EC%85%80_%EC%88%98%EC%A0%951.webp?1792043052",
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/710/webp/%ED%8D%BC%EC%85%80_%EC%88%98%EC%A0%952.webp?1792043053",
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/774/webp/2610_%ED%86%B0%EB%B3%B4%EC%9D%B4_%EC%97%AC%EC%84%B1%EB%94%94%EC%9E%90%EC%9D%B8%EC%8B%A4_%EA%B3%B5%EA%B3%A0.webp?1792052962",
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/838/webp/%EC%96%B4%EB%AE%A4%EC%A6%88_%EC%BB%A8%ED%85%90%EC%B8%A0%EC%A0%9C%EC%9E%91%ED%8C%80_%EB%94%94%EC%9E%90%EC%9D%B8%EC%9D%B8%ED%84%B4_%EA%B3%B5%EA%B3%A0_1.webp?1792116127",
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/839/webp/%EC%96%B4%EB%AE%A4%EC%A6%88_%EC%BB%A8%ED%85%90%EC%B8%A0%EC%A0%9C%EC%9E%91%ED%8C%80_%EB%94%94%EC%9E%90%EC%9D%B8%EC%9D%B8%ED%84%B4_%EA%B3%B5%EA%B3%A0_2.webp?1792116128",
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/930/webp/%EC%96%B4%EB%AE%A4%EC%A6%88_BX%EB%94%94%EC%9E%90%EC%9D%B8_1.webp?1792130454",
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/931/webp/%EC%96%B4%EB%AE%A4%EC%A6%88_BX%EB%94%94%EC%9E%90%EC%9D%B8_2.webp?1792130457"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T21:01:03.909988+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-12-14T23:59:00+09:00",
-        "model": "source"
-      }
-    },
-    "jasoseol-intern/106686": {
-      "notice": {
-        "id": "jasoseol-intern/106686",
-        "source_id": "jasoseol-intern",
-        "article_no": "106686",
-        "title": "[솔트룩스] (인턴십/취업연계 기회) AI 에이전트 서비스 개발자 전액 국비지원 교육 AI 캠프",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106686",
-        "posted_on": "2026-10-15",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div>\n<div><a href=\"https://xh6gcqm0.ninehire.site/job_posting/ZxgoVGXV/apply\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://aicampus.saltlux.com/pages/ai-agent-service.html\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://aicampus.saltlux.com/pages/ai-agent-service.html\">&nbsp;&nbsp;&nbsp;</a></div>\n<div><a href=\"https://aicampus.saltlux.com/pages/ai-agent-service.html\">&nbsp;&nbsp;&nbsp;</a></div>\n<p><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/379/webp/%EC%86%94%ED%8A%B8%EB%A3%A9%EC%8A%A4_%EB%AA%A8%EB%B0%94%EC%9D%BC%EA%B3%B5%EA%B3%A0%EB%AC%B8.webp?1791880291\" alt=\"솔트룩스 (인턴십/취업연계 기회) AI 에이전트 서비스 개발자 전액 국비지원 교육 AI 캠프\"></p>\n</div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/379/webp/%EC%86%94%ED%8A%B8%EB%A3%A9%EC%8A%A4_%EB%AA%A8%EB%B0%94%EC%9D%BC%EA%B3%B5%EA%B3%A0%EB%AC%B8.webp?1791880291"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T21:01:03.909988+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-24T23:59:00+09:00",
-        "model": "source"
-      }
-    },
-    "sw-notice/226873": {
-      "notice": {
-        "id": "sw-notice/226873",
-        "source_id": "sw-notice",
-        "article_no": "226873",
-        "title": "[MCL 주식회사]UI/UX 리서치 및 웹 디자인 인턴모집 공고",
-        "category": "채용/모집",
-        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=226873",
-        "posted_on": "2026-10-14",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "모집 분야 및 주요 업무 내용\n\n1. 모집 분야\nUI/UX 리서치 및 웹 디자인 인턴 (파트타임 또는 풀타임 전환 가능)\n\n2. 주요 업무 내용\n[기본 과제] 글로벌 클리닉 UI/UX 리서치 (파트타임)\n-미·중·일 혁신 피부과 및 성형외과 클리닉(총 20곳) 서치 및 스크리닝\n-국가별 플랫폼의 UI/UX 특성, 차별점, 사용자 여정(User Journey) 심층 분석\n-주요 인터페이스 및 혁신 기능 스크린샷 캡처 및 카테고리별 아카이빙 시각화\n-3개국 사례 공통점 분석 및 자사 적용 벤치마킹 인사이트 리포트 작성\n\n[선택/전환 과제] 자사 웹사이트 UI/UX 기획 및 디자인 (풀타임)\n-리서치 결과를 바탕으로 한 실제 국내 대형 클리닉 웹사이트 프로토타이핑\n-웹사이트 UI/UX 기획 및 실무 디자인 전반 참여\n\n■ 모집 기간 및 모집 인원\n\n▹ 모집 기간: 채용 시 마감 (우수 인재 선발 시 조기 종료 가능)\n\n▹ 모집 인원: 1명\n\n■ 근무 조건\n▹ 고용 형태: 인턴 (파트타임 또는 풀타임)\n\n▹ 근무 장소: 재택근무 및 유연 근무 (협의 가능)\n\n▹ 급여 조건:\n-파트타임 (리서치 프로젝트): 총 105만 원 (총 70시간 산정, 시급 15,000원 기준)\n산정 기준: 자료 조사/아카이빙(30h) + UI/UX 분석(20h) + 최종 보고서 작성(20h)\n-풀타임 (UI/UX 디자인 실무 포함): 월 250만 원\n\n▹ 근무 기간 및 시간:\n-파트타임: 프로젝트 단위 수행 (약 70시간 규모, 학업 병행에 맞추어 유연하게 조율)\n-풀타임: 학기 중 또는 방학 기간 활용 (학생 일정 및 역량에 따라 맞춤 협의)\n\n▹ 복리후생 및 혜택:\n-최신 글로벌 헬스케어 트렌드 분석 및 실제 웹사이트 고도화 프로젝트 참여 포트폴리오 구축\n-학업 일정 고려 유연 근무제 지원\n\n■ 선발 기준\n▹ 자격 요건:\n-해외(미·중·일) 웹/앱 서비스 리서치 및 분석에 지장이 없는 자\n-UI/UX에 대한 기본적 이해와 리서치·보고서 작성 역량을 갖춘 자\n\n▹ 우대 사항:\n-외국어(영어, 중국어, 일본어 중 1개 이상) 활용 능력 우수자\n-UI/UX 기획 및 프로토타이핑, 웹 디자인(Figma 등) 실무 수행 역량을 보유한 자\n-글로벌 헬스케어, K-뷰티 의료 산업 및 IT 스타트업 생태계에 관심이 많은 자\n\n■ 전형 일정\n▹ 선발 절차: 서류 접수 인터뷰(면접) 최종 합격\n▹ 합격자 발표: 서류 및 인터뷰 진행 후 개별 통보 (날짜 및 일정 개별 협의)\n\n■기업 정보\n▹ 기업명: MCL 주식회사 (MCL Inc.)\n▹ 대표자: 조한혁\n▹ 핵심 팀 구성:\n-전 구글 광고기술 엔지니어링 팀 매니저 출신 대표\n-10년차 현직 성형외과 전문의\n-뉴욕 디자인 스쿨 졸업 및 레드닷 디자인 어워드 수상, 글로벌 럭셔리 브랜드 경험 디자인 리더\n\n▹ 주요 서비스 ('PICKLS / 픽클스'):\n-글로벌 환자와 국내 미용 클리닉을 연결하는 올인원(All-inclusive) 메디컬 허브 플랫폼\n-해외 고객 대상 '초개인화 AI 컨시어지' 서비스 제공\n-입점 병원 대상 웹 호스팅 인프라, 구글 SEO/AIO 최적화, CRM 시스템 통합 지원\n\n■ 주요 성과 및 이력:\n2024년: 구글 포 스타트업(Google for Startups) 선정, 인천스타트업파크 글로벌 진출 챌린지랩 참여\n2025년: 중소벤처기업부 주관 창업중심대학 프로그램 선정\n2026년 9월 기준: 국내 주요 성형외과·피부과 20곳과 업무협약(MOU) 체결\n\n■ 지원 링크 및 신청 방법\n▹ 지원 방법: 이메일 지원 (이력서 및 포트폴리오 첨부)\n▹ 제출 서류:\n-이력서 및 자기소개서 (자유 양식)\n-포트폴리오\n\n▹ 접수 처: hanhyukcho@pickls.co",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><strong>모집 분야 및 주요 업무 내용</strong></p><p><strong>1. 모집 분야</strong></p><p>UI/UX 리서치 및 웹 디자인 인턴 (파트타임 또는 풀타임 전환 가능)</p><p><strong>2. 주요 업무 내용</strong></p><p>[기본 과제] 글로벌 클리닉 UI/UX 리서치 (파트타임)</p><p>-미·중·일 혁신 피부과 및 성형외과 클리닉(총 20곳) 서치 및 스크리닝</p><p>-국가별 플랫폼의 UI/UX 특성, 차별점, 사용자 여정(User Journey) 심층 분석</p><p>-주요 인터페이스 및 혁신 기능 스크린샷 캡처 및 카테고리별 아카이빙 시각화</p><p>-3개국 사례 공통점 분석 및 자사 적용 벤치마킹 인사이트 리포트 작성</p><p>[선택/전환 과제] 자사 웹사이트 UI/UX 기획 및 디자인 (풀타임)</p><p>-리서치 결과를 바탕으로 한 실제 국내 대형 클리닉 웹사이트 프로토타이핑</p><p>-웹사이트 UI/UX 기획 및 실무 디자인 전반 참여</p><p><strong>■ 모집 기간 및 모집 인원</strong></p><p>▹ 모집 기간: 채용 시 마감 (우수 인재 선발 시 조기 종료 가능)</p><p>▹ 모집 인원: 1명</p><p><strong>■ 근무 조건</strong></p><p>▹ 고용 형태: 인턴 (파트타임 또는 풀타임)</p><p>▹ 근무 장소: 재택근무 및 유연 근무 (협의 가능)</p><p>▹ 급여 조건:</p><p>-파트타임 (리서치 프로젝트): 총 105만 원 (총 70시간 산정, 시급 15,000원 기준)</p><p>&nbsp; 산정 기준: 자료 조사/아카이빙(30h) + UI/UX 분석(20h) + 최종 보고서 작성(20h)</p><p>-풀타임 (UI/UX 디자인 실무 포함): 월 250만 원</p><p>▹ 근무 기간 및 시간:</p><p>-파트타임: 프로젝트 단위 수행 (약 70시간 규모, 학업 병행에 맞추어 유연하게 조율)</p><p>-풀타임: 학기 중 또는 방학 기간 활용 (학생 일정 및 역량에 따라 맞춤 협의)</p><p>▹ 복리후생 및 혜택:</p><p>-최신 글로벌 헬스케어 트렌드 분석 및 실제 웹사이트 고도화 프로젝트 참여 포트폴리오 구축</p><p>-학업 일정 고려 유연 근무제 지원</p><p>■ 선발 기준</p><p>▹ 자격 요건:</p><p>-해외(미·중·일) 웹/앱 서비스 리서치 및 분석에 지장이 없는 자</p><p>-UI/UX에 대한 기본적 이해와 리서치·보고서 작성 역량을 갖춘 자</p><p>▹ 우대 사항:</p><p>-외국어(영어, 중국어, 일본어 중 1개 이상) 활용 능력 우수자</p><p>-UI/UX 기획 및 프로토타이핑, 웹 디자인(Figma 등) 실무 수행 역량을 보유한 자</p><p>-글로벌 헬스케어, K-뷰티 의료 산업 및 IT 스타트업 생태계에 관심이 많은 자</p><p>■ 전형 일정</p><p>▹ 선발 절차: 서류 접수 &nbsp;인터뷰(면접) &nbsp;최종 합격</p><p>▹ 합격자 발표: 서류 및 인터뷰 진행 후 개별 통보 (날짜 및 일정 개별 협의)</p><p>■기업 정보</p><p>▹ 기업명: MCL 주식회사 (MCL Inc.)</p><p>▹ 대표자: 조한혁</p><p>▹ 핵심 팀 구성:</p><p>-전 구글 광고기술 엔지니어링 팀 매니저 출신 대표</p><p>-10년차 현직 성형외과 전문의</p><p>-뉴욕 디자인 스쿨 졸업 및 레드닷 디자인 어워드 수상, 글로벌 럭셔리 브랜드 경험 디자인 리더</p><p>▹ 주요 서비스 ('PICKLS / 픽클스'):</p><p>-글로벌 환자와 국내 미용 클리닉을 연결하는 올인원(All-inclusive) 메디컬 허브 플랫폼</p><p>-해외 고객 대상 '초개인화 AI 컨시어지' 서비스 제공</p><p>-입점 병원 대상 웹 호스팅 인프라, 구글 SEO/AIO 최적화, CRM 시스템 통합 지원</p><p>■ 주요 성과 및 이력:</p><p>2024년: 구글 포 스타트업(Google for Startups) 선정, 인천스타트업파크 글로벌 진출 챌린지랩 참여</p><p>2025년: 중소벤처기업부 주관 창업중심대학 프로그램 선정</p><p>2026년 9월 기준: 국내 주요 성형외과·피부과 20곳과 업무협약(MOU) 체결</p><p>■ 지원 링크 및 신청 방법</p><p>▹ 지원 방법: 이메일 지원 (이력서 및 포트폴리오 첨부)</p><p>▹ 제출 서류:</p><p>-이력서 및 자기소개서 (자유 양식)</p><p>-포트폴리오</p><p><strong>▹ 접수 처: hanhyukcho@pickls.co</strong></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
-      "images": [],
-      "summary": "MCL 주식회사에서 UI/UX 리서치 및 웹 디자인 인턴을 채용합니다. 채용 시까지 이메일을 통해 이력서와 포트폴리오를 제출하여 지원할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T18:40:15.225933+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/106709": {
-      "notice": {
-        "id": "jasoseol-intern/106709",
-        "source_id": "jasoseol-intern",
-        "article_no": "106709",
-        "title": "[모두닥] [채용전환형/월500만원] Problem Solver (Sales Focused) 인턴",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106709",
-        "posted_on": "2026-10-14",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/391/webp/_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%92%E1%85%AA%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC_%E1%84%8B%E1%85%AF%E1%86%AF500%E1%84%86%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%AF%E1%86%AB__%E1%84%86%E1%85%A9%E1%84%83%E1%85%AE%E1%84%83%E1%85%A1%E1%86%A8_Problem_Solver_%28Sales_Focused%29_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_.webp?1791885122\" alt=\"모두닥 [채용전환형/월500만원] Problem Solver (Sales Focused) 인턴\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/391/webp/_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%92%E1%85%AA%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC_%E1%84%8B%E1%85%AF%E1%86%AF500%E1%84%86%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%AF%E1%86%AB__%E1%84%86%E1%85%A9%E1%84%83%E1%85%AE%E1%84%83%E1%85%A1%E1%86%A8_Problem_Solver_%28Sales_Focused%29_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_.webp?1791885122"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T21:01:03.909988+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-30T23:59:00+09:00",
-        "model": "source"
-      }
-    },
-    "jasoseol-intern/106708": {
-      "notice": {
-        "id": "jasoseol-intern/106708",
-        "source_id": "jasoseol-intern",
-        "article_no": "106708",
-        "title": "[모두닥] [채용전환형/월500만원] Problem Solver (Engineering Focused) 인턴",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106708",
-        "posted_on": "2026-10-14",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/393/webp/_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%92%E1%85%AA%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC_%E1%84%8B%E1%85%AF%E1%86%AF_500%E1%84%86%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%AF%E1%86%AB__%E1%84%86%E1%85%A9%E1%84%83%E1%85%AE%E1%84%83%E1%85%A1%E1%86%A8_Problem_Solver_%28Engineering_Focused%29_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_.webp?1791885399\" alt=\"모두닥 [채용전환형/월500만원] Problem Solver (Engineering Focused) 인턴\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/373/393/webp/_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A5%E1%86%AB%E1%84%92%E1%85%AA%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC_%E1%84%8B%E1%85%AF%E1%86%AF_500%E1%84%86%E1%85%A1%E1%86%AB%E1%84%8B%E1%85%AF%E1%86%AB__%E1%84%86%E1%85%A9%E1%84%83%E1%85%AE%E1%84%83%E1%85%A1%E1%86%A8_Problem_Solver_%28Engineering_Focused%29_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_.webp?1791885399"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T21:01:03.909988+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-30T23:59:00+09:00",
         "model": "source"
       }
     }

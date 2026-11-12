@@ -3299,7 +3299,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "마감",
         "at": "2027-01-15T23:59:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-12T21:53:24.985663+09:00"
     },
     "skku-notice01/141810": {
       "notice": {
@@ -3347,7 +3348,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-11-30T14:00:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-12T21:53:24.985663+09:00"
     },
     "linkareer-intern/363315": {
       "notice": {
@@ -3477,7 +3479,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 제품 마케팅 직무를 모집하며 시장 조사, 경쟁사 분석, 제품 문서 관리 등을 담당하므로 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[샤크닌자 코리아]\nProduct Marketing Intern\n\n모집부문 및 상세내용\n모집 부문상세내용\n[샤크닌자 코리아] Product Marketing Intern\n(0명)담당업무\nOur mission to positively impact people's lives every day in every home around the world allows our employees to be thinkers and tinkerers, designers and doers, creators and number crunchers, makers of things they love.\n\nShark Ninja is expanding our APAC business and scaling it rapidly. Our two brands, Shark, and Ninja, have enjoyed unprecedented growth in the past 5 years, driven mainly by the very strong innovation pipeline on both brands. Given this success in our existing markets, Shark Ninja has embarked on a bold plan for growing APAC business, in which Korea plays a critical role. We have taken over this market from our distributors, so that we can run them directly and drive strong growth, behind innovation and investments.\nAs we continue to grow, we are looking for a Product Marketing Intern to join our team. This role will be based in Korea.\n\nPosition Overview:\nWe are seeking a motivated and enthusiastic Product Marketing Intern / Contractor to join our Korea team. This role provides hands-on experience across market and consumer research, competitive benchmarking, new product launches, and product localization. You will work closely with Product Marketing and cross-functional teams to support the successful launch and growth of SharkNinja products in Korea.\n\nKey Responsibilities:\n\n-Assist in conducting market and consumer research to identify consumer needs, analyze ratings and reviews, assess market trends, and evaluate the competitive landscape.\n-Assist in product testing and competitive benchmarking to help identify key strengths, gaps, and opportunities.\n-Coordinate follow-ups on requirements from cross-departmental teams to ensure alignment and collaboration\n-Maintain and organize product documentation and Product marketing assets including samples to ensure easy access and efficient workflows\n\n채용형태\n- 인턴 12개월\n- 팀원\n\n우대조건\n-Currently pursuing or have earned a degree in Marketing, Business, Engineering, or a related field. Open to both early-career candidates and professionals with 1–3 years of relevant experience.\n-Proficiency in Microsoft Office (Word, Excel, PowerPoint)\n-Detail-oriented with strong analytical and problem-solving skills.\n-Ability to work both independently and collaboratively in a team environment.\n-Fluent Korean and working proficiency in English, both written and verbal.\n-Passion for technology and innovation is a plus\n\n\n자격요건\n학력\n대학졸업(4년) 이상(졸업예정자 가능)\n\n근무조건\n급여\n회사 내규에 따름\n\n근무시간\n주 5일(월~금)\n\n근무지역\n서울 강남구 테헤란로 501 9층 (재택근무가능)\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\nRecruiter Screen\n\nStep 3\nHiring Manager\n\nStep 4\nCase Study\n\nStep 5\nCountry Manager\n\nStep 5\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-11 ~ 채용 시 마감\n\n접수방법\n링커리어 간편지원\n\n복리후생\n야근수당, 4대보험, 명절선물/귀향비, 연차, 반차, 수평적 호칭사용, 야근강요 안함, 자유복장, 회식은 점심에, 유연근무제, 출퇴근 선택시간제, 음료, 간식 제공, 저녁식사 제공, 신입사원교육(OJT), 워크샵/MT, 신입사원OT, 임직원 할인, 휴게실, 카페테리아, 듀얼 모니터\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
@@ -3504,6 +3511,12 @@
       "translation": {
         "title": "[샤크닌자코리아] Product Marketing Intern 채용 공고",
         "body": "[샤크닌자 코리아]\nProduct Marketing Intern\n\n모집부문 및 상세내용\n모집 부문상세내용\n[샤크닌자 코리아] Product Marketing Intern\n(0명)담당업무\n전 세계 모든 가정에서 매일 사람들의 삶에 긍정적인 영향을 미친다는 우리의 사명은 직원들이 사상가이자 혁신가, 디자이너이자 실행가, 창조자이자 분석가로서 자신이 사랑하는 제품을 만드는 원동력이 됩니다.\n\nShark Ninja는 아시아 태평양 지역 사업을 확장하며 빠르게 성장하고 있습니다. Shark와 Ninja라는 두 브랜드는 강력한 혁신 파이프라인을 바탕으로 지난 5년간 전례 없는 성장을 이루었습니다. 기존 시장에서의 성공을 바탕으로 Shark Ninja는 한국이 핵심적인 역할을 하는 아시아 태평양 지역 사업 확장을 위한 대담한 계획에 착수했습니다. 우리는 혁신과 투자를 통해 강력한 성장을 견인하고자 유통업체로부터 직접 시장 운영권을 인수하였습니다.\n지속적인 성장에 따라 우리 팀과 함께할 Product Marketing Intern을 찾습니다. 본 직무는 한국에서 근무하게 됩니다.\n\n직무 개요:\n한국 팀에 합류할 의욕적이고 열정적인 Product Marketing Intern/계약직을 모집합니다. 본 직무는 시장 및 소비자 조사, 경쟁사 벤치마킹, 신제품 출시, 제품 현지화 전반에 걸친 실무 경험을 제공합니다. Product Marketing 팀 및 유관 부서와 긴밀히 협력하여 SharkNinja 제품의 성공적인 한국 시장 출시와 성장을 지원하게 됩니다.\n\n주요 업무:\n\n- 시장 및 소비자 조사를 지원하여 소비자 니즈 파악, 평점 및 리뷰 분석, 시장 트렌드 평가, 경쟁 환경 분석 수행\n- 제품 테스트 및 경쟁사 벤치마킹을 지원하여 주요 강점, 격차 및 기회 요인 파악\n- 유관 부서의 요구사항에 대한 후속 조치를 조정하여 업무 정렬 및 협업 보장\n- 제품 문서 및 샘플을 포함한 제품 마케팅 자산을 유지 및 정리하여 효율적인 업무 흐름과 접근성 보장\n\n채용형태\n- 인턴 12개월\n- 팀원\n\n우대조건\n- 마케팅, 경영, 공학 또는 관련 분야 학위 소지자 또는 재학생. 초기 경력자 및 관련 분야 1~3년 경력자 모두 지원 가능\n- Microsoft Office(Word, Excel, PowerPoint) 능숙자\n- 세심한 주의력과 뛰어난 분석 및 문제 해결 능력을 갖춘 분\n- 독립적인 업무 수행 및 팀 환경에서의 협업 능력을 갖춘 분\n- 한국어 능통자 및 영어(쓰기, 말하기) 업무 수행 가능자\n- 기술 및 혁신에 대한 열정이 있는 분 우대\n\n\n자격요건\n학력\n대학졸업(4년) 이상(졸업예정자 가능)\n\n근무조건\n급여\n회사 내규에 따름\n\n근무시간\n주 5일(월~금)\n\n근무지역\n서울 강남구 테헤란로 501 9층 (재택근무가능)\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\nRecruiter Screen\n\nStep 3\nHiring Manager\n\nStep 4\nCase Study\n\nStep 5\nCountry Manager\n\nStep 6\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-11 ~ 채용 시 마감\n\n접수방법\n링커리어 간편지원\n\n복리후생\n야근수당, 4대보험, 명절선물/귀향비, 연차, 반차, 수평적 호칭사용, 야근강요 안함, 자유복장, 회식은 점심에, 유연근무제, 출퇴근 선택시간제, 음료, 간식 제공, 저녁식사 제공, 신입사원교육(OJT), 워크샵/MT, 신입사원OT, 임직원 할인, 휴게실, 카페테리아, 듀얼 모니터\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
+        "model": "gemini-3.1-flash-lite"
+      },
+      "intern_judgment": {
+        "fingerprint": "ca68e8f2b4aa63e5adc48e2fde8bd8910403e74c10f5bc38aa0f3236bd2aedaa",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 제품 마케팅 직무를 모집하며 시장 조사, 경쟁사 분석, 제품 문서 관리 등을 담당하므로 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
         "model": "gemini-3.1-flash-lite"
       }
     },
@@ -7763,7 +7776,7 @@
         "kind": "마감",
         "at": "2026-11-18T18:00:00+09:00"
       },
-      "rechecked_at": "2026-11-12T09:39:12.630524+09:00"
+      "rechecked_at": "2026-11-12T21:53:24.985663+09:00"
     },
     "skku-notice01/141741": {
       "notice": {

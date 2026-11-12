@@ -57,6 +57,119 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141811": {
+      "notice": {
+        "id": "skku-notice01/141811",
+        "source_id": "skku-notice01",
+        "article_no": "141811",
+        "title": "2027-2028 이스라엘 정부초청 장학생 선발 안내",
+        "category": "장학",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141811",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T09:39:12.630524+09:00"
+      },
+      "match": {
+        "rule_name": "장학",
+        "priority": "high",
+        "interests": [
+          "장학"
+        ],
+        "reasons": [
+          "category:장학"
+        ],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "현재 학부 2학년으로 석박사 과정 등을 지원하는 해당 장학 프로그램의 대상자가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": [
+            "장학"
+          ]
+        },
+        "notified": true
+      },
+      "body_text": "2027-2028 이스라엘 정부초청 장학생 선발을 아래와 같이 안내드리니, 관심있는 학생들은 참고하시기 바랍니다.\n\n가. 선발과정: 석·박사 학위과정, 박사 후 과정, 연구과정, 하계어학과정\n나. 자격요건, 제출서류 등 세부사항: <붙임> 파일 참조\n다. 장학혜택\n1) 석·박사 학위과정, 박사 후 과정, 연구과정: 등록금(USD $6,000한도 내 학비 50%), 기초의료보험, 생활비(USD $1,000, 8개월)\n2) 하계어학과정(3.5주 과정): 학비전액, 기숙사, 기초의료보험, 소정의 생활비\n라. 지원방법 및 지원마감일\n1) 지원 방법: 원본 지원서류 1부 대사관으로 우편 제출\n2) 제출처: 서울시 종로구 청계천로 11 청계한국빌딩 18층 주한이스라엘대사관 학술과(우:03187)\n※ 우편물 앞면에 \"정부장학금 지원서\" 명시\n3) 지원 마감일: 2027.1.15.(금) ※ 1.15. 도착분까지 접수. 방문접수 불가\n마. 문의처: 주한이스라엘대사관 학술과(02-3210-8510, academy@seoul.mfa.gov.il)\n\n붙임 1. 2027-2028 이스라엘 정부장학금 안내 1부.\n2. 지원서 양식 1부. 끝.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "2027-2028 이스라엘 정부장학금 안내.pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141811&attachNo=119081",
+          "type": "PDF",
+          "size": null
+        },
+        {
+          "name": "지원서 양식 (2).pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141811&attachNo=119082",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<p>2027-2028 이스라엘 정부초청 장학생 선발을 아래와 같이 안내드리니, 관심있는 학생들은 참고하시기 바랍니다.</p><p>가. 선발과정: 석·박사 학위과정, 박사 후 과정, 연구과정, 하계어학과정</p><p>나. 자격요건, 제출서류 등 세부사항: &lt;붙임&gt; 파일 참조</p><p>다. 장학혜택</p><p>1) 석·박사 학위과정, 박사 후 과정, 연구과정: 등록금(USD $6,000한도 내 학비 50%), 기초의료보험, 생활비(USD $1,000, 8개월)</p><p>2) 하계어학과정(3.5주 과정): 학비전액, 기숙사, 기초의료보험, 소정의 생활비</p><p>라. 지원방법 및 지원마감일</p><p>1) 지원 방법: 원본 지원서류 1부 대사관으로 우편 제출</p><p>2) 제출처: 서울시 종로구 청계천로 11 청계한국빌딩 18층 주한이스라엘대사관 학술과(우:03187)</p><p>※ 우편물 앞면에 \"정부장학금 지원서\" 명시</p><p>3) 지원 마감일: 2027.1.15.(금)  ※ 1.15. 도착분까지 접수. 방문접수 불가</p><p>마. 문의처: 주한이스라엘대사관 학술과(02-3210-8510, academy@seoul.mfa.gov.il)</p><p>붙임  1. 2027-2028 이스라엘 정부장학금 안내 1부.</p><p>2. 지원서 양식 1부.  끝.</p>",
+      "images": [],
+      "summary": "이스라엘 정부초청 장학생 선발 공지로 석박사 및 연구 과정을 지원합니다. 관련 내용을 확인하려면 붙임 파일을 참고하세요.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T09:39:12.630524+09:00",
+      "page_text": "2027-2028 이스라엘 정부초청 장학생 선발을 아래와 같이 안내드리니, 관심있는 학생들은 참고하시기 바랍니다.\n\n가. 선발과정: 석·박사 학위과정, 박사 후 과정, 연구과정, 하계어학과정\n나. 자격요건, 제출서류 등 세부사항: <붙임> 파일 참조\n다. 장학혜택\n1) 석·박사 학위과정, 박사 후 과정, 연구과정: 등록금(USD $6,000한도 내 학비 50%), 기초의료보험, 생활비(USD $1,000, 8개월)\n2) 하계어학과정(3.5주 과정): 학비전액, 기숙사, 기초의료보험, 소정의 생활비\n라. 지원방법 및 지원마감일\n1) 지원 방법: 원본 지원서류 1부 대사관으로 우편 제출\n2) 제출처: 서울시 종로구 청계천로 11 청계한국빌딩 18층 주한이스라엘대사관 학술과(우:03187)\n※ 우편물 앞면에 \"정부장학금 지원서\" 명시\n3) 지원 마감일: 2027.1.15.(금) ※ 1.15. 도착분까지 접수. 방문접수 불가\n마. 문의처: 주한이스라엘대사관 학술과(02-3210-8510, academy@seoul.mfa.gov.il)\n\n붙임 1. 2027-2028 이스라엘 정부장학금 안내 1부.\n2. 지원서 양식 1부. 끝.",
+      "body_attempted_at": "2026-11-12T09:39:12.630524+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2027-01-15T23:59:00+09:00"
+      }
+    },
+    "skku-notice01/141810": {
+      "notice": {
+        "id": "skku-notice01/141810",
+        "source_id": "skku-notice01",
+        "article_no": "141810",
+        "title": "[인공지능혁신융합대학사업단] 2026 AICOSS 11월 전문가 특강 안내 사전신청안내",
+        "category": "행사/세미나",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141810",
+        "posted_on": "2026-11-12",
+        "pinned": true,
+        "deadline": null,
+        "first_seen": "2026-11-12T09:39:12.630524+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "소프트웨어학과 학부생으로서 제한 없이 신청할 수 있는 전문가 특강입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "안녕하세요. 인공지능혁신융합대학사업단입니다.\n국내 스타트업의 해외 진출 사례와 전략을 살펴보는 「2026 AICOSS 11월 전문가 특강」을 개최합니다.\n\n국내 스타트업의 해외 진출, 어떻게 준비해야 할까요?\n이퓨처의 사례를 통해 토종 스타트업의 해외 진출 방안을 살펴보는 전문가 특강에 여러분을 초대합니다.\n\n이번 특강에서는 이기현 대표를 모시고, 이퓨처의 사례와 경험을 바탕으로 국내 스타트업의 해외 진출에 관한 이야기를 나눕니다. 창업과 글로벌 시장 진출에 관심 있는 여러분의 많은 참여 바랍니다.\n\n특강 주제: 이퓨처를 통해 살펴 본 토종 Startup의 해외 진출방안\n일시: 2026년 11월 30일(월) 14:00~16:00\n장소: 성균관대학교 호암관 50106호\n연사: 이기현 대표\n신청 방법: 포스터 내 신청 QR코드 이용\n문의: 02-740-1633\n\n참석 후 만족도 조사에 참여해 주신 모든 분께 1만 원 상당의 모바일 커피 기프티콘을 드립니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>안녕하세요. 인공지능혁신융합대학사업단입니다.</p><p>국내 스타트업의 해외 진출 사례와 전략을 살펴보는 「2026 AICOSS 11월 전문가 특강」을 개최합니다.</p><p>국내 스타트업의 해외 진출, 어떻게 준비해야 할까요?</p><p>이퓨처의 사례를 통해 토종 스타트업의 해외 진출 방안을 살펴보는 전문가 특강에 여러분을 초대합니다.</p><p>이번 특강에서는 이기현 대표를 모시고, 이퓨처의 사례와 경험을 바탕으로 국내 스타트업의 해외 진출에 관한 이야기를 나눕니다. 창업과 글로벌 시장 진출에 관심 있는 여러분의 많은 참여 바랍니다.</p><p>특강 주제: 이퓨처를 통해 살펴 본 토종 Startup의 해외 진출방안</p><p>일시: 2026년 11월 30일(월) 14:00~16:00</p><p>장소: 성균관대학교 호암관 50106호</p><p>연사: 이기현 대표</p><p>신청 방법: 포스터 내 신청 QR코드 이용</p><p>문의: 02-740-1633</p><p>참석 후 만족도 조사에 참여해 주신 모든 분께 1만 원 상당의 모바일 커피 기프티콘을 드립니다.</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/11/PEhkBYOLgaxBhraqtOys.jpg\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/PEhkBYOLgaxBhraqtOys.jpg"
+      ],
+      "summary": "11월 30일 14시에 호암관 50106호에서 열리는 특강에 포스터 내 QR코드로 사전 신청하세요. 참여 후 만족도 조사 완료 시 기프티콘을 증정합니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T09:39:12.630524+09:00",
+      "page_text": "안녕하세요. 인공지능혁신융합대학사업단입니다.\n국내 스타트업의 해외 진출 사례와 전략을 살펴보는 「2026 AICOSS 11월 전문가 특강」을 개최합니다.\n\n국내 스타트업의 해외 진출, 어떻게 준비해야 할까요?\n이퓨처의 사례를 통해 토종 스타트업의 해외 진출 방안을 살펴보는 전문가 특강에 여러분을 초대합니다.\n\n이번 특강에서는 이기현 대표를 모시고, 이퓨처의 사례와 경험을 바탕으로 국내 스타트업의 해외 진출에 관한 이야기를 나눕니다. 창업과 글로벌 시장 진출에 관심 있는 여러분의 많은 참여 바랍니다.\n\n특강 주제: 이퓨처를 통해 살펴 본 토종 Startup의 해외 진출방안\n일시: 2026년 11월 30일(월) 14:00~16:00\n장소: 성균관대학교 호암관 50106호\n연사: 이기현 대표\n신청 방법: 포스터 내 신청 QR코드 이용\n문의: 02-740-1633\n\n참석 후 만족도 조사에 참여해 주신 모든 분께 1만 원 상당의 모바일 커피 기프티콘을 드립니다.",
+      "body_attempted_at": "2026-11-12T09:39:12.630524+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-30T14:00:00+09:00"
+      }
+    },
     "linkareer-intern/363315": {
       "notice": {
         "id": "linkareer-intern/363315",
@@ -4271,7 +4384,7 @@
         "kind": "마감",
         "at": "2026-11-18T18:00:00+09:00"
       },
-      "rechecked_at": "2026-11-11T17:33:25.188707+09:00"
+      "rechecked_at": "2026-11-12T09:39:12.630524+09:00"
     },
     "skku-notice01/141741": {
       "notice": {
@@ -4323,7 +4436,7 @@
         "checked": true,
         "model": "gemini-3.1-flash-lite"
       },
-      "rechecked_at": "2026-11-11T17:33:25.188707+09:00"
+      "rechecked_at": "2026-11-12T09:39:12.630524+09:00"
     },
     "sw-notice/228328": {
       "notice": {
@@ -4373,7 +4486,7 @@
         "at": "2026-11-24T15:00:00+09:00"
       },
       "summary_last_failed_at": null,
-      "rechecked_at": "2026-11-11T16:38:14.648446+09:00"
+      "rechecked_at": "2026-11-12T09:39:12.630524+09:00"
     },
     "skku-notice01/141738": {
       "notice": {
@@ -25880,102 +25993,6 @@
         "at": "2026-11-30T23:59:00+09:00",
         "model": "source"
       }
-    },
-    "futurecar-notice/67200": {
-      "notice": {
-        "id": "futurecar-notice/67200",
-        "source_id": "futurecar-notice",
-        "article_no": "67200",
-        "title": "2026학년도 2학기 미래차 SDV/전동화/자율주행 마이크로디그리 신청 안내 - 10/19(월)~10/23(금) [접수]",
-        "category": null,
-        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=67200",
-        "posted_on": "2026-10-13",
-        "pinned": false,
-        "deadline": "2026-10-23T23:59:00+09:00",
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "2026학년도 2학기 (1차) 「미래차 SDV/전동화/자율주행 마이크로디그리」에 대하여 아래와 같이 안내하오니 관심있는 학생들의 많은 신청 바랍니다.\n\n■교육과정 : 미래차 특화 분야(SDV, 전동화, 자율주행)별 교과 및 비교과(첨부파일 참고)\n\n■신청기간 : 2026. 10. 19.(월) 10:00 ~ 10. 23.(금)\n\n■신청방법 : 미래차 부트캠프 참여신청 후 마이크로디그리 신청\n1)미래차 부트캠프 참여신청(상시신청): i-Campus '미래차 부트캠프(신청)' 강좌 신청 후 강의콘텐츠의 '부트캠프 참여 신청' 설문 제출\n2)마이크로디그리 신청: GLS → 신청/자격 관리 → 마이크로디그리 → 조회 → 미래차 SDV/ 전동화/ 자율주행 마이크로디그리 이수 신청, 제출\n\n■신청대상 : 성균관대학교 학부생\n\n■문의(Q&A) : https://padlet.com/skkuautolab/padlet-hl7l4xx0dem5ysrq",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [
-        {
-          "name": "미래차_SDV,_전동화,_자율주행_마이크로디그리_안내자료(2026-2학기) 공지용.pdf",
-          "url": "https://swb.skku.edu/futurecar/notice.do?mode=download&articleNo=67200&attachNo=63973",
-          "type": "PDF",
-          "size": null
-        }
-      ],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\t\t\t\t<div><p><span><br></span></p><p><span><span>2026학년도 2학기 (1차) <span>「</span>미래차 SDV/전동화/자율주행 마이크로디그리</span><span>」에 대하여 아래와 같이 안내하오니 관심있는 학생들의 많은 신청 바랍니다.</span></span></p><p><span><br></span></p><p><span>■교육과정 : 미래차 특화 분야(SDV, 전동화, 자율주행)별 교과 및 비교과(첨부파일 참고)</span></p><p><span><br></span></p><p><span>■신청기간 : 2026. 10. 19.(월) 10:00 ~ 10. 23.(금)&nbsp;</span></p><p><span><br></span></p><p><span>■신청방법 : 미래차 부트캠프 참여신청 후 마이크로디그리 신청</span></p><p><span>1)미래차 부트캠프 참여신청(상시신청): i-Campus '미래차 부트캠프(신청)' 강좌 신청 후 강의콘텐츠의 '부트캠프 참여 신청' 설문 제출</span></p><p><span>2)마이크로디그리 신청: GLS → 신청/자격 관리 → 마이크로디그리 → 조회 → 미래차 SDV/ 전동화/ 자율주행 마이크로디그리 이수 신청, 제출</span></p><p><span><br></span></p><p><span>■신청대상 : 성균관대학교 학부생</span></p><p><span><br></span></p><p><span>■문의(Q&amp;A) : <a href=\"https://padlet.com/skkuautolab/padlet-hl7l4xx0dem5ysrq\"></a></span><a href=\"https://padlet.com/skkuautolab/padlet-hl7l4xx0dem5ysrq\"><span>https://padlet.com/skkuautolab/padlet-hl7l4xx0dem5ysrq</span></a></p><p><span><img src=\"https://swb.skku.edu/_res/editor_image/2026/10/IlQQNyxIrPAazkqpEOfv.png\"></span><br></p></div>\n\t\t\t\n\t\t\t\n          </div>",
-      "images": [
-        "https://swb.skku.edu/_res/editor_image/2026/10/IlQQNyxIrPAazkqpEOfv.png"
-      ],
-      "summary": "2026학년도 2학기 미래차 마이크로디그리 신청을 10월 19일부터 10월 23일까지 진행합니다. 성균관대학교 학부생은 미래차 부트캠프 신청 후 GLS를 통해 마이크로디그리를 신청할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T18:24:00.504814+09:00"
-    },
-    "futurecar-notice/67086": {
-      "notice": {
-        "id": "futurecar-notice/67086",
-        "source_id": "futurecar-notice",
-        "article_no": "67086",
-        "title": "2026 미래형자동차 인재페스티벌-(미래차 부트캠프 라운드업 연계) 개최 및 사전 신청안내 - ~10/11(일) [접수]",
-        "category": null,
-        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=67086",
-        "posted_on": "2026-10-07",
-        "pinned": false,
-        "deadline": "2026-10-11T23:59:00+09:00",
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "「2026 미래형자동차 인재페스티벌」 \"기업 직무·진로 설명회 & 직무 멘토링 Day\"의 참여 학생을 모집하오니\n관심있는 학생들의 많은 참여 바랍니다.\n\n- 일시 : 2026.10.14(수) 09:50 ~ 17:30\n\n- 장소 : 서울, 삼성동 COEX 컨퍼런스룸(남) 307호, 308호, A홀\n\n- 대상 : 미래차분야 인력양성 사업 학부생 및 대학원생, 졸업생, 기업 등\n\n- 모빌리티융합관: 2026.10.13(화) ~ 10.16(금)\n\n- 사전신청 기간: ~10/11(일), 선착순 배정 후 개별안내~10/12(월)\n\n- 직무멘토링 신청: https://forms.gle/AKxAFipe6UoaSrt59\n\n- 직무진로설명회 및 포럼 신청: https://forms.gle/xyUe5TiavCBTh7LV7\n\n※ (EVENT 1) 행사 참석자 중 1명(프로그램별)을 추첨하여 '에어팟' 증정(그 외, 추가 추첨을 통해 소정의 ‘기념품’ 제공)\n※ (EVENT 2) 직무진로설명회 및 직무 멘토링 프로그램 모두 참석한 학부생 및 대학원생 대상 소정의 ‘기념품’ 제공\n※ (EVENT 3) 직무 멘토링 사전 신청자 중 직무진로설명회 등 함께 신청한 학생 대상 점심식사권 제공 (소진시까지)\n※ (EVENT 4) 모든 참석자 대상, 한국전자전 및 반도체전 전시기간 동안 참관 가능한 출입증 제공(자유롭게 전시장 출입 가능)",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [
-        {
-          "name": "2. (멘토링 프로그램)_2026 직무 멘토링_DM_(인재페스티벌-부트캠프라운드업)_KEA_최종.jpg",
-          "url": "https://swb.skku.edu/futurecar/notice.do?mode=download&articleNo=67086&attachNo=63860",
-          "type": "JPG",
-          "size": null
-        },
-        {
-          "name": "3. (직무설명회 프로그램)_2026 직무진로 설명회_DM_(인재페스티벌-부트캠프라운드업)_KEA_최종.jpg",
-          "url": "https://swb.skku.edu/futurecar/notice.do?mode=download&articleNo=67086&attachNo=63861",
-          "type": "JPG",
-          "size": null
-        },
-        {
-          "name": "4. (포럼)_2026 인사이트 포럼_DM_(미래차 인재페스티벌)_KEA_최종.jpg",
-          "url": "https://swb.skku.edu/futurecar/notice.do?mode=download&articleNo=67086&attachNo=63862",
-          "type": "JPG",
-          "size": null
-        }
-      ],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\t\t\t\t<div><p>「2026 미래형자동차 인재페스티벌」 \"기업 직무·진로 설명회 &amp; 직무 멘토링 Day\"의 참여 학생을 모집하오니</p><p>&nbsp;관심있는 학생들의 많은 참여 바랍니다.</p><p>- 일시 : 2026.10.14(수) 09:50 ~ 17:30</p><p>- 장소 : 서울, 삼성동 COEX 컨퍼런스룸(남) 307호, 308호, A홀</p><p>- 대상 : 미래차분야 인력양성 사업 학부생 및 대학원생, 졸업생, 기업 등</p><p>- 모빌리티융합관: 2026.10.13(화) ~ 10.16(금)</p><div><br></div><p>- 사전신청 기간: &nbsp;~10/11(일), 선착순 배정 후 개별안내~10/12(월)</p><p>- 직무멘토링 신청: <a href=\"https://forms.gle/AKxAFipe6UoaSrt59\"></a><a href=\"https://forms.gle/\">https://forms.gle/</a><a href=\"https://forms.gle/AKxAFipe6UoaSrt59\">AKxAFipe6UoaSrt59</a></p><p>- 직무진로설명회 및 포럼 신청: <a href=\"https://forms.gle/xyUe5TiavCBTh7LV7\"></a><a href=\"https://forms.gle/\">https://forms.gle/</a><a href=\"https://forms.gle/xyUe5TiavCBTh7LV7\">xyUe5TiavCBTh7LV7</a></p><p><span><br></span></p><p><span><span><strong>※ (EVENT 1) 행사 참석자 중 1명(프로그램별)을 추첨하여 '에어팟' 증정</strong></span><strong><span>(그 외, 추가 추첨을 통해 소정의 ‘기념품’ 제공)</span></strong></span></p><p><span><strong><span>※ (EVENT 2) 직무진로설명회 및 직무 멘토링 프로그램 모두 참석한 학부생 및 대학원생 대상 소정의 ‘기념품’ &nbsp;제공</span></strong></span></p><p><span><strong><span>※ (EVENT 3) 직무 멘토링 사전 신청자 중 직무진로설명회 등 함께 신청한 학생 대상 점심식사권 제공&nbsp;(소진시까지)</span></strong></span></p><p><span><strong><span>※ (EVENT 4) 모든 참석자 대상, 한국전자전 및 반도체전 전시기간 동안 참관 가능한 출입증 제공</span></strong></span><span><strong>(자유롭게 전시장 출입 가능)</strong></span></p><div><img src=\"https://swb.skku.edu/_res/editor_image/2026/10/sicSRUeRLBwRAJwIxRSp.png\"></div></div>\n\t\t\t\n\t\t\t\n          </div>",
-      "images": [
-        "https://swb.skku.edu/_res/editor_image/2026/10/sicSRUeRLBwRAJwIxRSp.png"
-      ],
-      "summary": "미래형자동차 인재페스티벌 참여자를 10월 11일까지 모집합니다. 미래차 분야 학부생, 대학원생, 졸업생 등을 대상으로 하며 온라인 신청 링크를 통해 접수할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T18:24:00.504814+09:00"
     }
   }
 }

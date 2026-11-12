@@ -1,6 +1,62 @@
 {
   "version": 1,
   "items": {
+    "linkareer-intern/364103": {
+      "notice": {
+        "id": "linkareer-intern/364103",
+        "source_id": "linkareer-intern",
+        "article_no": "364103",
+        "title": "[KLA] 2026년 11월 신입 정규직 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/364103",
+        "posted_on": "2026-11-13",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T22:48:43.580476+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "Algorithm Engineer 직무는 학부생 지원이 가능하나, 나머지 직무는 졸업예정자이거나 경력직을 대상으로 하며 소프트웨어 개발 직무와 거리가 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[KLA] 2026년 11월 신입 정규직 채용\n접수 기간 2026-11-13 ~ 2026-11-22\n\n모집부문 및 상세내용\n모집 부문상세내용\nCustomer Support Engineer Internship\n(0명)담당업무\nㆍ고객사에 설치된 KLA 장비의 운영 및\n상태 점검 업무 보조\nㆍ현직 CSE 엔지니어와 동행하여 장비 점검 및\n유지보수 과정 학습\nㆍ인턴십 기간 동안 수행한 업무 및 학습\n내용에 대한 결과 발표(Presentation)\n\n채용형태\n- 인턴\n\n자격요건\nㆍ4년제 이공계열 학사\n2027년 2월 졸업예정자\nㆍ전기/전자, 기계, 물리, 광학, 신소재 등\n반도체 관련 전공자\nㆍ2027년 1-2월 동안 Full-time 근무 가능자\nㆍ책임감 있게 현장 업무에 임할 수 있는\n태도를 가지신 분\nㆍOPIC IM3 이상 또는\nTOEIC Speaking Level IH 이상자 필수\n(영미권 해외대학 재학생 면제)\n\n\nApplications Engineer\n(0명)담당업무\nㆍKLA 장비별 Recipe 설정 및 성능 튜닝\nㆍ고객 공정 이슈 분석 및 기술적 문제 해결\nㆍ고객사 엔지니어 및 KLA 내부/본사\n영업, 마케팅, 엔지니어링 등\n여러 조직과의 협업을 통한 기술 개발 지원\nㆍ고객 공정 이해를 기반으로 한 기술\n커뮤니케이션\nㆍ장비 성능 개선 및 응용 기술 개발\n\n채용형태\n- 신입\n\n자격요건\nㆍ이공계열 석사 이상 졸업(예정)자\nㆍ광학, 물리, 재료, 신소재, 화학, 전자,\n전기 및 반도체 관련 전공자\nㆍOPIC IH 이상 또는\nTOEIC Speaking level AL 이상자 필수\n(영미권 해외대학 재학생 면제)\n\n\nAlgorithm Engineer\n(0명)담당업무\nㆍKLA 주요 장비의 데이터 분석을 통한\n알고리즘 개발 및 시스템 문제 해결 업무\nㆍ국내뿐만 아니라 해외 고객사에서도\nAlgorithm 데모와 프로젝트 담당 및 리드\n\n채용형태\n- 신입\n\n자격요건\nㆍ물리, 전자전기 또는 컴퓨터 공학 및\n관련 학사 학위 이상 졸업(예정)자\nㆍC/C++ 프로그래밍 능숙자\nㆍSignal/Image Processing 및\nMatlab, Python 활용 경력 보유자 우대\nㆍTensorFlow, PyTorch 같은 딥러닝\n프레임워크 경력자 우대\nㆍOPIC IH 이상 또는\nTOEIC Speaking level AL 이상자 필수\n(영미권 해외대학 재학생 면제)\n\n\nProduct Installation Engineer\n(0명)담당업무\nㆍ고객사 현장에서 신규 KLA 장비 설치 및\n초기 셋업 수행\nㆍ장비 설치 과정 중 발생하는 기술적 이슈\n분석 및 기본 트러블슈팅\nㆍ설치 진행 상황 및 주요 이슈에 대한 보고서 작성\nㆍ선임 엔지니어 및 내부 팀과 협업하여\n문제 해결 방안(POA) 실행\nㆍ필요 시 장기 해외 출장 및 글로벌 설치\n프로젝트 참여\n\n채용형태\n- 경력\n\n자격요건\nㆍ전자, 전기, 기계, 소재 등\n반도체 관련 전공 학사 학위 이상 소지자\nㆍ반도체 산업 내 1년 이상 Install 업무\n경험자 우대\nㆍ웨이퍼 제조 및 계측 장비 경험자 우대\nㆍ비즈니스 레벨 회화 가능자\nㆍ장기 해외 출장 가능자\n\n\n자격요건\n학력\n대학졸업(4년) 이상\n\n근무조건\n급여\n회사 내규에 따름\n\n근무지역\n경기 화성시 동탄구 동탄순환대로 830 14층, 15층\n경기 평택시 고덕여염9길 36 평택 사무실\n경기 이천시 부악로 20 이천 사무실\n충북 청주시 흥덕구 대농로 33 청주 사무실\n경북 구미시 인동중앙로 29 구미 사무실\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n온라인 AI 영어테스트 및 인적성 검\n\nStep 3\n면접 전형\n\nStep 3\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-13 ~ 2026-11-22\n\n접수방법\n홈페이지 지원\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><img src=\"https://linkareer.com/images/activity/banner/template_3_banner.webp\"><div><h2>[KLA] 2026년 11월 신입 정규직 채용</h2><p>접수 기간 2026-11-13 ~ 2026-11-22</p></div><div><strong>모집부문 및 상세내용</strong></div><table><thead><tr><th>모집 부문</th><th>상세내용</th></tr></thead><tbody><tr><td>Customer Support Engineer Internship<br> (0명)</td><td><div><div>담당업무</div><p>ㆍ고객사에 설치된 KLA 장비의 운영 및\n　상태 점검 업무 보조\nㆍ현직 CSE 엔지니어와 동행하여 장비 점검 및\n　유지보수 과정 학습\nㆍ인턴십 기간 동안 수행한 업무 및 학습\n　내용에 대한 결과 발표(Presentation)</p></div><div><div>채용형태</div><p>- 인턴 </p></div><div><div>자격요건</div><p>ㆍ4년제 이공계열 학사\n　2027년 2월 졸업예정자\nㆍ전기/전자, 기계, 물리, 광학, 신소재 등\n　반도체 관련 전공자\nㆍ2027년 1-2월 동안 Full-time 근무 가능자\nㆍ책임감 있게 현장 업무에 임할 수 있는\n　태도를 가지신 분\nㆍOPIC IM3 이상 또는\n　TOEIC Speaking Level IH 이상자 필수\n　(영미권 해외대학 재학생 면제)</p></div></td></tr><tr><td>Applications Engineer<br> (0명)</td><td><div><div>담당업무</div><p>ㆍKLA 장비별 Recipe 설정 및 성능 튜닝\nㆍ고객 공정 이슈 분석 및 기술적 문제 해결\nㆍ고객사 엔지니어 및 KLA 내부/본사\n　영업, 마케팅, 엔지니어링 등\n　여러 조직과의 협업을 통한 기술 개발 지원\nㆍ고객 공정 이해를 기반으로 한 기술\n　커뮤니케이션\nㆍ장비 성능 개선 및 응용 기술 개발</p></div><div><div>채용형태</div><p>- 신입 </p></div><div><div><span>자격요건</span></div><p>ㆍ이공계열 석사 이상 졸업(예정)자\nㆍ광학, 물리, 재료, 신소재, 화학, 전자,\n　전기 및 반도체 관련 전공자\nㆍOPIC IH 이상 또는\n　TOEIC Speaking level AL 이상자 필수\n　(영미권 해외대학 재학생 면제)</p></div></td></tr><tr><td>Algorithm Engineer<br> (0명)</td><td><div><div>담당업무</div><p>ㆍKLA 주요 장비의 데이터 분석을 통한\n　알고리즘 개발 및 시스템 문제 해결 업무\nㆍ국내뿐만 아니라 해외 고객사에서도\n　Algorithm 데모와 프로젝트 담당 및 리드</p></div><div><div>채용형태</div><p>- 신입 </p></div><div><div><span>자격요건</span></div><p>ㆍ물리, 전자전기 또는 컴퓨터 공학 및\n　관련 학사 학위 이상 졸업(예정)자\nㆍC/C++ 프로그래밍 능숙자\nㆍSignal/Image Processing 및\n　Matlab, Python 활용 경력 보유자 우대\nㆍTensorFlow, PyTorch 같은 딥러닝\n　프레임워크 경력자 우대\nㆍOPIC IH 이상 또는\n　TOEIC Speaking level AL 이상자 필수\n　(영미권 해외대학 재학생 면제)</p></div></td></tr><tr><td>Product Installation Engineer<br> (0명)</td><td><div><div>담당업무</div><p>ㆍ고객사 현장에서 신규 KLA 장비 설치 및\n　초기 셋업 수행\nㆍ장비 설치 과정 중 발생하는 기술적 이슈\n　분석 및 기본 트러블슈팅\nㆍ설치 진행 상황 및 주요 이슈에 대한 보고서 작성\nㆍ선임 엔지니어 및 내부 팀과 협업하여\n　문제 해결 방안(POA) 실행\nㆍ필요 시 장기 해외 출장 및 글로벌 설치\n　프로젝트 참여</p></div><div><div>채용형태</div><p>- 경력 </p></div><div><div><span>자격요건</span></div><p>ㆍ전자, 전기, 기계, 소재 등\n　반도체 관련 전공 학사 학위 이상 소지자\nㆍ반도체 산업 내 1년 이상 Install 업무\n　경험자 우대\nㆍ웨이퍼 제조 및 계측 장비 경험자 우대\nㆍ비즈니스 레벨 회화 가능자\nㆍ장기 해외 출장 가능자</p></div></td></tr></tbody></table><div><strong>자격요건</strong></div><div><p>학력</p><p>대학졸업(4년) 이상</p></div><div><strong>근무조건</strong></div><ul><li><p>급여</p><p>회사 내규에 따름</p></li><li><p>근무지역</p><div><p>경기 화성시 동탄구 동탄순환대로 830  14층, 15층 </p><p>경기 평택시 고덕여염9길 36 평택 사무실 </p><p>경기 이천시 부악로 20 이천 사무실 </p><p>충북 청주시 흥덕구 대농로 33 청주 사무실 </p><p>경북 구미시 인동중앙로 29 구미 사무실 </p></div></li></ul><div><strong>전형 절차</strong></div><div><p>Step 1</p><p>서류전형</p></div><div><p>Step 2</p><p>온라인 AI 영어테스트 및 인적성 검</p></div><div><p>Step 3</p><p>면접 전형</p></div><div><p>Step 3</p><p>최종합격</p></div><div><strong>지원 기간 및 방법</strong></div><ul><li><p>접수기간</p><p>2026-11-13 ~ 2026-11-22</p></li><li><p>접수방법</p><p>홈페이지 지원</p></li></ul><div><strong>유의사항</strong></div><ul><li>허위 사실이 발견될 경우 채용이 취소될 수 있습니다.</li></ul></div></div>",
+      "images": [
+        "https://linkareer.com/images/activity/banner/template_3_banner.webp"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T22:48:43.580476+09:00",
+      "page_text": "[KLA] 2026년 11월 신입 정규직 채용\n접수 기간 2026-11-13 ~ 2026-11-22\n\n모집부문 및 상세내용\n모집 부문상세내용\nCustomer Support Engineer Internship\n(0명)담당업무\nㆍ고객사에 설치된 KLA 장비의 운영 및\n상태 점검 업무 보조\nㆍ현직 CSE 엔지니어와 동행하여 장비 점검 및\n유지보수 과정 학습\nㆍ인턴십 기간 동안 수행한 업무 및 학습\n내용에 대한 결과 발표(Presentation)\n\n채용형태\n- 인턴\n\n자격요건\nㆍ4년제 이공계열 학사\n2027년 2월 졸업예정자\nㆍ전기/전자, 기계, 물리, 광학, 신소재 등\n반도체 관련 전공자\nㆍ2027년 1-2월 동안 Full-time 근무 가능자\nㆍ책임감 있게 현장 업무에 임할 수 있는\n태도를 가지신 분\nㆍOPIC IM3 이상 또는\nTOEIC Speaking Level IH 이상자 필수\n(영미권 해외대학 재학생 면제)\n\n\nApplications Engineer\n(0명)담당업무\nㆍKLA 장비별 Recipe 설정 및 성능 튜닝\nㆍ고객 공정 이슈 분석 및 기술적 문제 해결\nㆍ고객사 엔지니어 및 KLA 내부/본사\n영업, 마케팅, 엔지니어링 등\n여러 조직과의 협업을 통한 기술 개발 지원\nㆍ고객 공정 이해를 기반으로 한 기술\n커뮤니케이션\nㆍ장비 성능 개선 및 응용 기술 개발\n\n채용형태\n- 신입\n\n자격요건\nㆍ이공계열 석사 이상 졸업(예정)자\nㆍ광학, 물리, 재료, 신소재, 화학, 전자,\n전기 및 반도체 관련 전공자\nㆍOPIC IH 이상 또는\nTOEIC Speaking level AL 이상자 필수\n(영미권 해외대학 재학생 면제)\n\n\nAlgorithm Engineer\n(0명)담당업무\nㆍKLA 주요 장비의 데이터 분석을 통한\n알고리즘 개발 및 시스템 문제 해결 업무\nㆍ국내뿐만 아니라 해외 고객사에서도\nAlgorithm 데모와 프로젝트 담당 및 리드\n\n채용형태\n- 신입\n\n자격요건\nㆍ물리, 전자전기 또는 컴퓨터 공학 및\n관련 학사 학위 이상 졸업(예정)자\nㆍC/C++ 프로그래밍 능숙자\nㆍSignal/Image Processing 및\nMatlab, Python 활용 경력 보유자 우대\nㆍTensorFlow, PyTorch 같은 딥러닝\n프레임워크 경력자 우대\nㆍOPIC IH 이상 또는\nTOEIC Speaking level AL 이상자 필수\n(영미권 해외대학 재학생 면제)\n\n\nProduct Installation Engineer\n(0명)담당업무\nㆍ고객사 현장에서 신규 KLA 장비 설치 및\n초기 셋업 수행\nㆍ장비 설치 과정 중 발생하는 기술적 이슈\n분석 및 기본 트러블슈팅\nㆍ설치 진행 상황 및 주요 이슈에 대한 보고서 작성\nㆍ선임 엔지니어 및 내부 팀과 협업하여\n문제 해결 방안(POA) 실행\nㆍ필요 시 장기 해외 출장 및 글로벌 설치\n프로젝트 참여\n\n채용형태\n- 경력\n\n자격요건\nㆍ전자, 전기, 기계, 소재 등\n반도체 관련 전공 학사 학위 이상 소지자\nㆍ반도체 산업 내 1년 이상 Install 업무\n경험자 우대\nㆍ웨이퍼 제조 및 계측 장비 경험자 우대\nㆍ비즈니스 레벨 회화 가능자\nㆍ장기 해외 출장 가능자\n\n\n자격요건\n학력\n대학졸업(4년) 이상\n\n근무조건\n급여\n회사 내규에 따름\n\n근무지역\n경기 화성시 동탄구 동탄순환대로 830 14층, 15층\n경기 평택시 고덕여염9길 36 평택 사무실\n경기 이천시 부악로 20 이천 사무실\n충북 청주시 흥덕구 대농로 33 청주 사무실\n경북 구미시 인동중앙로 29 구미 사무실\n\n\n전형 절차\nStep 1\n서류전형\n\nStep 2\n온라인 AI 영어테스트 및 인적성 검\n\nStep 3\n면접 전형\n\nStep 3\n최종합격\n\n지원 기간 및 방법\n접수기간\n2026-11-13 ~ 2026-11-22\n\n접수방법\n홈페이지 지원\n\n유의사항\n허위 사실이 발견될 경우 채용이 취소될 수 있습니다.",
+      "body_attempted_at": "2026-11-12T22:48:43.580476+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "fb07c3599c0ba6f436a83eda91c14603eeb0aaadd687fea37b7e7061b85ee74e",
+        "verdict": "not_relevant",
+        "reason": "Algorithm Engineer 직무는 학부생 지원이 가능하나, 나머지 직무는 졸업예정자이거나 경력직을 대상으로 하며 소프트웨어 개발 직무와 거리가 있습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "linkareer-intern/363932": {
       "notice": {
         "id": "linkareer-intern/363932",
@@ -167,6 +223,196 @@
         "verdict": "not_relevant",
         "reason": "일반사무 직무를 모집하며 소프트웨어 개발 및 관련 직무와 무관합니다.",
         "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/364100": {
+      "notice": {
+        "id": "linkareer-intern/364100",
+        "source_id": "linkareer-intern",
+        "article_no": "364100",
+        "title": "[삼정KPMG] [인턴] 전략 컨설팅 프로젝트 RA인턴 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/364100",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T22:48:43.580476+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "전략 컨설팅 프로젝트 지원 업무로 소프트웨어 개발 및 데이터 직무와 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[삼정KPMG] [인턴] 전략 컨설팅 프로젝트 RA인턴 채용\n\n\n[담당업무]\n- 중장기 성장 전략\n- 해외시장 진출전략 수립\n- 신규사업 진출 타당성 검토 및 진입 전략\n- CDD, 인수 후 발전 전략(PMI) 수립\n- 포트폴리오 재조정 및 Turnaround strateg등 지원\n\n\n[접수기간]\n11월 12일 ~ 12월 31일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[삼정KPMG] [인턴] 전략 컨설팅 프로젝트 RA인턴 채용</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>- 중장기 성장 전략</span></p><p><span>- 해외시장 진출전략 수립</span></p><p><span>- 신규사업 진출 타당성 검토 및 진입 전략</span></p><p><span>- CDD, 인수 후 발전 전략(PMI) 수립</span></p><p><span>- 포트폴리오 재조정 및 Turnaround strateg등 지원</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 12일 ~ 12월 31일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/987052\" title=\"image.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/987052"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T22:48:43.580476+09:00",
+      "page_text": "[삼정KPMG] [인턴] 전략 컨설팅 프로젝트 RA인턴 채용\n\n\n[담당업무]\n- 중장기 성장 전략\n- 해외시장 진출전략 수립\n- 신규사업 진출 타당성 검토 및 진입 전략\n- CDD, 인수 후 발전 전략(PMI) 수립\n- 포트폴리오 재조정 및 Turnaround strateg등 지원\n\n\n[접수기간]\n11월 12일 ~ 12월 31일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-12T22:48:43.580476+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-12-31T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "13d59e7b4335a78768615adf5f511f5dc96d751b481be1c1bd56f472a2c95c77",
+        "verdict": "not_relevant",
+        "reason": "전략 컨설팅 프로젝트 지원 업무로 소프트웨어 개발 및 데이터 직무와 관련이 없습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/364099": {
+      "notice": {
+        "id": "linkareer-intern/364099",
+        "source_id": "linkareer-intern",
+        "article_no": "364099",
+        "title": "[아토머스 주식회사] CEO Staff",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/364099",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T22:48:43.580476+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "CEO Staff 직무는 경영 전략 및 운영 지원 업무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "[아토머스 주식회사] CEO Staff\n\n\n[담당업무]\n∙ 핵심 지표(전환/매출/운영비용/CS 등) 관점에서 가장 큰 병목을 정의하고, 해결 전략과 실행 계획을 수립합니다.\n∙ 합의된 과제를 끝까지 실행하며, 필요 시 유관 부서와의 조율/우선순위 정렬을 리드해 “실행이 되는 상태”를 만듭니다.\n∙ 운영·세일즈·데이터분석·서비스기획 등 신사업 개발 과업에 CEO와 직속으로 투입되어 포괄적으로 참여합니다.\n∙ 실험/개선 과제를 설계하고 실행해 측정 가능한 임팩트를 만들어내며, 주간 단위로 성과·이슈·학습을 구조화해 공유하고 다음 의사결정/액션을 제안합니다.\n\n\n[접수기간]\n11월 12일 ~ 상시 채용\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[아토머스 주식회사] CEO Staff</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>∙ 핵심 지표(전환/매출/운영비용/CS 등) 관점에서 가장 큰 병목을 정의하고, 해결 전략과 실행 계획을 수립합니다.</span></p><p><span>∙ 합의된 과제를 끝까지 실행하며, 필요 시 유관 부서와의 조율/우선순위 정렬을 리드해 “실행이 되는 상태”를 만듭니다.</span></p><p><span>∙ 운영·세일즈·데이터분석·서비스기획 등 신사업 개발 과업에 CEO와 직속으로 투입되어 포괄적으로 참여합니다.</span></p><p><span>∙ 실험/개선 과제를 설계하고 실행해 측정 가능한 임팩트를 만들어내며, 주간 단위로 성과·이슈·학습을 구조화해 공유하고 다음 의사결정/액션을 제안합니다.</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 12일 ~ 상시 채용</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/987050\" title=\"CaptureX_2026-11-12_212805_atommerce.ninehire.site.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/987050"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T22:48:43.580476+09:00",
+      "page_text": "[아토머스 주식회사] CEO Staff\n\n\n[담당업무]\n∙ 핵심 지표(전환/매출/운영비용/CS 등) 관점에서 가장 큰 병목을 정의하고, 해결 전략과 실행 계획을 수립합니다.\n∙ 합의된 과제를 끝까지 실행하며, 필요 시 유관 부서와의 조율/우선순위 정렬을 리드해 “실행이 되는 상태”를 만듭니다.\n∙ 운영·세일즈·데이터분석·서비스기획 등 신사업 개발 과업에 CEO와 직속으로 투입되어 포괄적으로 참여합니다.\n∙ 실험/개선 과제를 설계하고 실행해 측정 가능한 임팩트를 만들어내며, 주간 단위로 성과·이슈·학습을 구조화해 공유하고 다음 의사결정/액션을 제안합니다.\n\n\n[접수기간]\n11월 12일 ~ 상시 채용\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-12T22:48:43.580476+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-10T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "d3cdde1e2f3fb0a2cab0ca99f6971f17e167ddb5dd8d2841621e8bec15500361",
+        "verdict": "not_relevant",
+        "reason": "CEO Staff 직무는 경영 전략 및 운영 지원 업무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/364098": {
+      "notice": {
+        "id": "linkareer-intern/364098",
+        "source_id": "linkareer-intern",
+        "article_no": "364098",
+        "title": "[뷰티셀렉션] [Biodance] 중화권 마케팅 인턴 (채용연계형)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/364098",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T22:48:43.580476+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-10T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/364097": {
+      "notice": {
+        "id": "linkareer-intern/364097",
+        "source_id": "linkareer-intern",
+        "article_no": "364097",
+        "title": "[앳홈] [톰(THOME)/글로벌/디바이스] 인플루언서 마케팅 전환형 인턴 (틱톡샵)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/364097",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T22:48:43.580476+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-10T23:59:59.999000+09:00",
+        "model": "source"
       }
     },
     "linkareer-intern/364093": {
@@ -2669,7 +2915,8 @@
         "model": "gemini-3.1-flash-lite",
         "kind": "일정",
         "at": "2026-11-21T10:30:00+09:00"
-      }
+      },
+      "rechecked_at": "2026-11-12T22:48:43.580476+09:00"
     },
     "skku-notice01/141813": {
       "notice": {
@@ -2790,7 +3037,8 @@
       "ai_deadline": {
         "checked": true,
         "model": "gemini-3.1-flash-lite"
-      }
+      },
+      "rechecked_at": "2026-11-12T22:48:43.580476+09:00"
     },
     "skku-career-intern/165175": {
       "notice": {
@@ -3405,6 +3653,50 @@
         "verdict": "not_relevant",
         "reason": "해당 공고는 마케팅 직무를 모집하고 있어 소프트웨어 관련 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/364109": {
+      "notice": {
+        "id": "linkareer-intern/364109",
+        "source_id": "linkareer-intern",
+        "article_no": "364109",
+        "title": "[대전광역시시설관리공단] 2026년 청년 체험형 인턴 채용 재공고",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/364109",
+        "posted_on": "2026-11-11",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T22:48:43.580476+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[대전광역시시설관리공단] 2026년 청년 체험형 인턴 채용 재공고\n\n\n[모집분야]\n행정\n환경\n\n\n[접수기간]\n11월 11일 ~ 11월 17일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[대전광역시시설관리공단] 2026년 청년 체험형 인턴 채용 재공고</span></b></p><p><b><span>[모집분야]</span></b></p><p><span>행정</span></p><p><span>환경</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 11일 ~ 11월 17일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/987075\" title=\"스크린샷_12-11-2026_221917_.jpeg\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/987076\" title=\"스크린샷_12-11-2026_22197_.jpeg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/987075",
+        "https://media-cdn.linkareer.com/se2editor/image/987076"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T22:48:43.580476+09:00",
+      "page_text": "[대전광역시시설관리공단] 2026년 청년 체험형 인턴 채용 재공고\n\n\n[모집분야]\n행정\n환경\n\n\n[접수기간]\n11월 11일 ~ 11월 17일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-12T22:48:43.580476+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-17T18:00:59.999000+09:00",
+        "model": "source"
       }
     },
     "linkareer-intern/363739": {
@@ -7828,7 +8120,7 @@
         "checked": true,
         "model": "gemini-3.1-flash-lite"
       },
-      "rechecked_at": "2026-11-12T09:39:12.630524+09:00"
+      "rechecked_at": "2026-11-12T22:48:43.580476+09:00"
     },
     "sw-notice/228328": {
       "notice": {
@@ -9799,6 +10091,49 @@
         "at": "2026-12-05T07:00:00+09:00"
       },
       "rechecked_at": "2026-11-12T12:31:45.914887+09:00"
+    },
+    "linkareer-intern/364106": {
+      "notice": {
+        "id": "linkareer-intern/364106",
+        "source_id": "linkareer-intern",
+        "article_no": "364106",
+        "title": "[한국자산평가] [대체1,대체2] 경력 및 신입(인턴)직원 채용 공고",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/364106",
+        "posted_on": "2026-11-09",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T22:48:43.580476+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[한국자산평가] [대체1,대체2] 경력 및 신입(인턴)직원 채용 공고\n\n\n[모집부문]\n대체평가1 사업본부\n대체평가2 사업본부\n\n\n[접수기간]\n11월 09일 ~ 11월 15일\n\n\n[채용공고]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span>[한국자산평가] [대체1,대체2] 경력 및 신입(인턴)직원 채용 공고</span></b></p><p><b><span>[모집부문]</span></b></p><p><span>대체평가1 사업본부</span></p><p><span>대체평가2 사업본부</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 09일 ~ 11월 15일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/987070\" title=\"CaptureX_2026-11-12_221007_www.koreaap.com.jpg\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/987070"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T22:48:43.580476+09:00",
+      "page_text": "[한국자산평가] [대체1,대체2] 경력 및 신입(인턴)직원 채용 공고\n\n\n[모집부문]\n대체평가1 사업본부\n대체평가2 사업본부\n\n\n[접수기간]\n11월 09일 ~ 11월 15일\n\n\n[채용공고]",
+      "body_attempted_at": "2026-11-12T22:48:43.580476+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-15T23:59:59.999000+09:00",
+        "model": "source"
+      }
     },
     "jasoseol-intern/107196": {
       "notice": {
@@ -26217,371 +26552,6 @@
         "model": "source"
       },
       "body_attempted_at": "2026-11-06T00:35:17.798876+09:00"
-    },
-    "jasoseol-intern/107075": {
-      "notice": {
-        "id": "jasoseol-intern/107075",
-        "source_id": "jasoseol-intern",
-        "article_no": "107075",
-        "title": "[뷰티셀렉션] 글로벌 인플루언서 마케팅 채용연계형 인턴 대규모 채용",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/107075",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-06T00:13:37.787736+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/933/webp/image.webp?1793835252\" alt=\"뷰티셀렉션 글로벌 인플루언서 마케팅 채용연계형 인턴 대규모 채용\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/933/webp/image.webp?1793835252"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-06T00:35:17.798876+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-22T23:59:00+09:00",
-        "model": "source"
-      },
-      "body_attempted_at": "2026-11-06T00:35:17.798876+09:00"
-    },
-    "linkareer-intern/362135": {
-      "notice": {
-        "id": "linkareer-intern/362135",
-        "source_id": "linkareer-intern",
-        "article_no": "362135",
-        "title": "[주식회사 당근마켓] Communication Manager (인턴) - 경영지원 (커뮤니케이션)",
-        "category": "체험형 인턴",
-        "url": "https://linkareer.com/activity/362135",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-04T17:50:56.426869+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [
-          "인턴"
-        ],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "해당 직무는 경영지원 커뮤니케이션 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980461\" title=\"Communication Manager (인턴) - 경영지원 (커뮤니케이션).png\"><br><br></p>",
-      "images": [
-        "https://media-cdn.linkareer.com/se2editor/image/980461"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-04T17:50:56.426869+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-15T23:59:59.999000+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "a43e05f75fa93668fba2c7169d450bdbedb2036097be84bba88c7d78889e0ceb",
-        "verdict": "not_relevant",
-        "reason": "해당 직무는 경영지원 커뮤니케이션 업무로 소프트웨어 개발 직무와 관련이 없습니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/107031": {
-      "notice": {
-        "id": "jasoseol-intern/107031",
-        "source_id": "jasoseol-intern",
-        "article_no": "107031",
-        "title": "[한국과학기술연구원(KIST)] 2026-6차 행정인턴 공개채용",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/107031",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-04T00:12:45.363535+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [
-          "인턴"
-        ],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "모집 분야가 행정 인턴으로, 소프트웨어 개발이나 IT 기술 직무와는 관련이 없습니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/701/webp/image.webp?1793673312\" alt=\"한국과학기술연구원(KIST) 2026-6차 행정인턴 공개채용\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/701/webp/image.webp?1793673312"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-04T00:12:45.363535+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-16T18:00:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "dfd176774d2cff2446ca35e79323e85fd6c8c9333185935a621764315d06c920",
-        "verdict": "not_relevant",
-        "reason": "모집 분야가 행정 인턴으로, 소프트웨어 개발이나 IT 기술 직무와는 관련이 없습니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/107020": {
-      "notice": {
-        "id": "jasoseol-intern/107020",
-        "source_id": "jasoseol-intern",
-        "article_no": "107020",
-        "title": "[에이피알] 마케팅 직군 대규모 특별 채용 (신입/경력)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/107020",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-04T00:12:45.363535+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [
-          "인턴"
-        ],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "해당 공고는 마케팅 직군 채용으로 소프트웨어 개발 직무가 아닙니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/752/webp/_%EC%B5%9C%EC%A2%85_%EC%9B%B9%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B4_CTA%EB%B2%84%EC%A0%84_1103.webp?1793689450\" alt=\"에이피알 마케팅 직군 대규모 특별 채용 (신입/경력)\"><a href=\"https://26mkt-aprcareers.com\">​</a>\n</div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/752/webp/_%EC%B5%9C%EC%A2%85_%EC%9B%B9%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B4_CTA%EB%B2%84%EC%A0%84_1103.webp?1793689450"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-04T00:12:45.363535+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-22T23:59:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "c5487e119e26fde1f82ca146065cdb62337d5a4cd606998099082c7df2099b3c",
-        "verdict": "not_relevant",
-        "reason": "해당 공고는 마케팅 직군 채용으로 소프트웨어 개발 직무가 아닙니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "linkareer-intern/361866": {
-      "notice": {
-        "id": "linkareer-intern/361866",
-        "source_id": "linkareer-intern",
-        "article_no": "361866",
-        "title": "[국립중앙의료원] 체험형 청년인턴(인사팀) 채용 공고",
-        "category": "체험형 인턴",
-        "url": "https://linkareer.com/activity/361866",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T23:23:53.829421+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": "low",
-        "interests": [
-          "인턴"
-        ],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "해당 직무는 인사팀 행정 업무로 소프트웨어 개발 직무가 아닙니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": true
-      },
-      "body_text": "[국립중앙의료원] 체험형 청년인턴(인사팀) 채용 공고\n\n\n[담당업무]\nㆍ 연말정산 관련 행정업무 지원\n- 연말정산 관련 자료 취합 및 제출현황 관리\n- 소득공제신고서 및 증빙서류 확인·분류 등 검토 지원\n- 임직원 연말정산 관련 문의 응대 및 안내 지원\n\n\n[접수기간]\n11월 02일 ~ 11월 16일\n\n\n[채용공고]",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><b><span>[국립중앙의료원] 체험형 청년인턴(인사팀) 채용 공고</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>ㆍ 연말정산 관련 행정업무 지원</span></p><p><span>- 연말정산 관련 자료 취합 및 제출현황 관리</span></p><p><span>- 소득공제신고서 및 증빙서류 확인·분류 등 검토 지원</span></p><p><span>- 임직원 연말정산 관련 문의 응대 및 안내 지원</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 02일 ~ 11월 16일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/979536\" title=\"스크린샷_3-11-2026_23173_.jpeg\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/979535\" title=\"스크린샷_3-11-2026_231656_.jpeg\"><br><br></p>",
-      "images": [
-        "https://media-cdn.linkareer.com/se2editor/image/979536",
-        "https://media-cdn.linkareer.com/se2editor/image/979535"
-      ],
-      "summary": "11월 16일까지 국립중앙의료원 인사팀 체험형 청년인턴을 모집합니다. 연말정산 행정 지원 업무를 수행할 예정입니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T23:23:53.829421+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-16T23:59:59.999000+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "00df3d052756ad1b7269e57f0f953b98025c7cbdbf443a5417277144244f322c",
-        "verdict": "not_relevant",
-        "reason": "해당 직무는 인사팀 행정 업무로 소프트웨어 개발 직무가 아닙니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "linkareer-intern/361862": {
-      "notice": {
-        "id": "linkareer-intern/361862",
-        "source_id": "linkareer-intern",
-        "article_no": "361862",
-        "title": "[메트라이프생명보험] Winter Internship - 재무기획",
-        "category": "체험형 인턴",
-        "url": "https://linkareer.com/activity/361862",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T23:07:27.917419+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": "low",
-        "interests": [
-          "인턴"
-        ],
-        "reasons": [],
-        "ai": {
-          "verdict": "relevant",
-          "reason": "재무 데이터 분석 및 AI 기술을 활용한 프로세스 개선 업무를 포함하고 있어 소프트웨어 관련 역량을 활용할 수 있습니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": true
-      },
-      "body_text": "[메트라이프생명보험] Winter Internship - 재무기획\n\n\n[담당업무]\n· 재무 데이터의 취합, 관리 및 분석을 통한 업무 지원\n· 재무 및 경영지표의 주요 변동사항 분석, 원인 파악 및 대응 지원\n· AI 및 자동화 기술을 활용한 업무 프로세스 개선 및 효율화 지원\n\n\n[접수기간]\n11월 03일 ~ 11월 17일\n\n\n[채용공고]",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><b><span>[메트라이프생명보험] Winter Internship - 재무기획</span></b></p><p><b><span>[담당업무]</span></b></p><p><span>· 재무 데이터의 취합, 관리 및 분석을 통한 업무 지원</span></p><p><span>· 재무 및 경영지표의 주요 변동사항 분석, 원인 파악 및 대응 지원</span></p><p><span>· AI 및 자동화 기술을 활용한 업무 프로세스 개선 및 효율화 지원</span></p><p><b><span>[접수기간]</span></b></p><p><span>11월 03일 ~ 11월 17일</span></p><p><b><span>[채용공고]</span></b></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/979519\" title=\"CaptureX_2026-11-03_225936_www.metlifecareers.com.jpg\"><br><br></p>",
-      "images": [
-        "https://media-cdn.linkareer.com/se2editor/image/979519"
-      ],
-      "summary": "메트라이프생명보험에서 재무기획 분야 동계 인턴을 모집합니다.11월 17일까지 지원 서류를 제출해야 합니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T23:07:27.917419+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-17T16:00:59.999000+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "c407f25e31229cea0d7f219be602b5091982728da5aa12d0d08fba59e0e55a86",
-        "verdict": "relevant",
-        "reason": "재무 데이터 분석 및 AI 기술을 활용한 프로세스 개선 업무를 포함하고 있어 소프트웨어 관련 역량을 활용할 수 있습니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "linkareer-intern/361732": {
-      "notice": {
-        "id": "linkareer-intern/361732",
-        "source_id": "linkareer-intern",
-        "article_no": "361732",
-        "title": "[한국과학기술연구원] KIST 2026-6차 행정인턴 공개채용",
-        "category": "체험형 인턴",
-        "url": "https://linkareer.com/activity/361732",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "모집 분야가 행정 인턴으로 소프트웨어 개발 직무와는 관련이 없습니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "[한국과학기술연구원] KIST 2026-6차 행정인턴 공개채용\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 학연운영팀 (인턴)\n- 혁신기업협력센터 (인턴)\n- 행정팀(전북) (인턴)\n- 재무팀 (인턴)\n\n\n\n\n[업무내용]\n\n\n- 각 모집군 상세요강 참조\n\n\n\n\n[채용절차]\n\n\n- 서류전형 → 면접심사 → 최종합격\n\n\n\n\n[공고상세]",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><span><b>[한국과학기술연구원] KIST 2026-6차 행정인턴 공개채용</b></span></p><p><span><b>[모집분야]</b></span></p><p>- 학연운영팀 (인턴)</p><p>- 혁신기업협력센터 (인턴)</p><p>- 행정팀(전북) (인턴)</p><p>- 재무팀 (인턴)</p><p><span><b>[업무내용]</b></span></p><p>- 각 모집군 상세요강 참조</p><p><span><b>[채용절차]</b></span></p><p>- 서류전형 → 면접심사 → 최종합격</p><p><span><b>[공고상세]</b></span></p><p><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/701/webp/image.webp?1793673312\" alt=\"한국과학기술연구원(KIST) 2026-6차 행정인턴 공개채용\"></p>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/701/webp/image.webp?1793673312"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T21:01:03.909988+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-16T18:00:59.999000+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "3da5887b0130802ea6d9a15a7da2595ff39b1baaabc87344a0fb0da307787a99",
-        "verdict": "not_relevant",
-        "reason": "모집 분야가 행정 인턴으로 소프트웨어 개발 직무와는 관련이 없습니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
     }
   }
 }

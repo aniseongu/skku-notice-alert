@@ -135,6 +135,111 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141887": {
+      "notice": {
+        "id": "skku-notice01/141887",
+        "source_id": "skku-notice01",
+        "article_no": "141887",
+        "title": "대학원혁신센터 촉탁직원 채용 공고",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141887",
+        "posted_on": "2026-11-12",
+        "pinned": true,
+        "deadline": null,
+        "first_seen": "2026-11-12T18:12:53.935477+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "석사 학위 이상의 소지자를 대상으로 하는 채용이므로 학부생인 작성자와 맞지 않습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "우리대학 대학원혁신센터에서 BK대학원혁신지원사업을 담당할 촉탁직원을 아래와 같이 채용합니다.\n\n1. 직종 및 모집인원 : 촉탁직원 1명(BK대학원혁신지원사업 일환)\n\n2. 근무부서 및 담당업무\n(1) 근무기간: 2027. 8. 31.까지\n(2) 근무지: 대학원혁신센터(인문사회과학캠퍼스, 서울 종로구)\n(3) 담당업무: 대학원혁신 정책 연구 및 성과관리\n국내·외 대학원 혁신사례 발굴 및 확산\n4단계 BK21사업 대학원혁신지원사업 수행\n\n3. 지원자격\n- 석사학위 이상 소지자\n※ 우대사항: 박사학위 소지자, 교육정책/평가 전공자\n\n4. 전형방법: 서류전형/실무면접/최종면접(인성검사 포함)\n\n5. 전형일정\n(1) 지원서 접수기간: 2026. 11. 12.(목) ~ 11. 22.(일) 까지\n(2) 지원서 접수방법: 이메일 접수(best.hr@skku.edu)\n(3) 면접전형: 개별 안내 예정\n\n6. 제출서류\n(1) 지원서 1부(본교 소정양식으로만 작성)\n(2) 개인정보 수집 및 활용 동의서 1부(소정양식, 스캔본 첨부)\n(3) 대학 이상 졸업 및 성적증명서 각 1부(스캔본 첨부)\n(4) 경력증명서(해당자만) 각 1부(스캔본 첨부)\n\n7. 기타\n(1) 본교 인사규정상 결격사유가 없어야 함\n(2) 기재사항 및 제출서류가 허위인 경우 채용이 취소됨\n(3) 채용서류의 전자적 접수로 채용절차법에 따라 채용서류는 반환되지 않으며, 채용절차 종료후 폐기됨\n(4) 기타 문의: ☎ 02-760-1105\n\n붙임 지원서 및 개인정보 활용 동의서 각 1부. 끝.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "지원서(대학원혁신센터)_26.11..hwp",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141887&attachNo=119124",
+          "type": "HWP",
+          "size": null
+        },
+        {
+          "name": "개인정보 수집및이용에 관한 동의.pdf",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141887&attachNo=119125",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<div><p>우리대학 대학원혁신센터에서 BK대학원혁신지원사업을 담당할 촉탁직원을 아래와 같이 채용합니다.</p><p>1. 직종 및 모집인원 : 촉탁직원 1명(BK대학원혁신지원사업 일환)</p><p>2. 근무부서 및 담당업무</p><p>&nbsp;(1) 근무기간: 2027. 8. 31.까지</p><p>&nbsp;(2) 근무지: 대학원혁신센터(인문사회과학캠퍼스, 서울 종로구)</p><p>&nbsp;(3) 담당업무: 대학원혁신 정책 연구 및 성과관리</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 국내·외 대학원 혁신사례 발굴 및 확산</p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4단계 BK21사업 대학원혁신지원사업 수행</p><p>3. 지원자격</p><p>- 석사학위 이상 소지자</p><p>※ 우대사항: 박사학위 소지자, 교육정책/평가 전공자</p><p>4. 전형방법: 서류전형/실무면접/최종면접(인성검사 포함)</p><p>5. 전형일정</p><p>&nbsp;(1) 지원서 접수기간: 2026. 11. 12.(목) ~ 11. 22.(일) 까지</p><p>&nbsp;(2) 지원서 접수방법: 이메일 접수(<a href=\"mailto:best.hr@skku.edu\"><u>best.hr@skku.edu</u></a>)</p><p>&nbsp;(3) 면접전형: 개별 안내 예정</p><p>6. 제출서류</p><p>&nbsp;(1) 지원서 1부(본교 소정양식으로만 작성)</p><p>&nbsp;(2) 개인정보 수집 및 활용 동의서 1부(소정양식, 스캔본 첨부)</p><p>&nbsp;(3) 대학 이상 졸업 및 성적증명서 각 1부(스캔본 첨부)</p><p>&nbsp;(4) 경력증명서(해당자만) 각 1부(스캔본 첨부)</p><p>7. 기타</p><p>&nbsp;(1) 본교 인사규정상 결격사유가 없어야 함</p><p>&nbsp;(2) 기재사항 및 제출서류가 허위인 경우 채용이 취소됨</p><p>&nbsp;(3) 채용서류의 전자적 접수로 채용절차법에 따라 채용서류는 반환되지 않으며, 채용절차 종료후 폐기됨</p><p>&nbsp;(4) 기타 문의: ☎ 02-760-1105</p><p>붙임 지원서 및 개인정보 활용 동의서 각 1부. 끝.</p></div>",
+      "images": [],
+      "summary": "대학원혁신센터에서 석사 이상 소지자를 대상으로 촉탁직원을 채용합니다. 11월 22일까지 이메일로 지원서를 제출하면 됩니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T18:12:53.935477+09:00",
+      "page_text": "우리대학 대학원혁신센터에서 BK대학원혁신지원사업을 담당할 촉탁직원을 아래와 같이 채용합니다.\n\n1. 직종 및 모집인원 : 촉탁직원 1명(BK대학원혁신지원사업 일환)\n\n2. 근무부서 및 담당업무\n(1) 근무기간: 2027. 8. 31.까지\n(2) 근무지: 대학원혁신센터(인문사회과학캠퍼스, 서울 종로구)\n(3) 담당업무: 대학원혁신 정책 연구 및 성과관리\n국내·외 대학원 혁신사례 발굴 및 확산\n4단계 BK21사업 대학원혁신지원사업 수행\n\n3. 지원자격\n- 석사학위 이상 소지자\n※ 우대사항: 박사학위 소지자, 교육정책/평가 전공자\n\n4. 전형방법: 서류전형/실무면접/최종면접(인성검사 포함)\n\n5. 전형일정\n(1) 지원서 접수기간: 2026. 11. 12.(목) ~ 11. 22.(일) 까지\n(2) 지원서 접수방법: 이메일 접수(best.hr@skku.edu)\n(3) 면접전형: 개별 안내 예정\n\n6. 제출서류\n(1) 지원서 1부(본교 소정양식으로만 작성)\n(2) 개인정보 수집 및 활용 동의서 1부(소정양식, 스캔본 첨부)\n(3) 대학 이상 졸업 및 성적증명서 각 1부(스캔본 첨부)\n(4) 경력증명서(해당자만) 각 1부(스캔본 첨부)\n\n7. 기타\n(1) 본교 인사규정상 결격사유가 없어야 함\n(2) 기재사항 및 제출서류가 허위인 경우 채용이 취소됨\n(3) 채용서류의 전자적 접수로 채용절차법에 따라 채용서류는 반환되지 않으며, 채용절차 종료후 폐기됨\n(4) 기타 문의: ☎ 02-760-1105\n\n붙임 지원서 및 개인정보 활용 동의서 각 1부. 끝.",
+      "body_attempted_at": "2026-11-12T18:12:53.935477+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-22T23:59:00+09:00"
+      }
+    },
+    "skku-notice01/141886": {
+      "notice": {
+        "id": "skku-notice01/141886",
+        "source_id": "skku-notice01",
+        "article_no": "141886",
+        "title": "[연구 참여자 모집] AI면접 경험에 관한 연구",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141886",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T18:12:53.935477+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "만 19세 이상의 대학생인 작성자가 참여 가능한 온라인 연구 실험입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "안녕하세요, 성균관대학교 인터랙션사이언스학과 Human-AI Interaction Lab에서 AI 면접 경험에 관한 연구를 위해 실험 참가자를 모집합니다.\n웹 환경에서 AI 면접을 직접 체험해 보고 간단한 설문조사에 응답하는 온라인 실험이오니 많은 관심과 참여 부탁드립니다.\n1. 실험 개요\n• 실험 내용: 웹 기반 AI 면접 체험(10~15분) 및 설문조사(10분)\n• 소요 시간: 약 30분\n• 실험 방법: 100% 온라인 참여\n2. 참여 대상\n• 만 19세 이상의 대학(원)생, 취업 준비생, 직장인\n• 한국어로 면접 질문을 듣고 답하는 데 어려움이 없는 분\n(단, 현재 BK21과 같은 모든 국가과제에 참여하고 있는 분은 실험비 지급이 불가합니다.)\n3. 참여 조건 및 진행 절차\n• 마이크와 카메라를 사용할 수 있는 조용한 공간에서 진행하셔야 합니다.\n• 노트북이나 데스크톱 등 PC 환경에서 접속하셔야 합니다 (모바일 참여 불가).\n• 신청 후 5분 이내에 연구 담당자가 메일로 실험 참여 안내 및 링크를 발송해 드립니다.\n4. 참여 사례\n• 10,000원 상당의 모바일 기프티콘\n(실험 참여 완료 후 약 3~4주 이내 지급 예정이며, 중도 포기 시 50% 지급됩니다.)\n5. 신청 방법\n• 포스터 내 QR 코드를 스캔하거나 아래 구글 폼 링크를 통해 신청해 주세요.\n• 신청 링크: https://forms.gle/2GNw1Gfc3efGJNwHA\n(실험은 선착순으로 마감될 예정입니다.)\n6. 문의처\n• 연구담당자 최성준 (010-2029-2539)(rodi13@g.skku.edu)\n본 연구는 IRB 승인을 받은 연구입니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>안녕하세요, 성균관대학교 인터랙션사이언스학과 Human-AI Interaction Lab에서 AI 면접 경험에 관한 연구를 위해 실험 참가자를 모집합니다.</p><p>웹 환경에서 AI 면접을 직접 체험해 보고 간단한 설문조사에 응답하는 온라인 실험이오니 많은 관심과 참여 부탁드립니다.</p><p>1.\t실험 개요</p><p>•\t실험 내용: 웹 기반 AI 면접 체험(10~15분) 및 설문조사(10분)</p><p>•\t소요 시간: 약 30분</p><p>•\t실험 방법: 100% 온라인 참여</p><p>2.\t참여 대상</p><p>•\t만 19세 이상의 대학(원)생, 취업 준비생, 직장인</p><p>•\t한국어로 면접 질문을 듣고 답하는 데 어려움이 없는 분</p><p>(단, 현재 BK21과 같은 모든 국가과제에 참여하고 있는 분은 실험비 지급이 불가합니다.)</p><p>3.\t참여 조건 및 진행 절차</p><p>•\t마이크와 카메라를 사용할 수 있는 조용한 공간에서 진행하셔야 합니다.</p><p>•\t노트북이나 데스크톱 등 PC 환경에서 접속하셔야 합니다 (모바일 참여 불가).</p><p>•\t신청 후 5분 이내에 연구 담당자가 메일로 실험 참여 안내 및 링크를 발송해 드립니다.</p><p>4.\t참여 사례</p><p>•\t10,000원 상당의 모바일 기프티콘</p><p>(실험 참여 완료 후 약 3~4주 이내 지급 예정이며, 중도 포기 시 50% 지급됩니다.)</p><p>5.\t신청 방법</p><p>•\t포스터 내 QR 코드를 스캔하거나 아래 구글 폼 링크를 통해 신청해 주세요.</p><p>•\t신청 링크: <a href=\"https://forms.gle/2GNw1Gfc3efGJNwHA\">https://forms.gle/2GNw1Gfc3efGJNwHA</a></p><p>(실험은 선착순으로 마감될 예정입니다.)</p><p>6.\t문의처</p><p>•\t연구담당자 최성준 (010-2029-2539)(rodi13@g.skku.edu)</p><p>본 연구는 IRB 승인을 받은 연구입니다.</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t \n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t           \t\t\t\t\n\t\t\t\t\t           \t\t\t\t<img alt=\"포스터\" src=\"https://www.skku.edu/_attach/image/2026/11/iFpeyEFXBqGWAKMgUcia.png\">",
+      "images": [
+        "https://www.skku.edu/_attach/image/2026/11/iFpeyEFXBqGWAKMgUcia.png"
+      ],
+      "summary": "AI 면접 경험 연구를 위한 실험 참가자를 모집합니다. 구글 폼을 통해 신청 후 PC로 30분간 실험에 참여하면 기프티콘을 받을 수 있습니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T18:12:53.935477+09:00",
+      "page_text": "안녕하세요, 성균관대학교 인터랙션사이언스학과 Human-AI Interaction Lab에서 AI 면접 경험에 관한 연구를 위해 실험 참가자를 모집합니다.\n웹 환경에서 AI 면접을 직접 체험해 보고 간단한 설문조사에 응답하는 온라인 실험이오니 많은 관심과 참여 부탁드립니다.\n1. 실험 개요\n• 실험 내용: 웹 기반 AI 면접 체험(10~15분) 및 설문조사(10분)\n• 소요 시간: 약 30분\n• 실험 방법: 100% 온라인 참여\n2. 참여 대상\n• 만 19세 이상의 대학(원)생, 취업 준비생, 직장인\n• 한국어로 면접 질문을 듣고 답하는 데 어려움이 없는 분\n(단, 현재 BK21과 같은 모든 국가과제에 참여하고 있는 분은 실험비 지급이 불가합니다.)\n3. 참여 조건 및 진행 절차\n• 마이크와 카메라를 사용할 수 있는 조용한 공간에서 진행하셔야 합니다.\n• 노트북이나 데스크톱 등 PC 환경에서 접속하셔야 합니다 (모바일 참여 불가).\n• 신청 후 5분 이내에 연구 담당자가 메일로 실험 참여 안내 및 링크를 발송해 드립니다.\n4. 참여 사례\n• 10,000원 상당의 모바일 기프티콘\n(실험 참여 완료 후 약 3~4주 이내 지급 예정이며, 중도 포기 시 50% 지급됩니다.)\n5. 신청 방법\n• 포스터 내 QR 코드를 스캔하거나 아래 구글 폼 링크를 통해 신청해 주세요.\n• 신청 링크: https://forms.gle/2GNw1Gfc3efGJNwHA\n(실험은 선착순으로 마감될 예정입니다.)\n6. 문의처\n• 연구담당자 최성준 (010-2029-2539)(rodi13@g.skku.edu)\n본 연구는 IRB 승인을 받은 연구입니다.",
+      "body_attempted_at": "2026-11-12T18:12:53.935477+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "skku-career-intern/165201": {
       "notice": {
         "id": "skku-career-intern/165201",
@@ -12127,7 +12232,7 @@
         "kind": "마감",
         "at": "2026-11-30T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-11T17:33:25.188707+09:00"
+      "rechecked_at": "2026-11-12T18:12:53.935477+09:00"
     },
     "skku-notice01/141698": {
       "notice": {
@@ -12219,7 +12324,7 @@
       "fetched_at": "2026-11-09T14:03:44.705624+09:00",
       "page_text": "안녕하세요!\n미래차 부트캠프 중급 및 고급을 이수 중인 3, 4학년 재학생을 대상으로 2026 겨울학기 현장실습을 진행하고자 하오니, 아래 내용을 확인하시어 많은 참여 부탁드립니다.",
       "body_attempted_at": "2026-11-09T14:03:44.705624+09:00",
-      "rechecked_at": "2026-11-11T19:23:46.887481+09:00"
+      "rechecked_at": "2026-11-12T18:12:53.935477+09:00"
     },
     "linkareer-intern/362957": {
       "notice": {
@@ -12590,7 +12695,7 @@
       "fetched_at": "2026-11-09T10:22:54.424340+09:00",
       "body_attempted_at": "2026-11-09T10:22:54.424340+09:00",
       "page_text": "[제2회 삼성융합의과학원 국제심포지엄 안내]\nPhysical AI in Medicine: From Recognition and Reasoning to Embodied Intelligence\n\n성균관대학교 삼성융합의과학원(SAIHST)에서는 오는 12월 3일(목), ‘Physical AI in Medicine: From Recognition and Reasoning to Embodied Intelligence’라는 주제로 제2회 국제 심포지엄을 개최합니다.\n\n영상을 읽고 판단을 돕던 인공지능이 이제 로봇이라는 몸을 얻어 수술실에서 직접 움직이기 시작했습니다. 이번 심포지엄에서는 국내외 연자가 두 차례의 기조 강연과 다섯 개 세션을 통해, 수술 영상 분석부터 의료 파운데이션 모델, 수술 로봇, 임상 적용까지 이 변화의 최전선을 소개합니다.\n\n의학과 공학이 처음부터 함께해야 하는 이 분야에서, 이번 자리가 대학원생과 젊은 연구자들에게 새로운 연구 방향을 찾는 기회가 되기를 바랍니다.\n\n본 국제 심포지엄은 온라인으로 생중계되며, 11월 30일(월)까지 홈페이지 사전 등록 후 무료로 참여하실 수 있습니다. 관심 있는 분들의 많은 참여를 부탁드립니다.\n\n｢심포지엄 개요｣\n◎ 주제: Physical AI in Medicine: From Recognition and Reasoning to Embodied Intelligence\n◎ 일시: 2026년 12월 3일(목) 09:00–17:45 (온라인)\n◎ 등록비: 무료\n- 2026년 11월 30일(일)까지 사전등록 필수\n◎ 등록 및 시청 방법\n- 하단 포스터의 QR코드 이용\n- 공식 홈페이지(https://saihst.org) 접속\n◎ 주최: 성균관대학교 삼성융합의과학원(SAIHST)\n◎ 문의: 031-284-0835 / 02-2148-7560",
-      "rechecked_at": "2026-11-11T20:19:08.453181+09:00"
+      "rechecked_at": "2026-11-12T18:12:53.935477+09:00"
     },
     "skku-notice01/141687": {
       "notice": {
@@ -26348,114 +26453,6 @@
         "fingerprint": "a00e2d847ab8cef810fbbe855dfb9eb8ca883ccd3586027eaa78e662e94df226",
         "verdict": "relevant",
         "reason": "AI 툴 활용 및 콘텐츠 제작, 운영 프로세스 개선 보조 업무로 소프트웨어학과 학생이 지원하기에 적합합니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "linkareer-intern/361603": {
-      "notice": {
-        "id": "linkareer-intern/361603",
-        "source_id": "linkareer-intern",
-        "article_no": "361603",
-        "title": "[주식회사 라라스윗] [라라스윗] 마케팅 인턴 대규모 채용 (채용전환형)",
-        "category": "채용연계형 인턴",
-        "url": "https://linkareer.com/activity/361603",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "마케팅 직무를 채용하는 공고로, 소프트웨어 개발 직무와는 관련이 없습니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=1938128\" title=\"배너ver..png\"></div><div><img src=\"https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=1938129\" title=\"배너cont.png\"></div><div><a href=\"https://www.jobkorea.co.kr/List_GI/Co_HomePage_Open.asp?home=https%3A//lalasweet.teamblog.io/internship17&amp;GI_No=51884744\"><img src=\"https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=1938130\" title=\"배너cont2-1 (1).png\"></a></div><div><a href=\"https://www.jobkorea.co.kr/List_GI/Co_HomePage_Open.asp?home=https%3A//lalasweet.teamblog.io/internship16&amp;GI_No=51884744\"><img src=\"https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=1938131\" title=\"배너cont2-2.png\"></a></div><div><a href=\"https://www.jobkorea.co.kr/List_GI/Co_HomePage_Open.asp?home=https%3A//lalasweet.teamblog.io/growth3&amp;GI_No=51884744\"><img src=\"https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=1938132\" title=\"배너cont3.png\"></a></div>",
-      "images": [
-        "https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=1938128",
-        "https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=1938129",
-        "https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=1938130",
-        "https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=1938131",
-        "https://file2.jobkorea.co.kr/Net/Mng/DownImage/CorpEditor?file_No=1938132"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T21:01:03.909988+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-22T23:59:59.999000+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "d460f142c1d19920ed1383415e98d000cd787f82c476eaabc1602b5d25d35908",
-        "verdict": "not_relevant",
-        "reason": "마케팅 직무를 채용하는 공고로, 소프트웨어 개발 직무와는 관련이 없습니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "linkareer-intern/361568": {
-      "notice": {
-        "id": "linkareer-intern/361568",
-        "source_id": "linkareer-intern",
-        "article_no": "361568",
-        "title": "[한국청소년상담복지개발원] 제2026-1호 국립청소년인터넷드림마을 청년인턴(체험형) 모집",
-        "category": "체험형 인턴",
-        "url": "https://linkareer.com/activity/361568",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "청소년 상담 및 행정 지원 업무는 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "[한국청소년상담복지개발원] 제2026-1호 국립청소년인터넷드림마을 청년인턴(체험형) 모집\n\n\n\n\n[담당 업무]\n- 치유캠프 운영 업무 지원\n- 해당사업 관련 행정업무 지원\n\n\n[응시자격]\n- 지원서 접수마감일 기준 만 34세 이하\n\n\n[접수기간]\n- 2026.11.2 ~ 2026.11.17",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><span><b>[한국청소년상담복지개발원] 제2026-1호 국립청소년인터넷드림마을 청년인턴(체험형) 모집</b></span></p><p><span>[담당 업무]</span></p><p><span>- 치유캠프 운영 업무 지원</span></p><p><span>- 해당사업 관련 행정업무 지원</span></p><p><span>[응시자격]</span></p><p><span>- 지원서 접수마감일 기준 만 34세 이하</span></p><p><span>[접수기간]</span></p><p><span>- 2026.11.2 ~ 2026.11.17</span></p><div><br></div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/978629\" title=\"20261103_091550.png\"><br><br></p>",
-      "images": [
-        "https://media-cdn.linkareer.com/se2editor/image/978629"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T21:01:03.909988+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-17T15:00:59.999000+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "39a89938fc1f3eb9a0c2248804a7ce0b8c663d0ab616f3400b13d913d68767d7",
-        "verdict": "not_relevant",
-        "reason": "청소년 상담 및 행정 지원 업무는 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
         "model": "gemini-3.1-flash-lite"
       }
     }

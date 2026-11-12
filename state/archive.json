@@ -3673,7 +3673,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "모집 직무인 행정 및 환경 분야는 소프트웨어 개발, 데이터, 인공지능 등 IT 관련 직무와 무관한 일반 사무 및 현장 보조 업무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[대전광역시시설관리공단] 2026년 청년 체험형 인턴 채용 재공고\n\n\n[모집분야]\n행정\n환경\n\n\n[접수기간]\n11월 11일 ~ 11월 17일\n\n\n[채용공고]",
@@ -3697,6 +3702,12 @@
         "kind": "마감",
         "at": "2026-11-17T18:00:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "59c65875aac3b760040f4b677da4449f1b37ffcb8be41a0a3e8db09afc40726f",
+        "verdict": "not_relevant",
+        "reason": "모집 직무인 행정 및 환경 분야는 소프트웨어 개발, 데이터, 인공지능 등 IT 관련 직무와 무관한 일반 사무 및 현장 보조 업무입니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/363739": {
@@ -6447,7 +6458,7 @@
         "kind": "마감",
         "at": "2026-11-23T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-12T11:34:49.535023+09:00"
+      "rechecked_at": "2026-11-12T23:43:48.871690+09:00"
     },
     "skku-notice01/141765": {
       "notice": {
@@ -6515,7 +6526,7 @@
         "kind": "마감",
         "at": "2026-12-11T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-12T11:34:49.535023+09:00"
+      "rechecked_at": "2026-11-12T23:43:48.871690+09:00"
     },
     "skku-notice01/141760": {
       "notice": {
@@ -6568,7 +6579,7 @@
         "kind": "마감",
         "at": "2026-11-18T17:00:00+09:00"
       },
-      "rechecked_at": "2026-11-12T11:34:49.535023+09:00"
+      "rechecked_at": "2026-11-12T23:43:48.871690+09:00"
     },
     "skku-career-intern/165155": {
       "notice": {

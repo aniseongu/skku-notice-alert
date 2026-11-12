@@ -17,27 +17,44 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "인사총무 직무는 소프트웨어 개발 및 데이터 관련 직무가 아니며 경영 및 상경계열 전공을 우대합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[유한화학] 인사총무팀 채용전환형 인턴 사원 모집 (2026년 11월)\n\n\n\n\n[직무내용]\n· 인사 / 교육\n· 채용, 평가, 승진 등 인사 운영\n· 교육 계획 수립 및 운영, 이수 현황 관리\n· 노무\n· 노사협의회 운영 및 노사관계 업무 지원\n· 임직원 고충 및 개선제안 접수·관리\n· 총무\n· 사업장 시설 및 사무환경, 임직원 복리후생 관리\n· 사내외 행사 운영, 대외기관 대응 및 도급·용역 관리\n\n\n[필수사항]\n· 4년제 대학교 졸업(예정)자\n\n\n[우대사항]\n· 인사, 총무 업무 경험자\n· 경영학과 및 상경계열 전공",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><span><b>[유한화학] 인사총무팀 채용전환형 인턴 사원 모집 (2026년 11월)</b></span></p><p><span>[직무내용]</span></p><p><span>· 인사 / 교육</span></p><p><span>· 채용, 평가, 승진 등 인사 운영</span></p><p><span>· 교육 계획 수립 및 운영, 이수 현황 관리</span></p><p><span>· 노무</span></p><p><span>· 노사협의회 운영 및 노사관계 업무 지원</span></p><p><span>· 임직원 고충 및 개선제안 접수·관리</span></p><p><span>· 총무</span></p><p><span>· 사업장 시설 및 사무환경, 임직원 복리후생 관리</span></p><p><span>· 사내외 행사 운영, 대외기관 대응 및 도급·용역 관리</span></p><p><span>[필수사항]</span></p><p><span>· 4년제 대학교 졸업(예정)자</span></p><p><span>[우대사항]</span></p><p><span>· 인사, 총무 업무 경험자</span></p><p><span>· 경영학과 및 상경계열 전공</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/986514\" title=\"20261112_134822.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/986514"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T19:08:05.086757+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2026-11-19T23:50:59.999000+09:00",
         "model": "source"
+      },
+      "page_text": "[유한화학] 인사총무팀 채용전환형 인턴 사원 모집 (2026년 11월)\n\n\n\n\n[직무내용]\n· 인사 / 교육\n· 채용, 평가, 승진 등 인사 운영\n· 교육 계획 수립 및 운영, 이수 현황 관리\n· 노무\n· 노사협의회 운영 및 노사관계 업무 지원\n· 임직원 고충 및 개선제안 접수·관리\n· 총무\n· 사업장 시설 및 사무환경, 임직원 복리후생 관리\n· 사내외 행사 운영, 대외기관 대응 및 도급·용역 관리\n\n\n[필수사항]\n· 4년제 대학교 졸업(예정)자\n\n\n[우대사항]\n· 인사, 총무 업무 경험자\n· 경영학과 및 상경계열 전공",
+      "body_attempted_at": "2026-11-12T19:08:05.086757+09:00",
+      "intern_judgment": {
+        "fingerprint": "3eef41cb308db3e67300e6dc92c3d6ca2ddda52e165cc8937e65b05be467c1f7",
+        "verdict": "not_relevant",
+        "reason": "인사총무 직무는 소프트웨어 개발 및 데이터 관련 직무가 아니며 경영 및 상경계열 전공을 우대합니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/363930": {
@@ -56,27 +73,44 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "생산관리 직무는 소프트웨어 개발 및 데이터 관련 직무가 아니며 화학 및 화공 계열 전공을 우대합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[유한화학] 생산관리자 채용전환형 인턴 사원 모집 (2026년 11월)\n\n\n\n\n[직무내용]\n· 생산 일정 및 생산 공정 관리\n· 생산 계획에 따른 자재 소요량 산출 및 구매 의뢰\n· 생산 공정 효율 개선\n· 생산 과정에서 발생하는 issue 조사 및 해결\n· 생산 관련 GMP 문서 작성\n· 고객사 및 유관 부서 업무 대응\n\n\n[필수사항]\n· 4년제 대학교 졸업(예정)자\n\n\n[우대사항]\n· 원료의약품 관련 생산관리 업무 경험자 우대\n· 유기화학 관련학과 / 화학 및 화공 계열 전공자",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><span><b>[유한화학] 생산관리자 채용전환형 인턴 사원 모집 (2026년 11월)</b></span></p><p><span>[직무내용]</span></p><p><span>· 생산 일정 및 생산 공정 관리</span></p><p><span>· 생산 계획에 따른 자재 소요량 산출 및 구매 의뢰</span></p><p><span>· 생산 공정 효율 개선</span></p><p><span>· 생산 과정에서 발생하는 issue 조사 및 해결</span></p><p><span>· 생산 관련 GMP 문서 작성</span></p><p><span>· 고객사 및 유관 부서 업무 대응</span></p><p><span>[필수사항]</span></p><p><span>· 4년제 대학교 졸업(예정)자</span></p><p><span>[우대사항]</span></p><p><span>· 원료의약품 관련 생산관리 업무 경험자 우대</span></p><p><span>· 유기화학 관련학과 / 화학 및 화공 계열 전공자</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/986502\" title=\"20261112_134209.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/986502"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T19:08:05.086757+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2026-11-19T23:50:59.999000+09:00",
         "model": "source"
+      },
+      "page_text": "[유한화학] 생산관리자 채용전환형 인턴 사원 모집 (2026년 11월)\n\n\n\n\n[직무내용]\n· 생산 일정 및 생산 공정 관리\n· 생산 계획에 따른 자재 소요량 산출 및 구매 의뢰\n· 생산 공정 효율 개선\n· 생산 과정에서 발생하는 issue 조사 및 해결\n· 생산 관련 GMP 문서 작성\n· 고객사 및 유관 부서 업무 대응\n\n\n[필수사항]\n· 4년제 대학교 졸업(예정)자\n\n\n[우대사항]\n· 원료의약품 관련 생산관리 업무 경험자 우대\n· 유기화학 관련학과 / 화학 및 화공 계열 전공자",
+      "body_attempted_at": "2026-11-12T19:08:05.086757+09:00",
+      "intern_judgment": {
+        "fingerprint": "63d37370dffb072d30a20a98237bd5f55d0219aafedaac08a020665046451c9e",
+        "verdict": "not_relevant",
+        "reason": "생산관리 직무는 소프트웨어 개발 및 데이터 관련 직무가 아니며 화학 및 화공 계열 전공을 우대합니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "jasoseol-intern/107165": {
@@ -133,6 +167,50 @@
         "verdict": "not_relevant",
         "reason": "일반사무 직무를 모집하며 소프트웨어 개발 및 관련 직무와 무관합니다.",
         "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/364073": {
+      "notice": {
+        "id": "linkareer-intern/364073",
+        "source_id": "linkareer-intern",
+        "article_no": "364073",
+        "title": "아우모비오 코리아 | 제3기 아우모비오스타(AUMOVIO star) 인턴십 프로그램 모집",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/364073",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T19:08:05.086757+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "🚀 채용 절차\n• 지원 자격 : 4년제 대학교 재학생, 졸업예정자, 기졸업자\n• 근무 기간 : 2027년 1월초 - 6월말\n• 모집 기간 : 2027년 11월 11일 - 11월 29일\n• 지원 방법 : 첨부 이미지 상 QR코드를 접속하여 오픈 포지션 확인 후 지원\n• 지원 링크 : https://jobs.aumovio.com/en/jobs/\n• 지원 양식 : 자사 양식의 아우모비오스타 지원 신청서를 제출 부탁드립니다.\n각 포지션별 중복지원은 불가하오니, 3rd AUMOVIO star Internship 중 1개의 포지션에 지원하여 주시기 바랍니다.\n\n🔎 안내 사항\n• 국가 보훈 대상자와 장애인은 관계 법령에 따라 우대합니다.\n• 입사 지원서 내용에 허위 사실이 판명될 경우, 채용이 취소될 수 있습니다.\n\n🏢 회사 소개\n아우모비오는 독립 기업으로서 기존 콘티넨탈 오토모티브 그룹 부문의 사업을 이어갑니다. 첨단 전자 기술과 미래 모빌리티 솔루션을 선도하는 아우모비오는 더 안전하고, 더 역동적이며, 더 자유로운 모빌리티의 미래를 만드는 폭넓은 포트폴리오를 제공합니다. 아우모비오는 기술 및 전장 전문 기업으로서 모빌리티의 안정성, 흥미성, 연결성, 자율성을 구현하는 폭넓은 포트폴리오를 제공합니다. 주요 사업 영역은 센서 솔루션, 디스플레이, 제동 및 컴포트 시스템과 소프트웨어 기반 차량(SDV)을 위한 소프트웨어, 아키텍처 플랫폼, 보조 시스템 등으로 구성되어 있습니다. 아우모비오는 2024년 196억 유로(한화 약 32조 원)의 매출을 기록했으며, 독일 프랑크푸르트에 본사를 두고 전 세계 100여개국에서 약 86,000명의 직원과 함께하고 있습니다.\n\n📍사업장 소재지\n• 서현 사업장 : 경기도 성남시 분당구 황새울로 312번길 26, 서현265빌딩 3-4층\n• 정자 사업장 : 경기도 성남시 분당구 성남대로 331번길 8, 킨스타워 25-26층\n• 세종 사업장 : 세종특별시 부강면 금호선말길 74-7\n\n🌐 회사 홈페이지 및 링크드인\nhttps://www.aumovio.com\nhttps://www.linkedin.com/company/aumovio",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://www.peoplenjob.com/attachments/App-Models-Job/thumbnail/DVEYLn2gR4/full.jpg?from=upload\" alt=\"full.jpg?from=upload\"></p><p><img src=\"https://www.peoplenjob.com/attachments/App-Models-Job/thumbnail/Q16VLW5MEG/full.jpg?from=upload\" alt=\"full.jpg?from=upload\"></p><p><span>🚀 채용 절차&nbsp;<br></span><span>• 지원 자격 : 4년제 대학교 재학생, 졸업예정자, 기졸업자&nbsp;</span><br><span>• 근무 기간 : 2027년 1월초 - 6월말&nbsp;</span><br><span>• 모집 기간 : 2027년 11월 11일 - 11월 29일&nbsp;</span><br><span>• 지원 방법 : 첨부 이미지 상 QR코드를 접속하여 오픈 포지션 확인 후 지원&nbsp;</span><br><span>• 지원 링크 : </span><a href=\"https://jobs.aumovio.com/en/jobs/\">https://jobs.aumovio.com/en/jobs/</a><br><span>• 지원 양식 : 자사 양식의 아우모비오스타 지원 신청서를 제출 부탁드립니다.&nbsp;</span><br><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 각 포지션별 중복지원은 불가하오니, &nbsp;3rd AUMOVIO star Internship 중 1개의 포지션에 지원하여 주시기 바랍니다.&nbsp;</span><br><span>&nbsp;</span><br><span>🔎 안내 사항&nbsp;<br></span><span>• 국가 보훈 대상자와 장애인은 관계 법령에 따라 우대합니다.&nbsp;</span><br><span>• 입사 지원서 내용에 허위 사실이 판명될 경우, 채용이 취소될 수 있습니다.</span><br><span>&nbsp;</span><br><span>🏢 회사 소개&nbsp;<br></span><span>아우모비오는 독립 기업으로서 기존 콘티넨탈 오토모티브 그룹 부문의 사업을 이어갑니다. 첨단 전자 기술과 미래 모빌리티 솔루션을 선도하는 아우모비오는 더 안전하고, 더 역동적이며, 더 자유로운 모빌리티의 미래를 만드는 폭넓은 포트폴리오를 제공합니다. 아우모비오는 기술 및 전장 전문 기업으로서 모빌리티의 안정성, 흥미성, 연결성, 자율성을 구현하는 폭넓은 포트폴리오를 제공합니다. 주요 사업 영역은 센서 솔루션, 디스플레이, 제동 및 컴포트 시스템과 소프트웨어 기반 차량(SDV)을 위한 소프트웨어, 아키텍처 플랫폼, 보조 시스템 등으로 구성되어 있습니다. 아우모비오는 2024년 196억 유로(한화 약 32조 원)의 매출을 기록했으며, 독일 프랑크푸르트에 본사를 두고 전 세계 100여개국에서 약 86,000명의 직원과 함께하고 있습니다.</span><br><span>&nbsp;</span><br><span>📍사업장 소재지&nbsp;<br></span><span>• 서현 사업장 : 경기도 성남시 분당구 황새울로 312번길 26, 서현265빌딩 3-4층&nbsp;</span><br><span>• 정자 사업장 : 경기도 성남시 분당구 성남대로 331번길 8, 킨스타워 25-26층&nbsp;</span><br><span>• 세종 사업장 : 세종특별시 부강면 금호선말길 74-7</span><br><span>&nbsp;</span><br><span>🌐 회사 홈페이지 및 링크드인&nbsp;<br></span><a href=\"https://www.aumovio.com/\">https://www.aumovio.com</a><br><a href=\"https://www.linkedin.com/company/aumovio\">https://www.linkedin.com/company/aumovio</a></p>",
+      "images": [
+        "https://www.peoplenjob.com/attachments/App-Models-Job/thumbnail/DVEYLn2gR4/full.jpg?from=upload",
+        "https://www.peoplenjob.com/attachments/App-Models-Job/thumbnail/Q16VLW5MEG/full.jpg?from=upload"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T19:08:05.086757+09:00",
+      "page_text": "🚀 채용 절차\n• 지원 자격 : 4년제 대학교 재학생, 졸업예정자, 기졸업자\n• 근무 기간 : 2027년 1월초 - 6월말\n• 모집 기간 : 2027년 11월 11일 - 11월 29일\n• 지원 방법 : 첨부 이미지 상 QR코드를 접속하여 오픈 포지션 확인 후 지원\n• 지원 링크 : https://jobs.aumovio.com/en/jobs/\n• 지원 양식 : 자사 양식의 아우모비오스타 지원 신청서를 제출 부탁드립니다.\n각 포지션별 중복지원은 불가하오니, 3rd AUMOVIO star Internship 중 1개의 포지션에 지원하여 주시기 바랍니다.\n\n🔎 안내 사항\n• 국가 보훈 대상자와 장애인은 관계 법령에 따라 우대합니다.\n• 입사 지원서 내용에 허위 사실이 판명될 경우, 채용이 취소될 수 있습니다.\n\n🏢 회사 소개\n아우모비오는 독립 기업으로서 기존 콘티넨탈 오토모티브 그룹 부문의 사업을 이어갑니다. 첨단 전자 기술과 미래 모빌리티 솔루션을 선도하는 아우모비오는 더 안전하고, 더 역동적이며, 더 자유로운 모빌리티의 미래를 만드는 폭넓은 포트폴리오를 제공합니다. 아우모비오는 기술 및 전장 전문 기업으로서 모빌리티의 안정성, 흥미성, 연결성, 자율성을 구현하는 폭넓은 포트폴리오를 제공합니다. 주요 사업 영역은 센서 솔루션, 디스플레이, 제동 및 컴포트 시스템과 소프트웨어 기반 차량(SDV)을 위한 소프트웨어, 아키텍처 플랫폼, 보조 시스템 등으로 구성되어 있습니다. 아우모비오는 2024년 196억 유로(한화 약 32조 원)의 매출을 기록했으며, 독일 프랑크푸르트에 본사를 두고 전 세계 100여개국에서 약 86,000명의 직원과 함께하고 있습니다.\n\n📍사업장 소재지\n• 서현 사업장 : 경기도 성남시 분당구 황새울로 312번길 26, 서현265빌딩 3-4층\n• 정자 사업장 : 경기도 성남시 분당구 성남대로 331번길 8, 킨스타워 25-26층\n• 세종 사업장 : 세종특별시 부강면 금호선말길 74-7\n\n🌐 회사 홈페이지 및 링크드인\nhttps://www.aumovio.com\nhttps://www.linkedin.com/company/aumovio",
+      "body_attempted_at": "2026-11-12T19:08:05.086757+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-29T23:59:59.999000+09:00",
+        "model": "source"
       }
     },
     "skku-notice01/141887": {
@@ -1213,23 +1291,27 @@
         "ai": null,
         "notified": false
       },
-      "body_text": null,
+      "body_text": "[ST인터내셔널] 2027년 상반기 채용연계형 인턴 채용\n\n\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 마케팅\n- 사업개발/관리\n- 엔지니어링\n- 부동산투자\n\n\n\n\n[업무내용]\n\n\n- 각 모집군별 상세요강 참조\n\n\n\n\n[자격요건]\n\n\n- 국내외 우수대학 기졸업자 및 27년 2월 졸업 예정자\n- 군필자 혹은 면제자, 해외여행 결격 사유 없는 자\n- 최근 2년 이내 취득 공인 영어 말하기 성적 보유자\n\n\n\n\n[채용절차]\n\n\n· 서류전형 ➔ 인성검사&실무면접 ➔ 건강검진 ➔ 인턴십\n\n\n\n\n[공고상세]",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<p><span><b>[ST인터내셔널] 2027년 상반기 채용연계형 인턴 채용</b></span></p><p><span><b>[모집분야]</b></span></p><p>- 마케팅</p><p>- 사업개발/관리</p><p>- 엔지니어링</p><p>- 부동산투자</p><p><span><b>[업무내용]</b></span></p><p>- 각 모집군별 상세요강 참조</p><p><span><b>[자격요건]</b></span></p><p>- 국내외 우수대학 기졸업자 및 27년 2월 졸업 예정자</p><p>- 군필자 혹은 면제자, 해외여행 결격 사유 없는 자</p><p>- 최근 2년 이내 취득 공인 영어 말하기 성적 보유자</p><p><span><b>[채용절차]</b></span></p><p>· 서류전형 ➔ 인성검사&amp;실무면접 ➔ 건강검진 ➔ 인턴십</p><p><span><b>[공고상세]</b></span></p><p><img src=\"https://sticorp.recruiter.co.kr/upload/389152/image/202611/9f0a9d0d-8a69-48be-a26a-d4ad35eec36a.png\"></p>",
+      "images": [
+        "https://sticorp.recruiter.co.kr/upload/389152/image/202611/9f0a9d0d-8a69-48be-a26a-d4ad35eec36a.png"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T19:08:05.086757+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2026-11-30T23:59:59.999000+09:00",
         "model": "source"
-      }
+      },
+      "page_text": "[ST인터내셔널] 2027년 상반기 채용연계형 인턴 채용\n\n\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 마케팅\n- 사업개발/관리\n- 엔지니어링\n- 부동산투자\n\n\n\n\n[업무내용]\n\n\n- 각 모집군별 상세요강 참조\n\n\n\n\n[자격요건]\n\n\n- 국내외 우수대학 기졸업자 및 27년 2월 졸업 예정자\n- 군필자 혹은 면제자, 해외여행 결격 사유 없는 자\n- 최근 2년 이내 취득 공인 영어 말하기 성적 보유자\n\n\n\n\n[채용절차]\n\n\n· 서류전형 ➔ 인성검사&실무면접 ➔ 건강검진 ➔ 인턴십\n\n\n\n\n[공고상세]",
+      "body_attempted_at": "2026-11-12T19:08:05.086757+09:00"
     },
     "linkareer-intern/363954": {
       "notice": {
@@ -1247,27 +1329,44 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "콘텐츠 마케팅 직무는 소프트웨어 개발 및 데이터 관련 직무가 아닌 마케팅 직무입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
-      "body_text": null,
+      "body_text": "",
       "body_from_image": false,
       "ocr_text": "",
       "ocr_engine": null,
       "image_attempted": false,
       "attachments": [],
-      "body_html": null,
-      "images": [],
+      "body_html": "<div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/986579\" title=\"공고 (2)_page-0001.jpg\"><br><br></p></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/986579"
+      ],
       "summary": null,
-      "body_attempts": 0,
-      "fetched_at": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T19:08:05.086757+09:00",
       "ai_deadline": {
         "checked": true,
         "kind": "마감",
         "at": "2027-02-10T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "page_text": "",
+      "body_attempted_at": "2026-11-12T19:08:05.086757+09:00",
+      "intern_judgment": {
+        "fingerprint": "2999cb57efeb6e120f6bb38acf1f2c06c9a5889bb9f725046560de9f1153574d",
+        "verdict": "not_relevant",
+        "reason": "콘텐츠 마케팅 직무는 소프트웨어 개발 및 데이터 관련 직무가 아닌 마케팅 직무입니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/363953": {
@@ -12751,7 +12850,7 @@
         "at": "2026-11-23T22:59:00+09:00"
       },
       "page_text": "[Creative Bridge Festival 인터랙티브 아트 작품 공모 안내]\n\n문화예술미디어융합원에서 인터랙티브 아트 작품을 공모하오니 관심 있는 분들의 많은 참여 바랍니다.\n\n● 공모 개요\n공모 분야: 인터랙티브 아트(Interactive Art)\n공모 대상:\n- 개인: 대학생\n- 팀: 대학생이 1명 이상 포함된 팀\n(공모 대상 대학생의 기준은 학사 과정생 또는 수료생으로 함)\n선정 규모: 총 10개 작품 선정\n\n● 선정 작품 지원\n작품 설치 준비비: 선정 팀당 300,000원\n전시 작품 중 우수 작품 5점 선정 및 상금 지급\n\n● 주요 일정\n공모 접수: 11월 1일 ~ 11월 23일 22:59까지\n선정 발표: 11월 27일\n전시 일정: 2026년 12월 21일 ~ 23일\n전시 장소: 성균관대학교 성균갤러리\n\n● 접수 방법\n신청서 및 필수 서류 (첨부파일 참조) 작성 후 이메일 제출\n제출 서류: 지원신청서 2부\n제출 이메일: skkutmi@skku.edu\n파일 형식: HWP, PDF (같은 파일을 두 가지 형식으로 제출)\n\n● 문의\n트랜스미디어연구소\n담당자 팽지현 | hyunjiinn@g.skku.edu\n\n인터랙티브 아트 및 미디어아트 작업에 관심 있는 분들의 많은 지원 부탁드립니다!\n※ 자세한 내용은 첨부된 공모 포스터를 참고해 주세요.",
-      "rechecked_at": "2026-11-11T20:19:08.453181+09:00"
+      "rechecked_at": "2026-11-12T19:08:05.086757+09:00"
     },
     "skku-notice01/141686": {
       "notice": {
@@ -12806,7 +12905,7 @@
       "fetched_at": "2026-11-11T20:19:08.453181+09:00",
       "body_attempted_at": "2026-11-11T20:19:08.453181+09:00",
       "page_text": "성균관대학교 대학혁신과공유센터에서 \"제28차 대학교육혁신 워크숍\"을 개최합니다.\n\n이번 워크숍은 \"AI 시대, AI 핵심역량과 대학 교육의 혁신\"을 주제로 진행됩니다. 관계자 여러분의 많은 참여 바랍니다.\n\n1. 행 사 명: 제28차 대학교육혁신 워크숍\n\n2. 주 제: AI 시대, AI 핵심역량과 대학 교육의 혁신\n\n3. 일 시: 2026년 11월 26일(목) 오후 1시 ~ 3시\n\n4. 방 법: Youtube 생중계\n\n5. 내 용\n\n1) 전남대 HAI-UP 학생 AI 역량 강화 프로그램\n\n- 이효성 팀장 (전남대학교 교육혁신본부)\n\n2) AI 시대, 대학은 무엇을 가속하고 무엇을 깊게 할 것인가: 진단하고, 가속하고, 깊게 묻는 AI 역량 교육\n\n- 정효정 교수 (단국대학교 교수학습개발센터 센터장)\n\n3) AI 시대, 대학은 어떤 역량을 길러야 하는가?: SKKU AI 핵심역량 체계 개발과 진단 결과\n\n- 이세영 교수 (성균관대학교 대학혁신과공유센터 센터장)\n\n6. 대 상: 대학교육혁신에 관심 있는 전국 대학, 대학(원)생 및 기관\n\n7. 참가신청\n\n1) 신청기간: 2026년 11월 23일 월요일 오후 3시까지\n\n2) 신청링크: https://forms.gle/DMnwfDC2FdXqkYau9\n\n8. 문 의: 성균관대학교 대학혁신과공유센터 (02-740-1680, 1671/ ksy0619@skku.edu, rebecca80@skku.edu )\n\n※ 자세한 사항은 워크숍 홈페이지(https://sites.google.com/g.skku.edu/28th-workshop/home)를 참고해 주십시오.",
-      "rechecked_at": "2026-11-11T20:19:08.453181+09:00",
+      "rechecked_at": "2026-11-12T19:08:05.086757+09:00",
       "changed_at": "2026-11-11T20:19:08.453181+09:00",
       "change_kind": "본문",
       "change_notified": "2026-11-11T20:19:08.453181+09:00",
@@ -12866,7 +12965,7 @@
         "at": "2026-12-04T14:00:00+09:00"
       },
       "page_text": "장애학생지원센터에서 '2026년도 사회적 장애인식개선교육'을 진행하오니 학생분들의 많은 참여 부탁드립니다.\n\n◎일시 : 2026.12.4(금) 14:00~15:00\n◎대상 : 학부 및 대학원생\n◎장소 : 성균관대학교 인문과학캠퍼스 국제관 9B218\n◎강사 : 신홍윤(보건복지부 장애청년 정책위원회 위원)\n◎참여 방법 : 현장접수\n◎참여혜택 : 교내 인성품 봉사 2시간 부여(학부생 한정)\n\n◎문의 : 장애학생지원센터\nTel. 02-760-1090 / 031-299-4425\nE-mail. supporter@skku.edu\n\n*상기 일정 및 내용은 변동 될 수 있습니다.",
-      "rechecked_at": "2026-11-11T21:14:13.392253+09:00"
+      "rechecked_at": "2026-11-12T19:08:05.086757+09:00"
     },
     "cse-notice/228224": {
       "notice": {
@@ -26401,58 +26500,6 @@
         "fingerprint": "038cf63652ffc905237fe901dbfe1e4912456bbb0da2d84d4714c4a805f69399",
         "verdict": "not_relevant",
         "reason": "산업안전보건법상 안전관리자 업무로 소프트웨어 개발 직무가 아니며 관련 자격증이 필수입니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "linkareer-intern/361605": {
-      "notice": {
-        "id": "linkareer-intern/361605",
-        "source_id": "linkareer-intern",
-        "article_no": "361605",
-        "title": "[SNOW] 카메라 콘텐츠 AI 제작/운영 체험형 인턴",
-        "category": "체험형 인턴",
-        "url": "https://linkareer.com/activity/361605",
-        "posted_on": "2026-11-02",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "relevant",
-          "reason": "AI 툴 활용 및 콘텐츠 제작, 운영 프로세스 개선 보조 업무로 소프트웨어학과 학생이 지원하기에 적합합니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "[SNOW] 카메라 콘텐츠 AI 제작/운영 체험형 인턴\n\n\n\n\n[이런 경험을 할 수 있어요]\n- AI 툴을 활용한 카메라 콘텐츠 소재 제작 지원\n- AI·바이브 코딩을 활용한 콘텐츠 제작 및 운영 프로세스 개선 보조\n- 콘텐츠 제작·검수 등 반복 업무의 자동화 및 효율화 작업 보조\n- AI 툴 및 카메라 앱 트렌드 모니터링, 활용 사례 정리\n\n\n[이런 분을 기다립니다]\n- 계약 기간(약 3개월) 동안 full-time 근무 가능하신 분 [월-금, 10-19시]\n- 전형 절차 별 일정에 참여 가능하신 분 [입과 예정일: 2026년 11월 30일]\n- 생성형 AI 툴(ChatGPT, Claude 등)을 활용해 결과물을 직접 만들어 본 경험이 있는 분\n- 앱 이벤트·프로모션 페이지 이용 경험이 많고 유저 사용 흐름을 파악할 수 있는 분\n- 인스타그램·틱톡·유튜브 등 SNS에 콘텐츠를 직접 제작하여 올려 본 경험이 있는 분\n- 작은 오류도 놓치지 않고 꼼꼼함과 원활한 협업 태도를 갖추신 분\n- 반복되는 업무에서 불편한 점을 발견하고 개선 아이디어를 적극적으로 제안할 수 있는 분\n- 카메라 앱의 기능과 콘텐츠를 즐겨 쓰고. 뷰티·메이크업 트렌드에 관심이 많으신 분\n\n\n[이런 경험이 있다면 더욱 좋아요]\n- 생성형 AI로 만든 결과물을 포트폴리오나 링크로 제출 가능한 분\n- 직접 운영한 SNS 채널이나 콘텐츠를 링크로 제출 가능한 분\n- 이벤트·프로모션 페이지를 직접 기획하거나 제작해 본 경험이 있는 분\n- 간단한 코드 작성·수정 경험이 있거나 운영 툴 사용 경험이 있는 분\n- 비주얼 스타일과 트렌드 감각이 뛰어나신 분",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><span><b>[SNOW] 카메라 콘텐츠 AI 제작/운영 체험형 인턴</b></span></p><p><span>[이런 경험을 할 수 있어요]</span></p><p><span>﻿- AI 툴을 활용한 카메라 콘텐츠 소재 제작 지원</span></p><p><span>- AI·바이브 코딩을 활용한 콘텐츠 제작 및 운영 프로세스 개선 보조</span></p><p><span>- 콘텐츠 제작·검수 등 반복 업무의 자동화 및 효율화 작업 보조</span></p><p><span>- AI 툴 및 카메라 앱 트렌드 모니터링, 활용 사례 정리</span></p><p><span>[이런 분을 기다립니다]</span></p><p><span>﻿- 계약 기간(약 3개월) 동안 full-time 근무 가능하신 분 [월-금, 10-19시]</span></p><p><span>- 전형 절차 별 일정에 참여 가능하신 분 [입과 예정일: 2026년 11월 30일]</span></p><p><span>- 생성형 AI 툴(ChatGPT, Claude 등)을 활용해 결과물을 직접 만들어 본 경험이 있는 분</span></p><p><span>- 앱 이벤트·프로모션 페이지 이용 경험이 많고 유저 사용 흐름을 파악할 수 있는 분</span></p><p><span>- 인스타그램·틱톡·유튜브 등 SNS에 콘텐츠를 직접 제작하여 올려 본 경험이 있는 분</span></p><p><span>- 작은 오류도 놓치지 않고 꼼꼼함과 원활한 협업 태도를 갖추신 분</span></p><p><span>- 반복되는 업무에서 불편한 점을 발견하고 개선 아이디어를 적극적으로 제안할 수 있는 분</span></p><p><span>- 카메라 앱의 기능과 콘텐츠를 즐겨 쓰고. 뷰티·메이크업 트렌드에 관심이 많으신 분</span></p><p><span>[이런 경험이 있다면 더욱 좋아요]</span></p><p><span>﻿-&nbsp; 생성형 AI로 만든 결과물을 포트폴리오나 링크로 제출 가능한 분</span></p><p><span>- 직접 운영한 SNS 채널이나 콘텐츠를 링크로 제출 가능한 분</span></p><p><span>- 이벤트·프로모션 페이지를 직접 기획하거나 제작해 본 경험이 있는 분</span></p><p><span>- 간단한 코드 작성·수정 경험이 있거나 운영 툴 사용 경험이 있는 분</span></p><p><span>- 비주얼 스타일과 트렌드 감각이 뛰어나신 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/978760\" title=\"20261103_105117.png\"><br><br></p>",
-      "images": [
-        "https://media-cdn.linkareer.com/se2editor/image/978760"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T21:01:03.909988+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-10T23:59:59.999000+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "a00e2d847ab8cef810fbbe855dfb9eb8ca883ccd3586027eaa78e662e94df226",
-        "verdict": "relevant",
-        "reason": "AI 툴 활용 및 콘텐츠 제작, 운영 프로세스 개선 보조 업무로 소프트웨어학과 학생이 지원하기에 적합합니다.",
         "model": "gemini-3.1-flash-lite"
       }
     }

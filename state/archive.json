@@ -135,6 +135,59 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141880": {
+      "notice": {
+        "id": "skku-notice01/141880",
+        "source_id": "skku-notice01",
+        "article_no": "141880",
+        "title": "겨울방학 중 특수교육 종일반 대학생 자원봉사자 모집",
+        "category": "채용/모집",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141880",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:22:16.051740+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "대학생 자원봉사자를 모집하고 있어 학부생으로서 지원이 가능합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "태장초등학교병설유치원에서는 2026학년도 겨울방학 중 특수교육 종일반 과정에 대학생 자원봉사자를 활용하고자 하여 아래와 같이 모집 공고합니다.\n\n가: 봉사내용 : 유치원 특수교육대상유아의 교수활동 지원\n나. 모집 자격 : 대학생\n다. 봉사 기간: 2026. 12. 28.(월) ~ 2027. 2. 19.(금)\n라. 봉사 시간 : 10:00 ~ 16:00 (1일 6시간/최대 60시간)\n마. 유치원 주소 및 연락처\n- 경기도 수원시 영통구 태장로71번길30\n- ☎ 031-299-7712)\n\n2. 원서접수\n가. 신청 기간 : 2026. 11. 2.(월) ~ 11. 27.(금)\n나. 접수 방법 : 이메일 접수(wnsjun0897@korea.kr)\n다. 제출 서류\n1) 제출 서류\n○ 교육봉사활동 지원서 1부.\n○ 행정정보 공동이용 사전동의서 1부.\n○ 장애인학대관련범죄등 경력 조회 동의서 1부.\n○ 성범죄 경력 및 아동학대관련범죄 전력 조회 결과 회신서 1부.\n\n3. 기타\n가. 접수된 서류는 일체 반환하지 않습니다.\n나. 최종 모집대상자는 본원에서 요구하는 서류를 기일 내에 제출하여야 하며, 모집 예정자로 선정되었다 할지라도 결격사유 발생 시 또는 허위서류를 제출한 자로 판명될 경우 봉사활동을 할 수 없습니다.\n다. 제출서류상의 기재착오, 누락, 연락불능 등으로 인한 불이익은 응시자의 책임입니다.\n라. 범죄경력조회 등의 결격 사유가 있을 경우는 봉사활동에 참여할 수 없습니다.\n마. 본 모집 공고계획은 태장초등학교 병설유치원 사정에 의하여 변경될 수 있습니다.\n바. 순수한 자원봉사활동으로 근로계약서, 봉사활동협약서 작성은 하지 않습니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "[붙임] 2026학년도 겨울방학 중 특수교육 종일반 대학생 교육봉사자 모집 공고.hwp",
+          "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=download&articleNo=141880&attachNo=119122",
+          "type": "HWP",
+          "size": null
+        }
+      ],
+      "body_html": "<p>태장초등학교병설유치원에서는 2026학년도 겨울방학 중 특수교육 종일반 과정에 대학생 자원봉사자를 활용하고자 하여 아래와 같이 모집 공고합니다.</p><p>가: 봉사내용 : 유치원 특수교육대상유아의 교수활동 지원</p><p>나. 모집 자격 : 대학생</p><p>다. 봉사 기간: 2026. 12. 28.(월) ~ 2027. 2. 19.(금)</p><p>라. 봉사 시간 : 10:00 ~ 16:00 (1일 6시간/최대 60시간)</p><p>마. 유치원 주소 및 연락처</p><ul><li>경기도 수원시 영통구 태장로71번길30</li><li>☎ 031-299-7712)</li></ul><p>2. 원서접수</p><p>가. 신청 기간 : 2026. 11. 2.(월) ~ 11. 27.(금)</p><p>나. 접수 방법 : 이메일 접수(wnsjun0897@korea.kr)</p><p>다. 제출 서류</p><p>1) 제출 서류</p><p>○ 교육봉사활동 지원서 1부.</p><p>○ 행정정보 공동이용 사전동의서 1부.</p><p>○ 장애인학대관련범죄등 경력 조회 동의서 1부.</p><p>○ 성범죄 경력 및 아동학대관련범죄 전력 조회 결과 회신서 1부.</p><p>3. 기타</p><p>가. 접수된 서류는 일체 반환하지 않습니다.</p><p>나. 최종 모집대상자는 본원에서 요구하는 서류를 기일 내에 제출하여야 하며, 모집       예정자로 선정되었다 할지라도 결격사유 발생 시 또는 허위서류를 제출한 자로        판명될 경우 봉사활동을 할 수 없습니다.</p><p>다. 제출서류상의 기재착오, 누락, 연락불능 등으로 인한 불이익은 응시자의 책임입니다.</p><p>라. 범죄경력조회 등의 결격 사유가 있을 경우는 봉사활동에 참여할 수 없습니다.</p><p>마. 본 모집 공고계획은 태장초등학교 병설유치원 사정에 의하여 변경될 수 있습니다.</p><p>바. 순수한 자원봉사활동으로 근로계약서, 봉사활동협약서 작성은 하지 않습니다.</p>",
+      "images": [],
+      "summary": "11월 27일까지 교육봉사활동 지원서 등 관련 서류를 작성하여 이메일로 제출하면 됩니다. 겨울방학 동안 태장초등학교병설유치원에서 유아 대상 교수활동 지원 봉사를 하게 됩니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T16:22:16.051740+09:00",
+      "page_text": "태장초등학교병설유치원에서는 2026학년도 겨울방학 중 특수교육 종일반 과정에 대학생 자원봉사자를 활용하고자 하여 아래와 같이 모집 공고합니다.\n\n가: 봉사내용 : 유치원 특수교육대상유아의 교수활동 지원\n나. 모집 자격 : 대학생\n다. 봉사 기간: 2026. 12. 28.(월) ~ 2027. 2. 19.(금)\n라. 봉사 시간 : 10:00 ~ 16:00 (1일 6시간/최대 60시간)\n마. 유치원 주소 및 연락처\n- 경기도 수원시 영통구 태장로71번길30\n- ☎ 031-299-7712)\n\n2. 원서접수\n가. 신청 기간 : 2026. 11. 2.(월) ~ 11. 27.(금)\n나. 접수 방법 : 이메일 접수(wnsjun0897@korea.kr)\n다. 제출 서류\n1) 제출 서류\n○ 교육봉사활동 지원서 1부.\n○ 행정정보 공동이용 사전동의서 1부.\n○ 장애인학대관련범죄등 경력 조회 동의서 1부.\n○ 성범죄 경력 및 아동학대관련범죄 전력 조회 결과 회신서 1부.\n\n3. 기타\n가. 접수된 서류는 일체 반환하지 않습니다.\n나. 최종 모집대상자는 본원에서 요구하는 서류를 기일 내에 제출하여야 하며, 모집 예정자로 선정되었다 할지라도 결격사유 발생 시 또는 허위서류를 제출한 자로 판명될 경우 봉사활동을 할 수 없습니다.\n다. 제출서류상의 기재착오, 누락, 연락불능 등으로 인한 불이익은 응시자의 책임입니다.\n라. 범죄경력조회 등의 결격 사유가 있을 경우는 봉사활동에 참여할 수 없습니다.\n마. 본 모집 공고계획은 태장초등학교 병설유치원 사정에 의하여 변경될 수 있습니다.\n바. 순수한 자원봉사활동으로 근로계약서, 봉사활동협약서 작성은 하지 않습니다.",
+      "body_attempted_at": "2026-11-12T16:22:16.051740+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "마감",
+        "at": "2026-11-27T23:59:00+09:00"
+      }
+    },
     "skku-notice01/141870": {
       "notice": {
         "id": "skku-notice01/141870",
@@ -615,7 +668,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "relevant",
+          "reason": "AI 서비스 테스트 및 성능 평가 업무를 수행하며 학부생도 지원 가능한 체험형 인턴 공고입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[카카오뱅크] AI 서비스 기획 어시스턴트 (체험형 인턴)\n\n\n\n\n[담당할 업무]\n· AI 서비스 테스트 케이스 및 시나리오 관리\n· 모델 성능 개선을 위한 인사이트 도출\n· 실제 사용자 시뮬레이션 테스트\n· AI 응답의 자연스러움, 정확성, 적시성 평가\n\n\n[필수 경험과 역량]\n· 꼼꼼하고 정확한 업무 처리가 가능한 분\n· 끈기 있고, 집중력 있게 테스트 진행이 가능한 분\n· 명확하고, 원활한 커뮤니케이션 역량이 있는 분\n· 일정과 시간 관리를 잘 하며 책임감 있게 일하는 분\n· 6개월 풀타임 근무가 가능한 분\n\n\n[우대사항]\n· AI 관련 전공자인 분\n· AI 서비스에 관심이 있고, 관련한 업무 경험이 있는 분\n· AI 툴과 서비스 활용에 관심이 많은 분",
@@ -638,6 +696,12 @@
         "kind": "마감",
         "at": "2026-11-25T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "c9bc61f92ddd7c082a57e5f81587a2299a1d75980c2552c5f976daf5c6e3c4b0",
+        "verdict": "relevant",
+        "reason": "AI 서비스 테스트 및 성능 평가 업무를 수행하며 학부생도 지원 가능한 체험형 인턴 공고입니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/363956": {
@@ -11192,7 +11256,7 @@
       "fetched_at": "2026-11-09T16:49:09.958586+09:00",
       "page_text": "[그래파이] 2026 하반기 신입/경력 엔지니어 채용 (~11/30)\n\n■ 접수기간\n2026.11.09.(월) - 2026.11.30.(월)\n\n■ 모집 부문\nForward Deployed Engineer (고객 현장 중심 AI 솔루션 개발 및 구축)\nDB Engineer (그래프·벡터·관계형 통합 DB 엔진 개발)\nAI Engineer (온톨로지·에이전트 메모리·클라우드 기반 AI 시스템 개발)\n\n■ 지원 자격\n전 직무 신입·경력 무관 지원 가능합니다.\n전문연구요원 지원 안내: DB Engineer 및 AI Engineer 직무에 한해 지원 가능하며, 이공계 석사 이상 학위 소지자(취득 예정자 포함) 중 신규 편입 또는 전직이 가능한 분을 대상으로 합니다. 전문연구요원은 대전 연구소에서 근무합니다.\n\nTPM·BDM 등 기타 모집 직무 및 상세 지원 요건은 채용 페이지(QR코드)를 통해 확인해 주세요.\n\n■ 근무지\n서울 (*전문연구요원(병특) 제외)\n\n■ 전형 절차\n서류전형 → 1차 면접 → 2차 면접 → 최종합격\n\n※ 직무에 따라 과제 전형이나 PT 면접이 추가될 수 있습니다.\n※ 서류 결과는 2주 안에 개별로 알려 드립니다.\n\n■ 지원 방법\n그래파이 채용 홈페이지(https://graphai.career.greetinghr.com/intro)\n\n■ 문의\n회사 홈페이지: graphai.io\n채용 문의: recruit@graphai.io",
       "body_attempted_at": "2026-11-09T16:49:09.958586+09:00",
-      "rechecked_at": "2026-11-12T03:40:29.257841+09:00"
+      "rechecked_at": "2026-11-12T16:22:16.051740+09:00"
     },
     "skku-notice01/141706": {
       "notice": {
@@ -11347,7 +11411,7 @@
         "kind": "마감",
         "at": "2026-11-20T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-11T18:18:10.404160+09:00"
+      "rechecked_at": "2026-11-12T16:22:16.051740+09:00"
     },
     "skku-notice01/141702": {
       "notice": {
@@ -11403,7 +11467,7 @@
         "kind": "마감",
         "at": "2026-11-13T17:00:00+09:00"
       },
-      "rechecked_at": "2026-11-11T18:18:10.404160+09:00"
+      "rechecked_at": "2026-11-12T16:22:16.051740+09:00"
     },
     "skku-notice01/141701": {
       "notice": {
@@ -26363,64 +26427,6 @@
         "fingerprint": "0b0bac931da4f76cb4d3e228b5364a460b114cf4b8f61765c1ca22492d9de5b2",
         "verdict": "not_relevant",
         "reason": "해당 직무는 제휴마케터(MD)로 소프트웨어 개발 직무와 무관합니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "linkareer-intern/362078": {
-      "notice": {
-        "id": "linkareer-intern/362078",
-        "source_id": "linkareer-intern",
-        "article_no": "362078",
-        "title": "[(주)텐핑거스] [데이트코스 1위 앱 데이트팝] 컨텐츠에디터(미래내일인턴십) (~11/8)",
-        "category": "체험형 인턴",
-        "url": "https://linkareer.com/activity/362078",
-        "posted_on": "2026-10-30",
-        "pinned": false,
-        "deadline": "2026-11-08T23:59:00+09:00",
-        "first_seen": "2026-11-04T16:14:03.772529+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [
-          "인턴"
-        ],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "해당 직무는 콘텐츠 에디터로 소프트웨어 개발 및 IT 기술 직무와 관련이 없습니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "- 지원링크\n(인턴) [데이트팝] 컨텐츠 에디터 | 텐핑거스",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/980262\" title=\"컨텐츠에디터1.jpg\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980264\" title=\"컨텐츠에디터2.jpg\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980265\" title=\"컨텐츠에디터3.jpg\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980266\" title=\"컨텐츠에디터4.jpg\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/980267\" title=\"컨텐츠에디터5.jpg\"><br><br>- 지원링크&nbsp;<br><a href=\"https://career.likelion.net/jobs/7e0c8fa5-35ef-486f-80e8-58a8232d63a1?from=list\">(인턴) [데이트팝] 컨텐츠 에디터 | 텐핑거스</a></p>",
-      "images": [
-        "https://media-cdn.linkareer.com/se2editor/image/980262",
-        "https://media-cdn.linkareer.com/se2editor/image/980264",
-        "https://media-cdn.linkareer.com/se2editor/image/980265",
-        "https://media-cdn.linkareer.com/se2editor/image/980266",
-        "https://media-cdn.linkareer.com/se2editor/image/980267"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-04T16:14:03.772529+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-08T23:59:59.999000+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "31e6914960bcbe10dd189c12383b8f601f74da14c9649b442da58d32ee636492",
-        "verdict": "not_relevant",
-        "reason": "해당 직무는 콘텐츠 에디터로 소프트웨어 개발 및 IT 기술 직무와 관련이 없습니다.",
         "model": "gemini-3.1-flash-lite"
       }
     }

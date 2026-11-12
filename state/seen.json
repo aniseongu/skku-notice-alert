@@ -638,6 +638,11 @@
           "first_seen": "2026-11-12T16:04:08.358475+09:00",
           "status": "notified",
           "attempts": 0
+        },
+        "141880": {
+          "first_seen": "2026-11-12T16:22:16.051740+09:00",
+          "status": "notified",
+          "attempts": 0
         }
       }
     },

@@ -1,6 +1,84 @@
 {
   "version": 1,
   "items": {
+    "linkareer-intern/363932": {
+      "notice": {
+        "id": "linkareer-intern/363932",
+        "source_id": "linkareer-intern",
+        "article_no": "363932",
+        "title": "[유한화학] 인사총무팀 채용전환형 인턴 사원 모집 (2026년 11월)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363932",
+        "posted_on": "2026-11-13",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T14:27:22.900704+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-19T23:50:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363930": {
+      "notice": {
+        "id": "linkareer-intern/363930",
+        "source_id": "linkareer-intern",
+        "article_no": "363930",
+        "title": "[유한화학] 생산관리자 채용전환형 인턴 사원 모집 (2026년 11월)",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363930",
+        "posted_on": "2026-11-13",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T14:27:22.900704+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-19T23:50:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "jasoseol-intern/107165": {
       "notice": {
         "id": "jasoseol-intern/107165",
@@ -55,6 +133,364 @@
         "verdict": "not_relevant",
         "reason": "일반사무 직무를 모집하며 소프트웨어 개발 및 관련 직무와 무관합니다.",
         "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363946": {
+      "notice": {
+        "id": "linkareer-intern/363946",
+        "source_id": "linkareer-intern",
+        "article_no": "363946",
+        "title": "[Jonathan & Associates CHB Services, Inc.] [미국] 통관 서비스 전문 기업에서 Logisitics Coordinator 모집",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363946",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T14:27:22.900704+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "물류 조정 업무를 수행하는 직무로 소프트웨어 개발 및 데이터 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "● Host Organization\n- 2012년 설립된 미국으로의 반입 경로 및 방식에 관계없이 탁월한 통관 서비스를 제공하고 있는 기업\n: 수입업체와 운송업체를 위해 통관, FTL(Full Truck Load), 대형/중량물 운송 등 다양한 부가 가치 서비스를 제공\n: 공항 간 운송, 문전 배송, 보세창고 서비스 등을 포함하여 항공, 해상, 트럭, 철도 등 모든 운송 환경에 대한 수입업체의 종합적인 통관 요구 사항을 충족하는 데 특화\n● Website\n- http://www.jnachb.com\n● Location\n- 미국 캘리포니아주, Fullerton\n● Training Position\n- LOGISTICS COORDINATOR\n● Stipend\n- 시간당 18-20달러\n● Training Hours\n- 월~금요일, 오전 8시 30분~오후 5시 30분\n\n\n———————————————————————-\n[진행절차]\n1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)\n2. 지원에 필요한 서류 준비\n- 영문 이력서, 대학&대학교 재학 또는 졸업증명서, 대학&대학교 성적증명서, 여권사본 등\n3. 회사에 이력서 접수\n4. 스카이프, 줌 등을 통한 화상면접 진행\n5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행\n6. 비자인터뷰 진행\n7. 출국하여 근무시작\n———————————————————————-\n※ 본 채용정보는 해외취업전문기업 워크브릿지(www.workbridge.co.kr)를 통하여 Jonathan & Associates CHB Services, Inc.에 지원들어 갑니다.\n※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.\n※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.\n- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)\n: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료\n: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용\n———————————————————————-\n[문의 및 지원하기]\n- 전화 : 02-554-7574 // 010-4593-7564\n- 카톡 : heungchan\n- 메일 : janghc@workbridge.co.kr",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><b><span><img src=\"https://media-cdn.linkareer.com/se2editor/image/986542\" title=\"회사.png\"><br><br></span></b></p><p><b><span>●</span></b><b><span>&nbsp;Host Organization</span></b></p><p><span>&nbsp;</span><span>- 2012년 설립된 </span><span>미국으로의 반입 경로 및 방식에 관계없이 탁월한 통관 서비스를 제공하고 있는 기업</span></p><p><span>&nbsp; : </span><span><span>수입업체와 운송업체를 위해 통관, FTL(Full Truck Load), 대형/중량물 운송 등 다양한 부가 가치 서비스를 제공</span></span></p><p><span>&nbsp; : </span><span><span>공항 간 운송, 문전 배송, 보세창고 서비스 등을 포함하여 항공, 해상, 트럭, 철도 등 </span></span><span>모든 운송 환경에 대한 수입업체의 종합적인 통관 요구 사항을 충족하는 데 특화</span></p><p><b><span></span></b><b><span>● Website</span></b></p><p><span>&nbsp;- <a href=\"http://www.jnachb.com/\">http://www.jnachb.com</a></span></p><p><b><span></span></b><b><span>● Location</span></b></p><p><span>&nbsp;- 미국 캘리포니아주, </span><span>Fullerton</span></p><p><b><span>● Training Position</span></b></p><p><span><b>&nbsp;- </b>LOGISTICS COORDINATOR</span></p><p><b><span>● Stipend</span></b></p><p><span>&nbsp;- 시간당 18-20달러</span></p><p><b><span>● Training Hours</span></b></p><p><span>&nbsp;- 월~금요일, 오전 8시 30분~오후 5시 30분</span></p><p><span><br></span></p><p><span>———————————————————————-</span></p><p><span>[진행절차]</span></p><p><span>1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 </span><span>janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)</span></p><p><span>2. 지원에 필요한 서류 준비</span></p><p><span>&nbsp;- 영문 이력서, 대학&amp;대학교 재학 또는 졸업증명서, 대학&amp;대학교 성적증명서, 여권사본 등</span></p><p><span>3. 회사에 이력서 접수</span></p><p><span>4. 스카이프, 줌 등을 통한 화상면접 진행</span></p><p><span>5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행</span></p><p><span>6. 비자인터뷰 진행</span></p><p><span>7. 출국하여 근무시작</span></p><p><span>———————————————————————-</span></p><p><span>※ 본 채용정보는 해외취업전문기업 워크브릿지(<a href=\"http://www.workbridge.co.kr/\"><span>www.workbridge.co.kr</span></a>)를 통하여&nbsp;</span><span><span>Jonathan &amp; Associates CHB Services, Inc.</span><span>에 지원들어 갑니다.</span></span></p><p><span>※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.</span></p><p><span>※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.</span></p><p><span>&nbsp;- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)</span></p><p><span>&nbsp;: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료</span></p><p><span>&nbsp;: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용</span></p><p><span>———————————————————————-</span></p><p><span>[문의 및 지원하기]</span></p><p><span>- 전화 : 02-554-7574 // 010-4593-7564</span></p><p><span>- 카톡 : heungchan</span></p><p><span>- 메일 : janghc@workbridge.co.k</span><span>r</span></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/986542"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T14:27:22.900704+09:00",
+      "page_text": "● Host Organization\n- 2012년 설립된 미국으로의 반입 경로 및 방식에 관계없이 탁월한 통관 서비스를 제공하고 있는 기업\n: 수입업체와 운송업체를 위해 통관, FTL(Full Truck Load), 대형/중량물 운송 등 다양한 부가 가치 서비스를 제공\n: 공항 간 운송, 문전 배송, 보세창고 서비스 등을 포함하여 항공, 해상, 트럭, 철도 등 모든 운송 환경에 대한 수입업체의 종합적인 통관 요구 사항을 충족하는 데 특화\n● Website\n- http://www.jnachb.com\n● Location\n- 미국 캘리포니아주, Fullerton\n● Training Position\n- LOGISTICS COORDINATOR\n● Stipend\n- 시간당 18-20달러\n● Training Hours\n- 월~금요일, 오전 8시 30분~오후 5시 30분\n\n\n———————————————————————-\n[진행절차]\n1. 회사 및 미국인턴 관련 궁금한 사항은 하단에 연락처(전화, 카카오톡, 메일)를 통하여 문의 or 첨부하는 영문 이력서에 맞춰 이력서 작성 후 janghc@workbridge.co.kr 로 전달(이력서 확인 후 개별 연락하겠습니다.)\n2. 지원에 필요한 서류 준비\n- 영문 이력서, 대학&대학교 재학 또는 졸업증명서, 대학&대학교 성적증명서, 여권사본 등\n3. 회사에 이력서 접수\n4. 스카이프, 줌 등을 통한 화상면접 진행\n5. 고용된 자에 한하여 미국 J-1비자를 받기위한 승인서류 발급절차 진행\n6. 비자인터뷰 진행\n7. 출국하여 근무시작\n———————————————————————-\n※ 본 채용정보는 해외취업전문기업 워크브릿지(www.workbridge.co.kr)를 통하여 Jonathan & Associates CHB Services, Inc.에 지원들어 갑니다.\n※ 서류 통과자에 한하여 면접이 진행되고, 면접에 합격하면 미국 J-1비자를 받아 출국하게 됩니다.\n※ J-1비자를 받기위한 승인서류 발급절차 진행은 워크브릿지가 진행하며, J-1비자를 받기위해 필요한 승인서류 발급비용은 개인이 부담합니다.\n- 수속비용 4,500달러(1년) / 5,100달러(1년 6개월)\n: 포함내역 - DS-7002, DS-2019, , SITE VISIT, 의료보험료\n: 불 포함내역 - 비자인지(185달러) 구입, SEVIS(220달러) 편도 항공권 구입비용\n———————————————————————-\n[문의 및 지원하기]\n- 전화 : 02-554-7574 // 010-4593-7564\n- 카톡 : heungchan\n- 메일 : janghc@workbridge.co.kr",
+      "body_attempted_at": "2026-11-12T14:27:22.900704+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-10T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "f81046ffc738ae33698f4f8de6c12872738a4e1ea03a1b36be2b49157f56748b",
+        "verdict": "not_relevant",
+        "reason": "물류 조정 업무를 수행하는 직무로 소프트웨어 개발 및 데이터 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363941": {
+      "notice": {
+        "id": "linkareer-intern/363941",
+        "source_id": "linkareer-intern",
+        "article_no": "363941",
+        "title": "[모두닥 주식회사] [채용전환형/월500만원] 모두닥 Problem Solver (Sales Focused) 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363941",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T14:27:22.900704+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "영업 및 사업 개발 중심의 직무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/911791\" title=\"[채용전환형_월500만원] 모두닥 Problem Solver (Sales Focused) 인턴  (1).png\"><br><br><br></p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/911791"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T14:27:22.900704+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-12T14:27:22.900704+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "def6eda55229bcf8421137a17f347b5cfd3070940a525d08868aae8e2f92af30",
+        "verdict": "not_relevant",
+        "reason": "영업 및 사업 개발 중심의 직무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363940": {
+      "notice": {
+        "id": "linkareer-intern/363940",
+        "source_id": "linkareer-intern",
+        "article_no": "363940",
+        "title": "[모두닥 주식회사] [채용전환형/월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363940",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T14:27:22.900704+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "웹 서비스 개발 및 데이터 기반의 기능 개선을 수행하는 엔지니어링 직무로 학부생이 지원 가능합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/891415\" title=\"[채용전환형_월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴 .png\"><br><br><br></p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/891415"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T14:27:22.900704+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-12T14:27:22.900704+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "0603a1d5a54e45ae921ab617d5675be554f28f9f3aa3918ce559c8e075df6d91",
+        "verdict": "relevant",
+        "reason": "웹 서비스 개발 및 데이터 기반의 기능 개선을 수행하는 엔지니어링 직무로 학부생이 지원 가능합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363939": {
+      "notice": {
+        "id": "linkareer-intern/363939",
+        "source_id": "linkareer-intern",
+        "article_no": "363939",
+        "title": "[모두닥 주식회사] [채용전환형/월 500만원] 모두닥 Problem Solver - Product Marketer 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363939",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T14:27:22.900704+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "제품 마케팅 및 데이터 분석을 통한 전략 수립 직무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><div><div><div><div><div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/943261\" title=\"image.png\"><br><br></p></div></div></div></div></div></div></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/943261"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T14:27:22.900704+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-12T14:27:22.900704+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "58921423c7eb2d35781aad1399ac5bdd1a806c66f61d5fd2289d8bbb83aa3962",
+        "verdict": "not_relevant",
+        "reason": "제품 마케팅 및 데이터 분석을 통한 전략 수립 직무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363938": {
+      "notice": {
+        "id": "linkareer-intern/363938",
+        "source_id": "linkareer-intern",
+        "article_no": "363938",
+        "title": "[모두닥 주식회사] [채용전환형/월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363938",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T14:27:22.900704+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "인플루언서 마케팅 및 파트너십 관리 직무로 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><div><div><div><div><div><div><div><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/943263\" title=\"image.png\"><br><br></p></div></div></div></div></div></div></div></div>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/943263"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T14:27:22.900704+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-12T14:27:22.900704+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "5b6eaa3a07987b4733352a995ae24f62dd743c672b68680b595536a8c3f8c504",
+        "verdict": "not_relevant",
+        "reason": "인플루언서 마케팅 및 파트너십 관리 직무로 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363937": {
+      "notice": {
+        "id": "linkareer-intern/363937",
+        "source_id": "linkareer-intern",
+        "article_no": "363937",
+        "title": "[모두닥 주식회사] [휴학생 우대/월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363937",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T14:27:22.900704+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363925": {
+      "notice": {
+        "id": "linkareer-intern/363925",
+        "source_id": "linkareer-intern",
+        "article_no": "363925",
+        "title": "[서북] [포토이즘] 정보보안 업무 보조 및 지원 (인턴) 채용",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363925",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T14:27:22.900704+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-10T23:59:59.999000+09:00",
+        "model": "source"
       }
     },
     "cse-notice/228441": {
@@ -476,7 +912,9 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
@@ -528,7 +966,9 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
@@ -582,7 +1022,9 @@
       "match": {
         "rule_name": null,
         "priority": null,
-        "interests": [],
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
         "ai": {
           "verdict": "not_relevant",
@@ -1461,8 +1903,10 @@
       },
       "match": {
         "rule_name": null,
-        "priority": null,
-        "interests": [],
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
         "reasons": [],
         "ai": {
           "verdict": "relevant",
@@ -1470,7 +1914,7 @@
           "model": "gemini-3.1-flash-lite",
           "interests": []
         },
-        "notified": false
+        "notified": true
       },
       "body_text": "우리를 소개해요\nSecurity실은 Security Policy팀(관리보안)과 Security Engineering팀(기술보안) 두 영역으로 나뉘며, 이 중 Security Policy팀은 전사 (개인)정보보호 관리체계 수립·운영, ISMS 인증심사 관리, 관련 법령 및 정책 동향 모니터링, 정보보호 내부점검, 정보보호 교육 및 인식 제고 활동 등을 담당하고 있습니다.\n\n이런 경험을 할 수 있어요\n관리보안·개인정보보호 담당자와 함께 전사 정보보호 및 개인정보보호 관리체계를 운영하면서, 실무 역량을 쌓을 수 있어요.\n\n우리는 이런 일을 해요\n정기 보안 Compliance 점검 업무를 지원하고, 개선 과제의 이행 현황을 관리해요.\nISMS 인증심사를 준비하면서 증적 자료와 문서를 작성하는 일을 지원해요.\n\n시스템 권한 관리체계를 운영하고, 시스템 권한 부여가 적정한지 검토해요.\n\n임직원 대상 교육, 보안 레터, 캠페인을 기획하고 제작하는 일을 지원해요.\n\n개인정보처리 위·수탁 보안 점검 및 위·수탁 현황 관리를 지원해요.\n\n\n우리는 이런 분과 함께하고 싶어요\n정보보호와 관리보안에서 커리어를 시작하고 싶으신 분\n여러 부서와 원활하게 소통하고 협업할 수 있는 분\n\n문제를 스스로 발견하고 개선하려는 적극적인 태도를 가진 분\n\n그 외 이런 것이 있으면 더 좋아요\n\n정보보호, 컴퓨터공학, 법학 등 관련 전공자 또는 관련 교육 이수자\n정보보호 관리체계, 개인정보보호에 대한 기본적인 이해도가 있는 분\n\nAWS 등 클라우드 및 IT 시스템 전반에 대한 기초 지식을 보유한 분\n\n\n이런 과정을 통해 합류해요\n서류 전형 → 인터뷰 → 처우협의 → 입사\n상세 채용절차 및 FAQ는 링크를 통해 확인해주세요.\n\n\n요기요에 대한 더 많은 정보가 궁금하다면, 여기로 오세요\n요기피플을 위한 복지와 혜택을 링크를 통해 확인하세요!\n\n요기요의 최신 소식이 궁금하시다면?\n\n요기요 기술블로그 바로가기\n\n\n\n기타 사항\n고용형태 : 인턴 (계약직, 6개월)\n입사 후 3개월 수습기간이 있으며, 정규직 전환 검토 가능합니다.\n장애인 및 국가보훈대상자는 지원 시 관계 법령에 따라 우대합니다.\n링크를 통해 개인정보 처리방침 을 확인해보세요!\n문의 : recruit@wesang.com",
       "body_from_image": false,
@@ -3611,7 +4055,7 @@
       "fetched_at": "2026-11-11T13:52:48.058081+09:00",
       "page_text": "2026학년도 동계 학부생 연구학점제가 시행 되오니, 학부생 여러분들의 많은 신청 바랍니다.\n\n<안내사항 읽기 전 주의사항 필독>\n\n1. 2027년 2월 졸업예정자 혹은 수료예정자는 수강 불가\n\n2. 각 팀원 모두 GLS를 통한 신청 및 계획서 제출 후, 교수님 승인을 받아야 함\n( * 매 학기 팀장만 신청하고 팀원은 신청하지 않아서 참여를 못하게 되는 경우가 종종 발생합니다. 반드시 참여인원 전원이 GLS 통해서 신청하여야 합니다.)\n\n3. GLS 통해 신청 시 '저장' 버튼 누른 후 '신청' 버튼까지 눌러야 정상 접수됨 (첨부된 매뉴얼 PDF 참고)\n( * 저장 버튼만 누르면 신청되지 않습니다. 신청 버튼 누른 후 지도교수 승인 결과에 '신청' 표기 되어야 정상 접수 된 것으로 확인됩니다.)\n\n4. 계절수업료 납부 관련\n- 계절수업료: 200,000원\n- 계절수업료 납부기간 : 12.8(화) ~ 12.9(수) 예정\n( * 학부생 연구학점제는 일반 계절 수업료 납부 기간 및 납부 절차와 다르기 때문에 추후 대학원팀 개별 공지가 있을 예정이므로 참고하여주 시기 바랍니다.)\n- 학부생 연구학점제는 계절수업료 환불기간이 없기 때문에 수강료 납부 후에는 환불이 불가합니다.\n\n5. 지도교수 연구년 여부 사전 확인 권장\n- 연구년 교원의 URP 지도는 원칙적으로 불가합니다.(단, 학장 추전 후 승인을 받으면 가능) 따라서, 참여자분들의 사전 확인을 권장 드립니다.\n\n6. 지도교수 소속 단과대학 확인 (첨부된 매뉴얼 PDF 참고)\n- 확인 방법: GLS > 학업영역 > 학부생 연구학점제 신청 페이지 내의 \"지도교수 신청\" 카테고리 조회 기준으로 인정 (겸직 소속 X)\n- 조회한 교수님의 소속이 URP 미운영 단과대학인 경우 원칙적으로 참여 불가 (단, 본인 소속 전공학점으로 인정 받아야만 해당 교수님과 URP 1형 진행이 가능하므로 학점인정신청서 필수 제출하여야 함)\n\n7. 신청기한 엄수 (신청 기한이 지나면 절대 추가신청 받지 않습니다.)\n\n8. 휴학생의 계절 수업 수강\n- 계절수업 학점취득으로 졸업학점(수료학점)을 충족하더라도, 복학하여 한 학기 이상 더 등록해야 졸업 가능\n- 휴학생의 계절수업신청은 재적기간 중 최대 2회에 한함\n\n※ 연구계획서 수정 제출 필요 시, 하단 FAQ 9번 참고\n※ 연구년 교원 승인 절차 지연 시, 대학원팀 문의\n\n<2026학년도 동계 학부생 연구학점제 안내 사항>\n\n1. 학부생 연구학점제란?\n학부생에게 연구 참여의 기회를 제공하는 제도로, 지도교수 및 지도대학원생의 지도 하에 학기 또는 방학 중 개별 연구 과제를 수행하고 연구 수행 결과를 수업으로 간주하여 학점을 인정하는 제도\n\n2. 지원자격: 아래 자격을 모두 갖춰야 함\n- 2007학년도 이후 신입학자\n- 직전학기(2026-1학기) 평점평균 3.5 이상인 자(* F포함 기준)\n* 2026-1학기 휴학한 경우 휴학 직전 학기 기준\n- 담당교수의 사전 승인을 얻은 자\n* 사전 승인 없이 지도교수를 선정 및 신청하면 계획서가 반려될 수 있습니다.\n- 학부생 연구학점제로 인정 가능한 학점(재학중 총 10학점)이 운영지침 기준을 초과하지 않은 학생\n\n2-1. 제외 대상(하나만 해당되어도 불가)\n- 2027년 2월 졸업예정자 혹은 수료예정자 수강 불가\n- 전공과목 누적 취득학점이 6학점 미만인 자\n- 직전학기 연구학점 과목 F 취득자\n※ 지도교수가 연구계획서를 반려한 경우, 참여 불가\n※ 미운영대학(교과목 미개설): 예술대학, 약학대학, 의과대학\n※ 정보통신대학의 경우 교수님별 수강인원이 제한될 수 있습니다.\n※ 일부 학과의 경우 전공 학점 인정 기준이 다를 수 있습니다. (단과대학 행정실 문의)\n\n3. 주요 일정\n주요 일정\n1) 학생 신청: 2026. 11. 25.(수) ~ 2026. 12. 2.(수) 23:59 (GLS에 계획서 제출) ( * 기한 엄수, 기한 이후 신청 절대 받지 않음)\n2) 교수 승인: 2026. 11. 25.(수) ~ 2026. 12. 4.(금) 23:59 (지도교수가 계획서를 승인하여야만 참여가능)\n※ 학점인정신청서 제출: 2026. 11. 25.(수) ~ 2026. 12. 2.(수) 23:59 (지도교수 및 취득받고자 하는 전공 학과장 서명 필수) (필요한 경우만 제출, 지연 제출 불가) -> 제출방법: GLS 업로드\n*지도교수 소속대학 단과대학과 학생이 취득하고자 하는 전공(학점)의 단과대학이 다른 경우만 제출\n*양식: 운영지침 별지서식4, 제출처: GLS > 학부생 연구학점제 신청 > 학점인정신청서 제출 칸에 업로드 [첨부된 메뉴얼 참고], [FAQ 2번 참고]\n3) 학부생 연구학점제 계절 수업료 납부기한: 2026. 12. 8.(화) ~ 12. 9.(수) 예정\n* 일반 계절수업료 납부 방식과 다르기 때문에 납부 절차에 대한 별도 안내 있을 예정\n3) 운영 기간: 2026. 12. 21.(월) ~ 2027. 1. 29.(금)\n4) 결과보고서 제출: 2027. 1. 25.(월) ~ 2027. 1. 27.(수)\n*보고서 제출 기한 내 GLS에 ➀결과보고서, ➁발표 보고서 제출필수(하나라도 미제출시 F)\n*발표는 운영 기간 내 진행해야 하며, 사전에 지도교수와 일정 협의하여 진행\n*팀 전원 각자 제출해야 함\n*보고서 작성 및 제출은 FAQ 참고\n※ 수강신청이 가능하도록 수강신청기간에 해당 학점(2학점)을 비워놔야 함\n\n4. 신청 방법\nGLS > 학업영역 > 학점인정 >학부생 연구학점제 기한내 신청 (첨부 매뉴얼 참조)\n※ 연구계획서 첨부 및 지도교수 선정 필수\n※ 팀원 전원이 연구계획서를 각자 제출해야 함\n※ 연구계획서 제출 시 팀원 전원의 학번과 이름을 기입하여야 함\n\n<주의 사항>\n※ '신청' 버튼을 누른 후에는 학생 본인이 직접 수정이 불가능하기 때문에 계획서 제출 전 충분히 검토 후 신청 버튼 클릭\n※ 계획서가 승인되면 추후 자동으로 수강신청되며, 수강취소는 원칙적으로 불가\n※ 수강신청이 가능하도록 수강신청기간에 해당 학점(2학점)을 비워놔야 함\n※ 운영기간 마지막주에 결과보고서와, 연구결과공개발표보고서를 GLS를 통해 제출(팀 전원이 제출해야함, 미제출시 F, 기한 별도안내)\n※ Co-op 등 학점을 인정해주는 교내 타 연구프로그램에서 기 진행한 연구주제는 중복하여 신청할 수 없음.\n※ 학점인정신청서 제출 시 지도교수님과 학과장님 두 분의 서명 필수로 제출\n※ 지도교수의 연구년 여부 사전 확인 必\n- 교원연구년제도에 관한 규정 제10조(연구년교원의 강의)에 의해 규정상 출강 불가(URP 참여 불가)\n(단, 학장의 추천을 받아 요청하는 경우에 한해 학기당 3학점 이내의 교내 강의 가능)\n※ 지도교수 소속 단과대학이 URP 1형을 운영하지 않는 경우(약학대학, 의과대학, 예술대학 등) 반드시 참여학생 소속 전공 교과목으로 신청해야하며, 소속 학과 학과장님 서명이 필요함 (서명을 받지 못할 경우 수강 불가)\n\nFAQ\n1) 교수님께 사전승인을 어떻게/왜 받나요?\n승인의 형태는 구두로만 받아도 무관합니다. 사전에 협의하지 않고 신청할 경우 교수님이 신청 내역을 인지하지 못할 수 있고, 인지하였다고 해도 반려하실 가능성이 높기 때문에 사전승인을 받도록 안내하고 있습니다. 이미 학생의 학부생 연구학점제 참여계획을 알고 계신 교수님께는 계획서 제출 이후 승인요청만 드려도 무방합니다. (승인 기한과 방법은 행정실에서 안내합니다만, 계획서 승인이 지연되는 경우에는 학생이 교수님께 안내해주시기 바랍니다.)\n\n2-1.) 학점인정신청서를 내야 되는지 모르겠어요.\n※지도교수 소속대학과 학점인정 받고자 하는 대학이 같은 경우 제출할 필요 없음\n\n[제출하지 않아도 되는 경우]\n공과대학-기계공학부 교수님께 계획서 신청\n공과대학-신소재공학부 1전공 학생 => 공과대학 학점인정 (같은 공과대학)\n\n[제출해야 되는 경우]\n공과대학-기계공학부 교수님께 계획서 신청\n공과대학 1전공, 정보통신대학 2전공 학생 =>2전공 정보통신대학 학점으로 인정 받고자 함\n\n2-2.) 학점인정신청서 제출시 학과장님 서명이 필수인가요?\n2025학년도 1학기 부터 학부생 연구학점제의 학점인정신청서 제출 시 본인이 전공을 취득하고자 하는 학과의 학과장님 서명이 필수로 요구됩니다.\n\n3) 혼자 참여할 수 있나요?\n4인 이하의 팀 연구를 진행하는 것을 원칙으로 하되, 지도교수님이 계획서를 승인하면 가능합니다. (단, 개인 연구에는 지도대학원생이 배정되지 않음)\n\n4) 지도교수 소속대학에서 학부생 연구학점제를 운영하지 않으면 어떻게 해야 되나요?\n지도교수 소속대학의 전공학점으로 이수할 수는 없고, 학생 전공으로 신청이 가능할 순 있습니다. (단, 학생 소속 전공 학과장님의 서명이 반드시 필요하며, 서명을 받지 못할 경우 수강신청 불가합니다.)\n\n5) 이미 학부생 연구학점제를 들었는데 또 들을 수 있나요?\n학부생 연구학점제로 재학 중 최대 10학점을 학사과정 전공학점으로 인정받을 수 있습니다.\n\n6) 성적은 P/F 로 받을 수도 있나요?\n일반성적(A+~F)으로 평가합니다. (단, 경제대학, 사범대학, 정보통신대학 일부(정보통신연구학점 3~5)은 P/F로 부여, )\n\n7) 수업료는 누구나 다 내야되나요?\n계절학기 학부생 연구학점제 참여는 수업료를 내야하는 것이 원칙입니다. 승인된 학생들에게 납부기한을 개별 안내할 예정입니다. 단, 자연계 특기자전형(과학인재전형 포함)으로 입학한 학생은 수업료를 납부하지 않아도 됩니다.\n\n8) 수강신청은 어떻게 하나요?\n학부생 연구학점제 교과목은 학생이 직접 수강 신청하는 것이 아니고, 직권으로 수강 신청 처리됩니다. 다만, 수강 신청 처리를 위해서는 반드시 본인의 수강 가능 학점에서 2학점을 비워 두셔야 합니다.\n\n9) 연구주제 변경 가능한가요?\n지도교수님과 협의 후 변경 가능하나 연구 계획서를 다시 제출하셔야 합니다. 본인의 학번, 성명, 지도교수님 성함을 명시하고 수정본 파일을 첨부하여 west0chang@skku.edu로 메일 주시기 바랍니다. (~2026. 12. 4.(금) 16:30까지)\n\n10) 연구결과보고서, 공개발표보고서를 수정하여 다시 업로드할 수 있나요?\n보고서 제출기간 이후에는 수정 불가합니다. 보고서 제출기한 전 수정이 필요한 경우 대학원 팀으로 문의 주시기 바랍니다.\n\n11) 제출파일 양식 다운로드가 안됩니다.\n크롬, 웨일 등의 브라우저에서는 양식 파일 다운로드가 되지 않을 수 있습니다. 인터넷 익스플로러로 재접속하여 시도해 주시기 바랍니다.\n\n12) 공개발표보고서에 꼭 사진이 들어가야 하나요?\n발표자의 모습이 확인되지 않는 경우, (사진 미첨부, 발표자료만 첨부 등) 성적이 부여되지 않을 수 있으니, 반드시 발표 장면을 담은 사진을 넣어 제출하여 주시기 바랍니다.\n\n13) 온라인 발표도 가능한가요?\n오프라인이 원칙이나, 온라인도 허용하고 있습니다. 발표자 발표모습과 발표자료를 확인할 수 있어야 하며, 지도교수가 온라인 발표에 참여한 것도 확인이 가능해야 합니다.\n\n14) 지도대학원생은 언제 배정되나요?\n학부생 연구학점제 계획서 승인이 끝난 후, 필요한 경우에만 교수님께서 선정합니다.\n\n15) 新3품인증제 인턴십 영역 인정을 받을 수 있나요?\n네, 학부생 연구학점제를 수강하여 2학점 이상 취득하시면 인정 가능합니다.\n\n16) 신청 기한을 놓쳤는데 추가로 신청할 수 있나요?\n수강신청 일정 및 형평성 차원에서 신청 기한 이후 추가 신청은 받지 않습니다.\n\n17) 지도교수님이 연구년인 경우 참여가 가능한가요?\n규정상 연구년 교원은 참여가 불가합니다. 단, 학장 추천을 통해 요청하실 경우 학기당 3학점 이내의 교내 강의가 가능하므로 세부 절차는 대학원팀과 지도교수님 소속 단과대 행정실에 문의 바랍니다.\n\n※ 학부생 연구학점제 운영지침을 숙지하지 않아 발생하는 문제를 학교에서 책임지지 않습니다.\n※ 운영지침 및 공지사항 내용으로 해결되지 않는 내용이 있으실 경우 대학원팀으로 문의 주십시오.\n※ 문의사항: 대학원팀 ( 02-740-1724 / 02-740-1729)\n* 운영시간: 평일 09:00~17:30 (점심시간 12:00~13:00, 주말 및 공휴일 미운영)",
       "body_attempted_at": "2026-11-11T13:52:48.058081+09:00",
-      "rechecked_at": "2026-11-12T02:26:22.601953+09:00"
+      "rechecked_at": "2026-11-12T14:27:22.900704+09:00"
     },
     "skku-notice01/141780": {
       "notice": {
@@ -3665,7 +4109,7 @@
       "summary": "학생성공센터에서 e-포트폴리오 특강 영상 편집을 담당할 학부생 1명을 모집합니다. 11월 20일까지 이메일로 약력을 보내 신청할 수 있습니다.",
       "summary_last_failed_at": null,
       "change_notified": "2026-11-11T17:33:25.188707+09:00",
-      "rechecked_at": "2026-11-12T02:26:22.601953+09:00"
+      "rechecked_at": "2026-11-12T14:27:22.900704+09:00"
     },
     "linkareer-intern/363622": {
       "notice": {
@@ -6741,7 +7185,7 @@
         "kind": "마감",
         "at": "2026-11-15T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-12T02:26:22.601953+09:00"
+      "rechecked_at": "2026-11-12T14:27:22.900704+09:00"
     },
     "linkareer-intern/363305": {
       "notice": {
@@ -25908,431 +26352,6 @@
       "summary": null,
       "body_attempts": 1,
       "fetched_at": "2026-11-03T12:27:42.906254+09:00"
-    },
-    "cse-notice/227457": {
-      "notice": {
-        "id": "cse-notice/227457",
-        "source_id": "cse-notice",
-        "article_no": "227457",
-        "title": "SKKU AI Colloquium 2026",
-        "category": "행사/세미나",
-        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=227457",
-        "posted_on": "2026-10-28",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><img src=\"https://cse.skku.edu/_res/editor_image/2026/10/zKFfRpBPzBiljVCrlWVO0.jpg\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
-      "images": [
-        "https://cse.skku.edu/_res/editor_image/2026/10/zKFfRpBPzBiljVCrlWVO0.jpg"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "sw-notice/227413": {
-      "notice": {
-        "id": "sw-notice/227413",
-        "source_id": "sw-notice",
-        "article_no": "227413",
-        "title": "[AI중심대학사업단] [84회] 글로벌 IT 전문가와 킹고인의 만남 시즌2 여든네번째 만남(10.28,수,12시)",
-        "category": "행사/세미나",
-        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=227413",
-        "posted_on": "2026-10-27",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "[84회] 글로벌 IT 전문가와 킹고인의 만남 시즌2 여든한번째 만남\n\n“미국 유학과 취업, 정말 나도 할 수 있을까?”\n\n유학과 해외 취업을 꿈꾸지만 어디서부터 시작해야 할지 막막한가요?\n\n성균관대학교 소프트웨어학과를 졸업하고, 컬럼비아대학교 석사를 거쳐 현재 Amazon Software Engineer로 근무 중이신 차승종(Daniel Cha) 님을 모셨습니다.\n\n학부 시절 같은 고민을 했던 솦대생으로서, 미국 유학을 준비한 과정부터 해외 취업에 도전한 경험, 그리고 직접 부딪히며 알게 된 현실적인 팁과 실제로 도움이 되었던 방법들을 솔직하게 나눕니다!\n\n● 일시: 10월 28일(수) 12시 ~ 13시\n\n● 강연방식: 온/오프라인 하이브리드 강연\n\n● 강연자: 차승종 Daniel Cha (Amazon Software Engineer)\n\n● 강연참여\n\n- (자) 산학협력센터 6층 (85605호)\n- (인) 다산경제관 5층 글로벌라운지 (32535호)\n- 온라인 참여: 신청 이메일로 참여 링크 발송 *받은 메일함 확인*\n\n※ 오프라인 참여자는 No Show 금지! 약속을 지키는 킹고인\n\n● 참석 혜택: 오프라인 참석자에게 간단한 도시락 제공 (강연 종료 후)\n\n● 행사 참석 신청 (사전 신청 필수)\n\nhttps://gdg.community.dev/gdg-on-campus-sungkyunkwan-university-seoul-south-korea/\n\n● 신청 방법 가이드\n\nhttps://app.notion.com/p/1f61152c669c8086b332cec6bbbd871a?pvs=4\n\nGoogle Developer Groups on Campus @ Sungkyunkwan University\n\nhttps://www.instagram.com/gdg.skku/",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p>[84회] 글로벌 IT 전문가와 킹고인의 만남 시즌2 여든한번째 만남</p><p>“미국 유학과 취업, 정말 나도 할 수 있을까?”</p><p>유학과 해외 취업을 꿈꾸지만 어디서부터 시작해야 할지 막막한가요?</p><p>성균관대학교 소프트웨어학과를 졸업하고, 컬럼비아대학교 석사를 거쳐 현재 Amazon Software Engineer로 근무 중이신 차승종(Daniel Cha) 님을 모셨습니다.</p><p>학부 시절 같은 고민을 했던 솦대생으로서, 미국 유학을 준비한 과정부터 해외 취업에 도전한 경험, 그리고 직접 부딪히며 알게 된 현실적인 팁과 실제로 도움이 되었던 방법들을 솔직하게 나눕니다!</p><p>● 일시: 10월 28일(수) 12시 ~ 13시</p><p>● 강연방식: 온/오프라인 하이브리드 강연</p><p>● 강연자: 차승종 Daniel Cha (Amazon Software Engineer)</p><p>● 강연참여</p><p>- (자) 산학협력센터 6층 (85605호)</p><p>- (인) 다산경제관 5층 글로벌라운지 (32535호)</p><p>- 온라인 참여: 신청 이메일로 참여 링크 발송 *받은 메일함 확인*</p><p>※ 오프라인 참여자는 No Show 금지! 약속을 지키는 킹고인</p><p>● &nbsp;참석 혜택: 오프라인 참석자에게 간단한 도시락 제공 (강연 종료 후)</p><p>● &nbsp;행사 참석 신청 (사전 신청 필수)</p><p><a href=\"https://gdg.community.dev/gdg-on-campus-sungkyunkwan-university-seoul-south-korea/\">https://gdg.community.dev/gdg-on-campus-sungkyunkwan-university-seoul-south-korea/</a></p><p>● &nbsp;신청 방법 가이드</p><p><a href=\"https://app.notion.com/p/1f61152c669c8086b332cec6bbbd871a?pvs=4\">https://app.notion.com/p/1f61152c669c8086b332cec6bbbd871a?pvs=4</a></p><p>Google Developer Groups on Campus @ Sungkyunkwan University</p><p><a href=\"https://www.instagram.com/gdg.skku/\">https://www.instagram.com/gdg.skku/</a></p><p><img src=\"https://sw.skku.edu/_res/editor_image/2026/10/cZryHIgxGmVPXQFiUIjo0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
-      "images": [
-        "https://sw.skku.edu/_res/editor_image/2026/10/cZryHIgxGmVPXQFiUIjo0.png"
-      ],
-      "summary": "소프트웨어학과 학생을 대상으로 아마존 엔지니어가 진행하는 글로벌 IT 전문가 강연이 10월 28일 12시에 온·오프라인으로 열립니다. 사전 신청을 통해 참여할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T18:24:00.504814+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "일정",
-        "at": "2026-10-28T12:00:00+09:00"
-      }
-    },
-    "jasoseol-intern/106914": {
-      "notice": {
-        "id": "jasoseol-intern/106914",
-        "source_id": "jasoseol-intern",
-        "article_no": "106914",
-        "title": "[IBK기업은행] 2027년 동계 체험형 청년인턴 채용",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106914",
-        "posted_on": "2026-10-27",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "relevant",
-          "reason": "디지털/IT 분야의 체험형 인턴을 모집하며 학력 제한이 없어 소프트웨어학과 학부생이 지원 가능합니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/028/webp/image.webp?1793074390\" alt=\"IBK기업은행 2027년 동계 체험형 청년인턴 채용\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/028/webp/image.webp?1793074390"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T19:58:56.205729+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-16T10:00:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "552fab0c50f16f6152497ff1672e993fb45f5dca954ef61000a84183e13aad2f",
-        "verdict": "relevant",
-        "reason": "디지털/IT 분야의 체험형 인턴을 모집하며 학력 제한이 없어 소프트웨어학과 학부생이 지원 가능합니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/106891": {
-      "notice": {
-        "id": "jasoseol-intern/106891",
-        "source_id": "jasoseol-intern",
-        "article_no": "106891",
-        "title": "[하나저축은행] 2026 하반기 경력직원/채용형 인턴직원 모집",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106891",
-        "posted_on": "2026-10-27",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "relevant",
-          "reason": "IT기획/운영 분야의 채용형 인턴을 모집하며 졸업 예정자도 지원 가능하여 소프트웨어학과 학부생에게 적합합니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/820/webp/2026_%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0%281%29.webp?1792975583\" alt=\"하나저축은행 2026 하반기 경력직원/채용형 인턴직원 모집\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/820/webp/2026_%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0%281%29.webp?1792975583"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-09T23:59:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "183e3241e7ac2ccd3a8eab5c5522be9d47977278669e2fa46d4fc3114b057223",
-        "verdict": "relevant",
-        "reason": "IT기획/운영 분야의 채용형 인턴을 모집하며 졸업 예정자도 지원 가능하여 소프트웨어학과 학부생에게 적합합니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/106796": {
-      "notice": {
-        "id": "jasoseol-intern/106796",
-        "source_id": "jasoseol-intern",
-        "article_no": "106796",
-        "title": "[여수광양항만공사] 2026년 직원 채용 공고",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106796",
-        "posted_on": "2026-10-27",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "maybe",
-          "reason": "공고 본문과 이미지만으로는 구체적인 모집 직무와 자격 요건을 확인할 수 없어 판단이 어렵습니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div>\n<img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/299/webp/%EC%97%AC%EC%88%98%EA%B4%91%EC%96%91%ED%95%AD%EB%A7%8C%EA%B3%B5%EC%82%AC_%EC%9D%B8%ED%8A%B8%EB%A1%9C_261020_%281%29.webp?1792541791\" alt=\"여수광양항만공사 2026년 직원 채용 공고\"><a href=\"https://c.incru.it/newjobpost/2026/10_ygpa/%EC%97%AC%EC%88%98%EA%B4%91%EC%96%91%ED%95%AD%EB%A7%8C%EA%B3%B5%EC%82%AC_261020_%EC%A0%95%EA%B7%9C%EC%A7%81.html\">​</a><a href=\"https://c.incru.it/newjobpost/2026/10_ygpa/%EC%97%AC%EC%88%98%EA%B4%91%EC%96%91%ED%95%AD%EB%A7%8C%EA%B3%B5%EC%82%AC_261013_%EC%B2%AD%EB%85%84%EC%9D%B8%ED%84%B4.html\">​</a><a href=\"https://ygpa.incruit.com/main/main.asp\">​</a>\n</div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/299/webp/%EC%97%AC%EC%88%98%EA%B4%91%EC%96%91%ED%95%AD%EB%A7%8C%EA%B3%B5%EC%82%AC_%EC%9D%B8%ED%8A%B8%EB%A1%9C_261020_%281%29.webp?1792541791"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-04T18:00:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "0a9d332e06b311dcc5e6318632630ee4d261e023ce3464a9b555b126e95ff4e7",
-        "verdict": "maybe",
-        "reason": "공고 본문과 이미지만으로는 구체적인 모집 직무와 자격 요건을 확인할 수 없어 판단이 어렵습니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "cse-notice/227380": {
-      "notice": {
-        "id": "cse-notice/227380",
-        "source_id": "cse-notice",
-        "article_no": "227380",
-        "title": "[AI중심대학사업단] 2026년 자율주행 자동차 피지컬 AI 미션 챌린지 행사 개최 안내 (참가접수:~10/30금)",
-        "category": "행사/세미나",
-        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=227380",
-        "posted_on": "2026-10-27",
-        "pinned": false,
-        "deadline": "2026-10-30T23:59:00+09:00",
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "성균관대학교 AI중심대학사업단과 ㈜새온이 공동 주관하는 「2026년 자율주행 자동차 피지컬 AI 미션 챌린지」 행사 안내드립니다.\n\n이번 행사는 자율주행 자동차 '알티노 AI(ALTINO AI)'를 활용하여 AI 및 자율주행 기술의 기본 원리를 배우고, 참가자들이 직접 구현한 프로그램으로 다양한 주행 미션에 도전하는 실습형 프로그램입니다.\n\n■ 행사 개요\n- 행사명: 2026년 자율주행 자동차 피지컬 AI 미션 챌린지\n- 참가신청: ~2026년 10월 30일(금), 포스터 QR 신청\n- 행사일정: 2026년 11월 6일(금)~7일(토), 2일간\n- 행사장소: 성균관대학교 자연과학캠퍼스 삼성학술정보관 지하 1층 오디토리움 및 2층 솦ː콤\n- 대상: AI 및 자율주행 기술에 관심 있는 중학생·고등학생·대학생 및 일반인\n- 참가 방식: 2인 1팀, 중등부·고등부·대학(일반)부로 구분하여 운영\n- 주최: 한국로봇교육콘텐츠협회\n- 주관: 성균관대학교 AI중심대학사업단, ㈜새온\n\n■ 주요 일정\n- 11월 6일(금) 09:00~16:00: 대회 안내, 알티노 AI 교육, 객체 인식 학습 및 팀별 실습\n- 11월 7일(토) 09:00~17:00: 팀별 대회 연습 및 자율주행 미션 챌린지\n※ 대회는 12:00부터, 시상식은 16:30부터 진행될 예정입니다.\n\n■ 시상 안내(예정)\n- 금상: 경기도지사상\n- 은상: AI중심대학사업단장상\n- 동상: 한국로봇교육콘텐츠협회장상",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [
-        {
-          "name": "붙임1. WCRC 피지컬 AI 미션챌린지_포스터.png",
-          "url": "https://cse.skku.edu/cse/notice.do?mode=download&articleNo=227380&attachNo=204219",
-          "type": "PNG",
-          "size": null
-        }
-      ],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><span>성균관대학교 AI중심대학사업단과 ㈜새온이 공동 주관하는 <span>「2026년 자율주행 자동차 피지컬 AI 미션 챌린지」</span> 행사 안내드립니다.</span></p><p><span><span><br></span></span></p><p><span><span>이번 행사는 자율주행 자동차 '알티노 AI(ALTINO AI)'를 활용하여 AI 및 자율주행 기술의 기본 원리를 배우고, &nbsp;참가자들이 직접 구현한 프로그램으로 다양한 주행 미션에 도전하는 <span>실습형 프로그램</span>입니다.</span></span></p><p><span><span><br></span></span></p><p><span><span>■ 행사 개요</span></span></p><p><span><span>- 행사명: 2026년 자율주행 자동차 피지컬 AI 미션 챌린지</span></span></p><p><span><span>- 참가신청: <strong><span>~2026년 10월 30일(금), 포스터 QR 신청</span></strong></span></span></p><p><span><span>- 행사일정: <strong><span>2026년 11월 6일(금)~7일(토), 2일간</span></strong></span></span></p><p><span><span>- 행사장소: 성균관대학교 자연과학캠퍼스 삼성학술정보관 지하 1층 오디토리움 및 2층 솦ː콤</span></span></p><p><span><span>- 대상: AI 및 자율주행 기술에 관심 있는 중학생·고등학생·대학생 및 일반인</span></span></p><p><span><span>- 참가 방식: 2인 1팀, 중등부·고등부·대학(일반)부로 구분하여 운영</span></span></p><p><span><span>- 주최: 한국로봇교육콘텐츠협회</span></span></p><p><span><span>- 주관: 성균관대학교 AI중심대학사업단, ㈜새온</span></span></p><p><span><span><br></span></span></p><p><span><span><br></span></span></p><p><span><span>■ 주요 일정</span></span></p><p><span><span>- 11월 6일(금) 09:00~16:00: 대회 안내, 알티노 AI 교육, 객체 인식 학습 및 팀별 실습</span></span></p><p><span><span>- 11월 7일(토) 09:00~17:00: 팀별 대회 연습 및 자율주행 미션 챌린지</span></span></p><p><span><span>※ 대회는 12:00부터, 시상식은 16:30부터 진행될 예정입니다.</span></span></p><p><span><span><br></span></span></p><p><span><span><br></span></span></p><p><span><span>■ 시상 안내(예정)</span></span></p><p><span><span>- 금상: 경기도지사상</span></span></p><p><span><span>- 은상: AI중심대학사업단장상</span></span></p><p><span><span>- 동상: 한국로봇교육콘텐츠협회장상</span></span></p><p><span><span><br></span></span></p><p><img src=\"https://cse.skku.edu/_res/editor_image/2026/10/LSEZwMJVAFWTVTynzNqm0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
-      "images": [
-        "https://cse.skku.edu/_res/editor_image/2026/10/LSEZwMJVAFWTVTynzNqm0.png"
-      ],
-      "summary": "중·고·대학생 및 일반인을 대상으로 자율주행 자동차 피지컬 AI 미션 챌린지를 개최합니다. 2인 1팀으로 구성하여 10월 30일까지 포스터 QR을 통해 신청할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T13:53:22.645265+09:00"
-    },
-    "linkareer-intern/361931": {
-      "notice": {
-        "id": "linkareer-intern/361931",
-        "source_id": "linkareer-intern",
-        "article_no": "361931",
-        "title": "[네이버웹툰] HR Compensation Assistant (체험형 인턴)",
-        "category": "체험형 인턴",
-        "url": "https://linkareer.com/activity/361931",
-        "posted_on": "2026-10-26",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-04T10:50:03.921998+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [
-          "인턴"
-        ],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "해당 직무는 HR 보상 운영 지원으로 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "[네이버웹툰] HR Compensation Assistant (체험형 인턴)\n\n\n\n\n[담당 업무]\n- 평가/보상 제도 개선 및 운영 지원\n- 구성원 커뮤니케이션 지원 (관련 안내문/설명 자료 작성 등)\n\n\n[필요 역량]\n- 국내외 대학교(원) 재학생 또는 휴학생 중 최소 3개월 동안 Full-Time으로 근무 가능하신 분\n(조직 상황에 따라 최대 6개월까지 연장될 수 있음)\n- HR 및 보상 업무에 관심이 많고, 새로운 업무와 제도를 빠르게 배우고 이해하는 학습력을 갖춘 분\n- 숫자와 데이터를 꼼꼼히 검증하고 정합성 있게 처리할 수 있는 분\n- Excel, Google Sheet 등 스프레드시트를 활용한 데이터 정리 및 문서 작성이 가능한 분\n- 맡은 업무를 책임감 있게 수행하고, 필요한 사항을 적극적으로 확인하고 커뮤니케이션할 수 있는 분\n\n\n[우대 사항]\n- HR, 경영, 세무, 회계 등 관련 전공 또는 관련 분야에 관심이 있는 분\n- HR, 그 중에서도 보상 관련 업무 경험이 있는 분\n- 통계/데이터 분석 및 AI Tool 역량 우수하신 분\n- 영어/일본어 커뮤니케이션이 가능하신 분",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><span><b>[네이버웹툰] HR Compensation Assistant (체험형 인턴)</b></span></p><p><span>[담당 업무]</span></p><p><span>- 평가/보상 제도 개선 및 운영 지원</span></p><p><span>- 구성원 커뮤니케이션 지원 (관련 안내문/설명 자료 작성 등)</span></p><p><span>[필요 역량]</span></p><p><span>﻿- 국내외 대학교(원) 재학생 또는 휴학생 중 최소 3개월 동안 Full-Time으로 근무 가능하신 분</span></p><p><span>&nbsp;(조직 상황에 따라 최대 6개월까지 연장될 수 있음)</span></p><p><span>- HR 및 보상 업무에 관심이 많고, 새로운 업무와 제도를 빠르게 배우고 이해하는 학습력을 갖춘 분</span></p><p><span>- 숫자와 데이터를 꼼꼼히 검증하고 정합성 있게 처리할 수 있는 분</span></p><p><span>- Excel, Google Sheet 등 스프레드시트를 활용한 데이터 정리 및 문서 작성이 가능한 분</span></p><p><span>- 맡은 업무를 책임감 있게 수행하고, 필요한 사항을 적극적으로 확인하고 커뮤니케이션할 수 있는 분</span></p><p><span>[우대 사항]</span></p><p><span>- HR, 경영, 세무, 회계 등 관련 전공 또는 관련 분야에 관심이 있는 분</span></p><p><span>- HR, 그 중에서도 보상 관련 업무 경험이 있는 분</span></p><p><span>- 통계/데이터 분석 및 AI Tool 역량 우수하신 분</span></p><p><span>- 영어/일본어 커뮤니케이션이 가능하신 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/979794\" title=\"20261104_104402.png\"><br></p><div><br></div>",
-      "images": [
-        "https://media-cdn.linkareer.com/se2editor/image/979794"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-04T10:50:03.921998+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-08T23:59:59.999000+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "04761436f73292d43fb2a058189b950bb40b5399ac167f7edf1ab6c02496346d",
-        "verdict": "not_relevant",
-        "reason": "해당 직무는 HR 보상 운영 지원으로 소프트웨어 개발 및 기술 직무와 거리가 멉니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/106909": {
-      "notice": {
-        "id": "jasoseol-intern/106909",
-        "source_id": "jasoseol-intern",
-        "article_no": "106909",
-        "title": "[피에스케이] 인사직무 수시채용(경력/신입)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106909",
-        "posted_on": "2026-10-26",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "인사관리 직무를 모집하고 있으며 경영, 법학, 교육학 전공자를 요구하므로 소프트웨어학과 학부생에게는 적합하지 않습니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><img src=\"https://psk.recruiter.co.kr/upload/33781/image/202610/0825ad48-6aa2-47a7-b514-b5673372b2a6.jpg\" alt=\"피에스케이 인사직무 수시채용(경력/신입)\"><br><br>&nbsp;</p>",
-      "images": [
-        "https://psk.recruiter.co.kr/upload/33781/image/202610/0825ad48-6aa2-47a7-b514-b5673372b2a6.jpg"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-07T23:50:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "ae3f712dc61aa5985a70782a677656da211a9af9598f5e35fd8c408e7b53dd0f",
-        "verdict": "not_relevant",
-        "reason": "인사관리 직무를 모집하고 있으며 경영, 법학, 교육학 전공자를 요구하므로 소프트웨어학과 학부생에게는 적합하지 않습니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/106901": {
-      "notice": {
-        "id": "jasoseol-intern/106901",
-        "source_id": "jasoseol-intern",
-        "article_no": "106901",
-        "title": "[모두투어네트워크] 2026년 채용 연계형 인턴 모집",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106901",
-        "posted_on": "2026-10-26",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/038/webp/2026_%E1%84%92%E1%85%A1%E1%84%87%E1%85%A1%E1%86%AB%E1%84%80%E1%85%B5_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%AD%E1%86%BC_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A9_%28%E1%84%8C%E1%85%AE%29%E1%84%86%E1%85%A9%E1%84%83%E1%85%AE%E1%84%90%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3.webp?1793078642\" alt=\"모두투어네트워크 2026년 채용 연계형 인턴 모집\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/038/webp/2026_%E1%84%92%E1%85%A1%E1%84%87%E1%85%A1%E1%86%AB%E1%84%80%E1%85%B5_%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%A5%E1%86%AB_%E1%84%8E%E1%85%A2%E1%84%8B%E1%85%AD%E1%86%BC_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A9_%28%E1%84%8C%E1%85%AE%29%E1%84%86%E1%85%A9%E1%84%83%E1%85%AE%E1%84%90%E1%85%AE%E1%84%8B%E1%85%A5%E1%84%82%E1%85%A6%E1%84%90%E1%85%B3%E1%84%8B%E1%85%AF%E1%84%8F%E1%85%B3.webp?1793078642"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-08T23:59:00+09:00",
-        "model": "source"
-      }
     }
   }
 }

@@ -135,6 +135,628 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "skku-notice01/141870": {
+      "notice": {
+        "id": "skku-notice01/141870",
+        "source_id": "skku-notice01",
+        "article_no": "141870",
+        "title": "[입학처] 2027학년도 수시모집 논술시험 교내 차량진입 및 건물출입 통제 안내 (2026. 11. 21.(토) ~ 22.(일),인문사회과학캠퍼스)",
+        "category": "일반",
+        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141870",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "학부생 대상의 인턴이나 장학 프로그램이 아닌 단순 캠퍼스 통제 안내 사항입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "2027학년도 수시모집 논술위주전형 논술시험이 2026. 11. 21.(토) ~ 22.(일) 양일 간 인문사회과학캠퍼스에서 진행됨에 따라\n\n공정한 입시 진행을 위하여 학부모, 동반자 및 일반인(학부생 등 교내구성원 포함)의 캠퍼스 출입을 엄격히 제한합니다.\n\n시험 진행에 따른 교내 차량 진입과 건물(시험장) 출입 통제에 관한 일정 및 내용을 아래와 같이 안내하오니,\n\n교내 구성원 여러분께서는 불편하시더라도 정숙한 분위기 속에서 입학 시험이 원활하게 진행될 수 있도록\n\n교내 출입 통제에 적극적인 협조 부탁드립니다.\n\n※ 자연과학캠퍼스는 해당 사항 없습니다.\n\n아 래\n\n1. 건물 출입 통제 기간\n- 2026. 11. 21.(토) 06:00 ~ 16:00 / 11. 22.(일) 06:00 ~ 19:00 (양일간)\n\n※ 토요일 16:00 ~ 일요일 06:00 에도 강의실 및 열람실 등 시험 공간 출입 불가\n※ 수험생이 집중되는 06시 ~ 08시 30분(양일), 10시 30분 ~ 13시 00분(양일),\n15시 30분 ~ 17시 00분(일요일)은 시험 공간이 아닌 곳도 건물 출입 불가\n\n2. 차량 진입: 전면 통제(토요일 06:00 ~ 16:30 / 일요일 06:00 ~ 19:30)\n\n3. 통제 대상 건물<인문사회과학캠퍼스>\n- 600주년기념관, 퇴계인문관, 수선관, 수선관별관, 다산경제관, 호암관, 국제관(B1 열람실 포함),\n경영관(B1 열람실 포함)\n\n4. 기타\n- 시험장 준비로 인해 시험 전일[11.20.(금)] 강의실(정규수업 제외) 및 열람실(15:00 이후) 사용이 제한될 수 있습니다.\n- 인문사회과학캠퍼스 중앙학술정보관 모든 열람실과 및 국제관/경영관 지하 열람실도 해당 기간 출입을 통제합니다.\n- 인근 교통혼잡으로 인하여 시험 당일 인사캠 셔틀버스 및 마을버스 07은 운행하지 않습니다.\n- 상기 건물 출입 통제 기간 동안 모든 차량 및 이륜차(음식 배달 오토바이 포함) 진입을 금하오니,\n양일간 교내 음식 배달은 삼가주시기 바랍니다.\n\n※ 문의: 인사캠 관리팀(02-760-1118), 입학관리팀(02-760-1353)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p>2027학년도 수시모집 논술위주전형 논술시험이 2026. 11. 21.(토) ~ 22.(일) 양일 간 인문사회과학캠퍼스에서 진행됨에 따라</p><p>공정한 입시 진행을 위하여 학부모, 동반자 및 일반인(학부생 등 교내구성원 포함)의 캠퍼스 출입을 엄격히 제한합니다.</p><p>시험 진행에 따른 교내 차량 진입과 건물(시험장) 출입 통제에 관한 일정 및 내용을 아래와 같이 안내하오니,</p><p>교내 구성원 여러분께서는 불편하시더라도 정숙한 분위기 속에서 입학 시험이 원활하게 진행될 수 있도록</p><p>교내 출입 통제에 적극적인 협조 부탁드립니다.</p><p>※ 자연과학캠퍼스는 해당 사항 없습니다.</p><p>아         래</p><p>1. 건물 출입 통제 기간</p><ul><li>2026. 11. 21.(토) 06:00 ~ 16:00 / 11. 22.(일) 06:00 ~ 19:00 (양일간)</li></ul><p>※ 토요일 16:00 ~ 일요일 06:00 에도 강의실 및 열람실 등 시험 공간 출입 불가</p><p>※ 수험생이 집중되는 06시 ~ 08시 30분(양일), 10시 30분 ~ 13시 00분(양일),</p><p>15시 30분 ~ 17시 00분(일요일)은 시험 공간이 아닌 곳도 건물 출입 불가</p><p>2. 차량 진입: 전면 통제(토요일 06:00 ~ 16:30 / 일요일 06:00 ~ 19:30)</p><p>3. 통제 대상 건물&lt;인문사회과학캠퍼스&gt;</p><ul><li>600주년기념관, 퇴계인문관, 수선관, 수선관별관, 다산경제관, 호암관, 국제관(B1 열람실 포함),</li></ul><p>경영관(B1 열람실 포함)</p><p>4. 기타</p><ul><li>시험장 준비로 인해 시험 전일[11.20.(금)] 강의실(정규수업 제외) 및 열람실(15:00 이후) 사용이 제한될 수 있습니다.</li><li>인문사회과학캠퍼스 중앙학술정보관 모든 열람실과 및 국제관/경영관 지하 열람실도 해당 기간 출입을 통제합니다.</li><li>인근 교통혼잡으로 인하여 시험 당일 인사캠 셔틀버스 및 마을버스 07은 운행하지 않습니다.</li><li>상기 건물 출입 통제 기간 동안 모든 차량 및 이륜차(음식 배달 오토바이 포함) 진입을 금하오니,</li></ul><p>양일간 교내 음식 배달은 삼가주시기 바랍니다.</p><p>※ 문의: 인사캠 관리팀(02-760-1118), 입학관리팀(02-760-1353)</p>",
+      "images": [],
+      "summary": "2026년 11월 21일부터 22일까지 인사캠 논술시험으로 인해 캠퍼스 출입과 차량 진입이 통제됩니다. 해당 기간 중 캠퍼스 내 강의실과 열람실 사용이 제한되니 확인 바랍니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T16:04:08.358475+09:00",
+      "page_text": "2027학년도 수시모집 논술위주전형 논술시험이 2026. 11. 21.(토) ~ 22.(일) 양일 간 인문사회과학캠퍼스에서 진행됨에 따라\n\n공정한 입시 진행을 위하여 학부모, 동반자 및 일반인(학부생 등 교내구성원 포함)의 캠퍼스 출입을 엄격히 제한합니다.\n\n시험 진행에 따른 교내 차량 진입과 건물(시험장) 출입 통제에 관한 일정 및 내용을 아래와 같이 안내하오니,\n\n교내 구성원 여러분께서는 불편하시더라도 정숙한 분위기 속에서 입학 시험이 원활하게 진행될 수 있도록\n\n교내 출입 통제에 적극적인 협조 부탁드립니다.\n\n※ 자연과학캠퍼스는 해당 사항 없습니다.\n\n아 래\n\n1. 건물 출입 통제 기간\n- 2026. 11. 21.(토) 06:00 ~ 16:00 / 11. 22.(일) 06:00 ~ 19:00 (양일간)\n\n※ 토요일 16:00 ~ 일요일 06:00 에도 강의실 및 열람실 등 시험 공간 출입 불가\n※ 수험생이 집중되는 06시 ~ 08시 30분(양일), 10시 30분 ~ 13시 00분(양일),\n15시 30분 ~ 17시 00분(일요일)은 시험 공간이 아닌 곳도 건물 출입 불가\n\n2. 차량 진입: 전면 통제(토요일 06:00 ~ 16:30 / 일요일 06:00 ~ 19:30)\n\n3. 통제 대상 건물<인문사회과학캠퍼스>\n- 600주년기념관, 퇴계인문관, 수선관, 수선관별관, 다산경제관, 호암관, 국제관(B1 열람실 포함),\n경영관(B1 열람실 포함)\n\n4. 기타\n- 시험장 준비로 인해 시험 전일[11.20.(금)] 강의실(정규수업 제외) 및 열람실(15:00 이후) 사용이 제한될 수 있습니다.\n- 인문사회과학캠퍼스 중앙학술정보관 모든 열람실과 및 국제관/경영관 지하 열람실도 해당 기간 출입을 통제합니다.\n- 인근 교통혼잡으로 인하여 시험 당일 인사캠 셔틀버스 및 마을버스 07은 운행하지 않습니다.\n- 상기 건물 출입 통제 기간 동안 모든 차량 및 이륜차(음식 배달 오토바이 포함) 진입을 금하오니,\n양일간 교내 음식 배달은 삼가주시기 바랍니다.\n\n※ 문의: 인사캠 관리팀(02-760-1118), 입학관리팀(02-760-1353)",
+      "body_attempted_at": "2026-11-12T16:04:08.358475+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-21T06:00:00+09:00"
+      }
+    },
+    "skku-career-intern/165199": {
+      "notice": {
+        "id": "skku-career-intern/165199",
+        "source_id": "skku-career-intern",
+        "article_no": "165199",
+        "title": "[MAX IGL] 미국 본사 Logistics 부문 인턴사원 채용 (~11/27)",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=u9P8peUqL1c8EGDgCQQhaQWKcNixVzG65AWNHT2o3zy&modalChk=Y",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": "2026-11-27T23:59:00+09:00",
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "물류 운영 및 관리 직무로 소프트웨어 개발이나 데이터 분석 등 IT 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "■ 접수 안내 및 지원 문의\n2026년 11월 27일까지 영문이력서 제출\n\nJ-1 비자 발급 비용은 본인 부담입니다.\n\n'미국 J-1 프로그램 안내서’를 반드시 사전에 참고해 주세요.\n\n■ 지원 문의: 031-8027-9060\n■ 이력서 접수 및 문의: hr@careerlabs.co.kr\n■ 입사/지원관련 상담 신청: https://forms.gle/JDniMmJnRN39ESU56\n\n[MAX IGL 미국법인] 채용 안내자료.zip",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "[MAX IGL 미국법인] 채용 안내자료.zip",
+          "url": "https://job.skku.edu/upload/Recruit/20261112_91311865/[MAX IGL 미국법인] 채용 안내자료.zip",
+          "type": "ZIP",
+          "size": null
+        }
+      ],
+      "body_html": "<span><p><span>■ 접수 안내 및 지원 문의</span></p><ul><li><p><span>2026년 11월 27일까지 영문이력서 제출</span></p></li><li><p><span><em>J-1 비자 발급 비용은 본인 부담입니다.</em></span></p></li><li><p><span><em>'미국 J-1 프로그램 안내서’를 반드시 사전에 참고해 주세요.</em></span></p></li></ul><p><span>■ 지원 문의: 031-8027-9060</span><br><span>■ 이력서 접수 및 문의: <a>hr@careerlabs.co.kr<span></span></a><br>■ 입사/지원관련 상담 신청: <a href=\"https://forms.gle/JDniMmJnRN39ESU56\">https://forms.gle/JDniMmJnRN39ESU56</a></span></p><div><a href=\"https://job.skku.edu/upload/Recruit/20261112_91311865/[MAX IGL 미국법인] 채용 안내자료.zip\">[MAX IGL 미국법인] 채용 안내자료.zip</a><span></span></div><div><a href=\"https://forms.gle/JDniMmJnRN39ESU56\"><img src=\"https://job.skku.edu/upload/Recruit/20261112_91311865/채용포스터[MAX IGL].jpg\"></a></div></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261112_91311865/채용포스터[MAX IGL].jpg"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T16:04:08.358475+09:00",
+      "page_text": "■ 접수 안내 및 지원 문의\n2026년 11월 27일까지 영문이력서 제출\n\nJ-1 비자 발급 비용은 본인 부담입니다.\n\n'미국 J-1 프로그램 안내서’를 반드시 사전에 참고해 주세요.\n\n■ 지원 문의: 031-8027-9060\n■ 이력서 접수 및 문의: hr@careerlabs.co.kr\n■ 입사/지원관련 상담 신청: https://forms.gle/JDniMmJnRN39ESU56\n\n[MAX IGL 미국법인] 채용 안내자료.zip",
+      "body_attempted_at": "2026-11-12T16:04:08.358475+09:00",
+      "intern_judgment": {
+        "fingerprint": "4e55c29ba9d8b906fdb18dd66be6668fd746a1ce55c8ede4223bf4853c328dfe",
+        "verdict": "not_relevant",
+        "reason": "물류 운영 및 관리 직무로 소프트웨어 개발이나 데이터 분석 등 IT 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165194": {
+      "notice": {
+        "id": "skku-career-intern/165194",
+        "source_id": "skku-career-intern",
+        "article_no": "165194",
+        "title": "[모두닥] 인턴 채용공고 재게시",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=u9P8peUqL1c8EGDgCQQhaQ33utacy6vuRpTW1Y7nIIQ&modalChk=Y",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "Engineering Focused 인턴 직무는 소프트웨어 개발 역량을 요구하며 학부생이 지원 가능합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "[접수 기간]\n\n- 2026년 11월 30일(월) 23:59 마감 (변동 없음)\n\n[대상 공고 (총 5개 직무)]\n\n1. [채용전환형/월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴\n2. [채용전환형/월 500만원] 모두닥 Problem Solver (Sales Focused) 인턴\n3. [채용전환형/월 500만원] 모두닥 Problem Solver - Product Marketer 인턴\n4. [채용전환형/월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴\n5. [휴학생 우대/월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅)\n\n\n\n\n\n[휴학생 우대_월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅).pdf\n[채용전환형_월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴.pdf\n[채용전환형_월 500만원] 모두닥 Problem Solver - Product Marketer 인턴.pdf\n[채용전환형_월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴.pdf\nProblem Solver (Sales Focused) 인턴_JD_260812 (1).pdf",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [
+        {
+          "name": "[휴학생 우대_월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅).pdf",
+          "url": "https://job.skku.edu/upload/Recruit/20261112_49011743/[휴학생 우대_월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅).pdf",
+          "type": "PDF",
+          "size": null
+        },
+        {
+          "name": "[채용전환형_월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴.pdf",
+          "url": "https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴.pdf",
+          "type": "PDF",
+          "size": null
+        },
+        {
+          "name": "[채용전환형_월 500만원] 모두닥 Problem Solver - Product Marketer 인턴.pdf",
+          "url": "https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver - Product Marketer 인턴.pdf",
+          "type": "PDF",
+          "size": null
+        },
+        {
+          "name": "[채용전환형_월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴.pdf",
+          "url": "https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴.pdf",
+          "type": "PDF",
+          "size": null
+        },
+        {
+          "name": "Problem Solver (Sales Focused) 인턴_JD_260812 (1).pdf",
+          "url": "https://job.skku.edu/upload/Recruit/20261112_49011743/Problem Solver (Sales Focused) 인턴_JD_260812 (1).pdf",
+          "type": "PDF",
+          "size": null
+        }
+      ],
+      "body_html": "<span><p><span>[접수 기간]</span><br><br><span>&nbsp; - 2026년 11월 30일(월) 23:59 마감 (변동 없음)</span><br><br><span>[대상 공고 (총 5개 직무)]</span><br><br><span>1. &nbsp;[채용전환형/월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴</span><br><span>2. &nbsp;[채용전환형/월 500만원] 모두닥 Problem Solver (Sales Focused) 인턴</span><br><span>3. &nbsp;[채용전환형/월 500만원] 모두닥 Problem Solver - Product Marketer 인턴</span><br><span>4. &nbsp;[채용전환형/월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴</span><br><span>5. &nbsp;[휴학생 우대/월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅)</span></p><div><img src=\"https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴.png\"></div><div><img src=\"https://job.skku.edu/upload/Recruit/20261112_49011743/[휴학생 우대_월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅).png\"></div><div><img src=\"https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver - Product Marketer 인턴.png\"></div><div><img src=\"https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월500만원] 모두닥 Problem Solver (Sales Focused) 인턴  (1).png\"></div><div><img src=\"https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴.png\"></div><div><a href=\"https://job.skku.edu/upload/Recruit/20261112_49011743/[휴학생 우대_월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅).pdf\">[휴학생 우대_월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅).pdf</a></div><div><a href=\"https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴.pdf\">[채용전환형_월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴.pdf</a></div><div><a href=\"https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver - Product Marketer 인턴.pdf\">[채용전환형_월 500만원] 모두닥 Problem Solver - Product Marketer 인턴.pdf</a></div><div><a href=\"https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴.pdf\">[채용전환형_월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴.pdf</a></div><div><a href=\"https://job.skku.edu/upload/Recruit/20261112_49011743/Problem Solver (Sales Focused) 인턴_JD_260812 (1).pdf\">Problem Solver (Sales Focused) 인턴_JD_260812 (1).pdf</a></div></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴.png",
+        "https://job.skku.edu/upload/Recruit/20261112_49011743/[휴학생 우대_월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅).png",
+        "https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver - Product Marketer 인턴.png",
+        "https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월500만원] 모두닥 Problem Solver (Sales Focused) 인턴  (1).png",
+        "https://job.skku.edu/upload/Recruit/20261112_49011743/[채용전환형_월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T16:04:08.358475+09:00",
+      "page_text": "[접수 기간]\n\n- 2026년 11월 30일(월) 23:59 마감 (변동 없음)\n\n[대상 공고 (총 5개 직무)]\n\n1. [채용전환형/월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴\n2. [채용전환형/월 500만원] 모두닥 Problem Solver (Sales Focused) 인턴\n3. [채용전환형/월 500만원] 모두닥 Problem Solver - Product Marketer 인턴\n4. [채용전환형/월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴\n5. [휴학생 우대/월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅)\n\n\n\n\n\n[휴학생 우대_월 350만원] 모두닥 비즈니스 실전 체험 인턴 (세일즈·마케팅).pdf\n[채용전환형_월 500만원] 모두닥 Problem Solver (Engineering Focused) 인턴.pdf\n[채용전환형_월 500만원] 모두닥 Problem Solver - Product Marketer 인턴.pdf\n[채용전환형_월 500만원] 모두닥 Problem Solver - 인플루언서 마케팅 인턴.pdf\nProblem Solver (Sales Focused) 인턴_JD_260812 (1).pdf",
+      "body_attempted_at": "2026-11-12T16:04:08.358475+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "734fb810bad8d6d1dfade341c949ad4cf2310e63d5e58989e9988c97fc68fcc5",
+        "verdict": "relevant",
+        "reason": "Engineering Focused 인턴 직무는 소프트웨어 개발 역량을 요구하며 학부생이 지원 가능합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "skku-career-intern/165193": {
+      "notice": {
+        "id": "skku-career-intern/165193",
+        "source_id": "skku-career-intern",
+        "article_no": "165193",
+        "title": "[ST인터내셔널] 2027년 상반기 채용연계형 인턴 채용",
+        "category": "인턴",
+        "url": "https://job.skku.edu/Recruit/RecruitView.aspx?rcdx=u9P8peUqL1c8EGDgCQQhaQZ4VvsccLgKyKDInzLrYAS&modalChk=Y",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "마케팅, 사업개발, 부동산투자 등 비개발 직무 위주이며 엔지니어링 직무는 토목, 기계, 전기, 화공 전공자를 대상으로 합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "접수 방법 : 채용사이트 접수 (https://sticorp.recruiter.co.kr/career/jobs/133984)\n접수 기간 : 2026년 11월 12일 14:00 ~ 2026년 11월 30일 23:59",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<span><div><img src=\"https://job.skku.edu/upload/Recruit/20261112_83263374/ST인터내셔널_2027년 상반기 채용연계형 인턴 채용_공고문.png\"></div><div>접수 방법 : 채용사이트 접수 (<a href=\"https://sticorp.recruiter.co.kr/career/jobs/133984\">https://sticorp.recruiter.co.kr/career/jobs/133984</a>)</div><div>접수 기간 : 2026년 11월 12일 14:00 ~ 2026년 11월 30일 23:59</div></span>",
+      "images": [
+        "https://job.skku.edu/upload/Recruit/20261112_83263374/ST인터내셔널_2027년 상반기 채용연계형 인턴 채용_공고문.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T16:04:08.358475+09:00",
+      "page_text": "접수 방법 : 채용사이트 접수 (https://sticorp.recruiter.co.kr/career/jobs/133984)\n접수 기간 : 2026년 11월 12일 14:00 ~ 2026년 11월 30일 23:59",
+      "body_attempted_at": "2026-11-12T16:04:08.358475+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:00+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "0daef09e1b3fe337d8f5fa7d038848ac42a31796733a748f16d1a0024a94ccb5",
+        "verdict": "not_relevant",
+        "reason": "마케팅, 사업개발, 부동산투자 등 비개발 직무 위주이며 엔지니어링 직무는 토목, 기계, 전기, 화공 전공자를 대상으로 합니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363989": {
+      "notice": {
+        "id": "linkareer-intern/363989",
+        "source_id": "linkareer-intern",
+        "article_no": "363989",
+        "title": "[(주)삼구아이앤씨] 신세계인터내셔날 해외패션부문 Chrome Hearts, Enfants Riches Deprimes 인턴 모집",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363989",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "상품 기획 및 영업 운영 보조 업무로 소프트웨어 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "신세계인터내셔날 해외패션부문\nChrome Hearts, Enfants Riches Deprimes 인턴 모집공고\n\n\n\n\n\n1.\n브랜드:\nChrome Hearts, Enfants Riches Deprimes\n\n\n\n\n\n2.\n채용구분:\n인턴 (정규직 전환불가)\n\n\n\n\n\n3.\n채용시점 기준 4~6개월 + 연장 가능 (협의)\n\n\n\n\n\n4.\n근무시간:\n주 5일 (MON~FRI) / 09:00~17:00, 점심시간\n1시간 포함\n\n\n\n\n\n5.\n급여: 회사\n내부 규정에 따름\n\n\n\n\n\n6.\n근무 위치: 신세계인터내셔날 청담 사옥 (서울시 강남구 도산대로 449)\n\n\n\n\n\n7.\n담당 업무 (Assistant):\n\n- 상품 기획 및 영업 운영 서포트\n(상품 판매 분석 및 발주 기획, 월별 영업 계획 상품 운영 관련 업무)\n- 상품 관련 오퍼레이션 업무 보조\n- 번역, 문서(엑셀)작업, 간단한 영상편집/포토샵\n등 팀 내 업무 보조\n\n\n\n\n\n8.\n채용절차\n\n\n\n\n\n\n구분\n\n\n내용\n\n\n세부내용\n\n\n비고\n\n\n\n1차\n\n\n서류전형\n\n(11/22 마감)\n\n\n이력서1부, 자기소개서 1부(자유양식)\n\n\nsally_kong@sikorea.co.kr제출\n\n제목:\n인턴지원(이름, 전화번호)\n\n\n\n2차\n\n\n면접\n\n(11/23~27 중 진행)\n\n\n면접 및 엑셀 테스트\n\n\n합격자 개별통보\n\n\n\n근무 시작\n\n\n12/7(월)\n출근\n\n\n4개월이상 근무 필수\n\n\n휴학생, 졸업예정자 우대\n\n\n\n\n\n\n\n\n\n9.\n우대자격\n-\n해당직무 근무경험\n-\nMicrosoft\nOffice 문서작성 우수자(엑셀 능통)\n-\n외국어(영어) 능통자\n-\n포토샵/일러스트\n등 디자인 프로그램 활용 가능자\n\n\n* 불합격자 별도 통보 없음\n\n\n● 채용 서류 반환 및 파기\n- 반환 청구 기간(180일)이 지난 서류는 「개인정보보호법」에 따라 파기합니다.\n- 제출한 채용서류에 대한 반환을 요청하지 않을 시 서류 일체를 파기합니다.\n- 반환 요청은 채용담당자에게 유선 및 이메일로 신청 가능합니다.\n- 서류 반환 비용은 당사가 부담하며 청구 시점 기준으로 14일 이내 반환합니다.\n- 전자 제출 서류, 자발적 제출 서류, 불가항력에 의해 멸실된 서류는 반환하지 않습니다.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div><p>\n \n \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n  \n \n \n \n\n \n \n<b><span lang=\"EN-US\"></span></b></p><p><b><span><br></span></b></p><p><b><span>신세계인터내셔날<span lang=\"EN-US\">&nbsp;</span>해외패션부문&nbsp;</span></b></p><p><b><span lang=\"EN-US\">Chrome Hearts, Enfants Riches Deprimes&nbsp;</span></b><b><span>인턴 모집공고</span></b><b><span lang=\"EN-US\"></span></b></p><p><b><span lang=\"EN-US\"><span><br></span></span></b></p><p><b><span lang=\"EN-US\"><span>1.<span>&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span></span></b><span>브랜드<span lang=\"EN-US\">:\nChrome Hearts, Enfants Riches Deprimes</span></span></p><p><span><span lang=\"EN-US\"><br></span></span></p><p><b><span lang=\"EN-US\"><span>2.<span>&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span></span></b><span>채용구분<span lang=\"EN-US\">:\n</span>인턴<span lang=\"EN-US\"> (</span>정규직 전환불가<span lang=\"EN-US\">)</span></span></p><p><span><span lang=\"EN-US\"><br></span></span></p><p><b><span lang=\"EN-US\"><span>3.<span>&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span></span></b><span>채용시점 기준 <span lang=\"EN-US\">4~6</span>개월 <span lang=\"EN-US\">+ </span>연장 가능<span lang=\"EN-US\"> (</span>협의<span lang=\"EN-US\">)</span></span></p><p><span><span lang=\"EN-US\"><br></span></span></p><p><b><span lang=\"EN-US\"><span>4.<span>&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span></span></b><span>근무시간<span lang=\"EN-US\">:\n</span>주 <span lang=\"EN-US\">5</span>일<span lang=\"EN-US\"> (MON~FRI) / 09:00~17:00, </span>점심시간\n<span lang=\"EN-US\">1</span>시간 포함<span lang=\"EN-US\"></span></span></p><p><span><br></span></p><p><b><span lang=\"EN-US\"><span>5.<span>&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span></span></b><span>급여<span lang=\"EN-US\">: </span>회사\n내부 규정에 따름<span lang=\"EN-US\"></span></span></p><p><span><br></span></p><p><b><span lang=\"EN-US\"><span>6.<span>&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span></span></b><span>근무 위치<span lang=\"EN-US\">: </span>신세계인터내셔날 청담 사옥 <span lang=\"EN-US\">(</span>서울시 강남구 도산대로 <span lang=\"EN-US\">449)</span></span></p><p><span><span lang=\"EN-US\"><br></span></span></p><p><b><span lang=\"EN-US\"><span>7.<span>&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span></span></b><span>담당 업무<span lang=\"EN-US\"> (Assistant):</span></span></p><p><span><span lang=\"EN-US\">&nbsp;</span></span></p><p><span lang=\"EN-US\">-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span>상품 기획 및 영업 운영 서포트</span></p><p><span lang=\"EN-US\">&nbsp; &nbsp; (</span><span>상품 판매 분석 및 발주 기획</span><span lang=\"EN-US\">, </span><span>월별 영업 계획 상품 운영 관련 업무</span><span lang=\"EN-US\">)</span></p><p><span lang=\"EN-US\">-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span>상품 관련 오퍼레이션 업무 보조</span></p><p><span lang=\"EN-US\">-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span>번역<span lang=\"EN-US\">, </span>문서<span lang=\"EN-US\">(</span>엑셀<span lang=\"EN-US\">)</span>작업<span lang=\"EN-US\">, </span>간단한 영상편집<span lang=\"EN-US\">/</span>포토샵\n등 팀 내 업무 보조</span></p><p><b><span lang=\"EN-US\"><span><br></span></span></b></p><p><b><span lang=\"EN-US\"><span>8.<span>&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span></span></b><span>채용절차<span lang=\"EN-US\"></span></span></p><table><tbody><tr><td><span>\n  </span><p><b><span>구분</span></b><span lang=\"EN-US\"></span></p><span>\n  </span></td><td><span>\n  </span><p><b><span>내용</span></b><span lang=\"EN-US\"></span></p><span>\n  </span></td><td><span>\n  </span><p><b><span>세부내용</span></b><span lang=\"EN-US\"></span></p><span>\n  </span></td><td><span>\n  </span><p><b><span>비고</span></b><span lang=\"EN-US\"></span></p><span>\n  </span></td></tr><tr><td><span>\n  </span><p><span lang=\"EN-US\">1</span><span>차</span><span lang=\"EN-US\"></span></p><span>\n  </span></td><td><span>\n  </span><p><span>서류전형<span lang=\"EN-US\"><br>\n  (11/22 </span>마감<span lang=\"EN-US\">)</span></span></p><span>\n  </span></td><td><span>\n  </span><p><span>이력서<span lang=\"EN-US\">1</span>부<span lang=\"EN-US\">, </span>자기소개서 <span lang=\"EN-US\">1</span>부<span lang=\"EN-US\">(</span>자유양식<span lang=\"EN-US\">)</span></span><span lang=\"EN-US\"></span></p><span>\n  </span></td><td><span>\n  </span><p><span lang=\"EN-US\"><a href=\"mailto:sally_kong@sikorea.co.kr\"><b>sally_kong@sikorea.co.kr</b></a></span><span>제출<span lang=\"EN-US\"><br>\n  </span></span><span>제목<span lang=\"EN-US\">:\n  </span>인턴지원<span lang=\"EN-US\">(</span>이름<span lang=\"EN-US\">, </span>전화번호<span lang=\"EN-US\">)</span></span><span lang=\"EN-US\"></span></p><span>\n  </span></td></tr><tr><td><span>\n  </span><p><span lang=\"EN-US\">2</span><span>차</span><span lang=\"EN-US\"></span></p><span>\n  </span></td><td><span>\n  </span><p><span>면접 <span lang=\"EN-US\"><br>\n  (11/23~27 </span>중 진행<span lang=\"EN-US\">)</span></span></p><span>\n  </span></td><td><span>\n  </span><p><span>면접 및 엑셀 테스트<span lang=\"EN-US\"></span></span></p><span>\n  </span></td><td><span>\n  </span><p><span>합격자 개별통보</span><span lang=\"EN-US\"></span></p><span>\n  </span></td></tr><tr><td><span>\n  </span><p><span>근무 시작</span><span lang=\"EN-US\"></span></p><span>\n  </span></td><td><span>\n  </span><p><span lang=\"EN-US\">12/7(</span><span>월<span lang=\"EN-US\">)\n  </span>출근</span><span lang=\"EN-US\"></span></p><span>\n  </span></td><td><span>\n  </span><p><span lang=\"EN-US\">4</span><span>개월이상 근무 필수</span><span lang=\"EN-US\"></span></p><span>\n  </span></td><td><span>\n  </span><p><span>휴학생<span lang=\"EN-US\">, </span>졸업예정자 우대</span><span lang=\"EN-US\"></span></p><span>\n  </span></td></tr></tbody></table><p><span lang=\"EN-US\">&nbsp;</span></p><p><b><span lang=\"EN-US\"><span>9.<span>&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span></span></b><span>우대자격</span></p><p><span lang=\"EN-US\">-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span><span>해당직무 근무경험</span></p><p><span lang=\"EN-US\">-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span><span lang=\"EN-US\">Microsoft\nOffice </span><span>문서작성<span lang=\"EN-US\">&nbsp;</span>우수자<span lang=\"EN-US\">(</span>엑셀 능통<span lang=\"EN-US\">)</span></span></p><p><span lang=\"EN-US\">-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span><span>외국어<span lang=\"EN-US\">(</span>영어<span lang=\"EN-US\">) </span>능통자</span></p><p><span lang=\"EN-US\">-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n</span></span><span>포토샵<span lang=\"EN-US\">/</span>일러스트\n등 디자인 프로그램 활용 가능자</span></p><p><b><span lang=\"EN-US\"><br></span></b></p><p><b><span lang=\"EN-US\">* </span></b><b><span>불합격자 별도 통보 없음</span></b></p><p><span>● 채용 서류 반환 및 파기</span></p><p><span>&nbsp;- 반환 청구 기간(180일)이 지난 서류는 「개인정보보호법」에 따라 파기합니다.</span></p><p><span>&nbsp;- 제출한 채용서류에 대한 반환을 요청하지 않을 시 서류 일체를 파기합니다.</span></p><p><span>&nbsp;- 반환 요청은 채용담당자에게 유선 및 이메일로 신청 가능합니다.</span></p><p><span>&nbsp;- 서류 반환 비용은 당사가 부담하며 청구 시점 기준으로 14일 이내 반환합니다.</span></p><p><span>&nbsp;- 전자 제출 서류, 자발적 제출 서류, 불가항력에 의해 멸실된 서류는 반환하지 않습니다.</span></p></div>",
+      "images": [],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T16:04:08.358475+09:00",
+      "page_text": "신세계인터내셔날 해외패션부문\nChrome Hearts, Enfants Riches Deprimes 인턴 모집공고\n\n\n\n\n\n1.\n브랜드:\nChrome Hearts, Enfants Riches Deprimes\n\n\n\n\n\n2.\n채용구분:\n인턴 (정규직 전환불가)\n\n\n\n\n\n3.\n채용시점 기준 4~6개월 + 연장 가능 (협의)\n\n\n\n\n\n4.\n근무시간:\n주 5일 (MON~FRI) / 09:00~17:00, 점심시간\n1시간 포함\n\n\n\n\n\n5.\n급여: 회사\n내부 규정에 따름\n\n\n\n\n\n6.\n근무 위치: 신세계인터내셔날 청담 사옥 (서울시 강남구 도산대로 449)\n\n\n\n\n\n7.\n담당 업무 (Assistant):\n\n- 상품 기획 및 영업 운영 서포트\n(상품 판매 분석 및 발주 기획, 월별 영업 계획 상품 운영 관련 업무)\n- 상품 관련 오퍼레이션 업무 보조\n- 번역, 문서(엑셀)작업, 간단한 영상편집/포토샵\n등 팀 내 업무 보조\n\n\n\n\n\n8.\n채용절차\n\n\n\n\n\n\n구분\n\n\n내용\n\n\n세부내용\n\n\n비고\n\n\n\n1차\n\n\n서류전형\n\n(11/22 마감)\n\n\n이력서1부, 자기소개서 1부(자유양식)\n\n\nsally_kong@sikorea.co.kr제출\n\n제목:\n인턴지원(이름, 전화번호)\n\n\n\n2차\n\n\n면접\n\n(11/23~27 중 진행)\n\n\n면접 및 엑셀 테스트\n\n\n합격자 개별통보\n\n\n\n근무 시작\n\n\n12/7(월)\n출근\n\n\n4개월이상 근무 필수\n\n\n휴학생, 졸업예정자 우대\n\n\n\n\n\n\n\n\n\n9.\n우대자격\n-\n해당직무 근무경험\n-\nMicrosoft\nOffice 문서작성 우수자(엑셀 능통)\n-\n외국어(영어) 능통자\n-\n포토샵/일러스트\n등 디자인 프로그램 활용 가능자\n\n\n* 불합격자 별도 통보 없음\n\n\n● 채용 서류 반환 및 파기\n- 반환 청구 기간(180일)이 지난 서류는 「개인정보보호법」에 따라 파기합니다.\n- 제출한 채용서류에 대한 반환을 요청하지 않을 시 서류 일체를 파기합니다.\n- 반환 요청은 채용담당자에게 유선 및 이메일로 신청 가능합니다.\n- 서류 반환 비용은 당사가 부담하며 청구 시점 기준으로 14일 이내 반환합니다.\n- 전자 제출 서류, 자발적 제출 서류, 불가항력에 의해 멸실된 서류는 반환하지 않습니다.",
+      "body_attempted_at": "2026-11-12T16:04:08.358475+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-22T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "6646942e689e036225d3a89f2971c17ef543f7d64f02a5063bebb1d0bbe0ce89",
+        "verdict": "not_relevant",
+        "reason": "상품 기획 및 영업 운영 보조 업무로 소프트웨어 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363986": {
+      "notice": {
+        "id": "linkareer-intern/363986",
+        "source_id": "linkareer-intern",
+        "article_no": "363986",
+        "title": "[주식회사 더파운더즈] [ANUA] 러시아/CIS IMC 브랜드 마케팅 채용전환형 인턴",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363986",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "러시아/CIS 지역 대상 마케팅 직무로 소프트웨어 개발이나 데이터 분석 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "#러시아CIS #CIS마케팅 #글로벌마케팅 #브랜드마케팅 #오프라인마케팅 #이벤트운영 #팝업스토어 #인플루언서마케팅 #인플루언서협업 #콘텐츠트래킹 #데이터취합 #시장조사 #트렌드리서치 #경쟁사분석 #뷰티트렌드 #K뷰티 #뷰티브랜드 #스킨케어 #PR #커뮤니케이션 #현장지원 #통번역 #러시아어 #영어비즈니스 #중앙아시아 #프로젝트매니지먼트 #협업역량 #마케팅인턴 #채용전환형인턴 #아누아",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://image.ninehire.com/job-posting/80fee210-ae02-11ef-b191-ab9acb66fdc9/ecbc6fe0-de48-11f1-9c22-175a2c83b550.png\"></p>\n<p><span>#러시아CIS #CIS마케팅 #글로벌마케팅 #브랜드마케팅 #오프라인마케팅 #이벤트운영 #팝업스토어 #인플루언서마케팅 #인플루언서협업 #콘텐츠트래킹 #데이터취합 #시장조사 #트렌드리서치 #경쟁사분석 #뷰티트렌드 #K뷰티 #뷰티브랜드 #스킨케어 #PR #커뮤니케이션 #현장지원 #통번역 #러시아어 #영어비즈니스 #중앙아시아 #프로젝트매니지먼트 #협업역량 #마케팅인턴 #채용전환형인턴 #아누아</span></p>",
+      "images": [
+        "https://image.ninehire.com/job-posting/80fee210-ae02-11ef-b191-ab9acb66fdc9/ecbc6fe0-de48-11f1-9c22-175a2c83b550.png"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T16:04:08.358475+09:00",
+      "page_text": "#러시아CIS #CIS마케팅 #글로벌마케팅 #브랜드마케팅 #오프라인마케팅 #이벤트운영 #팝업스토어 #인플루언서마케팅 #인플루언서협업 #콘텐츠트래킹 #데이터취합 #시장조사 #트렌드리서치 #경쟁사분석 #뷰티트렌드 #K뷰티 #뷰티브랜드 #스킨케어 #PR #커뮤니케이션 #현장지원 #통번역 #러시아어 #영어비즈니스 #중앙아시아 #프로젝트매니지먼트 #협업역량 #마케팅인턴 #채용전환형인턴 #아누아",
+      "body_attempted_at": "2026-11-12T16:04:08.358475+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-10T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "da81f23ef4913d7bbe3777dd825e189731d9d97b80bc3bdcded23d366efd8fac",
+        "verdict": "not_relevant",
+        "reason": "러시아/CIS 지역 대상 마케팅 직무로 소프트웨어 개발이나 데이터 분석 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363977": {
+      "notice": {
+        "id": "linkareer-intern/363977",
+        "source_id": "linkareer-intern",
+        "article_no": "363977",
+        "title": "[주식회사 에이피알] [마케팅] 동남아 틱톡샵 어필리에이트 마케팅 채용연계형 인턴사원 모집",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363977",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [
+          "인턴"
+        ],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "마케팅 직무이며 4년제 대학 졸업예정자 또는 졸업자를 지원 자격으로 명시하고 있습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": false
+      },
+      "body_text": "",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><img src=\"https://media-cdn.linkareer.com/se2editor/image/986632\" title=\"마케팅-동남아-틱톡샵-어필리에이트-마케팅-채용연계형-인턴사원-모집-에이피알-11-12-2026_02_59_PM.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/986632"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T16:04:08.358475+09:00",
+      "page_text": "",
+      "body_attempted_at": "2026-11-12T16:04:08.358475+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-10T23:59:59.999000+09:00",
+        "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "f68e31b41c91a0b70d9d9e332c06e155464cadf5227ab336fc61171f83112810",
+        "verdict": "not_relevant",
+        "reason": "마케팅 직무이며 4년제 대학 졸업예정자 또는 졸업자를 지원 자격으로 명시하고 있습니다.",
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
+    "linkareer-intern/363965": {
+      "notice": {
+        "id": "linkareer-intern/363965",
+        "source_id": "linkareer-intern",
+        "article_no": "363965",
+        "title": "[교보생명] 2026 채용연계형 인턴 모집",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363965",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[교보생명] 2026 채용연계형 인턴 모집\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 자산운용\n- 법인영업\n- Wealth Manager\n\n\n\n\n[자격요건]\n\n\n- 4년제 대학 이상 졸업자 또는 졸업예정자\n- 각 모집군별 자격요건 갖춘자\n\n\n\n\n[채용절차]\n\n\n· 서류전형 ➔ 인적성검사 ➔ 면접전형 ➔ 인턴십\n\n\n\n\n[공고상세]",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[교보생명] 2026 채용연계형 인턴 모집</b></span></p><p><span><b>[모집분야]</b></span></p><p>- 자산운용</p><p>- 법인영업</p><p>- Wealth Manager</p><p><span><b>[자격요건]</b></span></p><p>- 4년제 대학 이상 졸업자 또는 졸업예정자</p><p>- 각 모집군별 자격요건 갖춘자</p><p><span><b>[채용절차]</b></span></p><p>· 서류전형 ➔ 인적성검사 ➔ 면접전형 ➔ 인턴십</p><p><span><b>[공고상세]</b></span></p><p><img src=\"https://career.kyobo.co.kr/ReQuestImageView?S_QU_CD=141_13_1\"></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/986606\" title=\"스크린샷 2026-11-12 144734.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/986604\" title=\"스크린샷 2026-11-12 144748.png\"><br><img src=\"https://media-cdn.linkareer.com/se2editor/image/986605\" title=\"스크린샷 2026-11-12 144805.png\"><br><br></p>",
+      "images": [
+        "https://career.kyobo.co.kr/ReQuestImageView?S_QU_CD=141_13_1",
+        "https://media-cdn.linkareer.com/se2editor/image/986606",
+        "https://media-cdn.linkareer.com/se2editor/image/986604",
+        "https://media-cdn.linkareer.com/se2editor/image/986605"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T16:04:08.358475+09:00",
+      "page_text": "[교보생명] 2026 채용연계형 인턴 모집\n\n\n\n\n\n\n\n\n\n\n[모집분야]\n\n\n- 자산운용\n- 법인영업\n- Wealth Manager\n\n\n\n\n[자격요건]\n\n\n- 4년제 대학 이상 졸업자 또는 졸업예정자\n- 각 모집군별 자격요건 갖춘자\n\n\n\n\n[채용절차]\n\n\n· 서류전형 ➔ 인적성검사 ➔ 면접전형 ➔ 인턴십\n\n\n\n\n[공고상세]",
+      "body_attempted_at": "2026-11-12T16:04:08.358475+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-23T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363960": {
+      "notice": {
+        "id": "linkareer-intern/363960",
+        "source_id": "linkareer-intern",
+        "article_no": "363960",
+        "title": "[카카오뱅크] AI 서비스 기획 어시스턴트 (체험형 인턴)",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363960",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": "[카카오뱅크] AI 서비스 기획 어시스턴트 (체험형 인턴)\n\n\n\n\n[담당할 업무]\n· AI 서비스 테스트 케이스 및 시나리오 관리\n· 모델 성능 개선을 위한 인사이트 도출\n· 실제 사용자 시뮬레이션 테스트\n· AI 응답의 자연스러움, 정확성, 적시성 평가\n\n\n[필수 경험과 역량]\n· 꼼꼼하고 정확한 업무 처리가 가능한 분\n· 끈기 있고, 집중력 있게 테스트 진행이 가능한 분\n· 명확하고, 원활한 커뮤니케이션 역량이 있는 분\n· 일정과 시간 관리를 잘 하며 책임감 있게 일하는 분\n· 6개월 풀타임 근무가 가능한 분\n\n\n[우대사항]\n· AI 관련 전공자인 분\n· AI 서비스에 관심이 있고, 관련한 업무 경험이 있는 분\n· AI 툴과 서비스 활용에 관심이 많은 분",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<p><span><b>[카카오뱅크] AI 서비스 기획 어시스턴트 (체험형 인턴)</b></span></p><p><span>[담당할 업무]</span></p><p><span>· AI 서비스 테스트 케이스 및 시나리오 관리</span></p><p><span>· 모델 성능 개선을 위한 인사이트 도출</span></p><p><span>· 실제 사용자 시뮬레이션 테스트</span></p><p><span>· AI 응답의 자연스러움, 정확성, 적시성 평가</span></p><p><span>[필수 경험과 역량]</span></p><p><span>· 꼼꼼하고 정확한 업무 처리가 가능한 분</span></p><p><span>· 끈기 있고, 집중력 있게 테스트 진행이 가능한 분</span></p><p><span>· 명확하고, 원활한 커뮤니케이션 역량이 있는 분</span></p><p><span>· 일정과 시간 관리를 잘 하며 책임감 있게 일하는 분</span></p><p><span>· 6개월 풀타임 근무가 가능한 분&nbsp;</span></p><p><span>[우대사항]</span></p><p><span>· AI 관련 전공자인 분&nbsp;</span></p><p><span>· AI 서비스에 관심이 있고, 관련한 업무 경험이 있는 분</span></p><p><span>· AI 툴과 서비스 활용에 관심이 많은 분</span></p><p><img src=\"https://media-cdn.linkareer.com/se2editor/image/986590\" title=\"20261112_142850.png\"><br><br></p>",
+      "images": [
+        "https://media-cdn.linkareer.com/se2editor/image/986590"
+      ],
+      "summary": null,
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T16:04:08.358475+09:00",
+      "page_text": "[카카오뱅크] AI 서비스 기획 어시스턴트 (체험형 인턴)\n\n\n\n\n[담당할 업무]\n· AI 서비스 테스트 케이스 및 시나리오 관리\n· 모델 성능 개선을 위한 인사이트 도출\n· 실제 사용자 시뮬레이션 테스트\n· AI 응답의 자연스러움, 정확성, 적시성 평가\n\n\n[필수 경험과 역량]\n· 꼼꼼하고 정확한 업무 처리가 가능한 분\n· 끈기 있고, 집중력 있게 테스트 진행이 가능한 분\n· 명확하고, 원활한 커뮤니케이션 역량이 있는 분\n· 일정과 시간 관리를 잘 하며 책임감 있게 일하는 분\n· 6개월 풀타임 근무가 가능한 분\n\n\n[우대사항]\n· AI 관련 전공자인 분\n· AI 서비스에 관심이 있고, 관련한 업무 경험이 있는 분\n· AI 툴과 서비스 활용에 관심이 많은 분",
+      "body_attempted_at": "2026-11-12T16:04:08.358475+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-25T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363956": {
+      "notice": {
+        "id": "linkareer-intern/363956",
+        "source_id": "linkareer-intern",
+        "article_no": "363956",
+        "title": "[ST인터내셔널] 2027년 상반기 채용연계형 인턴 채용",
+        "category": "채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363956",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2026-11-30T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363954": {
+      "notice": {
+        "id": "linkareer-intern/363954",
+        "source_id": "linkareer-intern",
+        "article_no": "363954",
+        "title": "[라포랩스] [식품 브랜드 신사업] 콘텐츠 마케팅 인턴",
+        "category": "체험형 인턴",
+        "url": "https://linkareer.com/activity/363954",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-10T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
+    "linkareer-intern/363953": {
+      "notice": {
+        "id": "linkareer-intern/363953",
+        "source_id": "linkareer-intern",
+        "article_no": "363953",
+        "title": "[Semiworks USA ] [미국] 반도체 스마트 품질 관리 및 ESG 솔루션 전문 기업 유지보수(Gas Detector Maintenance) 모집",
+        "category": "체험형 인턴, 채용연계형 인턴",
+        "url": "https://linkareer.com/activity/363953",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T16:04:08.358475+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": null,
+        "interests": [],
+        "reasons": [],
+        "ai": null,
+        "notified": false
+      },
+      "body_text": null,
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": null,
+      "images": [],
+      "summary": null,
+      "body_attempts": 0,
+      "fetched_at": null,
+      "ai_deadline": {
+        "checked": true,
+        "kind": "마감",
+        "at": "2027-02-10T23:59:59.999000+09:00",
+        "model": "source"
+      }
+    },
     "skku-notice01/141861": {
       "notice": {
         "id": "skku-notice01/141861",
@@ -4119,7 +4741,7 @@
       "fetched_at": "2026-11-12T03:40:29.257841+09:00",
       "page_text": "(재)유하푸른재단에서는 이공계 대학생들에게 장학금 지원의 기회를 제공하기 위해 2027년도 제10기 장학생 선발을 아래와 같이 진행하고자 합니다. 관심 있는 학생분들의 많은 지원 바랍니다.\n\n1. 선발 대상 및 인원\n1) 대상 : 국내 종합 4년제 대학교 이공계열 학과* 1학년 재학생(27학년도 1학기 기준 3학기 진입 예정자)\n* 선발 우대학과 : 반도체, 화학공학, 전기전자, 기계관련 전공\n※ 의대, 약대, 간호대 등 특수·전문계열 전공 제외\n2) 선발인원 : 총 10명 이내\n3) 지원 자격\n가. 1학기 평균학점 3.8점 이상( 4.5 만점 기준)인 자\n나. 정규학기 12학점 이상 이수한 자\n다. 타 재단 장학금 등 중복수혜 제한은 재단 장학금 지급 규정에 따름\n\n2. 장학생 지원사항\n1) 유하푸른재단 선발장학금 2백만원 / 1인 1회 지급\n2) 2학년부터 졸업시까지 최대 6학기, 재단 기준에 따른 등록금 지원\n※ 등록금은 고지서상 지정 계좌로 지급하고, 그 외 지원금은 장학생 본인 명의 계좌로 지급합니다.\n※ 매 학기 성적 및 결격사유 심사하여 계속 지원 여부 결정됩니다.\n3) 해외교환학생 장학금 (아시아 250만원, 미주/유럽/기타 400만원)\n※ 정규학기 교환학생으로 프로그램만 지원하며 방학기간 프로그램은 제외됩니다.\n※ 파견교 이수 학기, 학점의 본교 인정 요건 및 지원 횟수는 재단 기준을 따릅니다.\n\n3. 선발일정\n1) 선발 절차 : 원서접수→서류심사→면접심사→최종 선발\n2) 세부 선발 일정\n가. 원서접수 기간 : ~ 2026년 11월 20일(금) 23:59 까지 재단 지정 이메일 수신분에 한하여 접수\n※ 마감 이후 수신분 불인정\n나. 서류 발표 : 2026년 11월 27일(금)\n다. 면접심사 : 2026년 12월 29일(화)~30일(수) (*일자별 면접 장소 다름)\n라. 최종 합격자 발표 : 2027년 1월초 예정\n마. 장학증 수여식 : 2027년 1월 말~ 2월초 (예정)\n※ 면접심사, 최종합격자발표, 장학증 수여식은 상황에 따라 일정이 변경될수 있음.\n※ 장학증서 수여식은 필수 참석 행사로, 불참 시 장학생 선발이 무효 처리 됩니다.\n\n4. 지원 방법\n1) 제출서류를 이메일으로만 접수함 (우편,팩스, 방문 접수 불가)\n2) 제출서류 및 인정 기준 → 첨부된 장학생 선발 안내문 필독\n3) 접수처 : 재단 이메일 rhdrudfla2@oneduksan.com\n4) 문의 : 유하푸른재단 사무국 (Tel: 052-283-9004)\n\n5. 장학생 의무 사항\n가. 매 학기 성적, 이수학점 등 재단의 자격 유지 기준을 충족하고, 요청 서류를 제출해야 함\n나. 장학증서 수여식 및 재단 주관 필수 행사에 반드시 참석해야 하며, 수여식 불참 시 장학생 선발이 무효 처리됨\n다. 타 장학금 신청·수혜 전 재단의 사전 확인 및 승인을 받아야 하며, 중복수혜 위반 시 자격 상실 및 환수 조치가 될 수 있음\n라. 휴학·복학 등 학적 변동 사항을 신고하고, 전과·편입 시 사전 승인을 받아야 함\n마. 재단의 제반 규정 및 운영지침을 준수하고, 재단과 장학생의 명예를 유지해야 함\n\n6. 기타\n1) 지원자 본인의 개별 이메일만 접수 인정함\n2) 접수 마감 시각 이후 수신된 이메일은 접수하지 않음\n3) 제출서류 누락, 파일 오류 등에 따른 불이익은 지원자에게 있음\n4) 접수 확인은 이메일 수신 여부를 의미하며 서류 적격 여부를 보증하지 않음\n\n붙임 1. 2027년도 제 10기 유하푸른장학재단 장학생 선발 안내문 1부.\n2. 지원서 1부. 끝.",
       "body_attempted_at": "2026-11-12T03:40:29.257841+09:00",
-      "rechecked_at": "2026-11-12T03:40:29.257841+09:00",
+      "rechecked_at": "2026-11-12T16:04:08.358475+09:00",
       "changed_at": "2026-11-12T03:40:29.257841+09:00",
       "change_kind": "본문",
       "ai_deadline": {
@@ -10020,7 +10642,7 @@
         "kind": "마감",
         "at": "2026-11-16T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-12T00:54:59.040681+09:00"
+      "rechecked_at": "2026-11-12T16:04:08.358475+09:00"
     },
     "skku-career-intern/165112": {
       "notice": {
@@ -10527,7 +11149,7 @@
         "kind": "일정",
         "at": "2026-12-30T09:00:00+09:00"
       },
-      "rechecked_at": "2026-11-12T02:45:13.021179+09:00"
+      "rechecked_at": "2026-11-12T16:04:08.358475+09:00"
     },
     "cse-notice/228261": {
       "notice": {
@@ -25799,574 +26421,6 @@
         "fingerprint": "31e6914960bcbe10dd189c12383b8f601f74da14c9649b442da58d32ee636492",
         "verdict": "not_relevant",
         "reason": "해당 직무는 콘텐츠 에디터로 소프트웨어 개발 및 IT 기술 직무와 관련이 없습니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "sw-notice/227620": {
-      "notice": {
-        "id": "sw-notice/227620",
-        "source_id": "sw-notice",
-        "article_no": "227620",
-        "title": "[1~4학년 지원 가능] (지원기간: 11.2~11.15) 2026 SKKU 동계 PharmXplore Scholars 선발 안내",
-        "category": "채용/모집",
-        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=227620",
-        "posted_on": "2026-10-30",
-        "pinned": false,
-        "deadline": "2026-11-15T23:59:00+09:00",
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "약학대학에서는 학부생들에게 약학 분야의 연구 참여 기회를 제공하고 연구 역량을 함양할 수 있도록,\n「제4기 SKKU PharmXplore Scholars」 프로그램을 운영하고 있습니다.\n\n본 프로그램은 8주간 연구실 인턴 활동을 수행하며,\n참여 학생에게 장학금 80만원과 수료증을 제공합니다.\n\n우리 대학 학생들의 관심과 참여도가 높은 프로그램인 만큼,\n보다 많은 학생들이 참여 바랍니다.\n\n모집대상: 본교 약학과 1~3학년 및 타 학과 1~4학년\n신청기간: 2026. 11. 2.(월) ~ 11. 15.(일)\n상세내용: 프로그램 안내 공지(https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141079&article.offset=0&articleLimit=10)",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [
-        {
-          "name": "2026 동계 SKKU PharmXplore Scholars 프로그램 모집 공고문.hwpx",
-          "url": "https://sw.skku.edu/sw/notice.do?mode=download&articleNo=227620&attachNo=204543",
-          "type": "HWPX",
-          "size": null
-        },
-        {
-          "name": "[붙임1] 2026 동계 SKKU PharmXplore Scholars_프로그램 참여연구실.pdf",
-          "url": "https://sw.skku.edu/sw/notice.do?mode=download&articleNo=227620&attachNo=204544",
-          "type": "PDF",
-          "size": null
-        }
-      ],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><div><span>약학대학에서는&nbsp;</span><span>학부생들에게 약학 분야의 연구 참여 기회를 제공하고 연구 역량을 함양할 수 있도록,</span></div><div><span>「제4기 SKKU PharmXplore Scholars」 프로그램</span><span>을 운영하고 있습니다.</span></div><div><span><br></span></div><p><span>본 프로그램은&nbsp;</span><strong><span>8주간 연구실 인턴 활동을 수행하며,&nbsp;</span></strong></p><p><strong><span>참여 학생에게 장학금 80만원과 수료증을 제공</span></strong><span>합니다.</span></p><p><span><br></span></p><p><span>우리 대학 학생들의 관심과 참여도가 높은 프로그램</span><span>인 만큼,&nbsp;</span></p><p><span>보다 많은 학생들이 참여 바랍니다.</span></p><p><span><br></span></p><ul><li><span><strong>모집대상</strong>: 본교 약학과 1~3학년 및 <strong>타 학과 1~4학년</strong></span></li><li><span><strong>신청기간: 2026. 11. 2.(월) ~ 11. 15.(</strong></span><span><strong>일)</strong></span></li><li><span><strong>상세내용:&nbsp;</strong></span><span><strong>프로그램 안내 공지(<a href=\"https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&amp;articleNo=141079&amp;article.offset=0&amp;articleLimit=10\">https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&amp;articleNo=141079&amp;article.offset=0&amp;articleLimit=10</a>)</strong></span></li><li><br></li></ul><p><img src=\"https://sw.skku.edu/_res/editor_image/2026/10/WAWEwoMBrZaSOjBMrILB0.png\"></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
-      "images": [
-        "https://sw.skku.edu/_res/editor_image/2026/10/WAWEwoMBrZaSOjBMrILB0.png"
-      ],
-      "summary": "약학대학에서 8주간 연구실 인턴을 수행할 '제4기 SKKU PharmXplore Scholars'를 모집합니다. 약학과 1~3학년 및 타 학과 1~4학년을 대상으로 하며 11월 15일까지 신청 가능합니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T18:24:00.504814+09:00"
-    },
-    "jasoseol-intern/106980": {
-      "notice": {
-        "id": "jasoseol-intern/106980",
-        "source_id": "jasoseol-intern",
-        "article_no": "106980",
-        "title": "[에이피알] [마케팅] 포맨트 온라인 마케팅 채용연계형 인턴사원 모집",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106980",
-        "posted_on": "2026-10-30",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "온라인 마케팅 직무를 채용하는 공고로, 소프트웨어 개발 직무와는 관련이 없습니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/396/webp/%EB%A7%88%EC%BC%80%ED%8C%85-%ED%8F%AC%EB%A7%A8%ED%8A%B8-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EB%A7%88%EC%BC%80%ED%8C%85-%EC%B1%84%EC%9A%A9%EC%97%B0%EA%B3%84%ED%98%95-%EC%9D%B8%ED%84%B4%EC%82%AC%EC%9B%90-%EB%AA%A8%EC%A7%91-%EC%97%90%EC%9D%B4%ED%94%BC%EC%95%8C-10-30-2026_11_27_AM.webp?1793327825\" alt=\"에이피알 [마케팅] 포맨트 온라인 마케팅 채용연계형 인턴사원 모집\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/396/webp/%EB%A7%88%EC%BC%80%ED%8C%85-%ED%8F%AC%EB%A7%A8%ED%8A%B8-%EC%98%A8%EB%9D%BC%EC%9D%B8-%EB%A7%88%EC%BC%80%ED%8C%85-%EC%B1%84%EC%9A%A9%EC%97%B0%EA%B3%84%ED%98%95-%EC%9D%B8%ED%84%B4%EC%82%AC%EC%9B%90-%EB%AA%A8%EC%A7%91-%EC%97%90%EC%9D%B4%ED%94%BC%EC%95%8C-10-30-2026_11_27_AM.webp?1793327825"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T19:43:06.785630+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-12-28T23:59:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "188de46c50996cf61d295dde0f37e421a6e19c0bacedb089d7e2f00e760932eb",
-        "verdict": "not_relevant",
-        "reason": "온라인 마케팅 직무를 채용하는 공고로, 소프트웨어 개발 직무와는 관련이 없습니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "futurecar-notice/67564": {
-      "notice": {
-        "id": "futurecar-notice/67564",
-        "source_id": "futurecar-notice",
-        "article_no": "67564",
-        "title": "2026학년도 겨울학기 비교과 프로그램 신청 안내(11/4 09:00 ~ 11/10 23:00) [접수]",
-        "category": null,
-        "url": "https://swb.skku.edu/futurecar/notice.do?mode=view&articleNo=67564",
-        "posted_on": "2026-10-30",
-        "pinned": false,
-        "deadline": "2026-11-10T23:00:00+09:00",
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "2026학년도 겨울학기 비교과 프로그램에 대해 안내하오니 관심 있는 학생 여러분의 많은 참여 바랍니다.\n개설 프로그램, 교육기간, 유의사항 등 자세한 내용은 아이캠퍼스 '미래차 부트캠프(신청)'의 공지에서 확인하시기\n바랍니다.\n\n▷ 신청기간 : 2026년 11월 4일(수) 09:00 ~ 11월 10일(화) 23:00\n▷ 신청방법 : GLS → 챌린지스퀘어 → 비교과프로그램 → 수강신청\n▷ 신청 대상 : 미래차 부트캠프 참여학생",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\t\t\t\t<div><p>2026학년도 겨울학기 비교과 프로그램에 대해 안내하오니 관심 있는 학생 여러분의 많은 참여 바랍니다.</p><p>개설 프로그램, 교육기간, 유의사항 등 자세한 내용은 아이캠퍼스 '미래차 부트캠프(신청)'의 공지에서 확인하시기</p><p>바랍니다.</p><p>▷ 신청기간 : 2026년 11월 4일(수) 09:00 ~ 11월 10일(화) 23:00</p><p>▷ 신청방법 : GLS → 챌린지스퀘어 → 비교과프로그램 → 수강신청</p><p>▷ 신청 대상 : 미래차 부트캠프 참여학생</p></div>\n\t\t\t\n\t\t\t\n          </div>",
-      "images": [],
-      "summary": "미래차 부트캠프 참여 학생을 대상으로 2026학년도 겨울학기 비교과 프로그램을 모집합니다. 11월 4일부터 11월 10일까지 GLS 챌린지스퀘어를 통해 신청할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T18:24:00.504814+09:00"
-    },
-    "skku-notice01/141136": {
-      "notice": {
-        "id": "skku-notice01/141136",
-        "source_id": "skku-notice01",
-        "article_no": "141136",
-        "title": "2027년도 제16회 변호사시험 시험관리원(재학생) 모집(★조기마감/추천인원은 11.9.(월) 메일 안내 예정★)",
-        "category": "채용/모집",
-        "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?mode=view&articleNo=141136",
-        "posted_on": "2026-10-30",
-        "pinned": true,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "2027년도 제16회 변호사시험이 2027. 1. 12.(화)∼1. 16.(토)까지 4일간(※ 1. 14. 목요일은 휴식일) 본교 법학관에서 시행될 예정인 바, 시험관리원으로 본교 재학생을 선발하여 시험관리 업무에 종사토록 하고자 하오니 관심 있는 학생의 많은 지원 바랍니다.\n\n1. 자격요건: 1∼4학년 학사과정 재학생\n* 4학년의 경우 2027년 두 학기(1·2학기)가 남은 재학생은 가능하나, 취업 예정자는 제외\n※ 법학전문대학원 진학 예정자 및 취업 예정자 제외\n※ 법무부 주관 시험 감독 유경험자 우선 선발\n\n2. 근무기간 및 근무내용\n○ 2027. 1. 11.(월): 시험관리요령 교육 수강 및 시험장 준비\n- 오전(10:00～12:00): 출근 확인(시간 엄수), 시험 관리 요령 교육 수강\n※ 중식 - 도시락(법무부에서 제공)\n- 오후(13:00～17:00): 시험장 준비(시험본부, 시험실, 복도 준비)\n○ 2027. 1. 12.(화)∼1. 16.(토) [1. 14.(목)은 휴식일]: 시험시행 관리\n▷ 1일차(1. 12.(화)): 07:50∼19:20\n▷ 2일차(1. 13.(수)): 07:50∼19:20\n▷ 3일차(1. 15.(금)): 07:50∼17:50\n▷ 4일차(1. 16.(토)): 07:50∼18:20\n- 시험실 내 설치된 노트북 및 네트워크 장비 등 시설 보안관리(보안요원)\n- 시험시행본부 또는 복도에서 시험관리 보조(행정요원, 무전요원, 복도요원)\n※ 시험 기간 중 법무부에서 중식(도시락) 제공\n\n3. 지급 수당: 평일 10만 원, 휴일 12만 원 [5일간 총 근무수당: 52만 원]\n※ 근무는 무작위 배정(법무부 배정), 시험기간 종료 후 일괄하여 계좌이체 예정\n\n4. 유의사항\n○ 학교 추천 후, 11. 24.(화)~11. 27.(금) 중 법무부 유선 연락을 통하여 근무 가능여부 및 근무 안내를 받은 경우에 선발이 확정되므로 유선 대기 바랍니다.\n※ 근무 가능여부 유선 확인시 통화가 불가한 경우나 문자 연락에도 무응답일 경우 근무 불가자로 판단함을 유의하시기 바랍니다.\n○ 시험관리업무의 특성상 근무 기간 중(2027. 1. 11. ~ 1. 16.)에는 시험관리원의 지각이나 결근, 중간 교체가 절대 허용되지 않으며, 1. 14.(목)은 휴일로 근무하지 않습니다.\n○ 감염병, 독감 등으로 근무에 지장이 없도록 건강 관리에도 특별히 유의하기 바랍니다.\n\n★★ 시험관리원 근무 희망자는 11. 8.(일)까지 아래 링크의 설문을 통해 신청해주시기 바랍니다 ★★\n-링크: https://forms.gle/fiPx8Tr6pQ73Lw3m9\n\n※ 간단한 유선 면접이 있을 수 있으며, 지원자가 많을 경우 조기마감 될 수 있습니다.\n\n☎ 기타 문의사항: 법무부 법조인력과(02-2110-3234) / 법학전문대학원행정실(02-760-0923)",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><p>2027년도 제16회 변호사시험이 2027. 1. 12.(화)∼1. 16.(토)까지 4일간(※ 1. 14. 목요일은 휴식일) 본교 법학관에서 시행될 예정인 바, 시험관리원으로 본교 재학생을 선발하여 시험관리 업무에 종사토록 하고자 하오니 관심 있는 학생의 많은 지원 바랍니다.&nbsp;</p><p>1.&nbsp;자격요건:&nbsp;1∼4학년&nbsp;학사과정&nbsp;재학생</p><p>&nbsp; * 4학년의 경우 2027년 두 학기(1·2학기)가 남은 재학생은 가능하나, 취업 예정자는 제외</p><p>※&nbsp;법학전문대학원&nbsp;진학&nbsp;예정자&nbsp;및&nbsp;취업&nbsp;예정자&nbsp;제외</p><p>※&nbsp;법무부&nbsp;주관&nbsp;시험&nbsp;감독&nbsp;유경험자&nbsp;우선&nbsp;선발</p><p>2.&nbsp;근무기간&nbsp;및&nbsp;근무내용</p><p>&nbsp;○ 2027. 1. 11.(월): 시험관리요령 교육 수강 및 시험장 준비</p><p>&nbsp; &nbsp;- 오전(10:00～12:00): 출근 확인(시간 엄수), 시험 관리 요령 교육 수강</p><p>&nbsp; &nbsp; &nbsp;※ 중식 - 도시락(법무부에서 제공)</p><p>&nbsp; &nbsp;- 오후(13:00～17:00): 시험장 준비(시험본부, 시험실, 복도 준비)</p><p>&nbsp;○ 2027. 1. 12.(화)∼1. 16.(토) [1. 14.(목)은 휴식일]: 시험시행 관리</p><p>&nbsp; &nbsp; &nbsp;▷ 1일차(1. 12.(화)): 07:50∼19:20</p><p>&nbsp; &nbsp; &nbsp;▷ 2일차(1. 13.(수)): 07:50∼19:20</p><p>&nbsp; &nbsp; &nbsp;▷ 3일차(1. 15.(금)): 07:50∼17:50</p><p>&nbsp; &nbsp; &nbsp;▷ 4일차(1. 16.(토)): 07:50∼18:20</p><p>&nbsp; &nbsp;- 시험실 내 설치된 노트북 및 네트워크 장비 등 시설 보안관리(보안요원)</p><p>&nbsp; &nbsp;- 시험시행본부 또는 복도에서 시험관리 보조(행정요원, 무전요원, 복도요원)</p><p>&nbsp; &nbsp; &nbsp;※ 시험 기간 중 법무부에서 중식(도시락) 제공</p><p>3.&nbsp;지급&nbsp;수당:&nbsp;평일&nbsp;10만&nbsp;원,&nbsp;휴일&nbsp;12만&nbsp;원&nbsp;[5일간&nbsp;총&nbsp;근무수당:&nbsp;52만&nbsp;원]</p><p>&nbsp;※ 근무는 무작위 배정(법무부 배정), 시험기간 종료 후 일괄하여 계좌이체 예정</p><p>4.&nbsp;유의사항</p><p>&nbsp;○ 학교 추천 후, 11. 24.(화)~11. 27.(금) 중 법무부 유선 연락을 통하여 근무 가능여부 및 근무 안내를 받은 경우에 선발이 확정되므로 유선 대기 바랍니다.</p><p>&nbsp; ※ 근무 가능여부 유선 확인시 통화가 불가한 경우나 문자 연락에도 무응답일 경우 근무 불가자로 판단함을 유의하시기 바랍니다.</p><p>&nbsp;○ 시험관리업무의 특성상 근무 기간 중(2027. 1. 11. ~ 1. 16.)에는 시험관리원의 지각이나 결근, 중간 교체가 절대 허용되지 않으며, 1. 14.(목)은 휴일로 근무하지 않습니다.</p><p>&nbsp;○ 감염병, 독감 등으로 근무에 지장이 없도록 건강 관리에도 특별히 유의하기 바랍니다.</p><p>★★&nbsp;시험관리원&nbsp;근무&nbsp;희망자는&nbsp;11.&nbsp;8.(일)까지&nbsp;아래&nbsp;링크의&nbsp;설문을&nbsp;통해&nbsp;신청해주시기&nbsp;바랍니다&nbsp;★★</p><p>-링크:&nbsp;https://forms.gle/fiPx8Tr6pQ73Lw3m9</p><p>※&nbsp;간단한&nbsp;유선&nbsp;면접이&nbsp;있을&nbsp;수&nbsp;있으며,&nbsp;지원자가&nbsp;많을&nbsp;경우&nbsp;조기마감&nbsp;될&nbsp;수&nbsp;있습니다.</p><p>☎&nbsp;기타&nbsp;문의사항:&nbsp;법무부&nbsp;법조인력과(02-2110-3234)&nbsp;/&nbsp;법학전문대학원행정실(02-760-0923)</p></div>",
-      "images": [],
-      "summary": "본교 재학생을 대상으로 2027년 제16회 변호사시험 시험관리원을 모집합니다. 11월 8일까지 구글 설문지를 통해 신청할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T14:44:43.370511+09:00",
-      "previous_title": "2027년도 제16회 변호사시험 시험관리원(재학생) 모집(~11.8.(일)/조기마감 가능)",
-      "changed_at": "2026-11-03T18:24:00.504814+09:00",
-      "change_kind": "제목",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "마감",
-        "at": "2026-11-08T23:59:00+09:00"
-      }
-    },
-    "cse-notice/227634": {
-      "notice": {
-        "id": "cse-notice/227634",
-        "source_id": "cse-notice",
-        "article_no": "227634",
-        "title": "2026학년도 2학기 학생성공 창의장학생 신청 안내(11.16.(월) 13:00 메일 제출자 限)",
-        "category": "장학",
-        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=227634",
-        "posted_on": "2026-10-30",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "[장학] 2026학년도 2학기 학생성공 창의장학생 신청 안내\n\n1. 목적: 우리 대학 학생성공의 First Mover 역할과 학생성공의 롤모델 발굴\n2. 신청 대상 : 소프트웨어학과 / 컴퓨터공학과 재학생\n3. 신청 자격\n- 단순히 성적 우수학생이 아닌 종합적 창의적인 학생 발굴\n- 다양한 학내 활동 및 성균 공동체에 적극적인 도움을 준 학생\n- 도전적인 연구 및 학습 성취를 이뤄낸 학생\n- 직전학기 이수학점 12학점 (7학기 9학점) 이상이며 평점평균 2.0 이상인 재학생\n\n3.1 선발 인원 : 0명\n\n4. 제외 대상\n- 2026년도 2학기 비재학생\n- 직전학기 이수학점 12학점 미만 (7학기 9학점), 평점평균 2.0 미만\n- 유사 활동으로 타 장학금 수혜하는 학생 (학생회 리더장학금, President List, 정용지 창의장학금 등) 또는\n동일 사례로 과거 창의장학금을 수혜했던 학생 지원 불가\n\n5. 지원 금액: 등록금 전액\n(단, 학생이 다른 장학금 수혜시 250만원 범위 내에서 학업생활지원비 지급 가능)\n\n6. 신청 기한: 11월 16일(월) 오후 1시까지 /기한엄수 必\n\n7. 제출 서류:\n1) 장학금 신청서 (붙임 파일 양식 사용)\n2) 추천서 (지도교수 또는 SW융합대학 단과대학 교수의 추천_학생 본인이 직접 연락 드려 작성)\n- 추천 교수의 서명 必 (붙임 파일 양식 사용)\n* 추천 교수님에게 학과 사무실에서 확인할 예정\n3) 개인정보활용동의서 (붙임 파일 양식 사용)\n4) 학습계획서 (붙임 파일 양식 사용)\n* 장학금 신청서, 개인정보활용동의서에 본인 서명 必\n\n8. 제출 방법: 이메일 제출 (아래의 메일 제목을 반드시 지켜서 제출할 것)\n* 기한: 11.16.(월) 13:00 메일 제출자 限\n* 제출 서류 순서에 맞게 1개의 PDF파일로 합쳐서 제출!\n\n[메일 제목: 2026년 2학기 학생성공 창의장학생 신청_학과_학번_이름]\n- 이메일 주소: computing@skku.edu\n\n감사합니다.",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [
-        {
-          "name": "학생성공 장학금 신청서식(학생용).hwp",
-          "url": "https://cse.skku.edu/cse/notice.do?mode=download&articleNo=227634&attachNo=204559",
-          "type": "HWP",
-          "size": null
-        }
-      ],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><strong><span>[장학] 2026학년도 2학기 학생성공 창의장학생 신청 안내</span></strong></p><p><span><span>&nbsp;</span></span></p><p><span><span><strong>1. 목적: 우리 대학 학생성공의 First Mover 역할과 학생성공의 롤모델 발굴</strong></span></span></p><p><strong><span><span>2. 신청 대상 : 소프트웨어학과 / 컴퓨터공학과 <strong>재학생&nbsp;</strong></span></span></strong></p><p><span><span><strong>3. 신청 자격</strong></span></span></p><p><span><span>&nbsp; - 단순히 성적 우수학생이 아닌 <u><strong>종합적 창의적인 학생 발굴&nbsp;</strong></u></span></span></p><p><span><span>&nbsp; - 다양한 학내 활동 및 성균 공동체에 적극적인 도움을 준 학생</span></span></p><p><span><span>&nbsp; - 도전적인 연구 및 학습 성취를 이뤄낸 학생</span></span></p><p><span><span>&nbsp; - <strong><u>직전학기 이수학점 12학점 (7학기 9학점) 이상이며 평점평균 2.0 이상인 재학생</u><br>&nbsp;</strong></span></span></p><p><span><span><strong>3.1 선발 인원 : 0명</strong></span></span></p><p><strong><span><span>&nbsp;</span></span></strong></p><p><span><span><strong>4. 제외 대상</strong></span></span></p><p><span><span>&nbsp; - 2026년도 2학기 비재학생</span></span></p><p><span><span>&nbsp; - 직전학기 이수학점 12학점 미만 (7학기 9학점), 평점평균 2.0 미만</span></span></p><p><span><span>&nbsp; - <strong>유사 활동으로 타 장학금 수혜하는 학생 (학생회 리더장학금, President List, 정용지 창의장학금 등) 또는&nbsp;</strong></span></span></p><p><span><span><strong>&nbsp; &nbsp; &nbsp;동일 사례로 과거 창의장학금을 수혜했던 학생<span>&nbsp;지원 불가</span></strong></span></span></p><p><span><span>&nbsp;&nbsp;</span></span></p><p><span><span><strong>5. 지원 금액: 등록금 전액&nbsp;</strong></span></span></p><p><span><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (단, 학생이 다른 장학금 수혜시 250만원 범위 내에서 학업생활지원비 지급 가능)</span></span></p><p><span><span>&nbsp;</span></span></p><p><span><span><strong><span>6. 신청 기한: 11월 16일(월) 오후 1시<span>까지</span> /</span><span><span>기한엄수 必</span></span></strong></span></span></p><p><span><span><strong>7. 제출 서류:&nbsp;</strong></span></span></p><p><span><span><strong>&nbsp; &nbsp; 1) 장학금 신청서 (붙임 파일 양식 사용)</strong></span></span></p><p><span><span><strong>&nbsp; &nbsp; 2) 추천서 (지도교수 또는 SW융합대학 단과대학 교수의 추천_학생 본인이 직접 연락 드려 작성)<br>&nbsp; &nbsp; &nbsp; &nbsp; - 추천 교수의 서명 必 (붙임 파일 양식 사용)&nbsp;</strong></span></span></p><p><span><span><strong>&nbsp; &nbsp; &nbsp; <span>&nbsp;* 추천 교수님에게 학과 사무실에서 확인할 예정</span></strong></span></span></p><p><span><span><strong>&nbsp; &nbsp; 3) 개인정보활용동의서 &nbsp;(붙임 파일 양식 사용)</strong></span></span></p><p><span><span><strong>&nbsp;<strong>&nbsp; &nbsp;4) 학습계획서 <span><span><strong>(붙임 파일 양식 사용)</strong></span></span></strong></strong></span></span></p><p><span><span><span>&nbsp; &nbsp; &nbsp;<strong>* 장학금 신청서, 개인정보활용동의서에 본인 서명 必</strong></span></span></span></p><p><span><span>&nbsp;</span></span></p><p><span><span><strong>8. 제출 방법: 이메일 제출&nbsp;</strong>(아래의 메일 제목을 반드시 지켜서 제출할 것)</span></span></p><p><span><span><span><span><strong><span>*&nbsp;</span></strong></span></span><span><strong><span>기한: 11.16.(월) 13:00 메일 제출자 限</span></strong></span>&nbsp; &nbsp;&nbsp;</span></span></p><p><span><span>* 제출 서류 순서에 맞게 1개의 PDF파일로 합쳐서 제출!</span></span></p><p><span><span><strong>[메일 제목: 2026년 2학기 학생성공 창의장학생 신청_학과_학번_이름]</strong></span></span></p><p><span><span><strong>&nbsp;<span>- 이메일 주소: computing@skku.edu</span></strong></span></span></p><p>감사합니다.</p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
-      "images": [],
-      "summary": "소프트웨어학과 및 컴퓨터공학과 재학생을 대상으로 2026학년도 2학기 학생성공 창의장학생을 선발합니다. 11월 16일 오후 1시까지 이메일로 신청 서류를 제출해야 합니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "마감",
-        "at": "2026-11-16T13:00:00+09:00"
-      }
-    },
-    "cse-notice/227633": {
-      "notice": {
-        "id": "cse-notice/227633",
-        "source_id": "cse-notice",
-        "article_no": "227633",
-        "title": "2026학년도 2학기 정용지 창의장학생 신청 안내(11.16.(월) 13:00 메일 제출자 限)",
-        "category": "장학",
-        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=227633",
-        "posted_on": "2026-10-30",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T12:27:42.906254+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "[장학] 2026학년도 2학기 정용지 창의장학생 신청 안내\n\n1. 신청자격 및 선정기준\n가. 신청가능자: 2026학년도 2학기 기준 학사과정 재학생\n나. 자격요건: 직전학기 취득학점 12학점(마지막 학기의 경우 9학점) 및 평점평균 2.0 이상\n다. 장학기금 목적: (주) 케어젠 정용지 대표(유전공학 89학번)의 정신을 계승할 \"담대한 도전과 미래가치를 창출\"할 \"특별한 재능\"이 있는 인재 양성\n라. 선정대상: 학생성공의 First Mover로서 창의적인 활동 추진 및 공동체에 기여, 그리고 도전적인 연구를 진행하는 단과대학 학장의 최종 추천을 받은 학부생\n- 장학금액: 등록금 전액(다른 장학금 수혜 시 250만원 범위 내 학업생활지원비 지급)\n마. 기타: 기부자 예우차원으로 장학생 선발 시 기부자 감사편지 작성이 가능한 자, 별도 수여식 없이 장학금만 지급 예정\n\n2. 제출서류: 첨부파일 참조(정용지 창의장학금 신청서, 추천서, 개인정보활용동의서, 학습계획서(학생용))\n1) 장학금 신청서 (붙임 파일 양식 사용)\n2) 추천서 (지도교수 또는 SW융합대학 단과대학 교수의 추천_학생 본인이 직접 연락 드려 작성)\n- 추천 교수의 서명 必 (붙임 파일 양식 사용)\n* 추천 교수님에게 학과 사무실에서 확인할 예정\n3) 개인정보활용동의서 (붙임 파일 양식 사용)\n4) 학습계획서 (붙임 파일 양식 사용)\n* 장학금 신청서, 개인정보활용동의서에 본인 서명 必\n\n3. 제출방법: 이메일 제출 (아래의 제목을 반드시 지켜서 제출할 것)\n* 기한: 11.16.(월) 13:00 메일 제출자 限\n* 제출 서류 순서에 맞게 1개의 PDF파일로 합쳐서 제출!\n\n[메일 제목: 2026년 2학기 정용지 창의장학생 신청_학과_학번_이름]\n- 이메일 주소: computing@skku.edu\n\n4. 유의사항: 해당 장학금을 지원하는 자는 '학생성공 창의장학금'과 중복하여 지원할 수 없으며, 학생이 판단하여 1개만 지원 가능\n\n감사합니다.",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [
-        {
-          "name": "정용지 창의장학금 신청서, 추천서, 개인정보활용동의서, 학습계획서(학생용).hwp",
-          "url": "https://cse.skku.edu/cse/notice.do?mode=download&articleNo=227633&attachNo=204558",
-          "type": "HWP",
-          "size": null
-        }
-      ],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><span><strong>[장학] 2026학년도 2학기 정용지 창의장학생 신청 안내</strong></span></p><p><span><span>&nbsp;</span></span></p><p><span><span>1. 신청자격 및 선정기준</span></span></p><p><span><span>&nbsp; 가. 신청가능자: 2026학년도 2학기 기준 학사과정 재학생</span></span></p><p><span><span>&nbsp; 나. 자격요건: 직전학기 취득학점 12학점(마지막 학기의 경우 9학점) 및 평점평균 2.0 이상</span></span></p><p><span><span>&nbsp; 다. 장학기금 목적: (주) 케어젠 정용지 대표(유전공학 89학번)의 정신을 계승할 \"담대한 도전과 미래가치를 창출\"할 \"특별한 재능\"이 있는 인재 양성</span></span></p><p><span><span>&nbsp; 라. 선정대상: 학생성공의 First Mover로서 창의적인 활동 추진 및 공동체에 기여, 그리고 도전적인 연구를 진행하는 단과대학 학장의 최종 추천을 받은 학부생</span></span></p><p><span><span>&nbsp; - 장학금액: <span>등록금 전액(다른 장학금 수혜 시 250만원 범위 내 학업생활지원비 지급)</span></span></span></p><p><span><span>&nbsp; 마. 기타: 기부자 예우차원으로 장학생 선발 시 기부자 감사편지 작성이 가능한 자, 별도 수여식 없이 장학금만 지급 예정</span></span></p><p><span><span>&nbsp;</span></span></p><p><span><span>2. 제출서류: 첨부파일 참조(정용지 창의장학금 신청서, 추천서, 개인정보활용동의서, 학습계획서(학생용))</span></span></p><p><span><span><strong>&nbsp; &nbsp; 1) 장학금 신청서 (붙임 파일 양식 사용)</strong></span></span></p><p><span><span><strong>&nbsp; &nbsp; 2)&nbsp;</strong></span></span><span><span><strong>추천서 (지도교수 또는 SW융합대학 단과대학 교수의 추천_학생 본인이 직접 연락 드려 작성)<br>&nbsp; &nbsp; &nbsp; &nbsp; - 추천 교수의 서명 必 (붙임 파일 양식 사용)&nbsp;</strong></span></span></p><p><span><span><strong>&nbsp; &nbsp; &nbsp; <span>&nbsp;* 추천 교수님에게 학과 사무실에서 확인할 예정</span></strong></span></span></p><p><span><span><strong>&nbsp; &nbsp; 3) 개인정보활용동의서 (붙임 파일 양식 사용)</strong></span></span></p><p><span><span><strong>&nbsp; &nbsp; 4) 학습계획서 <span><span><strong>(붙임 파일 양식 사용)</strong></span></span></strong></span></span></p><p><span><span><span>&nbsp; &nbsp; &nbsp;<strong>* 장학금 신청서, 개인정보활용동의서에 본인 서명 必</strong></span></span></span></p><p><span><span>3. 제출방법: &nbsp;이메일 제출 (아래의 제목을 반드시 지켜서 제출할 것)</span></span></p><p><span><span><strong><span>*&nbsp;</span></strong></span></span><span><strong><span>기한: 11.16.(월) 13:00 메일 제출자 限</span></strong></span></p><p>* 제출 서류 순서에 맞게 1개의 PDF파일로 합쳐서 제출!</p><p><span><span><strong>&nbsp;</strong></span></span></p><p><span><span><strong>[메일 제목: 2026년 2학기 정용지 창의장학생 신청_학과_학번_이름]</strong></span></span></p><p><span><span><strong>&nbsp; <span>- 이메일 주소: computing@skku.edu</span></strong></span></span><br><span><span><br></span></span></p><p><span><span>4. 유의사항: 해당 장학금을 지원하는 자는 '학생성공 창의장학금'과 중복하여 지원할 수 없으며, 학생이 판단하여 1개만 지원 가능</span></span></p><p><span><span><br></span></span></p><p><span><span>감사합니다.</span></span></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
-      "images": [],
-      "summary": "2026학년도 2학기 정용지 창의장학생을 모집하며, 신청 자격을 갖춘 재학생은 11월 16일 오후 1시까지 이메일로 서류를 제출해야 합니다. 학생성공 창의장학금과는 중복 지원이 불가합니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T12:27:42.906254+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "마감",
-        "at": "2026-11-16T13:00:00+09:00"
-      }
-    },
-    "sw-notice/227525": {
-      "notice": {
-        "id": "sw-notice/227525",
-        "source_id": "sw-notice",
-        "article_no": "227525",
-        "title": "[토스] 소프트웨어학과 대상 겨울방학 인턴 채용설명회 (화학관 330110호 장소변경/1,2학년 정원 마감)",
-        "category": "채용/모집",
-        "url": "https://sw.skku.edu/sw/notice.do?mode=view&articleNo=227525",
-        "posted_on": "2026-10-29",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "화학관 330110호로 장소 변경되었습니다.\n1, 2학년 정원 마감되었습니다.\n\n토스에서 Platform Engineer 직무 겨울 인턴십 채용 설명회를 준비했어요!\n이번 겨울 방학, 토스에서 인턴으로 일하면 어떤 경험을 할 수 있는지 직접 소개해 드리려고 해요.\nAI가 코드를 쓰는 시대, 개발자는 어떤 역할을 해야 할까요?\n이번 세션에서는 이 질문에 대한 토스팀의 생각도 함께 나눌 예정이에요.\n토스가 일하는 방식과 앞으로 개발자에게 필요한 역량이 궁금하셨다면 좋은 기회가 될 거예요.\n사전 신청자 대상으로 에어팟을 비롯한 다양한 경품 추천도 진행하니, 많은 관심과 참여 부탁드려요.\n\n■ 인턴십 채용 설명회\n• 일시: 2026. 11. 9. (월) 오후 5시\n• 장소: 성균관대학교 화학관 330110호 (장소변경)\n• 대상: 소프트웨어학과 및 개발에 관심이 있는 학생(1,2학년 정원마감)\n• 사전 신청 링크: https://toss.im/_m/B2hX5sWq\n*사전 신청자 정원 마감 시, 설문이 조기 종료될 수 있습니다.\n\n■ 사전 신청 및 행사 참석 혜택\n• 사전 신청자 전원 햄버거 및 음료 증정\n• 사전 신청자 대상 경품 현장 추첨 1명 (에어팟5)\n• Q&A 세션 등을 통한 토스 굿즈 증정\n\n■ 이런 분들께 추천드려요\n• 토스 겨울 인턴십에 관심 있는 대학생 및 졸업예정자\n• 토스에서 개발자로 일하는 경험이 궁금한 분\n• AI 시대에 개발자로서 어떻게 성장해야 할지 고민하는 분",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><div><div><div><div><p><span><strong>화학관 330110호로 &nbsp;</strong></span>장소 변경되었습니다.</p><p>1, 2학년 정원 마감되었습니다.</p><p>토스에서 Platform Engineer 직무 겨울 인턴십 채용 설명회를 준비했어요!</p><p>이번 겨울 방학, 토스에서 인턴으로 일하면 어떤 경험을 할 수 있는지 직접 소개해 드리려고 해요.</p><p>AI가 코드를 쓰는 시대, 개발자는 어떤 역할을 해야 할까요?</p><p>이번 세션에서는 이 질문에 대한 토스팀의 생각도 함께 나눌 예정이에요.<br>토스가 일하는 방식과 앞으로 개발자에게 필요한 역량이 궁금하셨다면 좋은 기회가 될 거예요.</p><p>사전 신청자 대상으로 에어팟을 비롯한 다양한 경품 추천도 진행하니, 많은 관심과 참여 부탁드려요.</p><p><strong>■ 인턴십 채용 설명회</strong><br>• 일시: 2026. 11. 9. (월) 오후 5시<br>• 장소: <span><strong>성균관대학교 화학관 330110호 (장소변경)</strong></span><br>• 대상: 소프트웨어학과 및 개발에 관심이 있는 학생(1,2학년 정원마감)</p><p>• 사전 신청 링크: <span><a href=\"https://toss.im/_m/B2hX5sWq\"></a><strong><a href=\"https://toss.im/_m/B2hX5sWq\">https://toss.im/_m/B2hX5sWq</a></strong></span></p><p>*사전 신청자 정원 마감 시, 설문이 조기 종료될 수 있습니다.<br><br><strong>■ 사전 신청 및 행사 참석 혜택</strong><br>• 사전 신청자 전원 햄버거 및 음료 증정<br>• 사전 신청자 대상 경품 현장 추첨 1명 (에어팟5)<br>• Q&amp;A 세션 등을 통한 토스 굿즈 증정<br><strong><br></strong><strong>■ 이런 분들께 추천드려요</strong><br>• 토스 겨울 인턴십에 관심 있는 대학생 및 졸업예정자<br>• 토스에서 개발자로 일하는 경험이 궁금한 분</p><p>• AI 시대에 개발자로서 어떻게 성장해야 할지 고민하는 분</p><p><img src=\"https://cse.skku.edu/_res/editor_image/2026/10/gItstGUEKxqqGnZKqzPQ0.png\"></p></div></div></div></div></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
-      "images": [
-        "https://cse.skku.edu/_res/editor_image/2026/10/gItstGUEKxqqGnZKqzPQ0.png"
-      ],
-      "summary": "소프트웨어학과 학생을 대상으로 토스 겨울방학 인턴 채용설명회가 11월 9일 오후 5시 화학관에서 개최됩니다. 1, 2학년은 정원이 마감되었으며 사전 신청 링크를 통해 참여할 수 있습니다.",
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T18:24:00.504814+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "model": "gemini-3.1-flash-lite",
-        "kind": "일정",
-        "at": "2026-11-09T17:00:00+09:00"
-      }
-    },
-    "jasoseol-intern/106984": {
-      "notice": {
-        "id": "jasoseol-intern/106984",
-        "source_id": "jasoseol-intern",
-        "article_no": "106984",
-        "title": "[비즈테크아이] 26년 하반기 신입인턴 채용(전환형)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106984",
-        "posted_on": "2026-10-29",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "relevant",
-          "reason": "소프트웨어 개발, AI 엔지니어링, 클라우드 운영 등 IT 기술 직무를 모집하며 학부생이 지원 가능합니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/416/webp/26%EB%85%84_%ED%95%98%EB%B0%98%EA%B8%B0_%EC%8B%A0%EC%9E%85%EC%9D%B8%ED%84%B4_%EC%B1%84%EC%9A%A9%28%EC%A0%84%ED%99%98%ED%98%95%29.webp?1793338406\" alt=\"비즈테크아이 26년 하반기 신입인턴 채용(전환형)\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/416/webp/26%EB%85%84_%ED%95%98%EB%B0%98%EA%B8%B0_%EC%8B%A0%EC%9E%85%EC%9D%B8%ED%84%B4_%EC%B1%84%EC%9A%A9%28%EC%A0%84%ED%99%98%ED%98%95%29.webp?1793338406"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T19:43:06.785630+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-15T23:00:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "fe8586acf1aafad81d004ea418fc77dbd6b5d04c118254f2730f78d3747fd7de",
-        "verdict": "relevant",
-        "reason": "소프트웨어 개발, AI 엔지니어링, 클라우드 운영 등 IT 기술 직무를 모집하며 학부생이 지원 가능합니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/106968": {
-      "notice": {
-        "id": "jasoseol-intern/106968",
-        "source_id": "jasoseol-intern",
-        "article_no": "106968",
-        "title": "[에이피알] [CS] 글로벌 CX 운영/기획 채용연계형 인턴사원 모집",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106968",
-        "posted_on": "2026-10-29",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "해당 직무는 글로벌 고객 서비스(CS) 운영 및 기획으로 소프트웨어 개발 직무가 아닙니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/327/webp/CS-%EA%B8%80%EB%A1%9C%EB%B2%8C-CX-%EC%9A%B4%EC%98%81-%EA%B8%B0%ED%9A%8D-%EC%B1%84%EC%9A%A9%EC%97%B0%EA%B3%84%ED%98%95-%EC%9D%B8%ED%84%B4%EC%82%AC%EC%9B%90-%EB%AA%A8%EC%A7%91-%EC%97%90%EC%9D%B4%ED%94%BC%EC%95%8C-10-29-2026_04_42_PM.webp?1793259996\" alt=\"에이피알 [CS] 글로벌 CX 운영/기획 채용연계형 인턴사원 모집\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/327/webp/CS-%EA%B8%80%EB%A1%9C%EB%B2%8C-CX-%EC%9A%B4%EC%98%81-%EA%B8%B0%ED%9A%8D-%EC%B1%84%EC%9A%A9%EC%97%B0%EA%B3%84%ED%98%95-%EC%9D%B8%ED%84%B4%EC%82%AC%EC%9B%90-%EB%AA%A8%EC%A7%91-%EC%97%90%EC%9D%B4%ED%94%BC%EC%95%8C-10-29-2026_04_42_PM.webp?1793259996"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T19:43:06.785630+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-12-27T23:59:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "ebcd2f5479d71dc7947f41d315a8c0d03c4dafc89afbae2131b7678ef755c69f",
-        "verdict": "not_relevant",
-        "reason": "해당 직무는 글로벌 고객 서비스(CS) 운영 및 기획으로 소프트웨어 개발 직무가 아닙니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/106957": {
-      "notice": {
-        "id": "jasoseol-intern/106957",
-        "source_id": "jasoseol-intern",
-        "article_no": "106957",
-        "title": "[에이피알] 아마존/틱톡샵 채널 운영 채용연계형 인턴사원 모집",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106957",
-        "posted_on": "2026-10-29",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "해당 직무는 이커머스 채널 운영 및 관리 업무로 소프트웨어 개발 직무가 아닙니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/271/webp/%EA%B2%BD%EC%98%81%EC%A7%80%EC%9B%90-%EC%95%84%EB%A7%88%EC%A1%B4-%ED%8B%B1%ED%86%A1%EC%83%B5-%EC%B1%84%EB%84%90-%EC%9A%B4%EC%98%81-%EC%B1%84%EC%9A%A9%EC%97%B0%EA%B3%84%ED%98%95-%EC%9D%B8%ED%84%B4%EC%82%AC%EC%9B%90-%EB%AA%A8%EC%A7%91-%EC%97%90%EC%9D%B4%ED%94%BC%EC%95%8C-10-29-2026_01_30_PM.webp?1793248484\" alt=\"에이피알 아마존/틱톡샵 채널 운영 채용연계형 인턴사원 모집\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/271/webp/%EA%B2%BD%EC%98%81%EC%A7%80%EC%9B%90-%EC%95%84%EB%A7%88%EC%A1%B4-%ED%8B%B1%ED%86%A1%EC%83%B5-%EC%B1%84%EB%84%90-%EC%9A%B4%EC%98%81-%EC%B1%84%EC%9A%A9%EC%97%B0%EA%B3%84%ED%98%95-%EC%9D%B8%ED%84%B4%EC%82%AC%EC%9B%90-%EB%AA%A8%EC%A7%91-%EC%97%90%EC%9D%B4%ED%94%BC%EC%95%8C-10-29-2026_01_30_PM.webp?1793248484"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T19:58:56.205729+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-12-27T23:59:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "8be6315bcf59ad50d0211fff8d4193b0cc73a9e0ec9cf1e7a5b74f16ae70befb",
-        "verdict": "not_relevant",
-        "reason": "해당 직무는 이커머스 채널 운영 및 관리 업무로 소프트웨어 개발 직무가 아닙니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/106956": {
-      "notice": {
-        "id": "jasoseol-intern/106956",
-        "source_id": "jasoseol-intern",
-        "article_no": "106956",
-        "title": "[딜라이트룸] 알라미 미국 인플루언서 마케팅 인턴 모집",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106956",
-        "posted_on": "2026-10-29",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "해당 직무는 인플루언서 마케팅 운영 업무로 소프트웨어 개발 직무가 아닙니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/258/webp/%EB%AF%B8%EA%B5%AD_%EC%9D%B8%ED%94%8C%EB%A3%A8%EC%96%B8%EC%84%9C_%EB%A7%88%EC%BC%80%ED%8C%85_%EC%9D%B8%ED%84%B4_%EA%B3%B5%EA%B3%A0_261029.webp?1793242467\" alt=\"딜라이트룸 알라미 미국 인플루언서 마케팅 인턴 모집\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/258/webp/%EB%AF%B8%EA%B5%AD_%EC%9D%B8%ED%94%8C%EB%A3%A8%EC%96%B8%EC%84%9C_%EB%A7%88%EC%BC%80%ED%8C%85_%EC%9D%B8%ED%84%B4_%EA%B3%B5%EA%B3%A0_261029.webp?1793242467"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T19:58:56.205729+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-08T23:59:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "de1abbd2716f51a95e42e8bd2138b362b7883c0117e18488556d6162701d367a",
-        "verdict": "not_relevant",
-        "reason": "해당 직무는 인플루언서 마케팅 운영 업무로 소프트웨어 개발 직무가 아닙니다.",
-        "model": "gemini-3.1-flash-lite"
-      }
-    },
-    "jasoseol-intern/106922": {
-      "notice": {
-        "id": "jasoseol-intern/106922",
-        "source_id": "jasoseol-intern",
-        "article_no": "106922",
-        "title": "[와탭랩스] 총무 담당자 채용 전환형 인턴 모집",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106922",
-        "posted_on": "2026-10-29",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": {
-          "verdict": "not_relevant",
-          "reason": "해당 직무는 사내 총무 및 자산 관리 업무로 소프트웨어 개발 직무가 아닙니다.",
-          "model": "gemini-3.1-flash-lite",
-          "interests": []
-        },
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/167/webp/%EC%B4%9D%EB%AC%B4_%EB%8B%B4%EB%8B%B9%EC%9E%90%28%EC%B1%84%EC%9A%A9_%EC%A0%84%ED%99%98%ED%98%95_%EC%9D%B8%ED%84%B4%29___%EC%99%80%ED%83%AD%EB%9E%A9%EC%8A%A4_%EB%B8%8C%EB%9E%9C%EB%93%9C%EB%B0%98%EC%98%81.webp?1793155717\" alt=\"와탭랩스 총무 담당자 채용 전환형 인턴 모집\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/375/167/webp/%EC%B4%9D%EB%AC%B4_%EB%8B%B4%EB%8B%B9%EC%9E%90%28%EC%B1%84%EC%9A%A9_%EC%A0%84%ED%99%98%ED%98%95_%EC%9D%B8%ED%84%B4%29___%EC%99%80%ED%83%AD%EB%9E%A9%EC%8A%A4_%EB%B8%8C%EB%9E%9C%EB%93%9C%EB%B0%98%EC%98%81.webp?1793155717"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T19:58:56.205729+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-08T23:59:00+09:00",
-        "model": "source"
-      },
-      "intern_judgment": {
-        "fingerprint": "d464041c1496c3e02df4858d99a3e48ad2deeb29f4d84a57b4c95426d21a123e",
-        "verdict": "not_relevant",
-        "reason": "해당 직무는 사내 총무 및 자산 관리 업무로 소프트웨어 개발 직무가 아닙니다.",
         "model": "gemini-3.1-flash-lite"
       }
     }

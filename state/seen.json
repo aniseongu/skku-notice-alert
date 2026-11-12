@@ -1,9 +1,9 @@
 {
   "version": 1,
   "external_checked_at": {
-    "linkareer-intern": "2026-11-12T14:27:22.900704+09:00",
-    "jasoseol-intern": "2026-11-12T14:27:22.900704+09:00",
-    "skku-career-intern": "2026-11-12T14:27:22.900704+09:00"
+    "linkareer-intern": "2026-11-12T16:04:08.358475+09:00",
+    "jasoseol-intern": "2026-11-12T16:04:08.358475+09:00",
+    "skku-career-intern": "2026-11-12T16:04:08.358475+09:00"
   },
   "sources": {
     "skku-notice01": {
@@ -631,6 +631,11 @@
         },
         "141861": {
           "first_seen": "2026-11-12T15:24:51.534780+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "141870": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
           "status": "notified",
           "attempts": 0
         }
@@ -2208,6 +2213,46 @@
           "first_seen": "2026-11-12T14:27:22.900704+09:00",
           "status": "pending",
           "attempts": 0
+        },
+        "363989": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "363986": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "363977": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "363965": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "363960": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "363956": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "363954": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
+          "status": "pending",
+          "attempts": 0
+        },
+        "363953": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
+          "status": "pending",
+          "attempts": 0
         }
       }
     },
@@ -2772,6 +2817,21 @@
         "165182": {
           "first_seen": "2026-11-12T12:31:45.914887+09:00",
           "status": "skipped",
+          "attempts": 0
+        },
+        "165193": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "165199": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "165194": {
+          "first_seen": "2026-11-12T16:04:08.358475+09:00",
+          "status": "notified",
           "attempts": 0
         }
       }

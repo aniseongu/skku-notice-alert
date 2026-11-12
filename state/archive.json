@@ -57,6 +57,57 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "cse-notice/228441": {
+      "notice": {
+        "id": "cse-notice/228441",
+        "source_id": "cse-notice",
+        "article_no": "228441",
+        "title": "Rethinking Mental Healthcare in the Era of Generative AI(11/24 10:00)",
+        "category": "행사/세미나",
+        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=228441",
+        "posted_on": "2026-11-12",
+        "pinned": false,
+        "deadline": null,
+        "first_seen": "2026-11-12T13:30:14.684624+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "default",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "relevant",
+          "reason": "소프트웨어학과 재학생으로서 생성형 AI와 헬스케어의 융합 사례를 학습할 수 있는 공개 세미나입니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "Title: Rethinking Mental Healthcare in the Era of Generative AI\n\nSpeaker: Prof. Matteo Malgaroli @ New York University\n\nTime : 10:00 - 11:00, Nov 24, 2026\n\nLocation:\nOnline: https://hli.skku.edu/InvitedTalk261124\n\nLanguage: English speech & English slides\n\nAbstract:\nThe assessment and treatment of mental health conditions face ongoing challenges in terms of scalability and subjectivity. The integration of Large Language Models (LLMs) presents a potential solution by automating key clinical tasks to augment provider capabilities. In this talk, I will: (1) present findings on the capabilities of LLMs to assess mental health symptoms; (2) explore preliminary findings on using LLMs for clinical care, and (3) outline ongoing efforts to evaluate these technologies while addressing critical challenges in equity across populations and safety.\n\nBio:\nMatteo Malgaroli is an Assistant Professor of Psychiatry at the NYU Grossman School of Medicine and at the NYU Center for Data Science, where he leads the DigiMind Lab. He received his Ph.D. from Columbia University. His research, supported by federal agencies and tech companies, uses language models to identify digital markers of mental health and studies the real-world effectiveness of generative AI for psychotherapy. He also helps define industry standards for evaluating psychosocial risks in AI as Clinical Lead at CoralMind and in collaboration with MLCommons. His work has appeared in The Lancet Digital Health and EMNLP and has been covered by the Washington Post, Forbes, and NBC.",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><span><strong>Title</strong></span><span><strong>: Rethinking Mental Healthcare in the Era of Generative AI</strong></span></p><p><span><strong>Speaker</strong></span><span><strong>: Prof. Matteo Malgaroli @ New York University</strong></span></p><p><span><strong>Time&nbsp;</strong></span><span><strong>: 10:00 - 11:00, Nov 24, 2026</strong></span></p><p><span><strong>Location</strong></span><strong><span>:&nbsp;</span></strong></p><p><strong><span>Online:&nbsp;</span><a href=\"https://hli.skku.edu/InvitedTalk261124\"></a><a href=\"https://hli.skku.edu/InvitedTalk261124\">https://hli.skku.edu/InvitedTalk261124</a></strong><span><strong>&nbsp;</strong></span></p><p><span>Language</span><span>: English speech &amp; English slides</span></p><p><span>Abstract</span><span>:&nbsp;</span></p><p><span>The assessment and treatment of mental health conditions face ongoing challenges in terms of scalability and subjectivity. The integration of Large Language Models (LLMs) presents a potential solution by automating key clinical tasks to augment provider capabilities. In this talk, I will: (1) present findings on the capabilities of LLMs to assess mental health symptoms; (2) explore preliminary findings on using LLMs for clinical care, and (3) outline ongoing efforts to evaluate these technologies while addressing critical challenges in equity across populations and safety.</span></p><p><span>Bio</span><span>:</span></p><p><span>Matteo Malgaroli is an Assistant Professor of Psychiatry at the NYU Grossman School of Medicine and at the NYU Center for Data Science, where he leads the DigiMind Lab. He received his Ph.D. from Columbia University. His research, supported by federal agencies and tech companies, uses language models to identify digital markers of mental health and studies the real-world effectiveness of generative AI for psychotherapy. He also helps define industry standards for evaluating psychosocial risks in AI as Clinical Lead at CoralMind and in collaboration with MLCommons. His work has appeared in The Lancet Digital Health and EMNLP and has been covered by the Washington Post, Forbes, and NBC.</span></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [],
+      "summary": "11월 24일 오전 10시부터 온라인으로 진행되는 생성형 AI와 정신 건강 관련 강연에 참여하면 됩니다.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T13:30:14.684624+09:00",
+      "page_text": "Title: Rethinking Mental Healthcare in the Era of Generative AI\n\nSpeaker: Prof. Matteo Malgaroli @ New York University\n\nTime : 10:00 - 11:00, Nov 24, 2026\n\nLocation:\nOnline: https://hli.skku.edu/InvitedTalk261124\n\nLanguage: English speech & English slides\n\nAbstract:\nThe assessment and treatment of mental health conditions face ongoing challenges in terms of scalability and subjectivity. The integration of Large Language Models (LLMs) presents a potential solution by automating key clinical tasks to augment provider capabilities. In this talk, I will: (1) present findings on the capabilities of LLMs to assess mental health symptoms; (2) explore preliminary findings on using LLMs for clinical care, and (3) outline ongoing efforts to evaluate these technologies while addressing critical challenges in equity across populations and safety.\n\nBio:\nMatteo Malgaroli is an Assistant Professor of Psychiatry at the NYU Grossman School of Medicine and at the NYU Center for Data Science, where he leads the DigiMind Lab. He received his Ph.D. from Columbia University. His research, supported by federal agencies and tech companies, uses language models to identify digital markers of mental health and studies the real-world effectiveness of generative AI for psychotherapy. He also helps define industry standards for evaluating psychosocial risks in AI as Clinical Lead at CoralMind and in collaboration with MLCommons. His work has appeared in The Lancet Digital Health and EMNLP and has been covered by the Washington Post, Forbes, and NBC.",
+      "body_attempted_at": "2026-11-12T13:30:14.684624+09:00",
+      "translation": {
+        "title": "생성형 AI 시대의 정신 건강 관리 재고(11/24 10:00)",
+        "body": "제목: 생성형 AI 시대의 정신 건강 관리 재고\n\n연사: Matteo Malgaroli 교수 @ 뉴욕대학교(New York University)\n\n일시: 2026년 11월 24일 10:00 - 11:00\n\n장소:\n온라인: https://hli.skku.edu/InvitedTalk261124\n\n언어: 영어 강연 및 영어 슬라이드\n\n초록:\n정신 건강 상태의 평가와 치료는 확장성과 주관성 측면에서 지속적인 어려움에 직면해 있습니다. 거대 언어 모델(LLM)의 통합은 주요 임상 업무를 자동화하여 의료 제공자의 역량을 강화함으로써 잠재적인 해결책을 제시합니다. 이번 강연에서는 (1) 정신 건강 증상을 평가하는 LLM의 역량에 대한 연구 결과를 발표하고, (2) 임상 치료에 LLM을 활용하는 것에 대한 예비 연구 결과를 탐색하며, (3) 인구 집단 간의 형평성과 안전성이라는 중요한 과제를 해결하면서 이러한 기술을 평가하기 위한 진행 중인 노력을 개괄합니다.\n\n약력:\nMatteo Malgaroli는 뉴욕대학교 그로스만 의과대학(NYU Grossman School of Medicine) 및 뉴욕대학교 데이터 과학 센터(NYU Center for Data Science)의 정신의학 조교수로, DigiMind Lab을 이끌고 있습니다. 그는 컬럼비아 대학교에서 박사 학위를 받았습니다. 연방 기관과 기술 기업의 지원을 받는 그의 연구는 언어 모델을 사용하여 정신 건강의 디지털 지표를 식별하고 심리 치료를 위한 생성형 AI의 실질적인 효과를 연구합니다. 그는 또한 CoralMind의 임상 책임자로서, 그리고 MLCommons와의 협력을 통해 AI의 심리사회적 위험을 평가하기 위한 산업 표준을 정의하는 데 기여하고 있습니다. 그의 연구는 The Lancet Digital Health와 EMNLP에 게재되었으며, 워싱턴 포스트, 포브스, NBC 등에서 다루어진 바 있습니다.",
+        "model": "gemini-3.1-flash-lite"
+      },
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite",
+        "kind": "일정",
+        "at": "2026-11-24T10:00:00+09:00"
+      }
+    },
     "skku-career-intern/165187": {
       "notice": {
         "id": "skku-career-intern/165187",
@@ -427,7 +478,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 일본 마케팅 직무를 모집하며 소프트웨어 개발이나 데이터 분석 등 IT 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[신세계/퍼셀] 일본 마케팅 인턴모집\n\n\n\n신세계그룹 계열 코스메틱 브랜드 \"퍼셀\"에서 일본 브랜드 채널 운영과 인플루언서 마케팅을 함께할 일본 마케팅 인턴을 모집합니다.\n\n✏️ 앞선 과학으로, 피부고민을 해결합니다\n\n\n퍼셀(Purcell)은 2021년 런칭한 신세계그룹 계열 더마 코스메틱 브랜드입니다.\n\n대기업의 안정적인 기반 위에서, 인디브랜드 못지않은 빠른 실행력으로 성장해온 퍼셀.\n이제 그 다음 챕터를 함께 써 내려갈 분을 찾습니다.\n\n\n\n🌏 일본 브랜드 계정과 현지 인플루언서 협업을 직접 운영하며 글로벌 마케팅 경험을 쌓을 수 있어요\n👩‍🎓 신세계 그룹 경력증명서 발급 가능\n\n\n\n👀 이런 분을 찾고 있어요\n✅ 일본 소비자가 SNS에서 어떤 콘텐츠에 반응하는지 평소 관심 있게 지켜보시는 분\n✅ 브랜드 계정을 맡아 \"이 채널을 어떻게 키울까\"를 직접 고민해보고 싶으신 분\n✅ 인플루언서 서칭부터 연락, 제품 발송까지 놓치지 않고 꼼꼼하게 챙길 수 있는 분\n✅ 조사로 끝내지 않고, 찾아낸 트렌드를 콘텐츠 아이디어로 연결해보고 싶으신 분\n✅ 일본어와 한국어를 오가며 현지 감각을 팀에 전해줄 수 있는 분\n✅ 스킨케어와 일본 뷰티 트렌드에 관심이 많으신 분\n\n\n\n🗂️ 업무 내용\n일본 브랜드 온드미디어(공식 SNS 계정) 운영\n일본 현지 트렌드에 맞춘 브랜드 콘텐츠 기획\n일본 인플루언서 서칭 및 시딩 진행\n일본 뷰티 마케팅 시장 조사 (담당자의 1:1 피드백을 통해 경쟁 브랜드·트렌드를 보는 법부터 인사이트 도출까지 배울 수 있어요)\n\n\n\n🎥 필수 스킬\n일본어 능통자\n(외국인의 경우) 비즈니스 수준의 한국어 구사 가능자: TOPIK 5급 이상\n경험해보지 않은 업무에 적극적으로 도전하시는 분\n\n\n\n⭐ 우대 사항\n뷰티 트렌드에 관심이 많으신 분\n엑셀 및 구글 스프레드시트 활용 능력이 있으신 분\n인스타그램, 틱톡, 유튜브 등 SNS 및 숏폼 콘텐츠에 대한 이해도가 높으신 분\n뷰티 SNS 계정 운영 경험이 있으신 분\n뷰티 브랜드 마케팅 혹은 소비재 인플루언서 마케팅 인턴 경험이 있으신 분\n퍼셀 브랜드에 대한 관심과 애정이 있으신 분\n\n\n\n☕ 직원 복지\n● 주 35시간 근무\n● 커피머신 보유, 간식 제공\n● 중식 별도 제공\n\n\n\n💼 근무 여건\n● 근무 형태: 삼구아이앤씨 소속 파견계약직 근무 / 체험형 인턴\n(신세계 그룹 경력증명서 발급 가능)\n● 근무 시간: 09:00 ~ 17:00 (주35시간)\n● 근무 기간: 6개월\n● 근무지: 서울특별시 강남구 압구정로 60길 17, 5층\n\n\n\n💼 전형 절차\n서류전형\n제출 서류 : 이력서 및 자기소개서(필수), 포트폴리오(필수)\n제출 기한 : 채용시 마감\n서류 제출처 : recruit@purcell.kr\n지원 시 메일 제목에 지원분야 기재 필수 (예 : 일본마케팅)\n\n\n면접전형\n최종합격 여부는 면접 진행일 2주일 이내 개별 통보\n\n\n\n\n● 채용 서류 반환 및 파기\n- 반환 청구 기간(180일)이 지난 서류는 「개인정보보호법」에 따라 파기합니다.\n- 제출한 채용서류에 대한 반환을 요청하지 않을 시 서류 일체를 파기합니다.\n- 반환 요청은 채용담당자에게 유선 및 이메일로 신청 가능합니다.\n- 서류 반환 비용은 당사가 부담하며 청구 시점 기준으로 14일 이내 반환합니다.\n- 전자 제출 서류, 자발적 제출 서류, 불가항력에 의해 멸실된 서류는 반환하지 않습니다.",
@@ -448,6 +504,12 @@
         "kind": "마감",
         "at": "2027-02-10T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "ee472dd10012a674ac927a5bbaf2cb46675300a7a7b99940846adde738fbfb45",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 일본 마케팅 직무를 모집하며 소프트웨어 개발이나 데이터 분석 등 IT 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/363855": {
@@ -468,7 +530,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 브랜드 마케팅 업무를 수행하는 어시스턴트를 모집하며 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[카카오페이] [어시스턴트] 브랜드 마케팅 업무 지원\n\n\n\n\n[업무내용]\n- 캠페인 아이데이션부터 기획, 제작, 실행까지 전반적인 업무에 참여합니다.\n- 플랫폼의 긍정적인 버즈를 만들며 서비스 전환에 기여할 수 있는 활동을 기획하고 운영합니다.\n- 소셜 콘텐츠 기획, 인플루언서 협업 관리, 인앱 채널 운영 업무를 지원하고 수행합니다.\n- 서비스 인지 및 전환 목표를 위한 매체 광고 운영을 지원합니다.\n\n\n[필요 역량/경험]\n- 6개월 이상 근무 가능한 대학교 재학생(휴학생) 또는 졸업생\n- 브랜딩 및 마케팅, 커뮤니케이션, 트렌드에 대한 관심\n- 콘텐츠 기획/제작 및 소셜 채널(인스타그램, 유튜브, X 등) 운영 경험\n- IT 및 금융(핀테크) 분야에 대한 관심\n\n\n[선호 역량/경험]\n- Figma 등 디자인 툴 활용 가능 역량\n- Adobe Premiere 등 동영상 편집 툴 활용 가능 역량\n\n\n[전형 절차]\n- 서류 - 1차 인터뷰 - 최종합격",
@@ -491,6 +558,12 @@
         "kind": "마감",
         "at": "2027-02-10T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "e4ad21c8a1fc1c52f32e1eb5cdc1bf6b1e9c86f0a362cf183bae89976f38dd93",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 브랜드 마케팅 업무를 수행하는 어시스턴트를 모집하며 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/363846": {
@@ -511,7 +584,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 공고는 공장 기술직 및 물류직을 모집하며 소프트웨어 개발 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[오비맥주] 광주공장 기술직 정규직 전환형 인턴 채용\n\n\n\n\n[채용분야]\n- 제품팀 기술직\n- 물류팀 지게차\n\n\n[공통 자격요건]\n· 초대졸 이상 졸업자\n· 교대근무 및 주/야간 근무 가능한 자\n\n\n[공통 우대사항]\n· 안전관련 자격증 소지자\n· SAP활동 유경험자\n· 광주광역시, 전남지역 거주자 선호\n· 어학 능력\n· 기계, 전기 전공학과\n· 안전, 배관, 용접, 공작기계, 전기 관련 자격증 소지자",
@@ -534,6 +612,12 @@
         "kind": "마감",
         "at": "2027-02-10T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "4f308a87658bbd57e419e47b7d002c794c7e0f1915cf4d75944113f9754c3795",
+        "verdict": "not_relevant",
+        "reason": "해당 공고는 공장 기술직 및 물류직을 모집하며 소프트웨어 개발 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "cse-notice/228439": {
@@ -1380,7 +1464,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "relevant",
+          "reason": "정보 보안 인턴 직무는 소프트웨어 관련 직무이며 컴퓨터공학 전공자를 우대하고 있어 학부생이 지원하기에 적합합니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "우리를 소개해요\nSecurity실은 Security Policy팀(관리보안)과 Security Engineering팀(기술보안) 두 영역으로 나뉘며, 이 중 Security Policy팀은 전사 (개인)정보보호 관리체계 수립·운영, ISMS 인증심사 관리, 관련 법령 및 정책 동향 모니터링, 정보보호 내부점검, 정보보호 교육 및 인식 제고 활동 등을 담당하고 있습니다.\n\n이런 경험을 할 수 있어요\n관리보안·개인정보보호 담당자와 함께 전사 정보보호 및 개인정보보호 관리체계를 운영하면서, 실무 역량을 쌓을 수 있어요.\n\n우리는 이런 일을 해요\n정기 보안 Compliance 점검 업무를 지원하고, 개선 과제의 이행 현황을 관리해요.\nISMS 인증심사를 준비하면서 증적 자료와 문서를 작성하는 일을 지원해요.\n\n시스템 권한 관리체계를 운영하고, 시스템 권한 부여가 적정한지 검토해요.\n\n임직원 대상 교육, 보안 레터, 캠페인을 기획하고 제작하는 일을 지원해요.\n\n개인정보처리 위·수탁 보안 점검 및 위·수탁 현황 관리를 지원해요.\n\n\n우리는 이런 분과 함께하고 싶어요\n정보보호와 관리보안에서 커리어를 시작하고 싶으신 분\n여러 부서와 원활하게 소통하고 협업할 수 있는 분\n\n문제를 스스로 발견하고 개선하려는 적극적인 태도를 가진 분\n\n그 외 이런 것이 있으면 더 좋아요\n\n정보보호, 컴퓨터공학, 법학 등 관련 전공자 또는 관련 교육 이수자\n정보보호 관리체계, 개인정보보호에 대한 기본적인 이해도가 있는 분\n\nAWS 등 클라우드 및 IT 시스템 전반에 대한 기초 지식을 보유한 분\n\n\n이런 과정을 통해 합류해요\n서류 전형 → 인터뷰 → 처우협의 → 입사\n상세 채용절차 및 FAQ는 링크를 통해 확인해주세요.\n\n\n요기요에 대한 더 많은 정보가 궁금하다면, 여기로 오세요\n요기피플을 위한 복지와 혜택을 링크를 통해 확인하세요!\n\n요기요의 최신 소식이 궁금하시다면?\n\n요기요 기술블로그 바로가기\n\n\n\n기타 사항\n고용형태 : 인턴 (계약직, 6개월)\n입사 후 3개월 수습기간이 있으며, 정규직 전환 검토 가능합니다.\n장애인 및 국가보훈대상자는 지원 시 관계 법령에 따라 우대합니다.\n링크를 통해 개인정보 처리방침 을 확인해보세요!\n문의 : recruit@wesang.com",
@@ -1401,6 +1490,12 @@
         "kind": "마감",
         "at": "2027-02-09T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "ff8b958a87b795af6325b6e591d8acc32de653388e47ca3cccd94d771168230d",
+        "verdict": "relevant",
+        "reason": "정보 보안 인턴 직무는 소프트웨어 관련 직무이며 컴퓨터공학 전공자를 우대하고 있어 학부생이 지원하기에 적합합니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/363738": {
@@ -7518,7 +7613,7 @@
         "kind": "마감",
         "at": "2026-12-02T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-12T00:54:59.040681+09:00"
+      "rechecked_at": "2026-11-12T13:30:14.684624+09:00"
     },
     "skku-notice01/141718": {
       "notice": {
@@ -9228,7 +9323,7 @@
       "fetched_at": "2026-11-10T22:14:45.505798+09:00",
       "page_text": "방학 중 교육지원이 필요한 청소년(초․중․고등학생, 학교 밖 청소년 등)을 대상으로 다양한 주제의 재능 나눔을 실천하고, 창의적인 인재로 함께 성장할 대학(원)생 멘토를 다음과 같이 모집하오니 참여를 희망하는 여러분의 많은 신청 바랍니다.\n\n◎ 봉사활동 안내: 동계 방학 중 약 4-6일간 대학생 멘토가 팀을 이루어,\n교육 소외계층/지역 청소년을 대상으로 교과목 학습지도, 창의적 체험활동, 진로 및 고민 상담 등 다양한 주제로 재능 나눔을 실천하는 캠프 형식의 멘토링 활동\n\n◎ 활동기간: 2026년 12월 ~ 2027년 2월, 약 4~6일(동계 방학 기간 중)\n※ 캠프 운영 일정은 각 멘토팀과 참여(활동)기관 간 협의 후 설정\n\n◎ 활동시간: 최소 30시간 이상\n※ 1일 최대 8시간 인정 가능(활동 준비 및 식사 시간 포함, 이동시간 제외)\n\n◎ 활동단위: 멘토팀은 5명 내외로 구성(2팀 선발 예정, 멘토 1인당 멘티 3명 내외로 캠프 운영)\n\n◎ 활동내용: 교과목 학습지도, 창의적 체험활동, 진로 교육 및 고민 상담 등 다양한 주제의 재능 나눔 활동을 멘토(팀) 자율 구성 후 운영\n※ 멘티 특성을 고려한 프로그램 구성 등 활동 시작 전 참여기관과 사전 협의 필수\n※ 다양한 체험활동과 연계하여 프로그램 편성\n- (예시 1) 과학실험과 연계한 과학탐구력 향상 프로그램\n- (예시 2) 영화 감상 및 토론을 통한 논리력, 발표력 향상 프로그램\n- (예시 3) 팝송을 통한 영어 어휘력 향상 프로그램\n※ 미래 필요역량인 ESG(환경), 첨단산업 주제 프로그램 운영(1개 이상) 권장\n\n◎ 활동방법\n1) 오프라인 캠프: 멘토와 멘티가 직접 만나서 진행하는 대면 방식 캠프\n2) 온라인 캠프: 화상회의 시스템 등을 활용한 비대면 방식 캠프\n3) 혼합형 캠프: 오프라인과 온라인 유형을 병행하는 캠프\n\n◎ 신청기간 및 방법:\n1차 캠프계획서 제출: 2026.11.22.(일)까지 첨부의 프로그램 계획서 작성하여 메일로 제출\n(studentaid@skku.edu)\n*전체 선발인원 TO가 적은 관계로, 지원서를 제출하시더라도 합격 요건에 미달한 경우 성균관대학교 내 인원 선발이 불가할 수 있는 점 양해 부탁드립니다.\n* 활동기관이 신청 시점에 확정되지 않은 경우에는 '미정'으로 제출하셔도 됩니다.(선발 후 기관 협의 가능)\n\n- 문의사항: 학생지원팀 인성품 (02-760-1004, 1072)\n\n자세한 내용은 붙임 파일 참고 부탁드립니다.",
       "body_attempted_at": "2026-11-10T22:14:45.505798+09:00",
-      "rechecked_at": "2026-11-11T23:59:45.693923+09:00",
+      "rechecked_at": "2026-11-12T13:30:14.684624+09:00",
       "changed_at": "2026-11-10T22:14:45.505798+09:00",
       "change_kind": "본문",
       "summary_last_failed_at": null,
@@ -9282,7 +9377,7 @@
         "kind": "마감",
         "at": "2026-11-18T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-12T00:54:59.040681+09:00"
+      "rechecked_at": "2026-11-12T13:30:14.684624+09:00"
     },
     "skku-notice01/141425": {
       "notice": {
@@ -26236,47 +26331,6 @@
         "checked": true,
         "kind": "마감",
         "at": "2026-11-08T23:59:00+09:00",
-        "model": "source"
-      }
-    },
-    "jasoseol-intern/106894": {
-      "notice": {
-        "id": "jasoseol-intern/106894",
-        "source_id": "jasoseol-intern",
-        "article_no": "106894",
-        "title": "[한국언론진흥재단(KPF)] 2026년 3차 체험형 청년인턴 모집(일반행정, AI)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106894",
-        "posted_on": "2026-10-26",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<div><img src=\"https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/920/webp/%EC%BB%A4%EB%A6%AC%EC%96%B4_%ED%95%9C%EA%B5%AD%EC%96%B8%EB%A1%A0%EC%A7%84%ED%9D%A5%EC%9E%AC%EB%8B%A8_%EC%B2%AD%EB%85%84%EC%9D%B8%ED%84%B4_261021_v.0.5.webp?1792988803\" alt=\"한국언론진흥재단(KPF) 2026년 3차 체험형 청년인턴 모집(일반행정, AI)\"></div>",
-      "images": [
-        "https://daoift3qrrnil.cloudfront.net/content_images/images/000/374/920/webp/%EC%BB%A4%EB%A6%AC%EC%96%B4_%ED%95%9C%EA%B5%AD%EC%96%B8%EB%A1%A0%EC%A7%84%ED%9D%A5%EC%9E%AC%EB%8B%A8_%EC%B2%AD%EB%85%84%EC%9D%B8%ED%84%B4_261021_v.0.5.webp?1792988803"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T20:14:32.966928+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-09T17:59:00+09:00",
         "model": "source"
       }
     }

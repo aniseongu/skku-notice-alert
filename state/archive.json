@@ -57,6 +57,50 @@
         "model": "gemini-3.1-flash-lite"
       }
     },
+    "cse-notice/228439": {
+      "notice": {
+        "id": "cse-notice/228439",
+        "source_id": "cse-notice",
+        "article_no": "228439",
+        "title": "[졸업평가] 연구논문작품시스템 보안 조치 안내 (교외 접속 및 비밀번호 변경)",
+        "category": "학사",
+        "url": "https://cse.skku.edu/cse/notice.do?mode=view&articleNo=228439",
+        "posted_on": "2026-11-12",
+        "pinned": true,
+        "deadline": null,
+        "first_seen": "2026-11-12T11:34:49.535023+09:00"
+      },
+      "match": {
+        "rule_name": null,
+        "priority": "low",
+        "interests": [],
+        "reasons": [],
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "졸업평가와 관련된 학사 안내 사항으로 인턴이나 장학 지원과는 관련이 없습니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
+        "notified": true
+      },
+      "body_text": "학생 계정 보호와 안정적인 시스템 운영을 위해 연구논문작품시스템의 비밀번호 변경 및 교외 접속 관련 보안 조치를 안내드립니다.\n\n연구논문작품시스템: https://cssys.skku.ac.kr/cssys/login\n\n1. 교외 접속 방식 변경 예정\n교외에서 연구논문작품시스템에 직접 접속하는 방식이 제한될 예정입니다.\n조치가 적용되면 교외에서는 학교 VPN에 먼저 연결한 뒤 연구논문작품시스템에 접속해야 합니다.\n\n▶ VPN 신청 방법: GLS > IT서비스 > 네트워크서비스 신청 > VPN 신청 (자세한 안내: https://vpninfo.skku.edu)\n\n2. 초기 비밀번호 변경 요청\n초기 비밀번호를 아직 사용 중인 학생은 연구논문작품시스템에 로그인하여 새 비밀번호로 변경해 주시기 바랍니다.\n새 비밀번호를 설정할 때는 다음 기준을 지켜주시기 바랍니다.\n- 영문자, 숫자, 특수문자를 모두 포함하여 8자 이상으로 설정\n- 비밀번호에 아이디를 포함하지 않음.\n- 학번이나 생년월일 등 쉽게 추측할 수 있는 정보는 사용하지 않음.\n\n추후 비밀번호 설정 기준이 시스템에 적용되면 이번에 변경한 비밀번호도 다시 변경해야 할 수 있습니다.\n다만, 계정 보호를 위해 초기 비밀번호를 아직 사용 중인 학생은 기준 적용 전이라도 새 비밀번호로 변경해 주시기 바랍니다.\n\n비밀번호 변경이나 시스템 접속에 어려움이 있는 경우 소프트웨어학과사무실로 문의해 주시기 바랍니다.\n\n문의: 소프트웨어학과사무실 (sjy310@skku.edu / 031-299-4100)",
+      "body_from_image": false,
+      "ocr_text": "",
+      "ocr_engine": null,
+      "image_attempted": false,
+      "attachments": [],
+      "body_html": "<div>\n              \n              \t\n\t\t\t\n              \n              \t\n\n\t\t\t\t<div><p><span>학생 계정 보호와 안정적인 시스템 운영을 위해 연구논문작품시스템의 비밀번호 변경 및 교외 접속 관련 보안 조치를 안내드립니다.</span></p><p><span><span><br></span></span></p><p><span><span>연구논문작품시스템: <span><u><a href=\"https://cssys.skku.ac.kr/cssys/login\"></a><a href=\"https://cssys.skku.ac.kr/cssys/login\">https://cssys.skku.ac.kr/cssys/login</a></u></span></span></span></p><p><span><span><br></span></span></p><p><span><span><strong><span>1. 교외 접속 방식 변경 예정</span></strong></span></span></p><p><span><span>교외에서 연구논문작품시스템에 직접 접속하는 방식이 제한될 예정입니다.&nbsp;</span></span></p><p><span><span>조치가 적용되면 교외에서는 <strong><span>학교 VPN에 먼저 연결</span></strong>한 뒤 연구논문작품시스템에 접속해야 합니다.</span></span></p><p><span><span><br></span></span></p><p><span><span>▶ VPN 신청 방법: <u>GLS &gt; IT서비스 &gt; 네트워크서비스 신청 &gt; VPN 신청</u> (자세한 안내: <a href=\"https://vpninfo.skku.edu/\"></a><a href=\"https://vpninfo.skku.edu\">https://vpninfo.skku.edu</a>)</span></span></p><p><span><span><br></span></span></p><p><span><span><br></span></span></p><p><span><span><strong><span>2. 초기 비밀번호 변경 요청</span></strong></span></span></p><p><span><span>초기 비밀번호를 아직 사용 중인 학생은 <a href=\"http://cs.skku.ac.kr/cssys/login\">연구논문작품시스템</a>에 로그인하여 <strong><span>새 비밀번호로 변경해 주시기 바랍니다.</span></strong></span></span></p><p><span><span>새 비밀번호를 설정할 때는 다음 기준을 지켜주시기 바랍니다.</span></span></p><p><span><span>- 영문자, 숫자, 특수문자를 모두 포함하여 8자 이상으로 설정</span></span></p><p><span><span>- 비밀번호에 아이디를 포함하지 않음.</span></span></p><p><span><span>- 학번이나 생년월일 등 쉽게 추측할 수 있는 정보는 사용하지 않음.</span></span></p><p><span><span><br></span></span></p><p><span><span>추후 비밀번호 설정 기준이 시스템에 적용되면 이번에 변경한 비밀번호도 다시 변경해야 할 수 있습니다.</span></span></p><p><span><span>다만,&nbsp;<span>계정 보호를 위해 초기 비밀번호를 아직 사용 중인 학생은&nbsp;</span>기준 적용 전이라도 새 비밀번호로 변경해 주시기 바랍니다.</span></span></p><p><span><span><br></span></span></p><p><span><span>비밀번호 변경이나 시스템 접속에 어려움이 있는 경우 소프트웨어학과사무실로 문의해 주시기 바랍니다.</span></span></p><p><span><span><br></span></span></p><p><span><span><br></span></span></p><p><span>문의: 소프트웨어학과사무실 (sjy310@skku.edu / 031-299-4100)</span></p></div>\n\t\t\t\n              \n              \n              \n\t\t\t\n          </div>",
+      "images": [],
+      "summary": "교외에서 연구논문작품시스템 접속 시 VPN 연결이 필요합니다. 보안을 위해 초기 비밀번호를 사용 중인 학생은 시스템에 로그인하여 새 비밀번호로 변경하십시오.",
+      "body_attempts": 1,
+      "fetched_at": "2026-11-12T11:34:49.535023+09:00",
+      "page_text": "학생 계정 보호와 안정적인 시스템 운영을 위해 연구논문작품시스템의 비밀번호 변경 및 교외 접속 관련 보안 조치를 안내드립니다.\n\n연구논문작품시스템: https://cssys.skku.ac.kr/cssys/login\n\n1. 교외 접속 방식 변경 예정\n교외에서 연구논문작품시스템에 직접 접속하는 방식이 제한될 예정입니다.\n조치가 적용되면 교외에서는 학교 VPN에 먼저 연결한 뒤 연구논문작품시스템에 접속해야 합니다.\n\n▶ VPN 신청 방법: GLS > IT서비스 > 네트워크서비스 신청 > VPN 신청 (자세한 안내: https://vpninfo.skku.edu)\n\n2. 초기 비밀번호 변경 요청\n초기 비밀번호를 아직 사용 중인 학생은 연구논문작품시스템에 로그인하여 새 비밀번호로 변경해 주시기 바랍니다.\n새 비밀번호를 설정할 때는 다음 기준을 지켜주시기 바랍니다.\n- 영문자, 숫자, 특수문자를 모두 포함하여 8자 이상으로 설정\n- 비밀번호에 아이디를 포함하지 않음.\n- 학번이나 생년월일 등 쉽게 추측할 수 있는 정보는 사용하지 않음.\n\n추후 비밀번호 설정 기준이 시스템에 적용되면 이번에 변경한 비밀번호도 다시 변경해야 할 수 있습니다.\n다만, 계정 보호를 위해 초기 비밀번호를 아직 사용 중인 학생은 기준 적용 전이라도 새 비밀번호로 변경해 주시기 바랍니다.\n\n비밀번호 변경이나 시스템 접속에 어려움이 있는 경우 소프트웨어학과사무실로 문의해 주시기 바랍니다.\n\n문의: 소프트웨어학과사무실 (sjy310@skku.edu / 031-299-4100)",
+      "body_attempted_at": "2026-11-12T11:34:49.535023+09:00",
+      "ai_deadline": {
+        "checked": true,
+        "model": "gemini-3.1-flash-lite"
+      }
+    },
     "skku-notice01/141818": {
       "notice": {
         "id": "skku-notice01/141818",
@@ -576,7 +620,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 교육 운영 및 기획 업무로 소프트웨어 개발이나 데이터 분석 등 기술적 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -599,6 +648,12 @@
         "kind": "마감",
         "at": "2027-02-10T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "11d96c57050724c6ffa970d03b6434ff54b5fe7e32130699d06ed07942030f21",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 교육 운영 및 기획 업무로 소프트웨어 개발이나 데이터 분석 등 기술적 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/363825": {
@@ -619,7 +674,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "해당 직무는 교육 커리큘럼 기획 업무로 소프트웨어 개발이나 데이터 분석 등 기술적 직무와 거리가 멉니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "",
@@ -642,6 +702,12 @@
         "kind": "마감",
         "at": "2027-02-10T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "0020123f2b84c61c0639abc62127970d3b79c1d00c3704bafea3503a07999173",
+        "verdict": "not_relevant",
+        "reason": "해당 직무는 교육 커리큘럼 기획 업무로 소프트웨어 개발이나 데이터 분석 등 기술적 직무와 거리가 멉니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "skku-notice01/141811": {
@@ -3445,7 +3511,7 @@
         "kind": "마감",
         "at": "2026-11-23T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-11T23:04:27.446323+09:00"
+      "rechecked_at": "2026-11-12T11:34:49.535023+09:00"
     },
     "skku-notice01/141765": {
       "notice": {
@@ -3513,7 +3579,7 @@
         "kind": "마감",
         "at": "2026-12-11T23:59:00+09:00"
       },
-      "rechecked_at": "2026-11-11T23:04:27.446323+09:00"
+      "rechecked_at": "2026-11-12T11:34:49.535023+09:00"
     },
     "skku-notice01/141760": {
       "notice": {
@@ -3566,7 +3632,7 @@
         "kind": "마감",
         "at": "2026-11-18T17:00:00+09:00"
       },
-      "rechecked_at": "2026-11-11T23:04:27.446323+09:00"
+      "rechecked_at": "2026-11-12T11:34:49.535023+09:00"
     },
     "skku-career-intern/165155": {
       "notice": {
@@ -3963,7 +4029,12 @@
         "priority": null,
         "interests": [],
         "reasons": [],
-        "ai": null,
+        "ai": {
+          "verdict": "not_relevant",
+          "reason": "호텔 객실 담당 업무는 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+          "model": "gemini-3.1-flash-lite",
+          "interests": []
+        },
         "notified": false
       },
       "body_text": "[호텔롯데] L7호텔 해운대 L-Crew(체험형 인턴) 채용 (12월)\n\n\n\n\n■ 주요 업무\n1) 고객 응대 및 객실 배정\n2) 객실 요금 정산\n3) VOC 관리\n\n\n■ 우대 사항\n1) 외국어 우수자\n2) 관련 경력 보유자\n3) Opera 활용 가능자\n\n\n■ 전형 단계\n1) 입사지원 > 서류전형 > 면접전형 > LIST검사 > 신체검사 > 최종합격",
@@ -3986,6 +4057,12 @@
         "kind": "마감",
         "at": "2026-11-22T23:59:59.999000+09:00",
         "model": "source"
+      },
+      "intern_judgment": {
+        "fingerprint": "22e3539ec9bfe50e6c066d10759b12641ad37bb30da6678b5f9bda231fb79fb6",
+        "verdict": "not_relevant",
+        "reason": "호텔 객실 담당 업무는 소프트웨어 개발 및 IT 관련 직무가 아닙니다.",
+        "model": "gemini-3.1-flash-lite"
       }
     },
     "linkareer-intern/363812": {
@@ -26085,47 +26162,6 @@
         "checked": true,
         "kind": "마감",
         "at": "2027-01-18T23:59:59.999000+09:00",
-        "model": "source"
-      }
-    },
-    "jasoseol-intern/106863": {
-      "notice": {
-        "id": "jasoseol-intern/106863",
-        "source_id": "jasoseol-intern",
-        "article_no": "106863",
-        "title": "[피에스케이] 전략기획 직무 채용(신입/경력)",
-        "category": "인턴",
-        "url": "https://jasoseol.com/recruit/106863",
-        "posted_on": "2026-10-20",
-        "pinned": false,
-        "deadline": null,
-        "first_seen": "2026-11-03T18:24:00.504814+09:00"
-      },
-      "match": {
-        "rule_name": null,
-        "priority": null,
-        "interests": [],
-        "reasons": [],
-        "ai": null,
-        "notified": false
-      },
-      "body_text": "",
-      "body_from_image": false,
-      "ocr_text": "",
-      "ocr_engine": null,
-      "image_attempted": false,
-      "attachments": [],
-      "body_html": "<p><img src=\"https://psk.recruiter.co.kr/upload/33781/image/202610/decf1383-9a80-4c76-8c45-c5e03d72321d.jpg\" alt=\"피에스케이 전략기획 직무 채용(신입/경력)\"><br>&nbsp;</p>",
-      "images": [
-        "https://psk.recruiter.co.kr/upload/33781/image/202610/decf1383-9a80-4c76-8c45-c5e03d72321d.jpg"
-      ],
-      "summary": null,
-      "body_attempts": 1,
-      "fetched_at": "2026-11-03T20:30:06.206166+09:00",
-      "ai_deadline": {
-        "checked": true,
-        "kind": "마감",
-        "at": "2026-11-06T23:50:00+09:00",
         "model": "source"
       }
     }

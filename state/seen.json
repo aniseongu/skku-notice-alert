@@ -1,9 +1,9 @@
 {
   "version": 1,
   "external_checked_at": {
-    "linkareer-intern": "2026-11-12T16:04:08.358475+09:00",
-    "jasoseol-intern": "2026-11-12T16:04:08.358475+09:00",
-    "skku-career-intern": "2026-11-12T16:04:08.358475+09:00"
+    "linkareer-intern": "2026-11-12T17:17:41.645088+09:00",
+    "jasoseol-intern": "2026-11-12T17:17:41.645088+09:00",
+    "skku-career-intern": "2026-11-12T17:17:41.645088+09:00"
   },
   "sources": {
     "skku-notice01": {
@@ -901,6 +901,11 @@
         },
         "67796": {
           "first_seen": "2026-11-09T14:03:44.705624+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "67860": {
+          "first_seen": "2026-11-12T17:17:41.645088+09:00",
           "status": "notified",
           "attempts": 0
         }
@@ -2241,7 +2246,7 @@
         },
         "363960": {
           "first_seen": "2026-11-12T16:04:08.358475+09:00",
-          "status": "pending",
+          "status": "notified",
           "attempts": 0
         },
         "363956": {
@@ -2257,6 +2262,31 @@
         "363953": {
           "first_seen": "2026-11-12T16:04:08.358475+09:00",
           "status": "pending",
+          "attempts": 0
+        },
+        "364054": {
+          "first_seen": "2026-11-12T17:17:41.645088+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "364052": {
+          "first_seen": "2026-11-12T17:17:41.645088+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "364005": {
+          "first_seen": "2026-11-12T17:17:41.645088+09:00",
+          "status": "skipped",
+          "attempts": 0
+        },
+        "363987": {
+          "first_seen": "2026-11-12T17:17:41.645088+09:00",
+          "status": "notified",
+          "attempts": 0
+        },
+        "363911": {
+          "first_seen": "2026-11-12T17:17:41.645088+09:00",
+          "status": "skipped",
           "attempts": 0
         }
       }
@@ -2837,6 +2867,11 @@
         "165194": {
           "first_seen": "2026-11-12T16:04:08.358475+09:00",
           "status": "notified",
+          "attempts": 0
+        },
+        "165201": {
+          "first_seen": "2026-11-12T17:17:41.645088+09:00",
+          "status": "skipped",
           "attempts": 0
         }
       }
